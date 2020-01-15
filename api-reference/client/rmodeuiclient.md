@@ -1,20 +1,20 @@
 # RModeUIClient
 
-### **RModeUIClient**
+## **RModeUIClient**
 
 **클라이언트에서 UI를 제어하는 객체, 서비스로 제공되며 스크립트에서 UI로 참조 가능하다.**
 
-### \*\*\*\*
+## \*\*\*\*
 
-### **Function**
+## **Function**
 
 | **RModeUIScene GetUIScene\(string UISceneName\)** |
 | :--- |
 | **이름으로 UI 페이지 얻기** |
 
-|  **void SetVisible\(string UISceneName, bool bVisible\)** |
+| **void SetVisible\(string UISceneName, bool bVisible\)** |
 | :--- |
-|  **이름에 해당되는 UI페이지의 가시성 설정** |
+| **이름에 해당되는 UI페이지의 가시성 설정** |
 
 | **bool IsShow\(\)** |
 | :--- |
@@ -39,29 +39,7 @@
       </td>
     </tr>
   </tbody>
-</table>| **void SetChangeTextEvent\(string UISceneName, string TextName, protected\_function InEventFunction\)** |
-| :--- |
-| **이름에 해당되는 UI페이지의 위젯의 텍스트 변경 시 호출되는 이벤트 함수 설정** |
-
-| **void SetImage\(string UISceneName, string ImgName, string Img\)** |
-| :--- |
-| **이름에 해당되는 UI페이지의 위젯 이미지 설정** |
-
-| **void SetChangeImageEvent\(string UISceneName, string ImgName, protected\_function InEventFunction\)** |
-| :--- |
-| **이름에 해당되는 UI페이지 위젯의 이미지 변경 시 호출되는 이벤트 함수 설정** |
-
-|  **void SetButtonUpEvent\(string UISceneName, string ButtonName, protected\_function InEventFunction\)** |
-| :--- |
-| **이름에 해당되는 UI페이지 버튼 위젯이 눌렸다 띄어질 때 호출되는 이벤트 함수 설정** |
-
-| **void SetButtonPressEvent\(string UISceneName, string ButtonName, protected\_function InEventFunction\)** |
-| :--- |
-| **이름에 해당되는 UI페이지 버튼 위젯이 눌릴 때 호출되는 이벤트 함수 설정** |
-
-| **RModeUIScene CreateModeUIScene\(string UISceneName\)** |
-| :--- |
-| **이름에 해당되는 이름을 갖는 UI 페이지 생성\(현재 작동하지 않음\)** |
+</table>\| \*\*void SetChangeTextEvent\\(string UISceneName, string TextName, protected\\_function InEventFunction\\)\*\* \| \| :--- \| \| \*\*이름에 해당되는 UI페이지의 위젯의 텍스트 변경 시 호출되는 이벤트 함수 설정\*\* \| \| \*\*void SetImage\\(string UISceneName, string ImgName, string Img\\)\*\* \| \| :--- \| \| \*\*이름에 해당되는 UI페이지의 위젯 이미지 설정\*\* \| \| \*\*void SetChangeImageEvent\\(string UISceneName, string ImgName, protected\\_function InEventFunction\\)\*\* \| \| :--- \| \| \*\*이름에 해당되는 UI페이지 위젯의 이미지 변경 시 호출되는 이벤트 함수 설정\*\* \| \| \*\*void SetButtonUpEvent\\(string UISceneName, string ButtonName, protected\\_function InEventFunction\\)\*\* \| \| :--- \| \| \*\*이름에 해당되는 UI페이지 버튼 위젯이 눌렸다 띄어질 때 호출되는 이벤트 함수 설정\*\* \| \| \*\*void SetButtonPressEvent\\(string UISceneName, string ButtonName, protected\\_function InEventFunction\\)\*\* \| \| :--- \| \| \*\*이름에 해당되는 UI페이지 버튼 위젯이 눌릴 때 호출되는 이벤트 함수 설정\*\* \| \| \*\*RModeUIScene CreateModeUIScene\\(string UISceneName\\)\*\* \| \| :--- \| \| \*\*이름에 해당되는 이름을 갖는 UI 페이지 생성\\(현재 작동하지 않음\\)\*\* \|
 
 <table>
   <thead>

@@ -12,7 +12,7 @@
 
 ## **D**
 
-### \*\*\*\*[**DivideTeamType**](divideteamtype.md) ****
+### \*\*\*\*[**DivideTeamType**](divideteamtype.md) _\*\*_
 
 ## **G**
 
@@ -24,29 +24,25 @@
 
 ### \*\*\*\*[**KeyInputType**](keyinputtype.md)\*\*\*\*
 
-
-
 ## **M**
 
-### \*\*\*\*[**ModeAnimStateType**](modeanimstatetype.md) ****
+### \*\*\*\*[**ModeAnimStateType**](modeanimstatetype.md) _\*\*_
 
 ## **O**
 
-### \*\*\*\*[**ObjectSelectType**](objectselecttype.md) ****
+### \*\*\*\*[**ObjectSelectType**](objectselecttype.md) _\*\*_
 
 ## **P**
 
-### \*\*\*\*[**PointSpawnType**](pointspawntype.md) ****
+### \*\*\*\*[**PointSpawnType**](pointspawntype.md) _\*\*_
 
 ## **R**
 
-### \*\*\*\*[**ReplicateType**](replicatetype.md) ****
+### \*\*\*\*[**ReplicateType**](replicatetype.md) _\*\*_
 
 ## **S**
 
 ### \*\*\*\*[**SpawnType**](spawntype.md)\*\*\*\*
-
-
 
 ## **T**
 
@@ -56,5 +52,5 @@
 
 ### \*\*\*\*
 
-###  ****
+### _\*\*_
 

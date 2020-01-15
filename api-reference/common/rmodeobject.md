@@ -1,12 +1,10 @@
 # RModeObject
 
-### **RModeObject**
+## **RModeObject**
 
 **월드트리의 오브젝트에 해당하는 스크립트 객체**
 
-
-
-### **Function**
+## **Function**
 
 | **string GetName\(\)** |
 | :--- |

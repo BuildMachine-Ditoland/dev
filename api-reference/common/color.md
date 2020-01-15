@@ -1,9 +1,8 @@
 # Color
 
-**컬러값을 지정할 수 있다. 0~255사용**  
+**컬러값을 지정할 수 있다. 0~255사용**
 
-
-### **Property**
+## **Property**
 
 **"A", &FColor::A,**
 
@@ -11,10 +10,9 @@
 
 **"G", &FColor::G,**
 
-**"B", &FColor::B**  
+**"B", &FColor::B**
 
-
-### **Sample**
+## **Sample**
 
 ```lua
 Timer = UI:GetUIScene("Timer")

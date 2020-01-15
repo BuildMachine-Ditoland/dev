@@ -1,20 +1,20 @@
 # RModeLocalPlayer
 
-### **RModeLocalPlayer**
+## **RModeLocalPlayer**
 
 **게임에서 인풋 설정 및 캐릭터의 기본 동작을 설정 할 수 있는 객체. 서비스로 제공됨 스크립트에서 LocalPlayer로 참조 가능**
 
 \*\*\*\*
 
-### **Property**
+## **Property**
 
 | **var OnChangedInventoryItem** |
 | :--- |
 | **인벤토리 아이템 변화 시 호출되는 이벤트** |
 
-### \*\*\*\*
+## \*\*\*\*
 
-### **Function**
+## **Function**
 
 | **void ProcessInputAxisEvent\(string Event, protected\_function ProcessFunc\)** |
 | :--- |
@@ -40,32 +40,27 @@
 | :--- |
 | **캐릭터의 바라보는 상하 방향 설정** |
 
+| **void SetForwardMoveType\(ForwardMoveType Type\)** |
+| :--- |
+
+
 <table>
   <thead>
     <tr>
-      <th style="text-align:left"><b>void SetForwardMoveType(ForwardMoveType Type)</b>
-      </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">
+      <th style="text-align:left">
         <p><b>ForwardMoveType::XYPlane - &#xC0C1;, &#xD558; &#xC774;&#xB3D9;&#xB418;&#xC9C0; &#xC54A;&#xB294; &#xD3C9;&#xBA74; &#xC774;&#xB3D9;(&#xC77C;&#xBC18; &#xC801;&#xC778; &#xCE90;&#xB9AD;&#xD130;&#xC758; &#xC774;&#xB3D9; &#xD615;&#xD0DC;)</b>
         </p>
         <p><b>ForwardMoveType::Free - &#xCE90;&#xB9AD;&#xD130;&#xAC00; &#xBC14;&#xB77C;&#xBCF4;&#xB294; &#xBC29;&#xD5A5;&#xC73C;&#xB85C; &#xC774;&#xB3D9;(&#xD504;&#xB9AC; &#xCE74;&#xBA54;&#xB77C;&#xC758; &#xC774;&#xB3D9; &#xD615;&#xD0DC;)</b>
         </p>
         <p><b>ForwardMoveType::UpDown - &#xC0C1;, &#xD558;&#xB85C;&#xB9CC; &#xC774;&#xB3D9;(&#xC5D8;&#xB9AC;&#xBCA0;&#xC774;&#xD130;, &#xC0AC;&#xB2E4;&#xB9AC;&#xC758; &#xC774;&#xB3D9; &#xD615;&#xD0DC;)</b>
         </p>
-      </td>
+      </th>
     </tr>
-    <tr>
-      <td style="text-align:left"><b>MoveForward(float Value)&#xC758; &#xC791;&#xB3D9; &#xBC29;&#xC2DD; &#xC124;&#xC815;</b>
-      </td>
-    </tr>
-  </tbody>
-</table>| **void FreeCamMoveUp\(float Value\)** |
+  </thead>
+  <tbody></tbody>
+</table>| **MoveForward\(float Value\)의 작동 방식 설정** |
 | :--- |
-| **FreeCamMoveUp\(float Value\) 프리캠 위, 아래로 이동** |
+
 
 | **FVector GetForwardVector\(\)** |
 | :--- |

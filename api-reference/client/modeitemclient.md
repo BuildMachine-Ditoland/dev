@@ -1,11 +1,10 @@
 # ModeItemClient
 
-### **ModeItemClient**
+## **ModeItemClient**
 
-**월드에 배치된 Item에 해당하는 스크립트 객체**  
+**월드에 배치된 Item에 해당하는 스크립트 객체**
 
-
-### **Function**
+## **Function**
 
 | **void AttachTo\(RModeRemotePlayer\* Player, Bone BoneType\)** |
 | :--- |

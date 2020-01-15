@@ -1,11 +1,10 @@
 # KeyInputType
 
-### **KeyInputType**
+## **KeyInputType**
 
-**버튼의 입력 타입**  
+**버튼의 입력 타입**
 
-
-### **Enums**
+## **Enums**
 
 | **Name** | **Value** | **Description** |
 | :--- | :---: | :--- |
@@ -14,10 +13,9 @@
 | **Repeat** | **2** | **계속 누르고 있을 때** |
 | **DoubleClick** | **3** | **더블 클릭 됐을 때** |
 
-### \*\*\*\*
+## \*\*\*\*
 
-### **Referenced by**
+## **Referenced by**
 
-**ModeLocalPlayer**  
-
+**ModeLocalPlayer**
 

@@ -1,14 +1,12 @@
 # ObjectPointLightServer
 
-
-
-### **ObjectPointLightServer**
+## **ObjectPointLightServer**
 
 **월드에 배치된 Light에 해당하는 스크립트 객체**
 
-### \*\*\*\*
+## \*\*\*\*
 
-### **Function**
+## **Function**
 
 | **void SetEnable\(bool bEnable\)** |
 | :--- |

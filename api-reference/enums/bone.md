@@ -1,12 +1,12 @@
 # Bone
 
-### **Bone**
+## **Bone**
 
 **스크립트에 제공되는 캐릭터 본**
 
-### \*\*\*\*
+## \*\*\*\*
 
-### **Enums**
+## **Enums**
 
 | **Name** | **Value** | **Description** |
 | :---: | :---: | :---: |
@@ -20,10 +20,9 @@
 | **LFoot** | **7** | **왼발** |
 | **Root** | **8** | **Root 바닥** |
 
-### \*\*\*\*
+## \*\*\*\*
 
-### **Referenced by**
+## **Referenced by**
 
-**ModeClientCharacter**  
-
+**ModeClientCharacter**
 

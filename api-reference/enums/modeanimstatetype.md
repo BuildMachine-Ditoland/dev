@@ -1,11 +1,10 @@
 # ModeAnimStateType
 
-### **ModeAnimStateType**
+## **ModeAnimStateType**
 
-**애니메이션 상태 타입**  
+**애니메이션 상태 타입**
 
-
-### **Enums**
+## **Enums**
 
 | **Name** | **Value** | **Description** |
 | :--- | :---: | :--- |
@@ -13,10 +12,9 @@
 | **Sequence** | **1** | **하나의 애니메이션 플레이** |
 | **Blend** | **2** | **여러 애니메이션 블랜딩하여 플레이** |
 
-### \*\*\*\*
+## \*\*\*\*
 
-### **Referenced by**
+## **Referenced by**
 
-**ModeAnimStateBase**  
-
+**ModeAnimStateBase**
 

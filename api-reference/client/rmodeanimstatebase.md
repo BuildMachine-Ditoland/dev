@@ -1,11 +1,10 @@
 # RModeAnimStateBase
 
-### **RModeAnimStateBase**
+## **RModeAnimStateBase**
 
-**애니메이션 상태 타입**  
+**애니메이션 상태 타입**
 
-
-### **Property**
+## **Property**
 
 | **var EnterEvent** |
 | :--- |
@@ -19,9 +18,9 @@
 | :--- |
 | **해당 애니메이션에서 다른 상태로 변경 될 때 호출되는 이벤트 객체** |
 
-### \*\*\*\*
+## \*\*\*\*
 
-### **Function**
+## **Function**
 
 | **string GetName\(\)** |
 | :--- |

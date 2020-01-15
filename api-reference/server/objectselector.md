@@ -1,15 +1,12 @@
 # ObjectSelector
 
-
-
-### **ObjectSelector**
+## **ObjectSelector**
 
 **설정된 조건에 맞는 오브젝트를 선택하는 객체**
 
-**Game의 CreateObjectSelector 함수로 생성**  
+**Game의 CreateObjectSelector 함수로 생성**
 
-
-### **Function**
+## **Function**
 
 | **void AddSelectObject\(String ObjectName, float SelectRate, int Count\)** |
 | :--- |
