@@ -82,3 +82,5 @@
 * [Script Tutorial](script-tutorial/README.md)
   * [ObjectMove](script-tutorial/objectmove.md)
 
+* [Test](Test.md)
+
