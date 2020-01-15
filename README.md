@@ -1,2 +1,2 @@
-# HOME
+# Initial page
 
