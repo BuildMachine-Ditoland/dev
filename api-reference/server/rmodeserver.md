@@ -1,42 +1,36 @@
 # RModeServer
 
-### **RModeServer**
+## **RModeServer**
 
-**RModeGame의 자식 객체로, 서버 스크립트에 Game 으로 제공되는 객체**  
+**RModeGame의 자식 객체로, 서버 스크립트에 Game 으로 제공되는 객체**
 
-
-### **Property**
+## **Property**
 
 | **var MaxUserCount** |
 | :--- |
 | **게임 최대 인원. 디폴트 값은 10** |
 
-### **Function**
+## **Function**
+
+| **void AddUserCollisionType\(string UserCollisionType\)** |
+| :--- |
+
 
 <table>
   <thead>
     <tr>
-      <th style="text-align:left"><b>void AddUserCollisionType(string UserCollisionType)</b>
-      </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">
-        <p><b>&#xC720;&#xC800; &#xCDA9;&#xB3CC; &#xD0C0;&#xC785; &#xC124;&#xC815; &#xCD94;&#xAC00;. </b>
+      <th style="text-align:left">
+        <p><b>&#xC720;&#xC800; &#xCDA9;&#xB3CC; &#xD0C0;&#xC785; &#xC124;&#xC815; &#xCD94;&#xAC00;.</b>
         </p>
         <p><b>&#xD2B9;&#xC815; &#xC624;&#xBE0C;&#xC81D;&#xD2B8;&#xC758; &#xCDA9;&#xB3CC; &#xCC98;&#xB9AC;&#xB97C; &#xB2E4;&#xB978; &#xC624;&#xBE0C;&#xC81D;&#xD2B8;&#xC640; &#xB2E4;&#xB974;&#xAC8C; &#xD560; &#xB54C; &#xC0AC;&#xC6A9;</b>
         </p>
         <p><b>&#xC608;) &#xD2B9;&#xC815; &#xC624;&#xBE0C;&#xC81D;&#xD2B8;&#xB9CC; &#xD1B5;&#xACFC;&#xD558;&#xACE0;, &#xCE90;&#xB9AD;&#xD130;&#xB294; &#xBABB; &#xD1B5;&#xACFC;&#xD558;&#xB294; &#xC624;&#xBE0C;&#xC81D;&#xD2B8;.</b>
         </p>
-      </td>
+      </th>
     </tr>
-  </tbody>
-</table>| **RModeSpawnPointGroup AddSpawnPointGroup\(string SpawnPointGroupName\)** |
-| :--- |
-| **게임에서 사용 할 스폰 포인트 그룹을 추가한다.** |
-
-| **RModeSpawnPoint AddSpawnPoint\(string SpawnPointName, FRObjectScript\* RObjectScript\)** |
+  </thead>
+  <tbody></tbody>
+</table>| **RModeSpawnPoint AddSpawnPoint\(string SpawnPointName, FRObjectScript\* RObjectScript\)** |
 | :--- |
 | **게임에서 사용 할 스폰 포인트를 추가한다.** |
 
@@ -155,15 +149,10 @@
       </th>
     </tr>
   </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left"><b>&#xC720;&#xC800; &#xAC8C;&#xC784; &#xB370;&#xC774;&#xD130; &#xC800;&#xC7A5;</b>
-      </td>
-    </tr>
-  </tbody>
-</table>| **Object GetSavedUserGameData\(String PlayerName, String KeyString\)** |
+  <tbody></tbody>
+</table>| **유저 게임 데이터 저장** |
 | :--- |
-| **유저 게임 데이터 얻기** |
+
 
 | **void SaveGameStatisticsData\(String PlayerName, String KeyString, int SaveValue, bool Overwrite, bool Ascending\)** |
 | :--- |

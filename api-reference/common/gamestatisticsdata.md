@@ -1,13 +1,10 @@
 # GameStatisticsData
 
-### **GameStatisticsData**
+## **GameStatisticsData**
 
-**게임 통계데이터 구조체**  
+**게임 통계데이터 구조체**
 
-
-
-
-### **Property**
+## **Property**
 
 | **var PlayerName** |
 | :--- |

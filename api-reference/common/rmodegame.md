@@ -1,14 +1,12 @@
 # RModeGame
 
-### **RModeGame**
+## **RModeGame**
 
 **유저에게 Game으로 제공되는 객체의 부모 객체로, 전체 게임의 틀을 제공**
 
 **플레이어의 진입 떠남, 캐릭터의 죽음, 스폰됨 등 이벤트 함수 제공**
 
-
-
-### **Property**
+## **Property**
 
 | **var OnSpawnCharacter** |
 | :--- |
@@ -26,9 +24,7 @@
 | :--- |
 | **새로운 플레이어 들어올 때 호출되는 이벤트 연결 객체** |
 
-### 
-
-### **Functions**
+## **Functions**
 
 | **RModePhase AddPhase\(string phasename\)** |
 | :--- |
@@ -61,6 +57,4 @@
 | **void DeleteObject\(RModeObject\)** |
 | :--- |
 | **모드 오브젝트 삭제하기** |
-
-###  
 

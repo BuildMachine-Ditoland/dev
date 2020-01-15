@@ -1,12 +1,12 @@
 # Key
 
-### **Key**
+## **Key**
 
 **스크립트로 제공되는 인풋 타입**
 
-### \*\*\*\*
+## \*\*\*\*
 
-### **Enums**
+## **Enums**
 
 | **Name** | **Value** | **Description** |
 | :--- | :---: | :--- |
@@ -134,10 +134,9 @@
 | **Gamepad\_RightX** | **121** | **Input Key Binding** |
 | **Gamepad\_RightX** | **122** | **Input Key Binding** |
 
-### \*\*\*\*
+## \*\*\*\*
 
-### **Referenced by.**
+## **Referenced by.**
 
-**ModeInput**  
-
+**ModeInput**
 

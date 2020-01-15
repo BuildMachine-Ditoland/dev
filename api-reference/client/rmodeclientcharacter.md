@@ -1,11 +1,10 @@
 # RModeClientCharacter
 
-### **RModeClientCharacter**
+## **RModeClientCharacter**
 
-**클라이언트에서 사용되는 플레이어의 캐릭터 객체로 애니메이션 관련 기능을 설정 할 수 있다.**  
+**클라이언트에서 사용되는 플레이어의 캐릭터 객체로 애니메이션 관련 기능을 설정 할 수 있다.**
 
-
-### **Function**
+## **Function**
 
 | **GetPlayerName\(\)** |
 | :--- |
@@ -50,15 +49,10 @@
       </th>
     </tr>
   </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left"><b>&#xCE90;&#xB9AD;&#xD130; &#xD2B9;&#xC815; &#xC704;&#xCE58;&#xC5D0; FX &#xC0DD;&#xC131;</b>
-      </td>
-    </tr>
-  </tbody>
-</table>| **ObjectSoundClient CreateSound\(ObjectSoundClient SoundObject\)** |
+  <tbody></tbody>
+</table>| **캐릭터 특정 위치에 FX 생성** |
 | :--- |
-| **캐릭터의 위치에 Sound 생성** |
+
 
 | **void AddPlayerHUD\(string UIName\)** |
 | :--- |
@@ -79,10 +73,4 @@
 | **Vector GetLocation\(\)** |
 | :--- |
 | **현재 캐릭터 위치 얻기** |
-
-
-
-
-
-
 

@@ -1,11 +1,10 @@
 # RLogger
 
-### **RLogger**
+## **RLogger**
 
-**스크립트 로그 출력.**  
+**스크립트 로그 출력.**
 
-
-### **Function**
+## **Function**
 
 | **Log\(string message\)** |
 | :--- |

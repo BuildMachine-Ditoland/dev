@@ -1,11 +1,10 @@
 # RObjectScript
 
-### **RObjectScript**
+## **RObjectScript**
 
-**월드에 생성되는 R오브젝트에 제공되는 객체**  
+**월드에 생성되는 R오브젝트에 제공되는 객체**
 
-
-### **Property**
+## **Property**
 
 | **var OnCreateEvent** |
 | :--- |
@@ -57,24 +56,21 @@
 
 \*\*\*\*
 
-### **Sample**
+## **Sample**
 
 ```lua
 local Object = Script.Parent
 
 function FunctionName(Character) 
 
-	Logger:Log(“Hello”)
+    Logger:Log(“Hello”)
 
 end
 
 Object.OnBeginOverlapEvent:Connect(FunctionName)
-
 ```
 
-
-
-### **Functions**
+## **Functions**
 
 | **RModeObject GetChild\(string childName\)** |
 | :--- |
@@ -98,11 +94,11 @@ Object.OnBeginOverlapEvent:Connect(FunctionName)
 
 | **void AddLocalMove\(string TrackName, FVector Pos, float Time, bool CheckCollision\)** |
 | :--- |
-| **오브젝트를 월드 축 이동 변화를 추가한다.**  |
+| **오브젝트를 월드 축 이동 변화를 추가한다.** |
 
 | **void AddLocalRot\(string TrackName, FVector Rot, float Time\)** |
 | :--- |
-|  **오브젝트를 월드 축 회전 변화를 추가한다** |
+| **오브젝트를 월드 축 회전 변화를 추가한다** |
 
 | **void AddEmpty\(string TrackName, float Time\)** |
 | :--- |
@@ -140,38 +136,13 @@ Object.OnBeginOverlapEvent:Connect(FunctionName)
 | :--- |
 | **현재 위치 얻기** |
 
-
-
-### **Sample**
+## **Sample**
 
 ```lua
 local Object = Script.Parent
 
 Object:AddLocalRot("Rot", Vector.new(0, 0, 360), 8)  
 
-Object:PlayTransformTrack("Rot", 0, InfinityPlay) 
-
+Object:PlayTransformTrack("Rot", 0, InfinityPlay)
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

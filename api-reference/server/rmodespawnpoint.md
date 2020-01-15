@@ -1,13 +1,10 @@
 # RModeSpawnPoint
 
+## **RModeSpawnPoint**
 
+**게임에서 캐릭터를 스폰하는데 사용되는 객체. Game.AddSpawnPoint 로 이용**
 
-### **RModeSpawnPoint**
-
-**게임에서 캐릭터를 스폰하는데 사용되는 객체. Game.AddSpawnPoint 로 이용**  
-
-
-### **Function**
+## **Function**
 
 <table>
   <thead>
