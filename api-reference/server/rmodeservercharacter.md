@@ -1,11 +1,10 @@
 # RModeServerCharacter
 
-### **RModeServerCharacter**
+## **RModeServerCharacter**
 
-**서버 플레이어 캐릭터**  
+**서버 플레이어 캐릭터**
 
-
-### **Function**
+## **Function**
 
 | **bool IsDie\(\)** |
 | :--- |

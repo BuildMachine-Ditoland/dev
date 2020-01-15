@@ -1,12 +1,12 @@
 # RScriptClient
 
-### **RScriptClient**
+## **RScriptClient**
 
 **클라이언트 스크립트에 "Script"로 제공되는 객체로 스크립트가 붙어있는 오브젝트를 Parent로 얻을 수 있다.**
 
 \*\*\*\*
 
-### **Property**
+## **Property**
 
 | **var Parent** |
 | :--- |

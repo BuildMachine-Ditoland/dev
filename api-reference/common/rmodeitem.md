@@ -1,11 +1,10 @@
 # RModeItem
 
-### **RModeItem**
+## **RModeItem**
 
- **월드트리의 아이템 베이스 객체**  
+**월드트리의 아이템 베이스 객체**
 
-
-### **Property**
+## **Property**
 
 | **var UseEvent** |
 | :--- |
@@ -19,9 +18,9 @@
 | :--- |
 | **아이템 탈착 시 호출되는 이벤트** |
 
-### \*\*\*\*
+## \*\*\*\*
 
-### **Function**
+## **Function**
 
 | **int GetItemCount\(\)** |
 | :--- |
@@ -38,16 +37,4 @@
 | **void AddToggleAction\(string ActionName, LuaScriptFunction StartFunction, LuaScriptFunction EndFunction\)** |
 | :--- |
 | **아이템 착용 후 토글 액션 추가** |
-
-
-
-
-
-
-
-
-
-
-
-
 

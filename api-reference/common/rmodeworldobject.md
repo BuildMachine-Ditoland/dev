@@ -1,11 +1,10 @@
 # RModeWorldObject
 
-### **RModeWorldObject**
+## **RModeWorldObject**
 
-**월드에 생성되는 오브젝트에 제공되는 객체로 해당 객체가 어떤 종류인지 구분하는 기능을 가짐**  
+**월드에 생성되는 오브젝트에 제공되는 객체로 해당 객체가 어떤 종류인지 구분하는 기능을 가짐**
 
-
-### **Functions**
+## **Functions**
 
 | **bool IsCharacter\(\)** |
 | :--- |

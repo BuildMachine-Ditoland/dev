@@ -1,14 +1,12 @@
 # DivideTeamType
 
-### **DivideTeamType**
+## **DivideTeamType**
 
-**팀을 나누는 방식**  
-  
-
+**팀을 나누는 방식**
 
 \*\*\*\*
 
-### **Enums**
+## **Enums**
 
 | **Name** | **Value** | **Description** |
 | :--- | :---: | :--- |
@@ -16,10 +14,9 @@
 | **Order** | **1** | **설정된 팀에 순서대로 팀원 배치** |
 | **Rate** | **2** | **팀에 설정된 비율 대로 팀을 나눔** |
 
-### \*\*\*\*
+## \*\*\*\*
 
-### **Referenced by**
+## **Referenced by**
 
-**SetTeamSetting**  
-
+**SetTeamSetting**
 

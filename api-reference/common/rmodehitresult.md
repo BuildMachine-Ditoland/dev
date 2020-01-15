@@ -1,11 +1,10 @@
 # RModeHitResult
 
-### **RModeHitResult**
+## **RModeHitResult**
 
-**충돌 체크에 대한 결과로 사용되는 객체**  
+**충돌 체크에 대한 결과로 사용되는 객체**
 
-
-### **Property**
+## **Property**
 
 | **var HitLocation** |
 | :--- |

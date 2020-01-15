@@ -1,14 +1,12 @@
 # RModeCharacterSetting
 
-
-
-### **RModeCharacterSetting**
+## **RModeCharacterSetting**
 
 **게임에서 사용 될 캐릭터를 설정 할 때 사용되는 객체. Game.AddCharacterSetting 함수를 이용**
 
-### \*\*\*\*
+## \*\*\*\*
 
-### **Property**
+## **Property**
 
 | **var UseSelfcharacter** |
 | :--- |

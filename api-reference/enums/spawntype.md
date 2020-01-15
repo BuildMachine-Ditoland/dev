@@ -1,12 +1,12 @@
 # SpawnType
 
-### **SpawnType**
+## **SpawnType**
 
 **게임에 사용되는 스폰 타입**
 
-### \*\*\*\*
+## \*\*\*\*
 
-### **Enums**
+## **Enums**
 
 | **Name** | **Value** | **Description** |
 | :--- | :---: | :--- |
@@ -14,11 +14,9 @@
 | **UseTeamSpawn** | **1** | **팀 스폰을 사용** |
 | **UseSpawnPoint** | **2** | **스폰 포인트를 사용** |
 
-### \*\*\*\*
+## \*\*\*\*
 
-### **Referenced by**
+## **Referenced by**
 
-**SetTeamSetting**  
-  
-
+**SetTeamSetting**
 

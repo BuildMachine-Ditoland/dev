@@ -1,12 +1,10 @@
 # RModeCamera
 
-### **RModeCamera**
+## **RModeCamera**
 
-**클라이언트에서 사용되는 카메라 서비스 객체 Camera로 얻어서 사용 할 수 있다.**  
-  
+**클라이언트에서 사용되는 카메라 서비스 객체 Camera로 얻어서 사용 할 수 있다.**
 
-
-### **Function**
+## **Function**
 
 | **void SetSettingName\(const std::string name\)** |
 | :--- |
@@ -31,10 +29,4 @@
 | **void StopCameraFade\(\)** |
 | :--- |
 | **카메라 페이드 중지** |
-
-
-
-
-
-
 

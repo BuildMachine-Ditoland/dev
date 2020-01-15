@@ -1,16 +1,14 @@
 # ObjectSpawner
 
-
-
-### **ObjectSpawner**
+## **ObjectSpawner**
 
 **월드상에 설정된 조건에 맞게 오브젝트를 생성하는 객체**
 
 **Game의 AddObjectSpawner 함수로 생성**
 
-### \*\*\*\*
+## \*\*\*\*
 
-### **Function**
+## **Function**
 
 | **void AddSpawnObject\(String ObjectName, float SpawnRate, int Count\)** |
 | :--- |

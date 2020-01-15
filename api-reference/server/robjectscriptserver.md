@@ -1,13 +1,10 @@
 # RObjectScriptServer
 
+## **RObjectScriptServer**
 
+**서버스크립트에 제공되는 RObjectScript의 자식 객체로 오브젝트의 이동, 회전, 스케일 충돌 타입 설정 등을 할 수 있다.**
 
-### **RObjectScriptServer**
-
-**서버스크립트에 제공되는 RObjectScript의 자식 객체로 오브젝트의 이동, 회전, 스케일 충돌 타입 설정 등을 할 수 있다.**  
-
-
-### **Function**
+## **Function**
 
 | **void SetCollisionType\(string usercollisiontype\)** |
 | :--- |

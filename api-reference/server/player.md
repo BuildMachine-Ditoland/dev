@@ -1,11 +1,10 @@
 # Player
 
-### **Player**
+## **Player**
 
-**게임에 참여한 플레이어 객체**  
+**게임에 참여한 플레이어 객체**
 
-
-### **Function**
+## **Function**
 
 | **RModeServerCharacter GetCharacter\(\)** |
 | :--- |
@@ -45,7 +44,7 @@
 
 | **void GiveItem\(string ItemName, int Count\)** |
 | :--- |
-| **플레이어에게 아이템 주기**  |
+| **플레이어에게 아이템 주기** |
 
 | **void ClearItem\(\)** |
 | :--- |

@@ -1,22 +1,20 @@
 # Team
 
-
-
-### **Team**
+## **Team**
 
 **게임에서 사용될 팀을 설정 할 때 사용되는 객체. Game.AddTeam 함수를 이용**
 
-### \*\*\*\*
+## \*\*\*\*
 
-### **Property**
+## **Property**
 
 | **var MaxPlayerCount** |
 | :--- |
 | **팀 최대 인원** |
 
-### \*\*\*\*
+## \*\*\*\*
 
-### **Function**
+## **Function**
 
 | **void AddUsingCharacter\(string CharacterSetting\)** |
 | :--- |
@@ -37,12 +35,4 @@
 | **void ReviveTeamPlayerCharacter\(\)** |
 | :--- |
 | **팀원중 죽어있는 캐릭터 리스폰\(생명이 남아 있어야 한다\)** |
-
-
-
-
-
-
-
-
 

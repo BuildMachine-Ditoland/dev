@@ -1,13 +1,10 @@
 # RChildObjectScript
 
-### **RChildObjectScript**
+## **RChildObjectScript**
 
-**월드에 생성되는 R오브젝트에 제공되는 객체**  
+**월드에 생성되는 R오브젝트에 제공되는 객체**
 
-
-
-
-### **Property**
+## **Property**
 
 | **var OnCreateEvent** |
 | :--- |

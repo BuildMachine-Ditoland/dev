@@ -1,12 +1,12 @@
 # RModePhase
 
-### **RModeGame**
+## **RModeGame**
 
 **게임을 단계별로 구성 할 때 사용하는 객체. Game.AddPhase\(string phasename\) 를 사용하여 이용가능**
 
 \*\*\*\*
 
-### **Property**
+## **Property**
 
 | **var EnterEvent** |
 | :--- |
@@ -20,9 +20,9 @@
 | :--- |
 | **단계에서 다른 단계로 변경 될 때 호출되는 이벤트 객체** |
 
-### \*\*\*\*
+## \*\*\*\*
 
-### **Functions**
+## **Functions**
 
 | **number GetPhaseTime\(\)** |
 | :--- |
