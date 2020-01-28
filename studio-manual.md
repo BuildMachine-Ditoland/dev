@@ -6,9 +6,9 @@
 
 ![](.gitbook/assets/menubar-1.png)
 
-1. * 파일 메뉴 \(FileMenu\)
-2. * 실행 취소 , 다시 실행 \(Undo , Redo\)
-3. * 빠른 실행 메뉴 \(Quick Menu\)
+1. 파일 메뉴 \(FileMenu\)
+2. 실행 취소 , 다시 실행 \(Undo , Redo\)
+3. 빠른 실행 메뉴 \(Quick Menu\)
 
 ### 파일 메뉴 - File Menu
 
