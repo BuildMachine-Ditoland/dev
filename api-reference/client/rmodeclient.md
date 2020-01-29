@@ -65,10 +65,12 @@
       </th>
     </tr>
   </thead>
-  <tbody></tbody>
-</table>| **FX 생성** |
-| :--- |
+  <tbody><tr><td style="text-align:left">FX 생성</td></tr></tbody>
+</table> 
 
+| **void DeleteFX(ObjectFXClient Object)** |
+| :--- |
+| **FX 제거** | 
 
 <table>
   <thead>
@@ -83,10 +85,8 @@
       </th>
     </tr>
   </thead>
-  <tbody></tbody>
-</table>| **사운드 플레이** |
-| :--- |
-
+  <tbody><tr><td style="text-align:left">사운드 플레이</td></tr></tbody>
+</table>  
 
 <table>
   <thead>
@@ -99,8 +99,10 @@
       </th>
     </tr>
   </thead>
-  <tbody></tbody>
-</table>| **플레이 중인 사운드 정지** |
-| :--- |
+  <tbody><tr><td style="text-align:left">플레이 중인 사운드 정지</td></tr></tbody>
+</table>  
 
+| **void CreateObject(string ObjectName, Vector Location)** |
+| :--- |
+| **해당 위치에 해당 월드 트리 오브젝트를 생성한다** | 
 

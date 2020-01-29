@@ -49,10 +49,12 @@
       </th>
     </tr>
   </thead>
-  <tbody></tbody>
-</table>| **캐릭터 특정 위치에 FX 생성** |
-| :--- |
+  <tbody><tr><td style="text-align:left">캐릭터 특정 위치에 FX 생성</td></tr></tbody>
+</table>  
 
+| **ObjectSoundClient CreateSound(ObjectSoundClient SoundObject)** |
+| :--- |
+| **캐릭터의 위치에 Sound 생성** |
 
 | **void AddPlayerHUD\(string UIName\)** |
 | :--- |

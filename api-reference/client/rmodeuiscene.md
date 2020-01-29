@@ -37,19 +37,23 @@
   <thead>
     <tr>
       <th style="text-align:left">
-        <p><b>void SetText(string WidgetName, int Value)</b>
-        </p>
-        <p><b>void SetText(string WidgetName, float Value)</b>
-        </p>
-        <p><b>void SetText(string WidgetName, string InText)</b>
-        </p>
+       <p><b>void SetText(string WidgetName, int Value)</b> </p>
+       <p><b>void SetText(string WidgetName, float Value)</b></p>
+       <p><b>void SetText(string WidgetName, string InText)</b></p>
       </th>
     </tr>
   </thead>
-  <tbody></tbody>
-</table>| **위젯의 텍스트 설정** |
-| :--- |
+  <tbody>
+    <tr>
+      <td style="text-align:left"><b>위젯의 텍스트 설정</b>
+      </td>
+    </tr>
+  </tbody>
+</table>  
 
+| **void SetTextColor(string WidgetName, Color color)** |
+| :--- |
+| **텍스트 색 설정** |
 
 | **void SetChangeTextEvent\(string TextName, protected\_function InEventFunction\)** |
 | :--- |
@@ -79,33 +83,36 @@
   <thead>
     <tr>
       <th style="text-align:left">
-        <p><b>void AddChildUIScene(string ChildUISceneName, FRModeUIScene* Element)</b>
-        </p>
-        <p><b>void AddChildUIScene(string ParentWidgetName, string ChildUISceneName, FRModeUIScene* Element)</b>
-        </p>
+       <p><b>void AddChildUIScene(string ChildUISceneName, FRModeUIScene* Element)</b>   </p>
+       <p><b>void AddChildUIScene(string ParentWidgetName, string ChildUISceneName, FRModeUIScene* Element)</b> </p>
       </th>
     </tr>
   </thead>
-  <tbody></tbody>
-</table>| **스크롤 위젯에 자식 위젯 추가** |
-| :--- |
-
-
+  <tbody>
+    <tr>
+      <td style="text-align:left"><b>스크롤 위젯에 자식 위젯 추가</b> </td>
+    </tr>
+  </tbody>
+</table>   
 <table>
   <thead>
     <tr>
       <th style="text-align:left">
-        <p><b>RModeUIScene GetChildUIScene(string ChildUISceneName)</b>
-        </p>
-        <p><b>RModeUIScene GetChildUIScene(string ParentWidgetName, string ChildUISceneName)</b>
-        </p>
+       <p><b>RModeUIScene GetChildUIScene(string ChildUISceneName)</b></p>
+       <p><b>RModeUIScene GetChildUIScene(string ParentWidgetName, string ChildUISceneName)</b></p>
       </th>
     </tr>
   </thead>
-  <tbody></tbody>
-</table>| **스크롤 위젯의 자식 위젯 얻기** |
-| :--- |
+  <tbody>
+    <tr>
+      <td style="text-align:left"><b>스크롤 위젯의 자식 위젯 얻기</b> </td>
+    </tr>
+  </tbody>
+</table>    
 
+| **String GetText(string WidgetName)** |
+| :--- |
+| **텍스트 내용 얻기** |
 
 | **String IsFrameVisible** |
 | :--- |

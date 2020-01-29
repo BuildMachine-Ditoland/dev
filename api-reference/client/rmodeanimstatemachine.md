@@ -25,11 +25,12 @@
         <p><b>RModeSequenceAnimState* AddAnimState(string StateName, string ResourceID, int Playcount, float PlaySpeed)</b>
         </p>
       </th>
-    </tr>
+    </tr> 
   </thead>
-  <tbody></tbody>
-</table>| **단일 애니메이션을 플레이하는 애니메이션 상태 추가** |
-| :--- |
+  <tbody>
+    <tr><td style="text-align:left">단일 애니메이션을 플레이하는 애니메이션 상태 추가</td></tr> 
+  </tbody>
+</table> 
 
 
 <table>
@@ -43,10 +44,31 @@
       </th>
     </tr>
   </thead>
-  <tbody></tbody>
-</table>| **블랜드 애니메이션 상태 추가** |
-| :--- |
-
+  <tbody>
+    <tbody>
+      <tr><td style="text-align:left">블랜드 애니메이션 상태 추가</td></tr> 
+    </tbody>
+</table> 
+ 
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">
+        <p><b>void AddTransition(string FromState, string ToState)</b>
+        </p>
+        <p><b>void AddTransition(string FromState, string ToState, float BlendTime)</b>
+        </p>
+        <p><b>void AddTransition(string FromState, string ToState, protected_function Condition)</b>
+        </p>
+        <p><b>void AddTransition(string FromState, string ToState, protected_function Condition, float BlendTime)</b>
+        </p>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td style="text-align:left">애니메이션 상태 전이 추가</td></tr>
+  </tbody>
+</table>  
 
 <table>
   <thead>
@@ -63,30 +85,12 @@
       </th>
     </tr>
   </thead>
-  <tbody></tbody>
-</table>| **애니메이션 상태 전이 추가** |
+  <tbody><tr><td style="text-align:left">애니메이션 상태 전이 추가</td></tr></tbody>
+</table> 
+
+| **string GetName()** |
 | :--- |
-
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">
-        <p><b>void AddTransition(string FromState, string ToState)</b>
-        </p>
-        <p><b>void AddTransition(string FromState, string ToState, float BlendTime)</b>
-        </p>
-        <p><b>void AddTransition(string FromState, string ToState, protected_function Condition)</b>
-        </p>
-        <p><b>void AddTransition(string FromState, string ToState, protected_function Condition, float BlendTime)</b>
-        </p>
-      </th>
-    </tr>
-  </thead>
-  <tbody></tbody>
-</table>| **애니메이션 상태 전이 추가** |
-| :--- |
-
+| **애니메이션 상태 머신이 활성화 될 때 시작 애니메이션 상태 설정** |
 
 | **void ChangeAnimStateDirect\_ForScript\(string ChangeStateName\)** |
 | :--- |

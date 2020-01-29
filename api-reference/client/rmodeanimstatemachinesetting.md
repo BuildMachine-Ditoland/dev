@@ -2,7 +2,8 @@
 
 ## **RModeAnimStateMachineSetting**
 
-**게임에 사용되는 애니매이션 상태머신을 설정하는 객체. Game.AddAnimStateMachineSetting 로 생성**
+**게임에 사용되는 애니매이션 상태머신을 설정하는 객체.**
+**Game.AddAnimStateMachineSetting 로 생성**
 
 ## **Function**
 
@@ -19,10 +20,8 @@
       </th>
     </tr>
   </thead>
-  <tbody></tbody>
-</table>| **단일 애니메이션 상태 설정 추가** |
-| :--- |
-
+  <tbody><tr><td style="text-align:left">단일 애니메이션 상태 설정 추가</td></tr></tbody>
+</table> 
 
 <table>
   <thead>
@@ -35,10 +34,8 @@
       </th>
     </tr>
   </thead>
-  <tbody></tbody>
-</table>| **블랜드 애니메이션 상태 설정 추가** |
-| :--- |
-
+  <tbody><tr><td style="text-align:left">블랜드 애니메이션 상태 설정 추가</td></tr></tbody>
+</table> 
 
 <table>
   <thead>
@@ -55,8 +52,10 @@
       </th>
     </tr>
   </thead>
-  <tbody></tbody>
-</table>| **애니메이션 상태 전이 설정 추가** |
-| :--- |
+  <tbody><tr><td style="text-align:left">애니메이션 상태 전이 설정 추가</td></tr></tbody>
+</table>
 
+| **void SetStartState(string StateName** |
+| :--- |
+| **애니메이션 상태머신이 활성화 될 때 시작 애니메이션 상태 설정** |
 

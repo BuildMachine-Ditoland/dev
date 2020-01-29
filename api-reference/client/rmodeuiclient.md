@@ -19,6 +19,7 @@
 | :--- |
 | **UI 가시성 확인** |
 
+
 <table>
   <thead>
     <tr>
@@ -38,7 +39,31 @@
       </td>
     </tr>
   </tbody>
-</table>\| \*\*void SetChangeTextEvent\\(string UISceneName, string TextName, protected\\_function InEventFunction\\)\*\* \| \| :--- \| \| \*\*이름에 해당되는 UI페이지의 위젯의 텍스트 변경 시 호출되는 이벤트 함수 설정\*\* \| \| \*\*void SetImage\\(string UISceneName, string ImgName, string Img\\)\*\* \| \| :--- \| \| \*\*이름에 해당되는 UI페이지의 위젯 이미지 설정\*\* \| \| \*\*void SetChangeImageEvent\\(string UISceneName, string ImgName, protected\\_function InEventFunction\\)\*\* \| \| :--- \| \| \*\*이름에 해당되는 UI페이지 위젯의 이미지 변경 시 호출되는 이벤트 함수 설정\*\* \| \| \*\*void SetButtonUpEvent\\(string UISceneName, string ButtonName, protected\\_function InEventFunction\\)\*\* \| \| :--- \| \| \*\*이름에 해당되는 UI페이지 버튼 위젯이 눌렸다 띄어질 때 호출되는 이벤트 함수 설정\*\* \| \| \*\*void SetButtonPressEvent\\(string UISceneName, string ButtonName, protected\\_function InEventFunction\\)\*\* \| \| :--- \| \| \*\*이름에 해당되는 UI페이지 버튼 위젯이 눌릴 때 호출되는 이벤트 함수 설정\*\* \| \| \*\*RModeUIScene CreateModeUIScene\\(string UISceneName\\)\*\* \| \| :--- \| \| \*\*이름에 해당되는 이름을 갖는 UI 페이지 생성\\(현재 작동하지 않음\\)\*\* \|
+</table>
+
+| **void SetChangeTextEvent(string UISceneName, string TextName, protected_function InEventFunction)** |
+| :--- |
+| **이름에 해당되는 UI페이지의 위젯의 텍스트 변경 시 호출되는 이벤트 함수 설정** |
+
+| **void SetImage(string UISceneName, string ImgName, string Img)** |
+| :--- |
+| **이름에 해당되는 UI페이지의 위젯 이미지 설정** |
+
+| **void SetChangeImageEvent(string UISceneName, string ImgName, protected_function InEventFunction)** |
+| :--- |
+| **이름에 해당되는 UI페이지 위젯의 이미지 변경 시 호출되는 이벤트 함수 설정** |
+
+| **void SetButtonUpEvent(string UISceneName, string ButtonName, protected_function InEventFunction)** |
+| :--- |
+| **이름에 해당되는 UI페이지 버튼 위젯이 눌렸다 띄어질 때 호출되는 이벤트 함수 설정** |
+
+| **void SetButtonPressEvent(string UISceneName, string ButtonName, protected_function InEventFunction)** |
+| :--- |
+| **이름에 해당되는 UI페이지 버튼 위젯이 눌릴 때 호출되는 이벤트 함수 설정** |
+
+| **RModeUIScene CreateModeUIScene(string UISceneName)** |
+| :--- |
+| **이름에 해당되는 이름을 갖는 UI 페이지 생성(현재 작동하지 않음)** |
 
 <table>
   <thead>

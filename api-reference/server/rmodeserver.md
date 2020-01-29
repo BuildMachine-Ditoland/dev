@@ -11,13 +11,10 @@
 | **게임 최대 인원. 디폴트 값은 10** |
 
 ## **Function**
-
-| **void AddUserCollisionType\(string UserCollisionType\)** |
-| :--- |
-
-
+  
 <table>
   <thead>
+  <tr><td style="text-align:left">void AddUserCollisionType\(string UserCollisionType\)</td></tr>
     <tr>
       <th style="text-align:left">
         <p><b>&#xC720;&#xC800; &#xCDA9;&#xB3CC; &#xD0C0;&#xC785; &#xC124;&#xC815; &#xCD94;&#xAC00;.</b>
@@ -30,7 +27,9 @@
     </tr>
   </thead>
   <tbody></tbody>
-</table>| **RModeSpawnPoint AddSpawnPoint\(string SpawnPointName, FRObjectScript\* RObjectScript\)** |
+</table>
+
+| **RModeSpawnPoint AddSpawnPoint\(string SpawnPointName, FRObjectScript\* RObjectScript\)** |
 | :--- |
 | **게임에서 사용 할 스폰 포인트를 추가한다.** |
 
@@ -149,10 +148,12 @@
       </th>
     </tr>
   </thead>
-  <tbody></tbody>
-</table>| **유저 게임 데이터 저장** |
-| :--- |
+  <tbody><tr><td style="text-align:left">유저 게임 데이터 저장</td></tr></tbody>
+</table> 
 
+| **Object GetSavedUserGameData(String PlayerName, String KeyString)** |
+| :--- |
+| **유저 게임 데이터 얻기** |
 
 | **void SaveGameStatisticsData\(String PlayerName, String KeyString, int SaveValue, bool Overwrite, bool Ascending\)** |
 | :--- |
