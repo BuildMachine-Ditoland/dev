@@ -4,8 +4,6 @@
 
 **캐릭터가 사용하는 카메라 설정 데이터를 가지고 있는 객체**
 
-## \*\*\*\*
-
 ## **Function**
 
 | **void SetDistance\(float distance\)** |

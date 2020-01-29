@@ -6,7 +6,7 @@
 
 **Game의 AddObjectSpawner 함수로 생성**
 
-## \*\*\*\*
+ 
 
 ## **Function**
 

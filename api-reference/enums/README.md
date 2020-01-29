@@ -6,51 +6,47 @@
 
 ## C
 
-### \*\*\*\*[**CollisionResponse**](collisionresponse.md)\*\*\*\*
+### [**CollisionResponse**](collisionresponse.md)
 
-\*\*\*\*
+
 
 ## **D**
 
-### \*\*\*\*[**DivideTeamType**](divideteamtype.md) _\*\*_
+### [**DivideTeamType**](divideteamtype.md)
 
 ## **G**
 
-### \*\*\*\*[**GroupSpawnType** ](groupspawntype.md)\*\*\*\*
+### [**GroupSpawnType** ](groupspawntype.md)
 
 ## K
 
-### \*\*\*\*[**Key**](key.md)\*\*\*\*
+### [**Key**](key.md)
 
-### \*\*\*\*[**KeyInputType**](keyinputtype.md)\*\*\*\*
+### [**KeyInputType**](keyinputtype.md)
 
 ## **M**
 
-### \*\*\*\*[**ModeAnimStateType**](modeanimstatetype.md) _\*\*_
+### [**ModeAnimStateType**](modeanimstatetype.md) 
 
 ## **O**
 
-### \*\*\*\*[**ObjectSelectType**](objectselecttype.md) _\*\*_
+### [**ObjectSelectType**](objectselecttype.md) 
 
 ## **P**
 
-### \*\*\*\*[**PointSpawnType**](pointspawntype.md) _\*\*_
+### [**PointSpawnType**](pointspawntype.md) 
 
 ## **R**
 
-### \*\*\*\*[**ReplicateType**](replicatetype.md) _\*\*_
+### [**ReplicateType**](replicatetype.md) 
 
 ## **S**
 
-### \*\*\*\*[**SpawnType**](spawntype.md)\*\*\*\*
+### [**SpawnType**](spawntype.md)
 
 ## **T**
 
-### \*\*\*\*[**TeamType**](teamtype.md)\*\*\*\*
+### [**TeamType**](teamtype.md)
 
-### \*\*\*\*
 
-### \*\*\*\*
-
-### _\*\*_
 

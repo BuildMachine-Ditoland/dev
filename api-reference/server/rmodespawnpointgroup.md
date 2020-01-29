@@ -4,7 +4,7 @@
 
 **여러 스폰 포인트를 설정하고 그 중에 스폰하게 하는 객체. Game.AddSpawnPointGroup 로 이용.**
 
-\*\*\*\*
+
 
 ## **Function**
 

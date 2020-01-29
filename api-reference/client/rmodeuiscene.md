@@ -22,8 +22,7 @@
 | :--- |
 | **UI가 안 보여질 때 호출되는 이벤트 객체** |
 
-## \*\*\*\*
-
+ 
 ## **Function**
 
 | **void SetVisible\(bool bVisible\)** |
