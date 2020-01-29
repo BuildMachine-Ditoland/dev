@@ -28,7 +28,7 @@
     </tr> 
   </thead>
   <tbody>
-    <tr><td style="text-align:left">단일 애니메이션을 플레이하는 애니메이션 상태 추가</td></tr> 
+    <tr><td style="text-align:left"><b>단일 애니메이션을 플레이하는 애니메이션 상태 추가</b></td></tr> 
   </tbody>
 </table> 
 
@@ -46,7 +46,7 @@
   </thead>
   <tbody>
     <tbody>
-      <tr><td style="text-align:left">블랜드 애니메이션 상태 추가</td></tr> 
+      <tr><td style="text-align:left"><b>블랜드 애니메이션 상태 추가</b></td></tr> 
     </tbody>
 </table> 
  
@@ -66,7 +66,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr><td style="text-align:left">애니메이션 상태 전이 추가</td></tr>
+    <tr><td style="text-align:left"><b>애니메이션 상태 전이 추가</b></td></tr>
   </tbody>
 </table>  
 
@@ -85,7 +85,7 @@
       </th>
     </tr>
   </thead>
-  <tbody><tr><td style="text-align:left">애니메이션 상태 전이 추가</td></tr></tbody>
+  <tbody><tr><td style="text-align:left"><b>애니메이션 상태 전이 추가</b></td></tr></tbody>
 </table> 
 
 | **string GetName()** |

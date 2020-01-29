@@ -20,10 +20,8 @@
   <thead>
     <tr>
       <th style="text-align:left">
-        <p><b>void AddChildUIScene(string ParentUISceneName, string UIName, string UISceneName)</b>
-        </p>
-        <p><b>void AddChildUIScene(string ParentUISceneName, string ParentWidgetName, string UIName, string UISceneName)</b>
-        </p>
+        <p><b>ObjectFXClient CreateFX(ObjectFXClient FXObject, Bone BoneType) </b> </p>
+        <p><b>ObjectFXClient CreateFX(String FXName, Bone BoneType)</b> </p>
       </th>
     </tr>
   </thead>
@@ -34,6 +32,10 @@
     </tr>
   </tbody>
 </table>
+
+| **ObjectSoundClient CreateSound(ObjectSoundClient SoundObject)** |
+| :--- |
+| **캐릭터의 위치에 Sound 생성** |
 
 | **RModeHitResult LineTrace\(Vector Start, Vector Dir, float Distance\)** |
 | :--- |

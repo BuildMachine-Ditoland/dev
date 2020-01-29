@@ -148,7 +148,7 @@
       </th>
     </tr>
   </thead>
-  <tbody><tr><td style="text-align:left">유저 게임 데이터 저장</td></tr></tbody>
+  <tbody><tr><td style="text-align:left"><b>유저 게임 데이터 저장</b></td></tr></tbody>
 </table> 
 
 | **Object GetSavedUserGameData(String PlayerName, String KeyString)** |
