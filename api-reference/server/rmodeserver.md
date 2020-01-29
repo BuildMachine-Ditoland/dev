@@ -29,6 +29,10 @@
   <tbody></tbody>
 </table>
 
+| **RModeSpawnPointGroup AddSpawnPointGroup(string SpawnPointGroupName)** |
+| :--- |
+| **게임에서 사용 할 스폰 포인트 그룹을 추가한다.** |
+
 | **RModeSpawnPoint AddSpawnPoint\(string SpawnPointName, FRObjectScript\* RObjectScript\)** |
 | :--- |
 | **게임에서 사용 할 스폰 포인트를 추가한다.** |
