@@ -43,7 +43,7 @@
 
 | **void SetDefaultSpawnPos\(FVector Pos\)** |
 | :--- |
-| **스폰 포인트 설정이 없을 경우 스폰되는 위치 셜정** |
+| **스폰 포인트 설정이 없을 경우 스폰되는 위치 설정** |
 
 | **RModeCharacterSetting AddCharacterSetting\(string SettingName\)** |
 | :--- |

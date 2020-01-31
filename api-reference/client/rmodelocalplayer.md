@@ -55,7 +55,7 @@
       </td>
     </tr>
      <tr>
-        <td style="text-align:left"><b>MoveForward\(float Value\)의 작동 방식 설정</b>  </td>
+        <td style="text-align:left"><b>MoveForward(float Value)의 작동 방식 설정</b>  </td>
      </tr>
   </tbody> 
 </table> 
