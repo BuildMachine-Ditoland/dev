@@ -6,8 +6,9 @@
 
 ## **Property**
 
-### **var OnCreateEvent**
-**생성 시 호출되는 이벤트 객체**
+| **[var OnCreateEvent](api-reference/common/rmodeeventfunction.md)** |
+| :--- |
+|**생성 시 호출되는 이벤트 객체**|
 
 ### **var OnUpdateEvent**
 **생성 후 매 프레임에 호출되는 이벤트 객체**
