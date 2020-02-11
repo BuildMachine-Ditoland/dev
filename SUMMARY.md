@@ -4,6 +4,8 @@
   * [Studio Manual](studio-manual.md)
   * [Resources](resources.md)
   * [API Reference](api-reference/README.md)
+    * [Function]
+        * [test](api-reference/function/test.md)
     * [Common](api-reference/common/README.md)
       * [Vector](api-reference/common/vector.md)
       * [Color](api-reference/common/color.md)
