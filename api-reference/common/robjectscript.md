@@ -8,7 +8,7 @@
  
 | **var OnCreateEvent** |
 | :--- |
-**생성 시 호출되는 이벤트 객체**
+| **생성 시 호출되는 이벤트 객체** |
  
 | **var OnUpdateEvent** |
 | :--- |
