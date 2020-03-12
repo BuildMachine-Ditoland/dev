@@ -1,14 +1,10 @@
-# ModeUISceneServer
-
-## **ModeUISceneServer**
-
-**월드에 배치된 UI에 해당하는 스크립트 객체**
-
- 
-
-## **Function**
-
-| **void SetVisibility\(bool Visibility\)** |
+# **ModeUISceneServer**
+
+| **월드에 배치된 UI씬에 해당하는 스크립트 객체** |
 | :--- |
-| **가시성 설정** |
-
+## **함수**
+
+| **SetVisibility(bool Visibility)** |
+| :--- |
+| **표시 여부 설정** |
+

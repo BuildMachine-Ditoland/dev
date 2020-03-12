@@ -1,36 +1,20 @@
-# RModeScriptValue
-
-## **RModeScriptValue**
-
-**유저가 Lua에서 값을, 추가 변경 할 수 있는 객체**
-
- 
-
-## **Functions**
-
-| **void ConnectChangeEventFunction\(string valuename, function\_name\)** |
+# **RModeScriptValue**
+
+| **특정한 변수가 변경되었을 때 실행되는 함수를 연결하는 객체** |
 | :--- |
-| **추가된 값이 변경될 때 호출되는 이벤트를 반환한다.** |
-
- 
-
-## **Sample**
-
+## **함수**
+
+| **void ConnectChangeEventFunction(string ValueName, FunctionName)** |
+| :--- |
+| **ValueName의 변수가 변경될 때 FunctionName의 함수가 실행된다.** |
+
+## **샘플**
+
 ```lua
-local function FunctionName(Character, Value)
-
-    Logger:Log(“Hello”)
-    -- value = HP value
-
+local function EnterPlayer (Player)
+	Logger:Log(“Hello”)
 end
 
-
-local function SpawnCharacter(Character)
-
-   Character:ConnectChangeEventFunction("HP", FunctionName)
-
-end
-
-Game.OnSpawnCharacter:Connect(SpawnCharacter)
+-- Game.OnEnterPlayer가 RModeEventFunction을 리턴
+Game.OnEnterPlayer:Connect(EnterPlayer)	 
 ```
-

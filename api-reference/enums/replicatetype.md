@@ -1,20 +1,11 @@
-# ReplicateType
-
-## **ReplicateType**
-
-**객체에 추가된 값의 서버, 클라이언트 간 동기화 타입**
-
+# **ReplicateType**
+
+| **오브젝트의 충돌 처리 타입** |
+| :--- |
 ## **Enums**
-
-| **Name** | **Value** | **Description** |
-| :--- | :---: | :--- |
-| **None** | **0** | **동기화 하지 않음** |
-| **Changed** | **1** | **변경될 때 마다 동기화** |
-| **ChangedTime** | **2** | **변경되고, 일정 시간마다 동기화** |
-
-
-
-## **Referenced by**
-
-**ModeScriptReplicateValue**
-
+
+| **이름**| **설명** |
+| :--- | :--- |
+| **None** | **아무런 타입 아님** |
+| **Changed** | **변경될 때 마다 동기화** |
+| **ChangedTime** | **변경되고, 일정 시간마다 동기화** |

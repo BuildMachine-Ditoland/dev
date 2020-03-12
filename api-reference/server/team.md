@@ -1,38 +1,34 @@
-# Team
-
-## **Team**
-
-**게임에서 사용될 팀을 설정 할 때 사용되는 객체. Game.AddTeam 함수를 이용**
-
-
-
-## **Property**
-
-| **var MaxPlayerCount** |
+# **Team**
+
+| **게임에서 사용될 팀을 설정 할 때 사용되는 객체. Game.AddTeam 함수를 이용** |
 | :--- |
-| **팀 최대 인원** |
-
-
-
-## **Function**
-
-| **void AddUsingCharacter\(string CharacterSetting\)** |
+## **속성**
+
+| **UseSelfcharacter** |
 | :--- |
-| **팀에서 사용될 캐릭터설정을 추가\(Game에 AddCharacterSetting 함수로 추가한 캐릭터설정 중\)** |
-
-| **void SetUsingSpawnPointGroup\(string InSpawnPointGroup\)** |
+| **자신의 캐릭터의 사용 여부(true로 설정하면, 자신의 아바타 사용 false시 ResourcePath 에 설정된 캐릭터 사용- 현재 무조건 false 처리됨)** |
+
+| **string ResourcePath** |
 | :--- |
-| **팀에서 사용될 스폰 포인트 그룹을 추가\(Game에 AddSpawnPointGroup 함수로 추가한 스폰 그룹중\)** |
-
-| **void AddFixedCharacter\(string CharacterSetting\)** |
+| **캐릭터 리소스 경로 (현재 언리얼 리소스 참조경로, 추후 리소스 아이디로 대체)** |
+
+| **int MaxLife** |
 | :--- |
-| **팀 고정 캐릭터설정 추가\(Game에 AddCharacterSetting 함수로 추가한 캐릭터설정 중\)** |
-
-| **void AddFixedSpawnPoint\(string SpawnPoint\)** |
+| **최대 생명(해당 생명 만큼 리스폰 됨, -1로 설정 시 무한 리스폰. 디폴트 값 -1)** |
+
+| **float RespawnTime** |
 | :--- |
-| **팀 고정 스폰 포인트 추가\(Game에 AddSpawnPoint 함수로 추가한 스폰 포인트중\)** |
-
-| **void ReviveTeamPlayerCharacter\(\)** |
+| **리스폰 타임(죽음 처리 후 리스폰 까지 걸리는 시간)** |
+
+| **float MoveSpeed** |
 | :--- |
-| **팀원중 죽어있는 캐릭터 리스폰\(생명이 남아 있어야 한다\)** |
-
+| **이동 스피드** |
+
+| **float JumpSpeed** |
+| :--- |
+| **점프 높이** |
+
+| **float FlyControlRate** |
+| :--- |
+| **공중에서 컨트롤 비율** |
+

@@ -1,22 +1,18 @@
-# ObjectPointLightServer
-
-## **ObjectPointLightServer**
-
-**월드에 배치된 Light에 해당하는 스크립트 객체**
-
-
-
-## **Function**
-
-| **void SetEnable\(bool bEnable\)** |
+# **ObjectPointLightServer**
+
+| **월드에 배치된 Light에 해당하는 스크립트 객체** |
 | :--- |
-| **설정된 Point Light 활성화 설정** |
-
-| **void ChangeColor\(Color ChangedColor\)** |
+## **함수**
+
+| **SetEnable(bool bEnable)** |
+| :--- |
+| **Point Light 활성화 여부 설정** |
+
+| **ChangeColor(Color ChangedColor)** |
 | :--- |
 | **컬러 변경** |
-
-| **void ChangeIntensity\(float Intensity\)** |
+
+| **ChangeIntensity(float Intensity)** |
 | :--- |
-| **밝기값 변경** |
-
+| **밝기 변경** |
+

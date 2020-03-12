@@ -1,16 +1,14 @@
-# GameStatisticsData
-
-## **GameStatisticsData**
-
-**게임 통계데이터 구조체**
-
-## **Property**
-
-| **var PlayerName** |
+# **GameStatisticsData**
+
+| **게임 통계데이터** |
 | :--- |
-| **통계 플레이어 이름** |
-
-| **var Value** |
+## **속성**
+
+| **PlayerName** |
 | :--- |
-| **저장된 값** |
-
+| **플레이어 이름** |
+
+| **Value** |
+| :--- |
+| **int 값** |
+

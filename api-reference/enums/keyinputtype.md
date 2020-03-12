@@ -1,21 +1,12 @@
-# KeyInputType
-
-## **KeyInputType**
-
-**버튼의 입력 타입**
-
+# **KeyInputType**
+
+| **키 입력 타입** |
+| :--- |
 ## **Enums**
-
-| **Name** | **Value** | **Description** |
+
+| **이름**| **값** | **설명** |
 | :--- | :---: | :--- |
-| **Pressed** | **0** | **눌렸을 때** |
-| **Released** | **1** | **띄었을 때** |
-| **Repeat** | **2** | **계속 누르고 있을 때** |
-| **DoubleClick** | **3** | **더블 클릭 됐을 때** |
-
-
-
-## **Referenced by**
-
-**ModeLocalPlayer**
-
+| **Pressed** | **0** | **키를 눌렸을 때** |
+| **Released** | **1** | **키를 띄었을 때** |
+| **Repeat** | **2** | **키를 계속 누르고 있을 때** |
+| **DoubleClick** | **3** | **키를 더블 클릭 했을 때** |
