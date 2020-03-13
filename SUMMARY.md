@@ -83,3 +83,4 @@
       * [ObjectSelector](api-reference/Server/ObjectSelector.md)
       * [RObjectStaticMeshServer](api-reference/Server/RObjectStaticMeshServer.md)
     * [ObjectMove](script-tutorial/objectmove.md)
+    * [ObjectMove2](script-tutorial/objectmove2.md)
