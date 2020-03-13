@@ -180,6 +180,6 @@ Play Test Tab에서 Multi Test 버튼을 누르는 것으로 멀티 플레이 �
 
 일반 플레이 테스트와는 다르게, 상단 아웃레이 메뉴에 Add Client 메뉴가 추가되며, Add Client 메뉴로 Client를 추가로 실행하여 멀티 플레이 상황을 재현할 수 있습니다.
 
-![](.gitbook/assets/multi_addClient02.png)
+![](.gitbook/assets/multi_addClient03.png)
 
 ![](.gitbook/assets/multiTest_screen.png)
