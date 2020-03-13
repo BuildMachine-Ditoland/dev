@@ -73,7 +73,7 @@
       * [Team](api-reference/server/Team.md)
       * [Team](api-reference/server/Team.md)
       * [RModeUIServer](api-reference/server/RModeUIServer.md)
-      * [ObjectServer](api-reference/server/ObjectServer.md)
+      * [ObjectServer](api-reference/server/objectserver.md)
       * [ObjectFXServer](api-reference/server/ObjectFXServer.md)
       * [ObjectSoundServer](api-reference/server/ObjectSoundServer.md)
       * [ObjectPointLightServer](api-reference/server/ObjectPointLightServer.md)
@@ -83,4 +83,4 @@
       * [ObjectSelector](api-reference/server/ObjectSelector.md)
       * [RObjectStaticMeshServer](api-reference/server/RObjectStaticMeshServer.md)
     * [ObjectMove](script-tutorial/objectmove.md)
-    * [ObjectMove2](script-tutorial/objectmove2.md)
+
