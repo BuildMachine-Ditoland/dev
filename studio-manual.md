@@ -1,5 +1,5 @@
 # Studio Manual
-test
+
 ## 메뉴 바 - Menu Bar
 
 기본적으로 스튜디오의 상단에 위치하고 있습니다. 원하는 위치에 이동시킬 수 있습니다. 편집된 스튜디오의 저장 및 불러오기등의 기능은 여기서 사용할 수 있습니다.
@@ -171,3 +171,14 @@ TaskBar에서는 ScriptEditor를 제외한 1차 팝업들을 On / Off 할 수 �
 | Middle Mouse Button + On Object | 오브젝트 기준 카메라 회전 | 선택된 오브젝트 기준으로 카메라를 회전 시킵니다. \(마우스 커서가 대상위에 있을때만 동작합니다.\) |
 | Mouse Scroll Wheel Up/Down | 전진/후진 | 카메라가 천천히 전진/후진 합니다. |
 
+## 멀티 플레이 테스트
+
+Play Test Tab에서 Multi Test 버튼을 누르는 것으로 멀티 플레이 테스트를 실행할 수 있습니다.
+
+![](.gitbook/assets/multi_addClient01.png)
+
+일반 플레이 테스트와는 다르게, 상단 아웃레이 메뉴에 Add Client 메뉴가 추가되며, Add Client 메뉴로 Client를 추가로 실행하여 멀티 플레이 상황을 재현할 수 있습니다.
+
+![](.gitbook/assets/multi_addClient02.png)
+
+![](.gitbook/assets/multiTest_screen.png)
