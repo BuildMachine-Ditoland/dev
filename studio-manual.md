@@ -51,9 +51,10 @@ Play Test 탭에선 실제로 지금까지 만든 게임을 업로드 전에 미
 
 | Icon | Action | Description |
 | :--- | :--- | :--- |
-| ![Play](.gitbook/assets/play-2.png) | Play Mode | 실제 게임과 동일하게 시뮬레이션 하며, 캐릭터를 0,0,0 좌표로 스폰 됩니다. |
-| ![Play Here](.gitbook/assets/playhere-1.png) | Play Here | 캐릭터가 무조건 현재 카메라 좌표에서 스폰 되며 시뮬레이션을 시작합니다. |
-| ![RunCamera](.gitbook/assets/runcamera-3.png) | Run Camera Mode | 게임 시뮬레이션은 시작하지만 플레이어블 캐릭터는 생성하지 않습니다. 하지만 FreeCam 모드로 게임을 탐색할 수 있습니다. |
+| ![Play Mode](.gitbook/assets/play-2.png) | Play Mode | 실제 게임과 동일하게 시뮬레이션 하며, 캐릭터를 0,0,0 좌표로 스폰 됩니다. |
+| ![Play Here Mode](.gitbook/assets/playhere-1.png) | Play Here Mode | 캐릭터가 무조건 현재 카메라 좌표에서 스폰 되며 시뮬레이션을 시작합니다. |
+| ![Run Camera Mode](.gitbook/assets/runcamera-3.png) | Run Camera Mode | 게임 시뮬레이션은 시작하지만 플레이어블 캐릭터는 생성하지 않습니다. 하지만 FreeCam 모드로 게임을 탐색할 수 있습니다. |
+| ![Multi Test](.gitbook/assets/Previous.png) | Multi Test | Player를 거치지 않고 다수의 플레이어와 함께 게임을 플레이하는 상황을 재현할 수 있습니다. |
 
 ### Object Control Tab
 
