@@ -3,7 +3,7 @@
  **게임 전반적인 역할을 하는 객체에요. 여기 있는 기능들은 클라이언트에서만 사용할 수 있어요.** 
 ## **이벤트**
 
-| ### **ReceiveGameStatisticsDataEvent** |
+| **ReceiveGameStatisticsDataEvent** |
 | :--- |
  **서버로 부터 게임 통계 데이터 받았을 때 이벤트** 
 ## **함수**

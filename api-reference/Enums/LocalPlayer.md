@@ -3,13 +3,13 @@
  **캐릭터의 기본 동작을 설정 할 수 있는 객체에요. 클라이언트에서 사용 가능해요.** 
 ## **이벤트**
 
-| ### **ProcessInputAxisEvent(string Event, protected_function ProcessFunc)** |
+| **ProcessInputAxisEvent(string Event, protected_function ProcessFunc)** |
 | :--- |
  **축 인풋 이벤트** 
-| ### **ProcessInputActionEvent(string Event, RModeInputType InputType, protected_function ProcessFunc)** |
+| **ProcessInputActionEvent(string Event, RModeInputType InputType, protected_function ProcessFunc)** |
 | :--- |
  **키 인풋 이벤트** 
-| ### **OnChangedInventoryItem** |
+| **OnChangedInventoryItem** |
 | :--- |
  **인벤토리 아이템 변화 시 호출되는 이벤트** 
 ## **함수**

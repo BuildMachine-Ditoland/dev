@@ -8,7 +8,7 @@
  **부모 오브젝트** 
 ## **이벤트**
 
-| ### **ConnectChangeEventFunction(string ValueName, function FunctionName)** |
+| **ConnectChangeEventFunction(string ValueName, function FunctionName)** |
 | :--- |
  **추가된 값이 변경 될 때 호출되는 이벤트** 
 ## **샘플**

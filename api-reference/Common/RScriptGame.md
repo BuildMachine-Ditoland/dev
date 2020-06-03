@@ -3,19 +3,19 @@
  **스크립트 게임 객체에요.** 
 ## **이벤트**
 
-| ### **OnUpdateEvent** |
+| **OnUpdateEvent** |
 | :--- |
  **매 프레임 호출되는 이벤트** 
-| ### **OnEnterPlayer** |
+| **OnEnterPlayer** |
 | :--- |
  **플레이어 진입 시 호출되는 이벤트** 
-| ### **OnLeavePlayer** |
+| **OnLeavePlayer** |
 | :--- |
  **플레이어 나갈 때 호출되는 이벤트** 
-| ### **OnDeathCharacter** |
+| **OnDeathCharacter** |
 | :--- |
  **케릭터 죽을 때 호출되는 이벤트** 
-| ### **OnSpawnCharacter** |
+| **OnSpawnCharacter** |
 | :--- |
  **케릭터 스폰 될 때 호출되는 이벤트** 
 ## **함수**

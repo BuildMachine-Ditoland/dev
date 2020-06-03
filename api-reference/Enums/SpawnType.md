@@ -3,9 +3,9 @@
  **스폰 타입이에요** 
 ## **Enums**
 
-### __UseSpawnGroup__
+| **UseSpawnGroup** |
  **스폰 그룹을 사용** 
-### __UseTeamSpawn__
+| **UseTeamSpawn** |
  **팀 스폰을 사용** 
-### __UseSpawnPoint__
+| **UseSpawnPoint** |
  **스폰 포인트를 사용** 

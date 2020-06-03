@@ -3,249 +3,249 @@
  **키 입력 타입이에요** 
 ## **Enums**
 
-### __MouseX__
+| **MouseX** |
  **Input Key Binding** 
-### __MouseY__
+| **MouseY** |
  **Input Key Binding** 
-### __MouseScrollUp__
+| **MouseScrollUp** |
  **Input Key Binding** 
-### __MouseScrollDown__
+| **MouseScrollDown** |
  **Input Key Binding** 
-### __MouseWheelAxis__
+| **MouseWheelAxis** |
  **Input Key Binding** 
-### __LeftMouseButton__
+| **LeftMouseButton** |
  **Input Key Binding** 
-### __RightMouseButton__
+| **RightMouseButton** |
  **Input Key Binding** 
-### __MiddleMouseButton__
+| **MiddleMouseButton** |
  **Input Key Binding** 
-### __BackSpace__
+| **BackSpace** |
  **Input Key Binding** 
-### __Tab__
+| **Tab** |
  **Input Key Binding** 
-### __Enter__
+| **Enter** |
  **Input Key Binding** 
-### __Pause__
+| **Pause** |
  **Input Key Binding** 
-### __CapsLock__
+| **CapsLock** |
  **Input Key Binding** 
-### __Escape__
+| **Escape** |
  **Input Key Binding** 
-### __SpaceBar__
+| **SpaceBar** |
  **Input Key Binding** 
-### __PageUp__
+| **PageUp** |
  **Input Key Binding** 
-### __PageDown__
+| **PageDown** |
  **Input Key Binding** 
-### __End__
+| **End** |
  **Input Key Binding** 
-### __Home__
+| **Home** |
  **Input Key Binding** 
-### __Left__
+| **Left** |
  **Input Key Binding** 
-### __Up__
+| **Up** |
  **Input Key Binding** 
-### __Right__
+| **Right** |
  **Input Key Binding** 
-### __Down__
+| **Down** |
  **Input Key Binding** 
-### __Insert__
+| **Insert** |
  **Input Key Binding** 
-### __Delete__
+| **Delete** |
  **Input Key Binding** 
-### __Zero__
+| **Zero** |
  **Input Key Binding** 
-### __One__
+| **One** |
  **Input Key Binding** 
-### __Two__
+| **Two** |
  **Input Key Binding** 
-### __Three__
+| **Three** |
  **Input Key Binding** 
-### __Four__
+| **Four** |
  **Input Key Binding** 
-### __Five__
+| **Five** |
  **Input Key Binding** 
-### __Six__
+| **Six** |
  **Input Key Binding** 
-### __Seven__
+| **Seven** |
  **Input Key Binding** 
-### __Eight__
+| **Eight** |
  **Input Key Binding** 
-### __Nine__
+| **Nine** |
  **Input Key Binding** 
-### __A__
+| **A** |
  **Input Key Binding** 
-### __B__
+| **B** |
  **Input Key Binding** 
-### __C__
+| **C** |
  **Input Key Binding** 
-### __D__
+| **D** |
  **Input Key Binding** 
-### __E__
+| **E** |
  **Input Key Binding** 
-### __F__
+| **F** |
  **Input Key Binding** 
-### __G__
+| **G** |
  **Input Key Binding** 
-### __H__
+| **H** |
  **Input Key Binding** 
-### __I__
+| **I** |
  **Input Key Binding** 
-### __J__
+| **J** |
  **Input Key Binding** 
-### __K__
+| **K** |
  **Input Key Binding** 
-### __L__
+| **L** |
  **Input Key Binding** 
-### __M__
+| **M** |
  **Input Key Binding** 
-### __N__
+| **N** |
  **Input Key Binding** 
-### __O__
+| **O** |
  **Input Key Binding** 
-### __P__
+| **P** |
  **Input Key Binding** 
-### __Q__
+| **Q** |
  **Input Key Binding** 
-### __R__
+| **R** |
  **Input Key Binding** 
-### __S__
+| **S** |
  **Input Key Binding** 
-### __T__
+| **T** |
  **Input Key Binding** 
-### __U__
+| **U** |
  **Input Key Binding** 
-### __V__
+| **V** |
  **Input Key Binding** 
-### __W__
+| **W** |
  **Input Key Binding** 
-### __X__
+| **X** |
  **Input Key Binding** 
-### __Y__
+| **Y** |
  **Input Key Binding** 
-### __Z__
+| **Z** |
  **Input Key Binding** 
-### __NumPadZero__
+| **NumPadZero** |
  **Input Key Binding** 
-### __NumPadOne__
+| **NumPadOne** |
  **Input Key Binding** 
-### __NumPadTwo__
+| **NumPadTwo** |
  **Input Key Binding** 
-### __NumPadThree__
+| **NumPadThree** |
  **Input Key Binding** 
-### __NumPadFour__
+| **NumPadFour** |
  **Input Key Binding** 
-### __NumPadFive__
+| **NumPadFive** |
  **Input Key Binding** 
-### __NumPadSix__
+| **NumPadSix** |
  **Input Key Binding** 
-### __NumPadSeven__
+| **NumPadSeven** |
  **Input Key Binding** 
-### __NumPadEight__
+| **NumPadEight** |
  **Input Key Binding** 
-### __NumPadNine__
+| **NumPadNine** |
  **Input Key Binding** 
-### __Multiply__
+| **Multiply** |
  **Input Key Binding** 
-### __Add__
+| **Add** |
  **Input Key Binding** 
-### __Subtract__
+| **Subtract** |
  **Input Key Binding** 
-### __Decimal__
+| **Decimal** |
  **Input Key Binding** 
-### __Divide__
+| **Divide** |
  **Input Key Binding** 
-### __F1__
+| **F1** |
  **Input Key Binding** 
-### __F2__
+| **F2** |
  **Input Key Binding** 
-### __F3__
+| **F3** |
  **Input Key Binding** 
-### __F4__
+| **F4** |
  **Input Key Binding** 
-### __F5__
+| **F5** |
  **Input Key Binding** 
-### __F6__
+| **F6** |
  **Input Key Binding** 
-### __F7__
+| **F7** |
  **Input Key Binding** 
-### __F8__
+| **F8** |
  **Input Key Binding** 
-### __F9__
+| **F9** |
  **Input Key Binding** 
-### __F10__
+| **F10** |
  **Input Key Binding** 
-### __F11__
+| **F11** |
  **Input Key Binding** 
-### __F12__
+| **F12** |
  **Input Key Binding** 
-### __NumLock__
+| **NumLock** |
  **Input Key Binding** 
-### __ScrollLock__
+| **ScrollLock** |
  **Input Key Binding** 
-### __LeftShift__
+| **LeftShift** |
  **Input Key Binding** 
-### __RightShift__
+| **RightShift** |
  **Input Key Binding** 
-### __LeftControl__
+| **LeftControl** |
  **Input Key Binding** 
-### __RightControl__
+| **RightControl** |
  **Input Key Binding** 
-### __LeftAlt__
+| **LeftAlt** |
  **Input Key Binding** 
-### __RightAlt__
+| **RightAlt** |
  **Input Key Binding** 
-### __LeftCommand__
+| **LeftCommand** |
  **Input Key Binding** 
-### __RightCommand__
+| **RightCommand** |
  **Input Key Binding** 
-### __Semicolon__
+| **Semicolon** |
  **Input Key Binding** 
-### __Equals__
+| **Equals** |
  **Input Key Binding** 
-### __Comma__
+| **Comma** |
  **Input Key Binding** 
-### __Underscore__
+| **Underscore** |
  **Input Key Binding** 
-### __Hyphen__
+| **Hyphen** |
  **Input Key Binding** 
-### __Period__
+| **Period** |
  **Input Key Binding** 
-### __Slash__
+| **Slash** |
  **Input Key Binding** 
-### __Tilde__
+| **Tilde** |
  **Input Key Binding** 
-### __LeftBracket__
+| **LeftBracket** |
  **Input Key Binding** 
-### __Backslash__
+| **Backslash** |
  **Input Key Binding** 
-### __RightBracket__
+| **RightBracket** |
  **Input Key Binding** 
-### __Apostrophe__
+| **Apostrophe** |
  **Input Key Binding** 
-### __Ampersand__
+| **Ampersand** |
  **Input Key Binding** 
-### __Asterix__
+| **Asterix** |
  **Input Key Binding** 
-### __Caret__
+| **Caret** |
  **Input Key Binding** 
-### __Colon__
+| **Colon** |
  **Input Key Binding** 
-### __Dollar__
+| **Dollar** |
  **Input Key Binding** 
-### __Exclamation__
+| **Exclamation** |
  **Input Key Binding** 
-### __LeftParantheses__
+| **LeftParantheses** |
  **Input Key Binding** 
-### __RightParantheses__
+| **RightParantheses** |
  **Input Key Binding** 
-### __Quote__
+| **Quote** |
  **Input Key Binding** 
-### __Gamepad_LeftX__
+| **Gamepad_LeftX** |
  **Input Key Binding** 
-### __Gamepad_LeftY__
+| **Gamepad_LeftY** |
  **Input Key Binding** 
-### __Gamepad_RightX__
+| **Gamepad_RightX** |
  **Input Key Binding** 
-### __Gamepad_RightY__
+| **Gamepad_RightY** |
  **Input Key Binding** 

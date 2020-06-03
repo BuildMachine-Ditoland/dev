@@ -3,16 +3,16 @@
  **클라이언트에서 보여지는 UI페이지이며, 설정되어 있는 위젯 객체를 제어하는 객체에요.** 
 # **이벤트**
 
-| ### **OnInitEvent** |
+| **OnInitEvent** |
 | :--- |
  **UI가 초기화 되었을 때 호출되는 이벤트** 
-| ### **OnVisibleEvent** |
+| **OnVisibleEvent** |
 | :--- |
  **UI가 보여질 때 호출되는 이벤트** 
-| ### **OnUpdateEvent** |
+| **OnUpdateEvent** |
 | :--- |
  **UI가 보여지는 동안 호출되는 이벤트** 
-| ### **OnInVisibleEvent** |
+| **OnInVisibleEvent** |
 | :--- |
  **UI가 안 보여질 때 호출되는 이벤트 객체** 
 ## **함수**
