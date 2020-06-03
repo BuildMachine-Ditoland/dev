@@ -1,7 +1,6 @@
 # Enums
 ### [**Bone**](Bone.md)
 ### [**CollisionResponse**](CollisionResponse.md)
-### [**GroupSpawnType**](GroupSpawnType.md)
 ### [**Key**](Key.md)
 ### [**KeyInputType**](KeyInputType.md)
 ### [**LocalPlayer**](LocalPlayer.md)
@@ -11,5 +10,4 @@
 ### [**ReplicateType**](ReplicateType.md)
 ### [**SimulatePhysicsType**](SimulatePhysicsType.md)
 ### [**SpawnType**](SpawnType.md)
-### [**TeamType**](TeamType.md)
-### [**TeamType.md**](TeamType.md.md)
+### [**TransformPlayType**](TransformPlayType.md)
