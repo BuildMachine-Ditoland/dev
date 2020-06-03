@@ -3,7 +3,7 @@
   * [HOME](README.md)
   * [Studio Manual](studio-manual.md)
   * [Resources](resources.md)
-  * [API Reference]
+  * API Reference
     * [Enums](api-reference/Enums/README.md)
       * [Bone](api-reference/Enums/Bone.md)
       * [CollisionResponse](api-reference/Enums/CollisionResponse.md)
