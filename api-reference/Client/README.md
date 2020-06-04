@@ -1,5 +1,6 @@
 # Client
 ### [**Camera**](Camera.md)
+### [**LocalPlayer**](LocalPlayer.md)
 ### [**RAnimStateBase**](RAnimStateBase.md)
 ### [**RAnimStateMachine**](RAnimStateMachine.md)
 ### [**RAnimStateMachineSetting**](RAnimStateMachineSetting.md)

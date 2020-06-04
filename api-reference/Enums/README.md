@@ -3,7 +3,6 @@
 ### [**CollisionResponse**](CollisionResponse.md)
 ### [**Key**](Key.md)
 ### [**KeyInputType**](KeyInputType.md)
-### [**LocalPlayer**](LocalPlayer.md)
 ### [**ModeAnimStateType**](ModeAnimStateType.md)
 ### [**ObjectSelectType**](ObjectSelectType.md)
 ### [**PointSpawnType**](PointSpawnType.md)
