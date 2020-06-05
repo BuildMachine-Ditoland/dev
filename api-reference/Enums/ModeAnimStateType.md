@@ -1,5 +1,6 @@
 # **ModeAnimStateType**
 
+
 애니메이션 상태 타입이에요. 
 ## **Enums**
 

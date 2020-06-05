@@ -1,5 +1,6 @@
 # **ObjectSelectType**
 
+
 오브젝트 스폰 방식 타입이에요. 
 ## **Enums**
 

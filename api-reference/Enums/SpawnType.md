@@ -1,5 +1,6 @@
 # **SpawnType**
 
+
 스폰 타입이에요 
 ## **Enums**
 

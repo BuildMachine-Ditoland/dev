@@ -1,5 +1,6 @@
 # **SimulatePhysicsType**
 
+
 물리 적용 타입이에요. 
 ## **Enums**
 

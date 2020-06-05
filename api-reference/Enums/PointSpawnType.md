@@ -1,5 +1,6 @@
 # **PointSpawnType**
 
+
 스폰 포인트 작동 방식이에요. 
 ## **Enums**
 
