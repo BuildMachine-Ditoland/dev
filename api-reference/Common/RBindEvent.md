@@ -5,9 +5,10 @@
 
 | **bool Connect(LuaScriptFunction Function)** |
 | :--- |
-작성한 Lua 함수를 해당 이벤트에 연결하는 함수 
+작성한 Lua 함수를 해당 이벤트에 연결하는 함수 (연결 함수) 
 ## **샘플**
 
+
 ```lua
 local function EnterPlayer (Player)
 	Logger:Log(“Hello”)

@@ -1,6 +1,6 @@
 # **RAnimStateMachine**
 
-애니메이션 상태 머신이에요. RModeClientCharacter 의 AddAnimStateMachine 함수로 생성 가능해요. 
+애니메이션 상태 머신이에요. RGameClientCharacter 의 AddAnimStateMachine 함수로 생성 가능해요. 
 Game.AddAnimStateMachineSetting 로 상태머신 설정한 후 Game.SetCharacterAnimStateMachine 로 해당 애니메이션 상태머신을 
 사용 할 캐릭터 셋팅을 설정하면, 해당 캐릭터 셋팅으로 캐릭터 생성 될 때 해당 애니메이션 상태머신이 설정 돼요. 
 # **함수**

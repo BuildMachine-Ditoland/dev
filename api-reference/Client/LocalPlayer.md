@@ -5,10 +5,10 @@
 
 | **ProcessInputAxisEvent(string Event, protected_function ProcessFunc)** |
 | :--- |
-축 인풋 이벤트 (이벤트 이름, 이벤트 발생 시 연결 함수) 
+축 인풋 이벤트 
 | **ProcessInputActionEvent(string Event, RModeInputType InputType, protected_function ProcessFunc)** |
 | :--- |
-키 인풋 이벤트 (이벤트 이름, [Enum.KeyInputType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/keyinputtype), 이벤트 발생 시 연결 함수) 
+키 인풋 이벤트 
 | **OnChangedInventoryItem** |
 | :--- |
 인벤토리 아이템 변화 시 호출되는 이벤트 
@@ -16,19 +16,19 @@
 
 | **Move(FVector Dir, float Value)** |
 | :--- |
-주어진 방향으로 일정 값만큼 캐릭터 이동. 설정된 이동 타입에 상관없이 동작한다. (Vector 방향, 값) 
+주어진 방향으로 일정 값만큼 캐릭터 이동. 설정된 이동 타입에 상관없이 동작한다. 
 | **MoveForward(float Value)** |
 | :--- |
-설정된 이동 타입에 따른 앞으로 이동 (값) 
+설정된 이동 타입에 따른 앞으로 이동 
 | **MoveRight(float Value)** |
 | :--- |
-설정된 이동 타입에 따른 좌, 우 이동 (값) 
+좌, 우 이동 
 | **Turn(float Value)** |
 | :--- |
-캐릭터의 바라보는 좌우 방향 설정 (값) 
+캐릭터의 바라보는 좌우 방향 설정 
 | **LookUp(float Value)** |
 | :--- |
-캐릭터의 바라보는 상하 방향 설정 (값) 
+캐릭터의 바라보는 상하 방향 설정 
 | **Jump()** |
 | :--- |
 점프를 한다. 
@@ -37,7 +37,7 @@
 점프를 해제 한다.(삭제 예정) 
 | **SetEnableMovementeControl(bool Enable)** |
 | :--- |
-자신의 캐릭터의 움직임 컨트롤을 활성화, 비활성화 한다. (bool 값) 
+자신의 캐릭터의 움직임 컨트롤을 활성화, 비활성화 한다 
 | **SetEnableCameraControl(bool Enable)** |
 | :--- |
 자신의 카메라 움직임 컨트롤을 활성화, 비활성화 한다 

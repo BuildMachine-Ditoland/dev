@@ -21,6 +21,9 @@
 | **MoveToSpawnPoint(String SpawnPointName, bool ResetRot)** |
 | :--- |
 특정 스폰 위치로 이동 
+| **SetTransform(Matrix)** |
+| :--- |
+캐릭터의 위치, 회전 설정 
 | **Vector GetLocation()** |
 | :--- |
 현재 캐릭터의 위치 얻기 

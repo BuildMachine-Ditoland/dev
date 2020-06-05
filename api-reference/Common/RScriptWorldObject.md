@@ -26,117 +26,78 @@
 다른 객체와 겹쳐있는 동안 매 프레임 호출되는 이벤트 
 ## **함수**
 
-| **bool IsCharacter()** |
-| :--- |
-캐릭터인지 확인 
-| **bool IsStaticMesh()** |
-| :--- |
-스테틱 메시인지 확인 
-| **bool IsFX()** |
-| :--- |
-FX인지 확인 
-| **bool IsSound()** |
-| :--- |
-Sound인지 확인 
-| **bool IsPointLight()** |
-| :--- |
-포인트 라이트인지 확인 
-| **bool IsSurfaceUI()** |
-| :--- |
-서피스 UI인지 확인 
-| **bool IsScreenUI()** |
-| :--- |
-스크린 UI인지 확인 
-| **bool IsItem()** |
-| :--- |
-아이템인지 확인 
-| **bool IsNPC()** |
-| :--- |
-NPC인지 확인 
-| **bool IsFolder()** |
-| :--- |
-폴더인지 확인 
-| **bool IsScript()** |
-| :--- |
-스트립트인지 확인 
-| **bool IsCollider()** |
-| :--- |
-Collider인지 확인 
-| **bool IsWidget()** |
-| :--- |
-Widget인지 확인 
 | **int GetModeObjectKey()** |
 | :--- |
 객체 키 값 얻기 
-| **Matrix GetMatrix()** |
+| **Matrix GetTransform()** |
 | :--- |
 매트릭스 얻기 
-| **SetMatrix(Matrix)** |
+| **SetTransform(Matrix)** |
 | :--- |
-매트릭스 설정 
+매트릭스 설정 (Matrix 값) 
 | **Vector GetLocation()** |
 | :--- |
 위치 얻기 
 | **SetLocation(Vector position, bool collisionCheck)** |
 | :--- |
-위치 설정 
+위치 설정 (위치 Vector 값, 충돌 처리 여부) 
 | **SetForward(Vector Forward)** |
 | :--- |
-바라보는 방향 설정 
+바라보는 방향 설정 (방향 Vector 값) 
 | **AddForce(Vector Force)** |
 | :--- |
-물리 힘 추가 
+물리 힘 추가 (힘을 가할 Vector 값) 
 | **SetVisibility(bool bNewVisibility)** |
 | :--- |
-가시성 설정 
+가시성 설정 (가시성 여부) 
 | **AddLocalMove(string TrackName, Vector Pos, float Time, bool CheckCollision)** |
 | :--- |
-로컬 좌표 기준으로 이동 변화를 추가한다. 
+로컬 좌표 기준으로 이동 변화를 추가한다. (Track 이름, 이동 변화를 줄 값, 완료까지 걸리는 시간, 충돌 처리 여부) 
 | **AddLocalRot(string TrackName, Vector Rot, float Time)** |
 | :--- |
-로컬 좌표 기준으로 회전 변화를 추가한다. 
+로컬 좌표 기준으로 회전 변화를 추가한다. (Track 이름, 회전 변화를 줄 값, 완료까지 걸리는 시간) 
 | **AddLocalScale(string TrackName, Vector Scale, float Time)** |
 | :--- |
-로컬 좌표 기준으로 스케일 변화를 추가한다. 
+로컬 좌표 기준으로 스케일 변화를 추가한다. (Track 이름, 스케일 변화를 줄 값, 완료까지 걸리는 시간) 
 | **AddWorldMove(string TrackName, Vector Pos, float Time, bool CheckCollision)** |
 | :--- |
-월드 좌표 기준으로 이동 변화를 추가한다. 
+월드 좌표 기준으로 이동 변화를 추가한다. (Track 이름, 이동 변화를 줄 값, 완료까지 걸리는 시간, 충돌 처리 여부) 
 | **AddWorldRot(string TrackName, Vector Rot, float Time)** |
 | :--- |
-월드 좌표 기준으로 회전 변화를 추가한다. 
+월드 좌표 기준으로 회전 변화를 추가한다. (Track 이름, 회전 변화를 줄 값, 완료까지 걸리는 시간) 
 | **AddEmpty(string TrackName, float Time)** |
 | :--- |
-객체 변환의 대기 시간을 추가한다. 
+객체 변환의 대기 시간을 추가한다. (Track 이름, 대기 시간) 
 | **PlayTransformTrack(string TrackName, TransformPlayType Type, int PlayCount)** |
 | :--- |
-설정된 변환 컨트롤러 실행 
+설정된 변환 컨트롤러 실행 (Track 이름, [Enum.TransformPlayType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/transformplaytype), 실행 횟수) 
 | **StopTransformTrack(string TrackName)** |
 | :--- |
-변환 컨트롤러 정지 
+변환 컨트롤러 정지 (Track 이름) 
 | **PauseTransformTrack(string TrackName)** |
 | :--- |
-변환 컨트롤러 일시 정지 
+변환 컨트롤러 일시 정지 (Track 이름) 
 | **ResumeTransformTrack(string TrackName)** |
 | :--- |
-변환 컨트롤러 다시 플레이 
+변환 컨트롤러 다시 플레이 (Track 이름) 
 | **bool IsPlayingTransformTrack(string TrackName)** |
 | :--- |
-해당 TransformTrack이 플레이 중인지 확인 
+해당 TransformTrack이 플레이 중인지 확인 (Track 이름) 
 | **ResetTransformTrack(string TrackName)** |
 | :--- |
-해당 TransformTrack 리셋(적용되기 전의 Transform 으로 설정) 
+해당 TransformTrack 이 적용되기 전의 Transform으로 리셋 (Track 이름) 
 | **RemoveTransformTrack(String TrackName)** |
 | :--- |
-해당 Track 제거 
+해당 Track 제거 (Track 이름) 
 | **ResetTransform()** |
 | :--- |
 TransformTrack 이 적용되기 전의 최초 Transform으로 설정 
 | **SetFriction( float value, float restitution, float density )** |
 | :--- |
-이 오브젝트의 표면 물리 마찰력을 설정 
+이 오브젝트의 표면 물리 마찰력을 설정 (마찰 값, 탄성 값, 밀도 값) 
 | **MakeVehicleChassis( VehicleCreationInfo Info )** |
 | :--- |
-이 오브젝트를 VehicleChassis로 변경. 
+이 오브젝트를 VehicleChassis로 변경 ( [VehicleCreationInfo데이터](https://ditoland-utplus.gitbook.io/ditoland/api-reference/common/vehiclecreationinfo))
 | **FRModeVehicle GetVehicle()** |
 | :--- |
 Vehicle 객체 반환 

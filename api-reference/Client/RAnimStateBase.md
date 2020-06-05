@@ -23,7 +23,7 @@
 | **AddTransition(RModeAnimTransition InTransition)** |
 | :--- |
 다른 애니메이션 상태로의 전이 추가 
-| **RModeClientCharacter GetOwnerCharacter()** |
+| **RGameClientCharacter GetOwnerCharacter()** |
 | :--- |
 설정되어 있는 캐릭터 얻기 
 | **SetNeedReplicate(bool NeedReplicate)** |

@@ -1,7 +1,7 @@
 # **RRemotePlayer**
 
 클라이언트 스크립트에서 사용되는 플레이어 객체에요. Game.GetRemotePlayer(string PlayerName) 함수를 이용하면 얻을 수 있어요. 
-| **RModeClientCharacter GetCharacter()** |
+| **RGameClientCharacter GetCharacter()** |
 | :--- |
 플레이어의 캐릭터를 얻기 
 | **string GetPlayerName()** |

@@ -5,7 +5,7 @@
 
 | **AddTimeEvent(String EventName, float Time, LuaScriptFunction EventFuunction)** |
 | :--- |
-일정 시간뒤에 연결 함수가 호출되는 이벤트 추가 
+일정 시간뒤에 연결 함수가 호출되는 이벤트 추가 (이벤트 이름, 시간, 연결 함수) 
 | **DeleteTimeEvent(String EventName)** |
 | :--- |
-등록된 시간 이벤트 삭제 
+등록된 시간 이벤트 삭제 (이벤트 이름) 

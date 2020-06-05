@@ -11,7 +11,7 @@
 | **RModeRemotePlayer GetRemotePlayer(string PlayerName);** |
 | :--- |
 이름으로 플레이어 얻기 
-| **RModeClientCharacter GetRemotePlayerCharacter(string PlayerName)** |
+| **RGameClientCharacter GetRemotePlayerCharacter(string PlayerName)** |
 | :--- |
 해당 플레이어의 캐릭터 얻기 
 | **int GetPlayerCount** |

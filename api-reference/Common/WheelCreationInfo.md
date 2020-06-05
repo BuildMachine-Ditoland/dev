@@ -10,10 +10,10 @@ Wheel 생성 정보를 답는 객체
 
 | **bool WheelCreationInfo.IsSteeringWheel** |
 | :--- |
-스티어링에 쓰이는 휠 인가? 
+스티어링에 쓰이는 휠인지 판별 
 | **bool WheelCreationInfo.IsDrivingWheel** |
 | :--- |
-차량 가감속에 쓰이는 휠 인가? 
+차량 가감속에 쓰이는 휠인지 판별 
 | **number WheelCreationInfo.MaxSteeringAngle** |
 | :--- |
 이 휠의 최대 조향 각도 

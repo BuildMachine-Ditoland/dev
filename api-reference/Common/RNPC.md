@@ -5,7 +5,7 @@
 
 | **OnUpdateEvent** |
 | :--- |
-생성 후 매 프레임에 호출되는 이벤트 
+생성 후 매 프레임마다 호출되는 이벤트 
 | **OnDestoryEvent** |
 | :--- |
 삭제될 때 호출되는 이벤트 
@@ -13,7 +13,7 @@
 
 | **SetLocation(Vector position)** |
 | :--- |
-위치 설정 
+위치 설정 (위치 값) 
 | **SetRotation(Vector Rotator)** |
 | :--- |
-회전 설정 
+회전 설정 (회전 값) 
