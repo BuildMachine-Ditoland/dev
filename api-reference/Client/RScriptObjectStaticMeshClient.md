@@ -7,8 +7,8 @@
 | **ChangeColor(Color ChangeColor)** |
 | :--- |
 
-스테틱 메시의 색을 변경 
+스테틱 메시의 색을 변경 (변경할 [Color](https://ditoland-utplus.gitbook.io/ditoland/api-reference/common/color)값) 
 | **SetSimulatePhysics(bool bSimulatePhysics)** |
 | :--- |
 
-물리 적용 설정 
+물리 적용 설정 (물리 적용 여부) 

@@ -7,4 +7,4 @@ RAnimStateBase의 자식 객체로, 단일 애니메이션을 플레이하는 �
 | **ChangeAnimation(string ResourceID)** |
 | :--- |
 
-애니메이션 변경 
+애니메이션 변경 (변경할 애니메이션 리소스 ID값) 

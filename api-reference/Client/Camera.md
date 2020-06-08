@@ -19,7 +19,7 @@
 | **PlayCameraFade(float FromAlpha, float ToAlpha, float Duration, Color Color, bool HoldFinish)** |
 | :--- |
 
-카메라 페이드 시작() 
+카메라 페이드 시작 (시작 강도 0~1, 종료 강도 0~1, 시작에서 종료까지 걸리는 시간, 적용할 [Color](https://ditoland-utplus.gitbook.io/ditoland/api-reference/common/color)값, 종료 시점 상태 유지 여부) 
 | **StopCameraFade()** |
 | :--- |
 
