@@ -7,7 +7,7 @@
 | **AddSelectObject(String ObjectName, float SelectRate, int Count)** |
 | :--- |
 
-선택 오브젝트 추가(ObjectName : 월드 트리 상 이름, SelectRate : 선택 확률, Count : 개수) 
+선택 오브젝트를 추가한다. (추가할 오브젝트 이름, 선택 확률 값, 개수) 
 | **string GetNextSelectObject()** |
 | :--- |
 

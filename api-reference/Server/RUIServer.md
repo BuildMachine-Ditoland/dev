@@ -7,4 +7,4 @@
 | **SetVisible(string InUISceneName, bool bVisible)** |
 | :--- |
 
-해당 UI 표시 여부 설정 
+해당 UI 표시 여부 설정 (표시 여부 설정할 UI 이름, 표시 여부) 

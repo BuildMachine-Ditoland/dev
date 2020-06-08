@@ -61,7 +61,7 @@
 | **SetTeamSetting(EModeTeamType TeamType, EDivideTeamType DivideTeamType)** |
 | :--- |
 
-게임의 팀전 여부, 팀 나누기 방식을 설정 한다. 
+게임의 팀전 여부, 팀 나누기 방식을 설정 한다. (팀 타입, [Enum.DivideTeamType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/divideteamtype)) 
 | **int GetPlayerCount()** |
 | :--- |
 

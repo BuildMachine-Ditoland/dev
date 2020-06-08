@@ -7,8 +7,8 @@
 | **ChangeColor(Color ChangeColor)** |
 | :--- |
 
-스테틱 메시의 색을 변경 
+스테틱 메시의 색을 변경 (변경할 [Color](https://ditoland-utplus.gitbook.io/ditoland/api-reference/common/color)값) 
 | **SetSimulatePhysics(ESimulatePhysicsType Type, bool bReplicate)** |
 | :--- |
 
-물리 기능을 설정 한다 
+물리 기능을 설정 한다 ( [Enum.SimulatePhysicsType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/simulatephysicstype), 동기화 여부) 

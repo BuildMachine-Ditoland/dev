@@ -7,4 +7,4 @@
 | **SetVisibility(bool Visibility)** |
 | :--- |
 
-표시 여부 설정 
+표시 여부 설정 (표시 여부) 
