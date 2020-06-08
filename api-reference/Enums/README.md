@@ -1,6 +1,7 @@
 # Enums
 ### [**Bone**](Bone.md)
 ### [**CollisionResponse**](CollisionResponse.md)
+### [**DivideTeamType**](DivideTeamType.md)
 ### [**Key**](Key.md)
 ### [**KeyInputType**](KeyInputType.md)
 ### [**ModeAnimStateType**](ModeAnimStateType.md)

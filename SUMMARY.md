@@ -7,6 +7,7 @@
     * [Enums](api-reference/Enums/README.md)
       * [Bone](api-reference/Enums/Bone.md)
       * [CollisionResponse](api-reference/Enums/CollisionResponse.md)
+      * [DivideTeamType](api-reference/Enums/DivideTeamType.md)
       * [Key](api-reference/Enums/Key.md)
       * [KeyInputType](api-reference/Enums/KeyInputType.md)
       * [ModeAnimStateType](api-reference/Enums/ModeAnimStateType.md)

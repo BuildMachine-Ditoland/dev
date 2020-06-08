@@ -2,6 +2,8 @@
 
 
 게임에 사용되는 애니매이션 상태머신을 설정하는 객체에요. Game:AddAnimStateMachineSetting로 생성해요. 
+## **함수**
+
 | **RModeSequenceAnimStateSetting AddAnimState(string StateName, string ResourceID)** |
 | :--- |
 
