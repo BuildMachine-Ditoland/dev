@@ -11,7 +11,7 @@
 | **string GetPlayerName()** |
 | :--- |
 
-해당 캐릭터를 소유 하고 있는 플레이어 이름 얻기. 캐릭터에서 플레이어를 얻기위해서는 Game.GetPlayer(string PlayerName) 를 이용 
+해당 캐릭터를 소유 하고 있는 플레이어 이름 얻기 
 | **SetMaxSpeed(float Speed)** |
 | :--- |
 
@@ -36,11 +36,11 @@
 | :--- |
 
 현재 캐릭터의 위치 얻기 
-| **void BeginDriving( number ModeObjectKey )** |
+| **void BeginDriving(number ModeObjectKey)** |
 | :--- |
 
 탈 것의 운전을 시작한다. (탈 것의 키 값) 
-| **void AttachAt( RModeObject* ModeObject )** |
+| **void AttachAt(RModeObject ModeObject)** |
 | :--- |
 
 캐릭터를 해당 오브젝트에 부착시킨다 (부착 할 오브젝트) 
