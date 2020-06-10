@@ -1,7 +1,7 @@
 # **Matrix**
 
 
-Matrix 객체의 위치 회전 값을 얻거나 변경 할 수 있다. 
+Matrix 객체의 위치 회전 값을 얻거나 변경 할 수 있어요. 
 ## **함수**
 
 | **Vector GetLocation()** |

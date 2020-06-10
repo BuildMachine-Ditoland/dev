@@ -14,8 +14,8 @@
 | :--- |
 
 추가된 값이 변경 될 때 호출되는 이벤트 (Value 이름, 연결 함수) 
-## **샘플**
-
+
+샘플 
 
 ```lua
 local function ChangeCurBullet(value)

@@ -24,35 +24,13 @@
 회전 설정 (회전 값) 
 # **상속받아 사용 가능한 기능들**
 
-| **OnCreateEvent** |
+## **속성**
+
+| **Parent** |
 | :--- |
 
-생성 시 호출되는 이벤트 
-| **OnUpdateEvent** |
-| :--- |
-
-생성 후 매 프레임에 호출되는 이벤트 
-| **OnDestoryEvent** |
-| :--- |
-
-삭제될 때 호출되는 이벤트 
-| **OnCollisionEvent** |
-| :--- |
-
-다른 객체와 충돌할 때 호출되는 이벤트 
-| **OnBeginOverlapEvent** |
-| :--- |
-
-다른 객체와 겹쳐질 때 호출되는 이벤트 
-| **OnEndOverlapEvent** |
-| :--- |
-
-다른 객체와 겹쳐짐이 끝날 때 호출되는 이벤트 
-| **OnOverlapUpdateEvent** |
-| :--- |
-
-다른 객체와 겹쳐있는 동안 매 프레임 호출되는 이벤트 
-## **함수**
+부모 오브젝트 
+## **이벤트**
 
 | **int GetModeObjectKey()** |
 | :--- |
@@ -154,38 +132,6 @@ TransformTrack 이 적용되기 전의 최초 Transform으로 설정
 | :--- |
 
 Vehicle 객체 반환 
-## **속성**
-
-| **Parent** |
-| :--- |
-
-부모 오브젝트 
-## **이벤트**
-
-| **ConnectChangeEventFunction(string ValueName, function FunctionName)** |
-| :--- |
-
-추가된 값이 변경 될 때 호출되는 이벤트 (Value 이름, 연결 함수) 
-## **샘플**
-
-
-```lua
-
-local function ChangeCurBullet(value) 
-
-Logger:Log(“Hello”) 
-
-end 
-
- 
-
--- Object의 "CurBullet" 라는 Value가 변경되면 ChangeCurBullet 함수에 연결 
-
-Object:ConnectChangeEventFunction("CurBullet", ChangeCurBullet)   
-
-``` 
-## **함수**
-
 | **string GetName()** |
 | :--- |
 
@@ -294,3 +240,55 @@ Widget인지 확인
 | :--- |
 
 해당 객체 저장소에 칼라를 추가 (Value 이름, Color 데이터) 
+## **함수**
+
+| **OnCreateEvent** |
+| :--- |
+
+생성 시 호출되는 이벤트 
+| **OnUpdateEvent** |
+| :--- |
+
+생성 후 매 프레임에 호출되는 이벤트 
+| **OnDestoryEvent** |
+| :--- |
+
+삭제될 때 호출되는 이벤트 
+| **OnCollisionEvent** |
+| :--- |
+
+다른 객체와 충돌할 때 호출되는 이벤트 
+| **OnBeginOverlapEvent** |
+| :--- |
+
+다른 객체와 겹쳐질 때 호출되는 이벤트 
+| **OnEndOverlapEvent** |
+| :--- |
+
+다른 객체와 겹쳐짐이 끝날 때 호출되는 이벤트 
+| **OnOverlapUpdateEvent** |
+| :--- |
+
+다른 객체와 겹쳐있는 동안 매 프레임 호출되는 이벤트 
+| **ConnectChangeEventFunction(string ValueName, function FunctionName)** |
+| :--- |
+
+추가된 값이 변경 될 때 호출되는 이벤트 (Value 이름, 연결 함수) 
+
+샘플 
+
+```lua
+
+local function ChangeCurBullet(value) 
+
+Logger:Log(“Hello”) 
+
+end 
+
+ 
+
+-- Object의 "CurBullet" 라는 Value가 변경되면 ChangeCurBullet 함수에 연결 
+
+Object:ConnectChangeEventFunction("CurBullet", ChangeCurBullet)   
+
+``` 
