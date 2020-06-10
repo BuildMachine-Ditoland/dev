@@ -54,6 +54,30 @@ Vehicle의 자세를 바로 잡는다. (높이 값, 대기 시간)
 부모 오브젝트 
 ## **이벤트**
 
+| **ConnectChangeEventFunction(string ValueName, function FunctionName)** |
+| :--- |
+
+추가된 값이 변경 될 때 호출되는 이벤트 (Value 이름, 연결 함수) 
+
+샘플 
+
+```lua
+
+local function ChangeCurBullet(value) 
+
+Logger:Log(“Hello”) 
+
+end 
+
+ 
+
+-- Object의 "CurBullet" 라는 Value가 변경되면 ChangeCurBullet 함수에 연결 
+
+Object:ConnectChangeEventFunction("CurBullet", ChangeCurBullet)   
+
+``` 
+## **함수**
+
 | **string GetName()** |
 | :--- |
 
@@ -162,27 +186,3 @@ Widget인지 확인
 | :--- |
 
 해당 객체 저장소에 칼라를 추가 (Value 이름, Color 데이터) 
-## **함수**
-
-| **ConnectChangeEventFunction(string ValueName, function FunctionName)** |
-| :--- |
-
-추가된 값이 변경 될 때 호출되는 이벤트 (Value 이름, 연결 함수) 
-
-샘플 
-
-```lua
-
-local function ChangeCurBullet(value) 
-
-Logger:Log(“Hello”) 
-
-end 
-
- 
-
--- Object의 "CurBullet" 라는 Value가 변경되면 ChangeCurBullet 함수에 연결 
-
-Object:ConnectChangeEventFunction("CurBullet", ChangeCurBullet)   
-
-``` 
