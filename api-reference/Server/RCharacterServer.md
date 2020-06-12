@@ -7,47 +7,47 @@
 | **bool IsDie()** |
 | :--- |
 
-현재 죽어있는 상태를 나타낸다. 
+현재 캐릭터가 죽어있는 상태인지 알 수 있어요. 
 | **string GetPlayerName()** |
 | :--- |
 
-해당 캐릭터를 소유 하고 있는 플레이어 이름 얻기 
+해당 캐릭터를 소유 하고 있는 플레이어의 이름을 얻을 수 있어요. 
 | **SetMaxSpeed(float Speed)** |
 | :--- |
 
-최대 이동 속도 설정 (속도 값) 
+캐릭터의 최대 이동속도를 설정할 수 있어요. (설정할 최대 이동속도 값) 
 | **SetMaxJump(float Jump)** |
 | :--- |
 
-최대 점프 속도 설정 (점프 값) 
+캐릭터의 최대 점프속도를 설정할 수 있어요. (설정할 최대 점프속도 값) 
 | **SetFlyControl(float ControlRate);** |
 | :--- |
 
-공중에서 컨트롤 비율 설정 (비율 값) 
+공중에서 캐릭터 컨트롤 비율을 설정할 수 있어요. (설정할 비율 값) 
 | **MoveToSpawnPoint(String SpawnPointName, bool ResetRot)** |
 | :--- |
 
-특정 스폰 위치로 이동 (이동 할 스폰포인트 이름, 방향 Rot 초기화 여부) 
+캐릭터를 특정 스폰 위치로 이동시킬 수 있어요. (이동 할 스폰포인트 이름, 방향 Rot 초기화 여부) 
 | **SetTransform(Matrix)** |
 | :--- |
 
-캐릭터의 위치, 회전 설정 (Matrix 값) 
+캐릭터의 위치, 회전을 설정할 수 있어요. (설정할 [Matrix](https://ditoland-utplus.gitbook.io/ditoland/api-reference/common/matrix)값 ) 
 | **Vector GetLocation()** |
 | :--- |
 
-현재 캐릭터의 위치 얻기 
+캐릭터의 현재 위치를 얻을 수 있어요. 
 | **void BeginDriving(number ModeObjectKey)** |
 | :--- |
 
-탈 것의 운전을 시작한다. (탈 것의 키 값) 
+탈 것의 운전을 시작해요. (탈 것의 키 값) 
 | **void AttachAt(RModeObject ModeObject)** |
 | :--- |
 
-캐릭터를 해당 오브젝트에 부착시킨다 (부착 할 오브젝트) 
+캐릭터를 지정한 오브젝트에 부착시켜요. (부착 할 오브젝트) 
 | **void Detach()** |
 | :--- |
 
-캐릭터를 오브젝트에서 떨어 뜨린다 
+캐릭터를 오브젝트에서 떨어 뜨려요. 
 # **상속받아 사용 가능한 기능들**
 
 ## **속성**

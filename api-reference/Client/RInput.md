@@ -7,19 +7,19 @@
 | **AddAxisKeyEvent(string Event, RModeKey Key, float Value)** |
 | :--- |
 
-축 이벤트 추가 (이벤트 이름, [Enum.Key.키](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/key), 이벤트 Value) 
+축 이벤트를 추가할 수 있어요. (추가할 이벤트 이름, [Enum.Key.키](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/key), 이벤트 Value) 
 | **AddActionKeyEvent(string Event, RModeKey Key)** |
 | :--- |
 
-키 이벤트 추가 (이벤트 이름, [Enum.Key.키](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/key)) 
+키 이벤트를 추가할 수 있어요. (추가할 이벤트 이름, [Enum.Key.키](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/key)) 
 | **RemoveAllAxisKeyEvent()** |
 | :--- |
 
-모든 축 이벤트 제거 
+모든 축 이벤트를 제거해요. 
 | **RemoveAllActionKeyEvent()** |
 | :--- |
 
-모든 키 이벤트 제거 
+모든 키 이벤트를 제거해요. 
 # **상속받아 사용 가능한 기능들**
 
 ## **속성**

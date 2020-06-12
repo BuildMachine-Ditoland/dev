@@ -7,15 +7,15 @@
 | **SetEnable(bool bEnable)** |
 | :--- |
 
-설정된 Point Light의 여부 설정 
+설정된 Point Light의 작동 여부를 설정해요. (작동 여부) 
 | **ChangeColor(Color ChangedColor)** |
 | :--- |
 
-컬러 변경 (포인트 라인트에 적용할 원하는 [Color](https://ditoland-utplus.gitbook.io/ditoland/api-reference/common/color)값 )  
+포인트 라이트의 컬러를 변경할 수 있어요. (포인트 라인트에 적용할 원하는 [Color](https://ditoland-utplus.gitbook.io/ditoland/api-reference/common/color)값 )  
 | **ChangeIntensity(float Intensity)** |
 | :--- |
 
-밝기 값 변경 (원하는 밝기 값) 
+포인트 라이트의 밝기 값을 변경할 수 있어요. (원하는 밝기 값) 
 # **상속받아 사용 가능한 기능들**
 
 ## **속성**

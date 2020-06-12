@@ -1,77 +1,77 @@
 # **RCharacterClient**
 
 
-클라이언트에서 사용되는 캐릭터 개체에요. 
+클라이언트에서 사용되는 캐릭터에 대한 개체에요. 
 ## **함수**
 
 | **string GetPlayerName()** |
 | :--- |
 
-플레이어 이름 얻기 
+플레이어의 이름을 얻을 수 있어요. 
 | **FRModeAnimStateMachine AddAnimStateMachine(string StateMachineName)** |
 | :--- |
 
-Game:AddAnimStateMachineSetting로 추가된 상태 머신 중 애니메이션 상태 머신을 추가 (상태 머신 이름) 
+Game:AddAnimStateMachineSetting로 추가된 상태 머신 중 애니메이션 상태 머신을 추가해요. (추가할 상태 머신 이름) 
 | **FRModeAnimStateMachine GetAnimStateMachine(string StateMachineName)** |
 | :--- |
 
-해당 애니메이션 상태 머신 얻기 (얻고싶은 상태 머신 이름) 
+해당 애니메이션 상태 머신을 얻을 수 있어요. (얻고싶은 상태 머신 이름) 
 | **RModeAnimStateBase GetCurAnimState()** |
 | :--- |
 
-현재 애니메이션 상태 얻기 
+현재 애니메이션의 상태를 얻을 수 있어요. 
 | **ChangeAnimState(string AnimState)** |
 | :--- |
 
-해당 애니메이션 상태로 변경 (변경하고 싶은 애니메이션 상태 이름) 
+해당하는 애니메이션의 상태로 변경할 수 있어요. (변경하고 싶은 애니메이션 상태 이름) 
 | **ChangeAnimStateMachine(string ChangeStateMacnine)** |
 | :--- |
 
-해당 애니메이션 상태 머신 변경 (변경하고 싶은 상태 머신 이름) 
+해당 애니메이션 상태 머신을 변경할 수 있어요. (변경하고 싶은 상태 머신 이름) 
 | **bool IsFly()** |
 | :--- |
 
-캐릭터가 공중에 떠 있는지 나타낸다. 
+캐릭터가 공중에 떠 있는지 아닌지 얻을 수 있어요. 
 | **bool IsDriving()** |
 | :--- |
 
-캐릭터가 탈 것을 운전 중인지 나타낸다. 
+캐릭터가 탈 것을 운전 중인지 아닌지 얻을 수 있어요. 
 | **float GetMoveSpeed()** |
 | :--- |
 
-현재 이동 속도 얻기 
+현재의 캐릭터 이동 속도를 얻을 수 있어요. 
 | **ObjectFXClient CreateFX(ObjectFXClient FXObject, Bone BoneType)** |
 | :--- |
 
-캐릭터 특정 위치에 FX 생성 (생성 하고싶은 FX 오브젝트, [Enum.BoneType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/bone)) 
+캐릭터 특정 위치에 FX를 생성할 수 있어요. (생성 하고싶은 FX 오브젝트, [Enum.BoneType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/bone)) 
 | **ObjectFXClient CreateFX(String FXName, Bone BoneType)** |
 | :--- |
 
-캐릭터 특정 위치에 FX 생성 (생성 하고싶은 FX 이름, [Enum.BoneType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/bone)) 
+캐릭터 특정 위치에 FX를 생성할 수 있어요. (생성 하고싶은 FX 이름, [Enum.BoneType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/bone)) 
 | **ObjectSoundClient CreateSound(ObjectSoundClient SoundObject)** |
 | :--- |
 
-캐릭터의 위치에 Sound 생성 (생성 하고싶은 Sound 오브젝트) 
+캐릭터의 위치에 Sound를 생성할 수 있어요. (생성 하고싶은 Sound 오브젝트) 
 | **AddPlayerHUD(string UIName)** |
 | :--- |
 
-UI HUD 붙이기 (붙이고 싶은 UI 이름) 
+UI HUD를 붙일 수 있어요. (붙이고 싶은 UI 이름) 
 | **RemovePlayerHUD(string UIName)** |
 | :--- |
 
-UI HUD 제거하기 (제거하고 싶은 UI 이름) 
+UI HUD를 제거해요. (제거하고 싶은 UI 이름) 
 | **GetPlayerHUD(string UIName)** |
 | :--- |
 
-UI HUD 얻기 (얻고싶은 UI 이름) 
+UI HUD를 얻을 수 있어요. (얻고싶은 UI 이름) 
 | **bool IsMyCharacter()** |
 | :--- |
 
-플레이어 자신의 캐릭터인지 확인 
+플레이어 자신의 캐릭터인지 아닌지 확인할 수 있어요. 
 | **Vector GetLocation()** |
 | :--- |
 
-현재 캐릭터 위치 얻기 
+현재 캐릭터의 위치를 얻을 수 있어요. 
 # **상속받아 사용 가능한 기능들**
 
 ## **속성**

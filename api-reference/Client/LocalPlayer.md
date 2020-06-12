@@ -1,47 +1,47 @@
 # **LocalPlayer**
 
 
-캐릭터의 기본 동작을 설정 할 수 있는 객체에요. 클라이언트에서 사용 가능해요. 
+클라이언트에서 캐릭터의 기본 동작을 설정 할 수 있는 객체에요. 
 ## **이벤트**
 
 | **ProcessInputAxisEvent(string Event, protected_function ProcessFunc)** |
 | :--- |
 
-축 인풋 이벤트 (이벤트 이름, 연결 함수) 
+축 인풋 이벤트에요. (설정할 이벤트 이름, 연결 함수) 
 | **ProcessInputActionEvent(string Event, RModeInputType InputType, protected_function ProcessFunc)** |
 | :--- |
 
-키 인풋 이벤트 (이벤트 이름, [Enum.KeyInputType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/keyinputtype), 연결 함수) 
+키 인풋 이벤트에요. (설정할 이벤트 이름, [Enum.KeyInputType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/keyinputtype), 연결 함수) 
 | **OnChangedInventoryItem** |
 | :--- |
 
-인벤토리 아이템 변화 시 호출되는 이벤트 
+인벤토리 아이템이 변화할 때 호출되는 이벤트에요. 
 ## **함수**
 
 | **Move(FVector Dir, float Value)** |
 | :--- |
 
-주어진 방향으로 일정 값만큼 캐릭터 이동. 설정된 이동 타입에 상관없이 동작한다. (이동 방향 Vector 값, 이동할 크기) 
+주어진 방향으로 일정 값만큼 캐릭터를 이동시켜요. 설정된 이동 타입에 관계없이 동작해요. (원하는 이동방향 Vector 값, 이동할 크기) 
 | **MoveForward(float Value)** |
 | :--- |
 
-설정된 이동 타입에 따른 앞으로 이동 (이동할 크기) 
+설정된 이동 타입에 따라 앞으로 이동시켜요. (1 : 전진, -1 : 후진 이동) 
 | **MoveRight(float Value)** |
 | :--- |
 
-좌, 우 이동 (이동할 크기) 
+좌, 우로 이동시켜요. (-1 : 좌측, 1 : 우측 이동) 
 | **Turn(float Value)** |
 | :--- |
 
-캐릭터의 바라보는 좌우 방향 설정 (이동할 크기) 
+캐릭터의 바라보는 좌우 방향을 설정해요. (-1 좌측 ~ 1 우측 방향 값) 
 | **LookUp(float Value)** |
 | :--- |
 
-캐릭터의 바라보는 상하 방향 설정 (이동할 크기) 
+캐릭터의 바라보는 상하 방향을 설정해요. (-1 밑에 ~ 1 위에 방향 값) 
 | **Jump()** |
 | :--- |
 
-점프를 한다. 
+점프동작을 실행해요. 
 | **JumpRelease()** |
 | :--- |
 
@@ -49,69 +49,69 @@
 | **SetEnableMovementeControl(bool Enable)** |
 | :--- |
 
-자신의 캐릭터의 움직임 컨트롤을 활성화, 비활성화 한다 (활성, 비활성 여부) 
+자신의 캐릭터 움직임 컨트롤 가능 여부를 결정해요. (활성, 비활성 여부) 
 | **SetEnableCameraControl(bool Enable)** |
 | :--- |
 
-자신의 카메라 움직임 컨트롤을 활성화, 비활성화 한다 (활성, 비활성 여부) 
+자신의 카메라 움직임 컨트롤 가능 여부를 결정해요. (활성, 비활성 여부) 
 | **SetForwardMoveType(ForwardMoveType Type)** |
 | :--- |
 
-MoveForward(float Value)의 작동 방식 설정 (Enum.ForwardMoveType.타입) 
+MoveForward(float Value)의 작동 방식을 결정해요. (Enum.ForwardMoveType.타입) 
 
-ForwardMoveType::XYPlane - 상, 하 이동되지 않는 평면 이동(일반 적인 캐릭터의 이동 형태) 
+ForwardMoveType::XYPlane - 상, 하 이동이 되지않고 평면이동만 가능해요.(일반 적인 캐릭터의 이동 형태) 
 
-ForwardMoveType::Free - 캐릭터가 바라보는 방향으로 이동(프리 카메라의 이동 형태) 
+ForwardMoveType::Free - 캐릭터가 바라보는 방향으로 이동해요. (프리 카메라의 이동 형태) 
 
-ForwardMoveType::UpDown - 상, 하로만 이동(엘리베이터, 사다리의 이동 형태) 
+ForwardMoveType::UpDown - 상, 하로만 이동해요. (엘리베이터, 사다리의 이동 형태) 
 | **BeginDriving( int InVehicleModeObjectKey )** |
 | :--- |
 
-탈 것의 운전을 시작한다 (탈 것의 키 값) 
+탈 것의 운전을 시작하는 함수에요. (탈 것의 키 값) 
 | **EndDriving()** |
 | :--- |
 
-탈 것의 운전을 종료 한다. 
+탈 것의 운전을 종료해요. 
 | **FreeCamMoveUp(float Value)** |
 | :--- |
 
-프리캠 위, 아래로 이동 (이동할 크기) 
+프리캠을 위, 아래로 이동시켜요. (이동할 크기) 
 | **Vector GetForwardVector()** |
 | :--- |
 
-바라보는 방향 얻기 
+캐릭터가 바라보는 방향을 얻을 수 있어요. 
 | **Vector GetRightVector()** |
 | :--- |
 
-오른쪽 벡터 얻기 
+캐릭터의 오른쪽 벡터를 얻을 수 있어요. 
 | **RModeRemotePlayer GetRemotePlayer()** |
 | :--- |
 
-자신의 플레이어 얻기 
+자신의 플레이어를 얻을 수 있어요. 
 | **int GetInventorySize()** |
 | :--- |
 
-인벤토리 사이즈 얻기 
+인벤토리의 사이즈를 얻을 수 있어요. 
 | **UseInventoryItem(int IventoryIndex)** |
 | :--- |
 
-인벤토리 아이템 사용 (사용할 아이템칸) 
+지정된 칸의 인벤토리 아이템을 사용해요. (사용할 아이템칸) 
 | **EquipInventoryItem(int IventoryIndex)** |
 | :--- |
 
-인벤토리 아이템 착용 (착용할 아이템칸) 
+지정된 칸의 인벤토리 아이템을 착용해요. (착용할 아이템칸) 
 | **UnEquipItem(string EquipSlotName)** |
 | :--- |
 
-착용 아이템 해지 (해지할 Slot이름) 
-| **UnEquipItem(string EquipSlotName, string ActionName)** |
+장착되어 있는 Slot이름을 통하여 착용 아이템을 해제시켜요. (해제할 Slot이름) 
+| **ActionItem(string EquipSlotName, string ActionName)** |
 | :--- |
 
-착용 아이템 액션 ( 액션실행 할 Slot이름, 액션 이름) 
+착용하고 있는 아이템의 액션을 설정하는 함수에요. (설정할 장착 Slot이름, 액션 이름) 
 | **WorldDropInventoryItem(int InventoryIndex)** |
 | :--- |
 
-인벤토리 아이템 월드 드랍 (월드 드랍할 아이템칸) 
+지정된 칸의 아이템을 월드에 드랍시켜요. (월드 드랍할 아이템칸) 
 # **상속받아 사용 가능한 기능들**
 
 ## **속성**

@@ -7,15 +7,15 @@
 | **void Play()** |
 | :--- |
 
-Sound 플레이 
+Sound를 플레이할 수 있어요. 
 | **void Stop()** |
 | :--- |
 
-Sound 정지 
+Sound를 정지시켜요. 
 | **bool IsPlaying()** |
 | :--- |
 
-Sound 플레이 중인지 판별 
+Sound가 플레이 중인지 판별할 수 있어요. 
 # **상속받아 사용 가능한 기능들**
 
 ## **속성**
