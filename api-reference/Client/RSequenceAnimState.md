@@ -54,10 +54,6 @@ Object:ConnectChangeEventFunction("CurBullet", ChangeCurBullet)
 ``` 
 ## **함수**
 
-| **string GetName()** |
-| :--- |
-
-이름 얻기 
 | **float GetPlayTime()** |
 | :--- |
 
