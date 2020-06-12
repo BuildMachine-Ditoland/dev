@@ -20,5 +20,4 @@
 ### [**RTeam**](RTeam.md)
 ### [**RUISceneServer**](RUISceneServer.md)
 ### [**RUIServer**](RUIServer.md)
-### [**RWorldObjectServer**](RWorldObjectServer.md)
 ### [**RWorldSpawner**](RWorldSpawner.md)
