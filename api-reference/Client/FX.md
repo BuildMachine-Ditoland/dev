@@ -1,19 +1,15 @@
 
-여러 애니메이션을 특정 값에 따라 블랜딩하는 애니메이션 상태를 설정하는 객체에요. 
-
-예) 이동 속도에 따른 평상시, 걷기, 달리기 애니메이션 블랜딩 등 이에요 
-
-[RAnimStateSettingBase](https://ditoland-utplus.gitbook.io/ditoland/api-reference/client/ranimstatesettingbase)의 AddBlendAnimState 함수로 생성해요. 
+클라이언트에서 사용되는 FX 개체에요 
 ## **함수**
 
-| **ModeBlendAnimationDataSetting AddBlendAnimation(float BlendValue, string AnimResourceID)** |
+| **void Play()** |
 | :--- |
 
-블랜딩 애니메이션을 추가해요. (블렌드 값, 리소스 ID) 
-| **ModeBlendAnimationDataSetting AddBlendAnimation(float BlendValue, string AnimResourceID, float PlaySpeed)** |
+FX를 플레이해요. 
+| **void Stop()** |
 | :--- |
 
-블랜딩 애니메이션을 추가해요. (블렌드 값, 리소스 ID, 플레이 속도) 
+FX를 정지시켜요. 
 # **상속받아 사용 가능한 기능들**
 
 ## **속성**
@@ -24,18 +20,34 @@
 부모 객체를 얻을 수 있어요. 
 ## **이벤트**
 
-| **OnEnter** |
+| **OnCreateEvent** |
 | :--- |
 
-해당 애니메이션 상태가 시작될 때 호출되는 이벤트에요. 
-| **OnUpdate** |
+생성 시 호출되는 이벤트에요. 
+| **OnUpdateEvent** |
 | :--- |
 
-해당 애니메이션 상태가 실행중일 때 매프레임마다 호출되는 이벤트에요. 
-| **OnExit** |
+생성 후 매 프레임마다 호출되는 이벤트에요. 
+| **OnDestoryEvent** |
 | :--- |
 
-해당 애니미에션 상태가 종료될 때 호출되는 이벤트에요. 
+삭제될 때 호출되는 이벤트에요. 
+| **OnCollisionEvent** |
+| :--- |
+
+다른 객체와 충돌할 때 호출되는 이벤트에요. 
+| **OnBeginOverlapEvent** |
+| :--- |
+
+다른 객체와 겹쳐질 때 호출되는 이벤트에요. 
+| **OnEndOverlapEvent** |
+| :--- |
+
+다른 객체와 겹쳐짐이 끝날 때 호출되는 이벤트에요. 
+| **OnOverlapUpdateEvent** |
+| :--- |
+
+다른 객체와 겹쳐있는 동안 매 프레임마다 호출되는 이벤트에요. 
 | **ConnectChangeEventFunction(string ValueName, function FunctionName)** |
 | :--- |
 
@@ -60,20 +72,106 @@ Object:ConnectChangeEventFunction("CurBullet", ChangeCurBullet)
 ``` 
 ## **함수**
 
-| **SetNeedReplicate(bool NeedReplicate)** |
+| **int GetModeObjectKey()** |
 | :--- |
 
-서버 클라이언트 간 동기화가 필요한 애니메이션 여부를 설정할 수 있어요. (동기화 여부) 
+객체의 키 값을 얻을 수 있어요. 
+| **Matrix GetTransform()** |
+| :--- |
 
-서버, 클라이언트 간 동기화 되고 있는 값을 기반으로 애니메이션이 변경되는 경우 동기화 설정을 할 필요는 없어요. 
+매트릭스를 얻을 수 있어요. 
+| **SetTransform(Matrix)** |
+| :--- |
 
-예) 디폴트 애니메이션 설정의 점프 모션은 캐릭터가 현재 공중에 떠있는가를 가지고 애니메이션 상태가 변경되고 있을 때에요. 
+매트릭스를 설정할 수 있어요. (Matrix 값) 
+| **Vector GetLocation()** |
+| :--- |
 
-해당 판단은 서버와 클라이언트가 동기화 하고 있어 따로 동기화를 설정하지 않아도 다른 클라이언트에서도 같은 애니메이션 상태로 설정돼요. 
+객체의 현재 위치를 얻을 수 있어요. 
+| **SetLocation(Vector position, bool collisionCheck)** |
+| :--- |
 
-게임 제작자가 조준 애니메이션 상태를 만들고 클라이언트 입력을 받아 조준 상태로 변경한 경우, 다른 클라이언트에서는  
+객체의 위치를 설정할 수 있어요. (설정할 위치 Vector 값, 충돌 처리 여부) 
+| **SetForward(Vector Forward)** |
+| :--- |
 
-조준 모션을 하지 않음 이경우 해당 값을 true로 설정하면 다른 클라이언트도 해당 애니메이션을 실행해요. 
+객체의 바라보는 방향을 설정할 수 있어요. (설정할 방향 Vector 값) 
+| **AddForce(Vector Force)** |
+| :--- |
+
+객체에 물리 힘을 추가할 수 있어요. (힘을 가할 Vector 값) 
+| **SetVisibility(bool bNewVisibility)** |
+| :--- |
+
+객체의 가시성 여부를 설정할 수 있어요. (가시성 여부) 
+| **AddLocalMove(string TrackName, Vector Pos, float Time, bool CheckCollision)** |
+| :--- |
+
+로컬 좌표를 기준으로 이동 변화를 추가할 수 있어요. (설정할 Track 이름, 이동 변화를 줄 값, 완료까지 걸리는 시간, 충돌 처리 여부) 
+| **AddLocalRot(string TrackName, Vector Rot, float Time)** |
+| :--- |
+
+로컬 좌표를 기준으로 회전 변화를 추가할 수 있어요. (설정할 Track 이름, 회전 변화를 줄 값, 완료까지 걸리는 시간) 
+| **AddLocalScale(string TrackName, Vector Scale, float Time)** |
+| :--- |
+
+로컬 좌표를 기준으로 스케일 변화를 추가할 수 있어요. (설정할 Track 이름, 스케일 변화를 줄 값, 완료까지 걸리는 시간) 
+| **AddWorldMove(string TrackName, Vector Pos, float Time, bool CheckCollision)** |
+| :--- |
+
+월드 좌표를 기준으로 이동 변화를 추가할 수 있어요. (설정할 Track 이름, 이동 변화를 줄 값, 완료까지 걸리는 시간, 충돌 처리 여부) 
+| **AddWorldRot(string TrackName, Vector Rot, float Time)** |
+| :--- |
+
+월드 좌표를 기준으로 회전 변화를 추가할 수 있어요. (설정할 Track 이름, 회전 변화를 줄 값, 완료까지 걸리는 시간) 
+| **AddEmpty(string TrackName, float Time)** |
+| :--- |
+
+객체 변환에 대기 시간을 추가할 수 있어요. (추가할 Track 이름, 대기 시간) 
+| **PlayTransformTrack(string TrackName, TransformPlayType Type, int PlayCount)** |
+| :--- |
+
+설정된 변환 컨트롤러를 실행시켜요. (실행할 Track 이름, [Enum.TransformPlayType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/transformplaytype), 실행 횟수) 
+| **StopTransformTrack(string TrackName)** |
+| :--- |
+
+변환 컨트롤러를 정지시켜요. (정지할 Track 이름) 
+| **PauseTransformTrack(string TrackName)** |
+| :--- |
+
+변환 컨트롤러를 일시 정지시켜요 (일시 정지할 Track 이름) 
+| **ResumeTransformTrack(string TrackName)** |
+| :--- |
+
+변환 컨트롤러를 다시 플레이시켜요. (플레이할 Track 이름) 
+| **bool IsPlayingTransformTrack(string TrackName)** |
+| :--- |
+
+해당 TransformTrack이 플레이 중인지 확인할 수 있어요. (확인할 Track 이름) 
+| **ResetTransformTrack(string TrackName)** |
+| :--- |
+
+해당 TransformTrack 이 적용되기 전의 Transform으로 리셋시켜요. (리셋할 Track 이름) 
+| **RemoveTransformTrack(String TrackName)** |
+| :--- |
+
+해당 Track을 제거해요. (제거할 Track 이름) 
+| **ResetTransform()** |
+| :--- |
+
+TransformTrack 이 적용되기 전의 최초 Transform으로 리셋시켜요. 
+| **SetFriction( float value, float restitution, float density )** |
+| :--- |
+
+오브젝트의 표면 물리 마찰력을 설정할 수 있어요. (마찰 값, 탄성 값, 밀도 값) 
+| **MakeVehicleChassis( VehicleCreationInfo Info )** |
+| :--- |
+
+오브젝트를 VehicleChassis로 변경시켜요. (변경할 [VehicleCreationInfo데이터](https://ditoland-utplus.gitbook.io/ditoland/api-reference/common/vehiclecreationinfo)) 
+| **FRModeVehicle GetVehicle()** |
+| :--- |
+
+Vehicle 객체를 얻을 수 있어요. 
 | **string GetName()** |
 | :--- |
 

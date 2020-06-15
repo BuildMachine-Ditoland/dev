@@ -1,5 +1,3 @@
-# **SimulatePhysicsType**
-
 
 물리 적용방식을 결정하는 타입이에요. 
 ## **Enums**

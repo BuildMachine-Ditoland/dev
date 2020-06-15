@@ -1,5 +1,3 @@
-# **TransformPlayType**
-
 
 변환 컨트롤러 실행방식을 결정하는 타입이에요. 
 ## **Enums**

@@ -1,5 +1,3 @@
-# **CollisionResponse**
-
 
 오브젝트의 충돌 처리 타입이에요. 
 ## **Enums**

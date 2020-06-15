@@ -1,5 +1,3 @@
-# **ObjectSelectType**
-
 
 오브젝트가 스폰되는 방식을 결정하는 타입이에요. 
 ## **Enums**

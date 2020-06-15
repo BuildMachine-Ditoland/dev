@@ -1,5 +1,23 @@
 
-클라이언트에서 사용되는 오브젝트에 붙어있는 ScreenUI 개체에요. 
+클라이언트에서 사용되는 아이템 개체에요 
+## **함수**
+
+| **AttachTo(RModeRemotePlayer Player, Bone BoneType)** |
+| :--- |
+
+아이템을 플레이어 캐릭터에게 붙일 수 있어요. (아이템을 붙일 플레이어, [Enum.Bone.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/bone)) 
+| **Detach()** |
+| :--- |
+
+플레이어 캐릭터에 붙어 있는 아이템을 해제할 수 있어요. 
+| **AddAction(string ActionName, Key ActionKey, bool bAutoAction, LuaScriptFunction Function)** |
+| :--- |
+
+아이템을 착용 후 액션 추가해요. (액션 이름, 액션 실행 할 [Enum.Key.키](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/key), 자동 액션 여부, 연결 함수) 
+| **AddToggleAction(string ActionName, Key ActionKey, LuaScriptFunction StartFunction, LuaScriptFunction EndFunction)** |
+| :--- |
+
+아이템을 착용 후 토글 액션을 추가해요. (액션 이름, 액션 실행 할 [Enum.Key.키](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/key), 키 입력 시 연결 함수, 키 입력 종료 시 연결 함수) 
 # **상속받아 사용 가능한 기능들**
 
 ## **속성**
@@ -10,26 +28,26 @@
 부모 객체를 얻을 수 있어요. 
 ## **이벤트**
 
-| **OnInitEvent** |
+| **UseEvent** |
 | :--- |
 
-UI가 초기화 되었을 때 호출되는 이벤트에요. 
-| **OnVisibleEvent** |
+아이템 사용 시 호출되는 이벤트에요. 
+| **EquipEvent** |
 | :--- |
 
-UI가 보여질 때 호출되는 이벤트에요. 
-| **OnUpdateEvent** |
+아이템 장착 시 호출되는 이벤트에요. 
+| **UnEquipEvent** |
 | :--- |
 
-UI가 보여지는 동안 매 프라임마다 호출되는 이벤트에요. 
-| **OnInVisibleEvent** |
-| :--- |
-
-UI가 안 보여질 때 호출되는 이벤트에요. 
+아이템 탈착 시 호출되는 이벤트에요. 
 | **OnCreateEvent** |
 | :--- |
 
 생성 시 호출되는 이벤트에요. 
+| **OnUpdateEvent** |
+| :--- |
+
+생성 후 매 프레임마다 호출되는 이벤트에요. 
 | **OnDestoryEvent** |
 | :--- |
 
@@ -74,138 +92,22 @@ Object:ConnectChangeEventFunction("CurBullet", ChangeCurBullet)
 ``` 
 ## **함수**
 
-| **SetVisible(bool bVisible)** |
+| **GetItemCount()** |
 | :--- |
 
-UI의 표시 여부를 설정할 수 있어요. (UI 표시 여부) 
-| **SetWidgetVisible(string WidgetName, bool bVisible)** |
+아이템의 개수를 얻을 수 있어요. 
+| **RResourceID GetIconImg()** |
 | :--- |
 
-UI 위젯의 표시 여부를 설정할 수 있어요. (설정 할 위젯 이름, UI 표시 여부) 
-| **SetWidgetAnchor(string WidgetName, ERObjectUIAnchorType type)** |
+아이템의 아이콘 이미지를 얻을 수 있어요. 
+| **AddAction(string ActionName, LuaScriptFunction Function)** |
 | :--- |
 
-UI 위젯의 고정 여부를 설정할 수 있어요. (설정 할 위젯 이름, Anchor Type) 
-| **SetWidgetOpacity(string WidgetName, float Opacity)** |
+아이템 착용 후 액션을 추가해요. (액션 이름, 연결 함수) 
+| **AddToggleAction(string ActionName, LuaScriptFunction StartFunction, LuaScriptFunction EndFunction)** |
 | :--- |
 
-UI 위젯의 투명 값을 설정할 수 있어요. (설정할 값) 
-| **SetText(string WidgetName, int Value)** |
-| :--- |
-
-위젯의 텍스트를 주어진 정수로 변경해요. (텍스트를 변경할 위젯 이름, 변경할 정수 값) 
-| **SetText(string WidgetName, float Value)** |
-| :--- |
-
-위젯의 텍스트를 주어진 실수로 변경해요. (텍스트를 변경할 위젯 이름, 변경할 실수 값) 
-| **SetText(string WidgetName, string InText)** |
-| :--- |
-
-위젯의 텍스트를 주어진 문자열로 변경해요. (텍스트를 변경할 위젯 이름, 변경할 문자열) 
-| **SetTextColor(string WidgetName, Color color)** |
-| :--- |
-
-텍스트의 색을 설정할 수 있어요. (텍스트 색을 변경할 위젯 이름, 변경할 [Color](https://ditoland-utplus.gitbook.io/ditoland/api-reference/common/color)값) 
-| **SetChangeTextEvent(string TextName, protected_function InEventFunction)** |
-| :--- |
-
-위젯의 텍스트 변경 시 호출되는 이벤트 함수를 설정해요. (변경을 감지할 Text위젯 이름, 연결 함수) 
-| **SetImage(string ImgName, ResoureID TextureID)** |
-| :--- |
-
-위젯의 이미지를 설정할 수 있어요. (변경할 Image위젯 이름, 변경할 리소스 ID) 
-| **SetChangeImageEvent(string ImgName, protected_function InEventFunction)** |
-| :--- |
-
-위젯의 이미지 변경 시 호출되는 이벤트 함수를 설정해요. (변경을 감지할 Image위젯 이름, 연결 함수) 
-| **SetButtonUpEvent(string ButtonName, protected_function InEventFunction)** |
-| :--- |
-
-버튼 위젯이 눌렸다 띄어질 때 호출되는 이벤트 함수를 설정해요. (이벤트를 감지할 Button위젯 이름, 연결 함수) 
-| **SetButtonPressEvent(string ButtonName, protected_function InEventFunction)** |
-| :--- |
-
-버튼 위젯이 눌릴 때 호출되는 이벤트 함수를 설정해요. (이벤트를 감지할 Button위젯 이름, 연결 함수) 
-| **SetWidgetLocation(string WidgetName, float X, float Y)** |
-| :--- |
-
-위젯의 위치를 변경할 수 있어요. (위치를 변경할 위젯 이름, X좌표 값, Y좌표 값) 
-| **AddChildUIScene(string ChildUISceneName, FRUIScene* Element)** |
-| :--- |
-
-UI씬에 자식 UI씬 추가할 수 있어요. (자식이 될 UI씬 이름, 자식으로 추가할 UI씬) 
-| **AddChildUIScene(string ParentWidgetName, string ChildUISceneName, FRUIScene* Element)** |
-| :--- |
-
-UI씬에 자식 UI씬 추가할 수 있어요. (부모 UI 이름, 자식이 될 UI씬 이름, 자식으로 추가할 UI씬) 
-| **RModeUIScene GetChildUIScene(string ChildUISceneName)** |
-| :--- |
-
-스크롤 위젯의 자식 위젯 얻을 수 있어요. (찾을 자식 위젯 이름) 
-| **RModeUIScene GetChildUIScene(string ParentWidgetName, string ChildUISceneName)** |
-| :--- |
-
-스크롤 위젯의 자식 위젯 얻을 수 있어요. (부모 위젯 이름, 찾을 자식 위젯 이름) 
-| **string GetText(string WidgetName)** |
-| :--- |
-
-텍스트의 내용을 얻을 수 있어요. (내용을 얻을 위젯 이름) 
-| **bool IsWidgetVisible(string WidgetName)** |
-| :--- |
-
-위젯이 보이는지를 확인할 수 있어요. (판단할 위젯 이름) 
-| **AddUIMove(string WidgetName, string TrackName, Vector Pos, float Time)** |
-| :--- |
-
-해당 Scene안에 있는 WidgetName의 이름을 가진 위젯의 이동 변화를 추가할 수 있어요. (이동 변화를 줄 위젯 이름, 트랙 이름, 이동 Vector, 변화 완료까지의 시간) 
-| **AddWorldRot(string WidgetName, string TrackName, FVector Rot, float Time)** |
-| :--- |
-
-해당 Scene안에 있는 WidgetName의 이름을 가진 위젯의 회전 변화를 추가할 수 있어요. (회전 변화를 줄 위젯 이름, 트랙 이름, 회전 Vector, 변화 완료까지의 시간) 
-| **AddUIScale(string WidgetName, string TrackName, FVector Size, float Time)** |
-| :--- |
-
-해당 Scene안에 있는 WidgetName의 이름을 가진 위젯의 크기 변화를 추가할 수 있어요. (크기 변화를 줄 위젯 이름, 트랙 이름, 크기 Vector, 변화 완료까지의 시간) 
-| **AddUIOpacity(string WidgetName, string TrackName, float opacity, float Time)** |
-| :--- |
-
-해당 Scene안에 있는 WidgetName의 이름을 가진 위젯의 투명도 변화를 추가할 수 있어요. (투명도 변화를 줄 위젯 이름, 트랙 이름, 투명도 값, 변화 완료까지의 시간) 
-| **AddUIEmpty(string TrackName, string TrackName, float Time)** |
-| :--- |
-
-해당 Scene안에 있는 WidgetName의 이름을 가진 위젯의 변환 대기 시간을 추가할 수 있어요. (트랙 이름, 변환 대기 시간) 
-| **PlayUIActionTrack(string TrackName, TransformPlayType Type, int PlayCount)** |
-| :--- |
-
-설정된 변환 컨트롤러 실행해요. (트랙 이름, [Enum.TransformPlayType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/transformplaytype), 실행 횟수) 
-| **StopUIActionTrack(string TrackName)** |
-| :--- |
-
-변환 컨트롤러를 정지시켜요. (정지 할 트랙 이름) 
-| **PauseUIActionTrack(string TrackName)** |
-| :--- |
-
-변환 컨트롤러를 일시 정지시켜요. (일시 정지 할 트랙 이름) 
-| **ResumeUIActionTrack(string TrackName)** |
-| :--- |
-
-변환 컨트롤러를 다시 플레이해요. (다시 플레이 할 트랙 이름) 
-| **IsPlayingUIActionTrack(string TrackName)** |
-| :--- |
-
-해당 TransformTrack이 플레이 중인지 확인할 수 있어요. (확인 할 트랙 이름) 
-| **ResetUIActionTrack(string TrackName)** |
-| :--- |
-
-해당 TransformTrack를 적용되기 전의 Transform으로 리셋시켜요. (리셋 할 트랙 이름) 
-| **RemoveUIActionTrack(String TrackName)** |
-| :--- |
-
-해당 Track을 제거해요. (제거 할 트랙 이름) 
-| **ResetUIActionTrack()** |
-| :--- |
-
-TransformTrack 이 적용되기 전의 최초 Transform으로 리셋 시켜요. 
+아이템 착용 후 토글 액션을 추가해요. (액션 이름, 액션 시작 시 연결 함수, 액션 종료 시 연결 함수) 
 | **int GetModeObjectKey()** |
 | :--- |
 

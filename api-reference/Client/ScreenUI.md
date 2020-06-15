@@ -1,5 +1,5 @@
 
-클라이언트에서 사용되는 오브젝트에 붙어있는 ScreenUI 개체에요. 
+월드 트리에서 UI페이지에 설정된 ScreenUI 객체에요. 
 # **상속받아 사용 가능한 기능들**
 
 ## **속성**
@@ -26,30 +26,6 @@ UI가 보여지는 동안 매 프라임마다 호출되는 이벤트에요.
 | :--- |
 
 UI가 안 보여질 때 호출되는 이벤트에요. 
-| **OnCreateEvent** |
-| :--- |
-
-생성 시 호출되는 이벤트에요. 
-| **OnDestoryEvent** |
-| :--- |
-
-삭제될 때 호출되는 이벤트에요. 
-| **OnCollisionEvent** |
-| :--- |
-
-다른 객체와 충돌할 때 호출되는 이벤트에요. 
-| **OnBeginOverlapEvent** |
-| :--- |
-
-다른 객체와 겹쳐질 때 호출되는 이벤트에요. 
-| **OnEndOverlapEvent** |
-| :--- |
-
-다른 객체와 겹쳐짐이 끝날 때 호출되는 이벤트에요. 
-| **OnOverlapUpdateEvent** |
-| :--- |
-
-다른 객체와 겹쳐있는 동안 매 프레임마다 호출되는 이벤트에요. 
 | **ConnectChangeEventFunction(string ValueName, function FunctionName)** |
 | :--- |
 
@@ -206,106 +182,6 @@ UI씬에 자식 UI씬 추가할 수 있어요. (부모 UI 이름, 자식이 될 
 | :--- |
 
 TransformTrack 이 적용되기 전의 최초 Transform으로 리셋 시켜요. 
-| **int GetModeObjectKey()** |
-| :--- |
-
-객체의 키 값을 얻을 수 있어요. 
-| **Matrix GetTransform()** |
-| :--- |
-
-매트릭스를 얻을 수 있어요. 
-| **SetTransform(Matrix)** |
-| :--- |
-
-매트릭스를 설정할 수 있어요. (Matrix 값) 
-| **Vector GetLocation()** |
-| :--- |
-
-객체의 현재 위치를 얻을 수 있어요. 
-| **SetLocation(Vector position, bool collisionCheck)** |
-| :--- |
-
-객체의 위치를 설정할 수 있어요. (설정할 위치 Vector 값, 충돌 처리 여부) 
-| **SetForward(Vector Forward)** |
-| :--- |
-
-객체의 바라보는 방향을 설정할 수 있어요. (설정할 방향 Vector 값) 
-| **AddForce(Vector Force)** |
-| :--- |
-
-객체에 물리 힘을 추가할 수 있어요. (힘을 가할 Vector 값) 
-| **SetVisibility(bool bNewVisibility)** |
-| :--- |
-
-객체의 가시성 여부를 설정할 수 있어요. (가시성 여부) 
-| **AddLocalMove(string TrackName, Vector Pos, float Time, bool CheckCollision)** |
-| :--- |
-
-로컬 좌표를 기준으로 이동 변화를 추가할 수 있어요. (설정할 Track 이름, 이동 변화를 줄 값, 완료까지 걸리는 시간, 충돌 처리 여부) 
-| **AddLocalRot(string TrackName, Vector Rot, float Time)** |
-| :--- |
-
-로컬 좌표를 기준으로 회전 변화를 추가할 수 있어요. (설정할 Track 이름, 회전 변화를 줄 값, 완료까지 걸리는 시간) 
-| **AddLocalScale(string TrackName, Vector Scale, float Time)** |
-| :--- |
-
-로컬 좌표를 기준으로 스케일 변화를 추가할 수 있어요. (설정할 Track 이름, 스케일 변화를 줄 값, 완료까지 걸리는 시간) 
-| **AddWorldMove(string TrackName, Vector Pos, float Time, bool CheckCollision)** |
-| :--- |
-
-월드 좌표를 기준으로 이동 변화를 추가할 수 있어요. (설정할 Track 이름, 이동 변화를 줄 값, 완료까지 걸리는 시간, 충돌 처리 여부) 
-| **AddWorldRot(string TrackName, Vector Rot, float Time)** |
-| :--- |
-
-월드 좌표를 기준으로 회전 변화를 추가할 수 있어요. (설정할 Track 이름, 회전 변화를 줄 값, 완료까지 걸리는 시간) 
-| **AddEmpty(string TrackName, float Time)** |
-| :--- |
-
-객체 변환에 대기 시간을 추가할 수 있어요. (추가할 Track 이름, 대기 시간) 
-| **PlayTransformTrack(string TrackName, TransformPlayType Type, int PlayCount)** |
-| :--- |
-
-설정된 변환 컨트롤러를 실행시켜요. (실행할 Track 이름, [Enum.TransformPlayType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/transformplaytype), 실행 횟수) 
-| **StopTransformTrack(string TrackName)** |
-| :--- |
-
-변환 컨트롤러를 정지시켜요. (정지할 Track 이름) 
-| **PauseTransformTrack(string TrackName)** |
-| :--- |
-
-변환 컨트롤러를 일시 정지시켜요 (일시 정지할 Track 이름) 
-| **ResumeTransformTrack(string TrackName)** |
-| :--- |
-
-변환 컨트롤러를 다시 플레이시켜요. (플레이할 Track 이름) 
-| **bool IsPlayingTransformTrack(string TrackName)** |
-| :--- |
-
-해당 TransformTrack이 플레이 중인지 확인할 수 있어요. (확인할 Track 이름) 
-| **ResetTransformTrack(string TrackName)** |
-| :--- |
-
-해당 TransformTrack 이 적용되기 전의 Transform으로 리셋시켜요. (리셋할 Track 이름) 
-| **RemoveTransformTrack(String TrackName)** |
-| :--- |
-
-해당 Track을 제거해요. (제거할 Track 이름) 
-| **ResetTransform()** |
-| :--- |
-
-TransformTrack 이 적용되기 전의 최초 Transform으로 리셋시켜요. 
-| **SetFriction( float value, float restitution, float density )** |
-| :--- |
-
-오브젝트의 표면 물리 마찰력을 설정할 수 있어요. (마찰 값, 탄성 값, 밀도 값) 
-| **MakeVehicleChassis( VehicleCreationInfo Info )** |
-| :--- |
-
-오브젝트를 VehicleChassis로 변경시켜요. (변경할 [VehicleCreationInfo데이터](https://ditoland-utplus.gitbook.io/ditoland/api-reference/common/vehiclecreationinfo)) 
-| **FRModeVehicle GetVehicle()** |
-| :--- |
-
-Vehicle 객체를 얻을 수 있어요. 
 | **string GetName()** |
 | :--- |
 

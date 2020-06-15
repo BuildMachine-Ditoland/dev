@@ -1,5 +1,3 @@
-# **ModeAnimStateType**
-
 
 애니메이션 상태를 결정하는 타입이에요. 
 ## **Enums**
