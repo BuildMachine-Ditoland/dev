@@ -1,5 +1,3 @@
-# **VehicleCreationInfo**
-
 
 차량 생성 정보에요. 
 ## **생성자**

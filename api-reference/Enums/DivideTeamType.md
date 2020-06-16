@@ -1,5 +1,3 @@
-# **DivideTeamType**
-
 
 팀 인원 설정을 정하는 타입이에요. 
 ## **Enums**

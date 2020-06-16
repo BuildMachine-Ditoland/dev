@@ -1,5 +1,3 @@
-# **RGameServer**
-
 
 게임 전반적인 역할을 하는 객체에요. 여기 있는 기능들은 서버에서만 사용할 수 있어요. 
 ## **속성**
@@ -197,29 +195,29 @@ NPC를 새롭게 생성할 수 있어요. (생성할 NPC 이름 설정, 지정�
 | **Parent** |
 | :--- |
 
-부모 오브젝트 
+부모 객체를 얻을 수 있어요. 
 ## **이벤트**
 
 | **OnUpdateEvent** |
 | :--- |
 
-매 프레임 호출되는 이벤트 
+매 프레임마다 호출되는 이벤트에요. 
 | **OnEnterPlayer** |
 | :--- |
 
-플레이어 진입 시 호출되는 이벤트 
+플레이어가 게임에 입장 시 호출되는 이벤트에요. 
 | **OnLeavePlayer** |
 | :--- |
 
-플레이어 나갈 때 호출되는 이벤트 
+플레이어 게임에서 나갈 때 호출되는 이벤트에요. 
 | **OnDeathCharacter** |
 | :--- |
 
-케릭터 죽을 때 호출되는 이벤트 
+케릭터 죽을 때 호출되는 이벤트에요. 
 | **OnSpawnCharacter** |
 | :--- |
 
-케릭터 스폰 될 때 호출되는 이벤트 
+케릭터 스폰 될 때 호출되는 이벤트에요. 
 
 샘플 
 
@@ -243,7 +241,7 @@ Game.OnEnterPlayer:Connect(EnterPlayer)
 | **ConnectChangeEventFunction(string ValueName, function FunctionName)** |
 | :--- |
 
-추가된 값이 변경 될 때 호출되는 이벤트 (Value 이름, 연결 함수) 
+추가된 값이 변경 될 때 호출되는 이벤트에요. (Value 이름, 연결 함수) 
 
 샘플 
 
@@ -265,150 +263,150 @@ Object:ConnectChangeEventFunction("CurBullet", ChangeCurBullet)
 | **AddTimeEvent(String EventName, float Time, LuaScriptFunction EventFuunction)** |
 | :--- |
 
-일정 시간뒤에 연결 함수가 호출되는 이벤트 추가 (이벤트 이름, 시간, 연결 함수) 
+일정 시간뒤에 연결 함수가 호출되는 이벤트를 추가해요. (추가할 이벤트 이름, 시간, 연결 함수) 
 | **DeleteTimeEvent(String EventName)** |
 | :--- |
 
-등록된 시간 이벤트 삭제 (이벤트 이름) 
+등록된 시간 이벤트를 삭제해요. (삭제할 이벤트 이름) 
 ## **함수**
 
 | **RModePhase AddPhase(string phasename)** |
 | :--- |
 
-게임에 단계를 추가한다. (단계 이름) 
+게임에 단계를 추가할 수 있어요. (추가할 단계 이름) 
 | **RModePhase GetPhaseByName(string phasename)** |
 | :--- |
 
-단계 이름으로 단계 가져오기 (단계 이름) 
+단계 이름으로 단계를 불러올 수 있어요. (불러올 단계 이름) 
 | **RModePhase GetCurPhase()** |
 | :--- |
 
-현재 단계 가져오기 
+현재 단계를 얻을 수 있어요. 
 | **RModePhase ChangePhaseByName(string changephasename)** |
 | :--- |
 
-이름으로 단계 변경하기 (변경할 단계 이름) 
+단계 이름을 통해 해당 단계로 변경할 수 있어요. (변경할 단계 이름) 
 | **RModePhase ChangeToNextPhase()** |
 | :--- |
 
-다음 단계로 변경하기 
+다음 단계로 변경할 수 있어요. 
 | **ConnectEventFunction(string customevent, LuaScriptFunction function) ** |
 | :--- |
 
-유저가 추가하는 이벤트(이벤트 이름, 연결 함수) 
+유저가 추가한 이벤트에 함수를 연결할 수 있어요. (이벤트 이름, 연결 함수) 
 | **float GetPassTime()** |
 | :--- |
 
-진행된 시간 얻기 
+단계가 진행된 시간을 얻을 수 있어요. 
 | **DeleteObject(RScriptWorldObject)** |
 | :--- |
 
-오브젝트 삭제하기 (오브젝트) 
+오브젝트를 삭제할 수 있어요. (삭제할 오브젝트) 
 | **string GetName()** |
 | :--- |
 
-이름 얻기 
+객체의 이름을 얻을 수 있어요. 
 | **RModeObject GetParent(string ParentName)** |
 | :--- |
 
-이름으로 부모 객체 얻기 (찾고싶은 부모 객체 이름) 
+이름으로 부모 객체를 얻을 수 있어요. (찾고싶은 부모 객체 이름) 
 | **RModeObject GetChild(string ChildName)** |
 | :--- |
 
-이름으로 자식 객체 얻기 (찾고싶은 자식 객체 이름) 
+이름으로 자식 객체를 얻을 수 있어요. (찾고싶은 자식 객체 이름) 
 | **RModeObject GetGetSibling(string Name)** |
 | :--- |
 
-이름으로 형제 객체 얻기 (찾고싶은 형제 객체 이름) 
+이름으로 형제 객체를 얻을 수 있어요. (찾고싶은 형제 객체 이름) 
 | **bool IsCharacter()** |
 | :--- |
 
-캐릭터인지 확인 
+캐릭터인지 확인할 수 있어요. 
 | **bool IsStaticMesh()** |
 | :--- |
 
-스테틱 메시인지 확인 
+스테틱 메시인지 확인할 수 있어요. 
 | **bool IsFX()** |
 | :--- |
 
-FX인지 확인 
+FX인지 확인할 수 있어요. 
 | **bool IsSound()** |
 | :--- |
 
-Sound인지 확인 
+Sound인지 확인할 수 있어요. 
 | **bool IsPointLight()** |
 | :--- |
 
-포인트 라이트인지 확인 
+포인트 라이트인지 확인할 수 있어요. 
 | **bool IsSurfaceUI()** |
 | :--- |
 
-서피스 UI인지 확인 
+서피스 UI인지 확인할 수 있어요. 
 | **bool IsScreenUI()** |
 | :--- |
 
-스크린 UI인지 확인 
+스크린 UI인지 확인할 수 있어요. 
 | **bool IsItem()** |
 | :--- |
 
-아이템인지 확인 
+아이템인지 확인할 수 있어요. 
 | **bool IsNPC()** |
 | :--- |
 
-NPC인지 확인 
+NPC인지 확인할 수 있어요. 
 | **bool IsFolder()** |
 | :--- |
 
-폴더인지 확인 
+폴더인지 확인할 수 있어요. 
 | **bool IsScript()** |
 | :--- |
 
-스트립트인지 확인 
+스트립트인지 확인할 수 있어요. 
 | **bool IsCollider()** |
 | :--- |
 
-Collider인지 확인 
+Collider인지 확인할 수 있어요. 
 | **bool IsWidget()** |
 | :--- |
 
-Widget인지 확인 
+Widget인지 확인할 수 있어요. 
 | **AddReplicateValue(string ValueName, Vector Data, ReplicateType Type, float Time, bool bSaveToStorage)** |
 | :--- |
 
-해당 객체에 서버, 클라이언트 간 동기화 기능이 있는 벡터를 추가 (추가할 Value 이름, Vector 데이터, [Enum.ReplicateType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype), 동기화 시간, 스토리지 저장 여부) 
+해당 객체에 서버, 클라이언트 간 동기화가 가능한 벡터를 추가해요. (추가할 Value 이름, Vector 데이터, [Enum.ReplicateType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype), 동기화 시간, 스토리지 저장 여부) 
 | **AddReplicateValue(string ValueName, float Data, ReplicateType Type, float Time, bool bSaveToStorage)** |
 | :--- |
 
-해당 객체에 서버, 클라이언트 간 동기화 기능이 있는 실수를 추가 (추가할 Value 이름, float 데이터, [Enum.ReplicateType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype), 동기화 시간, 스토리지 저장 여부) 
+해당 객체에 서버, 클라이언트 간 동기화가 가능한 실수를 추가해요. (추가할 Value 이름, float 데이터, [Enum.ReplicateType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype), 동기화 시간, 스토리지 저장 여부) 
 | **AddReplicateValue(string ValueName, bool Data, ReplicateType Type, float Time, bool bSaveToStorage)** |
 | :--- |
 
-해당 객체에 서버, 클라이언트 간 동기화 기능이 있는 bool를 추가 (추가할 Value 이름, bool 데이터, [Enum.ReplicateType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype), 동기화 시간, 스토리지 저장 여부) 
+해당 객체에 서버, 클라이언트 간 동기화가 가능한 bool를 추가해요. (추가할 Value 이름, bool 데이터, [Enum.ReplicateType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype), 동기화 시간, 스토리지 저장 여부) 
 | **AddReplicateValue(string ValueName, string Data, ReplicateType Type, float Time, bool bSaveToStorage)** |
 | :--- |
 
-해당 객체에 서버, 클라이언트 간 동기화 기능이 있는 문자열을 추가 (추가할 Value 이름, string 데이터, [Enum.ReplicateType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype), 동기화 시간, 스토리지 저장 여부) 
+해당 객체에 서버, 클라이언트 간 동기화가 가능한 문자열을 추가해요. (추가할 Value 이름, string 데이터, [Enum.ReplicateType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype), 동기화 시간, 스토리지 저장 여부) 
 | **AddReplicateValue(string ValueName, Color Data, ReplicateType Type, float Time, bool bSaveToStorage)** |
 | :--- |
 
-해당 객체에 서버, 클라이언트 간 동기화 기능이 있는 칼라를 추가 (추가할 Value 이름, Color 데이터, [Enum.ReplicateType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype), 동기화 시간, 스토리지 저장 여부) 
+해당 객체에 서버, 클라이언트 간 동기화가 가능한 컬러를 추가해요. (추가할 Value 이름, Color 데이터, [Enum.ReplicateType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype), 동기화 시간, 스토리지 저장 여부) 
 | **AddSaveValue(string ValueName, Vector Data)** |
 | :--- |
 
-해당 객체 저장소에 벡터를 추가 (Value 이름, Vector 데이터) 
+해당 객체 저장소에 벡터를 추가해요. (Value 이름, Vector 데이터) 
 | **AddSaveValue(string ValueName, float Data)** |
 | :--- |
 
-해당 객체 저장소에 실수를 추가 (Value 이름, float 데이터) 
+해당 객체 저장소에 실수를 추가해요. (Value 이름, float 데이터) 
 | **AddSaveValue(string ValueName, bool Data)** |
 | :--- |
 
-해당 객체 저장소에 bool을 추가 (Value 이름, bool 데이터) 
+해당 객체 저장소에 bool을 추가해요. (Value 이름, bool 데이터) 
 | **AddSaveValue(string ValueName, string Data)** |
 | :--- |
 
-해당 객체 저장소에 문자열을 추가 (Value 이름, string 데이터) 
+해당 객체 저장소에 문자열을 추가해요. (Value 이름, string 데이터) 
 | **AddSaveValue(string ValueName, Color Data)** |
 | :--- |
 
-해당 객체 저장소에 칼라를 추가 (Value 이름, Color 데이터) 
+해당 객체 저장소에 칼라를 추가해요. (Value 이름, Color 데이터) 

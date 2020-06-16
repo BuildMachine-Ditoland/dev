@@ -1,5 +1,3 @@
-# **WheelCreationInfo**
-
 
 Vehicle Wheel의 생성 정보에요. 
 ## **생성자**
