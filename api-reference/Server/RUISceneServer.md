@@ -1,5 +1,5 @@
 
-월드에 배치된 UI씬에 해당하는 객체에요. 
+오브젝트에 배치된 UI씬에 해당하는 객체에요. 
 ## **함수**
 
 | **SetVisibility(bool Visibility)** |

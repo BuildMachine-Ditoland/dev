@@ -1,9 +1,11 @@
 
-애니메이션 상태 머신을 다루는 객체에요. [RGameClient](https://ditoland-utplus.gitbook.io/ditoland/api-reference/client/rgameclient#undefined-1)의 Game:AddAnimStateMachineSetting 함수로 생성 가능해요. 
+애니메이션 상태 머신 객체에요.  
 
-Game:AddAnimStateMachineSetting 로 상태머신 생성한 후 Game:SetCharacterAnimStateMachine 로 해당 애니메이션 상태머신을 사용 할 캐릭터로 설정하면, 
+[AnimStateMachineSetting](https://ditoland-utplus.gitbook.io/ditoland/api-reference/client/ranimstatemachinesetting)에서 설정을 세팅할 수 있어요. 
 
-해당 캐릭터 셋팅으로 캐릭터 생성 될 때 해당 애니메이션 상태머신이 설정 돼요. 
+애니메이션 상태 머신을 생성한 후 Game:SetCharacterAnimStateMachine 로 해당 애니메이션 상태머신을 사용 할 캐릭터로 설정하면, 
+
+해당 캐릭터가 생성 될 때 해당 애니메이션 상태 머신이 설정 돼요. 
 ## **함수**
 
 | **RModeSequenceAnimState AddAnimState(string StateName, string ResourceID)** |

@@ -1,5 +1,5 @@
 
-클라이언트에서 사용되는 StaticMesh 개체 
+클라이언트에서 사용되는 StaticMesh 개체에요. 
 ## **함수**
 
 | **ChangeColor(Color ChangeColor)** |

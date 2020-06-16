@@ -1,7 +1,7 @@
 
-[단일](애니메이션을)플레이하는 애니메이션 상태를 설정하는 객체에요. 
+단일 애니메이션을 플레이하는 애니메이션 상태의 설정을 다루는 객체에요. 
 
-[RAnimStateSettingBase](https://ditoland-utplus.gitbook.io/ditoland/api-reference/client/ranimstatesettingbase)의 AddAnimState 함수로 생성해요. 
+AddAnimState 함수로 생성할 수 있어요. 
 ## **이벤트**
 
 | **void AddAnimationEvent(String EventName, float Time, protected_function function EventFunction)** |

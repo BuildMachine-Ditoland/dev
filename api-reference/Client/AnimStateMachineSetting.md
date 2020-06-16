@@ -1,19 +1,49 @@
 
-여러 애니메이션을 특정 값에 따라 블랜딩하는 애니메이션 상태를 설정하는 객체에요. 
+게임에 사용되는 애니매이션 상태머신의 설정을 다루는 객체에요.  
 
-예) 이동 속도에 따른 평상시, 걷기, 달리기 애니메이션 블랜딩 등 이에요 
-
-[RAnimStateSettingBase](https://ditoland-utplus.gitbook.io/ditoland/api-reference/client/ranimstatesettingbase)의 AddBlendAnimState 함수로 생성해요. 
+[Game:AddAnimStateMachineSetting](https://ditoland-utplus.gitbook.io/ditoland/api-reference/client/rgameclient)로 생성해요. 
 ## **함수**
 
-| **ModeBlendAnimationDataSetting AddBlendAnimation(float BlendValue, string AnimResourceID)** |
+| **RModeSequenceAnimStateSetting AddAnimState(string StateName, string ResourceID)** |
 | :--- |
 
-블랜딩 애니메이션을 추가해요. (블렌드 값, 리소스 ID) 
-| **ModeBlendAnimationDataSetting AddBlendAnimation(float BlendValue, string AnimResourceID, float PlaySpeed)** |
+단일 애니메이션 상태 설정을 추가해요. (추가할 상태 이름, 리소스 ID) 
+| **RModeSequenceAnimStateSetting AddAnimState(string StateName, string ResourceID, int PlayCount)** |
 | :--- |
 
-블랜딩 애니메이션을 추가해요. (블렌드 값, 리소스 ID, 플레이 속도) 
+단일 애니메이션 상태 설정을 추가해요. (추가할 상태 이름, 리소스 ID, 플레이 횟수) 
+| **RModeSequenceAnimStateSetting AddAnimState(string StateName, string ResourceID, int PlayCount, float PlaySpeed)** |
+| :--- |
+
+단일 애니메이션 상태 설정을 추가해요. (추가할 상태 이름, 리소스 ID, 플레이 횟수, 플레이 속도) 
+| **RModeBlendAnimStateSetting AddBlendAnimState(string StateName, protected_function BlendFunction)** |
+| :--- |
+
+블랜드 애니메이션 상태 설정을 추가해요. (추가할 상태 이름, 연결 함수) 
+| **RModeBlendAnimStateSetting AddBlendAnimState(string StateName, protected_function BlendFunction, int PlayCount)** |
+| :--- |
+
+블랜드 애니메이션 상태 설정을 추가해요. (추가할 상태 이름, 연결 함수, 플레이 횟수) 
+| **AddAnimTransition(string FromState, string ToState)** |
+| :--- |
+
+애니메이션 상태 전이를 추가해요. (시작 상태 이름, 전이할 상태 이름) 
+| **AddAnimTransition(string FromState, string ToState, float BlendTime)** |
+| :--- |
+
+애니메이션 상태 전이를 추가해요. (시작 상태 이름, 전이할 상태 이름, 블렌딩 시간) 
+| **AddAnimTransition(string FromState, string ToState, protected_function Condition)** |
+| :--- |
+
+애니메이션 상태 전이를 추가해요. (시작 상태 이름, 전이할 상태 이름, 연결 함수) 
+| **AddAnimTransition(string FromState, string ToState, protected_function Condition, float BlendTime)** |
+| :--- |
+
+애니메이션 상태 전이를 추가해요. (시작 상태 이름, 전이할 상태 이름, 연결 함수, 블렌딩 시간) 
+| **SetStartState(string StateName)** |
+| :--- |
+
+애니메이션 상태머신이 활성화 될 때 해당 애니메이션 상태를 설정할 수 있어요. (상태 이름) 
 # **상속받아 사용 가능한 기능들**
 
 ## **속성**
@@ -24,18 +54,6 @@
 부모 객체를 얻을 수 있어요. 
 ## **이벤트**
 
-| **OnEnter** |
-| :--- |
-
-해당 애니메이션 상태가 시작될 때 호출되는 이벤트에요. 
-| **OnUpdate** |
-| :--- |
-
-해당 애니메이션 상태가 실행중일 때 매프레임마다 호출되는 이벤트에요. 
-| **OnExit** |
-| :--- |
-
-해당 애니미에션 상태가 종료될 때 호출되는 이벤트에요. 
 | **ConnectChangeEventFunction(string ValueName, function FunctionName)** |
 | :--- |
 
@@ -60,20 +78,6 @@ Object:ConnectChangeEventFunction("CurBullet", ChangeCurBullet)
 ``` 
 ## **함수**
 
-| **SetNeedReplicate(bool NeedReplicate)** |
-| :--- |
-
-서버 클라이언트 간 동기화가 필요한 애니메이션 여부를 설정할 수 있어요. (동기화 여부) 
-
-서버, 클라이언트 간 동기화 되고 있는 값을 기반으로 애니메이션이 변경되는 경우 동기화 설정을 할 필요는 없어요. 
-
-예) 디폴트 애니메이션 설정의 점프 모션은 캐릭터가 현재 공중에 떠있는가를 가지고 애니메이션 상태가 변경되고 있을 때에요. 
-
-해당 판단은 서버와 클라이언트가 동기화 하고 있어 따로 동기화를 설정하지 않아도 다른 클라이언트에서도 같은 애니메이션 상태로 설정돼요. 
-
-게임 제작자가 조준 애니메이션 상태를 만들고 클라이언트 입력을 받아 조준 상태로 변경한 경우, 다른 클라이언트에서는  
-
-조준 모션을 하지 않음 이경우 해당 값을 true로 설정하면 다른 클라이언트도 해당 애니메이션을 실행해요. 
 | **string GetName()** |
 | :--- |
 

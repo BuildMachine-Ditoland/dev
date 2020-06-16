@@ -1,5 +1,7 @@
 
-여러 애니메이션을 특정 값에 따라 블랜딩하는 애니메이션 상태 객체에요. 
+여러 애니메이션을 특정 값에 따라 블렌딩하는 애니메이션 상태 객체에요. 
+
+[BlendAnimStateSetting](https://ditoland-utplus.gitbook.io/ditoland/api-reference/client/rblendanimstatesetting)에서 세팅을 설정할 수 있어요.  
 ## **함수**
 
 | **AddBlendAnimation(float BlendValue, string AnimResourceID)** |

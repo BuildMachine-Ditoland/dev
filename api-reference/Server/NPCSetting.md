@@ -1,11 +1,33 @@
 
-단일 애니메이션을 플레이하는 애니메이션 상태 객체에요 
-## **함수**
+서버에서 NPC 설정을 저장하는 객체에요. 
+
+[Game:AddNPCSetting](https://ditoland-utplus.gitbook.io/ditoland/api-reference/server/game)로 만들어 사용할 수 있어요. 
+## **속성**
 
-| **ChangeAnimation(string ResourceID)** |
+| **string Base** |
 | :--- |
 
-애니메이션 변경 (변경할 애니메이션 리소스 ID값) 
+NPC 생성에 사용 할 기본 모델이에요. 
+| **string Hair** |
+| :--- |
+
+NPC 생성에 사용 할 Hair 모델이에요. 
+| **string Gloves** |
+| :--- |
+
+NPC 생성에 사용 할 장갑 모델이에요. 
+| **string Body** |
+| :--- |
+
+NPC 생성에 사용 할 몸통 모델이에요. 
+| **string Pants** |
+| :--- |
+
+NPC 생성에 사용 할 하체 모델이에요. 
+| **string Shoes** |
+| :--- |
+
+NPC 생성에 사용 할 신발 모델이에요. 
 # **상속받아 사용 가능한 기능들**
 
 ## **속성**
@@ -16,18 +38,6 @@
 부모 객체를 얻을 수 있어요. 
 ## **이벤트**
 
-| **EnterEvent** |
-| :--- |
-
-해당 애니메이션 상태가 시작될 때 호출되는 이벤트에요. 
-| **UpdateEvent** |
-| :--- |
-
-해당 애니메이션이 실행중 일 때 호출되는 이벤트에요. 
-| **ExitEvent** |
-| :--- |
-
-해당 애니메이션상태가 끝날 때 호출되는 이벤트에요. 
 | **ConnectChangeEventFunction(string ValueName, function FunctionName)** |
 | :--- |
 
@@ -52,22 +62,6 @@ Object:ConnectChangeEventFunction("CurBullet", ChangeCurBullet)
 ``` 
 ## **함수**
 
-| **float GetPlayTime()** |
-| :--- |
-
-애니메이션 상태가 진행된 시간을 얻을 수 있어요. 
-| **AddTransition(RModeAnimTransition InTransition)** |
-| :--- |
-
-다른 애니메이션 상태로의 전이를 추가해요. (전이 할 다른 애니메이션) 
-| **RGameClientCharacter GetOwnerCharacter()** |
-| :--- |
-
-설정되어 있는 캐릭터를 얻을 수 있어요. 
-| **SetNeedReplicate(bool NeedReplicate)** |
-| :--- |
-
-동기화 필요 여부를 설정할 수 있어요. (필요 여부) 
 | **string GetName()** |
 | :--- |
 

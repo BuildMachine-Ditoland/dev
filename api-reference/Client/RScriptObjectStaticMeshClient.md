@@ -1,5 +1,3 @@
-# **RScriptObjectStaticMeshClient**
-
 
 클라이언트에서 사용되는 StaticMesh 개체 
 ## **함수**

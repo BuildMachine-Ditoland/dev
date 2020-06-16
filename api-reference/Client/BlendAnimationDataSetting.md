@@ -1,47 +1,15 @@
 
-게임에 사용되는 애니매이션 상태머신의 설정을 다루는 객체에요. [Game:AddAnimStateMachineSetting](https://ditoland-utplus.gitbook.io/ditoland/api-reference/client/rgameclient)로 생성해요. 
+[RBlendAnimState](https://ditoland-utplus.gitbook.io/ditoland/api-reference/client/rblendanimstate)에 블렌드 애니메이션이 추가 될 때 세팅하는 객체에요. 
 ## **함수**
 
-| **RModeSequenceAnimStateSetting AddAnimState(string StateName, string ResourceID)** |
+| **AddAnimationEvent(String EventName, float Time, protected_function function EventFunction)** |
 | :--- |
 
-단일 애니메이션 상태 설정을 추가해요. (추가할 상태 이름, 리소스 ID) 
-| **RModeSequenceAnimStateSetting AddAnimState(string StateName, string ResourceID, int PlayCount)** |
+애니메이션 이벤트를 추가해요. (추가할 이벤트 이름, 블렌딩 시간, 연결 함수) 
+| **DeleteAnimationEvent(String EventName)** |
 | :--- |
 
-단일 애니메이션 상태 설정을 추가해요. (추가할 상태 이름, 리소스 ID, 플레이 횟수) 
-| **RModeSequenceAnimStateSetting AddAnimState(string StateName, string ResourceID, int PlayCount, float PlaySpeed)** |
-| :--- |
-
-단일 애니메이션 상태 설정을 추가해요. (추가할 상태 이름, 리소스 ID, 플레이 횟수, 플레이 속도) 
-| **RModeBlendAnimStateSetting AddBlendAnimState(string StateName, protected_function BlendFunction)** |
-| :--- |
-
-블랜드 애니메이션 상태 설정을 추가해요. (추가할 상태 이름, 연결 함수) 
-| **RModeBlendAnimStateSetting AddBlendAnimState(string StateName, protected_function BlendFunction, int PlayCount)** |
-| :--- |
-
-블랜드 애니메이션 상태 설정을 추가해요. (추가할 상태 이름, 연결 함수, 플레이 횟수) 
-| **AddAnimTransition(string FromState, string ToState)** |
-| :--- |
-
-애니메이션 상태 전이를 추가해요. (시작 상태 이름, 전이할 상태 이름) 
-| **AddAnimTransition(string FromState, string ToState, float BlendTime)** |
-| :--- |
-
-애니메이션 상태 전이를 추가해요. (시작 상태 이름, 전이할 상태 이름, 블렌딩 시간) 
-| **AddAnimTransition(string FromState, string ToState, protected_function Condition)** |
-| :--- |
-
-애니메이션 상태 전이를 추가해요. (시작 상태 이름, 전이할 상태 이름, 연결 함수) 
-| **AddAnimTransition(string FromState, string ToState, protected_function Condition, float BlendTime)** |
-| :--- |
-
-애니메이션 상태 전이를 추가해요. (시작 상태 이름, 전이할 상태 이름, 연결 함수, 블렌딩 시간) 
-| **SetStartState(string StateName)** |
-| :--- |
-
-애니메이션 상태머신이 활성화 될 때 해당 애니메이션 상태를 설정할 수 있어요. (상태 이름) 
+애니메이션 이벤트를 제거해요. (제거할 이벤트 이름) 
 # **상속받아 사용 가능한 기능들**
 
 ## **속성**
