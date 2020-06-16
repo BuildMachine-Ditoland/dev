@@ -1,15 +1,37 @@
 
-게임에서 캐릭터를 스폰하는데 사용되는 스폰포인트 객체에요. 
+캐릭터가 사용하는 카메라의 데이터를 설정하는 객체에요. 
+
+[Game:AddCameraSetting](https://ditoland-utplus.gitbook.io/ditoland/api-reference/client/game)로 생성해서 사용할 수 있어요. 
 ## **함수**
 
-| **SetSpawnType(ESpawnType InSpawnType)** |
+| **SetDistance(float distance)** |
 | :--- |
 
-스폰 포인트의 작동방식을 설정할 수 있어요. ( [Enum.SpawnType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/spawntype)) 
-| **SetSpawnType(ESpawnType InSpawnType, Number Radius)** |
+카메라와 캐릭터 사이의 직선 길이를 설정해요. (설정할 길이 값) 
+| **IsRotationFix(bool bOn)** |
 | :--- |
 
-스폰 포인트의 작동방식을 설정할 수 있어요. ( [Enum.SpawnType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/spawntype), 반지름 값) 
+카메라 이동 시 캐릭터도 같이 회전가능한지를 설정해요. (true : 카메라만 회전, false: 카메라랑 캐릭터 같이 회전 해요.) 
+| **FieldOfView(float value)** |
+| :--- |
+
+Field Of View의 각도를 설정해요. (설정할 각도 값) 
+| **TargetOffset(FVector offset)** |
+| :--- |
+
+카메라의 타겟에 대한 Offset Vector를 설정해요. (설정할 Vector 값) 
+| **UsePawnControlRotation(bool bUse)** |
+| :--- |
+
+폰의 회전값을 사용할것인지에 대한 함수에요. (회전값 사용 여부) 
+| **SetCameraPitch(float value)** |
+| :--- |
+
+카메라의 Pitch(Rotation Y) 값을 설정해요 (설정할 Pitch 값) 
+| **SetCameraLag(bool bOn, float speed, float MaxDistance)** |
+| :--- |
+
+카메라의 Lag 기능을 적용할것인지에 대한 함수에요. (Lag기능 적용 여부, 속도, 최대거리) 
 # **상속받아 사용 가능한 기능들**
 
 ## **속성**

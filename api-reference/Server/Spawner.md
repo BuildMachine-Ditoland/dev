@@ -1,35 +1,17 @@
 
-캐릭터가 사용하는 카메라의 데이터를 설정하는 객체에요. 
+월드상에 설정된 조건에 맞게 오브젝트를 생성하는 객체에요. 
+
+[Game:AddObjectSpawner](https://ditoland-utplus.gitbook.io/ditoland/api-reference/server/rgameserver)함수로 생성해요. 
 ## **함수**
 
-| **SetDistance(float distance)** |
+| **AddSpawnObject(String ObjectName, float SpawnRate, int Count)** |
 | :--- |
 
-카메라와 캐릭터 사이의 직선 길이를 설정해요. (설정할 길이 값) 
-| **IsRotationFix(bool bOn)** |
+스폰 오브젝트를 추가할 수 있어요. (ObjectName : 월드 트리 상 이름, SpawnRate : 스폰 확률, Count : 스폰 개수) 
+| **AddSpawnObject(String ObjectName, float SpawnRate, int Count, Vector OffsetPosition)** |
 | :--- |
 
-카메라 이동 시 캐릭터도 같이 회전가능한지를 설정해요. (true : 카메라만 회전, false: 카메라랑 캐릭터 같이 회전 해요.) 
-| **FieldOfView(float value)** |
-| :--- |
-
-Field Of View의 각도를 설정해요. (설정할 각도 값) 
-| **TargetOffset(FVector offset)** |
-| :--- |
-
-카메라의 타겟에 대한 Offset Vector를 설정해요. (설정할 Vector 값) 
-| **UsePawnControlRotation(bool bUse)** |
-| :--- |
-
-폰의 회전값을 사용할것인지에 대한 함수에요. (회전값 사용 여부) 
-| **SetCameraPitch(float value)** |
-| :--- |
-
-카메라의 Pitch(Rotation Y) 값을 설정해요 (설정할 Pitch 값) 
-| **SetCameraLag(bool bOn, float speed, float MaxDistance)** |
-| :--- |
-
-카메라의 Lag 기능을 적용할것인지에 대한 함수에요. (Lag기능 적용 여부, 속도, 최대거리) 
+스폰 오브젝트를 추가할 수 있어요. (ObjectName : 월드 트리 상 이름, SpawnRate : 스폰 확률, Count : 스폰 개수, OffsetPosition : 생성 위치 오프셋) 
 # **상속받아 사용 가능한 기능들**
 
 ## **속성**

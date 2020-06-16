@@ -1,25 +1,15 @@
 
-스크립트페이즈(단계) 객체에요. 
-## **이벤트**
-
-| **EnterEvent** |
-| :--- |
-
-단계에 진입 시 호출되는 이벤트에요. 
-| **UpdateEvent** |
-| :--- |
-
-단계가 활성화 되어 있을 때 매 프레임 호출되는 이벤트에요. 
-| **ExitEvent** |
-| :--- |
-
-단계에서 다른 단계로 변경 될 때 호출되는 이벤트에요. 
+게임에서 캐릭터를 스폰하는데 사용되는 스폰포인트 객체에요. 
 ## **함수**
 
-| **float GetPhaseTime()** |
+| **SetSpawnType(ESpawnType InSpawnType)** |
 | :--- |
 
-단계가 활성화 되어 있었던 시간을 얻을 수 있어요. 
+스폰 포인트의 작동방식을 설정할 수 있어요. ( [Enum.SpawnType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/spawntype)) 
+| **SetSpawnType(ESpawnType InSpawnType, Number Radius)** |
+| :--- |
+
+스폰 포인트의 작동방식을 설정할 수 있어요. ( [Enum.SpawnType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/spawntype), 개수 값) 
 # **상속받아 사용 가능한 기능들**
 
 ## **속성**

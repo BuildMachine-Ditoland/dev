@@ -1,17 +1,43 @@
 
-월드상에 설정된 조건에 맞게 오브젝트를 생성하는 객체에요 
+게임에서 사용될 팀을 설정 할 때 사용되는 객체에요.  
 
-[Game:AddObjectSpawner](https://ditoland-utplus.gitbook.io/ditoland/api-reference/server/rgameserver)함수로 생성해요. 
+[Game:AddTeam](https://ditoland-utplus.gitbook.io/ditoland/api-reference/server/rgameserver#undefined-1)함수를 이용해서 만들어요. 
+## **속성**
+
+| **int MaxPlayerCount** |
+| :--- |
+
+팀의 최대 인원을 설정할 수 있어요. 
 ## **함수**
 
-| **AddSpawnObject(String ObjectName, float SpawnRate, int Count)** |
+| **AddUsingCharacter(string CharacterSetting)** |
 | :--- |
 
-스폰 오브젝트를 추가할 수 있어요. (ObjectName : 월드 트리 상 이름, SpawnRate : 스폰 확률, Count : 스폰 개수) 
-| **AddSpawnObject(String ObjectName, float SpawnRate, int Count, Vector OffsetPosition)** |
+팀에서 사용될 캐릭터 설정을 추가할 수 있어요. (캐릭터세팅 이름) 
+
+[Game:AddCharacterSetting](https://ditoland-utplus.gitbook.io/ditoland/api-reference/server/game)으로 추가한 캐릭터설정 중에서만 가능해요 
+| **SetUsingSpawnPointGroup(string InSpawnPointGroup)** |
 | :--- |
 
-스폰 오브젝트를 추가할 수 있어요. (ObjectName : 월드 트리 상 이름, SpawnRate : 스폰 확률, Count : 스폰 개수, OffsetPosition : 생성 위치 오프셋) 
+팀에서 사용될 스폰 포인트 그룹을 추가할 수 있어요. (스폰 그룹 이름) 
+
+Game:AddSpawnPointGroup으로 추가한 스폰 그룹 중에서만 가능해요 
+| **AddFixedCharacter(string CharacterSetting)** |
+| :--- |
+
+팀 고정 캐릭터설정을 추가할 수 있어요. (캐릭터 세팅 이름) 
+
+[Game:AddCharacterSetting](https://ditoland-utplus.gitbook.io/ditoland/api-reference/server/game)으로 추가한 캐릭터설정 중에서만 가능해요 
+| **AddFixedSpawnPoint(string SpawnPoint)** |
+| :--- |
+
+팀 고정 스폰 포인트를 추가할 수 있어요. (스폰 포인트 이름) 
+| **ReviveTeamPlayerCharacter()** |
+| :--- |
+
+팀원중 죽어있는 캐릭터를 리스폰 시켜요. 
+
+Life가 남아있어야 해요. 
 # **상속받아 사용 가능한 기능들**
 
 ## **속성**

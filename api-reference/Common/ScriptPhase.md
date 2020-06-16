@@ -1,43 +1,27 @@
 
-게임에서 사용될 팀을 설정 할 때 사용되는 객체에요.  
+스크립트페이즈(단계) 객체에요. 
 
-[RGameServer](https://ditoland-utplus.gitbook.io/ditoland/api-reference/server/rgameserver#undefined-1)의 Game:AddTeam 함수를 이용해서 만들어요. 
-## **속성**
+Game:AddPhase(단계 이름) 으로 생성할 수 있어요. 
+## **이벤트**
 
-| **int MaxPlayerCount** |
+| **EnterEvent** |
 | :--- |
 
-팀의 최대 인원을 설정할 수 있어요. 
+단계에 진입 시 호출되는 이벤트에요. 
+| **UpdateEvent** |
+| :--- |
+
+단계가 활성화 되어 있을 때 매 프레임 호출되는 이벤트에요. 
+| **ExitEvent** |
+| :--- |
+
+단계에서 다른 단계로 변경 될 때 호출되는 이벤트에요. 
 ## **함수**
 
-| **AddUsingCharacter(string CharacterSetting)** |
+| **float GetPhaseTime()** |
 | :--- |
 
-팀에서 사용될 캐릭터 설정을 추가할 수 있어요. (캐릭터세팅 이름) 
-
-Game:AddCharacterSetting으로 추가한 캐릭터설정 중에서만 가능해요 
-| **SetUsingSpawnPointGroup(string InSpawnPointGroup)** |
-| :--- |
-
-팀에서 사용될 스폰 포인트 그룹을 추가할 수 있어요. (스폰 그룹 이름) 
-
-Game:AddSpawnPointGroup으로 추가한 스폰 그룹 중에서만 가능해요 
-| **AddFixedCharacter(string CharacterSetting)** |
-| :--- |
-
-팀 고정 캐릭터설정을 추가할 수 있어요. (캐릭터 세팅 이름) 
-
-Game:AddCharacterSetting으로 추가한 캐릭터설정 중에서만 가능해요 
-| **AddFixedSpawnPoint(string SpawnPoint)** |
-| :--- |
-
-팀 고정 스폰 포인트를 추가할 수 있어요. (Game에 AddSpawnPoint 함수로 추가한 스폰 포인트중 이름) 
-| **ReviveTeamPlayerCharacter()** |
-| :--- |
-
-팀원중 죽어있는 캐릭터를 리스폰 시켜요. 
-
-Life가 남아있어야 해요. 
+단계가 활성화 되어 있었던 시간을 얻을 수 있어요. 
 # **상속받아 사용 가능한 기능들**
 
 ## **속성**
