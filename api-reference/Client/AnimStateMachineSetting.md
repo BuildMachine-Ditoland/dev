@@ -1,7 +1,7 @@
 
 게임에 사용되는 애니매이션 상태머신의 설정을 다루는 객체에요.  
 
-[Game:AddAnimStateMachineSetting](https://ditoland-utplus.gitbook.io/ditoland/api-reference/client/rgameclient)로 생성해요. 
+[Game:AddAnimStateMachineSetting](https://ditoland-utplus.gitbook.io/ditoland/api-reference/client/game)로 생성해요. 
 ## **함수**
 
 | **RModeSequenceAnimStateSetting AddAnimState(string StateName, string ResourceID)** |

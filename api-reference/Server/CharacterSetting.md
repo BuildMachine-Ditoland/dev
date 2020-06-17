@@ -1,7 +1,7 @@
 
 게임에서 사용 될 캐릭터를 설정 할 때 사용되는 객체에요.  
 
-[Game:AddCharacterSetting](https://ditoland-utplus.gitbook.io/ditoland/api-reference/server/rgameserver)함수로 추가해요. 
+[Game:AddCharacterSetting](https://ditoland-utplus.gitbook.io/ditoland/api-reference/server/game)함수로 추가해요. 
 ## **속성**
 
 | **UseSelfcharacter** |

@@ -1,7 +1,7 @@
 
 애니메이션 상태 머신 객체에요.  
 
-[AnimStateMachineSetting](https://ditoland-utplus.gitbook.io/ditoland/api-reference/client/ranimstatemachinesetting)에서 설정을 세팅할 수 있어요. 
+[AnimStateMachineSetting](https://ditoland-utplus.gitbook.io/ditoland/api-reference/client/animstatemachinesetting)에서 설정을 세팅할 수 있어요. 
 
 애니메이션 상태 머신을 생성한 후 Game:SetCharacterAnimStateMachine 로 해당 애니메이션 상태머신을 사용 할 캐릭터로 설정하면, 
 

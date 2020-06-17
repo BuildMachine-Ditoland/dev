@@ -1,7 +1,7 @@
 
 게임에서 사용될 팀을 설정 할 때 사용되는 객체에요.  
 
-[Game:AddTeam](https://ditoland-utplus.gitbook.io/ditoland/api-reference/server/rgameserver#undefined-1)함수를 이용해서 만들어요. 
+[Game:AddTeam](https://ditoland-utplus.gitbook.io/ditoland/api-reference/server/game)함수를 이용해서 만들어요. 
 ## **속성**
 
 | **int MaxPlayerCount** |

@@ -1,5 +1,5 @@
 
-설정된 조건에 맞는 오브젝트를 선택하는 객체에요. [Game:CreateObjectSelector](https://ditoland-utplus.gitbook.io/ditoland/api-reference/server/rgameserver)함수로 생성해요. 
+설정된 조건에 맞는 오브젝트를 선택하는 객체에요. [Game:CreateObjectSelector](https://ditoland-utplus.gitbook.io/ditoland/api-reference/server/game)함수로 생성해요. 
 ## **함수**
 
 | **AddSelectObject(String ObjectName, float SelectRate, int Count)** |

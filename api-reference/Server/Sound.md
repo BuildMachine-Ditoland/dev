@@ -77,7 +77,7 @@ Object:ConnectChangeEventFunction("CurBullet", ChangeCurBullet)
 
 해당 오브젝트의 충돌 타입을 지정해줘요. 
 
-[Game:AddUserCollisionType](https://ditoland-utplus.gitbook.io/ditoland/api-reference/server/rgameserver#undefined-1)으로 추가한 타입만 가능해요 없을 시에는 기본 타입으로 지정되요 
+[Game:AddUserCollisionType](https://ditoland-utplus.gitbook.io/ditoland/api-reference/server/game)으로 추가한 타입만 가능해요 없을 시에는 기본 타입으로 지정되요 
 | **SetCharacterCollisionResponse(ECollisionResponse CollisionResponse)** |
 | :--- |
 

@@ -1,7 +1,7 @@
 
 월드상에 설정된 조건에 맞게 오브젝트를 생성하는 객체에요. 
 
-[Game:AddObjectSpawner](https://ditoland-utplus.gitbook.io/ditoland/api-reference/server/rgameserver)함수로 생성해요. 
+[Game:AddObjectSpawner](https://ditoland-utplus.gitbook.io/ditoland/api-reference/server/game)함수로 생성해요. 
 ## **함수**
 
 | **AddSpawnObject(String ObjectName, float SpawnRate, int Count)** |
