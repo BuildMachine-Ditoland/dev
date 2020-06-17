@@ -1,7 +1,7 @@
 
 단일 애니메이션을 플레이하는 애니메이션 상태 객체에요. 
 
-[SequenceAnimStateSetting](https://ditoland-utplus.gitbook.io/ditoland/api-reference/client/rsequenceanimstatesetting)에서 세팅을 설정할 수 있어요. 
+[SequenceAnimStateSetting](https://ditoland-utplus.gitbook.io/ditoland/api-reference/client/sequenceanimstatesetting)에서 세팅을 설정할 수 있어요. 
 ## **함수**
 
 | **ChangeAnimation(string ResourceID)** |

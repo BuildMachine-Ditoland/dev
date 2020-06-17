@@ -1,5 +1,5 @@
 
-[RBlendAnimState](https://ditoland-utplus.gitbook.io/ditoland/api-reference/client/blendanimstate)에 블렌드 애니메이션이 추가 될 때 세팅하는 객체에요. 
+[BlendAnimState](https://ditoland-utplus.gitbook.io/ditoland/api-reference/client/blendanimstate)에 블렌드 애니메이션이 추가 될 때 세팅하는 객체에요. 
 ## **함수**
 
 | **AddAnimationEvent(String EventName, float Time, protected_function function EventFunction)** |
