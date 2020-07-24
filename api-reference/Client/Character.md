@@ -53,7 +53,7 @@ Game:AddAnimStateMachineSetting로 추가된 상태 머신 중 애니메이션 �
 | **AddPlayerHUD(string UIName)** |
 | :--- |
 
-UI HUD를 붙일 수 있어요. (붙이고 싶은 UI 이름) 
+UI HUD를 붙일 수 있어요. (붙혀 질 UI 이름, 붙일 RScreenUIClient) 
 | **RemovePlayerHUD(string UIName)** |
 | :--- |
 
@@ -66,10 +66,22 @@ UI HUD를 얻을 수 있어요. (얻고싶은 UI 이름)
 | :--- |
 
 플레이어 자신의 캐릭터인지 아닌지 확인할 수 있어요. 
+| **SetTransform(Matrix)** |
+| :--- |
+
+캐릭터의 위치, 회전을 설정할 수 있어요. (설정할 [Matrix](https://ditoland-utplus.gitbook.io/ditoland/api-reference/common/matrix)값 ) 
+| **GetTransform(Matrix)** |
+| :--- |
+
+매트릭스를 얻을 수 있어요. (설정할 [Matrix](https://ditoland-utplus.gitbook.io/ditoland/api-reference/common/matrix)값 ) 
 | **Vector GetLocation()** |
 | :--- |
 
-현재 캐릭터의 위치를 얻을 수 있어요. 
+(Deprecated)현재 캐릭터의 위치를 얻을 수 있어요. 
+| **Vector GetForwardVector()** |
+| :--- |
+
+(Deprecated)현재 캐릭터의 바라보는 방향을 수 있어요. 
 # **상속받아 사용 가능한 기능들**
 
 ## **속성**
@@ -99,7 +111,7 @@ end
 
 -- Object의 "CurBullet" 라는 Value가 변경되면 ChangeCurBullet 함수에 연결 
 
-Object:ConnectChangeEventFunction("CurBullet", ChangeCurBullet)   
+Object:ConnectChangeEventFunction("CurBullet", LuaScriptFunction ChangeCurBullet)   
 
 ``` 
 | **AddTimeEvent(String EventName, float Time, LuaScriptFunction EventFuunction)** |
@@ -128,6 +140,10 @@ Object:ConnectChangeEventFunction("CurBullet", ChangeCurBullet)
 | :--- |
 
 이름으로 형제 객체를 얻을 수 있어요. (찾고싶은 형제 객체 이름) 
+| **List<RScriptObject> GetChildList()** |
+| :--- |
+
+자식 객체의 리스트를 얻을 수 있어요. 
 | **bool IsCharacter()** |
 | :--- |
 
@@ -180,6 +196,14 @@ Collider인지 확인할 수 있어요.
 | :--- |
 
 Widget인지 확인할 수 있어요. 
+| **bool IsCamera()** |
+| :--- |
+
+Widget인지 확인할 수 있어요. 
+| **bool IsValid()** |
+| :--- |
+
+해당 오브젝트가 유효한지 확인 할 수있어요. 
 | **AddReplicateValue(string ValueName, Vector Data, ReplicateType Type, float Time, bool bSaveToStorage)** |
 | :--- |
 

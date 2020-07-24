@@ -1,33 +1,9 @@
 
-클라이언트 스크립트에서 사용되는 플레이어 객체에요. [Game:GetRemotePlayer(PlayerName)](https://ditoland-utplus.gitbook.io/ditoland/api-reference/client/game)혹은 [LocalPlayer:GetRemotePlayer()](https://ditoland-utplus.gitbook.io/ditoland/api-reference/client/localplayer) 함수를 이용하면 얻을 수 있어요. 
-| **RGameClientCharacter GetCharacter()** |
-| :--- |
-
-플레이어의 캐릭터를 얻을 수 있어요. 
-| **string GetPlayerName()** |
-| :--- |
-
-플레이어의 이름을 얻을 수 있어요. 
-| **ObjectFXClient CreateFX(ObjectFXClient FXObject, Bone BoneType)** |
-| :--- |
-
-캐릭터의 특정 위치에 FX를 생성할 수 있어요. (생성 할 FX 오브젝트, [Enum.Bone.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/bone)) 
-| **ObjectFXClient CreateFX(String FXName, Bone BoneType)** |
-| :--- |
-
-캐릭터의 특정 위치에 FX를 생성할 수 있어요. (생성 할 FX 이름, [Enum.Bone.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/bone)) 
-| **ObjectSoundClient CreateSound(ObjectSoundClient SoundObject)** |
-| :--- |
-
-캐릭터의 위치에 Sound를 생성할 수 있어요. (생성 할 Sound 오브젝트) 
-| **RModeHitResult LineTrace(Vector Start, Vector Dir, float Distance)** |
-| :--- |
-
-두 지점 간의 오브젝트의 충돌을 체크할 수 있어요. (시작 지점 Vector, 원하는 지점 Vector, 지점 간의 거리) 
-| **bool IsMyPlayer()** |
-| :--- |
-
-플레이어 자신의 플레이어인지 확인할 수 있어요. 
+클라이언트에서 사용되는 Widget Base 객체. 
+## **속성**
+
+## **함수**
+
 # **상속받아 사용 가능한 기능들**
 
 ## **속성**
@@ -60,14 +36,6 @@ end
 Object:ConnectChangeEventFunction("CurBullet", LuaScriptFunction ChangeCurBullet)   
 
 ``` 
-| **AddTimeEvent(String EventName, float Time, LuaScriptFunction EventFuunction)** |
-| :--- |
-
-일정 시간뒤에 연결 함수가 호출되는 이벤트를 추가해요. (추가할 이벤트 이름, 시간, 연결 함수) 
-| **DeleteTimeEvent(String EventName)** |
-| :--- |
-
-등록된 시간 이벤트를 삭제해요. (삭제할 이벤트 이름) 
 ## **함수**
 
 | **string GetName()** |

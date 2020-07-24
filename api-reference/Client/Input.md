@@ -2,22 +2,38 @@
 인풋 이벤트를 관리(설정, 해제)하는 객체에요. 
 ## **함수**
 
-| **AddAxisKeyEvent(string Event, RModeKey Key, float Value)** |
+| **AddGroup(string Group)** |
 | :--- |
 
-축 이벤트를 추가할 수 있어요. (추가할 이벤트 이름, [Enum.Key.키](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/key), 이벤트 Value) 
-| **AddActionKeyEvent(string Event, RModeKey Key)** |
+인풋 그룹을 추가 할 수 있어요. (추가 할 그룹 이름) 
+| **RemoveGroup(string Group)** |
 | :--- |
 
-키 이벤트를 추가할 수 있어요. (추가할 이벤트 이름, [Enum.Key.키](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/key)) 
-| **RemoveAllAxisKeyEvent()** |
+인풋 그룹을 제거 할 수 있어요. (제거 할 그룹 이름) 
+| **AddActionKeyEvent(string Group, string Event, RModeKey Key)** |
 | :--- |
 
-모든 축 이벤트를 제거해요. 
-| **RemoveAllActionKeyEvent()** |
+인풋 그룹에 키 이벤트를 추가 할 수 있어요. (그룹 이름, 추가 할 이벤트 이름, [Enum.Key.키](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/key)) 
+| **RemoveActionKeyEvent(string Group, string Event, RModeKey Key)** |
 | :--- |
 
-모든 키 이벤트를 제거해요. 
+인풋 그룹에 키 이벤트를 제거 할 수 있어요. (그룹 이름, 제거 할 이벤트 이름, [Enum.Key.키](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/key)) 
+| **AddAxisKeyEvent(string Group, string Event, RModeKey Key, float Value)** |
+| :--- |
+
+인풋 그룹에 축 이벤트를 추가할 수 있어요. (그룹 이름, 추가 할 이벤트 이름, [Enum.Key.키](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/key), 이벤트 Value) 
+| **RemoveAxisKeyEvent(string Group, string Event, RModeKey Key)** |
+| :--- |
+
+인풋 그룹에 축 이벤트를 제거 할 수 있어요. (그룹 이름, 제거 할 이벤트 이름, [Enum.Key.키](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/key)) 
+| **ActiveGroup(string Group)** |
+| :--- |
+
+인풋 그룹을 활성화 해요. (대상 그룹 이름) 
+| **DeactiveGroup(string Group)** |
+| :--- |
+
+인풋 그룹을 비활성화 해요. (대상 그룹 이름) 
 # **상속받아 사용 가능한 기능들**
 
 ## **속성**
@@ -47,7 +63,7 @@ end
 
 -- Object의 "CurBullet" 라는 Value가 변경되면 ChangeCurBullet 함수에 연결 
 
-Object:ConnectChangeEventFunction("CurBullet", ChangeCurBullet)   
+Object:ConnectChangeEventFunction("CurBullet", LuaScriptFunction ChangeCurBullet)   
 
 ``` 
 ## **함수**
@@ -68,6 +84,10 @@ Object:ConnectChangeEventFunction("CurBullet", ChangeCurBullet)
 | :--- |
 
 이름으로 형제 객체를 얻을 수 있어요. (찾고싶은 형제 객체 이름) 
+| **List<RScriptObject> GetChildList()** |
+| :--- |
+
+자식 객체의 리스트를 얻을 수 있어요. 
 | **bool IsCharacter()** |
 | :--- |
 
@@ -120,6 +140,14 @@ Collider인지 확인할 수 있어요.
 | :--- |
 
 Widget인지 확인할 수 있어요. 
+| **bool IsCamera()** |
+| :--- |
+
+Widget인지 확인할 수 있어요. 
+| **bool IsValid()** |
+| :--- |
+
+해당 오브젝트가 유효한지 확인 할 수있어요. 
 | **AddReplicateValue(string ValueName, Vector Data, ReplicateType Type, float Time, bool bSaveToStorage)** |
 | :--- |
 

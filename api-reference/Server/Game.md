@@ -20,18 +20,26 @@
 | :--- |
 
 게임에서 사용 할 스폰 포인트 그룹을 추가할 수 있어요. (추가할 스폰 포인트 그룹 이름) 
-| **RSpawnPoint AddSpawnPoint(string SpawnPointName, RScriptWorldObject* RWorldObject)** |
+| **RSpawnPoint AddSpawnPoint(RScriptWorldObject* RWorldObject)** |
 | :--- |
 
-게임에서 사용 할 스폰 포인트를 추가할 수 있어요. (추가할 스폰 포인트 이름, 스폰 포인트로 지정 할 오브젝트) 
-| **RSpawnPoint AddSpawnPointAtGroup(string SpawnPointGroupName, string SpawnPointName, RScriptWorldObject* RWorldObject)** |
+게임에서 사용 할 스폰 포인트를 추가할 수 있어요. (스폰 포인트로 지정 할 오브젝트) 
+| **RSpawnPoint AddSpawnPointAtGroup(string SpawnPointGroupName, RScriptWorldObject* RWorldObject)** |
 | :--- |
 
-스폰포인트 그룹에 스폰 포인트를 추가할 수 있어요. (스폰포인트를 추가할 그룹 이름, 스폰 포인트 이름, 스폰 포인트를 할 오브젝트) 
-| **SetSpawnType(ModeSpawnType InSpawnType, string InSpawnObjectName)** |
+스폰포인트 그룹에 스폰 포인트를 추가할 수 있어요. (스폰포인트를 추가할 그룹 이름, 이름, 스폰 포인트를 할 오브젝트) 
+| **SetSpawnType(ModeSpawnType InSpawnType)** |
 | :--- |
 
-스폰포인트의 스폰 타입을 설정할 수 있어요. ( [Enum.SpawnType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/spawntype), 설정할 스폰포인트 이름) 
+게임의 스폰 타입을 설정할 수 있어요. ( [Enum.SpawnType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/spawntype)) 
+| **SetUsingSpawnPointGroup(RSpawnPointGroup* SpawnPointGroup)** |
+| :--- |
+
+게임에 적용 할 스폰 그룹을 설정할 수 있어요. (게임에 적용 할 스폰포인트 그룹 오브젝트) 
+| **SetUsingSpawnPoint(RSpawnPoint* SpawnPoint)** |
+| :--- |
+
+게임에 적용 할 스폰 포인트를 설정할 수 있어요. (게임에 적용 할 스폰포인트 오브젝트) 
 | **SetDefaultSpawnPos(FVector Pos)** |
 | :--- |
 
@@ -257,7 +265,7 @@ end
 
 -- Object의 "CurBullet" 라는 Value가 변경되면 ChangeCurBullet 함수에 연결 
 
-Object:ConnectChangeEventFunction("CurBullet", ChangeCurBullet)   
+Object:ConnectChangeEventFunction("CurBullet", LuaScriptFunction ChangeCurBullet)   
 
 ``` 
 | **AddTimeEvent(String EventName, float Time, LuaScriptFunction EventFuunction)** |
@@ -318,6 +326,10 @@ Object:ConnectChangeEventFunction("CurBullet", ChangeCurBullet)
 | :--- |
 
 이름으로 형제 객체를 얻을 수 있어요. (찾고싶은 형제 객체 이름) 
+| **List<RScriptObject> GetChildList()** |
+| :--- |
+
+자식 객체의 리스트를 얻을 수 있어요. 
 | **bool IsCharacter()** |
 | :--- |
 
@@ -370,6 +382,14 @@ Collider인지 확인할 수 있어요.
 | :--- |
 
 Widget인지 확인할 수 있어요. 
+| **bool IsCamera()** |
+| :--- |
+
+Widget인지 확인할 수 있어요. 
+| **bool IsValid()** |
+| :--- |
+
+해당 오브젝트가 유효한지 확인 할 수있어요. 
 | **AddReplicateValue(string ValueName, Vector Data, ReplicateType Type, float Time, bool bSaveToStorage)** |
 | :--- |
 

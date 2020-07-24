@@ -40,10 +40,6 @@
 | :--- |
 
 해당 NPC의 애니메이션 상태 머신 사용하게 할 수 있어요. (설정한 NPC 이름, 애니메이션 상태 머신 이름) 
-| **RModeCameraSetting AddCameraSetting(string CameraSettingName)** |
-| :--- |
-
-카메라의 세팅을 추가해요. (설정할 카메라 세팅 이름) 
 | **ChangeCameraOffsetDelta(Vector Offset, float Time)** |
 | :--- |
 
@@ -92,6 +88,14 @@ FX를 제거시켜요. (제거할 FX 오브젝트)
 | :--- |
 
 지정된 위치에 오브젝트를 생성 시켜요. (생성 할 Object, 생성 할 위치 Vector) 
+| **CreateUIScene(RScriptUISceneClient Source)** |
+| :--- |
+
+Source와 같은 UIScene을 생성한다. 
+| **CreateUIScene(string UISceneName, RScriptUISceneClient Source)** |
+| :--- |
+
+Source와 같은 UIScene을 생성 후, UISceneName을 생성된 오브젝트 이름으로 설정한다. (생성할 오브젝트의 이름 UISceneName, 생성 할 오브젝트 Source) 
 # **상속받아 사용 가능한 기능들**
 
 ## **속성**
@@ -161,7 +165,7 @@ end
 
 -- Object의 "CurBullet" 라는 Value가 변경되면 ChangeCurBullet 함수에 연결 
 
-Object:ConnectChangeEventFunction("CurBullet", ChangeCurBullet)   
+Object:ConnectChangeEventFunction("CurBullet", LuaScriptFunction ChangeCurBullet)   
 
 ``` 
 | **AddTimeEvent(String EventName, float Time, LuaScriptFunction EventFuunction)** |
@@ -222,6 +226,10 @@ Object:ConnectChangeEventFunction("CurBullet", ChangeCurBullet)
 | :--- |
 
 이름으로 형제 객체를 얻을 수 있어요. (찾고싶은 형제 객체 이름) 
+| **List<RScriptObject> GetChildList()** |
+| :--- |
+
+자식 객체의 리스트를 얻을 수 있어요. 
 | **bool IsCharacter()** |
 | :--- |
 
@@ -274,6 +282,14 @@ Collider인지 확인할 수 있어요.
 | :--- |
 
 Widget인지 확인할 수 있어요. 
+| **bool IsCamera()** |
+| :--- |
+
+Widget인지 확인할 수 있어요. 
+| **bool IsValid()** |
+| :--- |
+
+해당 오브젝트가 유효한지 확인 할 수있어요. 
 | **AddReplicateValue(string ValueName, Vector Data, ReplicateType Type, float Time, bool bSaveToStorage)** |
 | :--- |
 

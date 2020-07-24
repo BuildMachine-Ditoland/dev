@@ -7,6 +7,7 @@
 ### [**ModeAnimStateType**](ModeAnimStateType.md)
 ### [**ObjectSelectType**](ObjectSelectType.md)
 ### [**PointSpawnType**](PointSpawnType.md)
+### [**ProjectionType**](ProjectionType.md)
 ### [**ReplicateType**](ReplicateType.md)
 ### [**SimulatePhysicsType**](SimulatePhysicsType.md)
 ### [**SpawnType**](SpawnType.md)

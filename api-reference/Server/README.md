@@ -1,6 +1,7 @@
 # Server
 ### [**Character**](Character.md)
 ### [**CharacterSetting**](CharacterSetting.md)
+### [**Collider**](Collider.md)
 ### [**Environment**](Environment.md)
 ### [**FX**](FX.md)
 ### [**Game**](Game.md)
@@ -18,6 +19,5 @@
 ### [**SpawnPointGroup**](SpawnPointGroup.md)
 ### [**StaticMesh**](StaticMesh.md)
 ### [**Team**](Team.md)
-### [**UI**](UI.md)
 ### [**UIScene**](UIScene.md)
 ### [**Widget**](Widget.md)
