@@ -1,4 +1,0 @@
-# **RModeObjectScreenUI**
-
-| **월드 트리에서 Screen UI에 설정된 UI페이지이며, 설정되어 있는 위젯 객체를 제어하는 객체** |
-| :--- |

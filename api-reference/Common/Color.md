@@ -1,49 +1,36 @@
-# **Color**
-
+
+Color 객체에요. 
 ## **생성자**
 
 | **Color.new()** |
 | :--- |
-| **Color를 생성한다.** |
-
-| **Color.new(number A, number R, number G, number B)** |
+
+Color를 생성해요 
+| **Color.new(number R, number G, number B, number A)** |
 | :--- |
-| **Color를 A, R, G B 값으로 세팅하여 생성한다.** |
-
+
+Color를 R, G, B, A 값으로 세팅하여 생성해요 
 ## **속성**
 
-| **number Color.A** |
+| **number R** |
 | :--- |
-| **투명도 0~255** |
-
-| **number Color.R** |
+
+빨간 색을 나타내요. (0 ~ 255) 
+| **number G** |
 | :--- |
-| **빨간 색 0~255** |
-
-| **number Color.G** |
+
+초록 색을 나타내요. (0 ~ 255) 
+| **number B** |
 | :--- |
-| **초록 색 0~255** |
-
-| **number Color.B** |
+
+파란 색을 나타내요. (0 ~ 255) 
+| **number A** |
 | :--- |
-| **파란 색 0~255** |
-
-## **연산자**
-
-| **Color Color + Color** |
-| :--- |
-| **두 칼라 값을 더해서 그 값을 리턴한다.** |
-
-| **Color Color - Color** |
-| :--- |
-| **두 칼라 값을 빼서 그 값을 리턴한다.** |
-
-| **Color Color * Color** |
-| :--- |
-| **두 칼라 값을 곱해서 그 값을 리턴한다.** |
-
-| **예제** |
-| :--- |
+
+투명도를 나타내요. (0 ~ 255) 
+
+샘플 
+
 ```lua
 color = Color.new(255, 0, 0, 255)
 
