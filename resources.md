@@ -6,11 +6,11 @@
 1-1. 스튜디오의 오른쪽 하단에 위치한 툴박스를 찾아 검색필터 기능을 사용합니다.
 
 
-![](.gitbook/assets/1-1.png)
+![](.gitbook/assets/resources1-1.png)
 
 1-2. 검색필터의 Tag 항목에서 Sci_Fi를 선택하고 APPLY 버튼을 누르면 GameJam Toy가 표시됩니다.
 
-![](.gitbook/assets/1-2.png)
+![](.gitbook/assets/resources1-2.png)
 
 1-3. 툴박스에서 토이를 마우스로 클릭하면, 현재 보고있는 화면에 토이가 생성됩니다.
 
