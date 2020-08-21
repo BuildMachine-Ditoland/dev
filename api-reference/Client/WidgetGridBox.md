@@ -1,37 +1,17 @@
 
-캐릭터가 사용하는 카메라의 데이터를 설정하는 객체에요. 
-
-[Game:AddCameraSetting](https://ditoland-utplus.gitbook.io/ditoland/api-reference/client/game)로 생성해서 사용할 수 있어요. 
+클라이언트에서 사용되는 Widget GridBox 객체. 
+## **속성**
+
 ## **함수**
 
-| **SetDistance(float distance)** |
+| **SetBackgroundColor(Number Count)** |
 | :--- |
 
-카메라와 캐릭터 사이의 직선 길이를 설정해요. (설정할 길이 값) 
-| **IsRotationFix(bool bOn)** |
+GridBox의 행 개수를 설정 할 수 있어요. (Number Count) 
+| **SetRow(Number Count)** |
 | :--- |
 
-카메라 이동 시 캐릭터도 같이 회전가능한지를 설정해요. (true : 카메라만 회전, false: 카메라랑 캐릭터 같이 회전 해요.) 
-| **FieldOfView(float value)** |
-| :--- |
-
-Field Of View의 각도를 설정해요. (설정할 각도 값) 
-| **TargetOffset(FVector offset)** |
-| :--- |
-
-카메라의 타겟에 대한 Offset Vector를 설정해요. (설정할 Vector 값) 
-| **UsePawnControlRotation(bool bUse)** |
-| :--- |
-
-폰의 회전값을 사용할것인지에 대한 함수에요. (회전값 사용 여부) 
-| **SetCameraPitch(float value)** |
-| :--- |
-
-카메라의 Pitch(Rotation Y) 값을 설정해요 (설정할 Pitch 값) 
-| **SetCameraLag(bool bOn, float speed, float MaxDistance)** |
-| :--- |
-
-카메라의 Lag 기능을 적용할것인지에 대한 함수에요. (Lag기능 적용 여부, 속도, 최대거리) 
+GridBox의 열 개수를 설정 할 수 있어요. (Number Count) 
 # **상속받아 사용 가능한 기능들**
 
 ## **속성**
@@ -61,7 +41,7 @@ end
 
 -- Object의 "CurBullet" 라는 Value가 변경되면 ChangeCurBullet 함수에 연결 
 
-Object:ConnectChangeEventFunction("CurBullet", ChangeCurBullet)   
+Object:ConnectChangeEventFunction("CurBullet", LuaScriptFunction ChangeCurBullet)   
 
 ``` 
 ## **함수**
@@ -82,6 +62,10 @@ Object:ConnectChangeEventFunction("CurBullet", ChangeCurBullet)
 | :--- |
 
 이름으로 형제 객체를 얻을 수 있어요. (찾고싶은 형제 객체 이름) 
+| **List<RScriptObject> GetChildList()** |
+| :--- |
+
+자식 객체의 리스트를 얻을 수 있어요. 
 | **bool IsCharacter()** |
 | :--- |
 
@@ -134,6 +118,14 @@ Collider인지 확인할 수 있어요.
 | :--- |
 
 Widget인지 확인할 수 있어요. 
+| **bool IsCamera()** |
+| :--- |
+
+Widget인지 확인할 수 있어요. 
+| **bool IsValid()** |
+| :--- |
+
+해당 오브젝트가 유효한지 확인 할 수있어요. 
 | **AddReplicateValue(string ValueName, Vector Data, ReplicateType Type, float Time, bool bSaveToStorage)** |
 | :--- |
 

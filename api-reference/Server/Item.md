@@ -74,10 +74,18 @@ Object:ConnectChangeEventFunction("CurBullet", LuaScriptFunction ChangeCurBullet
 ``` 
 ## **함수**
 
-| **GetItemCount()** |
+| **float GetItemCount()** |
 | :--- |
 
 아이템의 개수를 얻을 수 있어요. 
+| **float GetActionCoolTime()** |
+| :--- |
+
+아이템의 액션 시간을 얻을 수 있어요. 
+| **void SetActionCoolTime(float Time)** |
+| :--- |
+
+아이템의 액션 시간을 설정할 수 있어요. (설정하고 싶은 시간) 
 | **RResourceID GetIconImg()** |
 | :--- |
 

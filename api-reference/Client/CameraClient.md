@@ -42,17 +42,13 @@ Zoom의 최소 값을 얻을 수 있어요.
 | :--- |
 
 Zoom의 최대 값을 얻을 수 있어요. 
-| **bUseControlRotation** |
-| :--- |
-
-bUseControlRotation 값을 얻을 수 있어요. 
 ## **함수**
 
 | **SetLookAtTarget(FRScriptObject ScriptObject)** |
 | :--- |
 
 대상 오브젝트를 타겟으로 설정해서 바라봐요. (타겟으로 설정할 오브젝트) 
-| **MoveForward(float Value)** |
+| **ZoomInOut(float Value)** |
 | :--- |
 
 카메라의 줌을 설정할 수 있어요. (설정할 카메라 줌 크기 값) 

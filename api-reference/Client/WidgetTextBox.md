@@ -16,6 +16,10 @@
 | :--- |
 
 위젯의 텍스트를 주어진 문자열로 변경해요. (변경할 문자열) 
+| **string GetText()** |
+| :--- |
+
+위젯에 설정된 텍스트를 얻을 수 있어요. 
 | **SetTextColor(string WidgetName, Color color)** |
 | :--- |
 

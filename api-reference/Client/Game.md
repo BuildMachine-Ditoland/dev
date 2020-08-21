@@ -40,18 +40,6 @@
 | :--- |
 
 해당 NPC의 애니메이션 상태 머신 사용하게 할 수 있어요. (설정한 NPC 이름, 애니메이션 상태 머신 이름) 
-| **ChangeCameraOffsetDelta(Vector Offset, float Time)** |
-| :--- |
-
-카메라를 주어진 시간 동안 해당 값만큼 이동 시킬 수 있어요. (이동 시킬 Vector 값, 이동 시간) 
-| **ChangeCameraOffsetAbs(Vector Offset, float Time)** |
-| :--- |
-
-카메라를 주어진 시간 동안 해당 값으로 이동시켜요. (이동 할 Vector 값, 이동 시간) 
-| **RestoreCameraOffset(float Time)** |
-| :--- |
-
-카메라를 초기 Offset으로 주어진 시간 동안 이동 시켜요. (이동 시간) 
 | **ObjectFXClient CreateFX(ObjectFXClient FXObject, Vetor Location)** |
 | :--- |
 

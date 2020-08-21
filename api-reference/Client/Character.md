@@ -26,6 +26,10 @@ Game:AddAnimStateMachineSetting로 추가된 상태 머신 중 애니메이션 �
 | :--- |
 
 해당 애니메이션 상태 머신을 변경할 수 있어요. (변경하고 싶은 상태 머신 이름) 
+| **bool IsDie()** |
+| :--- |
+
+캐릭터가 죽어있는 상태인지 아닌지 얻을 수 있어요. 
 | **bool IsFly()** |
 | :--- |
 
@@ -50,10 +54,10 @@ Game:AddAnimStateMachineSetting로 추가된 상태 머신 중 애니메이션 �
 | :--- |
 
 캐릭터의 위치에 Sound를 생성할 수 있어요. (생성 하고싶은 Sound 오브젝트) 
-| **AddPlayerHUD(string UIName)** |
+| **AddPlayerHUD(string UIName, UISceen UI)** |
 | :--- |
 
-UI HUD를 붙일 수 있어요. (붙혀 질 UI 이름, 붙일 RScreenUIClient) 
+UI HUD를 붙일 수 있어요. (붙혀 질 UI 이름, 붙일 UI Sceen) 
 | **RemovePlayerHUD(string UIName)** |
 | :--- |
 

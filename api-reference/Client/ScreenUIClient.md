@@ -134,10 +134,6 @@ UI 위젯의 투명 값을 설정할 수 있어요. (설정할 값)
 | :--- |
 
 UI씬에 자식 UI씬 추가할 수 있어요. (자식이 될 UI씬 이름, 자식으로 추가할 UI씬) 
-| **AddChildUIScene(string ParentWidgetName, string ChildUISceneName, FRUIScene* Element)** |
-| :--- |
-
-UI씬에 자식 UI씬 추가할 수 있어요. (부모 UI 이름, 자식이 될 UI씬 이름, 자식으로 추가할 UI씬) 
 | **RModeUIScene GetChildUIScene(string ChildUISceneName)** |
 | :--- |
 

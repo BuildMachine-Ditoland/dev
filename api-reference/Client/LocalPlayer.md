@@ -36,6 +36,10 @@
 | :--- |
 
 캐릭터의 바라보는 상하 방향을 설정해요. (-1 밑에 ~ 1 위에 방향 값) 
+| **ZoomInOut(float Value)** |
+| :--- |
+
+카메라의 줌을 설정할 수 있어요. (설정할 카메라 줌 크기 값) 
 | **Jump()** |
 | :--- |
 
@@ -52,6 +56,10 @@
 | :--- |
 
 자신의 카메라 움직임 컨트롤 가능 여부를 결정해요. (활성, 비활성 여부) 
+| **bEnableCameraControl** |
+| :--- |
+
+bEnableCameraControl 값을 얻을 수 있어요. 
 | **SetForwardMoveType(ForwardMoveType Type)** |
 | :--- |
 
@@ -117,11 +125,11 @@ ForwardMoveType::UpDown - 상, 하로만 이동해요. (엘리베이터, 사다�
 | **class FRScriptWorldObject* SetCurrentCamera(RScriptWorldObject SourceCamera)** |
 | :--- |
 
-SourceCamera를 복사하고, 복사된 Camera로 전환 합니다. (생성 할 SourceObject) 
-| **SetViewTarget(class FRScriptWorldObject* ScriptWorldObject)** |
+SourceCamera를 복사하고, 복사된 Camera로 전환 합니다. 이전 camera는 삭제됩니다.(생성 할 SourceObject) 
+| **bool ApplyCurrentCamera(class FRScriptWorldObject* ScriptWorldObject)** |
 | :--- |
 
-ScriptWorldObject or ScriptWorldObject의 Child에 camera가 있다면 현재 camera로 전환 
+ScriptWorldObject or ScriptWorldObject의 child에 camera가 있다면 현재 camera로 전환 
 | **Vector GetControlRotation()** |
 | :--- |
 

@@ -1,49 +1,13 @@
 
-클라이언트에서 사용되는 Widget Button 객체. 
+클라이언트에서 사용되는 Widget Frame 객체. 
 ## **속성**
 
 ## **함수**
 
-| **SetText(int Value)** |
-| :--- |
-
-위젯의 텍스트를 주어진 정수로 변경해요. (변경할 정수 값) 
-| **SetText(float Value)** |
-| :--- |
-
-위젯의 텍스트를 주어진 실수로 변경해요. ( 변경할 실수 값) 
-| **SetText(string InText)** |
-| :--- |
-
-위젯의 텍스트를 주어진 문자열로 변경해요. (변경할 문자열) 
-| **string GetText()** |
-| :--- |
-
-위젯에 설정된 텍스트를 얻을 수 있어요. 
-| **SetTextColor(string WidgetName, Color color)** |
-| :--- |
-
-텍스트의 색을 설정할 수 있어요. (텍스트 색을 변경할 위젯 이름, 변경할 [Color](https://ditoland-utplus.gitbook.io/ditoland/api-reference/common/color)값) 
 | **SetBackgroundColor(Color color)** |
 | :--- |
 
 버튼 위젯의 배경 색을 설정할 수 있어요. (변경할 색) 
-| **SetButtonHoverColor(Color color)** |
-| :--- |
-
-버튼 위젯의 Hover 색을 설정할 수 있어요. (변경할 색) 
-| **SetButtonPressColor(Color color)** |
-| :--- |
-
-버튼 위젯의 Press 색을 설정할 수 있어요. (변경할 색) 
-| **OnPressEvent** |
-| :--- |
-
-버튼이 눌릴 때 호출되는 이벤트에요. 
-| **OnUpEvent** |
-| :--- |
-
-버튼이 눌렸다가 떼어질 때 호출되는 이벤트에요. 
 # **상속받아 사용 가능한 기능들**
 
 ## **속성**
