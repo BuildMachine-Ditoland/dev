@@ -1,71 +1,13 @@
 
-서버에서 사용되는 캐릭터 객체에요. 
+클라이언트에서 사용되는 Widget ScrollBox 객체. 
+## **속성**
+
 ## **함수**
 
-| **bool IsDie()** |
+| **SetOrientationType(ScrollOrientationType Type)** |
 | :--- |
 
-현재 캐릭터가 죽어있는 상태인지 알 수 있어요. 
-| **string GetPlayerName()** |
-| :--- |
-
-해당 캐릭터를 소유 하고 있는 플레이어의 이름을 얻을 수 있어요. 
-| **float GetMoveSpeed()** |
-| :--- |
-
-해당 캐릭터의 현재 이동 속도를 얻을 수 있어요. 
-| **SetMaxSpeed(float Speed)** |
-| :--- |
-
-캐릭터의 최대 이동속도를 설정할 수 있어요. (설정할 최대 이동속도 값) 
-| **SetMaxJump(float Jump)** |
-| :--- |
-
-캐릭터의 최대 점프속도를 설정할 수 있어요. (설정할 최대 점프속도 값) 
-| **SetFlyControl(float ControlRate);** |
-| :--- |
-
-공중에서 캐릭터 컨트롤 비율을 설정할 수 있어요. (설정할 비율 값) 
-| **MoveToSpawnPoint(RScriptSpawnPoint SpawnPointObjecrt, bool ResetRot)** |
-| :--- |
-
-캐릭터를 특정 스폰 위치로 이동시킬 수 있어요. (이동 할 스폰포인트 오브젝트, 방향 Rot 초기화 여부) 
-| **SetTransform(Matrix)** |
-| :--- |
-
-캐릭터의 위치, 회전을 설정할 수 있어요. (설정할 [Matrix](https://ditoland-utplus.gitbook.io/ditoland/api-reference/common/matrix)값 ) 
-| **GetTransform(Matrix)** |
-| :--- |
-
-매트릭스를 얻을 수 있어요. (설정할 [Matrix](https://ditoland-utplus.gitbook.io/ditoland/api-reference/common/matrix)값 ) 
-| **void SetLocation(Vector Location)** |
-| :--- |
-
-(Deprecated)캐릭터의 현재 위치를 설정 수 있어요. (설정할 Vector 값) 
-| **Vector GetLocation()** |
-| :--- |
-
-(Deprecated)캐릭터의 현재 위치를 얻을 수 있어요. 
-| **Vector GetForwardVector()** |
-| :--- |
-
-(Deprecated)캐릭터의 현재 바라보는 방향을 얻을 수 있어요. 
-| **void BeginDriving(number ModeObjectKey)** |
-| :--- |
-
-탈 것의 운전을 시작해요. (탈 것의 키 값) 
-| **void AttachAt(RModeObject ModeObject)** |
-| :--- |
-
-캐릭터를 지정한 오브젝트에 부착시켜요. (부착 할 오브젝트) 
-| **void Detach()** |
-| :--- |
-
-캐릭터를 오브젝트에서 떨어 뜨려요. 
-| **SetOrientRotationToMovement(bool bEnable)** |
-| :--- |
-
-캐릭터가 바라보는 방향을 이동하는 방향으로 바라 보게 설정해요. (설정 여부) 
+ScrollBox의 스크롤 타입을 설정할 수 있어요(ScrollOrientationType Type) 
 # **상속받아 사용 가능한 기능들**
 
 ## **속성**
@@ -98,14 +40,6 @@ end
 Object:ConnectChangeEventFunction("CurBullet", LuaScriptFunction ChangeCurBullet)   
 
 ``` 
-| **AddTimeEvent(String EventName, float Time, LuaScriptFunction EventFuunction)** |
-| :--- |
-
-일정 시간뒤에 연결 함수가 호출되는 이벤트를 추가해요. (추가할 이벤트 이름, 시간, 연결 함수) 
-| **DeleteTimeEvent(String EventName)** |
-| :--- |
-
-등록된 시간 이벤트를 삭제해요. (삭제할 이벤트 이름) 
 ## **함수**
 
 | **string GetName()** |

@@ -87,7 +87,7 @@ Object:ConnectChangeEventFunction("CurBullet", LuaScriptFunction ChangeCurBullet
 | **SetTransform(Matrix)** |
 | :--- |
 
-매트릭스를 설정할 수 있어요. (Matrix 값) 
+매트릭스를 설정할 수 있어요. (Matrix 값, bool 충돌 처리 여부) 
 | **Vector GetLocation()** |
 | :--- |
 
@@ -112,6 +112,14 @@ Object:ConnectChangeEventFunction("CurBullet", LuaScriptFunction ChangeCurBullet
 | :--- |
 
 (Deprecated)주어진 값으로 스케일을 설정해요. (설정할 스케일 값) 
+| **SetTag(String Tag)** |
+| :--- |
+
+객체의 tag를 설정해요. (설정할 tag) 
+| **String GetTag()** |
+| :--- |
+
+객체에 설정된 tag를 얻을 수 있어요. 
 | **SetForward(Vector Forward)** |
 | :--- |
 

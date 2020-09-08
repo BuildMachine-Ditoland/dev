@@ -11,6 +11,7 @@
 ### [**ProjectionType**](ProjectionType.md)
 ### [**ReplicateType**](ReplicateType.md)
 ### [**ScrollOrientationType**](ScrollOrientationType.md)
+### [**ScrollOrientationType**](ScrollOrientationType.md)
 ### [**SimulatePhysicsType**](SimulatePhysicsType.md)
 ### [**SpawnType**](SpawnType.md)
 ### [**TransformPlayType**](TransformPlayType.md)

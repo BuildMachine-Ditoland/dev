@@ -20,6 +20,10 @@
 | :--- |
 
 현재 게임에 참여하고 있는 플레이어의 수를 얻을 수 있어요. 
+| **vector<Player> GetAllPlayer()** |
+| :--- |
+
+모든 플레이어 얻을 수 있어요. 
 | **SendEventToServer(string EventName, Args ... )** |
 | :--- |
 
