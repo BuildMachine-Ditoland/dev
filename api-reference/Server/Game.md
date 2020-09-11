@@ -310,6 +310,10 @@ Object:ConnectChangeEventFunction("CurBullet", LuaScriptFunction ChangeCurBullet
 | :--- |
 
 오브젝트를 삭제할 수 있어요. (삭제할 오브젝트) 
+| **List<HitResult> LineTraceList(Vector Start, Vector Dir, float Distance)** |
+| :--- |
+
+설정된 시작 지점에서 원하는 방향으로 지정된 거리 만큼의 충돌 리스트들을 가져올 수 있어요. (시작 지점 Vector, 목표 지점 Vector, 거리 값) 
 | **string GetName()** |
 | :--- |
 

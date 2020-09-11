@@ -56,10 +56,10 @@
 | :--- |
 
 자신의 카메라 움직임 컨트롤 가능 여부를 결정해요. (활성, 비활성 여부) 
-| **bEnableCameraControl** |
+| **bool bEnableCameraControl** |
 | :--- |
 
-bEnableCameraControl 값을 얻을 수 있어요. 
+자신의 카메라 컨트롤 가능여부를 얻거나 세팅할 수 있어요. 
 | **SetForwardMoveType(ForwardMoveType Type)** |
 | :--- |
 

@@ -88,6 +88,10 @@ Source와 같은 UIScene을 생성한다.
 | :--- |
 
 Source와 같은 UIScene을 생성 후, UISceneName을 생성된 오브젝트 이름으로 설정한다. (생성할 오브젝트의 이름 UISceneName, 생성 할 오브젝트 Source) 
+| **Vector GetMouseHitLocation()** |
+| :--- |
+
+마우스의 2D 위치에서 월드에 충돌된 3D위치 좌표를 얻을 수 있어요. 
 # **상속받아 사용 가능한 기능들**
 
 ## **속성**
@@ -202,6 +206,10 @@ Object:ConnectChangeEventFunction("CurBullet", LuaScriptFunction ChangeCurBullet
 | :--- |
 
 오브젝트를 삭제할 수 있어요. (삭제할 오브젝트) 
+| **List<HitResult> LineTraceList(Vector Start, Vector Dir, float Distance)** |
+| :--- |
+
+설정된 시작 지점에서 원하는 방향으로 지정된 거리 만큼의 충돌 리스트들을 가져올 수 있어요. (시작 지점 Vector, 목표 지점 Vector, 거리 값) 
 | **string GetName()** |
 | :--- |
 
