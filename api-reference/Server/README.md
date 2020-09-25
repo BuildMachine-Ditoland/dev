@@ -18,6 +18,7 @@
 ### [**Spawner**](Spawner.md)
 ### [**SpawnPoint**](SpawnPoint.md)
 ### [**SpawnPointGroup**](SpawnPointGroup.md)
+### [**SpotLight**](SpotLight.md)
 ### [**StaticMesh**](StaticMesh.md)
 ### [**Team**](Team.md)
 ### [**UIScene**](UIScene.md)

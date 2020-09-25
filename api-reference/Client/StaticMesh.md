@@ -6,10 +6,30 @@
 | :--- |
 
 스테틱 메시의 색을 변경할 수 있어요. (변경할 [Color](https://ditoland-utplus.gitbook.io/ditoland/api-reference/common/color)값) 
+| **Color GetColor()** |
+| :--- |
+
+해당 스태틱 메시의 Color를 가져올 수 있어요. 
 | **SetSimulatePhysics(bool bSimulatePhysics)** |
 | :--- |
 
 물리의 적용 여부를 정할 수 있어요. (물리 적용 여부) 
+| **bool bOverrideMass** |
+| :--- |
+
+부피로 질량 자동 계산 
+| **float Mass** |
+| :--- |
+
+질량 값 
+| **float LinearDamping** |
+| :--- |
+
+선형 감쇠 값 
+| **float AngularDamping** |
+| :--- |
+
+회전 감쇠 값 
 # **상속받아 사용 가능한 기능들**
 
 ## **속성**
@@ -84,6 +104,10 @@ Object:ConnectChangeEventFunction("CurBullet", LuaScriptFunction ChangeCurBullet
 | :--- |
 
 매트릭스를 설정할 수 있어요. (Matrix 값, bool 충돌 처리 여부) 
+| **Teleport(Matrix)** |
+| :--- |
+
+매트릭스를 설정할 수 있어요. (Matrix 값) 
 | **Vector GetLocation()** |
 | :--- |
 
@@ -200,6 +224,10 @@ TransformTrack 이 적용되기 전의 최초 Transform으로 리셋시켜요.
 | :--- |
 
 오브젝트를 VehicleChassis로 변경시켜요. (변경할 [VehicleCreationInfo데이터](https://ditoland-utplus.gitbook.io/ditoland/api-reference/common/vehiclecreationinfo)) 
+| **SetName(string NewName)** |
+| :--- |
+
+오브젝트의 이름을 변경 할 수 있어요. (새로운 이름) 
 | **FRModeVehicle GetVehicle()** |
 | :--- |
 
@@ -244,6 +272,10 @@ Sound인지 확인할 수 있어요.
 | :--- |
 
 포인트 라이트인지 확인할 수 있어요. 
+| **bool IsSpotLight()** |
+| :--- |
+
+스포트 라이트인지 확인할 수 있어요. 
 | **bool IsSurfaceUI()** |
 | :--- |
 

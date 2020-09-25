@@ -44,10 +44,10 @@
 | :--- |
 
 설정된 스폰 포인트가 없을 경우 지정한 위치에 스폰되도록 해요. (스폰할 위치 Vector) 
-| **RModeCharacterSetting AddCharacterSetting(string SettingName)** |
+| **SetUsingCharacterSetting(RCharacterSetting CharacterSettingObject)** |
 | :--- |
 
-게임에서 사용 할 캐릭터 설정을 추가할 수 있어요. (추가할 이름 설정) 
+게임에서 적용 할 캐릭터 설정을 설정 할 수 있어요. (게임에 적용 할 캐릭터 설정 오브젝트) 
 | **Team AddTeam(string TeamName)** |
 | :--- |
 
@@ -124,7 +124,7 @@
 | :--- |
 
 지정한 위치에 클라이언트와 동기화 되지 않는 오브젝트를 생성할 수 있어요. (생성 할 오브젝트, 생성 위치 Vector) 
-| **ObjectSpawner AddObjectSpawner(RObjectScript RObjectScript, EObjectSelectType ObjectSelectType, float SpawnTime, int MaxCount)** |
+| **ObjectSpawner AddObjectSpawner(RObjectScript RObjectScript, EObjectSelectType ObjectSelectType, bool RandomPosition, float SpawnTime, int MaxCount)** |
 | :--- |
 
 오브젝트 스포너 생성할 수 있어요. (스폰 할 오브젝트, [Enum.ObjectSelectType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/spawntype), 스폰 시간, 최대 스폰 개수) 
@@ -354,6 +354,10 @@ Sound인지 확인할 수 있어요.
 | :--- |
 
 포인트 라이트인지 확인할 수 있어요. 
+| **bool IsSpotLight()** |
+| :--- |
+
+스포트 라이트인지 확인할 수 있어요. 
 | **bool IsSurfaceUI()** |
 | :--- |
 

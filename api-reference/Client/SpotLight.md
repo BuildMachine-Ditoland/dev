@@ -1,7 +1,31 @@
 
-서버에서 사용되는 충돌 객체에요. 
+클라이언트에서 사용되는 스포트라이트 개체에요. 
 ## **함수**
 
+| **SetEnable(bool bEnable)** |
+| :--- |
+
+설정된 스포트 라이트의 작동 여부를 설정해요. (작동 여부) 
+| **ChangeColor(Color ChangedColor)** |
+| :--- |
+
+스포트 라이트의 컬러를 변경할 수 있어요. (스포트 라인트에 적용할 원하는 [Color](https://ditoland-utplus.gitbook.io/ditoland/api-reference/common/color)값 )  
+| **ChangeIntensity(float Intensity)** |
+| :--- |
+
+스포트 라이트의 밝기 값을 변경할 수 있어요. (원하는 밝기 값) 
+| **ChangeAttenuationRadius(float radius)** |
+| :--- |
+
+스포트 라이트의 가시 영향력 범위를 변경할 수 있어요. 
+| **ChangeInnerConeAngle(float angle)** |
+| :--- |
+
+스포트 라이트의 안쪽 콘의 각도.  
+| **ChangeOuterConeAngle(float angle)** |
+| :--- |
+
+스포트 라이트의 바깥쪽 콘의 각도 
 # **상속받아 사용 가능한 기능들**
 
 ## **속성**
@@ -64,24 +88,6 @@ Object:ConnectChangeEventFunction("CurBullet", LuaScriptFunction ChangeCurBullet
 ``` 
 ## **함수**
 
-| **SetCollisionType(string usercollisiontype)** |
-| :--- |
-
-해당 오브젝트의 충돌 타입을 지정해줘요. 
-
-[Game:AddUserCollisionType](https://ditoland-utplus.gitbook.io/ditoland/api-reference/server/game)으로 추가한 타입만 가능해요 없을 시에는 기본 타입으로 지정되요 
-| **SetCharacterCollisionResponse(ECollisionResponse CollisionResponse)** |
-| :--- |
-
-캐릭터와 충돌 시 어떻게 처리 할지를 설정하는 함수에요. ( [Enum.CollisionResponse.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/collisionresponse)) 
-| **SetUserCollisionTypeResponse(string UserCollisionType, ECollisionResponse CollisionResponse)** |
-| :--- |
-
-유저타입 충돌 물체의 충돌 시 처리를 변경하는 함수에요. (변경 할 유저타입 충돌 이름, [Enum.CollisionResponse.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/collisionresponse)) 
-| **SetReplicatePriority(int priority)** |
-| :--- |
-
-서버에서 클라로 얼마나 많이 동기화 할것인지에 대한 값을 설정할 수 있어요. (우선 순위 값) 
 | **int GetModeObjectKey()** |
 | :--- |
 

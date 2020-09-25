@@ -36,10 +36,10 @@
 | :--- |
 
 설정된 애니메이션 상태머신을 얻을 수 있어요. (얻고 싶은 상태머신 이름) 
-| **SetCharacterAnimStateMachine(string CharacterSettingName, string AnimStateMachineSettingName)** |
+| **SetCharacterAnimStateMachine(RCharacterSetting CharacterSetting, RAnimStateMachineSetting AnimSetting)** |
 | :--- |
 
-해당 캐릭터의 애니메이션 상태 머신을 사용하게 할 수 있어요. (설정한 캐릭터세팅 이름, 애니메이션 상태 머신 이름) 
+해당 캐릭터 설정으로 생성되는 캐릭터의 애니메이션 상태 머신을 설정 할 수 있어요. (대상 캐릭터 설정, 사용 할 애니메이션 상태 설정) 
 | **SetNPCAnimStateMachine(string NPCSettingName, string AnimStateMachineSettingName)** |
 | :--- |
 
@@ -91,7 +91,11 @@ Source와 같은 UIScene을 생성 후, UISceneName을 생성된 오브젝트 �
 | **Vector GetMouseHitLocation()** |
 | :--- |
 
-마우스의 2D 위치에서 월드에 충돌된 3D위치 좌표를 얻을 수 있어요. 
+자신의 마우스 2D 위치에서 월드에 충돌된 3D위치 좌표를 얻을 수 있어요. 
+| **Object GetMouseHitObject()** |
+| :--- |
+
+자신의 마우스 2D 위치에서 월드에 충돌된 Object를 얻어 올 수 있어요. 
 # **상속받아 사용 가능한 기능들**
 
 ## **속성**
@@ -250,6 +254,10 @@ Sound인지 확인할 수 있어요.
 | :--- |
 
 포인트 라이트인지 확인할 수 있어요. 
+| **bool IsSpotLight()** |
+| :--- |
+
+스포트 라이트인지 확인할 수 있어요. 
 | **bool IsSurfaceUI()** |
 | :--- |
 

@@ -78,6 +78,10 @@ Object:ConnectChangeEventFunction("CurBullet", LuaScriptFunction ChangeCurBullet
 | :--- |
 
 매트릭스를 설정할 수 있어요. (Matrix 값, bool 충돌 처리 여부) 
+| **Teleport(Matrix)** |
+| :--- |
+
+매트릭스를 설정할 수 있어요. (Matrix 값) 
 | **Vector GetLocation()** |
 | :--- |
 
@@ -194,6 +198,10 @@ TransformTrack 이 적용되기 전의 최초 Transform으로 리셋시켜요.
 | :--- |
 
 오브젝트를 VehicleChassis로 변경시켜요. (변경할 [VehicleCreationInfo데이터](https://ditoland-utplus.gitbook.io/ditoland/api-reference/common/vehiclecreationinfo)) 
+| **SetName(string NewName)** |
+| :--- |
+
+오브젝트의 이름을 변경 할 수 있어요. (새로운 이름) 
 | **FRModeVehicle GetVehicle()** |
 | :--- |
 
@@ -238,6 +246,10 @@ Sound인지 확인할 수 있어요.
 | :--- |
 
 포인트 라이트인지 확인할 수 있어요. 
+| **bool IsSpotLight()** |
+| :--- |
+
+스포트 라이트인지 확인할 수 있어요. 
 | **bool IsSurfaceUI()** |
 | :--- |
 
