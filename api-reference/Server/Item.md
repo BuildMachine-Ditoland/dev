@@ -1,5 +1,11 @@
 
 서버에서 사용되는 Item 객체에요. 
+## **함수**
+
+| **SetItemCount(int count)** |
+| :--- |
+
+아이템 개수를 설정할 수 있어요. 
 # **상속받아 사용 가능한 기능들**
 
 ## **속성**
@@ -78,14 +84,18 @@ Object:ConnectChangeEventFunction("CurBullet", LuaScriptFunction ChangeCurBullet
 | :--- |
 
 아이템의 개수를 얻을 수 있어요. 
-| **float GetActionCoolTime()** |
+| **bool IsEquiped()** |
 | :--- |
 
-아이템의 액션 시간을 얻을 수 있어요. 
-| **void SetActionCoolTime(float Time)** |
+현재 아이템 장착상태인지를 확인 할 수 있어요. 
+| **float GetActionCoolTime(string ActionName)** |
 | :--- |
 
-아이템의 액션 시간을 설정할 수 있어요. (설정하고 싶은 시간) 
+아이템에 설정한 해당 액션의 쿨타임을 얻을 수 있어요. (설정할 액션 이름) 
+| **void SetActionCoolTime(string ActionName, float Time)** |
+| :--- |
+
+아이템에 설정한 해당 액션의 쿨타임을 설정할 수 있어요. (설정할 액션 이름, 설정하고 싶은 시간) 
 | **string GetEquipSlot()** |
 | :--- |
 
@@ -94,14 +104,14 @@ Object:ConnectChangeEventFunction("CurBullet", LuaScriptFunction ChangeCurBullet
 | :--- |
 
 아이템의 아이콘 이미지를 얻을 수 있어요. 
-| **AddAction(string ActionName, LuaScriptFunction Function)** |
+| **AddAction(string ActionName, float ActionCoolTime, LuaScriptFunction Function)** |
 | :--- |
 
-아이템 착용 후 액션을 추가해요. (액션 이름, 연결 함수) 
-| **AddToggleAction(string ActionName, LuaScriptFunction StartFunction, LuaScriptFunction EndFunction)** |
+아이템 착용 후 액션을 추가해요. (액션 이름, 해당 액션의 쿨타임, 연결 함수) 
+| **AddToggleAction(string ActionName, float ActionCoolTime, LuaScriptFunction StartFunction, LuaScriptFunction EndFunction)** |
 | :--- |
 
-아이템 착용 후 토글 액션을 추가해요. (액션 이름, 액션 시작 시 연결 함수, 액션 종료 시 연결 함수) 
+아이템 착용 후 토글 액션을 추가해요. (액션 이름, 액션 쿨타임, 액션 시작 시 연결 함수, 액션 종료 시 연결 함수) 
 | **SetCollisionType(string usercollisiontype)** |
 | :--- |
 
@@ -120,6 +130,18 @@ Object:ConnectChangeEventFunction("CurBullet", LuaScriptFunction ChangeCurBullet
 | :--- |
 
 서버에서 클라로 얼마나 많이 동기화 할것인지에 대한 값을 설정할 수 있어요. (우선 순위 값) 
+| **BroadcastEvent(string CustomEventName, Args ...)** |
+| :--- |
+
+모든 클라이언트에게 오브젝트 커스텀 이벤트를 보내는 함수에요. (이벤트 이름, 전달할 변수들 ...) 
+| **SendEventToClient(string PlayerName, string CustomEventName, Args ...)** |
+| :--- |
+
+해당 클라이언트에게만 오브젝트 커스텀 이벤트를 보내는 함수에요. (이벤트 보낼 플레이어 이름, 이벤트 이름, 전달할 변수들 ...) 
+| **SetEnableCollsion(bool bIsEnable)** |
+| :--- |
+
+객체의 충돌 여부를 설정할 수 있어요. (충돌 여부) 
 | **int GetModeObjectKey()** |
 | :--- |
 
@@ -131,11 +153,11 @@ Object:ConnectChangeEventFunction("CurBullet", LuaScriptFunction ChangeCurBullet
 | **SetTransform(Matrix)** |
 | :--- |
 
-매트릭스를 설정할 수 있어요. (Matrix 값, bool 충돌 처리 여부) 
+현재 매트릭스에서 설정 된 매트릭스로 보간이 되는 매트릭스를 설정할 수 있어요 설정할 수 있어요. (Matrix 값, bool 충돌 처리 여부) 
 | **Teleport(Matrix)** |
 | :--- |
 
-매트릭스를 설정할 수 있어요. (Matrix 값) 
+순간이동 하는 매트릭스를 설정할 수 있어요. (Matrix 값) 
 | **Vector GetLocation()** |
 | :--- |
 
@@ -180,6 +202,10 @@ Object:ConnectChangeEventFunction("CurBullet", LuaScriptFunction ChangeCurBullet
 | :--- |
 
 (Deprecated)객체의 오른쪽 방향을 얻을 수 있어요. 
+| **bool Enable** |
+| :--- |
+
+객체 활성화 여부 
 | **AddForce(Vector Force)** |
 | :--- |
 
@@ -260,6 +286,10 @@ TransformTrack 이 적용되기 전의 최초 Transform으로 리셋시켜요.
 | :--- |
 
 Vehicle 객체를 얻을 수 있어요. 
+| **ConnectEventFunction(string customevent, LuaScriptFunction function) ** |
+| :--- |
+
+유저가 추가한 오브젝트 커스텀 이벤트에 함수를 연결할 수 있어요. (이벤트 이름, 연결 함수) 
 | **string GetName()** |
 | :--- |
 

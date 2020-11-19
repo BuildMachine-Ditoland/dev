@@ -31,11 +31,11 @@
 | **Turn(float Value)** |
 | :--- |
 
-캐릭터의 바라보는 좌우 방향을 설정해요. (-1 좌측 ~ 1 우측 방향 값) 
+캐릭터의 바라보는 좌우 방향을 설정해요. (-1 : 좌측, 1 : 우측 방향 값) 
 | **LookUp(float Value)** |
 | :--- |
 
-캐릭터의 바라보는 상하 방향을 설정해요. (-1 밑에 ~ 1 위에 방향 값) 
+캐릭터의 바라보는 상하 방향을 설정해요. (-1 : 밑,1 : 위에 방향 값) 
 | **ZoomInOut(float Value)** |
 | :--- |
 
@@ -44,6 +44,14 @@
 | :--- |
 
 점프동작을 실행해요. 
+| **Sit()** |
+| :--- |
+
+캐릭터의 앉기 상태 여부를 설정해요. 
+| **UnSit()** |
+| :--- |
+
+캐릭터의 앉기 상태 여부를 풀어요. 
 | **JumpRelease()** |
 | :--- |
 
@@ -98,14 +106,18 @@ ForwardMoveType::UpDown - 상, 하로만 이동해요. (엘리베이터, 사다�
 | :--- |
 
 인벤토리의 사이즈를 얻을 수 있어요. 
-| **UseInventoryItem(int IventoryIndex)** |
+| **UseInventoryItem(int InventoryIndex)** |
 | :--- |
 
 지정된 칸의 인벤토리 아이템을 사용해요. (사용할 아이템칸) 
-| **EquipInventoryItem(int IventoryIndex)** |
+| **EquipInventoryItem(int InventoryIndex)** |
 | :--- |
 
 지정된 칸의 인벤토리 아이템을 착용해요. (착용할 아이템칸) 
+| **UnEquipInventoryItem(int InventoryIndex)** |
+| :--- |
+
+지정된 칸의 인벤토리 아이템의 착용을 해제해요. (해제 할 아이템칸) 
 | **UnEquipItem(string EquipSlotName)** |
 | :--- |
 

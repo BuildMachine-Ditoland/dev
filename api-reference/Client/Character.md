@@ -26,6 +26,10 @@ Game:AddAnimStateMachineSetting로 추가된 상태 머신 중 애니메이션 �
 | :--- |
 
 해당하는 애니메이션의 상태로 변경할 수 있어요. (변경하고 싶은 애니메이션 상태 이름) 
+| **ChangeAnimState(string AnimState, float BlendTime)** |
+| :--- |
+
+해당하는 애니메이션의 상태로 변경할 수 있어요. (변경하고 싶은 애니메이션 상태 이름, 블렌딩 시간) 
 | **ChangeAnimStateMachine(string ChangeStateMacnine)** |
 | :--- |
 
@@ -38,6 +42,10 @@ Game:AddAnimStateMachineSetting로 추가된 상태 머신 중 애니메이션 �
 | :--- |
 
 캐릭터가 공중에 떠 있는지 아닌지 얻을 수 있어요. 
+| **bool IsSit()** |
+| :--- |
+
+캐릭터의 앉기 상태 여부를 얻을 수 있어요. 
 | **bool IsDriving()** |
 | :--- |
 
@@ -50,10 +58,6 @@ Game:AddAnimStateMachineSetting로 추가된 상태 머신 중 애니메이션 �
 | :--- |
 
 캐릭터 특정 위치에 FX를 생성할 수 있어요. (생성 하고싶은 FX 오브젝트, [Enum.BoneType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/bone)) 
-| **ObjectFXClient CreateFX(String FXName, Bone BoneType)** |
-| :--- |
-
-캐릭터 특정 위치에 FX를 생성할 수 있어요. (생성 하고싶은 FX 이름, [Enum.BoneType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/bone)) 
 | **ObjectSoundClient CreateSound(ObjectSoundClient SoundObject)** |
 | :--- |
 
@@ -66,6 +70,10 @@ UI HUD를 붙일 수 있어요. (붙혀 질 UI 이름, 붙일 UI Sceen)
 | :--- |
 
 UI HUD를 제거해요. (제거하고 싶은 UI 이름) 
+| **RemovePlayerAllHUD()** |
+| :--- |
+
+현재 캐릭터의 모든 UI HUD를 제거해요. 
 | **GetPlayerHUD(string UIName)** |
 | :--- |
 
@@ -90,6 +98,26 @@ UI HUD를 얻을 수 있어요. (얻고싶은 UI 이름)
 | :--- |
 
 (Deprecated)현재 캐릭터의 바라보는 방향을 수 있어요. 
+| **void AttachAt(RModeObject ModeObject, BoneType Bone)** |
+| :--- |
+
+캐릭터의 원하는 본을 해당 오브젝트의 중점에 부착시켜요. (부착 할 오브젝트, [Enum.Bone.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/bone)) 
+| **void AttachAtTop(RModeObject ModeObject, BoneType Bone)** |
+| :--- |
+
+캐릭터의 원하는 본을 해당 오브젝트의 윗면에 부착시켜요. (부착 할 오브젝트, [Enum.Bone.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/bone)) 
+| **PlayAnimWithExpression(FString InAnimState, FString InFaceTypeName, float InFaceTime, bool InFaceLoop);** |
+| :--- |
+
+해당하는 애니메이션의 상태와 표정으로 변경할 수 있어요(상태가 변경되면 표정도 재생을 중지해요). 
+| **SetCharacterFaceExpression(FString InFaceTypeName, float InTime);** |
+| :--- |
+
+캐릭터의 표정을 재생해요. 
+| **StopCharacterFaceExpression()** |
+| :--- |
+
+캐릭터의 표정 재생을 취소해요. 
 # **상속받아 사용 가능한 기능들**
 
 ## **속성**

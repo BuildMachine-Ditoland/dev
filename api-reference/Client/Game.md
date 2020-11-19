@@ -48,10 +48,6 @@
 | :--- |
 
 FX를 생성할 수 있어요. (생성 할 FX 오브젝트, 생성할 위치) 
-| **ObjectFXClient CreateFX(String FXName, Vetor Location)** |
-| :--- |
-
-FX를 생성할 수 있어요. (생성 할 FX 이름, 생성할 위치) 
 | **DeleteFX(ObjectFXClient Object)** |
 | :--- |
 
@@ -60,22 +56,8 @@ FX를 제거시켜요. (제거할 FX 오브젝트)
 | :--- |
 
 사운드를 플레이해요. (플레이 할 Sound 오브젝트, 플레이 할 위치 Vector) 
-| **ObjectSoundClient PlaySound(String SoundObjectName)** |
-| :--- |
 
-사운드를 플레이해요. (플레이 할 Sound 이름) 
-| **ObjectSoundClient PlaySound(String SoundObjectName, Vector Location)** |
-| :--- |
-
-사운드를 플레이해요. (플레이 할 Sound 이름, 플레이 할 위치 Vector) 
-| **StopSound(String SoundName)** |
-| :--- |
-
-플레이 중인 사운드를 정지시켜요. (정지할 Sound 이름) 
-| **CreateObject(string ObjectName, Vector Location)** |
-| :--- |
-
-지정된 위치에 오브젝트를 생성 시켜요. (생성 할 Object 이름, 생성 할 위치 Vector) 
+플레이 중인 사운드를 정지시켜요. (정지할 Sound) 
 | **CreateObject(RScriptWorldObject Object, Vector Location)** |
 | :--- |
 
@@ -210,6 +192,8 @@ Object:ConnectChangeEventFunction("CurBullet", LuaScriptFunction ChangeCurBullet
 | :--- |
 
 오브젝트를 삭제할 수 있어요. (삭제할 오브젝트) 
+
+서버에서 사용하면 서버와 클라 오브젝트 모두 삭제되고 클라에서 사용하면 클라 오브젝트만 삭제해요 
 | **List<HitResult> LineTraceList(Vector Start, Vector Dir, float Distance)** |
 | :--- |
 
