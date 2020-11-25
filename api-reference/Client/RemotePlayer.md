@@ -12,10 +12,6 @@
 | :--- |
 
 캐릭터의 특정 위치에 FX를 생성할 수 있어요. (생성 할 FX 오브젝트, [Enum.Bone.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/bone)) 
-| **ObjectFXClient CreateFX(String FXName, Bone BoneType)** |
-| :--- |
-
-캐릭터의 특정 위치에 FX를 생성할 수 있어요. (생성 할 FX 이름, [Enum.Bone.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/bone)) 
 | **ObjectSoundClient CreateSound(ObjectSoundClient SoundObject)** |
 | :--- |
 
@@ -28,6 +24,10 @@
 | :--- |
 
 플레이어 자신의 플레이어인지 확인할 수 있어요. 
+| **Item GetEquipItem(string EquipSlot)** |
+| :--- |
+
+해당 플레이어 캐릭터가 착용중인 아이템을 얻을 수 있어요. (장착 중인 아이템 슬롯) 
 # **상속받아 사용 가능한 기능들**
 
 ## **속성**
@@ -110,6 +110,10 @@ Sound인지 확인할 수 있어요.
 | :--- |
 
 포인트 라이트인지 확인할 수 있어요. 
+| **bool IsSpotLight()** |
+| :--- |
+
+스포트 라이트인지 확인할 수 있어요. 
 | **bool IsSurfaceUI()** |
 | :--- |
 

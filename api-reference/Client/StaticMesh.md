@@ -2,14 +2,34 @@
 클라이언트에서 사용되는 StaticMesh 개체에요. 
 ## **함수**
 
-| **ChangeColor(Color ChangeColor)** |
+| **SetColor(Color ChangeColor)** |
 | :--- |
 
 스테틱 메시의 색을 변경할 수 있어요. (변경할 [Color](https://ditoland-utplus.gitbook.io/ditoland/api-reference/common/color)값) 
+| **Color GetColor()** |
+| :--- |
+
+해당 스태틱 메시의 Color를 가져올 수 있어요. 
 | **SetSimulatePhysics(bool bSimulatePhysics)** |
 | :--- |
 
 물리의 적용 여부를 정할 수 있어요. (물리 적용 여부) 
+| **bool bOverrideMass** |
+| :--- |
+
+부피로 질량 자동 계산 
+| **float Mass** |
+| :--- |
+
+질량 값 
+| **float LinearDamping** |
+| :--- |
+
+선형 감쇠 값 
+| **float AngularDamping** |
+| :--- |
+
+회전 감쇠 값 
 # **상속받아 사용 가능한 기능들**
 
 ## **속성**
@@ -83,7 +103,11 @@ Object:ConnectChangeEventFunction("CurBullet", LuaScriptFunction ChangeCurBullet
 | **SetTransform(Matrix)** |
 | :--- |
 
-매트릭스를 설정할 수 있어요. (Matrix 값) 
+현재 매트릭스에서 설정 된 매트릭스로 보간이 되는 매트릭스를 설정할 수 있어요 설정할 수 있어요. (Matrix 값, bool 충돌 처리 여부) 
+| **Teleport(Matrix)** |
+| :--- |
+
+순간이동 하는 매트릭스를 설정할 수 있어요. (Matrix 값) 
 | **Vector GetLocation()** |
 | :--- |
 
@@ -108,6 +132,14 @@ Object:ConnectChangeEventFunction("CurBullet", LuaScriptFunction ChangeCurBullet
 | :--- |
 
 (Deprecated)주어진 값으로 스케일을 설정해요. (설정할 스케일 값) 
+| **SetTag(String Tag)** |
+| :--- |
+
+객체의 tag를 설정해요. (설정할 tag) 
+| **String GetTag()** |
+| :--- |
+
+객체에 설정된 tag를 얻을 수 있어요. 
 | **SetForward(Vector Forward)** |
 | :--- |
 
@@ -120,6 +152,10 @@ Object:ConnectChangeEventFunction("CurBullet", LuaScriptFunction ChangeCurBullet
 | :--- |
 
 (Deprecated)객체의 오른쪽 방향을 얻을 수 있어요. 
+| **bool Enable** |
+| :--- |
+
+객체 활성화 여부 
 | **AddForce(Vector Force)** |
 | :--- |
 
@@ -192,10 +228,18 @@ TransformTrack 이 적용되기 전의 최초 Transform으로 리셋시켜요.
 | :--- |
 
 오브젝트를 VehicleChassis로 변경시켜요. (변경할 [VehicleCreationInfo데이터](https://ditoland-utplus.gitbook.io/ditoland/api-reference/common/vehiclecreationinfo)) 
+| **SetName(string NewName)** |
+| :--- |
+
+오브젝트의 이름을 변경 할 수 있어요. (새로운 이름) 
 | **FRModeVehicle GetVehicle()** |
 | :--- |
 
 Vehicle 객체를 얻을 수 있어요. 
+| **ConnectEventFunction(string customevent, LuaScriptFunction function) ** |
+| :--- |
+
+유저가 추가한 오브젝트 커스텀 이벤트에 함수를 연결할 수 있어요. (이벤트 이름, 연결 함수) 
 | **string GetName()** |
 | :--- |
 
@@ -236,6 +280,10 @@ Sound인지 확인할 수 있어요.
 | :--- |
 
 포인트 라이트인지 확인할 수 있어요. 
+| **bool IsSpotLight()** |
+| :--- |
+
+스포트 라이트인지 확인할 수 있어요. 
 | **bool IsSurfaceUI()** |
 | :--- |
 

@@ -10,10 +10,10 @@
 팀의 최대 인원을 설정할 수 있어요. 
 ## **함수**
 
-| **AddUsingCharacter(string CharacterSetting)** |
+| **AddUsingCharacter(RCharacterSetting CharacterSettingObject)** |
 | :--- |
 
-팀에서 사용될 캐릭터 설정을 추가할 수 있어요. (캐릭터세팅 이름) 
+팀에서 사용될 캐릭터 설정을 추가할 수 있어요. (캐릭터 설정 오브젝트) 
 
 [Game:AddCharacterSetting](https://ditoland-utplus.gitbook.io/ditoland/api-reference/server/game)으로 추가한 캐릭터설정 중에서만 가능해요 
 | **SetUsingSpawnPointGroup(string InSpawnPointGroup)** |
@@ -22,10 +22,10 @@
 팀에서 사용될 스폰 포인트 그룹을 추가할 수 있어요. (스폰 그룹 이름) 
 
 Game:AddSpawnPointGroup으로 추가한 스폰 그룹 중에서만 가능해요 
-| **AddFixedCharacter(string CharacterSetting)** |
+| **AddFixedCharacter(RCharacterSetting CharacterSettingObject)** |
 | :--- |
 
-팀 고정 캐릭터설정을 추가할 수 있어요. (캐릭터 세팅 이름) 
+팀 고정 캐릭터설정을 추가할 수 있어요. (캐릭터 설정 오브젝트) 
 
 [Game:AddCharacterSetting](https://ditoland-utplus.gitbook.io/ditoland/api-reference/server/game)으로 추가한 캐릭터설정 중에서만 가능해요 
 | **AddFixedSpawnPoint(RSpawnPoint* SpawnPoint)** |
@@ -112,6 +112,10 @@ Sound인지 확인할 수 있어요.
 | :--- |
 
 포인트 라이트인지 확인할 수 있어요. 
+| **bool IsSpotLight()** |
+| :--- |
+
+스포트 라이트인지 확인할 수 있어요. 
 | **bool IsSurfaceUI()** |
 | :--- |
 

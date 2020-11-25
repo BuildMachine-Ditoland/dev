@@ -134,10 +134,6 @@ UI 위젯의 투명 값을 설정할 수 있어요. (설정할 값)
 | :--- |
 
 UI씬에 자식 UI씬 추가할 수 있어요. (자식이 될 UI씬 이름, 자식으로 추가할 UI씬) 
-| **AddChildUIScene(string ParentWidgetName, string ChildUISceneName, FRUIScene* Element)** |
-| :--- |
-
-UI씬에 자식 UI씬 추가할 수 있어요. (부모 UI 이름, 자식이 될 UI씬 이름, 자식으로 추가할 UI씬) 
 | **RModeUIScene GetChildUIScene(string ChildUISceneName)** |
 | :--- |
 
@@ -206,6 +202,10 @@ Frame 위젯이 보이는지를 확인할 수 있어요. (판단할 Frame위젯 
 | :--- |
 
 TransformTrack 이 적용되기 전의 최초 Transform으로 리셋 시켜요. 
+| **SendEventToServer(string EventName, Args ... )** |
+| :--- |
+
+서버에 오브젝트 커스텀이벤트를 보내는 함수에요. (이벤트 이름, 전달하고 싶은 변수들 ...) 
 | **int GetModeObjectKey()** |
 | :--- |
 
@@ -217,7 +217,11 @@ TransformTrack 이 적용되기 전의 최초 Transform으로 리셋 시켜요.
 | **SetTransform(Matrix)** |
 | :--- |
 
-매트릭스를 설정할 수 있어요. (Matrix 값) 
+현재 매트릭스에서 설정 된 매트릭스로 보간이 되는 매트릭스를 설정할 수 있어요 설정할 수 있어요. (Matrix 값, bool 충돌 처리 여부) 
+| **Teleport(Matrix)** |
+| :--- |
+
+순간이동 하는 매트릭스를 설정할 수 있어요. (Matrix 값) 
 | **Vector GetLocation()** |
 | :--- |
 
@@ -242,6 +246,14 @@ TransformTrack 이 적용되기 전의 최초 Transform으로 리셋 시켜요.
 | :--- |
 
 (Deprecated)주어진 값으로 스케일을 설정해요. (설정할 스케일 값) 
+| **SetTag(String Tag)** |
+| :--- |
+
+객체의 tag를 설정해요. (설정할 tag) 
+| **String GetTag()** |
+| :--- |
+
+객체에 설정된 tag를 얻을 수 있어요. 
 | **SetForward(Vector Forward)** |
 | :--- |
 
@@ -254,6 +266,10 @@ TransformTrack 이 적용되기 전의 최초 Transform으로 리셋 시켜요.
 | :--- |
 
 (Deprecated)객체의 오른쪽 방향을 얻을 수 있어요. 
+| **bool Enable** |
+| :--- |
+
+객체 활성화 여부 
 | **AddForce(Vector Force)** |
 | :--- |
 
@@ -326,10 +342,18 @@ TransformTrack 이 적용되기 전의 최초 Transform으로 리셋시켜요.
 | :--- |
 
 오브젝트를 VehicleChassis로 변경시켜요. (변경할 [VehicleCreationInfo데이터](https://ditoland-utplus.gitbook.io/ditoland/api-reference/common/vehiclecreationinfo)) 
+| **SetName(string NewName)** |
+| :--- |
+
+오브젝트의 이름을 변경 할 수 있어요. (새로운 이름) 
 | **FRModeVehicle GetVehicle()** |
 | :--- |
 
 Vehicle 객체를 얻을 수 있어요. 
+| **ConnectEventFunction(string customevent, LuaScriptFunction function) ** |
+| :--- |
+
+유저가 추가한 오브젝트 커스텀 이벤트에 함수를 연결할 수 있어요. (이벤트 이름, 연결 함수) 
 | **string GetName()** |
 | :--- |
 
@@ -370,6 +394,10 @@ Sound인지 확인할 수 있어요.
 | :--- |
 
 포인트 라이트인지 확인할 수 있어요. 
+| **bool IsSpotLight()** |
+| :--- |
+
+스포트 라이트인지 확인할 수 있어요. 
 | **bool IsSurfaceUI()** |
 | :--- |
 

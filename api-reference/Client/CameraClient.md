@@ -42,17 +42,13 @@ Zoom의 최소 값을 얻을 수 있어요.
 | :--- |
 
 Zoom의 최대 값을 얻을 수 있어요. 
-| **bUseControlRotation** |
-| :--- |
-
-bUseControlRotation 값을 얻을 수 있어요. 
 ## **함수**
 
 | **SetLookAtTarget(FRScriptObject ScriptObject)** |
 | :--- |
 
 대상 오브젝트를 타겟으로 설정해서 바라봐요. (타겟으로 설정할 오브젝트) 
-| **MoveForward(float Value)** |
+| **ZoomInOut(float Value)** |
 | :--- |
 
 카메라의 줌을 설정할 수 있어요. (설정할 카메라 줌 크기 값) 
@@ -129,7 +125,11 @@ Object:ConnectChangeEventFunction("CurBullet", LuaScriptFunction ChangeCurBullet
 | **SetTransform(Matrix)** |
 | :--- |
 
-매트릭스를 설정할 수 있어요. (Matrix 값) 
+현재 매트릭스에서 설정 된 매트릭스로 보간이 되는 매트릭스를 설정할 수 있어요 설정할 수 있어요. (Matrix 값, bool 충돌 처리 여부) 
+| **Teleport(Matrix)** |
+| :--- |
+
+순간이동 하는 매트릭스를 설정할 수 있어요. (Matrix 값) 
 | **Vector GetLocation()** |
 | :--- |
 
@@ -154,6 +154,14 @@ Object:ConnectChangeEventFunction("CurBullet", LuaScriptFunction ChangeCurBullet
 | :--- |
 
 (Deprecated)주어진 값으로 스케일을 설정해요. (설정할 스케일 값) 
+| **SetTag(String Tag)** |
+| :--- |
+
+객체의 tag를 설정해요. (설정할 tag) 
+| **String GetTag()** |
+| :--- |
+
+객체에 설정된 tag를 얻을 수 있어요. 
 | **SetForward(Vector Forward)** |
 | :--- |
 
@@ -166,6 +174,10 @@ Object:ConnectChangeEventFunction("CurBullet", LuaScriptFunction ChangeCurBullet
 | :--- |
 
 (Deprecated)객체의 오른쪽 방향을 얻을 수 있어요. 
+| **bool Enable** |
+| :--- |
+
+객체 활성화 여부 
 | **AddForce(Vector Force)** |
 | :--- |
 
@@ -238,10 +250,18 @@ TransformTrack 이 적용되기 전의 최초 Transform으로 리셋시켜요.
 | :--- |
 
 오브젝트를 VehicleChassis로 변경시켜요. (변경할 [VehicleCreationInfo데이터](https://ditoland-utplus.gitbook.io/ditoland/api-reference/common/vehiclecreationinfo)) 
+| **SetName(string NewName)** |
+| :--- |
+
+오브젝트의 이름을 변경 할 수 있어요. (새로운 이름) 
 | **FRModeVehicle GetVehicle()** |
 | :--- |
 
 Vehicle 객체를 얻을 수 있어요. 
+| **ConnectEventFunction(string customevent, LuaScriptFunction function) ** |
+| :--- |
+
+유저가 추가한 오브젝트 커스텀 이벤트에 함수를 연결할 수 있어요. (이벤트 이름, 연결 함수) 
 | **string GetName()** |
 | :--- |
 
@@ -282,6 +302,10 @@ Sound인지 확인할 수 있어요.
 | :--- |
 
 포인트 라이트인지 확인할 수 있어요. 
+| **bool IsSpotLight()** |
+| :--- |
+
+스포트 라이트인지 확인할 수 있어요. 
 | **bool IsSurfaceUI()** |
 | :--- |
 

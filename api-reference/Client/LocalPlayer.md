@@ -31,15 +31,27 @@
 | **Turn(float Value)** |
 | :--- |
 
-캐릭터의 바라보는 좌우 방향을 설정해요. (-1 좌측 ~ 1 우측 방향 값) 
+캐릭터의 바라보는 좌우 방향을 설정해요. (-1 : 좌측, 1 : 우측 방향 값) 
 | **LookUp(float Value)** |
 | :--- |
 
-캐릭터의 바라보는 상하 방향을 설정해요. (-1 밑에 ~ 1 위에 방향 값) 
+캐릭터의 바라보는 상하 방향을 설정해요. (-1 : 밑,1 : 위에 방향 값) 
+| **ZoomInOut(float Value)** |
+| :--- |
+
+카메라의 줌을 설정할 수 있어요. (설정할 카메라 줌 크기 값) 
 | **Jump()** |
 | :--- |
 
 점프동작을 실행해요. 
+| **Sit()** |
+| :--- |
+
+캐릭터의 앉기 상태 여부를 설정해요. 
+| **UnSit()** |
+| :--- |
+
+캐릭터의 앉기 상태 여부를 풀어요. 
 | **JumpRelease()** |
 | :--- |
 
@@ -52,6 +64,10 @@
 | :--- |
 
 자신의 카메라 움직임 컨트롤 가능 여부를 결정해요. (활성, 비활성 여부) 
+| **bool bEnableCameraControl** |
+| :--- |
+
+자신의 카메라 컨트롤 가능여부를 얻거나 세팅할 수 있어요. 
 | **SetForwardMoveType(ForwardMoveType Type)** |
 | :--- |
 
@@ -90,14 +106,18 @@ ForwardMoveType::UpDown - 상, 하로만 이동해요. (엘리베이터, 사다�
 | :--- |
 
 인벤토리의 사이즈를 얻을 수 있어요. 
-| **UseInventoryItem(int IventoryIndex)** |
+| **UseInventoryItem(int InventoryIndex)** |
 | :--- |
 
 지정된 칸의 인벤토리 아이템을 사용해요. (사용할 아이템칸) 
-| **EquipInventoryItem(int IventoryIndex)** |
+| **EquipInventoryItem(int InventoryIndex)** |
 | :--- |
 
 지정된 칸의 인벤토리 아이템을 착용해요. (착용할 아이템칸) 
+| **UnEquipInventoryItem(int InventoryIndex)** |
+| :--- |
+
+지정된 칸의 인벤토리 아이템의 착용을 해제해요. (해제 할 아이템칸) 
 | **UnEquipItem(string EquipSlotName)** |
 | :--- |
 
@@ -117,11 +137,11 @@ ForwardMoveType::UpDown - 상, 하로만 이동해요. (엘리베이터, 사다�
 | **class FRScriptWorldObject* SetCurrentCamera(RScriptWorldObject SourceCamera)** |
 | :--- |
 
-SourceCamera를 복사하고, 복사된 Camera로 전환 합니다. (생성 할 SourceObject) 
-| **SetViewTarget(class FRScriptWorldObject* ScriptWorldObject)** |
+SourceCamera를 복사하고, 복사된 Camera로 전환 합니다. 이전 camera는 삭제됩니다.(생성 할 SourceObject) 
+| **bool ApplyCurrentCamera(class FRScriptWorldObject* ScriptWorldObject)** |
 | :--- |
 
-ScriptWorldObject or ScriptWorldObject의 Child에 camera가 있다면 현재 camera로 전환 
+ScriptWorldObject or ScriptWorldObject의 child에 camera가 있다면 현재 camera로 전환 
 | **Vector GetControlRotation()** |
 | :--- |
 
@@ -220,6 +240,10 @@ Sound인지 확인할 수 있어요.
 | :--- |
 
 포인트 라이트인지 확인할 수 있어요. 
+| **bool IsSpotLight()** |
+| :--- |
+
+스포트 라이트인지 확인할 수 있어요. 
 | **bool IsSurfaceUI()** |
 | :--- |
 

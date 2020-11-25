@@ -1,71 +1,13 @@
 
-클라이언트에서 UI를 제어하는 객체에요. 
+클라이언트에서 사용되는 Widget ScrollBox 객체. 
+## **속성**
+
 ## **함수**
 
-| **RModeUIScene GetUIScene(string UISceneName)** |
+| **SetOrientationType(ScrollOrientationType Type)** |
 | :--- |
 
-이름으로 UI씬을 얻을 수 있어요. (얻고 싶은 UI씬 이름) 
-| **SetVisible(string UISceneName, bool bVisible)** |
-| :--- |
-
-UI씬의 표시 여부를 설정할 수 있어요. (설정 할 UI씬 이름, 표시 여부) 
-| **bool IsShow(string UISceneName)** |
-| :--- |
-
-UI가 보이는지 알 수 있어요. (확인 할 UI씬 이름) 
-| **SetText(string UISceneName, string TextName, int Value)** |
-| :--- |
-
-UI씬안에 있는 텍스트위젯의 텍스트를 설정할 수 있어요. (위젯의 UI씬 이름, 텍스트를 설정 할 위젯 이름, 정수 값) 
-| **SetText(string UISceneName, string TextName, float Value)** |
-| :--- |
-
-UI씬안에 있는 텍스트위젯의 텍스트를 설정할 수 있어요. (위젯의 UI씬 이름, 텍스트를 설정 할 위젯 이름, 실수 값) 
-| **SetText(string UISceneName, string TextName, string InText)** |
-| :--- |
-
-UI씬안에 있는 텍스트위젯의 텍스트를 설정할 수 있어요. (위젯의 UI씬 이름, 텍스트를 설정 할 위젯 이름, 문자열) 
-| **SetChangeTextEvent(string UISceneName, string TextName, protected_function InEventFunction)** |
-| :--- |
-
-위젯 텍스트의 변경 시 호출되는 이벤트 함수를 설정할 수 있어요. (위젯의 UI씬 이름, 텍스트 위젯 이름, 연결 함수) 
-| **SetImage(string UISceneName, string ImgName, string Img)** |
-| :--- |
-
-이미지위젯의 이미지를 설정할 수 있어요. (위젯의 UI씬 이름, 이미지 위젯 이름, 이미지 주소) 
-| **SetChangeImageEvent(string UISceneName, string ImgName, protected_function InEventFunction)** |
-| :--- |
-
-위젯 이미지 변경 시 호출되는 이벤트 함수를 설정할 수 있어요. (위젯의 UI씬 이름, 이미지 위젯 이름, 연결 함수) 
-| **SetButtonUpEvent(string UISceneName, string ButtonName, protected_function InEventFunction)** |
-| :--- |
-
-버튼 위젯이 눌렸다 띄어질 때 호출되는 이벤트 함수를 설정할 수 있어요. (위젯의 UI씬 이름, 버튼 위젯 이름, 연결 함수) 
-| **SetButtonPressEvent(string UISceneName, string ButtonName, protected_function InEventFunction)** |
-| :--- |
-
-버튼 위젯이 눌릴 때 호출되는 이벤트 함수를 설정할 수 있어요. (위젯의 UI씬 이름, 버튼 위젯 이름, 연결 함수) 
-| **RModeUIScene CreateModeUIScene(string UISceneName)** |
-| :--- |
-
-UI씬을 생성할 수 있어요. (현재 작동하지 않음) (생성할 UI씬 이름) 
-| **AddChildUIScene(string ParentUISceneName, string UIName, string UISceneName)** |
-| :--- |
-
-UI씬안에 있는 위젯에 자식 위젯을 추가할 수 있어요. (부모 UI씬 이름, 위젯 이름, 추가 할 UI 이름) 
-| **AddChildUIScene(string ParentUISceneName, string ParentWidgetName, string UIName, string UISceneName)** |
-| :--- |
-
-UI씬안에 있는 위젯에 자식 위젯을 추가할 수 있어요. (부모 UI씬 이름, 부모 위젯 이름, 위젯 이름, 추가할 UI 이름) 
-| **RModeUIScene GetChildUIScene(string ParentUISceneName, string UIName)** |
-| :--- |
-
-UI씬안에 있는 자식 위젯을 얻을 수 있어요. (UI씬 부모 이름, 찾을 위젯 이름) 
-| **RModeUIScene GetChildUIScene(string ParentUISceneName, string ParentWidgetName, string UIName)** |
-| :--- |
-
-UI씬안에 있는 위젯의 자식 위젯을 얻을 수 있어요. (부모 UI씬 이름, 부모 위젯 이름, 찾을 위젯 이름) 
+ScrollBox의 스크롤 타입을 설정할 수 있어요(ScrollOrientationType Type) 
 # **상속받아 사용 가능한 기능들**
 
 ## **속성**
@@ -95,7 +37,7 @@ end
 
 -- Object의 "CurBullet" 라는 Value가 변경되면 ChangeCurBullet 함수에 연결 
 
-Object:ConnectChangeEventFunction("CurBullet", ChangeCurBullet)   
+Object:ConnectChangeEventFunction("CurBullet", LuaScriptFunction ChangeCurBullet)   
 
 ``` 
 ## **함수**
@@ -116,6 +58,10 @@ Object:ConnectChangeEventFunction("CurBullet", ChangeCurBullet)
 | :--- |
 
 이름으로 형제 객체를 얻을 수 있어요. (찾고싶은 형제 객체 이름) 
+| **List<RScriptObject> GetChildList()** |
+| :--- |
+
+자식 객체의 리스트를 얻을 수 있어요. 
 | **bool IsCharacter()** |
 | :--- |
 
@@ -136,6 +82,10 @@ Sound인지 확인할 수 있어요.
 | :--- |
 
 포인트 라이트인지 확인할 수 있어요. 
+| **bool IsSpotLight()** |
+| :--- |
+
+스포트 라이트인지 확인할 수 있어요. 
 | **bool IsSurfaceUI()** |
 | :--- |
 
@@ -168,6 +118,14 @@ Collider인지 확인할 수 있어요.
 | :--- |
 
 Widget인지 확인할 수 있어요. 
+| **bool IsCamera()** |
+| :--- |
+
+Widget인지 확인할 수 있어요. 
+| **bool IsValid()** |
+| :--- |
+
+해당 오브젝트가 유효한지 확인 할 수있어요. 
 | **AddReplicateValue(string ValueName, Vector Data, ReplicateType Type, float Time, bool bSaveToStorage)** |
 | :--- |
 

@@ -42,14 +42,18 @@
 | :--- |
 
 지정된 시간이 지난 후에 플레이어의 프리캠 모드를 요청해요. (대기 시간) 
-| **GiveItem(string ItemName, int Count)** |
+| **int GiveItem(ModeItemServer Item, int Count)** |
 | :--- |
 
-플레이어에게 아이템을 줄 수 있어요. (아이템 이름, 개수) 
-| **GiveItem(string ItemName)** |
+플레이어에게 아이템을 줄 수 있어요. (줄 아이템, 개수) return 인벤토리 인텍스 
+| **int GiveItem(ModeItemServer Item)** |
 | :--- |
 
-플레이어에게 아이템을 줄 수 있어요. (아이템 이름) 
+플레이어에게 아이템을 줄 수 있어요. (줄 아이템) return 인벤토리 인텍스 
+| **int GetInventorySize()** |
+| :--- |
+
+플레이어의 인벤토리 사이즈를 얻을 수 있어요. 
 | **ClearItem()** |
 | :--- |
 
@@ -164,6 +168,10 @@ Sound인지 확인할 수 있어요.
 | :--- |
 
 포인트 라이트인지 확인할 수 있어요. 
+| **bool IsSpotLight()** |
+| :--- |
+
+스포트 라이트인지 확인할 수 있어요. 
 | **bool IsSurfaceUI()** |
 | :--- |
 
