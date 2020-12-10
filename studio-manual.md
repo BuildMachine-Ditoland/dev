@@ -231,7 +231,7 @@ Menu Bar의 ‘File Menu’에서 ‘Publish To DITOLAND’(게시)나 ‘Publis
 
 ‘+ NEW SLOT’ 버튼을 클릭하여 새로운 슬롯에 추가하거나 ‘Upload Map 아이콘’을 클릭하여 등록된 랜드를 업데이트 할 수 있습니다.
 
-![](.gitbook/assets/20201209_171413.jpg)
+![](.gitbook/assets/20201209_171413.jpg) <br/>
 ![](.gitbook/assets/20201209_171559.jpg)
 
 **Title** <br/>
@@ -243,7 +243,7 @@ Menu Bar의 ‘File Menu’에서 ‘Publish To DITOLAND’(게시)나 ‘Publis
 **LandType** <br/>
 Start Land : 게임을 시작하는 랜드로 설정하며 게임을 생성합니다. <br/>
 Connect Land : 기존 생성된 게임에 연결되는 Connect Land로 생성합니다. <br/>
-None : 게임에 연결하지 않은 상태로 생성합니다.(웹 사이트에서 연결을 설정할 수 있습니다.) <br/>
+None : 게임에 연결하지 않은 상태로 생성합니다.(웹 사이트에서 연결을 설정할 수 있습니다.)  
 
 **최대 접속 인원** <br/>
 서버당 접속할 수 있는 최대 인원을 설정합니다. <br/><br/>
