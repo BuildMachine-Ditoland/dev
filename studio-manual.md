@@ -217,6 +217,13 @@ Menu Bar의 MultiTest 탭메뉴에서 Client 수를 설정하여 멀티 플레�
 Menu Bar의 ‘File Menu’에서  ‘Save To File’(저장) 또는 ‘Save To File As’(다른이름으로 저장)을 클릭합니다.
 
 ![](.gitbook/assets/20201209_165836.jpg)
+저장할 경로를 지정하여 맵 파일을 저장합니다.
+
+### Publish(게시)
+맵을 온라인 서버에 게시합니다. 이렇게 하면 Studio를 실행할 수 있는 모든 PC에서 Land를 편집할 수 있습니다.
+ <br>Publish한 랜드는 게임에 Start Land 또는 Connect Land로 연결하여 다른 유저들에게 공개할 수 있습니다.
+
+![](.gitbook/assets/20201209_170547.jpg)
 
 Menu Bar의 ‘File Menu’에서 ‘Publish To DITOLAND’(게시)나 ‘Publish To DITOLAND As’(다른이름으로 게시)를 클릭하거나 Quick Menu에서 ‘Upload Map 아이콘’을 클릭합니다.
 
@@ -239,8 +246,8 @@ Connect Land : 기존 생성된 게임에 연결되는 Connect Land로 생성합
 None : 게임에 연결하지 않은 상태로 생성합니다.(웹 사이트에서 연결을 설정할 수 있습니다.) <br/>
 
 **최대 접속 인원** <br/>
-서버당 접속할 수 있는 최대 인원을 설정합니다. <br/>
-모든 항목을 입력한 후 ‘Create’ 버튼을 클릭하여 저장합니다.
+서버당 접속할 수 있는 최대 인원을 설정합니다. <br/><br/>
+모든 항목을 입력한 후 ‘Create’ 버튼을 클릭하여 저장합니다.<br/>
 
 ![](.gitbook/assets/20201209_173656.jpg)
 
