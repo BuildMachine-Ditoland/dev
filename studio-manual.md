@@ -186,6 +186,7 @@ TaskBar에서는 ScriptEditor를 제외한 1차 팝업들을 On / Off 할 수 �
 | Mouse Scroll Wheel Up/Down | 전진/후진 | 카메라가 천천히 전진/후진 합니다. |
 
 ## 멀티 플레이 테스트
+Play Test Tab
 
 Menu Bar의 MultiTest 탭메뉴에서 Client 수를 설정하여 멀티 플레이 테스트를 실행할 수 있습니다.
 
@@ -202,3 +203,58 @@ Menu Bar의 MultiTest 탭메뉴에서 Client 수를 설정하여 멀티 플레�
 
 
 ![](.gitbook/assets/20200804_154156.jpg)
+
+## Save(저장) 및 Publish(게시)
+
+제작한 Land를 내 PC에 저장 또는 온라인 서버에 게시할 수 있습니다. 이를 통해 스튜디오를 종료한 후에도 언제든지 저장시점이후부터 편집을 이어갈 수 있습니다.
+
+### Save(저장)
+
+내 PC에 맵파일을 저장할 수 있습니다.
+
+![](.gitbook/assets/20201209_165435.png)
+
+Menu Bar의 ‘File Menu’에서  ‘Save To File’(저장) 또는 ‘Save To File As’(다른이름으로 저장)을 클릭합니다.
+
+![](.gitbook/assets/20201209_165836.jpg)
+
+Menu Bar의 ‘File Menu’에서 ‘Publish To DITOLAND’(게시)나 ‘Publish To DITOLAND As’(다른이름으로 게시)를 클릭하거나 Quick Menu에서 ‘Upload Map 아이콘’을 클릭합니다.
+
+![](.gitbook/assets/20201209_171046.jpg)
+
+‘+ NEW SLOT’ 버튼을 클릭하여 새로운 슬롯에 추가하거나 ‘Upload Map 아이콘’을 클릭하여 등록된 랜드를 업데이트 할 수 있습니다.
+
+![](.gitbook/assets/20201209_171413.jpg)
+![](.gitbook/assets/20201209_171559.jpg)
+
+#### Title
+랜드 이름을 입력합니다. Start Land로 선택 시 게임 이름으로도 저장됩니다
+
+#### Description
+랜드 설명을 입력합니다. Start Land로 선택 시 게임 설명으로도 저장됩니다.
+
+#### LandType
+Start Land : 게임을 시작하는 랜드로 설정하며 게임을 생성합니다. <br/>
+Connect Land : 기존 생성된 게임에 연결되는 Connect Land로 생성합니다. <br/>
+None : 게임에 연결하지 않은 상태로 생성합니다.(웹 사이트에서 연결을 설정할 수 있습니다.) <br/>
+
+#### **최대 접속 인원**
+서버당 접속할 수 있는 최대 인원을 설정합니다. <br/>
+모든 항목을 입력한 후 ‘Create’ 버튼을 클릭하여 저장합니다.
+![](.gitbook/assets/20201209_173656.jpg)
+랜드의 업로드가 완료되었습니다. ‘View in web browser’ 버튼을 클릭하여 웹 사이트의 랜드 설정 화면으로 바로갈 수 있습니다.<br/>
+‘OK’ 버튼을 클릭하여 팝업을 닫고 랜드를 계속 편집할 수 있습니다.
+
+
+## 게임 공개 설정
+### 내 게임 리스트
+![](.gitbook/assets/20201209_182301.jpg)
+‘게임만들기 > 내 게임 관리 > 내 게임 > 게임’ 화면으로 이동하여 등록된 게임을 확인할 수 있습니다.<br>
+게임은 최초 저장 시 비공개로 저장됩니다. 
+
+### 게임 공개 설정
+![](.gitbook/assets/20201209_183650.jpg)
+공개를 원하시면 ‘게임 설정’ 버튼을 클릭하여 이동한 게임 설정 화면에서 공개로 전환할 수 있습니다.
+
+
+
