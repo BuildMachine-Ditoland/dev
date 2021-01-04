@@ -1,11 +1,7 @@
 
-<<<<<<< HEAD:api-reference/Client/RCameraSetting.md
-캐릭터가 사용하는 카메라의 데이터를 설정하는 객체에요. 
-=======
 클라이언트에서 사용되는 Widget ListView 객체. 
 ## **속성**
 
->>>>>>> 40c9f3f57fdf11af7d887004a46e8c90d3bfc1f1:api-reference/Client/WidgetListView.md
 ## **함수**
 
 | **SetBackgroundColor(Color color)** |

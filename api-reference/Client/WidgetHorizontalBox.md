@@ -1,10 +1,5 @@
-<<<<<<< HEAD:api-reference/Server/RUIServer.md
-
-서버에서 UI를 컨트롤 하는 객체에요. 서비스로 제공되며, UI로 참조가능해요. 
-=======
 ## **속성**
 
->>>>>>> 40c9f3f57fdf11af7d887004a46e8c90d3bfc1f1:api-reference/Client/WidgetHorizontalBox.md
 ## **함수**
 
 # **상속받아 사용 가능한 기능들**

@@ -1,5 +1,5 @@
 
-클라이언트 스크립트에서 사용되는 플레이어 객체에요. [Game:GetRemotePlayer(PlayerName)](https://ditoland-utplus.gitbook.io/ditoland/api-reference/client/rgameclient)혹은 [LocalPlayer:GetRemotePlayer()](https://ditoland-utplus.gitbook.io/ditoland/api-reference/client/localplayer#undefined-1) 함수를 이용하면 얻을 수 있어요. 
+클라이언트 스크립트에서 사용되는 플레이어 객체에요. [Game:GetRemotePlayer(PlayerName)](https://ditoland-utplus.gitbook.io/ditoland/api-reference/client/game)혹은 [LocalPlayer:GetRemotePlayer()](https://ditoland-utplus.gitbook.io/ditoland/api-reference/client/localplayer) 함수를 이용하면 얻을 수 있어요. 
 | **RGameClientCharacter GetCharacter()** |
 | :--- |
 

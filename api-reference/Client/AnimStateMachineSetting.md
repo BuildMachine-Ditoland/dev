@@ -1,11 +1,49 @@
 
-단일 애니메이션을 플레이하는 애니메이션 상태 객체에요 
+게임에 사용되는 애니매이션 상태머신의 설정을 다루는 객체에요.  
+
+[Game:AddAnimStateMachineSetting](https://ditoland-utplus.gitbook.io/ditoland/api-reference/client/game)로 생성해요. 
 ## **함수**
 
-| **ChangeAnimation(string ResourceID)** |
+| **RModeSequenceAnimStateSetting AddAnimState(string StateName, string ResourceID)** |
 | :--- |
 
-애니메이션 변경 (변경할 애니메이션 리소스 ID값) 
+단일 애니메이션 상태 설정을 추가해요. (추가할 상태 이름, 리소스 ID) 
+| **RModeSequenceAnimStateSetting AddAnimState(string StateName, string ResourceID, int PlayCount)** |
+| :--- |
+
+단일 애니메이션 상태 설정을 추가해요. (추가할 상태 이름, 리소스 ID, 플레이 횟수) 
+| **RModeSequenceAnimStateSetting AddAnimState(string StateName, string ResourceID, int PlayCount, float PlaySpeed)** |
+| :--- |
+
+단일 애니메이션 상태 설정을 추가해요. (추가할 상태 이름, 리소스 ID, 플레이 횟수, 플레이 속도) 
+| **RModeBlendAnimStateSetting AddBlendAnimState(string StateName, protected_function BlendFunction)** |
+| :--- |
+
+블랜드 애니메이션 상태 설정을 추가해요. (추가할 상태 이름, 연결 함수) 
+| **RModeBlendAnimStateSetting AddBlendAnimState(string StateName, protected_function BlendFunction, int PlayCount)** |
+| :--- |
+
+블랜드 애니메이션 상태 설정을 추가해요. (추가할 상태 이름, 연결 함수, 플레이 횟수) 
+| **AddAnimTransition(string FromState, string ToState)** |
+| :--- |
+
+애니메이션 상태 전이를 추가해요. (시작 상태 이름, 전이할 상태 이름) 
+| **AddAnimTransition(string FromState, string ToState, float BlendTime)** |
+| :--- |
+
+애니메이션 상태 전이를 추가해요. (시작 상태 이름, 전이할 상태 이름, 블렌딩 시간) 
+| **AddAnimTransition(string FromState, string ToState, protected_function Condition)** |
+| :--- |
+
+애니메이션 상태 전이를 추가해요. (시작 상태 이름, 전이할 상태 이름, 연결 함수) 
+| **AddAnimTransition(string FromState, string ToState, protected_function Condition, float BlendTime)** |
+| :--- |
+
+애니메이션 상태 전이를 추가해요. (시작 상태 이름, 전이할 상태 이름, 연결 함수, 블렌딩 시간) 
+| **SetStartState(string StateName)** |
+| :--- |
+
+애니메이션 상태머신이 활성화 될 때 해당 애니메이션 상태를 설정할 수 있어요. (상태 이름) 
 # **상속받아 사용 가능한 기능들**
 
 ## **속성**
@@ -16,18 +54,6 @@
 부모 객체를 얻을 수 있어요. 
 ## **이벤트**
 
-| **EnterEvent** |
-| :--- |
-
-해당 애니메이션 상태가 시작될 때 호출되는 이벤트에요. 
-| **UpdateEvent** |
-| :--- |
-
-해당 애니메이션이 실행중 일 때 호출되는 이벤트에요. 
-| **ExitEvent** |
-| :--- |
-
-해당 애니메이션상태가 끝날 때 호출되는 이벤트에요. 
 | **ConnectChangeEventFunction(string ValueName, function FunctionName)** |
 | :--- |
 
@@ -52,22 +78,6 @@ Object:ConnectChangeEventFunction("CurBullet", LuaScriptFunction ChangeCurBullet
 ``` 
 ## **함수**
 
-| **float GetPlayTime()** |
-| :--- |
-
-애니메이션 상태가 진행된 시간을 얻을 수 있어요. 
-| **AddTransition(RModeAnimTransition InTransition)** |
-| :--- |
-
-다른 애니메이션 상태로의 전이를 추가해요. (전이 할 다른 애니메이션) 
-| **RGameClientCharacter GetOwnerCharacter()** |
-| :--- |
-
-설정되어 있는 캐릭터를 얻을 수 있어요. 
-| **SetNeedReplicate(bool NeedReplicate)** |
-| :--- |
-
-동기화 필요 여부를 설정할 수 있어요. (필요 여부) 
 | **string GetName()** |
 | :--- |
 

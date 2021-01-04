@@ -1,51 +1,13 @@
 
-게임에서 사용될 팀을 설정 할 때 사용되는 객체에요.  
+단일 애니메이션을 플레이하는 애니메이션 상태 객체에요. 
 
-[RGameServer](https://ditoland-utplus.gitbook.io/ditoland/api-reference/server/rgameserver#undefined-1)의 Game:AddTeam 함수를 이용해서 만들어요. 
-## **속성**
-
-| **int MaxPlayerCount** |
-| :--- |
-
-팀의 최대 인원을 설정할 수 있어요. 
+[SequenceAnimStateSetting](https://ditoland-utplus.gitbook.io/ditoland/api-reference/client/sequenceanimstatesetting)에서 세팅을 설정할 수 있어요. 
 ## **함수**
 
-| **AddUsingCharacter(RCharacterSetting CharacterSettingObject)** |
+| **ChangeAnimation(string ResourceID)** |
 | :--- |
 
-팀에서 사용될 캐릭터 설정을 추가할 수 있어요. (캐릭터 설정 오브젝트) 
-
-Game:AddCharacterSetting으로 추가한 캐릭터설정 중에서만 가능해요 
-| **SetUsingSpawnPointGroup(string InSpawnPointGroup)** |
-| :--- |
-
-팀에서 사용될 스폰 포인트 그룹을 추가할 수 있어요. (스폰 그룹 이름) 
-
-Game:AddSpawnPointGroup으로 추가한 스폰 그룹 중에서만 가능해요 
-| **AddFixedCharacter(RCharacterSetting CharacterSettingObject)** |
-| :--- |
-
-팀 고정 캐릭터설정을 추가할 수 있어요. (캐릭터 설정 오브젝트) 
-
-<<<<<<< HEAD:api-reference/Server/RTeam.md
-Game:AddCharacterSetting으로 추가한 캐릭터설정 중에서만 가능해요 
-| **AddFixedSpawnPoint(string SpawnPoint)** |
-| :--- |
-
-팀 고정 스폰 포인트를 추가할 수 있어요. (Game에 AddSpawnPoint 함수로 추가한 스폰 포인트중 이름) 
-=======
-[Game:AddCharacterSetting](https://ditoland-utplus.gitbook.io/ditoland/api-reference/server/game)으로 추가한 캐릭터설정 중에서만 가능해요 
-| **AddFixedSpawnPoint(RSpawnPoint* SpawnPoint)** |
-| :--- |
-
-팀 고정 스폰 포인트를 추가할 수 있어요. (스폰 포인트 오브젝트) 
->>>>>>> 40c9f3f57fdf11af7d887004a46e8c90d3bfc1f1:api-reference/Server/Team.md
-| **ReviveTeamPlayerCharacter()** |
-| :--- |
-
-팀원중 죽어있는 캐릭터를 리스폰 시켜요. 
-
-Life가 남아있어야 해요. 
+애니메이션 변경 (변경할 애니메이션 리소스 ID값) 
 # **상속받아 사용 가능한 기능들**
 
 ## **속성**
@@ -56,6 +18,18 @@ Life가 남아있어야 해요.
 부모 객체를 얻을 수 있어요. 
 ## **이벤트**
 
+| **EnterEvent** |
+| :--- |
+
+해당 애니메이션 상태가 시작될 때 호출되는 이벤트에요. 
+| **UpdateEvent** |
+| :--- |
+
+해당 애니메이션이 실행중 일 때 호출되는 이벤트에요. 
+| **ExitEvent** |
+| :--- |
+
+해당 애니메이션상태가 끝날 때 호출되는 이벤트에요. 
 | **ConnectChangeEventFunction(string ValueName, function FunctionName)** |
 | :--- |
 
@@ -80,6 +54,22 @@ Object:ConnectChangeEventFunction("CurBullet", LuaScriptFunction ChangeCurBullet
 ``` 
 ## **함수**
 
+| **float GetPlayTime()** |
+| :--- |
+
+애니메이션 상태가 진행된 시간을 얻을 수 있어요. 
+| **AddTransition(RModeAnimTransition InTransition)** |
+| :--- |
+
+다른 애니메이션 상태로의 전이를 추가해요. (전이 할 다른 애니메이션) 
+| **RGameClientCharacter GetOwnerCharacter()** |
+| :--- |
+
+설정되어 있는 캐릭터를 얻을 수 있어요. 
+| **SetNeedReplicate(bool NeedReplicate)** |
+| :--- |
+
+동기화 필요 여부를 설정할 수 있어요. (필요 여부) 
 | **string GetName()** |
 | :--- |
 

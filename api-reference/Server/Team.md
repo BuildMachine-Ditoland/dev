@@ -1,33 +1,43 @@
 
-<<<<<<< HEAD:api-reference/Client/RCameraSetting.md
-캐릭터가 사용하는 카메라의 데이터를 설정하는 객체에요. 
-=======
-클라이언트에서 사용되는 Widget ListView 객체. 
+게임에서 사용될 팀을 설정 할 때 사용되는 객체에요.  
+
+[Game:AddTeam](https://ditoland-utplus.gitbook.io/ditoland/api-reference/server/game)함수를 이용해서 만들어요. 
 ## **속성**
 
->>>>>>> 40c9f3f57fdf11af7d887004a46e8c90d3bfc1f1:api-reference/Client/WidgetListView.md
+| **int MaxPlayerCount** |
+| :--- |
+
+팀의 최대 인원을 설정할 수 있어요. 
 ## **함수**
 
-| **SetBackgroundColor(Color color)** |
+| **AddUsingCharacter(RCharacterSetting CharacterSettingObject)** |
 | :--- |
 
-ListView의 배경 색을 설정할 수 있어요. (변경할 색) 
-| **SetContentTransparency(Number Value)** |
+팀에서 사용될 캐릭터 설정을 추가할 수 있어요. (캐릭터 설정 오브젝트) 
+
+[Game:AddCharacterSetting](https://ditoland-utplus.gitbook.io/ditoland/api-reference/server/game)으로 추가한 캐릭터설정 중에서만 가능해요 
+| **SetUsingSpawnPointGroup(string InSpawnPointGroup)** |
 | :--- |
 
-ListView의 투명도를 설정할 수 있어요. (Number Value) 
-| **SetContentTransparency(Number Value)** |
+팀에서 사용될 스폰 포인트 그룹을 추가할 수 있어요. (스폰 그룹 이름) 
+
+Game:AddSpawnPointGroup으로 추가한 스폰 그룹 중에서만 가능해요 
+| **AddFixedCharacter(RCharacterSetting CharacterSettingObject)** |
 | :--- |
 
-ListView의 윗쪽 사이를 설정 할 수 있어요. (Number Value) 
-| **SetContentTransparency(Number XSize, Number YSize)** |
+팀 고정 캐릭터설정을 추가할 수 있어요. (캐릭터 설정 오브젝트) 
+
+[Game:AddCharacterSetting](https://ditoland-utplus.gitbook.io/ditoland/api-reference/server/game)으로 추가한 캐릭터설정 중에서만 가능해요 
+| **AddFixedSpawnPoint(RSpawnPoint* SpawnPoint)** |
 | :--- |
 
-ListView의 슬롯 사이즈를 설정 할 수 있어요. (Number XSize, Number YSize) 
-| **SetIsStretch(bool bOn)** |
+팀 고정 스폰 포인트를 추가할 수 있어요. (스폰 포인트 오브젝트) 
+| **ReviveTeamPlayerCharacter()** |
 | :--- |
 
-ListView의 슬롯 사이즈를 설정 할 수 있어요. (Number XSize, Number YSize) 
+팀원중 죽어있는 캐릭터를 리스폰 시켜요. 
+
+Life가 남아있어야 해요. 
 # **상속받아 사용 가능한 기능들**
 
 ## **속성**

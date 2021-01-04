@@ -1,31 +1,25 @@
 
-서버에서 NPC 설정을 저장하는 객체에요. 
-## **속성**
+월드상에 설정된 조건에 맞게 오브젝트를 생성하는 객체에요. 
+
+[Game:AddObjectSpawner](https://ditoland-utplus.gitbook.io/ditoland/api-reference/server/game)함수로 생성해요. 
+## **함수**
 
-| **string Base** |
+| **AddSpawnObject(class FRScriptWorldObject* SpawnObject, float SpawnRate, int Count)** |
 | :--- |
 
-NPC 생성에 사용 할 기본 모델이에요. 
-| **string Hair** |
+스폰 오브젝트를 추가할 수 있어요. (SpawnObject : 스폰 오브젝트, SpawnRate : 스폰 확률, Count : 스폰 개수) 
+| **AddSpawnObject(class FRScriptWorldObject* SpawnObject, float SpawnRate, int Count, Vector OffsetPosition)** |
 | :--- |
 
-NPC 생성에 사용 할 Hair 모델이에요. 
-| **string Gloves** |
+스폰 오브젝트를 추가할 수 있어요. (SpawnObject : 스폰 오브젝트, SpawnRate : 스폰 확률, Count : 스폰 개수, OffsetPosition : 생성 위치 오프셋) 
+| **SetObjectSpawnType_Scale()** |
 | :--- |
 
-NPC 생성에 사용 할 장갑 모델이에요. 
-| **string Body** |
+오브젝트의 스폰 형식을 스포너의 크기에 따라 랜덤으로 스폰되게 설정해요. 
+| **SetObjectSpawnType_Range(Vector MinRange, Vector MaxRange)** |
 | :--- |
 
-NPC 생성에 사용 할 몸통 모델이에요. 
-| **string Pants** |
-| :--- |
-
-NPC 생성에 사용 할 하체 모델이에요. 
-| **string Shoes** |
-| :--- |
-
-NPC 생성에 사용 할 신발 모델이에요. 
+오브젝트의 스폰 형식을 범위 내에 랜덤으로 스폰되게 설정해요. (MinRange : 최소 범위, MaxRange : 최대 범위) 
 # **상속받아 사용 가능한 기능들**
 
 ## **속성**

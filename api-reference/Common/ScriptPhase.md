@@ -1,15 +1,27 @@
 
-[RBlendAnimState](https://ditoland-utplus.gitbook.io/ditoland/api-reference/client/rblendanimstate)에 블랜드 애니메이션이 추가 될 때 세팅하는 객체에요. 
+스크립트페이즈(단계) 객체에요. 
+
+Game:AddPhase(단계 이름) 으로 생성할 수 있어요. 
+## **이벤트**
+
+| **EnterEvent** |
+| :--- |
+
+단계에 진입 시 호출되는 이벤트에요. 
+| **UpdateEvent** |
+| :--- |
+
+단계가 활성화 되어 있을 때 매 프레임 호출되는 이벤트에요. 
+| **ExitEvent** |
+| :--- |
+
+단계에서 다른 단계로 변경 될 때 호출되는 이벤트에요. 
 ## **함수**
 
-| **AddAnimationEvent(String EventName, float Time, protected_function function EventFunction)** |
+| **float GetPhaseTime()** |
 | :--- |
 
-애니메이션 이벤트를 추가해요. (추가할 이벤트 이름, 블렌딩 시간, 연결 함수) 
-| **DeleteAnimationEvent(String EventName)** |
-| :--- |
-
-애니메이션 이벤트를 제거해요. (제거할 이벤트 이름) 
+단계가 활성화 되어 있었던 시간을 얻을 수 있어요. 
 # **상속받아 사용 가능한 기능들**
 
 ## **속성**

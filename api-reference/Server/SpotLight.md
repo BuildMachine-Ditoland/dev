@@ -114,7 +114,7 @@ Object:ConnectChangeEventFunction("CurBullet", LuaScriptFunction ChangeCurBullet
 | :--- |
 
 해당 클라이언트에게만 오브젝트 커스텀 이벤트를 보내는 함수에요. (이벤트 보낼 플레이어 이름, 이벤트 이름, 전달할 변수들 ...) 
-| **SetEnableCollsion(bool bIsEnable)** |
+| **SetEnableCollision(bool bIsEnable)** |
 | :--- |
 
 객체의 충돌 여부를 설정할 수 있어요. (충돌 여부) 

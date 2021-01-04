@@ -1,15 +1,19 @@
 
-여러 애니메이션을 특정 값에 따라 블랜딩하는 애니메이션 상태 객체에요. 
+여러 애니메이션을 특정 값에 따라 블렌딩하는 애니메이션 상태를 설정하는 객체에요. 
+
+예) 이동 속도에 따른 평상시, 걷기, 달리기 애니메이션 블랜딩 등 이에요 
+
+AddBlendAnimState 함수로 생성해요. 
 ## **함수**
 
-| **AddBlendAnimation(float BlendValue, string AnimResourceID)** |
+| **ModeBlendAnimationDataSetting AddBlendAnimation(float BlendValue, string AnimResourceID)** |
 | :--- |
 
-블렌드 애니메이션을 추가해요. (블렌드 값, 리소스 ID) 
-| **AddBlendAnimation(float BlendValue, string AnimResourceID, float InPlaySpeed)** |
+블렌딩 애니메이션을 추가해요. (블렌드 값, 리소스 ID) 
+| **ModeBlendAnimationDataSetting AddBlendAnimation(float BlendValue, string AnimResourceID, float PlaySpeed)** |
 | :--- |
 
-블렌드 애니메이션을 추가해요. (블렌드 값, 리로스 ID, 플레이 횟수) 
+블렌딩 애니메이션을 추가해요. (블렌드 값, 리소스 ID, 플레이 속도) 
 # **상속받아 사용 가능한 기능들**
 
 ## **속성**
@@ -20,18 +24,18 @@
 부모 객체를 얻을 수 있어요. 
 ## **이벤트**
 
-| **EnterEvent** |
+| **OnEnter** |
 | :--- |
 
 해당 애니메이션 상태가 시작될 때 호출되는 이벤트에요. 
-| **UpdateEvent** |
+| **OnUpdate** |
 | :--- |
 
-해당 애니메이션이 실행중 일 때 호출되는 이벤트에요. 
-| **ExitEvent** |
+해당 애니메이션 상태가 실행중일 때 매프레임마다 호출되는 이벤트에요. 
+| **OnExit** |
 | :--- |
 
-해당 애니메이션상태가 끝날 때 호출되는 이벤트에요. 
+해당 애니미에션 상태가 종료될 때 호출되는 이벤트에요. 
 | **ConnectChangeEventFunction(string ValueName, function FunctionName)** |
 | :--- |
 
@@ -56,22 +60,20 @@ Object:ConnectChangeEventFunction("CurBullet", LuaScriptFunction ChangeCurBullet
 ``` 
 ## **함수**
 
-| **float GetPlayTime()** |
-| :--- |
-
-애니메이션 상태가 진행된 시간을 얻을 수 있어요. 
-| **AddTransition(RModeAnimTransition InTransition)** |
-| :--- |
-
-다른 애니메이션 상태로의 전이를 추가해요. (전이 할 다른 애니메이션) 
-| **RGameClientCharacter GetOwnerCharacter()** |
-| :--- |
-
-설정되어 있는 캐릭터를 얻을 수 있어요. 
 | **SetNeedReplicate(bool NeedReplicate)** |
 | :--- |
 
-동기화 필요 여부를 설정할 수 있어요. (필요 여부) 
+서버 클라이언트 간 동기화가 필요한 애니메이션 여부를 설정할 수 있어요. (동기화 여부) 
+
+서버, 클라이언트 간 동기화 되고 있는 값을 기반으로 애니메이션이 변경되는 경우 동기화 설정을 할 필요는 없어요. 
+
+예) 디폴트 애니메이션 설정의 점프 모션은 캐릭터가 현재 공중에 떠있는가를 가지고 애니메이션 상태가 변경되고 있을 때에요. 
+
+해당 판단은 서버와 클라이언트가 동기화 하고 있어 따로 동기화를 설정하지 않아도 다른 클라이언트에서도 같은 애니메이션 상태로 설정돼요. 
+
+게임 제작자가 조준 애니메이션 상태를 만들고 클라이언트 입력을 받아 조준 상태로 변경한 경우, 다른 클라이언트에서는  
+
+조준 모션을 하지 않음 이경우 해당 값을 true로 설정하면 다른 클라이언트도 해당 애니메이션을 실행해요. 
 | **string GetName()** |
 | :--- |
 

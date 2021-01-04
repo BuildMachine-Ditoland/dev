@@ -96,10 +96,22 @@
 | :--- |
 
 캐릭터의 가시성을 설정할 수 있어요. 
+| **MoveToLocation(Vector Target)** |
+| :--- |
+
+캐릭터가 목표 지점까지 길찾기를 이용해 이동합니다. 
+| **StopMovement()** |
+| :--- |
+
+캐릭터의 길찾기 이동을 중지합니다. 
 | **SetControlMode(Enum ControlMode)** |
 | :--- |
 
 캐릭터의 컨트롤 모드를 변경할 수 있어요 (변경할 Enum.ControlMode.타입) 
+| **MoveToLocation(Vector Target)** |
+| :--- |
+| **MoveToLocation(Vector Target)** |
+| :--- |
 # **상속받아 사용 가능한 기능들**
 
 ## **속성**

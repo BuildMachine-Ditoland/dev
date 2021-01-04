@@ -1,39 +1,20 @@
 # Server
 ### [**Character**](Character.md)
-<<<<<<< HEAD
-=======
 ### [**CharacterSetting**](CharacterSetting.md)
 ### [**Collider**](Collider.md)
->>>>>>> 40c9f3f57fdf11af7d887004a46e8c90d3bfc1f1
 ### [**Environment**](Environment.md)
 ### [**FX**](FX.md)
 ### [**Game**](Game.md)
 ### [**Item**](Item.md)
 ### [**NPC**](NPC.md)
-<<<<<<< HEAD
-=======
 ### [**NPCSetting**](NPCSetting.md)
 ### [**Physics**](Physics.md)
 ### [**Player**](Player.md)
->>>>>>> 40c9f3f57fdf11af7d887004a46e8c90d3bfc1f1
 ### [**PointLight**](PointLight.md)
-### [**RCharacterSetting**](RCharacterSetting.md)
-### [**RNPCSetting**](RNPCSetting.md)
-### [**RPlayer**](RPlayer.md)
 ### [**RScriptObjectNoneServer**](RScriptObjectNoneServer.md)
-### [**RScriptObjectWidgetServer**](RScriptObjectWidgetServer.md)
-### [**RSelector**](RSelector.md)
-### [**RSpawnPoint**](RSpawnPoint.md)
-### [**RSpawnPointGroup**](RSpawnPointGroup.md)
-### [**RTeam**](RTeam.md)
-### [**RUISceneServer**](RUISceneServer.md)
-### [**RUIServer**](RUIServer.md)
-### [**RWorldSpawner**](RWorldSpawner.md)
 ### [**Script**](Script.md)
+### [**Selector**](Selector.md)
 ### [**Sound**](Sound.md)
-<<<<<<< HEAD
-### [**StaticMesh**](StaticMesh.md)
-=======
 ### [**Spawner**](Spawner.md)
 ### [**SpawnPoint**](SpawnPoint.md)
 ### [**SpawnPointGroup**](SpawnPointGroup.md)
@@ -42,4 +23,3 @@
 ### [**Team**](Team.md)
 ### [**UIScene**](UIScene.md)
 ### [**Widget**](Widget.md)
->>>>>>> 40c9f3f57fdf11af7d887004a46e8c90d3bfc1f1

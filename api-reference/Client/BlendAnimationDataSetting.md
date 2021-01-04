@@ -1,15 +1,15 @@
 
-게임에서 캐릭터를 스폰하는데 사용되는 스폰포인트 객체에요. 
+[BlendAnimState](https://ditoland-utplus.gitbook.io/ditoland/api-reference/client/blendanimstate)에 블렌드 애니메이션이 추가 될 때 세팅하는 객체에요. 
 ## **함수**
 
-| **SetSpawnType(ESpawnType InSpawnType)** |
+| **AddAnimationEvent(String EventName, float Time, protected_function function EventFunction)** |
 | :--- |
 
-스폰 포인트의 작동방식을 설정할 수 있어요. ( [Enum.SpawnType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/spawntype)) 
-| **SetSpawnType(ESpawnType InSpawnType, Number Radius)** |
+애니메이션 이벤트를 추가해요. (추가할 이벤트 이름, 블렌딩 시간, 연결 함수) 
+| **DeleteAnimationEvent(String EventName)** |
 | :--- |
 
-스폰 포인트의 작동방식을 설정할 수 있어요. ( [Enum.SpawnType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/spawntype), 반지름 값) 
+애니메이션 이벤트를 제거해요. (제거할 이벤트 이름) 
 # **상속받아 사용 가능한 기능들**
 
 ## **속성**

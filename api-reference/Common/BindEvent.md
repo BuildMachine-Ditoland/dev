@@ -14,6 +14,6 @@ local function EnterPlayer (Player)
 	Logger:Log(“Hello”)
 end
 
--- Game.OnEnterPlayer가 RBindEvent을 리턴
+-- Game.OnEnterPlayer가 Connect를 통해 EnterPlayer함수에 연결됨
 Game.OnEnterPlayer:Connect(EnterPlayer)	 
 ```

@@ -97,7 +97,7 @@ Object:ConnectChangeEventFunction("CurBullet", LuaScriptFunction ChangeCurBullet
 
 해당 오브젝트의 충돌 타입을 지정해줘요. 
 
-[Game:AddUserCollisionType](https://ditoland-utplus.gitbook.io/ditoland/api-reference/server/rgameserver#undefined-1)으로 추가한 타입만 가능해요 없을 시에는 기본 타입으로 지정되요 
+[Game:AddUserCollisionType](https://ditoland-utplus.gitbook.io/ditoland/api-reference/server/game)으로 추가한 타입만 가능해요 없을 시에는 기본 타입으로 지정되요 
 | **SetCharacterCollisionResponse(ECollisionResponse CollisionResponse)** |
 | :--- |
 
@@ -118,7 +118,7 @@ Object:ConnectChangeEventFunction("CurBullet", LuaScriptFunction ChangeCurBullet
 | :--- |
 
 해당 클라이언트에게만 오브젝트 커스텀 이벤트를 보내는 함수에요. (이벤트 보낼 플레이어 이름, 이벤트 이름, 전달할 변수들 ...) 
-| **SetEnableCollsion(bool bIsEnable)** |
+| **SetEnableCollision(bool bIsEnable)** |
 | :--- |
 
 객체의 충돌 여부를 설정할 수 있어요. (충돌 여부) 

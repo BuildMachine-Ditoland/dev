@@ -1,31 +1,11 @@
 
-게임에서 사용 될 캐릭터를 설정 할 때 사용되는 객체에요.  
-
-[Game:AddCharacterSetting](https://ditoland-utplus.gitbook.io/ditoland/api-reference/server/rgameserver)함수로 추가해요. 
-## **속성**
+오브젝트에 배치된 UI씬에 해당하는 객체에요. 
+## **함수**
 
-| **int MaxLife** |
+| **SetVisibility(bool Visibility)** |
 | :--- |
 
-최대 생명을 설정할 수 있어요. 
-
-캐릭터는 해당 생명만큼 리스폰되요. -1로 설정 시 무한으로 리스폰해요. 디폴트 값은 -1이에요. 
-| **float RespawnTime** |
-| :--- |
-
-리스폰 타임을 정할 수 있어요. 
-| **float MoveSpeed** |
-| :--- |
-
-이동 스피드를 설정할 수 있어요. 
-| **float JumpSpeed** |
-| :--- |
-
-점프 높이를 설정할 수 있어요. 
-| **float FlyControlRate** |
-| :--- |
-
-공중에서 캐릭터 컨트롤 비율을 설정할 수 있어요. 
+UI씬의 표시 여부를 설정할 수 있어요. (표시 여부) 
 # **상속받아 사용 가능한 기능들**
 
 ## **속성**
@@ -88,6 +68,36 @@ Object:ConnectChangeEventFunction("CurBullet", LuaScriptFunction ChangeCurBullet
 ``` 
 ## **함수**
 
+| **SetCollisionType(string usercollisiontype)** |
+| :--- |
+
+해당 오브젝트의 충돌 타입을 지정해줘요. 
+
+[Game:AddUserCollisionType](https://ditoland-utplus.gitbook.io/ditoland/api-reference/server/game)으로 추가한 타입만 가능해요 없을 시에는 기본 타입으로 지정되요 
+| **SetCharacterCollisionResponse(ECollisionResponse CollisionResponse)** |
+| :--- |
+
+캐릭터와 충돌 시 어떻게 처리 할지를 설정하는 함수에요. ( [Enum.CollisionResponse.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/collisionresponse)) 
+| **SetUserCollisionTypeResponse(string UserCollisionType, ECollisionResponse CollisionResponse)** |
+| :--- |
+
+유저타입 충돌 물체의 충돌 시 처리를 변경하는 함수에요. (변경 할 유저타입 충돌 이름, [Enum.CollisionResponse.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/collisionresponse)) 
+| **SetReplicatePriority(int priority)** |
+| :--- |
+
+서버에서 클라로 얼마나 많이 동기화 할것인지에 대한 값을 설정할 수 있어요. (우선 순위 값) 
+| **BroadcastEvent(string CustomEventName, Args ...)** |
+| :--- |
+
+모든 클라이언트에게 오브젝트 커스텀 이벤트를 보내는 함수에요. (이벤트 이름, 전달할 변수들 ...) 
+| **SendEventToClient(string PlayerName, string CustomEventName, Args ...)** |
+| :--- |
+
+해당 클라이언트에게만 오브젝트 커스텀 이벤트를 보내는 함수에요. (이벤트 보낼 플레이어 이름, 이벤트 이름, 전달할 변수들 ...) 
+| **SetEnableCollision(bool bIsEnable)** |
+| :--- |
+
+객체의 충돌 여부를 설정할 수 있어요. (충돌 여부) 
 | **int GetModeObjectKey()** |
 | :--- |
 

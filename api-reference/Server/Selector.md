@@ -1,25 +1,15 @@
 
-스크립트페이즈(단계) 객체에요. 
-## **이벤트**
-
-| **EnterEvent** |
-| :--- |
-
-단계에 진입 시 호출되는 이벤트에요. 
-| **UpdateEvent** |
-| :--- |
-
-단계가 활성화 되어 있을 때 매 프레임 호출되는 이벤트에요. 
-| **ExitEvent** |
-| :--- |
-
-단계에서 다른 단계로 변경 될 때 호출되는 이벤트에요. 
+설정된 조건에 맞는 오브젝트를 선택하는 객체에요. [Game:CreateObjectSelector](https://ditoland-utplus.gitbook.io/ditoland/api-reference/server/game)함수로 생성해요. 
 ## **함수**
 
-| **float GetPhaseTime()** |
+| **AddSelectObject(String ObjectName, float SelectRate, int Count)** |
 | :--- |
 
-단계가 활성화 되어 있었던 시간을 얻을 수 있어요. 
+선택 오브젝트를 추가할 수 있어요. (추가할 오브젝트 이름, 선택 확률 값, 개수) 
+| **string GetNextSelectObject()** |
+| :--- |
+
+선택 오브젝트를 얻을 수 있어요. 
 # **상속받아 사용 가능한 기능들**
 
 ## **속성**

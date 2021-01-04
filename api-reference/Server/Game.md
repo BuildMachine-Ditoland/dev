@@ -183,11 +183,17 @@
 | **NPC CreateNPC(String NPCName, String NPCSetting, Vector Location)** |
 | :--- |
 
-NPC를 새롭게 생성할 수 있어요. (생성할 NPC 이름 설정, 지정할 [NPC세팅](https://ditoland-utplus.gitbook.io/ditoland/api-reference/server/rnpcsetting), 생성 위치 Vector) 
+NPC를 새롭게 생성할 수 있어요. (생성할 NPC 이름 설정, 지정할 [NPC세팅](https://ditoland-utplus.gitbook.io/ditoland/api-reference/server/npcsetting), 생성 위치 Vector) 
 | **DeleteNPC(String NPCName)** |
 | :--- |
 
 해당 NPC를 삭제해요. (삭제할 NPC 이름) 
+| **TeleportToPublicServer(LandID, PlayerNameList, LoadingUI)** |
+| :--- |
+| **TeleportToPrivateServer(LandID, PlayerNameList, LoadingUI)** |
+| :--- |
+| **TeleportToServerLink(URL, LoadingUI)** |
+| :--- |
 # **상속받아 사용 가능한 기능들**
 
 ## **속성**
@@ -209,15 +215,15 @@ NPC를 새롭게 생성할 수 있어요. (생성할 NPC 이름 설정, 지정�
 | **OnLeavePlayer** |
 | :--- |
 
-플레이어 게임에서 나갈 때 호출되는 이벤트에요. 
+플레이어가 게임에서 나갈 때 호출되는 이벤트에요. 
 | **OnDeathCharacter** |
 | :--- |
 
-케릭터 죽을 때 호출되는 이벤트에요. 
+케릭터가 죽을 때 호출되는 이벤트에요. 
 | **OnSpawnCharacter** |
 | :--- |
 
-케릭터 스폰 될 때 호출되는 이벤트에요. 
+케릭터가 스폰 될 때 호출되는 이벤트에요. 
 
 샘플 
 
