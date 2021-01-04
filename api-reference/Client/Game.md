@@ -20,6 +20,10 @@
 | :--- |
 
 현재 게임에 참여하고 있는 플레이어의 수를 얻을 수 있어요. 
+| **vector<Player> GetAllPlayer()** |
+| :--- |
+
+모든 플레이어 얻을 수 있어요. 
 | **SendEventToServer(string EventName, Args ... )** |
 | :--- |
 
@@ -32,30 +36,14 @@
 | :--- |
 
 설정된 애니메이션 상태머신을 얻을 수 있어요. (얻고 싶은 상태머신 이름) 
-| **SetCharacterAnimStateMachine(string CharacterSettingName, string AnimStateMachineSettingName)** |
+| **SetCharacterAnimStateMachine(RCharacterSetting CharacterSetting, RAnimStateMachineSetting AnimSetting)** |
 | :--- |
 
-해당 캐릭터의 애니메이션 상태 머신을 사용하게 할 수 있어요. (설정한 캐릭터세팅 이름, 애니메이션 상태 머신 이름) 
+해당 캐릭터 설정으로 생성되는 캐릭터의 애니메이션 상태 머신을 설정 할 수 있어요. (대상 캐릭터 설정, 사용 할 애니메이션 상태 설정) 
 | **SetNPCAnimStateMachine(string NPCSettingName, string AnimStateMachineSettingName)** |
 | :--- |
 
 해당 NPC의 애니메이션 상태 머신 사용하게 할 수 있어요. (설정한 NPC 이름, 애니메이션 상태 머신 이름) 
-| **RModeCameraSetting AddCameraSetting(string CameraSettingName)** |
-| :--- |
-
-카메라의 세팅을 추가해요. (설정할 카메라 세팅 이름) 
-| **ChangeCameraOffsetDelta(Vector Offset, float Time)** |
-| :--- |
-
-카메라를 주어진 시간 동안 해당 값만큼 이동 시킬 수 있어요. (이동 시킬 Vector 값, 이동 시간) 
-| **ChangeCameraOffsetAbs(Vector Offset, float Time)** |
-| :--- |
-
-카메라를 주어진 시간 동안 해당 값으로 이동시켜요. (이동 할 Vector 값, 이동 시간) 
-| **RestoreCameraOffset(float Time)** |
-| :--- |
-
-카메라를 초기 Offset으로 주어진 시간 동안 이동 시켜요. (이동 시간) 
 | **ObjectFXClient CreateFX(ObjectFXClient FXObject, Vetor Location)** |
 | :--- |
 
@@ -92,6 +80,22 @@ FX를 제거시켜요. (제거할 FX 오브젝트)
 | :--- |
 
 지정된 위치에 오브젝트를 생성 시켜요. (생성 할 Object, 생성 할 위치 Vector) 
+| **CreateUIScene(RScriptUISceneClient Source)** |
+| :--- |
+
+Source와 같은 UIScene을 생성한다. 
+| **CreateUIScene(string UISceneName, RScriptUISceneClient Source)** |
+| :--- |
+
+Source와 같은 UIScene을 생성 후, UISceneName을 생성된 오브젝트 이름으로 설정한다. (생성할 오브젝트의 이름 UISceneName, 생성 할 오브젝트 Source) 
+| **Vector GetMouseHitLocation()** |
+| :--- |
+
+자신의 마우스 2D 위치에서 월드에 충돌된 3D위치 좌표를 얻을 수 있어요. 
+| **Object GetMouseHitObject()** |
+| :--- |
+
+자신의 마우스 2D 위치에서 월드에 충돌된 Object를 얻어 올 수 있어요. 
 # **상속받아 사용 가능한 기능들**
 
 ## **속성**
@@ -161,7 +165,7 @@ end
 
 -- Object의 "CurBullet" 라는 Value가 변경되면 ChangeCurBullet 함수에 연결 
 
-Object:ConnectChangeEventFunction("CurBullet", ChangeCurBullet)   
+Object:ConnectChangeEventFunction("CurBullet", LuaScriptFunction ChangeCurBullet)   
 
 ``` 
 | **AddTimeEvent(String EventName, float Time, LuaScriptFunction EventFuunction)** |
@@ -206,6 +210,10 @@ Object:ConnectChangeEventFunction("CurBullet", ChangeCurBullet)
 | :--- |
 
 오브젝트를 삭제할 수 있어요. (삭제할 오브젝트) 
+| **List<HitResult> LineTraceList(Vector Start, Vector Dir, float Distance)** |
+| :--- |
+
+설정된 시작 지점에서 원하는 방향으로 지정된 거리 만큼의 충돌 리스트들을 가져올 수 있어요. (시작 지점 Vector, 목표 지점 Vector, 거리 값) 
 | **string GetName()** |
 | :--- |
 
@@ -222,6 +230,10 @@ Object:ConnectChangeEventFunction("CurBullet", ChangeCurBullet)
 | :--- |
 
 이름으로 형제 객체를 얻을 수 있어요. (찾고싶은 형제 객체 이름) 
+| **List<RScriptObject> GetChildList()** |
+| :--- |
+
+자식 객체의 리스트를 얻을 수 있어요. 
 | **bool IsCharacter()** |
 | :--- |
 
@@ -242,6 +254,10 @@ Sound인지 확인할 수 있어요.
 | :--- |
 
 포인트 라이트인지 확인할 수 있어요. 
+| **bool IsSpotLight()** |
+| :--- |
+
+스포트 라이트인지 확인할 수 있어요. 
 | **bool IsSurfaceUI()** |
 | :--- |
 
@@ -274,6 +290,14 @@ Collider인지 확인할 수 있어요.
 | :--- |
 
 Widget인지 확인할 수 있어요. 
+| **bool IsCamera()** |
+| :--- |
+
+Widget인지 확인할 수 있어요. 
+| **bool IsValid()** |
+| :--- |
+
+해당 오브젝트가 유효한지 확인 할 수있어요. 
 | **AddReplicateValue(string ValueName, Vector Data, ReplicateType Type, float Time, bool bSaveToStorage)** |
 | :--- |
 

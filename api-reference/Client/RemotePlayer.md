@@ -28,6 +28,10 @@
 | :--- |
 
 플레이어 자신의 플레이어인지 확인할 수 있어요. 
+| **Item GetEquipItem(string EquipSlot)** |
+| :--- |
+
+해당 플레이어 캐릭터가 착용중인 아이템을 얻을 수 있어요. (장착 중인 아이템 슬롯) 
 # **상속받아 사용 가능한 기능들**
 
 ## **속성**
@@ -57,7 +61,7 @@ end
 
 -- Object의 "CurBullet" 라는 Value가 변경되면 ChangeCurBullet 함수에 연결 
 
-Object:ConnectChangeEventFunction("CurBullet", ChangeCurBullet)   
+Object:ConnectChangeEventFunction("CurBullet", LuaScriptFunction ChangeCurBullet)   
 
 ``` 
 | **AddTimeEvent(String EventName, float Time, LuaScriptFunction EventFuunction)** |
@@ -86,6 +90,10 @@ Object:ConnectChangeEventFunction("CurBullet", ChangeCurBullet)
 | :--- |
 
 이름으로 형제 객체를 얻을 수 있어요. (찾고싶은 형제 객체 이름) 
+| **List<RScriptObject> GetChildList()** |
+| :--- |
+
+자식 객체의 리스트를 얻을 수 있어요. 
 | **bool IsCharacter()** |
 | :--- |
 
@@ -106,6 +114,10 @@ Sound인지 확인할 수 있어요.
 | :--- |
 
 포인트 라이트인지 확인할 수 있어요. 
+| **bool IsSpotLight()** |
+| :--- |
+
+스포트 라이트인지 확인할 수 있어요. 
 | **bool IsSurfaceUI()** |
 | :--- |
 
@@ -138,6 +150,14 @@ Collider인지 확인할 수 있어요.
 | :--- |
 
 Widget인지 확인할 수 있어요. 
+| **bool IsCamera()** |
+| :--- |
+
+Widget인지 확인할 수 있어요. 
+| **bool IsValid()** |
+| :--- |
+
+해당 오브젝트가 유효한지 확인 할 수있어요. 
 | **AddReplicateValue(string ValueName, Vector Data, ReplicateType Type, float Time, bool bSaveToStorage)** |
 | :--- |
 

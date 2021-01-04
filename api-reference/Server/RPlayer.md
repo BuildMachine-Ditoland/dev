@@ -18,18 +18,22 @@
 | :--- |
 
 플레이어의 남은 목숨 개수를 얻을 수 있어요. 
-| **RequestDie()** |
+| **KillCharacter()** |
 | :--- |
 
 플레이어 캐릭터를 죽게 하는 함수에요. 
-| **RespawnTime()** |
+| **RespawnCharacter()** |
 | :--- |
 
-플레이어 캐릭터의 리스폰 시간을 지정할 수 있어요. 
-| **SetCheckPoint(string SpawnPointName)** |
+플레이어 캐릭터를 리스폰 시키는 함수에요. 
+| **SetCheckPoint(RSpawnPoint SpawnPointObject)** |
 | :--- |
 
-플레이어의 체크 포인트를 설정할 수 있어요 (설정할 스폰 포인트 이름) 
+플레이어의 체크 포인트를 설정할 수 있어요 (설정할 스폰 포인트 오브젝트) 
+| **SetCheckPoint(RWorldObject WorldObject)** |
+| :--- |
+
+플레이어의 체크 포인트를 설정할 수 있어요 (설정할 월드 오브젝트) 
 | **SetFreeCamMode(bool bFreeCam)** |
 | :--- |
 
@@ -46,6 +50,10 @@
 | :--- |
 
 플레이어에게 아이템을 줄 수 있어요. (아이템 이름) 
+| **int GetInventorySize()** |
+| :--- |
+
+플레이어의 인벤토리 사이즈를 얻을 수 있어요. 
 | **ClearItem()** |
 | :--- |
 
@@ -107,7 +115,7 @@ end
 
 -- Object의 "CurBullet" 라는 Value가 변경되면 ChangeCurBullet 함수에 연결 
 
-Object:ConnectChangeEventFunction("CurBullet", ChangeCurBullet)   
+Object:ConnectChangeEventFunction("CurBullet", LuaScriptFunction ChangeCurBullet)   
 
 ``` 
 | **AddTimeEvent(String EventName, float Time, LuaScriptFunction EventFuunction)** |
@@ -136,6 +144,10 @@ Object:ConnectChangeEventFunction("CurBullet", ChangeCurBullet)
 | :--- |
 
 이름으로 형제 객체를 얻을 수 있어요. (찾고싶은 형제 객체 이름) 
+| **List<RScriptObject> GetChildList()** |
+| :--- |
+
+자식 객체의 리스트를 얻을 수 있어요. 
 | **bool IsCharacter()** |
 | :--- |
 
@@ -156,6 +168,10 @@ Sound인지 확인할 수 있어요.
 | :--- |
 
 포인트 라이트인지 확인할 수 있어요. 
+| **bool IsSpotLight()** |
+| :--- |
+
+스포트 라이트인지 확인할 수 있어요. 
 | **bool IsSurfaceUI()** |
 | :--- |
 
@@ -188,6 +204,14 @@ Collider인지 확인할 수 있어요.
 | :--- |
 
 Widget인지 확인할 수 있어요. 
+| **bool IsCamera()** |
+| :--- |
+
+Widget인지 확인할 수 있어요. 
+| **bool IsValid()** |
+| :--- |
+
+해당 오브젝트가 유효한지 확인 할 수있어요. 
 | **AddReplicateValue(string ValueName, Vector Data, ReplicateType Type, float Time, bool bSaveToStorage)** |
 | :--- |
 

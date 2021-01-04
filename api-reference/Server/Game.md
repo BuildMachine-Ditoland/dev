@@ -20,26 +20,34 @@
 | :--- |
 
 게임에서 사용 할 스폰 포인트 그룹을 추가할 수 있어요. (추가할 스폰 포인트 그룹 이름) 
-| **RSpawnPoint AddSpawnPoint(string SpawnPointName, RScriptWorldObject* RWorldObject)** |
+| **RSpawnPoint AddSpawnPoint(RScriptWorldObject* RWorldObject)** |
 | :--- |
 
-게임에서 사용 할 스폰 포인트를 추가할 수 있어요. (추가할 스폰 포인트 이름, 스폰 포인트로 지정 할 오브젝트) 
-| **RSpawnPoint AddSpawnPointAtGroup(string SpawnPointGroupName, string SpawnPointName, RScriptWorldObject* RWorldObject)** |
+게임에서 사용 할 스폰 포인트를 추가할 수 있어요. (스폰 포인트로 지정 할 오브젝트) 
+| **RSpawnPoint AddSpawnPointAtGroup(string SpawnPointGroupName, RScriptWorldObject* RWorldObject)** |
 | :--- |
 
-스폰포인트 그룹에 스폰 포인트를 추가할 수 있어요. (스폰포인트를 추가할 그룹 이름, 스폰 포인트 이름, 스폰 포인트를 할 오브젝트) 
-| **SetSpawnType(ModeSpawnType InSpawnType, string InSpawnObjectName)** |
+스폰포인트 그룹에 스폰 포인트를 추가할 수 있어요. (스폰포인트를 추가할 그룹 이름, 이름, 스폰 포인트를 할 오브젝트) 
+| **SetSpawnType(ModeSpawnType InSpawnType)** |
 | :--- |
 
-스폰포인트의 스폰 타입을 설정할 수 있어요. ( [Enum.SpawnType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/spawntype), 설정할 스폰포인트 이름) 
+게임의 스폰 타입을 설정할 수 있어요. ( [Enum.SpawnType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/spawntype)) 
+| **SetUsingSpawnPointGroup(RSpawnPointGroup* SpawnPointGroup)** |
+| :--- |
+
+게임에 적용 할 스폰 그룹을 설정할 수 있어요. (게임에 적용 할 스폰포인트 그룹 오브젝트) 
+| **SetUsingSpawnPoint(RSpawnPoint* SpawnPoint)** |
+| :--- |
+
+게임에 적용 할 스폰 포인트를 설정할 수 있어요. (게임에 적용 할 스폰포인트 오브젝트) 
 | **SetDefaultSpawnPos(FVector Pos)** |
 | :--- |
 
 설정된 스폰 포인트가 없을 경우 지정한 위치에 스폰되도록 해요. (스폰할 위치 Vector) 
-| **RModeCharacterSetting AddCharacterSetting(string SettingName)** |
+| **SetUsingCharacterSetting(RCharacterSetting CharacterSettingObject)** |
 | :--- |
 
-게임에서 사용 할 캐릭터 설정을 추가할 수 있어요. (추가할 이름 설정) 
+게임에서 적용 할 캐릭터 설정을 설정 할 수 있어요. (게임에 적용 할 캐릭터 설정 오브젝트) 
 | **Team AddTeam(string TeamName)** |
 | :--- |
 
@@ -116,10 +124,10 @@
 | :--- |
 
 지정한 위치에 클라이언트와 동기화 되지 않는 오브젝트를 생성할 수 있어요. (생성 할 오브젝트, 생성 위치 Vector) 
-| **ObjectSpawner AddObjectSpawner(RObjectScript RObjectScript, EObjectSelectType SpawnType, float SpawnTime, int MaxCount)** |
+| **ObjectSpawner AddObjectSpawner(RObjectScript RObjectScript, EObjectSelectType ObjectSelectType, bool RandomPosition, float SpawnTime, int MaxCount)** |
 | :--- |
 
-오브젝트 스포너 생성할 수 있어요. (스폰 할 오브젝트, [Enum.SpawnType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/spawntype), 스폰 시간, 최대 스폰 개수) 
+오브젝트 스포너 생성할 수 있어요. (스폰 할 오브젝트, [Enum.ObjectSelectType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/spawntype), 스폰 시간, 최대 스폰 개수) 
 | **ObjectSelector CreateObjectSelector(EObjectSelectType SelectType)** |
 | :--- |
 
@@ -257,7 +265,7 @@ end
 
 -- Object의 "CurBullet" 라는 Value가 변경되면 ChangeCurBullet 함수에 연결 
 
-Object:ConnectChangeEventFunction("CurBullet", ChangeCurBullet)   
+Object:ConnectChangeEventFunction("CurBullet", LuaScriptFunction ChangeCurBullet)   
 
 ``` 
 | **AddTimeEvent(String EventName, float Time, LuaScriptFunction EventFuunction)** |
@@ -302,6 +310,10 @@ Object:ConnectChangeEventFunction("CurBullet", ChangeCurBullet)
 | :--- |
 
 오브젝트를 삭제할 수 있어요. (삭제할 오브젝트) 
+| **List<HitResult> LineTraceList(Vector Start, Vector Dir, float Distance)** |
+| :--- |
+
+설정된 시작 지점에서 원하는 방향으로 지정된 거리 만큼의 충돌 리스트들을 가져올 수 있어요. (시작 지점 Vector, 목표 지점 Vector, 거리 값) 
 | **string GetName()** |
 | :--- |
 
@@ -318,6 +330,10 @@ Object:ConnectChangeEventFunction("CurBullet", ChangeCurBullet)
 | :--- |
 
 이름으로 형제 객체를 얻을 수 있어요. (찾고싶은 형제 객체 이름) 
+| **List<RScriptObject> GetChildList()** |
+| :--- |
+
+자식 객체의 리스트를 얻을 수 있어요. 
 | **bool IsCharacter()** |
 | :--- |
 
@@ -338,6 +354,10 @@ Sound인지 확인할 수 있어요.
 | :--- |
 
 포인트 라이트인지 확인할 수 있어요. 
+| **bool IsSpotLight()** |
+| :--- |
+
+스포트 라이트인지 확인할 수 있어요. 
 | **bool IsSurfaceUI()** |
 | :--- |
 
@@ -370,6 +390,14 @@ Collider인지 확인할 수 있어요.
 | :--- |
 
 Widget인지 확인할 수 있어요. 
+| **bool IsCamera()** |
+| :--- |
+
+Widget인지 확인할 수 있어요. 
+| **bool IsValid()** |
+| :--- |
+
+해당 오브젝트가 유효한지 확인 할 수있어요. 
 | **AddReplicateValue(string ValueName, Vector Data, ReplicateType Type, float Time, bool bSaveToStorage)** |
 | :--- |
 

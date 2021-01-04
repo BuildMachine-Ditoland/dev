@@ -16,7 +16,7 @@
 인벤토리 아이템이 변화할 때 호출되는 이벤트에요. 
 ## **함수**
 
-| **Move(FVector Dir, float Value)** |
+| **MoveDir(FVector Dir, float Value)** |
 | :--- |
 
 주어진 방향으로 일정 값만큼 캐릭터를 이동시켜요. 설정된 이동 타입에 관계없이 동작해요. (원하는 이동방향 Vector 값, 이동할 크기) 
@@ -36,6 +36,10 @@
 | :--- |
 
 캐릭터의 바라보는 상하 방향을 설정해요. (-1 밑에 ~ 1 위에 방향 값) 
+| **ZoomInOut(float Value)** |
+| :--- |
+
+카메라의 줌을 설정할 수 있어요. (설정할 카메라 줌 크기 값) 
 | **Jump()** |
 | :--- |
 
@@ -52,6 +56,10 @@
 | :--- |
 
 자신의 카메라 움직임 컨트롤 가능 여부를 결정해요. (활성, 비활성 여부) 
+| **bool bEnableCameraControl** |
+| :--- |
+
+자신의 카메라 컨트롤 가능여부를 얻거나 세팅할 수 있어요. 
 | **SetForwardMoveType(ForwardMoveType Type)** |
 | :--- |
 
@@ -110,6 +118,42 @@ ForwardMoveType::UpDown - 상, 하로만 이동해요. (엘리베이터, 사다�
 | :--- |
 
 지정된 칸의 아이템을 월드에 드랍시켜요. (월드 드랍할 아이템칸) 
+| **class FRScriptWorldObject* GetCurrentCamera()** |
+| :--- |
+
+현재 camera(FRScriptObjectCameraClient)를 얻는다. 
+| **class FRScriptWorldObject* SetCurrentCamera(RScriptWorldObject SourceCamera)** |
+| :--- |
+
+SourceCamera를 복사하고, 복사된 Camera로 전환 합니다. 이전 camera는 삭제됩니다.(생성 할 SourceObject) 
+| **bool ApplyCurrentCamera(class FRScriptWorldObject* ScriptWorldObject)** |
+| :--- |
+
+ScriptWorldObject or ScriptWorldObject의 child에 camera가 있다면 현재 camera로 전환 
+| **Vector GetControlRotation()** |
+| :--- |
+
+Control 각도를 얻을 수 있어요 (Vector.X : Pitch, Vector.Y : Yaw, Vector.Z : Roll) 
+| **SetControlRotation(Vector)** |
+| :--- |
+
+Control 각도를 설정해요 (Vector.X : Pitch, Vector.Y : Yaw, Vector.Z : Roll) 
+| **ResetIgnoreLookInput()** |
+| :--- |
+
+Stops ignoring look input by resetting the ignore look input state 
+| **SetIgnoreLookInput(RScriptValueBool InValue)** |
+| :--- |
+
+Locks or unlocks look input, consecutive calls stack up and require the same amount of calls to undo, or can all be undone using ResetIgnoreLookInput. 
+| **bool bShowMouseCursor** |
+| :--- |
+
+마우스 커서를 보이거나 숨길 수 있어요, 
+| **bool bCaptureMousePermanently** |
+| :--- |
+
+마우스를 캡쳐한 상태를 유지합니다. 
 # **상속받아 사용 가능한 기능들**
 
 ## **속성**
@@ -139,7 +183,7 @@ end
 
 -- Object의 "CurBullet" 라는 Value가 변경되면 ChangeCurBullet 함수에 연결 
 
-Object:ConnectChangeEventFunction("CurBullet", ChangeCurBullet)   
+Object:ConnectChangeEventFunction("CurBullet", LuaScriptFunction ChangeCurBullet)   
 
 ``` 
 ## **함수**
@@ -160,6 +204,10 @@ Object:ConnectChangeEventFunction("CurBullet", ChangeCurBullet)
 | :--- |
 
 이름으로 형제 객체를 얻을 수 있어요. (찾고싶은 형제 객체 이름) 
+| **List<RScriptObject> GetChildList()** |
+| :--- |
+
+자식 객체의 리스트를 얻을 수 있어요. 
 | **bool IsCharacter()** |
 | :--- |
 
@@ -180,6 +228,10 @@ Sound인지 확인할 수 있어요.
 | :--- |
 
 포인트 라이트인지 확인할 수 있어요. 
+| **bool IsSpotLight()** |
+| :--- |
+
+스포트 라이트인지 확인할 수 있어요. 
 | **bool IsSurfaceUI()** |
 | :--- |
 
@@ -212,6 +264,14 @@ Collider인지 확인할 수 있어요.
 | :--- |
 
 Widget인지 확인할 수 있어요. 
+| **bool IsCamera()** |
+| :--- |
+
+Widget인지 확인할 수 있어요. 
+| **bool IsValid()** |
+| :--- |
+
+해당 오브젝트가 유효한지 확인 할 수있어요. 
 | **AddReplicateValue(string ValueName, Vector Data, ReplicateType Type, float Time, bool bSaveToStorage)** |
 | :--- |
 

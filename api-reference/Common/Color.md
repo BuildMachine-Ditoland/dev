@@ -6,16 +6,12 @@ Color 객체에요.
 | :--- |
 
 Color를 생성해요 
-| **Color.new(number A, number R, number G, number B)** |
+| **Color.new(number R, number G, number B, number A)** |
 | :--- |
 
-Color를 A, R, G, B 값으로 세팅하여 생성해요 
+Color를 R, G, B, A 값으로 세팅하여 생성해요 
 ## **속성**
 
-| **number A** |
-| :--- |
-
-투명도를 나타내요. (0 ~ 255) 
 | **number R** |
 | :--- |
 
@@ -28,6 +24,10 @@ Color를 A, R, G, B 값으로 세팅하여 생성해요
 | :--- |
 
 파란 색을 나타내요. (0 ~ 255) 
+| **number A** |
+| :--- |
+
+투명도를 나타내요. (0 ~ 255) 
 
 샘플 
 

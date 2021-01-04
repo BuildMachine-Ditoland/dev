@@ -6,10 +6,16 @@
 | :--- |
 
 현재 캐릭터가 죽어있는 상태인지 알 수 있어요. 
+
+해당 캐릭터를 소유 하고 있는 플레이어를 얻을 수 있어요. 
 | **string GetPlayerName()** |
 | :--- |
 
 해당 캐릭터를 소유 하고 있는 플레이어의 이름을 얻을 수 있어요. 
+| **float GetMoveSpeed()** |
+| :--- |
+
+해당 캐릭터의 현재 이동 속도를 얻을 수 있어요. 
 | **SetMaxSpeed(float Speed)** |
 | :--- |
 
@@ -22,18 +28,30 @@
 | :--- |
 
 공중에서 캐릭터 컨트롤 비율을 설정할 수 있어요. (설정할 비율 값) 
-| **MoveToSpawnPoint(String SpawnPointName, bool ResetRot)** |
+| **MoveToSpawnPoint(RScriptSpawnPoint SpawnPointObjecrt, bool ResetRot)** |
 | :--- |
 
-캐릭터를 특정 스폰 위치로 이동시킬 수 있어요. (이동 할 스폰포인트 이름, 방향 Rot 초기화 여부) 
+캐릭터를 특정 스폰 위치로 이동시킬 수 있어요. (이동 할 스폰포인트 오브젝트, 방향 Rot 초기화 여부) 
 | **SetTransform(Matrix)** |
 | :--- |
 
 캐릭터의 위치, 회전을 설정할 수 있어요. (설정할 [Matrix](https://ditoland-utplus.gitbook.io/ditoland/api-reference/common/matrix)값 ) 
+| **GetTransform(Matrix)** |
+| :--- |
+
+매트릭스를 얻을 수 있어요. (설정할 [Matrix](https://ditoland-utplus.gitbook.io/ditoland/api-reference/common/matrix)값 ) 
+| **void SetLocation(Vector Location)** |
+| :--- |
+
+(Deprecated)캐릭터의 현재 위치를 설정 수 있어요. (설정할 Vector 값) 
 | **Vector GetLocation()** |
 | :--- |
 
-캐릭터의 현재 위치를 얻을 수 있어요. 
+(Deprecated)캐릭터의 현재 위치를 얻을 수 있어요. 
+| **Vector GetForwardVector()** |
+| :--- |
+
+(Deprecated)캐릭터의 현재 바라보는 방향을 얻을 수 있어요. 
 | **void BeginDriving(number ModeObjectKey)** |
 | :--- |
 
@@ -46,6 +64,14 @@
 | :--- |
 
 캐릭터를 오브젝트에서 떨어 뜨려요. 
+| **SetOrientRotationToMovement(bool bEnable)** |
+| :--- |
+
+캐릭터가 바라보는 방향을 이동하는 방향으로 바라 보게 설정해요. (설정 여부) 
+| **AddForce(Vector Force)** |
+| :--- |
+
+캐릭터에 물리적인 힘을 가할 수 있어요. (힘을 가할 Vector 값) 
 # **상속받아 사용 가능한 기능들**
 
 ## **속성**
@@ -75,7 +101,7 @@ end
 
 -- Object의 "CurBullet" 라는 Value가 변경되면 ChangeCurBullet 함수에 연결 
 
-Object:ConnectChangeEventFunction("CurBullet", ChangeCurBullet)   
+Object:ConnectChangeEventFunction("CurBullet", LuaScriptFunction ChangeCurBullet)   
 
 ``` 
 | **AddTimeEvent(String EventName, float Time, LuaScriptFunction EventFuunction)** |
@@ -104,6 +130,10 @@ Object:ConnectChangeEventFunction("CurBullet", ChangeCurBullet)
 | :--- |
 
 이름으로 형제 객체를 얻을 수 있어요. (찾고싶은 형제 객체 이름) 
+| **List<RScriptObject> GetChildList()** |
+| :--- |
+
+자식 객체의 리스트를 얻을 수 있어요. 
 | **bool IsCharacter()** |
 | :--- |
 
@@ -124,6 +154,10 @@ Sound인지 확인할 수 있어요.
 | :--- |
 
 포인트 라이트인지 확인할 수 있어요. 
+| **bool IsSpotLight()** |
+| :--- |
+
+스포트 라이트인지 확인할 수 있어요. 
 | **bool IsSurfaceUI()** |
 | :--- |
 
@@ -156,6 +190,14 @@ Collider인지 확인할 수 있어요.
 | :--- |
 
 Widget인지 확인할 수 있어요. 
+| **bool IsCamera()** |
+| :--- |
+
+Widget인지 확인할 수 있어요. 
+| **bool IsValid()** |
+| :--- |
+
+해당 오브젝트가 유효한지 확인 할 수있어요. 
 | **AddReplicateValue(string ValueName, Vector Data, ReplicateType Type, float Time, bool bSaveToStorage)** |
 | :--- |
 

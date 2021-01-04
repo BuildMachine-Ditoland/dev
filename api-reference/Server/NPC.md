@@ -14,7 +14,7 @@
 | :--- |
 
 생성 후 매 프레임마다 호출되는 이벤트에요. 
-| **OnDestoryEvent** |
+| **OnDestroyEvent** |
 | :--- |
 
 삭제될 때 호출되는 이벤트에요. 
@@ -37,7 +37,7 @@ end
 
 -- Object의 "CurBullet" 라는 Value가 변경되면 ChangeCurBullet 함수에 연결 
 
-Object:ConnectChangeEventFunction("CurBullet", ChangeCurBullet)   
+Object:ConnectChangeEventFunction("CurBullet", LuaScriptFunction ChangeCurBullet)   
 
 ``` 
 ## **함수**
@@ -45,11 +45,19 @@ Object:ConnectChangeEventFunction("CurBullet", ChangeCurBullet)
 | **SetLocation(Vector position)** |
 | :--- |
 
-위치를 설정할 수 있어요. (위치 값) 
+(Deprecated)위치를 설정할 수 있어요. (위치 값) 
 | **SetRotation(Vector Rotator)** |
 | :--- |
 
-회전을 설정할 수 있어요. (회전 값) 
+(Deprecated)회전을 설정할 수 있어요. (회전 값) 
+| **Matrix GetTransform()** |
+| :--- |
+
+매트릭스를 얻을 수 있어요. 
+| **SetTransform(Matrix)** |
+| :--- |
+
+매트릭스를 설정할 수 있어요. (Matrix 값) 
 | **string GetName()** |
 | :--- |
 
@@ -66,6 +74,10 @@ Object:ConnectChangeEventFunction("CurBullet", ChangeCurBullet)
 | :--- |
 
 이름으로 형제 객체를 얻을 수 있어요. (찾고싶은 형제 객체 이름) 
+| **List<RScriptObject> GetChildList()** |
+| :--- |
+
+자식 객체의 리스트를 얻을 수 있어요. 
 | **bool IsCharacter()** |
 | :--- |
 
@@ -86,6 +98,10 @@ Sound인지 확인할 수 있어요.
 | :--- |
 
 포인트 라이트인지 확인할 수 있어요. 
+| **bool IsSpotLight()** |
+| :--- |
+
+스포트 라이트인지 확인할 수 있어요. 
 | **bool IsSurfaceUI()** |
 | :--- |
 
@@ -118,6 +134,14 @@ Collider인지 확인할 수 있어요.
 | :--- |
 
 Widget인지 확인할 수 있어요. 
+| **bool IsCamera()** |
+| :--- |
+
+Widget인지 확인할 수 있어요. 
+| **bool IsValid()** |
+| :--- |
+
+해당 오브젝트가 유효한지 확인 할 수있어요. 
 | **AddReplicateValue(string ValueName, Vector Data, ReplicateType Type, float Time, bool bSaveToStorage)** |
 | :--- |
 

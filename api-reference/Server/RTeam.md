@@ -10,10 +10,10 @@
 팀의 최대 인원을 설정할 수 있어요. 
 ## **함수**
 
-| **AddUsingCharacter(string CharacterSetting)** |
+| **AddUsingCharacter(RCharacterSetting CharacterSettingObject)** |
 | :--- |
 
-팀에서 사용될 캐릭터 설정을 추가할 수 있어요. (캐릭터세팅 이름) 
+팀에서 사용될 캐릭터 설정을 추가할 수 있어요. (캐릭터 설정 오브젝트) 
 
 Game:AddCharacterSetting으로 추가한 캐릭터설정 중에서만 가능해요 
 | **SetUsingSpawnPointGroup(string InSpawnPointGroup)** |
@@ -22,16 +22,24 @@ Game:AddCharacterSetting으로 추가한 캐릭터설정 중에서만 가능해�
 팀에서 사용될 스폰 포인트 그룹을 추가할 수 있어요. (스폰 그룹 이름) 
 
 Game:AddSpawnPointGroup으로 추가한 스폰 그룹 중에서만 가능해요 
-| **AddFixedCharacter(string CharacterSetting)** |
+| **AddFixedCharacter(RCharacterSetting CharacterSettingObject)** |
 | :--- |
 
-팀 고정 캐릭터설정을 추가할 수 있어요. (캐릭터 세팅 이름) 
+팀 고정 캐릭터설정을 추가할 수 있어요. (캐릭터 설정 오브젝트) 
 
+<<<<<<< HEAD:api-reference/Server/RTeam.md
 Game:AddCharacterSetting으로 추가한 캐릭터설정 중에서만 가능해요 
 | **AddFixedSpawnPoint(string SpawnPoint)** |
 | :--- |
 
 팀 고정 스폰 포인트를 추가할 수 있어요. (Game에 AddSpawnPoint 함수로 추가한 스폰 포인트중 이름) 
+=======
+[Game:AddCharacterSetting](https://ditoland-utplus.gitbook.io/ditoland/api-reference/server/game)으로 추가한 캐릭터설정 중에서만 가능해요 
+| **AddFixedSpawnPoint(RSpawnPoint* SpawnPoint)** |
+| :--- |
+
+팀 고정 스폰 포인트를 추가할 수 있어요. (스폰 포인트 오브젝트) 
+>>>>>>> 40c9f3f57fdf11af7d887004a46e8c90d3bfc1f1:api-reference/Server/Team.md
 | **ReviveTeamPlayerCharacter()** |
 | :--- |
 
@@ -67,7 +75,7 @@ end
 
 -- Object의 "CurBullet" 라는 Value가 변경되면 ChangeCurBullet 함수에 연결 
 
-Object:ConnectChangeEventFunction("CurBullet", ChangeCurBullet)   
+Object:ConnectChangeEventFunction("CurBullet", LuaScriptFunction ChangeCurBullet)   
 
 ``` 
 ## **함수**
@@ -88,6 +96,10 @@ Object:ConnectChangeEventFunction("CurBullet", ChangeCurBullet)
 | :--- |
 
 이름으로 형제 객체를 얻을 수 있어요. (찾고싶은 형제 객체 이름) 
+| **List<RScriptObject> GetChildList()** |
+| :--- |
+
+자식 객체의 리스트를 얻을 수 있어요. 
 | **bool IsCharacter()** |
 | :--- |
 
@@ -108,6 +120,10 @@ Sound인지 확인할 수 있어요.
 | :--- |
 
 포인트 라이트인지 확인할 수 있어요. 
+| **bool IsSpotLight()** |
+| :--- |
+
+스포트 라이트인지 확인할 수 있어요. 
 | **bool IsSurfaceUI()** |
 | :--- |
 
@@ -140,6 +156,14 @@ Collider인지 확인할 수 있어요.
 | :--- |
 
 Widget인지 확인할 수 있어요. 
+| **bool IsCamera()** |
+| :--- |
+
+Widget인지 확인할 수 있어요. 
+| **bool IsValid()** |
+| :--- |
+
+해당 오브젝트가 유효한지 확인 할 수있어요. 
 | **AddReplicateValue(string ValueName, Vector Data, ReplicateType Type, float Time, bool bSaveToStorage)** |
 | :--- |
 
