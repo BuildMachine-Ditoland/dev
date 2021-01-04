@@ -12,10 +12,6 @@
 | :--- |
 
 캐릭터의 특정 위치에 FX를 생성할 수 있어요. (생성 할 FX 오브젝트, [Enum.Bone.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/bone)) 
-| **ObjectFXClient CreateFX(String FXName, Bone BoneType)** |
-| :--- |
-
-캐릭터의 특정 위치에 FX를 생성할 수 있어요. (생성 할 FX 이름, [Enum.Bone.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/bone)) 
 | **ObjectSoundClient CreateSound(ObjectSoundClient SoundObject)** |
 | :--- |
 

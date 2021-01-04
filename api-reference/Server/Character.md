@@ -28,6 +28,18 @@
 | :--- |
 
 공중에서 캐릭터 컨트롤 비율을 설정할 수 있어요. (설정할 비율 값) 
+| **JumpEnable(bool CanJump)** |
+| :--- |
+
+캐릭터의 점프 가능 여부를 설정할 수 있어요. (점프 가능 여부) 
+| **MoveRightEnable(bool CanMove)** |
+| :--- |
+
+캐릭터의 좌우 이동 가능 여부를 설정할 수 있어요. (좌우 이동 가능 여부) 
+| **SetFlyMaxSpeed(float Speed)** |
+| :--- |
+
+캐릭터의 최대 공중 이동속도를 설정할 수 있어요. 기어오르기, 날기 등 (설정할 최대 공중 이동속도 값) 
 | **MoveToSpawnPoint(RScriptSpawnPoint SpawnPointObjecrt, bool ResetRot)** |
 | :--- |
 
@@ -59,11 +71,15 @@
 | **void AttachAt(RModeObject ModeObject)** |
 | :--- |
 
-캐릭터를 지정한 오브젝트에 부착시켜요. (부착 할 오브젝트) 
+캐릭터의 중점을 해당 오브젝트의 중점에 부착시켜요. (부착 할 오브젝트) 
+| **void AttachAtTop(RModeObject ModeObject)** |
+| :--- |
+
+캐릭터의 중점을 해당 오브젝트의 윗면 중점에 부착시켜요. (부착 할 오브젝트) 
 | **void Detach()** |
 | :--- |
 
-캐릭터를 오브젝트에서 떨어 뜨려요. 
+캐릭터를 오브젝트에서 떨어 뜨려요. (위치는 Attach할 때 캐릭터 위치로 옮겨져요) 
 | **SetOrientRotationToMovement(bool bEnable)** |
 | :--- |
 
@@ -72,6 +88,18 @@
 | :--- |
 
 캐릭터에 물리적인 힘을 가할 수 있어요. (힘을 가할 Vector 값) 
+| **SetEmissive(float Emissive)** |
+| :--- |
+
+캐릭터 Material의 Emissive 값을 변경 할 수 있어요. (자체 발광하는 수치 값) 
+| **SetVisible(bool bVisibility)** |
+| :--- |
+
+캐릭터의 가시성을 설정할 수 있어요. 
+| **SetControlMode(Enum ControlMode)** |
+| :--- |
+
+캐릭터의 컨트롤 모드를 변경할 수 있어요 (변경할 Enum.ControlMode.타입) 
 # **상속받아 사용 가능한 기능들**
 
 ## **속성**

@@ -46,7 +46,7 @@ Game:AddAnimStateMachineSetting 로 상태머신 생성한 후 Game:SetCharacter
 | :--- |
 
 애니메이션 상태 머신이 활성화 될 때 시작 애니메이션 상태를 설정할 수 있어요. (설정할 상태 이름) 
-| **ChangeAnimStateDirect_ForScript(string ChangeStateName)** |
+| **ChangeAnimState(string ChangeStateName)** |
 | :--- |
 
 해당 이름의 애니메이션 상태로 전이해요. (변경할 상태 이름) 

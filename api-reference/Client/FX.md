@@ -83,11 +83,11 @@ Object:ConnectChangeEventFunction("CurBullet", LuaScriptFunction ChangeCurBullet
 | **SetTransform(Matrix)** |
 | :--- |
 
-매트릭스를 설정할 수 있어요. (Matrix 값, bool 충돌 처리 여부) 
+현재 매트릭스에서 설정 된 매트릭스로 보간이 되는 매트릭스를 설정할 수 있어요 설정할 수 있어요. (Matrix 값, bool 충돌 처리 여부) 
 | **Teleport(Matrix)** |
 | :--- |
 
-매트릭스를 설정할 수 있어요. (Matrix 값) 
+순간이동 하는 매트릭스를 설정할 수 있어요. (Matrix 값) 
 | **Vector GetLocation()** |
 | :--- |
 
@@ -132,6 +132,10 @@ Object:ConnectChangeEventFunction("CurBullet", LuaScriptFunction ChangeCurBullet
 | :--- |
 
 (Deprecated)객체의 오른쪽 방향을 얻을 수 있어요. 
+| **bool Enable** |
+| :--- |
+
+객체 활성화 여부 
 | **AddForce(Vector Force)** |
 | :--- |
 
@@ -212,6 +216,10 @@ TransformTrack 이 적용되기 전의 최초 Transform으로 리셋시켜요.
 | :--- |
 
 Vehicle 객체를 얻을 수 있어요. 
+| **ConnectEventFunction(string customevent, LuaScriptFunction function) ** |
+| :--- |
+
+유저가 추가한 오브젝트 커스텀 이벤트에 함수를 연결할 수 있어요. (이벤트 이름, 연결 함수) 
 | **string GetName()** |
 | :--- |
 

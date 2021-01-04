@@ -2,10 +2,6 @@
 게임 전반적인 역할을 하는 객체에요. 여기 있는 기능들은 서버에서만 사용할 수 있어요. 
 ## **속성**
 
-| **MaxUserCount** |
-| :--- |
-
-게임 최대 인원을 설정할 수 있어요. 디폴트 값은 10 이에요. 
 ## **함수**
 
 | **AddUserCollisionType(string UserCollisionType)** |
@@ -108,23 +104,19 @@
 | :--- |
 
 해당 케릭터에게 아이템을 획득시켜줘요. (아이템을 획득할 캐릭터, 아이템 객체) 
-| **CreateSyncObject(string ObjectName, Vector Location)** |
-| :--- |
-
-지정한 위치에 클라이언트와 동기화되는 오브젝트를 생성할 수 있어요. (생성 할 오브젝트 이름, 생성할 위치 Vector) 
 | **CreateSyncObject(RScriptWorldObject WorldObject, Vector Location)** |
 | :--- |
 
 지정한 위치에 클라이언트와 동기화되는 오브젝트를 생성할 수 있어요. (생성 할 오브젝트, 생성할 위치 Vector) 
-| **CreateNoneSyncObject(string ObjectName, Vector Location)** |
+| **CreateSyncObject(RScriptWorldObject WorldObject, Vector Location, string Name, RScriptWorldObject Parent)** |
 | :--- |
 
-지정한 위치에 클라이언트와 동기화 되지 않는 오브젝트를 생성할 수 있어요. (생성 할 오브젝트 이름, 생성 위치 Vector) 
+지정한 위치에 클라이언트와 동기화되는 오브젝트를 생성할 수 있어요. (생성 할 오브젝트, 생성할 위치 Vector, 설정할 이름, 부모가 될 오브젝트) 
 | **CreateNoneSyncObject(RScriptWorldObject WorldObject, Vector Location)** |
 | :--- |
 
 지정한 위치에 클라이언트와 동기화 되지 않는 오브젝트를 생성할 수 있어요. (생성 할 오브젝트, 생성 위치 Vector) 
-| **ObjectSpawner AddObjectSpawner(RObjectScript RObjectScript, EObjectSelectType ObjectSelectType, bool RandomPosition, float SpawnTime, int MaxCount)** |
+| **ObjectSpawner AddObjectSpawner(RObjectScript RObjectScript, EObjectSelectType ObjectSelectType, float SpawnTime, int MaxCount)** |
 | :--- |
 
 오브젝트 스포너 생성할 수 있어요. (스폰 할 오브젝트, [Enum.ObjectSelectType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/spawntype), 스폰 시간, 최대 스폰 개수) 
@@ -136,7 +128,7 @@
 | :--- |
 
 지정한 영역의 오브젝트를 얻을 수 있어요. (영역 중앙 포인트 Vector, 영역 반지름 값) 
-| **UseWorldItem(RModeServerCharacter Character, ModeItem Item)** |
+| **bool UseWorldItem(RModeServerCharacter Character, ModeItem Item)** |
 | :--- |
 
 월드 아이템을 사용하게 할 수 있어요. (사용할 캐릭터, 사용할 아이템) 
@@ -310,6 +302,8 @@ Object:ConnectChangeEventFunction("CurBullet", LuaScriptFunction ChangeCurBullet
 | :--- |
 
 오브젝트를 삭제할 수 있어요. (삭제할 오브젝트) 
+
+서버에서 사용하면 서버와 클라 오브젝트 모두 삭제되고 클라에서 사용하면 클라 오브젝트만 삭제해요 
 | **List<HitResult> LineTraceList(Vector Start, Vector Dir, float Distance)** |
 | :--- |
 

@@ -90,6 +90,18 @@ Object:ConnectChangeEventFunction("CurBullet", LuaScriptFunction ChangeCurBullet
 | :--- |
 
 서버에서 클라로 얼마나 많이 동기화 할것인지에 대한 값을 설정할 수 있어요. (우선 순위 값) 
+| **BroadcastEvent(string CustomEventName, Args ...)** |
+| :--- |
+
+모든 클라이언트에게 오브젝트 커스텀 이벤트를 보내는 함수에요. (이벤트 이름, 전달할 변수들 ...) 
+| **SendEventToClient(string PlayerName, string CustomEventName, Args ...)** |
+| :--- |
+
+해당 클라이언트에게만 오브젝트 커스텀 이벤트를 보내는 함수에요. (이벤트 보낼 플레이어 이름, 이벤트 이름, 전달할 변수들 ...) 
+| **SetEnableCollsion(bool bIsEnable)** |
+| :--- |
+
+객체의 충돌 여부를 설정할 수 있어요. (충돌 여부) 
 | **int GetModeObjectKey()** |
 | :--- |
 
@@ -101,11 +113,11 @@ Object:ConnectChangeEventFunction("CurBullet", LuaScriptFunction ChangeCurBullet
 | **SetTransform(Matrix)** |
 | :--- |
 
-매트릭스를 설정할 수 있어요. (Matrix 값, bool 충돌 처리 여부) 
+현재 매트릭스에서 설정 된 매트릭스로 보간이 되는 매트릭스를 설정할 수 있어요 설정할 수 있어요. (Matrix 값, bool 충돌 처리 여부) 
 | **Teleport(Matrix)** |
 | :--- |
 
-매트릭스를 설정할 수 있어요. (Matrix 값) 
+순간이동 하는 매트릭스를 설정할 수 있어요. (Matrix 값) 
 | **Vector GetLocation()** |
 | :--- |
 
@@ -150,6 +162,10 @@ Object:ConnectChangeEventFunction("CurBullet", LuaScriptFunction ChangeCurBullet
 | :--- |
 
 (Deprecated)객체의 오른쪽 방향을 얻을 수 있어요. 
+| **bool Enable** |
+| :--- |
+
+객체 활성화 여부 
 | **AddForce(Vector Force)** |
 | :--- |
 
@@ -230,6 +246,10 @@ TransformTrack 이 적용되기 전의 최초 Transform으로 리셋시켜요.
 | :--- |
 
 Vehicle 객체를 얻을 수 있어요. 
+| **ConnectEventFunction(string customevent, LuaScriptFunction function) ** |
+| :--- |
+
+유저가 추가한 오브젝트 커스텀 이벤트에 함수를 연결할 수 있어요. (이벤트 이름, 연결 함수) 
 | **string GetName()** |
 | :--- |
 
