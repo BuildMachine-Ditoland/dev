@@ -31,7 +31,7 @@ GridBox의 투명도를 설정할 수 있어요. (float Value)
 | **SetOrientationType(ScrollOrientationType Type)** |
 | :--- |
 
-GridBox의 스크롤 타입을 설정할 수 있어요(ScrollOrientationType Type) 
+GridBox의 스크롤 타입을 설정할 수 있어요(Enum.ScrollOrientationType.Type) 
 # **상속받아 사용 가능한 기능들**
 
 ## **속성**

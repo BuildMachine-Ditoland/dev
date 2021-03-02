@@ -135,28 +135,4 @@ Widget인지 확인할 수 있어요.
 | **AddReplicateValue(string ValueName, string Data, ReplicateType Type, float Time, bool bSaveToStorage)** |
 | :--- |
 
-해당 객체에 서버, 클라이언트 간 동기화가 가능한 문자열을 추가해요. (추가할 Value 이름, string 데이터, [Enum.ReplicateType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype), 동기화 시간, 스토리지 저장 여부) 
-| **AddReplicateValue(string ValueName, Color Data, ReplicateType Type, float Time, bool bSaveToStorage)** |
-| :--- |
-
-해당 객체에 서버, 클라이언트 간 동기화가 가능한 컬러를 추가해요. (추가할 Value 이름, Color 데이터, [Enum.ReplicateType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype), 동기화 시간, 스토리지 저장 여부) 
-| **AddSaveValue(string ValueName, Vector Data)** |
-| :--- |
-
-해당 객체 저장소에 벡터를 추가해요. (Value 이름, Vector 데이터) 
-| **AddSaveValue(string ValueName, float Data)** |
-| :--- |
-
-해당 객체 저장소에 실수를 추가해요. (Value 이름, float 데이터) 
-| **AddSaveValue(string ValueName, bool Data)** |
-| :--- |
-
-해당 객체 저장소에 bool을 추가해요. (Value 이름, bool 데이터) 
-| **AddSaveValue(string ValueName, string Data)** |
-| :--- |
-
-해당 객체 저장소에 문자열을 추가해요. (Value 이름, string 데이터) 
-| **AddSaveValue(string ValueName, Color Data)** |
-| :--- |
-
-해당 객체 저장소에 칼라를 추가해요. (Value 이름, Color 데이터) 
+해당 객체에 서버, 클라이언트 간 동기화가 가능한 문자열을 추가해

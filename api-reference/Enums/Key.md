@@ -115,13 +115,13 @@
 **RightBracket** |Input Key Binding |
 **Apostrophe** |Input Key Binding |
 **Ampersand** |Input Key Binding |
-**Asterix** |Input Key Binding |
+**Asterisk** |Input Key Binding |
 **Caret** |Input Key Binding |
 **Colon** |Input Key Binding |
 **Dollar** |Input Key Binding |
 **Exclamation** |Input Key Binding |
-**LeftParantheses** |Input Key Binding |
-**RightParantheses** |Input Key Binding |
+**LeftParentheses** |Input Key Binding |
+**RightParentheses** |Input Key Binding |
 **Quote** |Input Key Binding |
 **Gamepad_LeftX** |Input Key Binding |
 **Gamepad_LeftY** |Input Key Binding |

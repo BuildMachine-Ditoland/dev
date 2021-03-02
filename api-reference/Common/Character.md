@@ -1,43 +1,43 @@
 
-게임에서 사용될 팀을 설정 할 때 사용되는 객체에요.  
-
-[Game:AddTeam](https://ditoland-utplus.gitbook.io/ditoland/api-reference/server/game)함수를 이용해서 만들어요. 
-## **속성**
-
-| **int MaxPlayerCount** |
-| :--- |
-
-팀의 최대 인원을 설정할 수 있어요. 
+공용 캐릭터 객체에요. 
 ## **함수**
 
-| **AddUsingCharacter(RCharacterSetting CharacterSettingObject)** |
+| **bool IsDie()** |
 | :--- |
 
-팀에서 사용될 캐릭터 설정을 추가할 수 있어요. (캐릭터 설정 오브젝트) 
-
-[Game:AddCharacterSetting](https://ditoland-utplus.gitbook.io/ditoland/api-reference/server/game)으로 추가한 캐릭터설정 중에서만 가능해요 
-| **SetUsingSpawnPointGroup(string InSpawnPointGroup)** |
+현재 캐릭터가 죽어있는 상태인지 알 수 있어요. 
+| **bool IsFly()** |
 | :--- |
 
-팀에서 사용될 스폰 포인트 그룹을 추가할 수 있어요. (스폰 그룹 이름) 
+캐릭터가 공중에 떠 있는지 아닌지 얻을 수 있어요. 
 
-Game:AddSpawnPointGroup으로 추가한 스폰 그룹 중에서만 가능해요 
-| **AddFixedCharacter(RCharacterSetting CharacterSettingObject)** |
+func IsCanJump() 
+
+캐릭터가 현재 점프 가능한 상태인지 알 수 있어요. 
+| **float GetMoveSpeed()** |
 | :--- |
 
-팀 고정 캐릭터설정을 추가할 수 있어요. (캐릭터 설정 오브젝트) 
-
-[Game:AddCharacterSetting](https://ditoland-utplus.gitbook.io/ditoland/api-reference/server/game)으로 추가한 캐릭터설정 중에서만 가능해요 
-| **AddFixedSpawnPoint(RSpawnPoint* SpawnPoint)** |
+해당 캐릭터의 현재 이동 속도를 얻을 수 있어요. 
+| **SetTransform(Matrix)** |
 | :--- |
 
-팀 고정 스폰 포인트를 추가할 수 있어요. (스폰 포인트 오브젝트) 
-| **ReviveTeamPlayerCharacter()** |
+캐릭터의 위치, 회전을 설정할 수 있어요. (설정할 [Matrix](https://ditoland-utplus.gitbook.io/ditoland/api-reference/common/matrix)값 ) 
+| **GetTransform(Matrix)** |
 | :--- |
 
-팀원중 죽어있는 캐릭터를 리스폰 시켜요. 
+매트릭스를 얻을 수 있어요. (설정할 [Matrix](https://ditoland-utplus.gitbook.io/ditoland/api-reference/common/matrix)값 ) 
+| **void SetLocation(Vector Location)** |
+| :--- |
 
-Life가 남아있어야 해요. 
+(Deprecated)캐릭터의 현재 위치를 설정 수 있어요. (설정할 Vector 값) 
+| **Vector GetLocation()** |
+| :--- |
+
+(Deprecated)현재 캐릭터의 위치를 얻을 수 있어요. 
+| **Vector GetForwardVector()** |
+| :--- |
+
+(Deprecated)현재 캐릭터의 바라보는 방향을 수 있어요. 
 # **상속받아 사용 가능한 기능들**
 
 ## **속성**
@@ -70,6 +70,14 @@ end
 Object:ConnectChangeEventFunction("CurBullet", LuaScriptFunction ChangeCurBullet)   
 
 ``` 
+| **AddTimeEvent(String EventName, float Time, LuaScriptFunction EventFuunction)** |
+| :--- |
+
+일정 시간뒤에 연결 함수가 호출되는 이벤트를 추가해요. (추가할 이벤트 이름, 시간, 연결 함수) 
+| **DeleteTimeEvent(String EventName)** |
+| :--- |
+
+등록된 시간 이벤트를 삭제해요. (삭제할 이벤트 이름) 
 ## **함수**
 
 | **string GetName()** |

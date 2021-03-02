@@ -4,6 +4,6 @@
 
  **이름** | **설명** |
  --- | --- |
-**UseSpawnGroup** |스폰 그룹을 사용해요. |
-**UseTeamSpawn** |팀 스폰을 사용해요. |
-**UseSpawnPoint** |스폰 포인트를 사용해요. |
+**UseSpawnGroup** |스폰그룹을 사용하는 스폰방식이에요. |
+**UseTeamSpawn** |팀을 사용하는 스폰방식이에요. |
+**UseSpawnPoint** |스폰포인트를 사용하는 스폰방식이에요. |

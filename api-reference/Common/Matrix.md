@@ -16,6 +16,10 @@ Matrix 를 생성해요.
 | :--- |
 
 주어진 값으로 위치를 설정해요. (설정할 X 값, 설정할 Y 값, 설정할 Z 값) 
+| **void SetLocation(Vector LocationValue)** |
+| :--- |
+
+주어진 값으로 위치를 설정해요. (설정할 벡터 값) 
 | **void AddLocation(float x, float y, float z)** |
 | :--- |
 
