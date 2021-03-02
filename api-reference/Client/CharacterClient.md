@@ -1,7 +1,47 @@
-## **속성**
-
+
+클라이언트에서 사용되는 공용 캐릭터에 대한 개체에요. 
 ## **함수**
 
+| **bool IsSit()** |
+| :--- |
+
+캐릭터의 앉기 상태 여부를 얻을 수 있어요. 
+| **FRModeAnimStateMachine AddAnimStateMachine(string StateMachineName)** |
+| :--- |
+
+Game:AddAnimStateMachineSetting로 추가된 상태 머신 중 애니메이션 상태 머신을 추가해요. (추가할 상태 머신 이름) 
+| **FRModeAnimStateMachine GetAnimStateMachine(string StateMachineName)** |
+| :--- |
+
+해당 애니메이션 상태 머신을 얻을 수 있어요. (얻고싶은 상태 머신 이름) 
+| **RModeAnimStateBase GetCurAnimState()** |
+| :--- |
+
+현재 애니메이션의 상태를 얻을 수 있어요. 
+| **ChangeAnimState(string AnimState)** |
+| :--- |
+
+해당하는 애니메이션의 상태로 변경할 수 있어요. (변경하고 싶은 애니메이션 상태 이름) 
+| **ChangeAnimState(string AnimState, float BlendTime)** |
+| :--- |
+
+해당하는 애니메이션의 상태로 변경할 수 있어요. (변경하고 싶은 애니메이션 상태 이름, 블렌딩 시간) 
+| **ChangeAnimStateMachine(string ChangeStateMacnine)** |
+| :--- |
+
+해당 애니메이션 상태 머신을 변경할 수 있어요. (변경하고 싶은 상태 머신 이름) 
+| **PlayAnimWithExpression(FString InAnimState, FString InFaceTypeName, float InFaceTime, bool InFaceLoop);** |
+| :--- |
+
+해당하는 애니메이션의 상태와 표정으로 변경할 수 있어요(상태가 변경되면 표정도 재생을 중지해요). 
+| **SetCharacterFaceExpression(FString InFaceTypeName, float InTime);** |
+| :--- |
+
+캐릭터의 표정을 재생해요. 
+| **StopCharacterFaceExpression()** |
+| :--- |
+
+캐릭터의 표정 재생을 취소해요. 
 # **상속받아 사용 가능한 기능들**
 
 ## **속성**
@@ -34,6 +74,14 @@ end
 Object:ConnectChangeEventFunction("CurBullet", LuaScriptFunction ChangeCurBullet)   
 
 ``` 
+| **AddTimeEvent(String EventName, float Time, LuaScriptFunction EventFuunction)** |
+| :--- |
+
+일정 시간뒤에 연결 함수가 호출되는 이벤트를 추가해요. (추가할 이벤트 이름, 시간, 연결 함수) 
+| **DeleteTimeEvent(String EventName)** |
+| :--- |
+
+등록된 시간 이벤트를 삭제해요. (삭제할 이벤트 이름) 
 ## **함수**
 
 | **string GetName()** |

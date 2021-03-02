@@ -1,7 +1,5 @@
-## **속성**
-
-## **함수**
-
+
+클라이언트에서 사용되는 NPC 개체에요. 
 # **상속받아 사용 가능한 기능들**
 
 ## **속성**
@@ -12,6 +10,14 @@
 부모 객체를 얻을 수 있어요. 
 ## **이벤트**
 
+| **OnUpdateEvent** |
+| :--- |
+
+생성 후 매 프레임마다 호출되는 이벤트에요. 
+| **OnDestroyEvent** |
+| :--- |
+
+삭제될 때 호출되는 이벤트에요. 
 | **ConnectChangeEventFunction(string ValueName, function FunctionName)** |
 | :--- |
 
@@ -36,6 +42,22 @@ Object:ConnectChangeEventFunction("CurBullet", LuaScriptFunction ChangeCurBullet
 ``` 
 ## **함수**
 
+| **SetLocation(Vector position)** |
+| :--- |
+
+(Deprecated)위치를 설정할 수 있어요. (위치 값) 
+| **SetRotation(Vector Rotator)** |
+| :--- |
+
+(Deprecated)회전을 설정할 수 있어요. (회전 값) 
+| **Matrix GetTransform()** |
+| :--- |
+
+매트릭스를 얻을 수 있어요. 
+| **SetTransform(Matrix)** |
+| :--- |
+
+매트릭스를 설정할 수 있어요. (Matrix 값) 
 | **string GetName()** |
 | :--- |
 

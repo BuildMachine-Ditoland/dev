@@ -1,7 +1,15 @@
-## **속성**
-
+
+여러 스폰 포인트를 설정하고 그 중에 스폰하게 하는 객체에요. 
 ## **함수**
 
+| **RSpawnPoint AddSpawnPoint(RObjectScript* RObjectScript)** |
+| :--- |
+
+스폰 포인트를 추가할 수 있어요. (추가할 스폰포인트 오브젝트) 
+| **SetSpawnType(GroupSpawnType GroupSpawnType)** |
+| :--- |
+
+스폰 포인트 그룹의 작동방식을 설정할 수 있어요. ( [Enum.SpawnType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/spawntype)) 
 # **상속받아 사용 가능한 기능들**
 
 ## **속성**
