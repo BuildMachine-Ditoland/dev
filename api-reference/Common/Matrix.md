@@ -16,7 +16,7 @@ Matrix 를 생성해요.
 샘플 
 
 ```lua
-local character = Game:GetAllPlayer()[1]:GetTransform()
+local character = Game:GetAllPlayer()[1]:GetCharacter()
 local characterPos = character:GetTransform():GetLocation() --캐릭터의 위치값을 Vector로 반환해요.
 ```
 | **void SetLocation(float x, float y, float z)** |
@@ -52,7 +52,7 @@ character:SetTransform(targetTransform) --오브젝트를 보간으로 이동시
 샘플
 
 ```lua
-local character = Game:GetAllPlayer()[1]:GetTransform()
+local character = Game:GetAllPlayer()[1]:GetCharacter()
 local characterRot = character:GetTransform():GetRotation() --캐릭터의 회전값을 Vector로 반환해요.
 ```
 | **Vector SetRotation(float Roll, float Pitch, float Yaw)** |
