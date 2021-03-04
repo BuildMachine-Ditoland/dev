@@ -11,7 +11,7 @@
 
 ```lua
 local function EnterPlayer (Player)
-	Logger:Log(“Hello”)
+	print(“Hello”)
 end
 
 -- Game.OnEnterPlayer가 Connect를 통해 EnterPlayer함수에 연결됨

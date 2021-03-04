@@ -71,17 +71,23 @@ print(parent:GetName())
 
 ```lua
 
-local function ChangeCurBullet(value) 
-
-Logger:Log(“Hello”) 
-
-end 
+local cube = Workspace.Cube 
 
  
 
--- Object의 "CurBullet" 라는 Value가 변경되면 ChangeCurBullet 함수에 연결 
+wait(1) 
 
-Object:ConnectChangeEventFunction("CurBullet", LuaScriptFunction ChangeCurBullet)   
+cube.SomeValue = 1 
+
+ 
+
+local function ChangeSomeValue() 
+
+print("ChangeSomeValue!") 
+
+end 
+
+cube:ConnectChangeEventFunction("SomeValue", ChangeSomeValue)  --오브젝트의 "SomeValue" 라는 Value가 변경되면 ChangeSomeValue 함수를 호출해요. 
 
 ``` 
 ## **함수**
@@ -383,7 +389,7 @@ end
 | **bool IsCamera()** |
 | :--- |
 
-Widget인지 확인할 수 있어요. 
+Camera인지 확인할 수 있어요. 
 
 샘플 
 
@@ -406,22 +412,112 @@ end
 | :--- |
 
 해당 객체에 서버, 클라이언트 간 동기화가 가능한 벡터를 추가해요. (추가할 Value 이름, Vector 데이터, [Enum.ReplicateType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype), 동기화 시간, 스토리지 저장 여부) 
+
+샘플 
+
+```lua
+
+--서버 스크립트에서------------- 
+
+Game:AddReplicateValue("SomeVector", Vector.new(0, 50, 0), Enum.ReplicateType.Changed, 0, false) --서버와 클라이언트간 동기화되는 값을 등록하고 초기값을 설정한뒤, 값이 변경될때마다 호출되게 해요. 
+
+print(Game.SomeVector) 
+
+ 
+
+--클라 스크립트에서------------- 
+
+print(Game.SomeVector) --서버에서 값이 바뀌었지만 클라에서도 동일하게 출력돼요. 
+
+``` 
 | **AddReplicateValue(string ValueName, float Data, ReplicateType Type, float Time, bool bSaveToStorage)** |
 | :--- |
 
 해당 객체에 서버, 클라이언트 간 동기화가 가능한 실수를 추가해요. (추가할 Value 이름, float 데이터, [Enum.ReplicateType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype), 동기화 시간, 스토리지 저장 여부) 
+
+샘플 
+
+```lua
+
+--서버 스크립트에서------------- 
+
+Game:AddReplicateValue("SomeNumber", 1, Enum.ReplicateType.Changed, 0, false) --서버와 클라이언트간 동기화되는 값을 등록하고 초기값을 설정한뒤, 값이 변경될때마다 호출되게 해요. 
+
+print(Game.SomeNumber .. " in Server") 
+
+ 
+
+--클라 스크립트에서------------- 
+
+print(Game.SomeNumber .. " in Client") --서버에서 값이 바뀌었지만 클라에서도 동일하게 출력돼요. 
+
+``` 
 | **AddReplicateValue(string ValueName, bool Data, ReplicateType Type, float Time, bool bSaveToStorage)** |
 | :--- |
 
 해당 객체에 서버, 클라이언트 간 동기화가 가능한 bool를 추가해요. (추가할 Value 이름, bool 데이터, [Enum.ReplicateType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype), 동기화 시간, 스토리지 저장 여부) 
+
+샘플 
+
+```lua
+
+--서버 스크립트에서------------- 
+
+Game:AddReplicateValue("SomeBool", true, Enum.ReplicateType.Changed, 0, false) --서버와 클라이언트간 동기화되는 값을 등록하고 초기값을 설정한뒤, 값이 변경될때마다 호출되게 해요. 
+
+print(Game.SomeBool) 
+
+ 
+
+--클라 스크립트에서------------- 
+
+print(Game.SomeBool) --서버에서 값이 바뀌었지만 클라에서도 동일하게 출력돼요. 
+
+``` 
 | **AddReplicateValue(string ValueName, string Data, ReplicateType Type, float Time, bool bSaveToStorage)** |
 | :--- |
 
 해당 객체에 서버, 클라이언트 간 동기화가 가능한 문자열을 추가해요. (추가할 Value 이름, string 데이터, [Enum.ReplicateType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype), 동기화 시간, 스토리지 저장 여부) 
+
+샘플 
+
+```lua
+
+--서버 스크립트에서------------- 
+
+Game:AddReplicateValue("SomeString", "Hello World!", Enum.ReplicateType.Changed, 0, false) --서버와 클라이언트간 동기화되는 값을 등록하고 초기값을 설정한뒤, 값이 변경될때마다 호출되게 해요. 
+
+print(Game.SomeString) 
+
+ 
+
+--클라 스크립트에서------------- 
+
+print(Game.SomeString) --서버에서 값이 바뀌었지만 클라에서도 동일하게 출력돼요. 
+
+``` 
 | **AddReplicateValue(string ValueName, Color Data, ReplicateType Type, float Time, bool bSaveToStorage)** |
 | :--- |
 
 해당 객체에 서버, 클라이언트 간 동기화가 가능한 컬러를 추가해요. (추가할 Value 이름, Color 데이터, [Enum.ReplicateType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype), 동기화 시간, 스토리지 저장 여부) 
+
+샘플 
+
+```lua
+
+--서버 스크립트에서------------- 
+
+Game:AddReplicateValue("SomeColor", Color.new(255, 0, 0, 255), Enum.ReplicateType.Changed, 0, false) --서버와 클라이언트간 동기화되는 값을 등록하고 초기값을 설정한뒤, 값이 변경될때마다 호출되게 해요. 
+
+print(Game.SomeColor) 
+
+ 
+
+--클라 스크립트에서------------- 
+
+print(Game.SomeColor) --서버에서 값이 바뀌었지만 클라에서도 동일하게 출력돼요. 
+
+``` 
 | **AddSaveValue(string ValueName, Vector Data)** |
 | :--- |
 

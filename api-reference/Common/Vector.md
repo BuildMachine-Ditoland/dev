@@ -14,6 +14,18 @@ Vector를 Value값을 이용해서 생성해줘요. (생성할 Value 값)
 | :--- |
 
 Vector의 X, Y, Z 좌표를 0으로해서 생성해줘요. 
+
+샘플 
+
+```lua
+local pos1 = Vector.new(50, 0, 0) --x 50, y 0, z 0로 할당돼요.
+local pos2 = Vector.new(100) --x 100, y 100, z 100로 할당돼요.
+local pos3 = Vector.new() --x 0, y 0, z 0로 할당돼요.
+
+print(pos1)
+print(pos2)
+print(pos3)
+```
 ## **연산자**
 
 
