@@ -6,10 +6,44 @@
 | :--- |
 
 축 인풋 이벤트에요. (설정할 이벤트 이름, 연결 함수) 
+
+샘플 
+
+```lua
+Input:AddGroup("UIInput") --조작그룹을 추가해요.
+Input:AddActionKeyEvent("UIInput", "MenuKey", Enum.Key.M) --조작 키 이벤트를 추가해요.
+Input:AddAxisKeyEvent("UIInput", "AxisKey", Enum.Key.Q, 1) --조작 축 이벤트를 추가해요.
+Input:ActiveGroup("UIInput") --조작그룹을 활성화해요.
+
+LocalPlayer:ProcessInputActionEvent("MenuKey", Enum.KeyInputType.Pressed, function() --조작이 발생했을때 처리할 이벤트를 등록해요.
+    print("Input!")
+end)
+
+LocalPlayer:ProcessInputAxisEvent("AxisKey", Enum.KeyInputType.Pressed, function(value) --조작이 발생했을때 처리할 이벤트를 등록해요.
+    print("Axis Input!")
+end)
+```
 | **ProcessInputActionEvent(string Event, RModeInputType InputType, protected_function ProcessFunc)** |
 | :--- |
 
 키 인풋 이벤트에요. (설정할 이벤트 이름, [Enum.KeyInputType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/keyinputtype), 연결 함수) 
+
+샘플 
+
+```lua
+Input:AddGroup("UIInput") --조작그룹을 추가해요.
+Input:AddActionKeyEvent("UIInput", "MenuKey", Enum.Key.M) --조작 키 이벤트를 추가해요.
+Input:AddAxisKeyEvent("UIInput", "AxisKey", Enum.Key.Q, 1) --조작 축 이벤트를 추가해요.
+Input:ActiveGroup("UIInput") --조작그룹을 활성화해요.
+
+LocalPlayer:ProcessInputActionEvent("MenuKey", Enum.KeyInputType.Pressed, function() --조작이 발생했을때 처리할 이벤트를 등록해요.
+    print("Input!")
+end)
+
+LocalPlayer:ProcessInputAxisEvent("AxisKey", Enum.KeyInputType.Pressed, function(value) --조작이 발생했을때 처리할 이벤트를 등록해요.
+    print("Axis Input!")
+end)
+```
 | **OnChangedInventoryItem** |
 | :--- |
 
@@ -40,6 +74,13 @@
 | :--- |
 
 카메라의 줌을 설정할 수 있어요. (설정할 카메라 줌 크기 값) 
+
+샘플 
+
+```lua
+local camera = LocalPlayer:GetCurrentCamera()
+camera:ZoomInOut(0.5) --카메라의 확대축소값을 조절해요.
+```
 | **Jump()** |
 | :--- |
 
@@ -60,6 +101,12 @@
 | :--- |
 
 자신의 캐릭터 움직임 컨트롤 가능 여부를 결정해요. (활성, 비활성 여부) 
+
+샘플 
+
+```lua
+LocalPlayer:SetEnableMovementeControl(false) --자신의 이동 조작을 비활성화해요.
+```
 | **SetEnableCameraControl(bool Enable)** |
 | :--- |
 
@@ -102,6 +149,12 @@ ForwardMoveType::UpDown - 상, 하로만 이동해요. (엘리베이터, 사다�
 | :--- |
 
 자신의 플레이어를 얻을 수 있어요. 
+
+샘플 
+
+```lua
+local player = LocalPlayer:GetRemotePlayer() --자신의 플레이어를 반환해요. 
+```
 | **int GetInventorySize()** |
 | :--- |
 
@@ -134,10 +187,29 @@ ForwardMoveType::UpDown - 상, 하로만 이동해요. (엘리베이터, 사다�
 | :--- |
 
 현재 camera(FRScriptObjectCameraClient)를 얻는다. 
+
+샘플 
+
+```lua
+local camera = LocalPlayer:GetCurrentCamera() --캐릭터의 카메라를 반환해요.
+```
 | **class FRScriptWorldObject* SetCurrentCamera(RScriptWorldObject SourceCamera)** |
 | :--- |
 
 SourceCamera를 복사하고, 복사된 Camera로 전환 합니다. 이전 camera는 삭제됩니다.(생성 할 SourceObject) 
+
+샘플 
+
+```lua
+local targetCharacter = LocalPlayer:GetRemotePlayer():GetCharacter()
+local sourceCamera = Workspace.MainCamera
+local characterCamera = LocalPlayer:SetCurrentCamera(sourceCamera) --플레이어에게 카메라를 할당해요.
+
+LocalPlayer:ResetIgnoreLookInput() --카메라 조작을 초기화해요.
+
+characterCamera.Parent = targetCharacter --카메라의 부모 오브젝트를 설정해요.
+characterCamera:SetLookAtTarget(nil) --카메라가 대상 오브젝트를 바라보게 해요. (nil이면 바라보지 않아요.)
+```
 | **bool ApplyCurrentCamera(class FRScriptWorldObject* ScriptWorldObject)** |
 | :--- |
 
@@ -150,18 +222,53 @@ Control 각도를 얻을 수 있어요 (Vector.X : Pitch, Vector.Y : Yaw, Vector
 | :--- |
 
 Control 각도를 설정해요 (Vector.X : Pitch, Vector.Y : Yaw, Vector.Z : Roll) 
+
+샘플 
+
+```lua
+local sourceCamera = Workspace.MainCamera
+local targetCharacter = LocalPlayer:GetRemotePlayer():GetCharacter()
+local cameraRotation = sourceCamera:GetTransform():GetRotation()
+local characterRotation = targetCharacter:GetTransform():GetRotation()
+LocalPlayer:SetControlRotation(Vector.new(0, cameraRotation.Z + characterRotation.Z, 0)) --카메라의 회전값을 설정해요.
+```
 | **ResetIgnoreLookInput()** |
 | :--- |
 
 Stops ignoring look input by resetting the ignore look input state 
+
+샘플 
+
+```lua
+local targetCharacter = LocalPlayer:GetRemotePlayer():GetCharacter()
+local sourceCamera = Workspace.MainCamera
+local characterCamera = LocalPlayer:SetCurrentCamera(sourceCamera) --플레이어에게 카메라를 할당해요.
+
+LocalPlayer:ResetIgnoreLookInput() --카메라 조작을 초기화해요.
+
+characterCamera.Parent = targetCharacter --카메라의 부모 오브젝트를 설정해요.
+characterCamera:SetLookAtTarget(nil) --카메라가 대상 오브젝트를 바라보게 해요. (nil이면 바라보지 않아요.)
+```
 | **SetIgnoreLookInput(RScriptValueBool InValue)** |
 | :--- |
 
 Locks or unlocks look input, consecutive calls stack up and require the same amount of calls to undo, or can all be undone using ResetIgnoreLookInput. 
+
+샘플 
+
+```lua
+LocalPlayer:SetIgnoreLookInput(false) --자신의 카메라 조작을 비활성화해요.  
+```
 | **bool bShowMouseCursor** |
 | :--- |
 
 마우스 커서를 보이거나 숨길 수 있어요, 
+
+샘플 
+
+```lua
+LocalPlayer.bShowMouseCursor = false --자신의 마우스 커서를 비활성화해요.
+```
 | **bool bCaptureMousePermanently** |
 | :--- |
 
@@ -174,6 +281,16 @@ Locks or unlocks look input, consecutive calls stack up and require the same amo
 | :--- |
 
 부모 객체를 얻을 수 있어요. 
+
+샘플 
+
+```lua
+
+local parent = Workspace.Floor.Parent --오브젝트의 부모를 반환해요 
+
+print(parent:GetName())  
+
+``` 
 ## **이벤트**
 
 | **ConnectChangeEventFunction(string ValueName, function FunctionName)** |
@@ -204,6 +321,14 @@ Object:ConnectChangeEventFunction("CurBullet", LuaScriptFunction ChangeCurBullet
 | :--- |
 
 객체의 이름을 얻을 수 있어요. 
+
+샘플 
+
+```lua
+
+print(Workspace.Floor:GetName()) --오브젝트의 이름을 문자열로 반환해요. 
+
+``` 
 | **RModeObject GetParent(string ParentName)** |
 | :--- |
 
@@ -220,66 +345,290 @@ Object:ConnectChangeEventFunction("CurBullet", LuaScriptFunction ChangeCurBullet
 | :--- |
 
 자식 객체의 리스트를 얻을 수 있어요. 
+
+샘플 
+
+```lua
+
+local uiList = Workspace.HUD:GetChildList() --오브젝트의 자식 오브젝트를 리스트로 반환해요. 
+
+for i = 1, #uiList do --리스트앞에 #을 붙여 리스트의 길이를 가져올 수 있어요. 
+
+print(uiList[i]:GetName()) 
+
+end 
+
+``` 
 | **bool IsCharacter()** |
 | :--- |
 
 캐릭터인지 확인할 수 있어요. 
+
+샘플 
+
+```lua
+
+local cube = Workspace.Cube 
+
+if cube:IsCharacter() == true then --오브젝트가 Character면 true를 반환해요. 
+
+print(cube:GetName() .. " Is Character") 
+
+end 
+
+``` 
 | **bool IsStaticMesh()** |
 | :--- |
 
 스테틱 메시인지 확인할 수 있어요. 
+
+샘플 
+
+```lua
+
+local cube = Workspace.Cube 
+
+if cube:IsStaticMesh() == true then --오브젝트가 StaticMesh면 true를 반환해요. 
+
+print(cube:GetName() .. " Is StaticMesh") 
+
+end 
+
+``` 
 | **bool IsFX()** |
 | :--- |
 
 FX인지 확인할 수 있어요. 
+
+샘플 
+
+```lua
+
+local cube = Workspace.Cube 
+
+if cube:IsFX() == true then --오브젝트가 FX면 true를 반환해요. 
+
+print(cube:GetName() .. " Is FX") 
+
+end 
+
+``` 
 | **bool IsSound()** |
 | :--- |
 
 Sound인지 확인할 수 있어요. 
+
+샘플 
+
+```lua
+
+local cube = Workspace.Cube 
+
+if cube:IsSound() == true then --오브젝트가 Sound면 true를 반환해요. 
+
+print(cube:GetName() .. " Is Sound") 
+
+end 
+
+``` 
 | **bool IsPointLight()** |
 | :--- |
 
 포인트 라이트인지 확인할 수 있어요. 
+
+샘플 
+
+```lua
+
+local cube = Workspace.Cube 
+
+if cube:IsPointLight() == true then --오브젝트가 PointLight면 true를 반환해요. 
+
+print(cube:GetName() .. " Is PointLight") 
+
+end 
+
+``` 
 | **bool IsSpotLight()** |
 | :--- |
 
 스포트 라이트인지 확인할 수 있어요. 
+
+샘플 
+
+```lua
+
+local cube = Workspace.Cube 
+
+if cube:IsSpotLight() == true then --오브젝트가 SpotLight면 true를 반환해요. 
+
+print(cube:GetName() .. " Is SpotLight") 
+
+end 
+
+``` 
 | **bool IsSurfaceUI()** |
 | :--- |
 
 서피스 UI인지 확인할 수 있어요. 
+
+샘플 
+
+```lua
+
+local cube = Workspace.Cube 
+
+if cube:IsSurfaceUI() == true then --오브젝트가 SurfaceUI면 true를 반환해요. 
+
+print(cube:GetName() .. " Is SurfaceUI") 
+
+end 
+
+``` 
 | **bool IsScreenUI()** |
 | :--- |
 
 스크린 UI인지 확인할 수 있어요. 
+
+샘플 
+
+```lua
+
+local cube = Workspace.Cube 
+
+if cube:IsScreenUI() == true then --오브젝트가 ScreenUI면 true를 반환해요. 
+
+print(cube:GetName() .. " Is ScreenUI") 
+
+end 
+
+``` 
 | **bool IsItem()** |
 | :--- |
 
 아이템인지 확인할 수 있어요. 
+
+샘플 
+
+```lua
+
+local cube = Workspace.Cube 
+
+if cube:IsItem() == true then --오브젝트가 Item면 true를 반환해요. 
+
+print(cube:GetName() .. " Is Item") 
+
+end 
+
+``` 
 | **bool IsNPC()** |
 | :--- |
 
 NPC인지 확인할 수 있어요. 
+
+샘플 
+
+```lua
+
+local cube = Workspace.Cube 
+
+if cube:IsNPC() == true then --오브젝트가 NPC면 true를 반환해요. 
+
+print(cube:GetName() .. " Is NPC") 
+
+end 
+
+``` 
 | **bool IsFolder()** |
 | :--- |
 
 폴더인지 확인할 수 있어요. 
+
+샘플 
+
+```lua
+
+local cube = Workspace.Cube 
+
+if cube:IsFolder() == true then --오브젝트가 Folder면 true를 반환해요. 
+
+print(cube:GetName() .. " Is Folder") 
+
+end 
+
+``` 
 | **bool IsScript()** |
 | :--- |
 
 스트립트인지 확인할 수 있어요. 
+
+샘플 
+
+```lua
+
+local cube = Workspace.Cube 
+
+if cube:IsScript() == true then --오브젝트가 Script면 true를 반환해요. 
+
+print(cube:GetName() .. " Is Script") 
+
+end 
+
+``` 
 | **bool IsCollider()** |
 | :--- |
 
 Collider인지 확인할 수 있어요. 
+
+샘플 
+
+```lua
+
+local cube = Workspace.Cube 
+
+if cube:IsCollider() == true then --오브젝트가 Collider면 true를 반환해요. 
+
+print(cube:GetName() .. " Is Collider") 
+
+end 
+
+``` 
 | **bool IsWidget()** |
 | :--- |
 
 Widget인지 확인할 수 있어요. 
+
+샘플 
+
+```lua
+
+local cube = Workspace.Cube 
+
+if cube:IsWidget() == true then --오브젝트가 Widget면 true를 반환해요. 
+
+print(cube:GetName() .. " Is Widget") 
+
+end 
+
+``` 
 | **bool IsCamera()** |
 | :--- |
 
 Widget인지 확인할 수 있어요. 
+
+샘플 
+
+```lua
+
+local cube = Workspace.Cube 
+
+if cube:IsCamera() == true then --오브젝트가 Camera면 true를 반환해요. 
+
+print(cube:GetName() .. " Is Camera") 
+
+end 
+
+``` 
 | **bool IsValid()** |
 | :--- |
 

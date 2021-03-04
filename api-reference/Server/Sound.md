@@ -6,10 +6,24 @@
 | :--- |
 
 Sound를 플레이해요. 
+
+샘플 
+
+```lua
+local sound = Workspace.Sound
+sound:Play() --사운드를 재생해요
+```
 | **Stop()** |
 | :--- |
 
 Sound를 정지시켜요. 
+
+샘플 
+
+```lua
+local sound = Workspace.Sound
+sound:Stop() --사운드를 정지해요
+```
 # **상속받아 사용 가능한 기능들**
 
 ## **속성**
@@ -18,36 +32,180 @@ Sound를 정지시켜요.
 | :--- |
 
 부모 객체를 얻을 수 있어요. 
+
+샘플 
+
+```lua
+
+local parent = Workspace.Floor.Parent --오브젝트의 부모를 반환해요 
+
+print(parent:GetName())  
+
+``` 
 ## **이벤트**
 
 | **OnCreateEvent** |
 | :--- |
 
 생성 시 호출되는 이벤트에요. 
+
+샘플 
+
+```lua
+
+local cube = Workspace.Cube 
+
+local function CreateEvent() 
+
+print("Create!") 
+
+end 
+
+cube.OnCreateEvent:Connect(CreateEvent) --오브젝트에 해당 오브젝트가 생성됐을때 호출되는 함수를 연결해요.  
+
+Game:CreateObject(cube, Vector.new(0, 0, 0)) 
+
+``` 
 | **OnUpdateEvent** |
 | :--- |
 
 생성 후 매 프레임마다 호출되는 이벤트에요. 
+
+샘플 
+
+```lua
+
+local cube = Workspace.Cube 
+
+local playTime = 0 
+
+local function UpdateEvent(updateTime) --OnUpdateEvent로 연결된 함수는 updateTime 인자가 고정적으로 들어가요. 
+
+playTime = playTime + updateTime --시간을 기록해요. 
+
+end 
+
+cube.OnUpdateEvent:Connect(UpdateEvent) --Game이나 오브젝트에 매프레임마다 호출되는 함수를 연결해요. 
+
+``` 
 | **OnDestroyEvent** |
 | :--- |
 
 삭제될 때 호출되는 이벤트에요. 
+
+샘플 
+
+```lua
+
+local cube = Workspace.Cube 
+
+local function DestroyEvent() 
+
+print("Destroy!") 
+
+end 
+
+cube.OnDestroyEvent:Connect(DestroyEvent) --오브젝트에 해당 오브젝트가 파괴됐을때 호출되는 함수를 연결해요. 
+
+Game:DeleteObject(cube) 
+
+``` 
 | **OnCollisionEvent** |
 | :--- |
 
 다른 객체와 충돌할 때 호출되는 이벤트에요. 
+
+샘플 
+
+```lua
+
+local cube = Workspace.Cube 
+
+local function CollisionEvent(self, target) --OnCollisionEvent로 연결된 함수는 self와 target 인자가 고정적으로 들어가요. 
+
+if target ~= nil then 
+
+print("CollisionEvent " .. target:GetName()) 
+
+end 
+
+end 
+
+cube.OnCollisionEvent:Connect(CollisionEvent) --Collision이 true인 오브젝트와 충돌중일때 호출되는 함수를 연결해요. 
+
+``` 
 | **OnBeginOverlapEvent** |
 | :--- |
 
 다른 객체와 겹쳐질 때 호출되는 이벤트에요. 
+
+샘플 
+
+```lua
+
+local cube = Workspace.Cube 
+
+local function BeginOverlapEvent(self, target) --OnBeginOverlapEvent 연결된 함수는 self와 target 인자가 고정적으로 들어가요. 
+
+if target ~= nil then 
+
+print("BeginOverlapEvent " .. target:GetName()) 
+
+end 
+
+end 
+
+cube.OnBeginOverlapEvent:Connect(BeginOverlapEvent) --Collision이 false인 오브젝트와 충돌을 시작할때 호출되는 함수를 연결해요. 
+
+``` 
 | **OnEndOverlapEvent** |
 | :--- |
 
 다른 객체와 겹쳐짐이 끝날 때 호출되는 이벤트에요. 
+
+샘플 
+
+```lua
+
+local cube = Workspace.Cube 
+
+local function EndOverlapEvent(self, target) --OnEndOverlapEvent 연결된 함수는 self와 target 인자가 고정적으로 들어가요. 
+
+if target ~= nil then 
+
+print("EndOverlapEvent " .. target:GetName())   
+
+end 
+
+end 
+
+cube.OnEndOverlapEvent:Connect(EndOverlapEvent) --Collision이 false인 오브젝트와 충돌이 끝날때 호출되는 함수를 연결해요. 
+
+``` 
 | **OnOverlapUpdateEvent** |
 | :--- |
 
 다른 객체와 겹쳐있는 동안 매 프레임마다 호출되는 이벤트에요. 
+
+샘플 
+
+```lua
+
+local cube = Workspace.Cube 
+
+local function OverlapUpdateEvent(self, target) --OnOverlapUpdateEvent로 연결된 함수는 self와 target 인자가 고정적으로 들어가요. 
+
+if target ~= nil then 
+
+print("OverlapUpdateEvent " .. target:GetName()) 
+
+end 
+
+end 
+
+cube.OnOverlapUpdateEvent:Connect(OverlapUpdateEvent) --Collision이 false인 오브젝트와 충돌중일때 호출되는 함수를 연결해요. 
+
+``` 
 | **ConnectChangeEventFunction(string ValueName, function FunctionName)** |
 | :--- |
 
@@ -78,14 +236,50 @@ Object:ConnectChangeEventFunction("CurBullet", LuaScriptFunction ChangeCurBullet
 해당 오브젝트의 충돌 타입을 지정해줘요. 
 
 [Game:AddUserCollisionType](https://ditoland-utplus.gitbook.io/ditoland/api-reference/server/game)으로 추가한 타입만 가능해요 없을 시에는 기본 타입으로 지정되요 
+
+샘플 
+
+```lua
+
+local cube = Workspace.Cube 
+
+Game:AddUserCollisionType("CollisionTag1") --유저 충돌 타입을 추가해요. 
+
+cube:SetCollisionType("CollisionTag1") --해당 오브젝트의 충돌 타입을 설정해요. 
+
+```  
 | **SetCharacterCollisionResponse(ECollisionResponse CollisionResponse)** |
 | :--- |
 
 캐릭터와 충돌 시 어떻게 처리 할지를 설정하는 함수에요. ( [Enum.CollisionResponse.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/collisionresponse)) 
+
+샘플 
+
+```lua
+
+Workspace.Cube1:SetCharacterCollisionResponse(Enum.CollisionResponse.Block) --오브젝트가 캐릭터와 충돌했을때 통과되지 않고 연결된 이벤트가 발생되게 설정해요. 
+
+Workspace.Cube2:SetCharacterCollisionResponse(Enum.CollisionResponse.Overlap) --오브젝트가 캐릭터와 충돌했을때 통과되고 연결된 이벤트되게 설정해요.. 
+
+Workspace.Cube3:SetCharacterCollisionResponse(Enum.CollisionResponse.Ignore) --오브젝트가 캐릭터와 충돌했을때 통과되고 연결된 이벤트가 발생되지 않게 설정해요. 
+
+``` 
 | **SetUserCollisionTypeResponse(string UserCollisionType, ECollisionResponse CollisionResponse)** |
 | :--- |
 
 유저타입 충돌 물체의 충돌 시 처리를 변경하는 함수에요. (변경 할 유저타입 충돌 이름, [Enum.CollisionResponse.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/collisionresponse)) 
+
+샘플 
+
+```lua
+
+local cube = Workspace.Cube 
+
+Game:AddUserCollisionType("CollisionTag1") --유저 충돌 타입을 추가해요. 
+
+cube:SetUserCollisionTypeResponse("CollisionTag1", Enum.CollisionResponse.Overlap) --유저 타입 충돌 물체의 충돌 시 처리를 변경하는 함수에요. 
+
+``` 
 | **SetReplicatePriority(int priority)** |
 | :--- |
 
@@ -94,14 +288,88 @@ Object:ConnectChangeEventFunction("CurBullet", LuaScriptFunction ChangeCurBullet
 | :--- |
 
 모든 클라이언트에게 오브젝트 커스텀 이벤트를 보내는 함수에요. (이벤트 이름, 전달할 변수들 ...) 
+
+샘플 
+
+```lua
+
+--서버 스크립트에서 
+
+local cube = Workspace.Cube 
+
+wait(1) 
+
+cube:BroadcastEvent("SomeFunc", 1) --모든 플레이어에게 SomeFunc() 함수를 호출해요. 
+
+ 
+
+--클라 스크립트에서 
+
+local cube = Workspace.cube 
+
+local function SomeFunc(id) --필요하다면 함수의 인자도 넣을 수 있어요. 단, 숫자나 문자열 인자만 넣을 수 있어요. 
+
+print("Call SomeFunc (" .. id .. ")") 
+
+end 
+
+cube:ConnectEventFunction("SomeFunc", SomeFunc) --오브젝트에 "SomeFunc"라는 이벤트 이름으로 SomeFunc 함수를 연결해요. 
+
+--오브젝트가 아닌 Game에도 연결할 수 있어요. 그러나 그룹과 폴더에는 연결할 수 없어요. 
+
+--같은 대상에 등록된 이벤트만 호출할 수 있어요. 
+
+``` 
 | **SendEventToClient(string PlayerName, string CustomEventName, Args ...)** |
 | :--- |
 
 해당 클라이언트에게만 오브젝트 커스텀 이벤트를 보내는 함수에요. (이벤트 보낼 플레이어 이름, 이벤트 이름, 전달할 변수들 ...) 
+
+샘플 
+
+```lua
+
+--서버 스크립트에서 
+
+local cube = Workspace.Cube 
+
+local player = Game:GetAllPlayer()[1] 
+
+wait(1) 
+
+cube:SendEventToClient(player:GetName(), "SomeFunc", 1) --특정 플레이어에게 SomeFunc() 함수를 호출해요. (첫번째 인자로 플레이어 이름이 반드시 들어가야해요.) 
+
+ 
+
+--클라 스크립트에서 
+
+local cube = Workspace.cube 
+
+local function SomeFunc(id) --필요하다면 함수의 인자도 넣을 수 있어요. 단, 숫자나 문자열 인자만 넣을 수 있어요. 
+
+print("Call SomeFunc (" .. id .. ")") 
+
+end 
+
+cube:ConnectEventFunction("SomeFunc", SomeFunc) --오브젝트에 "SomeFunc"라는 이벤트 이름으로 SomeFunc 함수를 연결해요. 
+
+--오브젝트가 아닌 Game에도 연결할 수 있어요. 그러나 그룹과 폴더에는 연결할 수 없어요. 
+
+--같은 대상에 등록된 이벤트만 호출할 수 있어요. 
+
+``` 
 | **SetEnableCollision(bool bIsEnable)** |
 | :--- |
 
 객체의 충돌 여부를 설정할 수 있어요. (충돌 여부) 
+
+샘플 
+
+```lua
+
+Workspace.Cube:SetEnableCollision(false) --오브젝트의 충돌 영역을 비활성화해요. 
+
+``` 
 | **int GetModeObjectKey()** |
 | :--- |
 
@@ -110,18 +378,62 @@ Object:ConnectChangeEventFunction("CurBullet", LuaScriptFunction ChangeCurBullet
 | :--- |
 
 매트릭스를 얻을 수 있어요. 
+
+샘플 
+
+```lua
+
+local targetTransform = Game:GetAllPlayer()[1]:GetTransform() 
+
+``` 
 | **SetTransform(Matrix)** |
 | :--- |
 
 현재 매트릭스에서 설정 된 매트릭스로 보간이 되는 매트릭스를 설정할 수 있어요 설정할 수 있어요. (Matrix 값, bool 충돌 처리 여부) 
+
+샘플 
+
+```lua
+
+local targetTransform = Game:GetAllPlayer()[1]:GetTransform() 
+
+targetTransform:SetLocation(Vector.new(0, 100, 0)) 
+
+targetTransform:SetRotation(Vector.new(0, 100, 0)) 
+
+character:SetTransform(targetTransform) --오브젝트를 보간으로 이동시켜요. (캐릭터는 보간없이 움직여요.) 
+
+``` 
 | **Teleport(Matrix)** |
 | :--- |
 
 순간이동 하는 매트릭스를 설정할 수 있어요. (Matrix 값) 
+
+샘플 
+
+```lua
+
+local targetTransform = Workspace.Cube:GetTransform()     
+
+targetTransform:SetLocation(Vector.new(0, 100, 0))    
+
+Workspace.Cube:Teleport(targetTransform) --오브젝트를 보간없이 바로 이동시켜요. 
+
+``` 
 | **Vector GetLocation()** |
 | :--- |
 
 (Deprecated)객체의 현재 위치를 얻을 수 있어요. 
+
+샘플 
+
+```lua
+
+local character = Game:GetAllPlayer()[1]:GetTransform() 
+
+local characterPos = character:GetTransform():GetLocation() --캐릭터의 위치값을 Vector로 반환해요. 
+
+``` 
 | **SetLocation(Vector position, bool collisionCheck)** |
 | :--- |
 
@@ -130,6 +442,16 @@ Object:ConnectChangeEventFunction("CurBullet", LuaScriptFunction ChangeCurBullet
 | :--- |
 
 (Deprecated)각도를 얻을 수 있어요. (Vector.X : Pitch, Vector.Y : Yaw, Vector.Z : Roll) 
+
+샘플 
+
+```lua
+
+local character = Game:GetAllPlayer()[1]:GetTransform() 
+
+local characterRot = character:GetTransform():GetRotation() --캐릭터의 회전값을 Vector로 반환해요. 
+
+``` 
 | **SetRotation(Vector InValue)** |
 | :--- |
 
@@ -138,10 +460,38 @@ Object:ConnectChangeEventFunction("CurBullet", LuaScriptFunction ChangeCurBullet
 | :--- |
 
 (Deprecated)스케일을 얻을 수 있어요 
+
+샘플 
+
+```lua
+
+local cube = Workspace.Cube 
+
+local scale = cube:GetScale() --해당 오브젝트의 크기를 100으로 나눠서 Vector로 반환해요.(예를 들어 x값이 100이면 1로 반한돼요.) 
+
+scale.Y = scale.Y + 0.5 
+
+cube:SetScale(scale) --오브젝트의 크기를 설정해요. 
+
+``` 
 | **SetScale(Vector scale)** |
 | :--- |
 
 (Deprecated)주어진 값으로 스케일을 설정해요. (설정할 스케일 값) 
+
+샘플 
+
+```lua
+
+local cube = Workspace.Cube 
+
+local scale = cube:GetScale() --해당 오브젝트의 크기를 100으로 나눠서 Vector로 반환해요.(예를 들어 x값이 100이면 1로 반한돼요.) 
+
+scale.Y = scale.Y + 0.5 
+
+cube:SetScale(scale) --오브젝트의 크기를 설정해요. 
+
+``` 
 | **SetTag(String Tag)** |
 | :--- |
 
@@ -174,14 +524,64 @@ Object:ConnectChangeEventFunction("CurBullet", LuaScriptFunction ChangeCurBullet
 | :--- |
 
 객체의 가시성 여부를 설정할 수 있어요. (가시성 여부) 
+
+샘플 
+
+```lua
+
+Workspace.Cube.SetVisibility(false) --오브젝트를 보이지 않게 해요. 
+
+``` 
 | **AddLocalMove(string TrackName, Vector Pos, float Time, bool CheckCollision)** |
 | :--- |
 
 로컬 좌표를 기준으로 이동 변화를 추가할 수 있어요. (설정할 Track 이름, 이동 변화를 줄 값, 완료까지 걸리는 시간, 충돌 처리 여부) 
+
+샘플 
+
+```lua
+
+local cube = Workspace.Cube 
+
+local pos = Vector.new(0, 500, 0) 
+
+local moveSpeed = 2 
+
+local waitTime = 1 
+
+ 
+
+cube:AddLocalMove("Move", Vector.new(pos.X, pos.Y, pos.Z), moveSpeed, false) --이동 트랙을 등록해요. 
+
+cube:AddLocalMove("Move", Vector.new(0, 0, 0), waitTime, false) --이동 트랙은 여러개도 등록할 수 있어요. 
+
+cube:AddLocalMove("Move", Vector.new(-pos.X, -pos.Y, -pos.Z), moveSpeed, false) 
+
+cube:AddLocalMove("Move", Vector.new(0, 0, 0), waitTime, false) 
+
+cube:PlayTransformTrack("Move", Enum.TransformPlayType.Repeat, InfinityPlay) --이름에 해당하는 트랙을 재생해요. 
+
+``` 
 | **AddLocalRot(string TrackName, Vector Rot, float Time)** |
 | :--- |
 
 로컬 좌표를 기준으로 회전 변화를 추가할 수 있어요. (설정할 Track 이름, 회전 변화를 줄 값, 완료까지 걸리는 시간) 
+
+샘플 
+
+```lua
+
+local cube = Workspace.Cube 
+
+local moveSpeed = 2 
+
+cube:AddLocalRot("Rot", Vector.new(0, 0, 360), moveSpeed) --회전 트랙을 등록해요. 
+
+cube:AddLocalRot("Rot", Vector.new(0, 360, 0), moveSpeed) --회전 트랙은 여러개도 등록할 수 있어요. 
+
+cube:PlayTransformTrack("Rot", Enum.TransformPlayType.Repeat, InfinityPlay) --이름에 해당하는 트랙을 재생해요. 
+
+``` 
 | **AddLocalScale(string TrackName, Vector Scale, float Time)** |
 | :--- |
 
@@ -202,30 +602,120 @@ Object:ConnectChangeEventFunction("CurBullet", LuaScriptFunction ChangeCurBullet
 | :--- |
 
 설정된 변환 컨트롤러를 실행시켜요. (실행할 Track 이름, [Enum.TransformPlayType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/transformplaytype), 실행 횟수) 
+
+샘플 
+
+```lua
+
+local cube = Workspace.Cube 
+
+local pos = Vector.new(0, 500, 0) 
+
+local moveSpeed = 2 
+
+local waitTime = 1 
+
+ 
+
+cube:AddLocalMove("Move", Vector.new(pos.X, pos.Y, pos.Z), moveSpeed, false) --이동 트랙을 등록해요. 
+
+cube:AddLocalMove("Move", Vector.new(0, 0, 0), waitTime, false) --이동 트랙은 여러개도 등록할 수 있어요. 
+
+cube:AddLocalMove("Move", Vector.new(-pos.X, -pos.Y, -pos.Z), moveSpeed, false) 
+
+cube:AddLocalMove("Move", Vector.new(0, 0, 0), waitTime, false) 
+
+cube:PlayTransformTrack("Move", Enum.TransformPlayType.Repeat, InfinityPlay) --이름에 해당하는 트랙을 재생해요. 
+
+``` 
 | **StopTransformTrack(string TrackName)** |
 | :--- |
 
 변환 컨트롤러를 정지시켜요. (정지할 Track 이름) 
+
+샘플 
+
+```lua
+
+local cube = Workspace.Cube 
+
+cube:StopTransformTrack("Move") --이름에 해당하는 트랙을 멈춰요. 
+
+``` 
 | **PauseTransformTrack(string TrackName)** |
 | :--- |
 
 변환 컨트롤러를 일시 정지시켜요 (일시 정지할 Track 이름) 
+
+샘플 
+
+```lua
+
+local cube = Workspace.Cube 
+
+cube:PauseTransformTrack("Move") --이름에 해당하는 트랙을 일시정지해요. 
+
+``` 
 | **ResumeTransformTrack(string TrackName)** |
 | :--- |
 
 변환 컨트롤러를 다시 플레이시켜요. (플레이할 Track 이름) 
+
+샘플 
+
+```lua
+
+local cube = Workspace.Cube 
+
+cube:ResumeTransformTrack("Move") --이름에 해당하는 일시정지된 트랙을 다시 재생해요. 
+
+``` 
 | **bool IsPlayingTransformTrack(string TrackName)** |
 | :--- |
 
 해당 TransformTrack이 플레이 중인지 확인할 수 있어요. (확인할 Track 이름) 
+
+샘플 
+
+```lua
+
+local cube = Workspace.Cube 
+
+if cube:IsPlayingTransformTrack("Move") == true then --이름에 해당하는 트랙이 재생중이면 true를 반환해요. 
+
+print("Track is Playing") 
+
+end 
+
+``` 
 | **ResetTransformTrack(string TrackName)** |
 | :--- |
 
 해당 TransformTrack 이 적용되기 전의 Transform으로 리셋시켜요. (리셋할 Track 이름) 
+
+샘플 
+
+```lua
+
+local cube = Workspace.Cube 
+
+cube:ResetTransformTrack("Move") --이름에 해당하는 트랙이 적용되기전의 트랜스폼으로 리셋해요. (트랙이 멈추진 않아요.) 
+
+``` 
 | **RemoveTransformTrack(String TrackName)** |
 | :--- |
 
 해당 Track을 제거해요. (제거할 Track 이름) 
+
+샘플 
+
+```lua
+
+local cube = Workspace.Cube 
+
+cube:RemoveTransformTrack("Move") --이름에 해당하는 트랙을 제거해요. 
+
+``` 
 | **ResetTransform()** |
 | :--- |
 
@@ -246,6 +736,14 @@ TransformTrack 이 끝나면 등록한 function 을 호출합니다.
 | :--- |
 
 오브젝트의 이름을 변경 할 수 있어요. (새로운 이름) 
+
+샘플 
+
+```lua
+
+Workspace.Floor:SetName("NewFloor") --오브젝트의 이름을 변경해요. 
+
+``` 
 | **FRModeVehicle GetVehicle()** |
 | :--- |
 
@@ -254,10 +752,38 @@ Vehicle 객체를 얻을 수 있어요.
 | :--- |
 
 유저가 추가한 오브젝트 커스텀 이벤트에 함수를 연결할 수 있어요. (이벤트 이름, 연결 함수) 
+
+샘플 
+
+```lua
+
+local cube = Workspace.cube 
+
+local function SomeFunc(playerName) --필요하다면 함수의 인자도 넣을 수 있어요. 단, 숫자나 문자열 인자만 넣을 수 있어요. 
+
+print("Call SomeFunc from " .. playerName) 
+
+end 
+
+cube:ConnectEventFunction("SomeFunc", SomeFunc) --오브젝트에 "SomeFunc"라는 이벤트 이름으로 SomeFunc 함수를 연결해요. 
+
+--오브젝트가 아닌 Game에도 연결할 수 있어요. 그러나 그룹과 폴더에는 연결할 수 없어요. 
+
+--같은 대상에 등록된 이벤트만 호출할 수 있어요. 
+
+``` 
 | **string GetName()** |
 | :--- |
 
 객체의 이름을 얻을 수 있어요. 
+
+샘플 
+
+```lua
+
+print(Workspace.Floor:GetName()) --오브젝트의 이름을 문자열로 반환해요. 
+
+``` 
 | **RModeObject GetParent(string ParentName)** |
 | :--- |
 
@@ -274,66 +800,290 @@ Vehicle 객체를 얻을 수 있어요.
 | :--- |
 
 자식 객체의 리스트를 얻을 수 있어요. 
+
+샘플 
+
+```lua
+
+local uiList = Workspace.HUD:GetChildList() --오브젝트의 자식 오브젝트를 리스트로 반환해요. 
+
+for i = 1, #uiList do --리스트앞에 #을 붙여 리스트의 길이를 가져올 수 있어요. 
+
+print(uiList[i]:GetName()) 
+
+end 
+
+``` 
 | **bool IsCharacter()** |
 | :--- |
 
 캐릭터인지 확인할 수 있어요. 
+
+샘플 
+
+```lua
+
+local cube = Workspace.Cube 
+
+if cube:IsCharacter() == true then --오브젝트가 Character면 true를 반환해요. 
+
+print(cube:GetName() .. " Is Character") 
+
+end 
+
+``` 
 | **bool IsStaticMesh()** |
 | :--- |
 
 스테틱 메시인지 확인할 수 있어요. 
+
+샘플 
+
+```lua
+
+local cube = Workspace.Cube 
+
+if cube:IsStaticMesh() == true then --오브젝트가 StaticMesh면 true를 반환해요. 
+
+print(cube:GetName() .. " Is StaticMesh") 
+
+end 
+
+``` 
 | **bool IsFX()** |
 | :--- |
 
 FX인지 확인할 수 있어요. 
+
+샘플 
+
+```lua
+
+local cube = Workspace.Cube 
+
+if cube:IsFX() == true then --오브젝트가 FX면 true를 반환해요. 
+
+print(cube:GetName() .. " Is FX") 
+
+end 
+
+``` 
 | **bool IsSound()** |
 | :--- |
 
 Sound인지 확인할 수 있어요. 
+
+샘플 
+
+```lua
+
+local cube = Workspace.Cube 
+
+if cube:IsSound() == true then --오브젝트가 Sound면 true를 반환해요. 
+
+print(cube:GetName() .. " Is Sound") 
+
+end 
+
+``` 
 | **bool IsPointLight()** |
 | :--- |
 
 포인트 라이트인지 확인할 수 있어요. 
+
+샘플 
+
+```lua
+
+local cube = Workspace.Cube 
+
+if cube:IsPointLight() == true then --오브젝트가 PointLight면 true를 반환해요. 
+
+print(cube:GetName() .. " Is PointLight") 
+
+end 
+
+``` 
 | **bool IsSpotLight()** |
 | :--- |
 
 스포트 라이트인지 확인할 수 있어요. 
+
+샘플 
+
+```lua
+
+local cube = Workspace.Cube 
+
+if cube:IsSpotLight() == true then --오브젝트가 SpotLight면 true를 반환해요. 
+
+print(cube:GetName() .. " Is SpotLight") 
+
+end 
+
+``` 
 | **bool IsSurfaceUI()** |
 | :--- |
 
 서피스 UI인지 확인할 수 있어요. 
+
+샘플 
+
+```lua
+
+local cube = Workspace.Cube 
+
+if cube:IsSurfaceUI() == true then --오브젝트가 SurfaceUI면 true를 반환해요. 
+
+print(cube:GetName() .. " Is SurfaceUI") 
+
+end 
+
+``` 
 | **bool IsScreenUI()** |
 | :--- |
 
 스크린 UI인지 확인할 수 있어요. 
+
+샘플 
+
+```lua
+
+local cube = Workspace.Cube 
+
+if cube:IsScreenUI() == true then --오브젝트가 ScreenUI면 true를 반환해요. 
+
+print(cube:GetName() .. " Is ScreenUI") 
+
+end 
+
+``` 
 | **bool IsItem()** |
 | :--- |
 
 아이템인지 확인할 수 있어요. 
+
+샘플 
+
+```lua
+
+local cube = Workspace.Cube 
+
+if cube:IsItem() == true then --오브젝트가 Item면 true를 반환해요. 
+
+print(cube:GetName() .. " Is Item") 
+
+end 
+
+``` 
 | **bool IsNPC()** |
 | :--- |
 
 NPC인지 확인할 수 있어요. 
+
+샘플 
+
+```lua
+
+local cube = Workspace.Cube 
+
+if cube:IsNPC() == true then --오브젝트가 NPC면 true를 반환해요. 
+
+print(cube:GetName() .. " Is NPC") 
+
+end 
+
+``` 
 | **bool IsFolder()** |
 | :--- |
 
 폴더인지 확인할 수 있어요. 
+
+샘플 
+
+```lua
+
+local cube = Workspace.Cube 
+
+if cube:IsFolder() == true then --오브젝트가 Folder면 true를 반환해요. 
+
+print(cube:GetName() .. " Is Folder") 
+
+end 
+
+``` 
 | **bool IsScript()** |
 | :--- |
 
 스트립트인지 확인할 수 있어요. 
+
+샘플 
+
+```lua
+
+local cube = Workspace.Cube 
+
+if cube:IsScript() == true then --오브젝트가 Script면 true를 반환해요. 
+
+print(cube:GetName() .. " Is Script") 
+
+end 
+
+``` 
 | **bool IsCollider()** |
 | :--- |
 
 Collider인지 확인할 수 있어요. 
+
+샘플 
+
+```lua
+
+local cube = Workspace.Cube 
+
+if cube:IsCollider() == true then --오브젝트가 Collider면 true를 반환해요. 
+
+print(cube:GetName() .. " Is Collider") 
+
+end 
+
+``` 
 | **bool IsWidget()** |
 | :--- |
 
 Widget인지 확인할 수 있어요. 
+
+샘플 
+
+```lua
+
+local cube = Workspace.Cube 
+
+if cube:IsWidget() == true then --오브젝트가 Widget면 true를 반환해요. 
+
+print(cube:GetName() .. " Is Widget") 
+
+end 
+
+``` 
 | **bool IsCamera()** |
 | :--- |
 
 Widget인지 확인할 수 있어요. 
+
+샘플 
+
+```lua
+
+local cube = Workspace.Cube 
+
+if cube:IsCamera() == true then --오브젝트가 Camera면 true를 반환해요. 
+
+print(cube:GetName() .. " Is Camera") 
+
+end 
+
+``` 
 | **bool IsValid()** |
 | :--- |
 

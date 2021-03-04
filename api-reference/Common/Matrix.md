@@ -12,6 +12,13 @@ Matrix 를 생성해요.
 | :--- |
 
 위치를 얻을 수 있어요. 
+
+샘플 
+
+```lua
+local character = Game:GetAllPlayer()[1]:GetTransform()
+local characterPos = character:GetTransform():GetLocation() --캐릭터의 위치값을 Vector로 반환해요.
+```
 | **void SetLocation(float x, float y, float z)** |
 | :--- |
 
@@ -28,6 +35,13 @@ Matrix 를 생성해요.
 | :--- |
 
 각도를 얻을 수 있어요. (Vector.X : Roll, Vector.Y : Pitch, Vector.Z : Yaw) 
+
+샘플 
+
+```lua
+local character = Game:GetAllPlayer()[1]:GetTransform()
+local characterRot = character:GetTransform():GetRotation() --캐릭터의 회전값을 Vector로 반환해요.
+```
 | **Vector SetRotation(float Roll, float Pitch, float Yaw)** |
 | :--- |
 
@@ -40,10 +54,28 @@ Matrix 를 생성해요.
 | :--- |
 
 주어진 값으로 스케일을 설정해요. (설정할 스케일 값) 
+
+샘플 
+
+```lua
+local cube = Workspace.Cube
+local scale = cube:GetScale() --해당 오브젝트의 크기를 100으로 나눠서 Vector로 반환해요.(예를 들어 x값이 100이면 1로 반한돼요.)
+scale.Y = scale.Y + 0.5
+cube:SetScale(scale) --오브젝트의 크기를 설정해요.
+```
 | **Vector SetScaleXYZ(float x, floay y, float z)** |
 | :--- |
 
 주어진 값을 이용하여 Vector 스케일을 설정해요. (설정할 X 값, 설정할 Y 값, 설정할 Z 값) 
+
+샘플 
+
+```lua
+local cube = Workspace.Cube
+local scale = cube:GetScale() --해당 오브젝트의 크기를 100으로 나눠서 Vector로 반환해요.(예를 들어 x값이 100이면 1로 반한돼요.)
+scale.Y = scale.Y + 0.5
+cube:SetScale(scale) --오브젝트의 크기를 설정해요.
+```
 | **Vector GetScaleXYZ()** |
 | :--- |
 

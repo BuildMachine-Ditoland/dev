@@ -10,6 +10,19 @@
 | :--- |
 
 스폰 포인트 그룹의 작동방식을 설정할 수 있어요. ( [Enum.SpawnType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/spawntype)) 
+
+샘플 
+
+```lua
+local spawnList = Workspace.SpawnerList:GetChildList()
+local spawnGroup = Game:AddSpawnPointGroup("SpawnGroup1") --이름으로 스폰 그룹을 등록해요.
+for i = 1, #spawnList do
+   local spawner = Game:AddSpawnPointAtGroup("SpawnGroup1", spawnList[i]) --스폰 그룹에서 사용할 스폰포인트를 등록해요.
+   spawner:SetSpawnType(Enum.PointSpawnType.Area, 0) --스폰포인트의 작동방식을 설정해요.
+end
+Game:SetUsingSpawnPointGroup(spawnGroup) --게임에 적용할 스폰 그룹을 설정해요.
+Game:SetSpawnType(Enum.SpawnType.UseSpawnGroup) --게임의 스폰타입을 설정해요.
+```
 # **상속받아 사용 가능한 기능들**
 
 ## **속성**
@@ -18,6 +31,16 @@
 | :--- |
 
 부모 객체를 얻을 수 있어요. 
+
+샘플 
+
+```lua
+
+local parent = Workspace.Floor.Parent --오브젝트의 부모를 반환해요 
+
+print(parent:GetName())  
+
+``` 
 ## **이벤트**
 
 | **ConnectChangeEventFunction(string ValueName, function FunctionName)** |
@@ -48,6 +71,14 @@ Object:ConnectChangeEventFunction("CurBullet", LuaScriptFunction ChangeCurBullet
 | :--- |
 
 객체의 이름을 얻을 수 있어요. 
+
+샘플 
+
+```lua
+
+print(Workspace.Floor:GetName()) --오브젝트의 이름을 문자열로 반환해요. 
+
+``` 
 | **RModeObject GetParent(string ParentName)** |
 | :--- |
 
@@ -64,66 +95,290 @@ Object:ConnectChangeEventFunction("CurBullet", LuaScriptFunction ChangeCurBullet
 | :--- |
 
 자식 객체의 리스트를 얻을 수 있어요. 
+
+샘플 
+
+```lua
+
+local uiList = Workspace.HUD:GetChildList() --오브젝트의 자식 오브젝트를 리스트로 반환해요. 
+
+for i = 1, #uiList do --리스트앞에 #을 붙여 리스트의 길이를 가져올 수 있어요. 
+
+print(uiList[i]:GetName()) 
+
+end 
+
+``` 
 | **bool IsCharacter()** |
 | :--- |
 
 캐릭터인지 확인할 수 있어요. 
+
+샘플 
+
+```lua
+
+local cube = Workspace.Cube 
+
+if cube:IsCharacter() == true then --오브젝트가 Character면 true를 반환해요. 
+
+print(cube:GetName() .. " Is Character") 
+
+end 
+
+``` 
 | **bool IsStaticMesh()** |
 | :--- |
 
 스테틱 메시인지 확인할 수 있어요. 
+
+샘플 
+
+```lua
+
+local cube = Workspace.Cube 
+
+if cube:IsStaticMesh() == true then --오브젝트가 StaticMesh면 true를 반환해요. 
+
+print(cube:GetName() .. " Is StaticMesh") 
+
+end 
+
+``` 
 | **bool IsFX()** |
 | :--- |
 
 FX인지 확인할 수 있어요. 
+
+샘플 
+
+```lua
+
+local cube = Workspace.Cube 
+
+if cube:IsFX() == true then --오브젝트가 FX면 true를 반환해요. 
+
+print(cube:GetName() .. " Is FX") 
+
+end 
+
+``` 
 | **bool IsSound()** |
 | :--- |
 
 Sound인지 확인할 수 있어요. 
+
+샘플 
+
+```lua
+
+local cube = Workspace.Cube 
+
+if cube:IsSound() == true then --오브젝트가 Sound면 true를 반환해요. 
+
+print(cube:GetName() .. " Is Sound") 
+
+end 
+
+``` 
 | **bool IsPointLight()** |
 | :--- |
 
 포인트 라이트인지 확인할 수 있어요. 
+
+샘플 
+
+```lua
+
+local cube = Workspace.Cube 
+
+if cube:IsPointLight() == true then --오브젝트가 PointLight면 true를 반환해요. 
+
+print(cube:GetName() .. " Is PointLight") 
+
+end 
+
+``` 
 | **bool IsSpotLight()** |
 | :--- |
 
 스포트 라이트인지 확인할 수 있어요. 
+
+샘플 
+
+```lua
+
+local cube = Workspace.Cube 
+
+if cube:IsSpotLight() == true then --오브젝트가 SpotLight면 true를 반환해요. 
+
+print(cube:GetName() .. " Is SpotLight") 
+
+end 
+
+``` 
 | **bool IsSurfaceUI()** |
 | :--- |
 
 서피스 UI인지 확인할 수 있어요. 
+
+샘플 
+
+```lua
+
+local cube = Workspace.Cube 
+
+if cube:IsSurfaceUI() == true then --오브젝트가 SurfaceUI면 true를 반환해요. 
+
+print(cube:GetName() .. " Is SurfaceUI") 
+
+end 
+
+``` 
 | **bool IsScreenUI()** |
 | :--- |
 
 스크린 UI인지 확인할 수 있어요. 
+
+샘플 
+
+```lua
+
+local cube = Workspace.Cube 
+
+if cube:IsScreenUI() == true then --오브젝트가 ScreenUI면 true를 반환해요. 
+
+print(cube:GetName() .. " Is ScreenUI") 
+
+end 
+
+``` 
 | **bool IsItem()** |
 | :--- |
 
 아이템인지 확인할 수 있어요. 
+
+샘플 
+
+```lua
+
+local cube = Workspace.Cube 
+
+if cube:IsItem() == true then --오브젝트가 Item면 true를 반환해요. 
+
+print(cube:GetName() .. " Is Item") 
+
+end 
+
+``` 
 | **bool IsNPC()** |
 | :--- |
 
 NPC인지 확인할 수 있어요. 
+
+샘플 
+
+```lua
+
+local cube = Workspace.Cube 
+
+if cube:IsNPC() == true then --오브젝트가 NPC면 true를 반환해요. 
+
+print(cube:GetName() .. " Is NPC") 
+
+end 
+
+``` 
 | **bool IsFolder()** |
 | :--- |
 
 폴더인지 확인할 수 있어요. 
+
+샘플 
+
+```lua
+
+local cube = Workspace.Cube 
+
+if cube:IsFolder() == true then --오브젝트가 Folder면 true를 반환해요. 
+
+print(cube:GetName() .. " Is Folder") 
+
+end 
+
+``` 
 | **bool IsScript()** |
 | :--- |
 
 스트립트인지 확인할 수 있어요. 
+
+샘플 
+
+```lua
+
+local cube = Workspace.Cube 
+
+if cube:IsScript() == true then --오브젝트가 Script면 true를 반환해요. 
+
+print(cube:GetName() .. " Is Script") 
+
+end 
+
+``` 
 | **bool IsCollider()** |
 | :--- |
 
 Collider인지 확인할 수 있어요. 
+
+샘플 
+
+```lua
+
+local cube = Workspace.Cube 
+
+if cube:IsCollider() == true then --오브젝트가 Collider면 true를 반환해요. 
+
+print(cube:GetName() .. " Is Collider") 
+
+end 
+
+``` 
 | **bool IsWidget()** |
 | :--- |
 
 Widget인지 확인할 수 있어요. 
+
+샘플 
+
+```lua
+
+local cube = Workspace.Cube 
+
+if cube:IsWidget() == true then --오브젝트가 Widget면 true를 반환해요. 
+
+print(cube:GetName() .. " Is Widget") 
+
+end 
+
+``` 
 | **bool IsCamera()** |
 | :--- |
 
 Widget인지 확인할 수 있어요. 
+
+샘플 
+
+```lua
+
+local cube = Workspace.Cube 
+
+if cube:IsCamera() == true then --오브젝트가 Camera면 true를 반환해요. 
+
+print(cube:GetName() .. " Is Camera") 
+
+end 
+
+``` 
 | **bool IsValid()** |
 | :--- |
 
