@@ -2,9 +2,11 @@
 ## **함수**
 
 
+
 | **AddSelectObject(String ObjectName, float SelectRate, int Count)** |
 | :--- |
 선택 오브젝트를 추가할 수 있어요. (추가할 오브젝트 이름, 선택 확률 값, 개수) 
+
 
 | **string GetNextSelectObject()** |
 | :--- |

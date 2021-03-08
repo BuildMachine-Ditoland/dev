@@ -4,6 +4,7 @@
 ## **함수**
 
 
+
 | **SetOrientationType(ScrollOrientationType Type)** |
 | :--- |
 ScrollBox의 스크롤 타입을 설정할 수 있어요(ScrollOrientationType Type) 

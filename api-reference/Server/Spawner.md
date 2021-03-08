@@ -3,9 +3,11 @@
 ## **함수**
 
 
+
 | **AddSpawnObject(class FRScriptWorldObject* SpawnObject, float SpawnRate, int Count)** |
 | :--- |
 스폰 오브젝트를 추가할 수 있어요. (SpawnObject : 스폰 오브젝트, SpawnRate : 스폰 확률, Count : 스폰 개수) 
+
 
 | **AddSpawnObject(class FRScriptWorldObject* SpawnObject, float SpawnRate, int Count, Vector OffsetPosition)** |
 | :--- |
@@ -24,9 +26,11 @@ local spawnPos = Vector.new(0, 0, 0)
 spawner:AddSpawnObject(Toybox.Cube, spawnRate, spawnCount, spawnPos) --스포너에서 스폰할 오브젝트를 등록해요.
 ```
 
+
 | **SetObjectSpawnType_Scale()** |
 | :--- |
 오브젝트의 스폰 형식을 스포너의 크기에 따라 랜덤으로 스폰되게 설정해요. 
+
 
 | **SetObjectSpawnType_Range(Vector MinRange, Vector MaxRange)** |
 | :--- |

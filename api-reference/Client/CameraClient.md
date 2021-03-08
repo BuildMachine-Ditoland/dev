@@ -44,6 +44,7 @@ Zoom의 최대 값을 얻을 수 있어요.
 ## **함수**
 
 
+
 | **SetLookAtTarget(FRScriptObject ScriptObject)** |
 | :--- |
 대상 오브젝트를 타겟으로 설정해서 바라봐요. (타겟으로 설정할 오브젝트) 
@@ -59,6 +60,7 @@ LocalPlayer:ResetIgnoreLookInput() --카메라 조작을 초기화해요.
 characterCamera.Parent = targetCharacter --카메라의 부모 오브젝트를 설정해요.
 characterCamera:SetLookAtTarget(nil) --카메라가 대상 오브젝트를 바라보게 해요. (nil이면 바라보지 않아요.)
 ```
+
 
 | **ZoomInOut(float Value)** |
 | :--- |

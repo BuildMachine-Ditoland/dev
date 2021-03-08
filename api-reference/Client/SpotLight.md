@@ -2,9 +2,11 @@
 ## **함수**
 
 
+
 | **SetEnable(bool bEnable)** |
 | :--- |
 설정된 스포트 라이트의 작동 여부를 설정해요. (작동 여부) 
+
 
 | **SetColor(Color ChangedColor)** |
 | :--- |
@@ -14,6 +16,7 @@
 ```lua
 Workspace.Cube:SetColor(Color.new(255, 0, 0, 255)) --오브젝트의 색상을 변경해요. (r, g, b, a)
 ```
+
 
 | **ChangeIntensity(float Intensity)** |
 | :--- |
@@ -25,13 +28,16 @@ local changeValue = 2
 Workspace.SpotLight:ChangeIntensity(changeValue) --SpotLight의 밝기를 조절해요.
 ```
 
+
 | **ChangeAttenuationRadius(float radius)** |
 | :--- |
 스포트 라이트의 가시 영향력 범위를 변경할 수 있어요. 
 
+
 | **ChangeInnerConeAngle(float angle)** |
 | :--- |
 스포트 라이트의 안쪽 콘의 각도.  
+
 
 | **ChangeOuterConeAngle(float angle)** |
 | :--- |

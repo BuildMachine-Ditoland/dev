@@ -2,6 +2,7 @@
 ## **함수**
 
 
+
 | **Player GetPlayer()** |
 | :--- |
 해당 캐릭터의 플레이어를 얻을 수 있어요. 
@@ -11,6 +12,7 @@
 local character = Game:GetAllPlayer()[1]:GetCharacter()
 local player = character:GetPlayer() --캐릭터의 플레이어를 반환해요.
 ```
+
 
 | **string GetPlayerName()** |
 | :--- |
@@ -22,9 +24,11 @@ local character = Game:GetAllPlayer()[1]:GetCharacter()
 print(character:GetPlayerName()) --캐릭터의 플레이어 이름을 문자열로 반환해요.
 ```
 
+
 | **bool IsDriving()** |
 | :--- |
 캐릭터가 탈 것을 운전 중인지 아닌지 얻을 수 있어요. 
+
 
 | **ObjectFXClient CreateFX(ObjectFXClient FXObject, Bone BoneType)** |
 | :--- |
@@ -36,9 +40,11 @@ local character = LocalPlayer:GetRemotePlayer():GetCharacter()
 character:CreateFX(Workspace.Effect, Enum.Bone.Body) --캐릭터의 특정 부위에 이펙트를 생성해요.
 ```
 
+
 | **ObjectSoundClient CreateSound(ObjectSoundClient SoundObject)** |
 | :--- |
 캐릭터의 위치에 Sound를 생성할 수 있어요. (생성 하고싶은 Sound 오브젝트) 
+
 
 | **AddPlayerHUD(string UIName, UISceen UI, UIDisplayType Type)** |
 | :--- |
@@ -56,6 +62,7 @@ end
 Game.OnSpawnCharacter:Connect(spawn)
 ```
 
+
 | **RemovePlayerHUD(string UIName)** |
 | :--- |
 UI HUD를 제거해요. (제거하고 싶은 UI 이름) 
@@ -65,6 +72,7 @@ UI HUD를 제거해요. (제거하고 싶은 UI 이름)
 local character = LocalPlayer:GetRemotePlayer():GetCharacter()
 character:RemovePlayerHUD("Name") --캐릭터에 추가된 HUD를 이름으로 찾아서 삭제해요.
 ```
+
 
 | **RemovePlayerAllHUD()** |
 | :--- |
@@ -76,6 +84,7 @@ local character = LocalPlayer:GetRemotePlayer():GetCharacter()
 character:RemovePlayerAllHUD() --캐릭터에 추가된 모든 HUD를 삭제해요.
 ```
 
+
 | **GetPlayerHUD(string UIName)** |
 | :--- |
 UI HUD를 얻을 수 있어요. (얻고싶은 UI 이름) 
@@ -86,6 +95,7 @@ local character = LocalPlayer:GetRemotePlayer():GetCharacter()
 local playerNameUI = character:GetPlayerHUD("Name") --캐릭터에 추가된 HUD를 이름으로 찾아서 반환해요.                      
 playerNameUI.Text:SetTextColor(Color.new(255, 0, 0, 255)) 
 ```
+
 
 | **bool IsMyCharacter()** |
 | :--- |
@@ -99,9 +109,11 @@ if character:IsMyCharacter() then --캐릭터가 자신의 캐릭터이면 true�
 end
 ```
 
+
 | **void AttachAt(RModeObject ModeObject, BoneType Bone)** |
 | :--- |
 캐릭터의 원하는 본을 해당 오브젝트의 중점에 부착시켜요. (부착 할 오브젝트, [Enum.Bone.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/bone)) 
+
 
 | **void AttachAtTop(RModeObject ModeObject, BoneType Bone)** |
 | :--- |

@@ -2,6 +2,7 @@
 ## **함수**
 
 
+
 | **Play()** |
 | :--- |
 Sound를 플레이해요. 
@@ -11,6 +12,7 @@ Sound를 플레이해요.
 local sound = Workspace.Sound
 sound:Play() --사운드를 재생해요
 ```
+
 
 | **Stop()** |
 | :--- |

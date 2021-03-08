@@ -8,6 +8,7 @@
 ## **함수**
 
 
+
 | **RModeRemotePlayer GetRemotePlayer(string PlayerName);** |
 | :--- |
 이름으로 플레이어를 얻을 수 있어요. (찾고싶은 플레이어 이름) 
@@ -16,6 +17,7 @@
 ```lua
 local player = LocalPlayer:GetRemotePlayer() --자신의 플레이어를 반환해요. 
 ```
+
 
 | **RGameClientCharacter GetRemotePlayerCharacter(string PlayerName)** |
 | :--- |
@@ -26,9 +28,11 @@ local player = LocalPlayer:GetRemotePlayer() --자신의 플레이어를 반환�
 local character = Game:GetRemotePlayerCharacter(PlayerName) --플레이어 이름에 해당하는 캐릭터를 반환해요.
 ```
 
+
 | **int GetPlayerCount** |
 | :--- |
 현재 게임에 참여하고 있는 플레이어의 수를 얻을 수 있어요. 
+
 
 | **vector<Player> GetAllPlayer()** |
 | :--- |
@@ -41,6 +45,7 @@ for i = 1, #allPlayerList do
     print(allPlayerList[i]:GetName())
 end
 ```
+
 
 | **SendEventToServer(string EventName, Args ... )** |
 | :--- |
@@ -64,21 +69,26 @@ cube:ConnectEventFunction("SomeFunc", SomeFunc) --오브젝트에 "SomeFunc"라�
                                                 --같은 대상에 등록된 이벤트만 호출할 수 있어요.
 ```
 
+
 | **RModeSequenceAnimStateSetting AddAnimStateMachineSetting(string StateMachineName)** |
 | :--- |
 캐릭터에 사용될 애니메이션 상태머신 설정을 추가할 수 있어요. (설정할 상태머신 이름) 
+
 
 | **RModeSequenceAnimStateSetting GetAnimStateMachineSetting(string StateMachineName)** |
 | :--- |
 설정된 애니메이션 상태머신을 얻을 수 있어요. (얻고 싶은 상태머신 이름) 
 
+
 | **SetCharacterAnimStateMachine(RCharacterSetting CharacterSetting, RAnimStateMachineSetting AnimSetting)** |
 | :--- |
 해당 캐릭터 설정으로 생성되는 캐릭터의 애니메이션 상태 머신을 설정 할 수 있어요. (대상 캐릭터 설정, 사용 할 애니메이션 상태 설정) 
 
+
 | **SetNPCAnimStateMachine(string NPCSettingName, string AnimStateMachineSettingName)** |
 | :--- |
 해당 NPC의 애니메이션 상태 머신 사용하게 할 수 있어요. (설정한 NPC 이름, 애니메이션 상태 머신 이름) 
+
 
 | **ObjectFXClient CreateFX(ObjectFXClient FXObject, Vetor Location)** |
 | :--- |
@@ -90,14 +100,17 @@ local spawnPos = Workspace.Cube:GetTransform():GetLocation()
 Game:CreateFX(Workspace.Effect, spawnPos) --이펙트를 지정 위치에 생성해요.
 ```
 
+
 | **DeleteFX(ObjectFXClient Object)** |
 | :--- |
 FX를 제거시켜요. (제거할 FX 오브젝트) 
+
 
 | **ObjectSoundClient PlaySound(ObjectSoundClient SoundObject, Vetor Location)** |
 | :--- |
 사운드를 플레이해요. (플레이 할 Sound 오브젝트, 플레이 할 위치 Vector) 
 플레이 중인 사운드를 정지시켜요. (정지할 Sound) 
+
 
 | **CreateObject(RScriptWorldObject Object, Vector Location)** |
 | :--- |
@@ -111,13 +124,16 @@ local temp = Game:CreateObject(cube, createPos) --오브젝트를 지정된 위�
 print(temp:GetName()) --CreateObject로 생성한 오브젝트를 변수에 담은 뒤 후처리할 수 있어요.
 ```
 
+
 | **CreateUIScene(RScriptUISceneClient Source)** |
 | :--- |
 Source와 같은 UIScene을 생성한다. 
 
+
 | **CreateUIScene(string UISceneName, RScriptUISceneClient Source)** |
 | :--- |
 Source와 같은 UIScene을 생성 후, UISceneName을 생성된 오브젝트 이름으로 설정한다. (생성할 오브젝트의 이름 UISceneName, 생성 할 오브젝트 Source) 
+
 
 | **Vector GetMouseHitLocation()** |
 | :--- |
@@ -134,6 +150,7 @@ LocalPlayer:ProcessInputActionEvent("ClickKey", Enum.KeyInputType.Released, func
     print("Click Position : " .. pos)
 end
 ```
+
 
 | **Object GetMouseHitObject()** |
 | :--- |

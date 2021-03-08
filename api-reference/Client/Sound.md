@@ -2,6 +2,7 @@
 ## **함수**
 
 
+
 | **void Play()** |
 | :--- |
 Sound를 플레이할 수 있어요. 
@@ -12,6 +13,7 @@ local sound = Workspace.Sound
 sound:Play() --사운드를 재생해요
 ```
 
+
 | **void Stop()** |
 | :--- |
 Sound를 정지시켜요. 
@@ -21,6 +23,7 @@ Sound를 정지시켜요.
 local sound = Workspace.Sound
 sound:Stop() --사운드를 정지해요
 ```
+
 
 | **bool IsPlaying()** |
 | :--- |

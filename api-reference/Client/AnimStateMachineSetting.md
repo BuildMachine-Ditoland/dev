@@ -3,41 +3,51 @@
 ## **함수**
 
 
+
 | **RModeSequenceAnimStateSetting AddAnimState(string StateName, string ResourceID)** |
 | :--- |
 단일 애니메이션 상태 설정을 추가해요. (추가할 상태 이름, 리소스 ID) 
+
 
 | **RModeSequenceAnimStateSetting AddAnimState(string StateName, string ResourceID, int PlayCount)** |
 | :--- |
 단일 애니메이션 상태 설정을 추가해요. (추가할 상태 이름, 리소스 ID, 플레이 횟수) 
 
+
 | **RModeSequenceAnimStateSetting AddAnimState(string StateName, string ResourceID, int PlayCount, float PlaySpeed)** |
 | :--- |
 단일 애니메이션 상태 설정을 추가해요. (추가할 상태 이름, 리소스 ID, 플레이 횟수, 플레이 속도) 
+
 
 | **RModeBlendAnimStateSetting AddBlendAnimState(string StateName, protected_function BlendFunction)** |
 | :--- |
 블랜드 애니메이션 상태 설정을 추가해요. (추가할 상태 이름, 연결 함수) 
 
+
 | **RModeBlendAnimStateSetting AddBlendAnimState(string StateName, protected_function BlendFunction, int PlayCount)** |
 | :--- |
 블랜드 애니메이션 상태 설정을 추가해요. (추가할 상태 이름, 연결 함수, 플레이 횟수) 
+
 
 | **AddAnimTransition(string FromState, string ToState)** |
 | :--- |
 애니메이션 상태 전이를 추가해요. (시작 상태 이름, 전이할 상태 이름) 
 
+
 | **AddAnimTransition(string FromState, string ToState, float BlendTime)** |
 | :--- |
 애니메이션 상태 전이를 추가해요. (시작 상태 이름, 전이할 상태 이름, 블렌딩 시간) 
+
 
 | **AddAnimTransition(string FromState, string ToState, protected_function Condition)** |
 | :--- |
 애니메이션 상태 전이를 추가해요. (시작 상태 이름, 전이할 상태 이름, 연결 함수) 
 
+
 | **AddAnimTransition(string FromState, string ToState, protected_function Condition, float BlendTime)** |
 | :--- |
 애니메이션 상태 전이를 추가해요. (시작 상태 이름, 전이할 상태 이름, 연결 함수, 블렌딩 시간) 
+
 
 | **SetStartState(string StateName)** |
 | :--- |

@@ -60,6 +60,7 @@ end)
 Input:RemoveActionKeyEvent("DefaultInput", "Jump", Enum.Key.SpaceBar) --이름에 해당하는 조작 키 이벤트를 제거해요.
 ```
 
+
 | **AddAxisKeyEvent(string Group, string Event, RModeKey Key, float Value)** |
 | :--- |
 인풋 그룹에 축 이벤트를 추가할 수 있어요. (그룹 이름, 추가 할 이벤트 이름, [Enum.Key.키](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/key), 이벤트 Value) 
@@ -79,6 +80,7 @@ LocalPlayer:ProcessInputAxisEvent("AxisKey", Enum.KeyInputType.Pressed, function
     print("Axis Input!")
 end)
 ```
+
 
 | **RemoveAxisKeyEvent(string Group, string Event, RModeKey Key)** |
 | :--- |

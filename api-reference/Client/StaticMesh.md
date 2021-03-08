@@ -2,6 +2,7 @@
 ## **함수**
 
 
+
 | **SetColor(Color ChangeColor)** |
 | :--- |
 스테틱 메시의 색을 변경할 수 있어요. (변경할 [Color](https://ditoland-utplus.gitbook.io/ditoland/api-reference/common/color)값) 
@@ -11,6 +12,7 @@
 Workspace.Cube:SetColor(Color.new(255, 0, 0, 255)) --오브젝트의 색상을 변경해요. (r, g, b, a)
 ```
 
+
 | **Color GetColor()** |
 | :--- |
 해당 스태틱 메시의 Color를 가져올 수 있어요. 
@@ -19,6 +21,7 @@ Workspace.Cube:SetColor(Color.new(255, 0, 0, 255)) --오브젝트의 색상을 �
 ```lua
 local color = Workspace.Cube:GetColor() --오브젝트의 색상을 Color로 반환해요.
 ```
+
 
 | **SetSimulatePhysics(bool bSimulatePhysics)** |
 | :--- |

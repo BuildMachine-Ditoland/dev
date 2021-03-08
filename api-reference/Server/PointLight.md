@@ -2,9 +2,11 @@
 ## **함수**
 
 
+
 | **SetEnable(bool bEnable)** |
 | :--- |
 포인트 라이트의 활성화 여부를 설정해요. (포인트 라이트 활성화 여부) 
+
 
 | **SetColor(Color ChangeColor)** |
 | :--- |
@@ -14,6 +16,7 @@
 ```lua
 Workspace.Cube:SetColor(Color.new(255, 0, 0, 255)) --오브젝트의 색상을 변경해요. (r, g, b, a)
 ```
+
 
 | **ChangeIntensity(float Intensity)** |
 | :--- |

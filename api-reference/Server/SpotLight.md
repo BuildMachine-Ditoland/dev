@@ -2,9 +2,11 @@
 ## **함수**
 
 
+
 | **SetEnable(bool bEnable)** |
 | :--- |
 스포트 라이트의 활성화 여부를 설정해요. (포인트 라이트 활성화 여부) 
+
 
 | **SetColor(Color ChangedColor)** |
 | :--- |
@@ -15,17 +17,21 @@
 Workspace.Cube:SetColor(Color.new(255, 0, 0, 255)) --오브젝트의 색상을 변경해요. (r, g, b, a)
 ```
 
+
 | **ChangeIntensity(float Intensity)** |
 | :--- |
 스포트 라이트의 밝기를 변경해요. (설정할 밝기 값) 
+
 
 | **ChangeAttenuationRadius(float radius)** |
 | :--- |
 스포트 라이트의 가시 영향력 범위를 변경해요. (감쇠 반경) 
 
+
 | **ChangeInnerConeAngle(float angle)** |
 | :--- |
 스포트 라이트의 내부 원뿔 각을 변경해요. 
+
 
 | **ChangeOuterConeAngle(float angle)** |
 | :--- |

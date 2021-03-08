@@ -2,6 +2,7 @@
 ## **함수**
 
 
+
 | **SetVisibility(bool Visibility)** |
 | :--- |
 UI씬의 표시 여부를 설정할 수 있어요. (표시 여부) 

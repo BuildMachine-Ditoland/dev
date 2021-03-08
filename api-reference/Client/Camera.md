@@ -2,9 +2,11 @@
 ## **함수**
 
 
+
 | **SetSettingName(string name)** |
 | :--- |
 캐릭터에 적용할 카메라 세팅의 이름을 설정할 수 있어요. (설정할 이름 값) 
+
 
 | **PlayCameraShake(float time, float scale)** |
 | :--- |
@@ -21,6 +23,7 @@ print("Stop Shake!")
 Camera:StopCameraShake(true)
 ```
 
+
 | **StopCameraShake(bool bImmediately)** |
 | :--- |
 카메라 쉐이크를 중지시켜요. (즉시중지 여부) 
@@ -35,6 +38,7 @@ wait(1)
 print("Stop Shake!")
 Camera:StopCameraShake(true)
 ```
+
 
 | **PlayCameraFade(float FromAlpha, float ToAlpha, float Duration, Color Color, bool HoldFinish)** |
 | :--- |
@@ -53,6 +57,7 @@ wait(1)
 print("Stop Fade!")
 Camera:StopCameraFade()
 ```
+
 
 | **StopCameraFade()** |
 | :--- |

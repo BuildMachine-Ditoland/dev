@@ -37,9 +37,11 @@ Vector = Vector * float
 ## **함수**
 
 
+
 | **void Normalize()** |
 | :--- |
 단위를 1로 정규화 시켜주는 함수에요. 
+
 
 | **float CosineAngle2D(Vector Other)** |
 | :--- |

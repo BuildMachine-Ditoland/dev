@@ -2,9 +2,11 @@
 ## **함수**
 
 
+
 | **RSpawnPoint AddSpawnPoint(RObjectScript* RObjectScript)** |
 | :--- |
 스폰 포인트를 추가할 수 있어요. (추가할 스폰포인트 오브젝트) 
+
 
 | **SetSpawnType(GroupSpawnType GroupSpawnType)** |
 | :--- |

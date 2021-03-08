@@ -2,9 +2,11 @@
 ## **함수**
 
 
+
 | **SetSpawnType(ESpawnType InSpawnType)** |
 | :--- |
 스폰 포인트의 작동방식을 설정할 수 있어요. ( [Enum.SpawnType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/spawntype)) 
+
 
 | **SetSpawnType(ESpawnType InSpawnType, Number Radius)** |
 | :--- |

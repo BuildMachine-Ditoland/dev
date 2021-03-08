@@ -4,6 +4,7 @@
 ## **함수**
 
 
+
 | **SetVisible(bool bVisible)** |
 | :--- |
 UI 위젯의 표시 여부를 설정할 수 있어요. (위젯 표시 여부) 
@@ -14,17 +15,21 @@ local someUI = Workspace.ScreenUI
 someUI:SetVisible(false) --UI를 비활성화해요.
 ```
 
+
 | **bool IsVisible()** |
 | :--- |
 위젯이 보이는지를 확인할 수 있어요. () 
+
 
 | **SetLocation(Number X, Number Y)** |
 | :--- |
 위젯의 위치를 변경할 수 있어요. (X좌표 값, Y좌표 값) 
 
+
 | **SetAnchor(ERObjectUIAnchorType type)** |
 | :--- |
 위젯의 고정 여부를 설정할 수 있어요. (설정할 타입) 
+
 
 | **SetOpacity(Number Opacity)** |
 | :--- |
@@ -36,9 +41,11 @@ local someUI = Workspace.ScreenUI.Frame
 someUI:SetOpacity(0.3)
 ```
 
+
 | **AddChildUIScene(string ChildUISceneName, FRUIScene* Element)** |
 | :--- |
 UI씬에 자식 UI씬 추가할 수 있어요. (자식이 될 UI씬 이름, 자식으로 추가할 UI씬) 
+
 
 | **SetScale(Number Scale)** |
 | :--- |
@@ -51,6 +58,7 @@ local scale = cube:GetScale() --해당 오브젝트의 크기를 100으로 나�
 scale.Y = scale.Y + 0.5
 cube:SetScale(scale) --오브젝트의 크기를 설정해요.
 ```
+
 
 | **Number GetScale()** |
 | :--- |

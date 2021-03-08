@@ -2,6 +2,7 @@
 ## **함수**
 
 
+
 | **bool IsDie()** |
 | :--- |
 현재 캐릭터가 죽어있는 상태인지 알 수 있어요. 
@@ -14,6 +15,7 @@ if character:IsDie() == true then --캐릭터가 죽으면 true를 반환해요.
 end
 ```
 
+
 | **bool IsFly()** |
 | :--- |
 캐릭터가 공중에 떠 있는지 아닌지 얻을 수 있어요. 
@@ -23,6 +25,7 @@ end
 local character = LocalPlayer:GetRemotePlayer():GetCharacter()
 print(character:IsFly()) --캐릭터가 점프중이면 true를 반환해요.
 ```
+
 
 | **IsCanJump()** |
 | :--- |
@@ -34,6 +37,7 @@ local character = LocalPlayer:GetRemotePlayer():GetCharacter()
 print(character:IsCanJump()) --캐릭터가 점프할 수 있는 상태면 true를 반환해요.
 ```
 
+
 | **float GetMoveSpeed()** |
 | :--- |
 해당 캐릭터의 현재 이동 속도를 얻을 수 있어요. 
@@ -43,6 +47,7 @@ print(character:IsCanJump()) --캐릭터가 점프할 수 있는 상태면 true�
 local character = LocalPlayer:GetRemotePlayer():GetCharacter()
 print(character:GetMoveSpeed()) --이동중인 캐릭터의 이동속도를 숫자로 반환해요.
 ```
+
 
 | **SetTransform(Matrix)** |
 | :--- |
@@ -56,6 +61,7 @@ targetTransform:SetRotation(Vector.new(0, 100, 0))
 character:SetTransform(targetTransform) --오브젝트를 보간으로 이동시켜요. (캐릭터는 보간없이 움직여요.)
 ```
 
+
 | **GetTransform(Matrix)** |
 | :--- |
 매트릭스를 얻을 수 있어요. (설정할 [Matrix](https://ditoland-utplus.gitbook.io/ditoland/api-reference/common/matrix)값 ) 
@@ -64,6 +70,7 @@ character:SetTransform(targetTransform) --오브젝트를 보간으로 이동시
 ```lua
 local targetTransform = Game:GetAllPlayer()[1]:GetTransform()
 ```
+
 
 | **void SetLocation(Vector Location)** |
 | :--- |
@@ -77,6 +84,7 @@ targetTransform:SetRotation(Vector.new(0, 100, 0))
 character:SetTransform(targetTransform) --오브젝트를 보간으로 이동시켜요. (캐릭터는 보간없이 움직여요.)
 ```
 
+
 | **Vector GetLocation()** |
 | :--- |
 (Deprecated)현재 캐릭터의 위치를 얻을 수 있어요. 
@@ -86,6 +94,7 @@ character:SetTransform(targetTransform) --오브젝트를 보간으로 이동시
 local character = Game:GetAllPlayer()[1]:GetCharacter()
 local characterPos = character:GetTransform():GetLocation() --캐릭터의 위치값을 Vector로 반환해요.
 ```
+
 
 | **Vector GetForwardVector()** |
 | :--- |
