@@ -10,18 +10,72 @@
 | :--- |
 
 카메라 쉐이크를 시작해요. (쉐이크 시간, 쉐이크 강도) 
+
+샘플 
+
+```lua
+local shakeTime = 5
+local shakeScale = 2
+Camera:PlayCameraShake(shakeTime, shakeScale)
+
+wait(1)
+print("Stop Shake!")
+Camera:StopCameraShake(true)
+```
 | **StopCameraShake(bool bImmediately)** |
 | :--- |
 
 카메라 쉐이크를 중지시켜요. (즉시중지 여부) 
+
+샘플 
+
+```lua
+local shakeTime = 5
+local shakeScale = 2
+Camera:PlayCameraShake(shakeTime, shakeScale)
+
+wait(1)
+print("Stop Shake!")
+Camera:StopCameraShake(true)
+```
 | **PlayCameraFade(float FromAlpha, float ToAlpha, float Duration, Color Color, bool HoldFinish)** |
 | :--- |
 
 카메라 페이드를 시작해요. (시작 강도 0~1, 종료 강도 0~1, 시작에서 종료까지 걸리는 시간, 적용할 [Color](https://ditoland-utplus.gitbook.io/ditoland/api-reference/common/color)값, 종료 시점 상태 유지 여부) 
+
+샘플 
+
+```lua
+local fromAlpha = 0
+local toAlpha = 1
+local duration = 3
+local color = Color.new(255, 0, 0, 255)
+local holdFinish = true
+Camera:PlayCameraFade(fromAlpha, toAlpha, duration, color, holdFinish)
+
+wait(1)
+print("Stop Fade!")
+Camera:StopCameraFade()
+```
 | **StopCameraFade()** |
 | :--- |
 
 카메라 페이드를 정지시켜요. 
+
+샘플 
+
+```lua
+local fromAlpha = 0
+local toAlpha = 1
+local duration = 3
+local color = Color.new(255, 0, 0, 255)
+local holdFinish = true
+Camera:PlayCameraFade(fromAlpha, toAlpha, duration, color, holdFinish)
+
+wait(1)
+print("Stop Fade!")
+Camera:StopCameraFade()
+```
 # **상속받아 사용 가능한 기능들**
 
 ## **속성**

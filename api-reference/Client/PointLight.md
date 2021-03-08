@@ -20,6 +20,13 @@ Workspace.Cube:SetColor(Color.new(255, 0, 0, 255)) --오브젝트의 색상을 �
 | :--- |
 
 포인트 라이트의 밝기 값을 변경할 수 있어요. (원하는 밝기 값) 
+
+샘플 
+
+```lua
+local changeValue = 2
+Workspace.PointLight:ChangeIntensity(changeValue) --PointLight의 밝기를 조절해요.
+```
 # **상속받아 사용 가능한 기능들**
 
 ## **속성**

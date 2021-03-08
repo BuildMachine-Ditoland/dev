@@ -31,6 +31,13 @@ someUI:SetVisible(false) --UI를 비활성화해요.
 | :--- |
 
 위젯의 투명 값을 설정할 수 있어요. (설정할 값) 
+
+샘플 
+
+```lua
+local someUI = Workspace.ScreenUI.Frame
+someUI:SetOpacity(0.3)
+```
 | **AddChildUIScene(string ChildUISceneName, FRUIScene* Element)** |
 | :--- |
 

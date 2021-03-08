@@ -84,9 +84,28 @@ cube:ConnectChangeEventFunction("SomeValue", ChangeSomeValue)  --오브젝트의
 | **AddTimeEvent(String EventName, float Time, LuaScriptFunction EventFuunction)** |
 | :--- |
 일정 시간뒤에 연결 함수가 호출되는 이벤트를 추가해요. (추가할 이벤트 이름, 시간, 연결 함수)
+샘플
+
+```lua
+local waitTime = 2
+local function PrintMessage() --AddTimeEvent로 등록된 함수는 일정시간을 기다린뒤, 호출돼요.
+    print("Call PrintMessage!") 
+end
+Game:AddTimeEvent("PrintMessage", waitTime, PrintMessage) --일정시간을 기다린뒤 호출되는 함수를 문자열로 등록해요.
+```
 | **DeleteTimeEvent(String EventName)** |
 | :--- |
 등록된 시간 이벤트를 삭제해요. (삭제할 이벤트 이름)
+샘플
+
+```lua
+local waitTime = 2
+local function PrintMessage() --AddTimeEvent로 등록된 함수는 일정시간을 기다린뒤, 호출돼요.
+    print("Call PrintMessage!") 
+end
+Game:AddTimeEvent("PrintMessage", waitTime, PrintMessage) --일정시간을 기다린뒤 호출되는 함수를 문자열로 등록해요.
+Game:DeleteTimeEvent("PrintMessage") --AddTimeEvent로 등록한 함수를 삭제해서 호출되지 않게 해요.
+```
 ## **함수**
 
 | **string GetName()** |

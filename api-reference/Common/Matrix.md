@@ -31,25 +31,30 @@ local targetTransform = Game:GetAllPlayer()[1]:GetTransform()
 targetTransform:SetLocation(0, 100, 0)
 targetTransform:SetRotation(Vector.new(0, 100, 0))
 character:SetTransform(targetTransform) --오브젝트를 보간으로 이동시켜요. (캐릭터는 보간없이 움직여요.)
-``
+```
 | **void SetLocation(Vector LocationValue)** |
 | :--- |
-주어진 값으로 위치를 설정해요. (설정할 벡터 값)
-샘플
+
+주어진 값으로 위치를 설정해요. (설정할 벡터 값) 
+
+샘플 
 
 ```lua
 local targetTransform = Game:GetAllPlayer()[1]:GetTransform()
 targetTransform:SetLocation(Vector.new(0, 100, 0))
 targetTransform:SetRotation(Vector.new(0, 100, 0))
 character:SetTransform(targetTransform) --오브젝트를 보간으로 이동시켜요. (캐릭터는 보간없이 움직여요.)
-``
+```
 | **void AddLocation(float x, float y, float z)** |
 | :--- |
-주어진 값으로 기존 위치에 +로 계산해서 위치를 설정해요. (더하기 할 X 값, 더하기 할 Y 값, 더하기 할 Z 값)
+
+주어진 값으로 기존 위치에 +로 계산해서 위치를 설정해요. (더하기 할 X 값, 더하기 할 Y 값, 더하기 할 Z 값) 
 | **Vector GetRotation()** |
 | :--- |
-각도를 얻을 수 있어요. (Vector.X : Roll, Vector.Y : Pitch, Vector.Z : Yaw)
-샘플
+
+각도를 얻을 수 있어요. (Vector.X : Roll, Vector.Y : Pitch, Vector.Z : Yaw) 
+
+샘플 
 
 ```lua
 local character = Game:GetAllPlayer()[1]:GetCharacter()

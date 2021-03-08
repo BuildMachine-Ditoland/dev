@@ -28,6 +28,30 @@ print(character:GetPlayerName()) --캐릭터의 플레이어 이름을 문자열
 | :--- |
 
 플레이어가 속해있는 팀 이름을 얻을 수 있어요. 
+
+샘플 
+
+```lua
+local teamName = "Blue Team"
+local team = Game:AddTeam(teamName) --이름으로 팀을 추가한뒤, 추가한 팀을 반환해요.
+local spawnGroup = Game:AddSpawnPointGroup(teamName) --이름으로 스폰 그룹을 등록해요.
+local spawnRadius = 50 --팀별 캐릭터 스폰 반경을 설정해요.
+            
+team:AddUsingCharacter(Workspace.Character) --팀별로 사용하는 캐릭터를 따로 지정할 수도 있어요.            
+team:SetUsingSpawnPointGroup(teamName) --팀에서 사용할 스폰 그룹을 설정해요.     
+
+local spawner = Game:AddSpawnPointAtGroup(teamName, Workspace.SpawnPoint) --스폰 그룹에서 사용할 스폰포인트를 등록해요.
+spawner:SetSpawnType(Enum.PointSpawnType.Area, spawnRadius) --팀의 스폰타입을 설정해요.
+
+Game:SetTeamSetting(Enum.DivideTeamType.Order) --팀에 플레이어를 분배하는 방식을 설정해요.
+Game:SetSpawnType(Enum.SpawnType.UseTeamSpawn) --게임의 캐릭터 스폰 방식을 설정해요.
+Game:ApplyTeamSetting() --팀 설정을 적용해요.
+
+local function SpawnCharacter(character) 
+    print(character:GetName() .. "'s' Team : " .. character:GetPlayer():GetTeamName()) --팀 이름을 반환해요.
+end
+Game.OnSpawnCharacter:Connect(SpawnCharacter) 
+```
 | **int GetLifeCount()** |
 | :--- |
 
@@ -66,6 +90,13 @@ player:RespawnCharacter() --플레이어의 캐릭터를 리스폰해요.
 | :--- |
 
 플레이어의 프리캠 모드 사용여부를 설정할 수 있어요. (프리캠 사용 여부) 
+
+샘플 
+
+```lua
+local player = Game:GetAllPlayer()[1]
+player:SetFreeCamMode(true)
+```
 | **RequestFreeCam(float WaitTime)** |
 | :--- |
 
@@ -171,9 +202,28 @@ cube:ConnectChangeEventFunction("SomeValue", ChangeSomeValue)  --오브젝트의
 | **AddTimeEvent(String EventName, float Time, LuaScriptFunction EventFuunction)** |
 | :--- |
 일정 시간뒤에 연결 함수가 호출되는 이벤트를 추가해요. (추가할 이벤트 이름, 시간, 연결 함수)
+샘플
+
+```lua
+local waitTime = 2
+local function PrintMessage() --AddTimeEvent로 등록된 함수는 일정시간을 기다린뒤, 호출돼요.
+    print("Call PrintMessage!") 
+end
+Game:AddTimeEvent("PrintMessage", waitTime, PrintMessage) --일정시간을 기다린뒤 호출되는 함수를 문자열로 등록해요.
+```
 | **DeleteTimeEvent(String EventName)** |
 | :--- |
 등록된 시간 이벤트를 삭제해요. (삭제할 이벤트 이름)
+샘플
+
+```lua
+local waitTime = 2
+local function PrintMessage() --AddTimeEvent로 등록된 함수는 일정시간을 기다린뒤, 호출돼요.
+    print("Call PrintMessage!") 
+end
+Game:AddTimeEvent("PrintMessage", waitTime, PrintMessage) --일정시간을 기다린뒤 호출되는 함수를 문자열로 등록해요.
+Game:DeleteTimeEvent("PrintMessage") --AddTimeEvent로 등록한 함수를 삭제해서 호출되지 않게 해요.
+```
 ## **함수**
 
 | **string GetName()** |

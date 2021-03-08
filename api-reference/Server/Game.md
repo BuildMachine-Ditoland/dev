@@ -108,6 +108,30 @@ Game:SetSpawnType(Enum.SpawnType.UseSpawnGroup) --게임의 스폰타입을 설�
 | :--- |
 
 게임에서 사용 할 팀 설정을 추가할 수 있어요. (팀 이름 설정) 
+
+샘플 
+
+```lua
+local teamName = "Blue Team"
+local team = Game:AddTeam(teamName) --이름으로 팀을 추가한뒤, 추가한 팀을 반환해요.
+local spawnGroup = Game:AddSpawnPointGroup(teamName) --이름으로 스폰 그룹을 등록해요.
+local spawnRadius = 50 --팀별 캐릭터 스폰 반경을 설정해요.
+            
+team:AddUsingCharacter(Workspace.Character) --팀별로 사용하는 캐릭터를 따로 지정할 수도 있어요.            
+team:SetUsingSpawnPointGroup(teamName) --팀에서 사용할 스폰 그룹을 설정해요.     
+
+local spawner = Game:AddSpawnPointAtGroup(teamName, Workspace.SpawnPoint) --스폰 그룹에서 사용할 스폰포인트를 등록해요.
+spawner:SetSpawnType(Enum.PointSpawnType.Area, spawnRadius) --팀의 스폰타입을 설정해요.
+
+Game:SetTeamSetting(Enum.DivideTeamType.Order) --팀에 플레이어를 분배하는 방식을 설정해요.
+Game:SetSpawnType(Enum.SpawnType.UseTeamSpawn) --게임의 캐릭터 스폰 방식을 설정해요.
+Game:ApplyTeamSetting() --팀 설정을 적용해요.
+
+local function SpawnCharacter(character) 
+    print(character:GetName() .. "'s' Team : " .. character:GetPlayer():GetTeamName()) --팀 이름을 반환해요.
+end
+Game.OnSpawnCharacter:Connect(SpawnCharacter) 
+```
 | **RModeNPCSetting AddNPCSetting(string NPCSettingName)** |
 | :--- |
 
@@ -142,6 +166,30 @@ local player = Game:GetPlayer(PlayerName) --플레이어 이름에 해당하는 
 | :--- |
 
 팀 설정 방식을 게임에 적용하는 함수에요. 
+
+샘플 
+
+```lua
+local teamName = "Blue Team"
+local team = Game:AddTeam(teamName) --이름으로 팀을 추가한뒤, 추가한 팀을 반환해요.
+local spawnGroup = Game:AddSpawnPointGroup(teamName) --이름으로 스폰 그룹을 등록해요.
+local spawnRadius = 50 --팀별 캐릭터 스폰 반경을 설정해요.
+            
+team:AddUsingCharacter(Workspace.Character) --팀별로 사용하는 캐릭터를 따로 지정할 수도 있어요.            
+team:SetUsingSpawnPointGroup(teamName) --팀에서 사용할 스폰 그룹을 설정해요.     
+
+local spawner = Game:AddSpawnPointAtGroup(teamName, Workspace.SpawnPoint) --스폰 그룹에서 사용할 스폰포인트를 등록해요.
+spawner:SetSpawnType(Enum.PointSpawnType.Area, spawnRadius) --팀의 스폰타입을 설정해요.
+
+Game:SetTeamSetting(Enum.DivideTeamType.Order) --팀에 플레이어를 분배하는 방식을 설정해요.
+Game:SetSpawnType(Enum.SpawnType.UseTeamSpawn) --게임의 캐릭터 스폰 방식을 설정해요.
+Game:ApplyTeamSetting() --팀 설정을 적용해요.
+
+local function SpawnCharacter(character) 
+    print(character:GetName() .. "'s' Team : " .. character:GetPlayer():GetTeamName()) --팀 이름을 반환해요.
+end
+Game.OnSpawnCharacter:Connect(SpawnCharacter) 
+```
 | **ReqResetGame()** |
 | :--- |
 
@@ -432,14 +480,103 @@ cube:ConnectChangeEventFunction("SomeValue", ChangeSomeValue)  --오브젝트의
 | **AddTimeEvent(String EventName, float Time, LuaScriptFunction EventFuunction)** |
 | :--- |
 일정 시간뒤에 연결 함수가 호출되는 이벤트를 추가해요. (추가할 이벤트 이름, 시간, 연결 함수)
+샘플
+
+```lua
+local waitTime = 2
+local function PrintMessage() --AddTimeEvent로 등록된 함수는 일정시간을 기다린뒤, 호출돼요.
+    print("Call PrintMessage!") 
+end
+Game:AddTimeEvent("PrintMessage", waitTime, PrintMessage) --일정시간을 기다린뒤 호출되는 함수를 문자열로 등록해요.
+```
 | **DeleteTimeEvent(String EventName)** |
 | :--- |
 등록된 시간 이벤트를 삭제해요. (삭제할 이벤트 이름)
+샘플
+
+```lua
+local waitTime = 2
+local function PrintMessage() --AddTimeEvent로 등록된 함수는 일정시간을 기다린뒤, 호출돼요.
+    print("Call PrintMessage!") 
+end
+Game:AddTimeEvent("PrintMessage", waitTime, PrintMessage) --일정시간을 기다린뒤 호출되는 함수를 문자열로 등록해요.
+Game:DeleteTimeEvent("PrintMessage") --AddTimeEvent로 등록한 함수를 삭제해서 호출되지 않게 해요.
+```
 ## **함수**
 
 | **RModePhase AddPhase(string phasename)** |
 | :--- |
 게임에 단계를 추가할 수 있어요. (추가할 단계 이름)
+샘플
+
+```lua
+--서버 스크립트에서-------------
+local LobbyState = Game:AddPhase("Lobby") --사용할 Phase를 등록해요.
+local PlayState = Game:AddPhase("Play") --Phase는 여러개도 등록할 수 있어요.
+local ResultState = Game:AddPhase("Result")
+Game:AddReplicateValue("GameState", "Lobby", Enum.ReplicateType.Changed, 0, false) --서버와 클라이언트간 동기화되는 값을 등록하고 초기값을 설정한뒤, 값이 변경될때마다 호출되게 해요.
+
+--각 Phase로 전환되었을때 처리할 이벤트 함수를 추가해요.
+local function EnterLobbyState()
+    Game.GameState = "Lobby" 
+    print("Enter Lobby State")
+end
+LobbyState.EnterEvent:Connect(EnterLobbyState) --해당 Phase로 변경됐을때 호출되는 이벤트를 연결해요.
+
+local function UpdateLobbyState(UpdateTime)                    
+    print("Update Lobby State")
+end
+LobbyState.UpdateEvent:Connect(UpdateLobbyState)  --해당 Phase일때 매프레임마다 호출되는 이벤트를 연결해요.
+
+local function ExitLobbyState()
+    print("End Lobby State")
+end
+LobbyState.ExitEvent:Connect(ExitLobbyState) --해당 Phase가 끝날때 호출되는 이벤트를 연결해요.
+
+local function EnterPlayState()
+    Game.GameState = "Play" 
+    print("Enter Play State")
+end
+PlayState.EnterEvent:Connect(EnterPlayState)
+
+local function EnterResultState()
+    Game.GameState = "Result" 
+    print("Enter Result State")
+end
+ResultState.EnterEvent:Connect(EnterResultState)
+
+wait(1)
+Game:ChangePhaseByName("Game") --이름으로 Phase를 전환해요.
+wait(1)
+Game:ChangeToNextPhase() --다음 Phase로 전환해요. (만약 마지막 Phase면 처리되지 않아요.)
+     
+--클라 스크립트에서-------------
+local LobbyState = Game:AddPhase("Lobby") --서버 스크립트에서 추가한 Phase를 똑같이 등록해요.
+local PlayState = Game:AddPhase("Play") 
+local ResultState = Game:AddPhase("Result")
+
+--각 Phase로 전환되었을때 처리할 이벤트 함수를 추가해요.
+--서버 스크립트와 동일하게 작성하되, Game.GameState = "Lobby" 같은 Phase 변경은 제외해요. (서버에서만 처리해야 해요.)
+local function EnterLobbyState()     
+    print("Enter Lobby State")
+end
+LobbyState.EnterEvent:Connect(EnterLobbyState)
+
+local function EnterPlayState()
+    print("Enter Play State")
+end
+PlayState.EnterEvent:Connect(EnterPlayState)
+
+local function EnterResultState()
+    print("Enter Result State")
+end
+ResultState.EnterEvent:Connect(EnterResultState)
+
+--스크립트 제일 아래에 상태가 바뀔때마다 관련된 Phase 함수가 호출될 수 있도록 연결해요.
+Game:ConnectChangeEventFunction("GameState", function() 
+    Game:ChangePhaseByName(Game.GameState) 
+end)
+```
 | **RModePhase GetPhaseByName(string phasename)** |
 | :--- |
 단계 이름으로 단계를 불러올 수 있어요. (불러올 단계 이름)

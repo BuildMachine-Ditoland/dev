@@ -8,6 +8,16 @@
 | :--- |
 
 팀의 최대 인원을 설정할 수 있어요. 
+
+샘플 
+
+```lua
+local teamName = "Blue Team"
+local team = Game:AddTeam(teamName) --이름으로 팀을 추가한뒤, 추가한 팀을 반환해요.
+
+print(team.MaxPlayerCount) --팀의 최대 인원을 반환해요.
+team.MaxPlayerCount = 5 --팀의 최대 인원을 설정해요.
+```
 ## **함수**
 
 | **AddUsingCharacter(RCharacterSetting CharacterSettingObject)** |

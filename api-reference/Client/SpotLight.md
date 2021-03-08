@@ -20,6 +20,13 @@ Workspace.Cube:SetColor(Color.new(255, 0, 0, 255)) --오브젝트의 색상을 �
 | :--- |
 
 스포트 라이트의 밝기 값을 변경할 수 있어요. (원하는 밝기 값) 
+
+샘플 
+
+```lua
+local changeValue = 2
+Workspace.SpotLight:ChangeIntensity(changeValue) --SpotLight의 밝기를 조절해요.
+```
 | **ChangeAttenuationRadius(float radius)** |
 | :--- |
 

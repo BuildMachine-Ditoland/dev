@@ -26,6 +26,13 @@ local color = Workspace.Cube:GetColor() --오브젝트의 색상을 Color로 반
 | :--- |
 
 StaticMesh의 물리 기능을 설정해요. ( [Enum.SimulatePhysicsType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/simulatephysicstype)) 
+
+샘플 
+
+```lua
+local cube = Workspace.Cube
+cube:SetSimulatePhysics(Enum.SimulatePhysicsType.On_Sync) --오브젝트의 물리를 설정해요.
+```
 | **bool OverrideMass** |
 | :--- |
 

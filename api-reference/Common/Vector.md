@@ -72,13 +72,11 @@ Z 좌표에요.
 샘플 
 
 ```lua
-a = Vector.new(1, 2, 3)
-b = Vector.new(3)
+local pos1 = Vector.new(1, 2, 3)
+local pos2 = Vector.new(3) --pos2.X = 3, pos2.Y = 3, pos2.Z = 3로 할당돼요.
+local pos3 = pos1 + pos2   --pos3.X = 4, pos3.Y = 5, pos3.Z = 6로 할당돼요.
 
-c = a + b		--> c.X = 4, c.Y = 5, c.Z = 6
-
-d = Vector.new()
-d.X = 10
-
-d.Normalize()   --> d.X = 1, d.Y = 0, d.Z = 0
+local pos4 = Vector.new()  --pos4.X = 0,  pos4.Y = 0, pos4.Z = 0로 할당돼요.
+pos4.X = 10                --pos4.X = 10, pos4.Y = 0, pos4.Z = 0로 할당돼요.
+pos4.Normalize()           --pos4.X = 1,  pos4.Y = 0, pos4.Z = 0로 할당돼요.
 ```
