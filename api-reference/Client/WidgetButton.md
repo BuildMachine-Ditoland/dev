@@ -6,17 +6,14 @@
 
 
 | **SetText(int Value)** |
-| :--- |
 위젯의 텍스트를 주어진 정수로 변경해요. (변경할 정수 값) 
 
 
 | **SetText(float Value)** |
-| :--- |
 위젯의 텍스트를 주어진 실수로 변경해요. ( 변경할 실수 값) 
 
 
 | **SetText(string InText)** |
-| :--- |
 위젯의 텍스트를 주어진 문자열로 변경해요. (변경할 문자열) 
 샘플 
 
@@ -27,7 +24,6 @@ someText:SetText("Hello World!") --텍스트 UI에 내용을 표시해요.
 
 
 | **string GetText()** |
-| :--- |
 위젯에 설정된 텍스트를 얻을 수 있어요. 
 샘플 
 
@@ -38,7 +34,6 @@ local uiText = someText:GetText() --텍스트 UI의 내용을 문자열로 반�
 
 
 | **SetTextColor(string WidgetName, Color color)** |
-| :--- |
 텍스트의 색을 설정할 수 있어요. (텍스트 색을 변경할 위젯 이름, 변경할 [Color](https://ditoland-utplus.gitbook.io/ditoland/api-reference/common/color)값) 
 샘플 
 
@@ -49,7 +44,6 @@ someText:SetTextColor(Color.new(0, 255, 0, 255)) --텍스트 UI의 글자 색상
 
 
 | **SetBackgroundColor(Color color)** |
-| :--- |
 버튼 위젯의 배경 색을 설정할 수 있어요. (변경할 색) 
 샘플 
 
@@ -60,12 +54,10 @@ someFrame:SetBackgroundColor(Color.new(0, 0, 255, 255)) --프레임 UI의 바탕
 
 
 | **SetButtonHoverColor(Color color)** |
-| :--- |
 버튼 위젯의 Hover 색을 설정할 수 있어요. (변경할 색) 
 
 
 | **SetButtonPressColor(Color color)** |
-| :--- |
 버튼 위젯의 Press 색을 설정할 수 있어요. (변경할 색) 
 
 | **OnPressEvent** |

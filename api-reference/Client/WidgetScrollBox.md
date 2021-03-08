@@ -6,7 +6,6 @@
 
 
 | **SetOrientationType(ScrollOrientationType Type)** |
-| :--- |
 ScrollBox의 스크롤 타입을 설정할 수 있어요(ScrollOrientationType Type) 
 # **상속받아 사용 가능한 기능들**
 

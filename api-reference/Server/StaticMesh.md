@@ -4,7 +4,6 @@
 
 
 | **SetColor(Color ChangeColor)** |
-| :--- |
 StaticMesh의 색을 변경해요. (변경할 [Color](https://ditoland-챙utplus.gitbook.io/ditoland/api-reference/common/color)값) 
 샘플 
 
@@ -14,7 +13,6 @@ Workspace.Cube:SetColor(Color.new(255, 0, 0, 255)) --오브젝트의 색상을 �
 
 
 | **Color GetColor()** |
-| :--- |
 해당 StaticMesh의 Color를 가져올 수 있어요. 
 샘플 
 
@@ -24,7 +22,6 @@ local color = Workspace.Cube:GetColor() --오브젝트의 색상을 Color로 반
 
 
 | **SetSimulatePhysics(ESimulatePhysicsType Type)** |
-| :--- |
 StaticMesh의 물리 기능을 설정해요. ( [Enum.SimulatePhysicsType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/simulatephysicstype)) 
 샘플 
 

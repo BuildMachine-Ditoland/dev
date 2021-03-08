@@ -4,12 +4,10 @@
 
 
 | **SetEnable(bool bEnable)** |
-| :--- |
 설정된 스포트 라이트의 작동 여부를 설정해요. (작동 여부) 
 
 
 | **SetColor(Color ChangedColor)** |
-| :--- |
 스포트 라이트의 컬러를 변경할 수 있어요. (스포트 라인트에 적용할 원하는 [Color](https://ditoland-utplus.gitbook.io/ditoland/api-reference/common/color)값 )  
 샘플 
 
@@ -19,7 +17,6 @@ Workspace.Cube:SetColor(Color.new(255, 0, 0, 255)) --오브젝트의 색상을 �
 
 
 | **ChangeIntensity(float Intensity)** |
-| :--- |
 스포트 라이트의 밝기 값을 변경할 수 있어요. (원하는 밝기 값) 
 샘플 
 
@@ -30,17 +27,14 @@ Workspace.SpotLight:ChangeIntensity(changeValue) --SpotLight의 밝기를 조절
 
 
 | **ChangeAttenuationRadius(float radius)** |
-| :--- |
 스포트 라이트의 가시 영향력 범위를 변경할 수 있어요. 
 
 
 | **ChangeInnerConeAngle(float angle)** |
-| :--- |
 스포트 라이트의 안쪽 콘의 각도.  
 
 
 | **ChangeOuterConeAngle(float angle)** |
-| :--- |
 스포트 라이트의 바깥쪽 콘의 각도 
 # **상속받아 사용 가능한 기능들**
 

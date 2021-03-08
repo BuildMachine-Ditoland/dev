@@ -39,12 +39,10 @@ Vector = Vector * float
 
 
 | **void Normalize()** |
-| :--- |
 단위를 1로 정규화 시켜주는 함수에요. 
 
 
 | **float CosineAngle2D(Vector Other)** |
-| :--- |
 두 벡터의 XY 평면의 사잇각의 cos 값을 리턴해줘요. (사잇각을 구할 벡터) 
 ## **속성**
 

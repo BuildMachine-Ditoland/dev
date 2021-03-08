@@ -10,7 +10,6 @@
 
 
 | **RModeRemotePlayer GetRemotePlayer(string PlayerName);** |
-| :--- |
 이름으로 플레이어를 얻을 수 있어요. (찾고싶은 플레이어 이름) 
 샘플 
 
@@ -20,7 +19,6 @@ local player = LocalPlayer:GetRemotePlayer() --자신의 플레이어를 반환�
 
 
 | **RGameClientCharacter GetRemotePlayerCharacter(string PlayerName)** |
-| :--- |
 플레이어 이름으로 해당 플레이어의 캐릭터를 얻을 수 있어요. (캐릭터를 찾고싶은 플레이어 이름) 
 샘플 
 
@@ -30,12 +28,10 @@ local character = Game:GetRemotePlayerCharacter(PlayerName) --플레이어 이�
 
 
 | **int GetPlayerCount** |
-| :--- |
 현재 게임에 참여하고 있는 플레이어의 수를 얻을 수 있어요. 
 
 
 | **vector<Player> GetAllPlayer()** |
-| :--- |
 모든 플레이어 얻을 수 있어요. 
 샘플 
 
@@ -48,7 +44,6 @@ end
 
 
 | **SendEventToServer(string EventName, Args ... )** |
-| :--- |
 서버에 커스텀 이벤트를 보내는 함수에요. (이벤트 이름, 전달하고 싶은 변수들 ...) 
 샘플 
 
@@ -71,27 +66,22 @@ cube:ConnectEventFunction("SomeFunc", SomeFunc) --오브젝트에 "SomeFunc"라�
 
 
 | **RModeSequenceAnimStateSetting AddAnimStateMachineSetting(string StateMachineName)** |
-| :--- |
 캐릭터에 사용될 애니메이션 상태머신 설정을 추가할 수 있어요. (설정할 상태머신 이름) 
 
 
 | **RModeSequenceAnimStateSetting GetAnimStateMachineSetting(string StateMachineName)** |
-| :--- |
 설정된 애니메이션 상태머신을 얻을 수 있어요. (얻고 싶은 상태머신 이름) 
 
 
 | **SetCharacterAnimStateMachine(RCharacterSetting CharacterSetting, RAnimStateMachineSetting AnimSetting)** |
-| :--- |
 해당 캐릭터 설정으로 생성되는 캐릭터의 애니메이션 상태 머신을 설정 할 수 있어요. (대상 캐릭터 설정, 사용 할 애니메이션 상태 설정) 
 
 
 | **SetNPCAnimStateMachine(string NPCSettingName, string AnimStateMachineSettingName)** |
-| :--- |
 해당 NPC의 애니메이션 상태 머신 사용하게 할 수 있어요. (설정한 NPC 이름, 애니메이션 상태 머신 이름) 
 
 
 | **ObjectFXClient CreateFX(ObjectFXClient FXObject, Vetor Location)** |
-| :--- |
 FX를 생성할 수 있어요. (생성 할 FX 오브젝트, 생성할 위치) 
 샘플 
 
@@ -102,18 +92,15 @@ Game:CreateFX(Workspace.Effect, spawnPos) --이펙트를 지정 위치에 생성
 
 
 | **DeleteFX(ObjectFXClient Object)** |
-| :--- |
 FX를 제거시켜요. (제거할 FX 오브젝트) 
 
 
 | **ObjectSoundClient PlaySound(ObjectSoundClient SoundObject, Vetor Location)** |
-| :--- |
 사운드를 플레이해요. (플레이 할 Sound 오브젝트, 플레이 할 위치 Vector) 
 플레이 중인 사운드를 정지시켜요. (정지할 Sound) 
 
 
 | **CreateObject(RScriptWorldObject Object, Vector Location)** |
-| :--- |
 지정된 위치에 오브젝트를 생성 시켜요. (생성 할 Object, 생성 할 위치 Vector) 
 샘플 
 
@@ -126,17 +113,14 @@ print(temp:GetName()) --CreateObject로 생성한 오브젝트를 변수에 담�
 
 
 | **CreateUIScene(RScriptUISceneClient Source)** |
-| :--- |
 Source와 같은 UIScene을 생성한다. 
 
 
 | **CreateUIScene(string UISceneName, RScriptUISceneClient Source)** |
-| :--- |
 Source와 같은 UIScene을 생성 후, UISceneName을 생성된 오브젝트 이름으로 설정한다. (생성할 오브젝트의 이름 UISceneName, 생성 할 오브젝트 Source) 
 
 
 | **Vector GetMouseHitLocation()** |
-| :--- |
 자신의 마우스 2D 위치에서 월드에 충돌된 3D위치 좌표를 얻을 수 있어요. 
 샘플 
 
@@ -153,7 +137,6 @@ end
 
 
 | **Object GetMouseHitObject()** |
-| :--- |
 자신의 마우스 2D 위치에서 월드에 충돌된 Object를 얻어 올 수 있어요. 
 # **상속받아 사용 가능한 기능들**
 
