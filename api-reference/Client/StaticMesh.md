@@ -1,13 +1,10 @@
-
 클라이언트에서 사용되는 StaticMesh 개체에요. 
 ## **함수**
 
 
 | **SetColor(Color ChangeColor)** |
 | :--- |
-
 스테틱 메시의 색을 변경할 수 있어요. (변경할 [Color](https://ditoland-utplus.gitbook.io/ditoland/api-reference/common/color)값) 
-
 샘플 
 
 ```lua
@@ -16,9 +13,7 @@ Workspace.Cube:SetColor(Color.new(255, 0, 0, 255)) --오브젝트의 색상을 �
 
 | **Color GetColor()** |
 | :--- |
-
 해당 스태틱 메시의 Color를 가져올 수 있어요. 
-
 샘플 
 
 ```lua
@@ -27,27 +22,22 @@ local color = Workspace.Cube:GetColor() --오브젝트의 색상을 Color로 반
 
 | **SetSimulatePhysics(bool bSimulatePhysics)** |
 | :--- |
-
 물리의 적용 여부를 정할 수 있어요. (물리 적용 여부) 
 
 | **bool bOverrideMass** |
 | :--- |
-
 부피로 질량 자동 계산 
 
 | **float Mass** |
 | :--- |
-
 질량 값 
 
 | **float LinearDamping** |
 | :--- |
-
 선형 감쇠 값 
 
 | **float AngularDamping** |
 | :--- |
-
 회전 감쇠 값 
 # **상속받아 사용 가능한 기능들**
 

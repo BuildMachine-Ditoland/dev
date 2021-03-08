@@ -1,4 +1,3 @@
-
 키 버튼 타입이에요 
 ## **Enums**
 
@@ -127,7 +126,6 @@
 **Gamepad_LeftY** |Input Key Binding |
 **Gamepad_RightX** |Input Key Binding |
 **Gamepad_RightY** |Input Key Binding |
-
 샘플 
 
 ```lua

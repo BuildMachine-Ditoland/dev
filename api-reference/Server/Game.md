@@ -1,4 +1,3 @@
-
 게임 전반적인 역할을 하는 객체에요. 여기 있는 기능들은 서버에서만 사용할 수 있어요. 
 ## **속성**
 
@@ -7,13 +6,9 @@
 
 | **AddUserCollisionType(string UserCollisionType)** |
 | :--- |
-
 유저 충돌 타입 설정을 추가할 수 있어요. (충돌 타입 이름 설정) 
-
 특정 오브젝트의 충돌 처리를 다른 오브젝트와 다르게 할 때 사용 
-
 예) 특정 오브젝트만 통과하고, 캐릭터는 못 통과하는 오브젝트. 
-
 샘플 
 
 ```lua
@@ -24,9 +19,7 @@ cube:SetCollisionType("CollisionTag1") --해당 오브젝트의 충돌 타입을
 
 | **RSpawnPointGroup AddSpawnPointGroup(string SpawnPointGroupName)** |
 | :--- |
-
 게임에서 사용 할 스폰 포인트 그룹을 추가할 수 있어요. (추가할 스폰 포인트 그룹 이름) 
-
 샘플 
 
 ```lua
@@ -42,14 +35,11 @@ Game:SetSpawnType(Enum.SpawnType.UseSpawnGroup) --게임의 스폰타입을 설�
 
 | **RSpawnPoint AddSpawnPoint(RScriptWorldObject* RWorldObject)** |
 | :--- |
-
 게임에서 사용 할 스폰 포인트를 추가할 수 있어요. (스폰 포인트로 지정 할 오브젝트) 
 
 | **RSpawnPoint AddSpawnPointAtGroup(string SpawnPointGroupName, RScriptWorldObject* RWorldObject)** |
 | :--- |
-
 스폰포인트 그룹에 스폰 포인트를 추가할 수 있어요. (스폰포인트를 추가할 그룹 이름, 이름, 스폰 포인트를 할 오브젝트) 
-
 샘플 
 
 ```lua
@@ -65,9 +55,7 @@ Game:SetSpawnType(Enum.SpawnType.UseSpawnGroup) --게임의 스폰타입을 설�
 
 | **SetSpawnType(ModeSpawnType InSpawnType)** |
 | :--- |
-
 게임의 스폰 타입을 설정할 수 있어요. ( [Enum.SpawnType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/spawntype)) 
-
 샘플 
 
 ```lua
@@ -83,9 +71,7 @@ Game:SetSpawnType(Enum.SpawnType.UseSpawnGroup) --게임의 스폰타입을 설�
 
 | **SetUsingSpawnPointGroup(RSpawnPointGroup* SpawnPointGroup)** |
 | :--- |
-
 게임에 적용 할 스폰 그룹을 설정할 수 있어요. (게임에 적용 할 스폰포인트 그룹 오브젝트) 
-
 샘플 
 
 ```lua
@@ -101,24 +87,19 @@ Game:SetSpawnType(Enum.SpawnType.UseSpawnGroup) --게임의 스폰타입을 설�
 
 | **SetUsingSpawnPoint(RSpawnPoint* SpawnPoint)** |
 | :--- |
-
 게임에 적용 할 스폰 포인트를 설정할 수 있어요. (게임에 적용 할 스폰포인트 오브젝트) 
 
 | **SetDefaultSpawnPos(FVector Pos)** |
 | :--- |
-
 설정된 스폰 포인트가 없을 경우 지정한 위치에 스폰되도록 해요. (스폰할 위치 Vector) 
 
 | **SetUsingCharacterSetting(RCharacterSetting CharacterSettingObject)** |
 | :--- |
-
 게임에서 적용 할 캐릭터 설정을 설정 할 수 있어요. (게임에 적용 할 캐릭터 설정 오브젝트) 
 
 | **Team AddTeam(string TeamName)** |
 | :--- |
-
 게임에서 사용 할 팀 설정을 추가할 수 있어요. (팀 이름 설정) 
-
 샘플 
 
 ```lua
@@ -145,14 +126,11 @@ Game.OnSpawnCharacter:Connect(SpawnCharacter)
 
 | **RModeNPCSetting AddNPCSetting(string NPCSettingName)** |
 | :--- |
-
 게임에서 사용 할 NPC 설정을 추가할 수 있어요. (NPC 이름 설정) 
 
 | **Player GetPlayer(string PlayerName)** |
 | :--- |
-
 플레이어 이름으로 플레이어를 얻을 수 있어요. (얻고 싶은 플레이어 이름) 
-
 샘플 
 
 ```lua
@@ -161,29 +139,23 @@ local player = Game:GetPlayer(PlayerName) --플레이어 이름에 해당하는 
 
 | **RModeServerCharacter GetPlayerCharacter(string PlayerName)** |
 | :--- |
-
 플레이어 이름으로 플레이어 캐릭터를 얻을 수 있어요. (얻고 싶은 플레이어 이름) 
 
 | **SetTeamSetting(EModeTeamType TeamType, EDivideTeamType DivideTeamType)** |
 | :--- |
-
 게임의 팀전 여부, 팀 나누기 방식을 설정할 수 있어요. (팀 타입, [Enum.DivideTeamType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/divideteamtype)) 
 
 | **int GetPlayerCount()** |
 | :--- |
-
 현재 게임에 참여하고 있는 플레이어 수를 얻을 수 있어요. 
 
 | **ResetTeamSetting()** |
 | :--- |
-
 게임의 팀 설정을 모두 제거해요. 
 
 | **ApplyTeamSetting()** |
 | :--- |
-
 팀 설정 방식을 게임에 적용하는 함수에요. 
-
 샘플 
 
 ```lua
@@ -210,19 +182,15 @@ Game.OnSpawnCharacter:Connect(SpawnCharacter)
 
 | **ReqResetGame()** |
 | :--- |
-
 게임 리셋을 요청하는 함수에요. 
 
 | **SetCanEnterUser()** |
 | :--- |
-
 게임에 유저의 진입 가능 여부를 설정해요. (false로 설정 할 경우 해당 게임으로 더 이상 유저가 들어올 수 없어요.) 
 
 | **BroadcastEvent(string CustomEventName, Args ...)** |
 | :--- |
-
 모든 클라이언트에게 이벤트를 보내는 함수에요. (이벤트 이름, 전달할 변수들 ...) 
-
 샘플 
 
 ```lua
@@ -243,9 +211,7 @@ cube:ConnectEventFunction("SomeFunc", SomeFunc) --오브젝트에 "SomeFunc"라�
 
 | **SendEventToClient(string PlayerName, string CustomEventName, Args ...)** |
 | :--- |
-
 해당 클라이언트에게만 이벤트를 보내는 함수에요. (이벤트 보낼 플레이어 이름, 이벤트 이름, 전달할 변수들 ...) 
-
 샘플 
 
 ```lua
@@ -267,29 +233,23 @@ cube:ConnectEventFunction("SomeFunc", SomeFunc) --오브젝트에 "SomeFunc"라�
 
 | **SetInventorySize(int XSize, int YSize)** |
 | :--- |
-
 인벤토리의 사이즈를 설정할 수 있어요. (가로 사이즈, 세로 사이즈) 
 
 | **SetQuickSlotCount(int Count)** |
 | :--- |
-
 퀵 슬롯의 개수를 설정할 수 있어요. (설정할 개수 값) 
 
 | **PickUpItem(RModeServerCharacter Character, ModeItem Item)** |
 | :--- |
-
 해당 케릭터에게 아이템을 획득시켜줘요. (아이템을 획득할 캐릭터, 아이템 객체) 
 
 | **CreateSyncObject(RScriptWorldObject WorldObject, Vector Location)** |
 | :--- |
-
 지정한 위치에 클라이언트와 동기화되는 오브젝트를 생성할 수 있어요. (생성 할 오브젝트, 생성할 위치 Vector) 
 
 | **CreateSyncObject(RScriptWorldObject WorldObject, Vector Location, string Name, RScriptWorldObject Parent)** |
 | :--- |
-
 지정한 위치에 클라이언트와 동기화되는 오브젝트를 생성할 수 있어요. (생성 할 오브젝트, 생성할 위치 Vector, 설정할 이름, 부모가 될 오브젝트) 
-
 샘플 
 
 ```lua
@@ -301,14 +261,11 @@ print(temp:GetName()) --CreateSyncObject로 생성한 오브젝트를 변수에 
 
 | **CreateNoneSyncObject(RScriptWorldObject WorldObject, Vector Location)** |
 | :--- |
-
 지정한 위치에 클라이언트와 동기화 되지 않는 오브젝트를 생성할 수 있어요. (생성 할 오브젝트, 생성 위치 Vector) 
 
 | **ObjectSpawner AddObjectSpawner(RObjectScript RObjectScript, EObjectSelectType ObjectSelectType, float SpawnTime, int MaxCount)** |
 | :--- |
-
 오브젝트 스포너 생성할 수 있어요. (스폰 할 오브젝트, [Enum.ObjectSelectType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/spawntype), 스폰 시간, 최대 스폰 개수) 
-
 샘플 
 
 ```lua
@@ -325,79 +282,63 @@ spawner:AddSpawnObject(Toybox.Cube, spawnRate, spawnCount, spawnPos) --스포너
 
 | **ObjectSelector CreateObjectSelector(EObjectSelectType SelectType)** |
 | :--- |
-
 오브젝트 셀렉터를 생성할 수 있어요. ( [Enum.ObjectSelectType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/objectselecttype)) 
 
 | **ObjectList GetObjectList(Vector Center, float Radius)** |
 | :--- |
-
 지정한 영역의 오브젝트를 얻을 수 있어요. (영역 중앙 포인트 Vector, 영역 반지름 값) 
 
 | **bool UseWorldItem(RModeServerCharacter Character, ModeItem Item)** |
 | :--- |
-
 월드 아이템을 사용하게 할 수 있어요. (사용할 캐릭터, 사용할 아이템) 
 
 | **DeleteWorldItem(ModeItem Item)** |
 | :--- |
-
 월드 아이템 삭제해요. (삭제할 아이템) 
 
 | **SaveUserGameData(String PlayerName, String KeyString, Vector SaveValue)** |
 | :--- |
-
 해당 유저의 게임 데이터를 저장할 수 있어요. (저장할 플레이어 이름, 데이터 키 값, 저장할 Vector 값) 
 
 | **SaveUserGameData(String PlayerName, String KeyString, float SaveValue)** |
 | :--- |
-
 해당 유저의 게임 데이터를 저장할 수 있어요. (저장할 플레이어 이름, 데이터 키 값, 저장할 float 값) 
 
 | **SaveUserGameData(String PlayerName, String KeyString, bool SaveValue)** |
 | :--- |
-
 해당 유저의 게임 데이터를 저장할 수 있어요. (저장할 플레이어 이름, 데이터 키 값, 저장할 Bool 값) 
 
 | **SaveUserGameData(String PlayerName, String KeyString, int SaveValue)** |
 | :--- |
-
 해당 유저의 게임 데이터를 저장할 수 있어요. (저장할 플레이어 이름, 데이터 키 값, 저장할 Int 값) 
 
 | **SaveUserGameData(String PlayerName, String KeyString, String SaveValue)** |
 | :--- |
-
 해당 유저의 게임 데이터를 저장할 수 있어요. (저장할 플레이어 이름, 데이터 키 값, 저장할 String 값) 
 
 | **SaveUserGameData(String PlayerName, String KeyString, Color SaveValue)** |
 | :--- |
-
 해당 유저의 게임 데이터를 저장할 수 있어요. (저장할 플레이어 이름, 데이터 키 값, 저장할 Color 값) 
 
 | **Object GetSavedUserGameData(String PlayerName, String KeyString)** |
 | :--- |
-
 해당 유저의 게임 데이터를 얻을 수 있어요. (플레이어 이름, 데이터 키 값) 
 
 | **SaveGameStatisticsData(String PlayerName, String KeyString, int SaveValue, bool Overwrite, bool Ascending)** |
 | :--- |
-
 해당 유저의 게임 통계 데이터를 저장할 수 있어요. (저장할 플레이어 이름, 데이터 키 값, 저장 값, 덮어씌우기 여부, 오름차순 정렬 여부) 
 
 | **GetGameStatisticsData(String KeyString, bool Ascending, int Offset, int Count, LuaScriptFunction CallBack)** |
 | :--- |
-
 게임 통계 데이터를 얻을 수 있어요. (데이터 키 값, 오름차순 정렬 여부, Offset 값, Count 값, CallBack 연결 함수) 
 
 | **SendToClient_GameStatisticsData(String PlayerName, String KeyString, bool Ascending, int Offset, int Count)** |
 | :--- |
-
 게임 통계 데이터를 클라이언트로 보내줄 수 있어요 (보내줄 플레이어 이름, 데이터 키 값, 오름차순 정렬 여부, Offset 값, Count 값) 
 
 | **vector<Player> GetAllPlayer()** |
 | :--- |
-
 모든 플레이어 얻을 수 있어요. 
-
 샘플 
 
 ```lua
@@ -409,12 +350,10 @@ end
 
 | **NPC CreateNPC(String NPCName, String NPCSetting, Vector Location)** |
 | :--- |
-
 NPC를 새롭게 생성할 수 있어요. (생성할 NPC 이름 설정, 지정할 [NPC세팅](https://ditoland-utplus.gitbook.io/ditoland/api-reference/server/npcsetting), 생성 위치 Vector) 
 
 | **DeleteNPC(String NPCName)** |
 | :--- |
-
 해당 NPC를 삭제해요. (삭제할 NPC 이름) 
 
 | **TeleportToPublicServer(LandID, PlayerNameList, LoadingUI)** |

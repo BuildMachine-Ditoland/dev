@@ -1,4 +1,3 @@
-
 SurfaceUI 의 DisplayType 
 ## **Enums**
 
@@ -8,7 +7,6 @@ SurfaceUI 의 DisplayType
 | --- |
 | **Billboard** |
 | --- |
-
 샘플 
 
 ```lua

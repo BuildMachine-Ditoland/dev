@@ -1,4 +1,3 @@
-
 클라이언트에서 사용되는 Widget Image 객체. 
 ## **속성**
 
@@ -7,9 +6,7 @@
 
 | **SetBackgroundColor(Color color)** |
 | :--- |
-
 버튼 위젯의 배경 색을 설정할 수 있어요. (변경할 색) 
-
 샘플 
 
 ```lua

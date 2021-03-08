@@ -1,13 +1,10 @@
-
 물리 관련 설정을 처리하는 객체에요. 
 ## **함수**
 
 
 | **string AddForce(RStaticMeshServer Mesh, Vector Force)** |
 | :--- |
-
 특정 스테틱 메시에 힘을 가할 수 있어요(힘을 가 할 오브젝트, 가 할 힘) 
-
 샘플 
 
 ```lua

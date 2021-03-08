@@ -1,23 +1,18 @@
-
 서버에서 사용되는 공용 캐릭터 객체에요. 
 ## **함수**
 
 
 | **SetEmissive(float Emissive)** |
 | :--- |
-
 캐릭터 Material의 Emissive 값을 변경 할 수 있어요. (자체 발광하는 수치 값) 
 
 | **SetVisible(bool bVisibility)** |
 | :--- |
-
 캐릭터의 가시성을 설정할 수 있어요. 
 
 | **AddForce(Vector Force)** |
 | :--- |
-
 캐릭터에 물리적인 힘을 가할 수 있어요. (힘을 가할 Vector 값) 
-
 샘플 
 
 ```lua
@@ -42,9 +37,7 @@ toy.OnCollisionEvent:Connect(CharacterCollision) --오브젝트에 캐릭터가 
 
 | **SetMaxSpeed(float Speed)** |
 | :--- |
-
 캐릭터의 최대 이동속도를 설정할 수 있어요. (설정할 최대 이동속도 값) 
-
 샘플 
 
 ```lua
@@ -54,9 +47,7 @@ character:SetMaxSpeed(1000) --캐릭터의 최대 이동 속도를 설정해요.
 
 | **SetMaxJump(float Jump)** |
 | :--- |
-
 캐릭터의 최대 점프속도를 설정할 수 있어요. (설정할 최대 점프속도 값) 
-
 샘플 
 
 ```lua
@@ -66,42 +57,34 @@ character:SetMaxJump(1000) --캐릭터의 최대 점프 속도를 설정해요.
 
 | **SetFlyControl(float ControlRate);** |
 | :--- |
-
 공중에서 캐릭터 컨트롤 비율을 설정할 수 있어요. (설정할 비율 값) 
 
 | **SetFlyMaxSpeed(float Speed)** |
 | :--- |
-
 캐릭터의 최대 공중 이동속도를 설정할 수 있어요. 기어오르기, 날기 등 (설정할 최대 공중 이동속도 값) 
 
 | **JumpEnable(bool CanJump)** |
 | :--- |
-
 캐릭터의 점프 가능 여부를 설정할 수 있어요. (점프 가능 여부) 
 
 | **MoveRightEnable(bool CanMove)** |
 | :--- |
-
 캐릭터의 좌우 이동 가능 여부를 설정할 수 있어요. (좌우 이동 가능 여부) 
 
 | **MoveToSpawnPoint(RScriptSpawnPoint SpawnPointObjecrt, bool ResetRot)** |
 | :--- |
-
 캐릭터를 특정 스폰 위치로 이동시킬 수 있어요. (이동 할 스폰포인트 오브젝트, 방향 Rot 초기화 여부) 
 
 | **void ChangeCharacterType(ERCharacterType Type)** |
 | :--- |
-
 현재 캐릭터의 외형 타입을 바꿀 수 있어요. 
 
 | **void SetCapsuleSize(float Radius, float Height)** |
 | :--- |
-
 현재 캐릭터의 캡슐 콜리전의 크기를 바꿀 수 있어요. 
 
 | **ERCharacterType GetCharacterType()** |
 | :--- |
-
 현재 캐릭터의 외형 타입을 가져 올 수 있어요. 
 # **상속받아 사용 가능한 기능들**
 

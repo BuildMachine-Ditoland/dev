@@ -1,13 +1,10 @@
-
 공용 캐릭터 객체에요. 
 ## **함수**
 
 
 | **bool IsDie()** |
 | :--- |
-
 현재 캐릭터가 죽어있는 상태인지 알 수 있어요. 
-
 샘플 
 
 ```lua
@@ -19,9 +16,7 @@ end
 
 | **bool IsFly()** |
 | :--- |
-
 캐릭터가 공중에 떠 있는지 아닌지 얻을 수 있어요. 
-
 샘플 
 
 ```lua
@@ -31,9 +26,7 @@ print(character:IsFly()) --캐릭터가 점프중이면 true를 반환해요.
 
 | **IsCanJump()** |
 | :--- |
-
 캐릭터가 현재 점프 가능한 상태인지 알 수 있어요. 
-
 샘플 
 
 ```lua
@@ -43,9 +36,7 @@ print(character:IsCanJump()) --캐릭터가 점프할 수 있는 상태면 true�
 
 | **float GetMoveSpeed()** |
 | :--- |
-
 해당 캐릭터의 현재 이동 속도를 얻을 수 있어요. 
-
 샘플 
 
 ```lua
@@ -55,9 +46,7 @@ print(character:GetMoveSpeed()) --이동중인 캐릭터의 이동속도를 숫�
 
 | **SetTransform(Matrix)** |
 | :--- |
-
 캐릭터의 위치, 회전을 설정할 수 있어요. (설정할 [Matrix](https://ditoland-utplus.gitbook.io/ditoland/api-reference/common/matrix)값 ) 
-
 샘플 
 
 ```lua
@@ -69,9 +58,7 @@ character:SetTransform(targetTransform) --오브젝트를 보간으로 이동시
 
 | **GetTransform(Matrix)** |
 | :--- |
-
 매트릭스를 얻을 수 있어요. (설정할 [Matrix](https://ditoland-utplus.gitbook.io/ditoland/api-reference/common/matrix)값 ) 
-
 샘플 
 
 ```lua
@@ -80,9 +67,7 @@ local targetTransform = Game:GetAllPlayer()[1]:GetTransform()
 
 | **void SetLocation(Vector Location)** |
 | :--- |
-
 (Deprecated)캐릭터의 현재 위치를 설정 수 있어요. (설정할 Vector 값) 
-
 샘플 
 
 ```lua
@@ -94,9 +79,7 @@ character:SetTransform(targetTransform) --오브젝트를 보간으로 이동시
 
 | **Vector GetLocation()** |
 | :--- |
-
 (Deprecated)현재 캐릭터의 위치를 얻을 수 있어요. 
-
 샘플 
 
 ```lua
@@ -106,7 +89,6 @@ local characterPos = character:GetTransform():GetLocation() --캐릭터의 위�
 
 | **Vector GetForwardVector()** |
 | :--- |
-
 (Deprecated)현재 캐릭터의 바라보는 방향을 수 있어요. 
 # **상속받아 사용 가능한 기능들**
 

@@ -1,4 +1,3 @@
-
 클라이언트에서 사용되는 Widget ListView 객체. 
 ## **속성**
 
@@ -7,9 +6,7 @@
 
 | **SetBackgroundColor(Color color)** |
 | :--- |
-
 ListView의 배경 색을 설정할 수 있어요. (변경할 색) 
-
 샘플 
 
 ```lua
@@ -19,22 +16,18 @@ someFrame:SetBackgroundColor(Color.new(0, 0, 255, 255)) --프레임 UI의 바탕
 
 | **SetContentTransparency(Number Value)** |
 | :--- |
-
 ListView의 투명도를 설정할 수 있어요. (Number Value) 
 
 | **SetContentTransparency(Number Value)** |
 | :--- |
-
 ListView의 윗쪽 사이를 설정 할 수 있어요. (Number Value) 
 
 | **SetContentTransparency(Number XSize, Number YSize)** |
 | :--- |
-
 ListView의 슬롯 사이즈를 설정 할 수 있어요. (Number XSize, Number YSize) 
 
 | **SetIsStretch(bool bOn)** |
 | :--- |
-
 ListView의 슬롯 사이즈를 설정 할 수 있어요. (Number XSize, Number YSize) 
 # **상속받아 사용 가능한 기능들**
 

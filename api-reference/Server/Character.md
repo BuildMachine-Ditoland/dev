@@ -1,10 +1,7 @@
-
 서버에서 사용되는 캐릭터 객체에요. 
 ## **함수**
 
-
 해당 캐릭터를 소유 하고 있는 플레이어를 얻을 수 있어요. 
-
 샘플 
 
 ```lua
@@ -14,9 +11,7 @@ local player = character:GetPlayer() --캐릭터의 플레이어를 반환해요
 
 | **string GetPlayerName()** |
 | :--- |
-
 해당 캐릭터를 소유 하고 있는 플레이어의 이름을 얻을 수 있어요. 
-
 샘플 
 
 ```lua
@@ -26,29 +21,23 @@ print(character:GetPlayerName()) --캐릭터의 플레이어 이름을 문자열
 
 | **void BeginDriving(number ModeObjectKey)** |
 | :--- |
-
 탈 것의 운전을 시작해요. (탈 것의 키 값) 
 
 | **void AttachAt(RModeObject ModeObject)** |
 | :--- |
-
 캐릭터의 중점을 해당 오브젝트의 중점에 부착시켜요. (부착 할 오브젝트) 
 
 | **void AttachAtTop(RModeObject ModeObject)** |
 | :--- |
-
 캐릭터의 중점을 해당 오브젝트의 윗면 중점에 부착시켜요. (부착 할 오브젝트) 
 
 | **void Detach()** |
 | :--- |
-
 캐릭터를 오브젝트에서 떨어 뜨려요. (위치는 Attach할 때 캐릭터 위치로 옮겨져요) 
 
 | **SetOrientRotationToMovement(bool bEnable)** |
 | :--- |
-
 캐릭터가 바라보는 방향을 이동하는 방향으로 바라 보게 설정해요. (설정 여부) 
-
 샘플 
 
 ```lua
@@ -58,9 +47,7 @@ character:SetOrientRotationToMovement(true) --인자값이 true면 캐릭터 이
 
 | **MoveToLocation(Vector Target)** |
 | :--- |
-
 캐릭터가 목표 지점까지 길찾기를 이용해 이동합니다. 
-
 샘플 
 
 ```lua
@@ -74,9 +61,7 @@ cube:StopMovement() --진행중인 길찾기를 중지해요.
 
 | **StopMovement()** |
 | :--- |
-
 캐릭터의 길찾기 이동을 중지합니다. 
-
 샘플 
 
 ```lua
@@ -90,12 +75,10 @@ cube:StopMovement() --진행중인 길찾기를 중지해요.
 
 | **GetMoveStatus()** |
 | :--- |
-
 캐릭터의 길찾기 이동 상태입니다. 
 
 | **SetControlMode(Enum ControlMode)** |
 | :--- |
-
 캐릭터의 컨트롤 모드를 변경할 수 있어요 (변경할 Enum.ControlMode.타입) 
 # **상속받아 사용 가능한 기능들**
 
