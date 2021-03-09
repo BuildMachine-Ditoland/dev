@@ -999,5 +999,6 @@ print(Game.SomeColor) --서버에서 값이 바뀌었지만 클라에서도 동�
 | :--- |
 해당 객체 저장소에 칼라를 추가해요. (Value 이름, Color 데이터)
 <br>
-**SetSpaceType(EWidgetSpace Type)**
+| **SetSpaceType(EWidgetSpace Type)** |
+| :--- |
 (Deprecated)Surface UI의 SpaceType을 변경 할 수 있어요.

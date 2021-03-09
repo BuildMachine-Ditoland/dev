@@ -4,7 +4,8 @@
 ## **함수**
 
 <br>
-**RModeServerCharacter GetCharacter()**
+| **RModeServerCharacter GetCharacter()** |
+| :--- |
 
 플레이어의 캐릭터를 얻을 수 있어요. 
 
@@ -15,7 +16,8 @@ local player = Game:GetAllPlayer()[1]
 local character = player:GetCharacter() --플레이어의 캐릭터를 반환해요.
 ```
 <br>
-**string GetPlayerName()**
+| **string GetPlayerName()** |
+| :--- |
 
 플레이어의 이름을 얻을 수 있어요. 
 
@@ -26,7 +28,8 @@ local character = Game:GetAllPlayer()[1]:GetCharacter()
 print(character:GetPlayerName()) --캐릭터의 플레이어 이름을 문자열로 반환해요.
 ```
 <br>
-**string GetTeamName()**
+| **string GetTeamName()** |
+| :--- |
 
 플레이어가 속해있는 팀 이름을 얻을 수 있어요. 
 
@@ -54,7 +57,8 @@ end
 Game.OnSpawnCharacter:Connect(SpawnCharacter) 
 ```
 <br>
-**int GetLifeCount()**
+| **int GetLifeCount()** |
+| :--- |
 
 플레이어의 남은 목숨 개수를 얻을 수 있어요. 
 
@@ -65,7 +69,8 @@ local player = Game:GetAllPlayer()[1]
 print(player:GetLifeCount())
 ```
 <br>
-**KillCharacter()**
+| **KillCharacter()** |
+| :--- |
 
 플레이어 캐릭터를 죽게 하는 함수에요. 
 
@@ -76,7 +81,8 @@ local player = Game:GetAllPlayer()[1]
 player:KillCharacter() --플레이어의 캐릭터를 죽여요.
 ```
 <br>
-**RespawnCharacter()**
+| **RespawnCharacter()** |
+| :--- |
 
 플레이어 캐릭터를 리스폰 시키는 함수에요. 
 
@@ -87,15 +93,18 @@ local player = Game:GetAllPlayer()[1]
 player:RespawnCharacter() --플레이어의 캐릭터를 리스폰해요.
 ```
 <br>
-**SetCheckPoint(RSpawnPoint SpawnPointObject)**
+| **SetCheckPoint(RSpawnPoint SpawnPointObject)** |
+| :--- |
 
 플레이어의 체크 포인트를 설정할 수 있어요 (설정할 스폰 포인트 오브젝트) 
 <br>
-**SetCheckPoint(RWorldObject WorldObject)**
+| **SetCheckPoint(RWorldObject WorldObject)** |
+| :--- |
 
 플레이어의 체크 포인트를 설정할 수 있어요 (설정할 월드 오브젝트) 
 <br>
-**SetFreeCamMode(bool bFreeCam)**
+| **SetFreeCamMode(bool bFreeCam)** |
+| :--- |
 
 플레이어의 프리캠 모드 사용여부를 설정할 수 있어요. (프리캠 사용 여부) 
 
@@ -106,7 +115,8 @@ local player = Game:GetAllPlayer()[1]
 player:SetFreeCamMode(true)
 ```
 <br>
-**RequestFreeCam(float WaitTime)**
+| **RequestFreeCam(float WaitTime)** |
+| :--- |
 
 지정된 시간이 지난 후에 플레이어의 프리캠 모드를 요청해요. (대기 시간) 
 
@@ -117,11 +127,13 @@ local player = Game:GetAllPlayer()[1]
 player:RequestFreeCam(3) --3초후 프리캠이 시작되요.
 ```
 <br>
-**int GiveItem(ModeItemServer Item, int Count)**
+| **int GiveItem(ModeItemServer Item, int Count)** |
+| :--- |
 
 플레이어에게 아이템을 줄 수 있어요. (줄 아이템, 개수) return 인벤토리 인텍스 
 <br>
-**int GiveItem(ModeItemServer Item)**
+| **int GiveItem(ModeItemServer Item)** |
+| :--- |
 
 플레이어에게 아이템을 줄 수 있어요. (줄 아이템) return 인벤토리 인텍스 
 
@@ -135,7 +147,8 @@ wait(2)
 player:GiveItem(item) --플레이어에게 아이템을 지급해요.
 ```
 <br>
-**int GetInventorySize()**
+| **int GetInventorySize()** |
+| :--- |
 
 플레이어의 인벤토리 사이즈를 얻을 수 있어요. 
 
@@ -146,7 +159,8 @@ local player = Game:GetAllPlayer()[1]
 print(player:GetInventorySize()) --플레이어의 인벤토리 사이즈를 숫자로 반환해요.
 ```
 <br>
-**ClearItem()**
+| **ClearItem()** |
+| :--- |
 
 플레이어의 아이템을 모두 제거해요. 
 
@@ -163,7 +177,8 @@ end
 Game.OnDeathCharacter:Connect(ClearItem)
 ```
 <br>
-**EquipInventoryItem(int InventoryIndex)**
+| **EquipInventoryItem(int InventoryIndex)** |
+| :--- |
 
 플레이어 캐릭터에 아이템을 장착시킬 수 있어요. (장착 할 인벤토리 칸) 
 
@@ -193,7 +208,8 @@ end
 collider.OnBeginOverlapEvent:Connect(GetItem)
 ```
 <br>
-**SetEnableCollisionBetweenCharacters(bool Enable)**
+| **SetEnableCollisionBetweenCharacters(bool Enable)** |
+| :--- |
 
 플레이어간의 충돌 여부를 설정할 수 있어요. (충돌 여부) 
 
@@ -204,7 +220,8 @@ local player = Game:GetAllPlayer()[1]
 player:SetEnableCollisionBetweenCharacters(false) --특정 플레이어가 다른 캐릭터와 충돌되지 않게 설정해요.
 ```
 <br>
-**SetUserCollisionTypeResponse(string UserCollisionType, CollisionResponse Response)**
+| **SetUserCollisionTypeResponse(string UserCollisionType, CollisionResponse Response)** |
+| :--- |
 
 유저가 충돌 시 발생 타입을 설정할 수 있어요. (충돌 타입 이름 설정, [Enum.CollisionResponse.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/collisionresponse)) 
 
@@ -216,7 +233,8 @@ Game:AddUserCollisionType("CollisionTag1") --유저 충돌 타입을 추가해�
 cube:SetUserCollisionTypeResponse("CollisionTag1", Enum.CollisionResponse.Overlap) --유저 타입 충돌 물체의 충돌 시 처리를 변경하는 함수에요.
 ```
 <br>
-**bool HaveInventorySaveData()**
+| **bool HaveInventorySaveData()** |
+| :--- |
 
 저장소에 인번토리에 대한 데이터가 저장되어 있는지 확인할 수 있어요. 
 
@@ -227,11 +245,13 @@ local player = Game:GetAllPlayer()[1]
 print(player:HaveInventorySaveData()) --저장소에 인번토리에 대한 데이터가 저장되어 있으면 true를 반환해요.
 ```
 <br>
-**RModeHitResult LineTrace(Vector Start, Vector Dir, float Distance)**
+| **RModeHitResult LineTrace(Vector Start, Vector Dir, float Distance)** |
+| :--- |
 
 설정된 시작 지점에서 원하는 방향으로 지정된 거리 만큼 충돌이 있는지 체크할 수 있어요. (시작 지점 Vector, 목표 지점 Vector, 거리 값) 
 <br>
-**ModeItemServer GetInventoryItem(int InventoryIndex)**
+| **ModeItemServer GetInventoryItem(int InventoryIndex)** |
+| :--- |
 
 지정된 칸의 인벤토리 아이템을 얻을 수 있어요. (인벤토리 칸) 
 
@@ -244,7 +264,8 @@ if player:GetInventoryItem(0) ~= nil then
 end
 ```
 <br>
-**ModeItemServer GetEquipItem(String EquipSlot)**
+| **ModeItemServer GetEquipItem(String EquipSlot)** |
+| :--- |
 
 플레이어 캐릭터가 착용중인 아이템을 얻을 수 있어요. (장착 중인 아이템 슬롯) 
 

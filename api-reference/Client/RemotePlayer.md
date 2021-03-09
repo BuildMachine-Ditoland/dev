@@ -1,7 +1,8 @@
 
 클라이언트 스크립트에서 사용되는 플레이어 객체에요. [Game:GetRemotePlayer(PlayerName)](https://ditoland-utplus.gitbook.io/ditoland/api-reference/client/game)혹은 [LocalPlayer:GetRemotePlayer()](https://ditoland-utplus.gitbook.io/ditoland/api-reference/client/localplayer) 함수를 이용하면 얻을 수 있어요. 
 <br>
-**RGameClientCharacter GetCharacter()**
+| **RGameClientCharacter GetCharacter()** |
+| :--- |
 
 플레이어의 캐릭터를 얻을 수 있어요. 
 
@@ -12,7 +13,8 @@ local player = Game:GetAllPlayer()[1]
 local character = player:GetCharacter() --플레이어의 캐릭터를 반환해요.
 ```
 <br>
-**string GetPlayerName()**
+| **string GetPlayerName()** |
+| :--- |
 
 플레이어의 이름을 얻을 수 있어요. 
 
@@ -23,7 +25,8 @@ local character = Game:GetAllPlayer()[1]:GetCharacter()
 print(character:GetPlayerName()) --캐릭터의 플레이어 이름을 문자열로 반환해요.
 ```
 <br>
-**ObjectFXClient CreateFX(ObjectFXClient FXObject, Bone BoneType)**
+| **ObjectFXClient CreateFX(ObjectFXClient FXObject, Bone BoneType)** |
+| :--- |
 
 캐릭터의 특정 위치에 FX를 생성할 수 있어요. (생성 할 FX 오브젝트, [Enum.Bone.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/bone)) 
 
@@ -34,7 +37,8 @@ local player = LocalPlayer:GetRemotePlayer()
 player:CreateFX(Workspace.Effect, Enum.Bone.Body) --캐릭터의 특정 부위에 이펙트를 생성해요.
 ```
 <br>
-**ObjectSoundClient CreateSound(ObjectSoundClient SoundObject)**
+| **ObjectSoundClient CreateSound(ObjectSoundClient SoundObject)** |
+| :--- |
 
 캐릭터의 위치에 Sound를 생성할 수 있어요. (생성 할 Sound 오브젝트) 
 
@@ -45,11 +49,13 @@ local player = LocalPlayer:GetRemotePlayer()
 player:CreateSound(Workspace.Sound)
 ```
 <br>
-**RModeHitResult LineTrace(Vector Start, Vector Dir, float Distance)**
+| **RModeHitResult LineTrace(Vector Start, Vector Dir, float Distance)** |
+| :--- |
 
 두 지점 간의 오브젝트의 충돌을 체크할 수 있어요. (시작 지점 Vector, 원하는 지점 Vector, 지점 간의 거리) 
 <br>
-**bool IsMyPlayer()**
+| **bool IsMyPlayer()** |
+| :--- |
 
 플레이어 자신의 플레이어인지 확인할 수 있어요. 
 
@@ -60,7 +66,8 @@ local player = LocalPlayer:GetRemotePlayer()
 print(player:IsMyPlayer())
 ```
 <br>
-**Item GetEquipItem(string EquipSlot)**
+| **Item GetEquipItem(string EquipSlot)** |
+| :--- |
 
 해당 플레이어 캐릭터가 착용중인 아이템을 얻을 수 있어요. (장착 중인 아이템 슬롯) 
 # **상속받아 사용 가능한 기능들**

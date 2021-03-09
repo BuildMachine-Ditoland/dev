@@ -4,11 +4,13 @@
 ## **함수**
 
 <br>
-**SetEnable(bool bEnable)**
+| **SetEnable(bool bEnable)** |
+| :--- |
 
 스포트 라이트의 활성화 여부를 설정해요. (포인트 라이트 활성화 여부) 
 <br>
-**SetColor(Color ChangedColor)**
+| **SetColor(Color ChangedColor)** |
+| :--- |
 
 스포트 라이트의 컬러를 변경해요. (변경하고 싶은 [Color](https://ditoland-utplus.gitbook.io/ditoland/api-reference/common/color)값) 
 
@@ -18,7 +20,8 @@
 Workspace.Cube:SetColor(Color.new(255, 0, 0, 255)) --오브젝트의 색상을 변경해요. (r, g, b, a)
 ```
 <br>
-**ChangeIntensity(float Intensity)**
+| **ChangeIntensity(float Intensity)** |
+| :--- |
 
 스포트 라이트의 밝기를 변경해요. (설정할 밝기 값) 
 
@@ -29,7 +32,8 @@ local changeValue = 2
 Workspace.SpotLight:ChangeIntensity(changeValue) --SpotLight의 밝기를 조절해요.
 ```
 <br>
-**ChangeAttenuationRadius(float radius)**
+| **ChangeAttenuationRadius(float radius)** |
+| :--- |
 
 스포트 라이트의 가시 영향력 범위를 변경해요. (감쇠 반경) 
 
@@ -39,7 +43,8 @@ Workspace.SpotLight:ChangeIntensity(changeValue) --SpotLight의 밝기를 조절
 Workspace.SpotLight:ChangeAttenuationRadius(700)
 ```
 <br>
-**ChangeInnerConeAngle(float angle)**
+| **ChangeInnerConeAngle(float angle)** |
+| :--- |
 
 스포트 라이트의 내부 원뿔 각을 변경해요. 
 
@@ -49,7 +54,8 @@ Workspace.SpotLight:ChangeAttenuationRadius(700)
 Workspace.SpotLight:ChangeInnerConeAngle(20)
 ```
 <br>
-**ChangeOuterConeAngle(float angle)**
+| **ChangeOuterConeAngle(float angle)** |
+| :--- |
 
 스포트 라이트의 외부 원뿔 각을 변경해요.  
 

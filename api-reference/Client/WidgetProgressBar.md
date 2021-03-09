@@ -7,11 +7,13 @@
 ## **함수**
 
 <br>
-**SetFillType(ProgressFillType Type)**
+| **SetFillType(ProgressFillType Type)** |
+| :--- |
 
 ProgressBar가 차는 방식을 설정할 수 있어요. (변경할 색) 
 <br>
-**SetPercent(Number Value)**
+| **SetPercent(Number Value)** |
+| :--- |
 
 ProgressBar의 퍼센트를 설정할 수 있어요. (변경할 퍼센트) 
 
@@ -24,7 +26,8 @@ local maxValue = 10
 someGuage.GuageBar:SetPercent((currentValue/maxValue) * 100) --게이지바의 퍼센트를 설정해요.
 ```
 <br>
-**SetBackgroundColor(Color color)**
+| **SetBackgroundColor(Color color)** |
+| :--- |
 
 ProgressBar의 배경 색을 설정할 수 있어요. (변경할 색) 
 
@@ -35,7 +38,8 @@ local someFrame = Workspace.ScreenUI.someFrame
 someFrame:SetBackgroundColor(Color.new(0, 0, 255, 255)) --프레임 UI의 바탕 색상을 변경해요.
 ```
 <br>
-**SetFillColor(Color color)**
+| **SetFillColor(Color color)** |
+| :--- |
 
 ProgressBar의 앞 색을 설정할 수 있어요. (변경할 색) 
 # **상속받아 사용 가능한 기능들**

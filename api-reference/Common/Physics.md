@@ -4,7 +4,8 @@
 ## **함수**
 
 <br>
-**SetGravity(Number Gravity)**
+| **SetGravity(Number Gravity)** |
+| :--- |
 
 중력 값을 설정 할 수 있어요. (설정할 중력 값) 
 

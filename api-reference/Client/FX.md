@@ -4,7 +4,8 @@
 ## **함수**
 
 <br>
-**void Play()**
+| **void Play()** |
+| :--- |
 
 FX를 플레이해요. 
 
@@ -15,7 +16,8 @@ local fx = Workspace.FX
 fx:Play()
 ```
 <br>
-**void Stop()**
+| **void Stop()** |
+| :--- |
 
 FX를 정지시켜요. 
 

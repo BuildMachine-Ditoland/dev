@@ -4,7 +4,8 @@
 ## **함수**
 
 <br>
-**bool Connect(LuaScriptFunction Function)**
+| **bool Connect(LuaScriptFunction Function)** |
+| :--- |
 
 작성한 Lua 함수에 해당 이벤트를 연결해주는 역할이에요. (연결 함수) 
 
