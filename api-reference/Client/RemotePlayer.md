@@ -58,6 +58,19 @@ player:CreateSound(Workspace.Sound)
 | :--- |
 
 두 지점 간의 오브젝트의 충돌을 체크할 수 있어요. (시작 지점 Vector, 원하는 지점 Vector, 지점 간의 거리) 
+
+샘플 
+
+```lua
+local startPos = Workspace.Cube:GetTransform():GetLocation()
+local dir = Vector.new(1, 0, 0)
+local distance = 1000
+local player = LocalPlayer:GetRemotePlayer()
+local target = player:LineTrace(startPos, dir, distance) --시작 위치에서 특정 방향으로 거리만큼의 충돌 리스트가 반환돼요.
+
+print(target.HitObject:GetName()) --충돌한 오브젝트에요.
+print(target.HitLocation) --충돌한 오브젝트의 위치에요.
+```
 <br>
 <br>
 | **bool IsMyPlayer()** |

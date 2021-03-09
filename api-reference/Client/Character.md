@@ -75,7 +75,7 @@ character:CreateSound(Workspace.Sound)
 | **AddPlayerHUD(string UIName, UISceen UI, UIDisplayType Type)** |
 | :--- |
 
-UI HUD를 붙일 수 있어요. (붙혀 질 UI 이름, 붙일 UI Sceen, UI DisplayType.) 
+UI HUD를 붙일 수 있어요. (붙혀 질 UI 이름, 붙일 UI Sceen, [Enum.UIDisplayType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/uidisplaytype)) 
 
 샘플 
 

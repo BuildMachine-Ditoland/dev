@@ -268,6 +268,19 @@ print(player:HaveInventorySaveData()) --저장소에 인번토리에 대한 데�
 | :--- |
 
 설정된 시작 지점에서 원하는 방향으로 지정된 거리 만큼 충돌이 있는지 체크할 수 있어요. (시작 지점 Vector, 목표 지점 Vector, 거리 값) 
+
+샘플 
+
+```lua
+local startPos = Workspace.Cube:GetTransform():GetLocation()
+local dir = Vector.new(1, 0, 0)
+local distance = 1000
+local player = Game:GetAllPlayer()[1]
+local target = player:LineTrace(startPos, dir, distance) --시작 위치에서 특정 방향으로 거리만큼의 충돌 리스트가 반환돼요.
+
+print(target.HitObject:GetName()) --충돌한 오브젝트에요.
+print(target.HitLocation) --충돌한 오브젝트의 위치에요.
+```
 <br>
 <br>
 | **ModeItemServer GetInventoryItem(int InventoryIndex)** |

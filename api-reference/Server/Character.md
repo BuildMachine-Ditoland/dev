@@ -95,12 +95,13 @@ character:SetOrientRotationToMovement(true) --인자값이 true면 캐릭터 이
 샘플 
 
 ```lua
-local cube = Workspace.Cube
-local goalPos = Workspace.GoalObject:GetTransform():GetLocation()
+local character = Game:GetAllPlayer()[1]:GetCharacter()
+local goalPos = Workspace.GoalPos:GetTransform():GetLocation()
 wait(1)
-cube:MoveToLocation(goalPos) --해당 지점까지 길찾기로 이동해요.
-wait(3)
-cube:StopMovement() --진행중인 길찾기를 중지해요.
+character:MoveToLocation(goalPos) --해당 지점까지 길찾기로 이동해요.
+print(character:GetPathFollowingStatus()) --대상의 길찾기 상태를 숫자로 반환해요.
+wait(2)
+character:StopMovement() --진행중인 길찾기를 중지해요.
 ```
 <br>
 <br>
@@ -112,12 +113,13 @@ cube:StopMovement() --진행중인 길찾기를 중지해요.
 샘플 
 
 ```lua
-local cube = Workspace.Cube
-local goalPos = Workspace.GoalObject:GetTransform():GetLocation()
+local character = Game:GetAllPlayer()[1]:GetCharacter()
+local goalPos = Workspace.GoalPos:GetTransform():GetLocation()
 wait(1)
-cube:MoveToLocation(goalPos) --해당 지점까지 길찾기로 이동해요.
-wait(3)
-cube:StopMovement() --진행중인 길찾기를 중지해요.
+character:MoveToLocation(goalPos) --해당 지점까지 길찾기로 이동해요.
+print(character:GetPathFollowingStatus()) --대상의 길찾기 상태를 숫자로 반환해요.
+wait(2)
+character:StopMovement() --진행중인 길찾기를 중지해요.
 ```
 <br>
 <br>
@@ -125,6 +127,18 @@ cube:StopMovement() --진행중인 길찾기를 중지해요.
 | :--- |
 
 캐릭터의 길찾기 이동 상태입니다. 
+
+샘플 
+
+```lua
+local character = Game:GetAllPlayer()[1]:GetCharacter()
+local goalPos = Workspace.GoalPos:GetTransform():GetLocation()
+wait(1)
+character:MoveToLocation(goalPos) --해당 지점까지 길찾기로 이동해요.
+print(character:GetPathFollowingStatus()) --대상의 길찾기 상태를 숫자로 반환해요.
+wait(2)
+character:StopMovement() --진행중인 길찾기를 중지해요.
+```
 <br>
 <br>
 | **SetControlMode(Enum ControlMode)** |

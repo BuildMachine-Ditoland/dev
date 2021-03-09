@@ -178,6 +178,14 @@ local player = Game:GetPlayer(PlayerName) --플레이어 이름에 해당하는 
 | :--- |
 
 플레이어 이름으로 플레이어 캐릭터를 얻을 수 있어요. (얻고 싶은 플레이어 이름) 
+
+샘플 
+
+```lua
+local playerName = Game:GetAllPlayer()[1]:GetName()
+local character = Game:GetPlayerCharacter(playerName)
+print(character:GetName())
+```
 <br>
 <br>
 | **SetTeamSetting(EModeTeamType TeamType, EDivideTeamType DivideTeamType)** |
@@ -202,6 +210,12 @@ print(Game:GetPlayerCount())
 | :--- |
 
 게임의 팀 설정을 모두 제거해요. 
+
+샘플 
+
+```lua
+Game:ResetTeamSetting()
+```
 <br>
 <br>
 | **ApplyTeamSetting()** |
@@ -946,17 +960,19 @@ Game:DeleteObject(cube) --오브젝트를 파괴해요.
 
 ```lua
 
-local startPos = Workspace.Cube 
+local startPos = Workspace.Cube:GetTransform():GetLocation() 
 
-local dir = Vector.new(0, 1, 0) 
+local dir = Vector.new(1, 0, 0) 
 
-local distance = 100 
+local distance = 1000 
 
 local targetList = Game:LineTraceList(startPos, dir, distance) --시작 위치에서 특정 방향으로 거리만큼의 충돌 리스트가 반환돼요. 
 
 for i = 1, #targetList do  
 
-print("Left " .. targetList[i].HitObject:GetName())  
+print(targetList[i].HitObject:GetName()) --충돌한 오브젝트에요. 
+
+print(targetList[i].HitLocation) --충돌한 오브젝트의 위치에요. 
 
 end 
 

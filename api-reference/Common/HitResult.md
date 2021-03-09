@@ -9,12 +9,38 @@
 | :--- |
 
 충돌 위치를 얻을 수 있어요. 
+
+샘플 
+
+```lua
+local startPos = Workspace.Cube:GetTransform():GetLocation()
+local dir = Vector.new(1, 0, 0)
+local distance = 1000
+local targetList = Game:LineTraceList(startPos, dir, distance) --시작 위치에서 특정 방향으로 거리만큼의 충돌 리스트가 반환돼요.
+for i = 1, #targetList do 
+    print(targetList[i].HitObject:GetName()) --충돌한 오브젝트에요.
+    print(targetList[i].HitLocation) --충돌한 오브젝트의 위치에요.
+end
+```
 <br>
 <br>
 | **HitObject** |
 | :--- |
 
 충돌한 오브젝트를 얻을 수 있어요. 
+
+샘플 
+
+```lua
+local startPos = Workspace.Cube:GetTransform():GetLocation()
+local dir = Vector.new(1, 0, 0)
+local distance = 1000
+local targetList = Game:LineTraceList(startPos, dir, distance) --시작 위치에서 특정 방향으로 거리만큼의 충돌 리스트가 반환돼요.
+for i = 1, #targetList do 
+    print(targetList[i].HitObject:GetName()) --충돌한 오브젝트에요.
+    print(targetList[i].HitLocation) --충돌한 오브젝트의 위치에요.
+end
+```
 # **상속받아 사용 가능한 기능들**
 
 <br>

@@ -800,17 +800,73 @@ cube:PlayTransformTrack("Rot", Enum.TransformPlayType.Repeat, InfinityPlay) --�
 
 로컬 좌표를 기준으로 스케일 변화를 추가할 수 있어요. (설정할 Track 이름, 스케일 변화를 줄 값, 완료까지 걸리는 시간) 
 <br>
+샘플
+
+```lua
+
+local cube = Workspace.Cube 
+
+local moveSpeed = 2 
+
+cube:AddLocalScale("Size", Vector.new(0.6, 0.6, 0.6), moveSpeed) --크기 트랙을 등록해요. 
+
+cube:AddLocalScale("Size", Vector.new(-0.6, -0.6, -0.6), moveSpeed) --크기 트랙은 여러개도 등록할 수 있어요. 
+
+cube:PlayTransformTrack("Size", Enum.TransformPlayType.Repeat, InfinityPlay) --이름에 해당하는 트랙을 재생해요. 
+
+``` 
+<br>
 <br>
 | **AddWorldMove(string TrackName, Vector Pos, float Time, bool CheckCollision)** |
 | :--- |
 
 월드 좌표를 기준으로 이동 변화를 추가할 수 있어요. (설정할 Track 이름, 이동 변화를 줄 값, 완료까지 걸리는 시간, 충돌 처리 여부) 
 <br>
+샘플
+
+```lua
+
+local cube = Workspace.Cube 
+
+local pos = Vector.new(0, 500, 0) 
+
+local moveSpeed = 2 
+
+local waitTime = 1 
+
+ 
+
+cube:AddWorldMove("Move", Vector.new(pos.X, pos.Y, pos.Z), moveSpeed, false) --이동 트랙을 등록해요. (이동 트랙은 여러개도 등록할 수 있어요.) 
+
+cube:AddEmpty("Move", waitTime) --대기 트랙을 등록해요. 
+
+cube:AddWorldMove("Move", Vector.new(-pos.X, -pos.Y, -pos.Z), moveSpeed, false) 
+
+cube:AddEmpty("Move", waitTime)cube:PlayTransformTrack("Move", Enum.TransformPlayType.Repeat, InfinityPlay) --이름에 해당하는 트랙을 재생해요. 
+
+``` 
+<br>
 <br>
 | **AddWorldRot(string TrackName, Vector Rot, float Time)** |
 | :--- |
 
 월드 좌표를 기준으로 회전 변화를 추가할 수 있어요. (설정할 Track 이름, 회전 변화를 줄 값, 완료까지 걸리는 시간) 
+<br>
+샘플
+
+```lua
+
+local cube = Workspace.Cube 
+
+local moveSpeed = 2 
+
+cube:AddWorldRot("Rot", Vector.new(0, 0, 360), moveSpeed) --회전 트랙을 등록해요. 
+
+cube:AddWorldRot("Rot", Vector.new(0, 360, 0), moveSpeed) --회전 트랙은 여러개도 등록할 수 있어요. 
+
+cube:PlayTransformTrack("Rot", Enum.TransformPlayType.Repeat, InfinityPlay) --이름에 해당하는 트랙을 재생해요. 
+
+``` 
 <br>
 <br>
 | **AddEmpty(string TrackName, float Time)** |
@@ -952,16 +1008,6 @@ end
 
 local cube = Workspace.Cube 
 
-cube:ResetTransform() --적용되기전의 트랜스폼으로 리셋해요. (트랙이 멈추진 않아요.) 
-
-``` 
-<br>
-샘플
-
-```lua
-
-local cube = Workspace.Cube 
-
 cube:ResetTransformTrack("Move") --이름에 해당하는 트랙이 적용되기전의 트랜스폼으로 리셋해요. (트랙이 멈추진 않아요.) 
 
 ``` 
@@ -987,6 +1033,16 @@ cube:RemoveTransformTrack("Move") --이름에 해당하는 트랙을 제거해�
 | :--- |
 
 TransformTrack 이 적용되기 전의 최초 Transform으로 리셋시켜요. 
+<br>
+샘플
+
+```lua
+
+local cube = Workspace.Cube 
+
+cube:ResetTransform() --적용되기전의 트랜스폼으로 리셋해요. (트랙이 멈추진 않아요.) 
+
+``` 
 <br>
 <br>
 | **SetEndEventTransformTrack(String TrackName, LuaScriptFunction function)** |
