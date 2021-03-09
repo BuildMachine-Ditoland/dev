@@ -6,7 +6,7 @@
 
 
 
-**Player GetPlayer()**
+  **Player GetPlayer()**
 
 해당 캐릭터의 플레이어를 얻을 수 있어요. 
 
@@ -20,7 +20,7 @@ local player = character:GetPlayer() --캐릭터의 플레이어를 반환해요
 
 
 
-**string GetPlayerName()**
+  **string GetPlayerName()**
 
 플레이어의 이름을 얻을 수 있어요. 
 
@@ -34,7 +34,7 @@ print(character:GetPlayerName()) --캐릭터의 플레이어 이름을 문자열
 
 
 
-**bool IsDriving()**
+  **bool IsDriving()**
 
 캐릭터가 탈 것을 운전 중인지 아닌지 얻을 수 있어요. 
 
@@ -50,7 +50,7 @@ end
 
 
 
-**ObjectFXClient CreateFX(ObjectFXClient FXObject, Bone BoneType)**
+  **ObjectFXClient CreateFX(ObjectFXClient FXObject, Bone BoneType)**
 
 캐릭터 특정 위치에 FX를 생성할 수 있어요. (생성 하고싶은 FX 오브젝트, [Enum.BoneType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/bone)) 
 
@@ -64,7 +64,7 @@ character:CreateFX(Workspace.Effect, Enum.Bone.Body) --캐릭터의 특정 부�
 
 
 
-**ObjectSoundClient CreateSound(ObjectSoundClient SoundObject)**
+  **ObjectSoundClient CreateSound(ObjectSoundClient SoundObject)**
 
 캐릭터의 위치에 Sound를 생성할 수 있어요. (생성 하고싶은 Sound 오브젝트) 
 
@@ -78,7 +78,7 @@ character:CreateSound(Workspace.Sound)
 
 
 
-**AddPlayerHUD(string UIName, UISceen UI, UIDisplayType Type)**
+  **AddPlayerHUD(string UIName, UISceen UI, UIDisplayType Type)**
 
 UI HUD를 붙일 수 있어요. (붙혀 질 UI 이름, 붙일 UI Sceen, UI DisplayType.) 
 
@@ -98,7 +98,7 @@ Game.OnSpawnCharacter:Connect(spawn)
 
 
 
-**RemovePlayerHUD(string UIName)**
+  **RemovePlayerHUD(string UIName)**
 
 UI HUD를 제거해요. (제거하고 싶은 UI 이름) 
 
@@ -112,7 +112,7 @@ character:RemovePlayerHUD("Name") --캐릭터에 추가된 HUD를 이름으로 �
 
 
 
-**RemovePlayerAllHUD()**
+  **RemovePlayerAllHUD()**
 
 현재 캐릭터의 모든 UI HUD를 제거해요. 
 
@@ -126,7 +126,7 @@ character:RemovePlayerAllHUD() --캐릭터에 추가된 모든 HUD를 삭제해�
 
 
 
-**GetPlayerHUD(string UIName)**
+  **GetPlayerHUD(string UIName)**
 
 UI HUD를 얻을 수 있어요. (얻고싶은 UI 이름) 
 
@@ -141,7 +141,7 @@ playerNameUI.Text:SetTextColor(Color.new(255, 0, 0, 255))
 
 
 
-**bool IsMyCharacter()**
+  **bool IsMyCharacter()**
 
 플레이어 자신의 캐릭터인지 아닌지 확인할 수 있어요. 
 
@@ -157,7 +157,7 @@ end
 
 
 
-**void AttachAt(RModeObject ModeObject, BoneType Bone)**
+  **void AttachAt(RModeObject ModeObject, BoneType Bone)**
 
 캐릭터의 원하는 본을 해당 오브젝트의 중점에 부착시켜요. (부착 할 오브젝트, [Enum.Bone.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/bone)) 
 
@@ -171,7 +171,7 @@ character:AttachAt(Workspace.Cube, Enum.Bone.Body) --캐릭터의 부위를 오�
 
 
 
-**void AttachAtTop(RModeObject ModeObject, BoneType Bone)**
+  **void AttachAtTop(RModeObject ModeObject, BoneType Bone)**
 
 캐릭터의 원하는 본을 해당 오브젝트의 윗면에 부착시켜요. (부착 할 오브젝트, [Enum.Bone.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/bone)) 
 

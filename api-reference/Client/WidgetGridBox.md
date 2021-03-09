@@ -8,14 +8,14 @@
 
 
 
-**SetBackgroundColor(Number Count)**
+  **SetBackgroundColor(Number Count)**
 
 GridBox의 행 개수를 설정 할 수 있어요. (Number Count) 
 
 
 
 
-**SetRow(Number Count)**
+  **SetRow(Number Count)**
 
 GridBox의 열 개수를 설정 할 수 있어요. (Number Count) 
 # **상속받아 사용 가능한 기능들**

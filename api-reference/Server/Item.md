@@ -6,7 +6,7 @@
 
 
 
-**SetItemCount(int count)**
+  **SetItemCount(int count)**
 
 아이템 개수를 설정할 수 있어요. 
 # **상속받아 사용 가능한 기능들**

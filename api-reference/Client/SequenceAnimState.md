@@ -8,7 +8,7 @@
 
 
 
-**ChangeAnimation(string ResourceID)**
+  **ChangeAnimation(string ResourceID)**
 
 애니메이션 변경 (변경할 애니메이션 리소스 ID값) 
 # **상속받아 사용 가능한 기능들**
