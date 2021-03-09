@@ -4,17 +4,11 @@
 ## **함수**
 
 <br>
-<br>
-<br>
-| **SetSettingName(string name)** |
-| :--- |
+**SetSettingName(string name)**
 
 캐릭터에 적용할 카메라 세팅의 이름을 설정할 수 있어요. (설정할 이름 값) 
 <br>
-<br>
-<br>
-| **PlayCameraShake(float time, float scale)** |
-| :--- |
+**PlayCameraShake(float time, float scale)**
 
 카메라 쉐이크를 시작해요. (쉐이크 시간, 쉐이크 강도) 
 
@@ -30,10 +24,7 @@ print("Stop Shake!")
 Camera:StopCameraShake(true)
 ```
 <br>
-<br>
-<br>
-| **StopCameraShake(bool bImmediately)** |
-| :--- |
+**StopCameraShake(bool bImmediately)**
 
 카메라 쉐이크를 중지시켜요. (즉시중지 여부) 
 
@@ -49,10 +40,7 @@ print("Stop Shake!")
 Camera:StopCameraShake(true)
 ```
 <br>
-<br>
-<br>
-| **PlayCameraFade(float FromAlpha, float ToAlpha, float Duration, Color Color, bool HoldFinish)** |
-| :--- |
+**PlayCameraFade(float FromAlpha, float ToAlpha, float Duration, Color Color, bool HoldFinish)**
 
 카메라 페이드를 시작해요. (시작 강도 0~1, 종료 강도 0~1, 시작에서 종료까지 걸리는 시간, 적용할 [Color](https://ditoland-utplus.gitbook.io/ditoland/api-reference/common/color)값, 종료 시점 상태 유지 여부) 
 
@@ -71,10 +59,7 @@ print("Stop Fade!")
 Camera:StopCameraFade()
 ```
 <br>
-<br>
-<br>
-| **StopCameraFade()** |
-| :--- |
+**StopCameraFade()**
 
 카메라 페이드를 정지시켜요. 
 

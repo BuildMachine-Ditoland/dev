@@ -4,17 +4,11 @@
 ## **함수**
 
 <br>
-<br>
-<br>
-| **SetEnable(bool bEnable)** |
-| :--- |
+**SetEnable(bool bEnable)**
 
 설정된 Point Light의 작동 여부를 설정해요. (작동 여부) 
 <br>
-<br>
-<br>
-| **SetColor(Color ChangedColor)** |
-| :--- |
+**SetColor(Color ChangedColor)**
 
 포인트 라이트의 컬러를 변경할 수 있어요. (포인트 라인트에 적용할 원하는 [Color](https://ditoland-utplus.gitbook.io/ditoland/api-reference/common/color)값 )  
 
@@ -24,10 +18,7 @@
 Workspace.Cube:SetColor(Color.new(255, 0, 0, 255)) --오브젝트의 색상을 변경해요. (r, g, b, a)
 ```
 <br>
-<br>
-<br>
-| **ChangeIntensity(float Intensity)** |
-| :--- |
+**ChangeIntensity(float Intensity)**
 
 포인트 라이트의 밝기 값을 변경할 수 있어요. (원하는 밝기 값) 
 

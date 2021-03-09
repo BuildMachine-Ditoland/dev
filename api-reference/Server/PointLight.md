@@ -4,17 +4,11 @@
 ## **함수**
 
 <br>
-<br>
-<br>
-| **SetEnable(bool bEnable)** |
-| :--- |
+**SetEnable(bool bEnable)**
 
 포인트 라이트의 활성화 여부를 설정해요. (포인트 라이트 활성화 여부) 
 <br>
-<br>
-<br>
-| **SetColor(Color ChangeColor)** |
-| :--- |
+**SetColor(Color ChangeColor)**
 
 포인트 라이트의 컬러를 변경해요. (변경하고 싶은 [Color](https://ditoland-utplus.gitbook.io/ditoland/api-reference/common/color)값) 
 
@@ -24,10 +18,7 @@
 Workspace.Cube:SetColor(Color.new(255, 0, 0, 255)) --오브젝트의 색상을 변경해요. (r, g, b, a)
 ```
 <br>
-<br>
-<br>
-| **ChangeIntensity(float Intensity)** |
-| :--- |
+**ChangeIntensity(float Intensity)**
 
 포인트 라이트의 밝기를 변경해요. (설정할 밝기 값) 
 

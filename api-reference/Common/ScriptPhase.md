@@ -95,10 +95,7 @@ end)
 ## **함수**
 
 <br>
-<br>
-<br>
-| **float GetPhaseTime()** |
-| :--- |
+**float GetPhaseTime()**
 
 단계가 활성화 되어 있었던 시간을 얻을 수 있어요. 
 # **상속받아 사용 가능한 기능들**

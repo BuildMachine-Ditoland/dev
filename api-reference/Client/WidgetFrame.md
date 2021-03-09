@@ -7,10 +7,7 @@
 ## **함수**
 
 <br>
-<br>
-<br>
-| **SetBackgroundColor(Color color)** |
-| :--- |
+**SetBackgroundColor(Color color)**
 
 버튼 위젯의 배경 색을 설정할 수 있어요. (변경할 색) 
 

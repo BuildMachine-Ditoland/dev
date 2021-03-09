@@ -4,10 +4,7 @@
 ## **함수**
 
 <br>
-<br>
-<br>
-| **Play()** |
-| :--- |
+**Play()**
 
 Sound를 플레이해요. 
 
@@ -18,10 +15,7 @@ local sound = Workspace.Sound
 sound:Play() --사운드를 재생해요
 ```
 <br>
-<br>
-<br>
-| **Stop()** |
-| :--- |
+**Stop()**
 
 Sound를 정지시켜요. 
 

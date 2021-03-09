@@ -4,10 +4,7 @@
 ## **함수**
 
 <br>
-<br>
-<br>
-| **SetEmissive(float Emissive)** |
-| :--- |
+**SetEmissive(float Emissive)**
 
 캐릭터 Material의 Emissive 값을 변경 할 수 있어요. (자체 발광하는 수치 값) 
 
@@ -18,10 +15,7 @@ local character = Game:GetAllPlayer()[1]:GetCharacter()
 character:SetEmissive(1) --값이 클수록 캐릭터가 밝아져요.
 ```
 <br>
-<br>
-<br>
-| **SetVisible(bool bVisibility)** |
-| :--- |
+**SetVisible(bool bVisibility)**
 
 캐릭터의 가시성을 설정할 수 있어요. 
 
@@ -32,10 +26,7 @@ local character = Game:GetAllPlayer()[1]:GetCharacter()
 character:SetVisible(false)
 ```
 <br>
-<br>
-<br>
-| **AddForce(Vector Force)** |
-| :--- |
+**AddForce(Vector Force)**
 
 캐릭터에 물리적인 힘을 가할 수 있어요. (힘을 가할 Vector 값) 
 
@@ -61,10 +52,7 @@ end
 toy.OnCollisionEvent:Connect(CharacterCollision) --오브젝트에 캐릭터가 닿으면 호출할 함수를 연결해요.
 ```
 <br>
-<br>
-<br>
-| **SetMaxSpeed(float Speed)** |
-| :--- |
+**SetMaxSpeed(float Speed)**
 
 캐릭터의 최대 이동속도를 설정할 수 있어요. (설정할 최대 이동속도 값) 
 
@@ -75,10 +63,7 @@ local character = LocalPlayer:GetRemotePlayer():GetCharacter()
 character:SetMaxSpeed(1000) --캐릭터의 최대 이동 속도를 설정해요.
 ```
 <br>
-<br>
-<br>
-| **SetMaxJump(float Jump)** |
-| :--- |
+**SetMaxJump(float Jump)**
 
 캐릭터의 최대 점프속도를 설정할 수 있어요. (설정할 최대 점프속도 값) 
 
@@ -89,24 +74,15 @@ local character = LocalPlayer:GetRemotePlayer():GetCharacter()
 character:SetMaxJump(1000) --캐릭터의 최대 점프 속도를 설정해요.
 ```
 <br>
-<br>
-<br>
-| **SetFlyControl(float ControlRate);** |
-| :--- |
+**SetFlyControl(float ControlRate);**
 
 공중에서 캐릭터 컨트롤 비율을 설정할 수 있어요. (설정할 비율 값) 
 <br>
-<br>
-<br>
-| **SetFlyMaxSpeed(float Speed)** |
-| :--- |
+**SetFlyMaxSpeed(float Speed)**
 
 캐릭터의 최대 공중 이동속도를 설정할 수 있어요. 기어오르기, 날기 등 (설정할 최대 공중 이동속도 값) 
 <br>
-<br>
-<br>
-| **JumpEnable(bool CanJump)** |
-| :--- |
+**JumpEnable(bool CanJump)**
 
 캐릭터의 점프 가능 여부를 설정할 수 있어요. (점프 가능 여부) 
 
@@ -117,31 +93,19 @@ local character = Game:GetAllPlayer()[1]:GetCharacter()
 character:JumpEnable(false)
 ```
 <br>
-<br>
-<br>
-| **MoveRightEnable(bool CanMove)** |
-| :--- |
+**MoveRightEnable(bool CanMove)**
 
 캐릭터의 좌우 이동 가능 여부를 설정할 수 있어요. (좌우 이동 가능 여부) 
 <br>
-<br>
-<br>
-| **MoveToSpawnPoint(RScriptSpawnPoint SpawnPointObjecrt, bool ResetRot)** |
-| :--- |
+**MoveToSpawnPoint(RScriptSpawnPoint SpawnPointObjecrt, bool ResetRot)**
 
 캐릭터를 특정 스폰 위치로 이동시킬 수 있어요. (이동 할 스폰포인트 오브젝트, 방향 Rot 초기화 여부) 
 <br>
-<br>
-<br>
-| **void ChangeCharacterType(ERCharacterType Type)** |
-| :--- |
+**void ChangeCharacterType(ERCharacterType Type)**
 
 현재 캐릭터의 외형 타입을 바꿀 수 있어요. 
 <br>
-<br>
-<br>
-| **void SetCapsuleSize(float Radius, float Height)** |
-| :--- |
+**void SetCapsuleSize(float Radius, float Height)**
 
 현재 캐릭터의 캡슐 콜리전의 크기를 바꿀 수 있어요. 
 
@@ -154,10 +118,7 @@ local height = 100
 character:SetCapsuleSize(radius, height)
 ```
 <br>
-<br>
-<br>
-| **ERCharacterType GetCharacterType()** |
-| :--- |
+**ERCharacterType GetCharacterType()**
 
 현재 캐릭터의 외형 타입을 가져 올 수 있어요. 
 # **상속받아 사용 가능한 기능들**
