@@ -206,8 +206,8 @@ Game:DeleteTimeEvent("PrintMessage") --AddTimeEvent로 등록한 함수를 삭�
 
 
 
-| **string GetName()** |
-| :--- |
+**string GetName()**
+
 객체의 이름을 얻을 수 있어요.
 샘플
 
@@ -216,23 +216,23 @@ print(Workspace.Floor:GetName()) --오브젝트의 이름을 문자열로 반환
 ```
 
 
-| **RModeObject GetParent(string ParentName)** |
-| :--- |
+**RModeObject GetParent(string ParentName)**
+
 이름으로 부모 객체를 얻을 수 있어요. (찾고싶은 부모 객체 이름)
 
 
-| **RModeObject GetChild(string ChildName)** |
-| :--- |
+**RModeObject GetChild(string ChildName)**
+
 이름으로 자식 객체를 얻을 수 있어요. (찾고싶은 자식 객체 이름)
 
 
-| **RModeObject GetGetSibling(string Name)** |
-| :--- |
+**RModeObject GetGetSibling(string Name)**
+
 이름으로 형제 객체를 얻을 수 있어요. (찾고싶은 형제 객체 이름)
 
 
-| **List<RScriptObject> GetChildList()** |
-| :--- |
+**List<RScriptObject> GetChildList()**
+
 자식 객체의 리스트를 얻을 수 있어요.
 샘플
 
@@ -244,8 +244,8 @@ end
 ```
 
 
-| **bool IsCharacter()** |
-| :--- |
+**bool IsCharacter()**
+
 캐릭터인지 확인할 수 있어요.
 샘플
 
@@ -257,8 +257,8 @@ end
 ```
 
 
-| **bool IsStaticMesh()** |
-| :--- |
+**bool IsStaticMesh()**
+
 스테틱 메시인지 확인할 수 있어요.
 샘플
 
@@ -270,8 +270,8 @@ end
 ```
 
 
-| **bool IsFX()** |
-| :--- |
+**bool IsFX()**
+
 FX인지 확인할 수 있어요.
 샘플
 
@@ -283,8 +283,8 @@ end
 ```
 
 
-| **bool IsSound()** |
-| :--- |
+**bool IsSound()**
+
 Sound인지 확인할 수 있어요.
 샘플
 
@@ -296,8 +296,8 @@ end
 ```
 
 
-| **bool IsPointLight()** |
-| :--- |
+**bool IsPointLight()**
+
 포인트 라이트인지 확인할 수 있어요.
 샘플
 
@@ -309,8 +309,8 @@ end
 ```
 
 
-| **bool IsSpotLight()** |
-| :--- |
+**bool IsSpotLight()**
+
 스포트 라이트인지 확인할 수 있어요.
 샘플
 
@@ -322,8 +322,8 @@ end
 ```
 
 
-| **bool IsSurfaceUI()** |
-| :--- |
+**bool IsSurfaceUI()**
+
 서피스 UI인지 확인할 수 있어요.
 샘플
 
@@ -335,8 +335,8 @@ end
 ```
 
 
-| **bool IsScreenUI()** |
-| :--- |
+**bool IsScreenUI()**
+
 스크린 UI인지 확인할 수 있어요.
 샘플
 
@@ -348,8 +348,8 @@ end
 ```
 
 
-| **bool IsItem()** |
-| :--- |
+**bool IsItem()**
+
 아이템인지 확인할 수 있어요.
 샘플
 
@@ -361,8 +361,8 @@ end
 ```
 
 
-| **bool IsNPC()** |
-| :--- |
+**bool IsNPC()**
+
 NPC인지 확인할 수 있어요.
 샘플
 
@@ -374,8 +374,8 @@ end
 ```
 
 
-| **bool IsFolder()** |
-| :--- |
+**bool IsFolder()**
+
 폴더인지 확인할 수 있어요.
 샘플
 
@@ -387,8 +387,8 @@ end
 ```
 
 
-| **bool IsScript()** |
-| :--- |
+**bool IsScript()**
+
 스트립트인지 확인할 수 있어요.
 샘플
 
@@ -400,8 +400,8 @@ end
 ```
 
 
-| **bool IsCollider()** |
-| :--- |
+**bool IsCollider()**
+
 Collider인지 확인할 수 있어요.
 샘플
 
@@ -413,8 +413,8 @@ end
 ```
 
 
-| **bool IsWidget()** |
-| :--- |
+**bool IsWidget()**
+
 Widget인지 확인할 수 있어요.
 샘플
 
@@ -426,8 +426,8 @@ end
 ```
 
 
-| **bool IsCamera()** |
-| :--- |
+**bool IsCamera()**
+
 Camera인지 확인할 수 있어요.
 샘플
 
@@ -439,13 +439,13 @@ end
 ```
 
 
-| **bool IsValid()** |
-| :--- |
+**bool IsValid()**
+
 해당 오브젝트가 유효한지 확인 할 수있어요.
 
 
-| **AddReplicateValue(string ValueName, Vector Data, ReplicateType Type, float Time, bool bSaveToStorage)** |
-| :--- |
+**AddReplicateValue(string ValueName, Vector Data, ReplicateType Type, float Time, bool bSaveToStorage)**
+
 해당 객체에 서버, 클라이언트 간 동기화가 가능한 벡터를 추가해요. (추가할 Value 이름, Vector 데이터, //@[] Enum.ReplicateType.타입 https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype , 동기화 시간, 스토리지 저장 여부)
 샘플
 
@@ -459,8 +459,8 @@ print(Game.SomeVector) --서버에서 값이 바뀌었지만 클라에서도 동
 ```
 
 
-| **AddReplicateValue(string ValueName, float Data, ReplicateType Type, float Time, bool bSaveToStorage)** |
-| :--- |
+**AddReplicateValue(string ValueName, float Data, ReplicateType Type, float Time, bool bSaveToStorage)**
+
 해당 객체에 서버, 클라이언트 간 동기화가 가능한 실수를 추가해요. (추가할 Value 이름, float 데이터, //@[] Enum.ReplicateType.타입 https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype , 동기화 시간, 스토리지 저장 여부)
 샘플
 
@@ -474,8 +474,8 @@ print(Game.SomeNumber .. " in Client") --서버에서 값이 바뀌었지만 클
 ```
 
 
-| **AddReplicateValue(string ValueName, bool Data, ReplicateType Type, float Time, bool bSaveToStorage)** |
-| :--- |
+**AddReplicateValue(string ValueName, bool Data, ReplicateType Type, float Time, bool bSaveToStorage)**
+
 해당 객체에 서버, 클라이언트 간 동기화가 가능한 bool를 추가해요. (추가할 Value 이름, bool 데이터, //@[] Enum.ReplicateType.타입 https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype , 동기화 시간, 스토리지 저장 여부)
 샘플
 
@@ -489,8 +489,8 @@ print(Game.SomeBool) --서버에서 값이 바뀌었지만 클라에서도 동�
 ```
 
 
-| **AddReplicateValue(string ValueName, string Data, ReplicateType Type, float Time, bool bSaveToStorage)** |
-| :--- |
+**AddReplicateValue(string ValueName, string Data, ReplicateType Type, float Time, bool bSaveToStorage)**
+
 해당 객체에 서버, 클라이언트 간 동기화가 가능한 문자열을 추가해요. (추가할 Value 이름, string 데이터, //@[] Enum.ReplicateType.타입 https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype , 동기화 시간, 스토리지 저장 여부)
 샘플
 
@@ -504,8 +504,8 @@ print(Game.SomeString) --서버에서 값이 바뀌었지만 클라에서도 동
 ```
 
 
-| **AddReplicateValue(string ValueName, Color Data, ReplicateType Type, float Time, bool bSaveToStorage)** |
-| :--- |
+**AddReplicateValue(string ValueName, Color Data, ReplicateType Type, float Time, bool bSaveToStorage)**
+
 해당 객체에 서버, 클라이언트 간 동기화가 가능한 컬러를 추가해요. (추가할 Value 이름, Color 데이터, //@[] Enum.ReplicateType.타입 https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype , 동기화 시간, 스토리지 저장 여부)
 샘플
 
@@ -519,26 +519,26 @@ print(Game.SomeColor) --서버에서 값이 바뀌었지만 클라에서도 동�
 ```
 
 
-| **AddSaveValue(string ValueName, Vector Data)** |
-| :--- |
+**AddSaveValue(string ValueName, Vector Data)**
+
 해당 객체 저장소에 벡터를 추가해요. (Value 이름, Vector 데이터)
 
 
-| **AddSaveValue(string ValueName, float Data)** |
-| :--- |
+**AddSaveValue(string ValueName, float Data)**
+
 해당 객체 저장소에 실수를 추가해요. (Value 이름, float 데이터)
 
 
-| **AddSaveValue(string ValueName, bool Data)** |
-| :--- |
+**AddSaveValue(string ValueName, bool Data)**
+
 해당 객체 저장소에 bool을 추가해요. (Value 이름, bool 데이터)
 
 
-| **AddSaveValue(string ValueName, string Data)** |
-| :--- |
+**AddSaveValue(string ValueName, string Data)**
+
 해당 객체 저장소에 문자열을 추가해요. (Value 이름, string 데이터)
 
 
-| **AddSaveValue(string ValueName, Color Data)** |
-| :--- |
+**AddSaveValue(string ValueName, Color Data)**
+
 해당 객체 저장소에 칼라를 추가해요. (Value 이름, Color 데이터)

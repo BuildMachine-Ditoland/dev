@@ -155,13 +155,13 @@ cube:ConnectChangeEventFunction("SomeValue", ChangeSomeValue)  --오브젝트의
 
 
 
-| **int GetModeObjectKey()** |
-| :--- |
+**int GetModeObjectKey()**
+
 객체의 키 값을 얻을 수 있어요.
 
 
-| **Matrix GetTransform()** |
-| :--- |
+**Matrix GetTransform()**
+
 매트릭스를 얻을 수 있어요.
 샘플
 
@@ -170,8 +170,8 @@ local targetTransform = Game:GetAllPlayer()[1]:GetTransform()
 ```
 
 
-| **SetTransform(Matrix)** |
-| :--- |
+**SetTransform(Matrix)**
+
 현재 매트릭스에서 설정 된 매트릭스로 보간이 되는 매트릭스를 설정할 수 있어요 설정할 수 있어요. (Matrix 값, bool 충돌 처리 여부)
 샘플
 
@@ -183,8 +183,8 @@ character:SetTransform(targetTransform) --오브젝트를 보간으로 이동시
 ```
 
 
-| **Teleport(Matrix)** |
-| :--- |
+**Teleport(Matrix)**
+
 순간이동 하는 매트릭스를 설정할 수 있어요. (Matrix 값)
 샘플
 
@@ -195,8 +195,8 @@ Workspace.Cube:Teleport(targetTransform) --오브젝트를 보간없이 바로 �
 ```
 
 
-| **Vector GetLocation()** |
-| :--- |
+**Vector GetLocation()**
+
 (Deprecated)객체의 현재 위치를 얻을 수 있어요.
 샘플
 
@@ -206,13 +206,13 @@ local characterPos = character:GetTransform():GetLocation() --캐릭터의 위�
 ```
 
 
-| **SetLocation(Vector position, bool collisionCheck)** |
-| :--- |
+**SetLocation(Vector position, bool collisionCheck)**
+
 (Deprecated)객체의 위치를 설정할 수 있어요. (설정할 위치 Vector 값, 충돌 처리 여부)
 
 
-| **Vector GetRotation()** |
-| :--- |
+**Vector GetRotation()**
+
 (Deprecated)각도를 얻을 수 있어요. (Vector.X : Pitch, Vector.Y : Yaw, Vector.Z : Roll)
 샘플
 
@@ -222,8 +222,8 @@ local characterRot = character:GetTransform():GetRotation() --캐릭터의 회�
 ```
 
 
-| **SetRotation(Vector InValue)** |
-| :--- |
+**SetRotation(Vector InValue)**
+
 (Deprecated)주어진 값으로 각도를 설정해요. (InValue.X : Roll, InValue.Y : Pitch, InValue.Z : Yaw)
 샘플
 
@@ -235,8 +235,8 @@ character:SetTransform(targetTransform) --오브젝트를 보간으로 이동시
 ```
 
 
-| **Vector GetScale()** |
-| :--- |
+**Vector GetScale()**
+
 (Deprecated)스케일을 얻을 수 있어요
 샘플
 
@@ -248,8 +248,8 @@ cube:SetScale(scale) --오브젝트의 크기를 설정해요.
 ```
 
 
-| **SetScale(Vector scale)** |
-| :--- |
+**SetScale(Vector scale)**
+
 (Deprecated)주어진 값으로 스케일을 설정해요. (설정할 스케일 값)
 샘플
 
@@ -261,8 +261,8 @@ cube:SetScale(scale) --오브젝트의 크기를 설정해요.
 ```
 
 
-| **SetTag(String Tag)** |
-| :--- |
+**SetTag(String Tag)**
+
 객체의 tag를 설정해요. (설정할 tag)
 샘플
 
@@ -273,8 +273,8 @@ print(Workspace.Floor:GetTag())
 ```
 
 
-| **String GetTag()** |
-| :--- |
+**String GetTag()**
+
 객체에 설정된 tag를 얻을 수 있어요.
 샘플
 
@@ -285,18 +285,18 @@ print(Workspace.Floor:GetTag())
 ```
 
 
-| **SetForward(Vector Forward)** |
-| :--- |
+**SetForward(Vector Forward)**
+
 (Deprecated)객체의 바라보는 방향을 설정할 수 있어요. (설정할 방향 Vector 값)
 
 
-| **Vector GetForward()** |
-| :--- |
+**Vector GetForward()**
+
 (Deprecated)객체의 바라보는 방향을 얻을 수 있어요.
 
 
-| **Vector GetRight()** |
-| :--- |
+**Vector GetRight()**
+
 (Deprecated)객체의 오른쪽 방향을 얻을 수 있어요.
 | **bool Enable** |
 | :--- |
@@ -308,8 +308,8 @@ Workspace.Cube.Enable = false --오브젝트의 상태를 비활성화해요. (�
 ```
 
 
-| **AddForce(Vector Force)** |
-| :--- |
+**AddForce(Vector Force)**
+
 객체에 물리 힘을 추가할 수 있어요. (힘을 가할 Vector 값)
 샘플
 
@@ -334,8 +334,8 @@ toy.OnCollisionEvent:Connect(CharacterCollision) --오브젝트에 캐릭터가 
 ```
 
 
-| **SetVisibility(bool bNewVisibility)** |
-| :--- |
+**SetVisibility(bool bNewVisibility)**
+
 객체의 가시성 여부를 설정할 수 있어요. (가시성 여부)
 샘플
 
@@ -344,8 +344,8 @@ Workspace.Cube.SetVisibility(false) --오브젝트를 보이지 않게 해요.
 ```
 
 
-| **AddLocalMove(string TrackName, Vector Pos, float Time, bool CheckCollision)** |
-| :--- |
+**AddLocalMove(string TrackName, Vector Pos, float Time, bool CheckCollision)**
+
 로컬 좌표를 기준으로 이동 변화를 추가할 수 있어요. (설정할 Track 이름, 이동 변화를 줄 값, 완료까지 걸리는 시간, 충돌 처리 여부)
 샘플
 
@@ -362,8 +362,8 @@ cube:AddEmpty("Move", waitTime)cube:PlayTransformTrack("Move", Enum.TransformPla
 ```
 
 
-| **AddLocalRot(string TrackName, Vector Rot, float Time)** |
-| :--- |
+**AddLocalRot(string TrackName, Vector Rot, float Time)**
+
 로컬 좌표를 기준으로 회전 변화를 추가할 수 있어요. (설정할 Track 이름, 회전 변화를 줄 값, 완료까지 걸리는 시간)
 샘플
 
@@ -376,23 +376,23 @@ cube:PlayTransformTrack("Rot", Enum.TransformPlayType.Repeat, InfinityPlay) --�
 ```
 
 
-| **AddLocalScale(string TrackName, Vector Scale, float Time)** |
-| :--- |
+**AddLocalScale(string TrackName, Vector Scale, float Time)**
+
 로컬 좌표를 기준으로 스케일 변화를 추가할 수 있어요. (설정할 Track 이름, 스케일 변화를 줄 값, 완료까지 걸리는 시간)
 
 
-| **AddWorldMove(string TrackName, Vector Pos, float Time, bool CheckCollision)** |
-| :--- |
+**AddWorldMove(string TrackName, Vector Pos, float Time, bool CheckCollision)**
+
 월드 좌표를 기준으로 이동 변화를 추가할 수 있어요. (설정할 Track 이름, 이동 변화를 줄 값, 완료까지 걸리는 시간, 충돌 처리 여부)
 
 
-| **AddWorldRot(string TrackName, Vector Rot, float Time)** |
-| :--- |
+**AddWorldRot(string TrackName, Vector Rot, float Time)**
+
 월드 좌표를 기준으로 회전 변화를 추가할 수 있어요. (설정할 Track 이름, 회전 변화를 줄 값, 완료까지 걸리는 시간)
 
 
-| **AddEmpty(string TrackName, float Time)** |
-| :--- |
+**AddEmpty(string TrackName, float Time)**
+
 객체 변환에 대기 시간을 추가할 수 있어요. (추가할 Track 이름, 대기 시간)
 
 ```lua
@@ -408,8 +408,8 @@ cube:AddEmpty("Move", waitTime)cube:PlayTransformTrack("Move", Enum.TransformPla
 ```
 
 
-| **PlayTransformTrack(string TrackName, TransformPlayType Type, int PlayCount)** |
-| :--- |
+**PlayTransformTrack(string TrackName, TransformPlayType Type, int PlayCount)**
+
 설정된 변환 컨트롤러를 실행시켜요. (실행할 Track 이름, //@[] Enum.TransformPlayType.타입 https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/transformplaytype , 실행 횟수)
 샘플
 
@@ -427,8 +427,8 @@ cube:PlayTransformTrack("Move", Enum.TransformPlayType.Repeat, InfinityPlay) --�
 ```
 
 
-| **StopTransformTrack(string TrackName)** |
-| :--- |
+**StopTransformTrack(string TrackName)**
+
 변환 컨트롤러를 정지시켜요. (정지할 Track 이름)
 샘플
 
@@ -438,8 +438,8 @@ cube:StopTransformTrack("Move") --이름에 해당하는 트랙을 멈춰요.
 ```
 
 
-| **PauseTransformTrack(string TrackName)** |
-| :--- |
+**PauseTransformTrack(string TrackName)**
+
 변환 컨트롤러를 일시 정지시켜요 (일시 정지할 Track 이름)
 샘플
 
@@ -449,8 +449,8 @@ cube:PauseTransformTrack("Move") --이름에 해당하는 트랙을 일시정지
 ```
 
 
-| **ResumeTransformTrack(string TrackName)** |
-| :--- |
+**ResumeTransformTrack(string TrackName)**
+
 변환 컨트롤러를 다시 플레이시켜요. (플레이할 Track 이름)
 샘플
 
@@ -460,8 +460,8 @@ cube:ResumeTransformTrack("Move") --이름에 해당하는 일시정지된 트�
 ```
 
 
-| **bool IsPlayingTransformTrack(string TrackName)** |
-| :--- |
+**bool IsPlayingTransformTrack(string TrackName)**
+
 해당 TransformTrack이 플레이 중인지 확인할 수 있어요. (확인할 Track 이름)
 샘플
 
@@ -473,8 +473,8 @@ end
 ```
 
 
-| **ResetTransformTrack(string TrackName)** |
-| :--- |
+**ResetTransformTrack(string TrackName)**
+
 해당 TransformTrack 이 적용되기 전의 Transform으로 리셋시켜요. (리셋할 Track 이름)
 샘플
 
@@ -490,8 +490,8 @@ cube:ResetTransformTrack("Move") --이름에 해당하는 트랙이 적용되기
 ```
 
 
-| **RemoveTransformTrack(String TrackName)** |
-| :--- |
+**RemoveTransformTrack(String TrackName)**
+
 해당 Track을 제거해요. (제거할 Track 이름)
 샘플
 
@@ -501,13 +501,13 @@ cube:RemoveTransformTrack("Move") --이름에 해당하는 트랙을 제거해�
 ```
 
 
-| **ResetTransform()** |
-| :--- |
+**ResetTransform()**
+
 TransformTrack 이 적용되기 전의 최초 Transform으로 리셋시켜요.
 
 
-| **SetEndEventTransformTrack(String TrackName, LuaScriptFunction function)** |
-| :--- |
+**SetEndEventTransformTrack(String TrackName, LuaScriptFunction function)**
+
 TransformTrack 이 끝나면 등록한 function 을 호출합니다.
 샘플
 
@@ -527,18 +527,18 @@ cube:PlayTransformTrack("Move", Enum.TransformPlayType.Repeat, 1)
 ```
 
 
-| **SetFriction( float value, float restitution, float density )** |
-| :--- |
+**SetFriction( float value, float restitution, float density )**
+
 오브젝트의 표면 물리 마찰력을 설정할 수 있어요. (마찰 값, 탄성 값, 밀도 값)
 
 
-| **MakeVehicleChassis( VehicleCreationInfo Info )** |
-| :--- |
+**MakeVehicleChassis( VehicleCreationInfo Info )**
+
 오브젝트를 VehicleChassis로 변경시켜요. (변경할 //@[] VehicleCreationInfo데이터 https://ditoland-utplus.gitbook.io/ditoland/api-reference/common/vehiclecreationinfo )
 
 
-| **SetName(string NewName)** |
-| :--- |
+**SetName(string NewName)**
+
 오브젝트의 이름을 변경 할 수 있어요. (새로운 이름)
 샘플
 
@@ -547,13 +547,13 @@ Workspace.Floor:SetName("NewFloor") --오브젝트의 이름을 변경해요.
 ```
 
 
-| **FRModeVehicle GetVehicle()** |
-| :--- |
+**FRModeVehicle GetVehicle()**
+
 Vehicle 객체를 얻을 수 있어요.
 
 
-| **ConnectEventFunction(string customevent, LuaScriptFunction function) ** |
-| :--- |
+**ConnectEventFunction(string customevent, LuaScriptFunction function) **
+
 유저가 추가한 오브젝트 커스텀 이벤트에 함수를 연결할 수 있어요. (이벤트 이름, 연결 함수)
 샘플
 
@@ -568,8 +568,8 @@ cube:ConnectEventFunction("SomeFunc", SomeFunc) --오브젝트에 "SomeFunc"라�
 ```
 
 
-| **string GetName()** |
-| :--- |
+**string GetName()**
+
 객체의 이름을 얻을 수 있어요.
 샘플
 
@@ -578,23 +578,23 @@ print(Workspace.Floor:GetName()) --오브젝트의 이름을 문자열로 반환
 ```
 
 
-| **RModeObject GetParent(string ParentName)** |
-| :--- |
+**RModeObject GetParent(string ParentName)**
+
 이름으로 부모 객체를 얻을 수 있어요. (찾고싶은 부모 객체 이름)
 
 
-| **RModeObject GetChild(string ChildName)** |
-| :--- |
+**RModeObject GetChild(string ChildName)**
+
 이름으로 자식 객체를 얻을 수 있어요. (찾고싶은 자식 객체 이름)
 
 
-| **RModeObject GetGetSibling(string Name)** |
-| :--- |
+**RModeObject GetGetSibling(string Name)**
+
 이름으로 형제 객체를 얻을 수 있어요. (찾고싶은 형제 객체 이름)
 
 
-| **List<RScriptObject> GetChildList()** |
-| :--- |
+**List<RScriptObject> GetChildList()**
+
 자식 객체의 리스트를 얻을 수 있어요.
 샘플
 
@@ -606,8 +606,8 @@ end
 ```
 
 
-| **bool IsCharacter()** |
-| :--- |
+**bool IsCharacter()**
+
 캐릭터인지 확인할 수 있어요.
 샘플
 
@@ -619,8 +619,8 @@ end
 ```
 
 
-| **bool IsStaticMesh()** |
-| :--- |
+**bool IsStaticMesh()**
+
 스테틱 메시인지 확인할 수 있어요.
 샘플
 
@@ -632,8 +632,8 @@ end
 ```
 
 
-| **bool IsFX()** |
-| :--- |
+**bool IsFX()**
+
 FX인지 확인할 수 있어요.
 샘플
 
@@ -645,8 +645,8 @@ end
 ```
 
 
-| **bool IsSound()** |
-| :--- |
+**bool IsSound()**
+
 Sound인지 확인할 수 있어요.
 샘플
 
@@ -658,8 +658,8 @@ end
 ```
 
 
-| **bool IsPointLight()** |
-| :--- |
+**bool IsPointLight()**
+
 포인트 라이트인지 확인할 수 있어요.
 샘플
 
@@ -671,8 +671,8 @@ end
 ```
 
 
-| **bool IsSpotLight()** |
-| :--- |
+**bool IsSpotLight()**
+
 스포트 라이트인지 확인할 수 있어요.
 샘플
 
@@ -684,8 +684,8 @@ end
 ```
 
 
-| **bool IsSurfaceUI()** |
-| :--- |
+**bool IsSurfaceUI()**
+
 서피스 UI인지 확인할 수 있어요.
 샘플
 
@@ -697,8 +697,8 @@ end
 ```
 
 
-| **bool IsScreenUI()** |
-| :--- |
+**bool IsScreenUI()**
+
 스크린 UI인지 확인할 수 있어요.
 샘플
 
@@ -710,8 +710,8 @@ end
 ```
 
 
-| **bool IsItem()** |
-| :--- |
+**bool IsItem()**
+
 아이템인지 확인할 수 있어요.
 샘플
 
@@ -723,8 +723,8 @@ end
 ```
 
 
-| **bool IsNPC()** |
-| :--- |
+**bool IsNPC()**
+
 NPC인지 확인할 수 있어요.
 샘플
 
@@ -736,8 +736,8 @@ end
 ```
 
 
-| **bool IsFolder()** |
-| :--- |
+**bool IsFolder()**
+
 폴더인지 확인할 수 있어요.
 샘플
 
@@ -749,8 +749,8 @@ end
 ```
 
 
-| **bool IsScript()** |
-| :--- |
+**bool IsScript()**
+
 스트립트인지 확인할 수 있어요.
 샘플
 
@@ -762,8 +762,8 @@ end
 ```
 
 
-| **bool IsCollider()** |
-| :--- |
+**bool IsCollider()**
+
 Collider인지 확인할 수 있어요.
 샘플
 
@@ -775,8 +775,8 @@ end
 ```
 
 
-| **bool IsWidget()** |
-| :--- |
+**bool IsWidget()**
+
 Widget인지 확인할 수 있어요.
 샘플
 
@@ -788,8 +788,8 @@ end
 ```
 
 
-| **bool IsCamera()** |
-| :--- |
+**bool IsCamera()**
+
 Camera인지 확인할 수 있어요.
 샘플
 
@@ -801,13 +801,13 @@ end
 ```
 
 
-| **bool IsValid()** |
-| :--- |
+**bool IsValid()**
+
 해당 오브젝트가 유효한지 확인 할 수있어요.
 
 
-| **AddReplicateValue(string ValueName, Vector Data, ReplicateType Type, float Time, bool bSaveToStorage)** |
-| :--- |
+**AddReplicateValue(string ValueName, Vector Data, ReplicateType Type, float Time, bool bSaveToStorage)**
+
 해당 객체에 서버, 클라이언트 간 동기화가 가능한 벡터를 추가해요. (추가할 Value 이름, Vector 데이터, //@[] Enum.ReplicateType.타입 https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype , 동기화 시간, 스토리지 저장 여부)
 샘플
 
@@ -821,8 +821,8 @@ print(Game.SomeVector) --서버에서 값이 바뀌었지만 클라에서도 동
 ```
 
 
-| **AddReplicateValue(string ValueName, float Data, ReplicateType Type, float Time, bool bSaveToStorage)** |
-| :--- |
+**AddReplicateValue(string ValueName, float Data, ReplicateType Type, float Time, bool bSaveToStorage)**
+
 해당 객체에 서버, 클라이언트 간 동기화가 가능한 실수를 추가해요. (추가할 Value 이름, float 데이터, //@[] Enum.ReplicateType.타입 https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype , 동기화 시간, 스토리지 저장 여부)
 샘플
 
@@ -836,8 +836,8 @@ print(Game.SomeNumber .. " in Client") --서버에서 값이 바뀌었지만 클
 ```
 
 
-| **AddReplicateValue(string ValueName, bool Data, ReplicateType Type, float Time, bool bSaveToStorage)** |
-| :--- |
+**AddReplicateValue(string ValueName, bool Data, ReplicateType Type, float Time, bool bSaveToStorage)**
+
 해당 객체에 서버, 클라이언트 간 동기화가 가능한 bool를 추가해요. (추가할 Value 이름, bool 데이터, //@[] Enum.ReplicateType.타입 https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype , 동기화 시간, 스토리지 저장 여부)
 샘플
 
@@ -851,8 +851,8 @@ print(Game.SomeBool) --서버에서 값이 바뀌었지만 클라에서도 동�
 ```
 
 
-| **AddReplicateValue(string ValueName, string Data, ReplicateType Type, float Time, bool bSaveToStorage)** |
-| :--- |
+**AddReplicateValue(string ValueName, string Data, ReplicateType Type, float Time, bool bSaveToStorage)**
+
 해당 객체에 서버, 클라이언트 간 동기화가 가능한 문자열을 추가해요. (추가할 Value 이름, string 데이터, //@[] Enum.ReplicateType.타입 https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype , 동기화 시간, 스토리지 저장 여부)
 샘플
 
@@ -866,8 +866,8 @@ print(Game.SomeString) --서버에서 값이 바뀌었지만 클라에서도 동
 ```
 
 
-| **AddReplicateValue(string ValueName, Color Data, ReplicateType Type, float Time, bool bSaveToStorage)** |
-| :--- |
+**AddReplicateValue(string ValueName, Color Data, ReplicateType Type, float Time, bool bSaveToStorage)**
+
 해당 객체에 서버, 클라이언트 간 동기화가 가능한 컬러를 추가해요. (추가할 Value 이름, Color 데이터, //@[] Enum.ReplicateType.타입 https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype , 동기화 시간, 스토리지 저장 여부)
 샘플
 
@@ -881,26 +881,26 @@ print(Game.SomeColor) --서버에서 값이 바뀌었지만 클라에서도 동�
 ```
 
 
-| **AddSaveValue(string ValueName, Vector Data)** |
-| :--- |
+**AddSaveValue(string ValueName, Vector Data)**
+
 해당 객체 저장소에 벡터를 추가해요. (Value 이름, Vector 데이터)
 
 
-| **AddSaveValue(string ValueName, float Data)** |
-| :--- |
+**AddSaveValue(string ValueName, float Data)**
+
 해당 객체 저장소에 실수를 추가해요. (Value 이름, float 데이터)
 
 
-| **AddSaveValue(string ValueName, bool Data)** |
-| :--- |
+**AddSaveValue(string ValueName, bool Data)**
+
 해당 객체 저장소에 bool을 추가해요. (Value 이름, bool 데이터)
 
 
-| **AddSaveValue(string ValueName, string Data)** |
-| :--- |
+**AddSaveValue(string ValueName, string Data)**
+
 해당 객체 저장소에 문자열을 추가해요. (Value 이름, string 데이터)
 
 
-| **AddSaveValue(string ValueName, Color Data)** |
-| :--- |
+**AddSaveValue(string ValueName, Color Data)**
+
 해당 객체 저장소에 칼라를 추가해요. (Value 이름, Color 데이터)
