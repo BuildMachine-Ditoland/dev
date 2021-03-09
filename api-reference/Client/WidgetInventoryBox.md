@@ -112,6 +112,7 @@ cube:ConnectChangeEventFunction("SomeValue", ChangeSomeValue)  --오브젝트의
 
 <br>
 <br>
+<br>
 | **string GetName()** |
 | :--- |
 
@@ -125,10 +126,12 @@ print(Workspace.Floor:GetName()) --오브젝트의 이름을 문자열로 반환
 ``` 
 <br>
 <br>
+<br>
 | **RModeObject GetParent(string ParentName)** |
 | :--- |
 
 이름으로 부모 객체를 얻을 수 있어요. (찾고싶은 부모 객체 이름) 
+<br>
 <br>
 <br>
 | **RModeObject GetChild(string ChildName)** |
@@ -137,10 +140,12 @@ print(Workspace.Floor:GetName()) --오브젝트의 이름을 문자열로 반환
 이름으로 자식 객체를 얻을 수 있어요. (찾고싶은 자식 객체 이름) 
 <br>
 <br>
+<br>
 | **RModeObject GetGetSibling(string Name)** |
 | :--- |
 
 이름으로 형제 객체를 얻을 수 있어요. (찾고싶은 형제 객체 이름) 
+<br>
 <br>
 <br>
 | **List<RScriptObject> GetChildList()** |
@@ -162,6 +167,7 @@ end
 ``` 
 <br>
 <br>
+<br>
 | **bool IsCharacter()** |
 | :--- |
 
@@ -179,6 +185,7 @@ print(cube:GetName() .. " Is Character")
 end 
 
 ``` 
+<br>
 <br>
 <br>
 | **bool IsStaticMesh()** |
@@ -200,6 +207,7 @@ end
 ``` 
 <br>
 <br>
+<br>
 | **bool IsFX()** |
 | :--- |
 
@@ -217,6 +225,7 @@ print(cube:GetName() .. " Is FX")
 end 
 
 ``` 
+<br>
 <br>
 <br>
 | **bool IsSound()** |
@@ -238,6 +247,7 @@ end
 ``` 
 <br>
 <br>
+<br>
 | **bool IsPointLight()** |
 | :--- |
 
@@ -255,6 +265,7 @@ print(cube:GetName() .. " Is PointLight")
 end 
 
 ``` 
+<br>
 <br>
 <br>
 | **bool IsSpotLight()** |
@@ -276,6 +287,7 @@ end
 ``` 
 <br>
 <br>
+<br>
 | **bool IsSurfaceUI()** |
 | :--- |
 
@@ -293,6 +305,7 @@ print(cube:GetName() .. " Is SurfaceUI")
 end 
 
 ``` 
+<br>
 <br>
 <br>
 | **bool IsScreenUI()** |
@@ -314,6 +327,7 @@ end
 ``` 
 <br>
 <br>
+<br>
 | **bool IsItem()** |
 | :--- |
 
@@ -331,6 +345,7 @@ print(cube:GetName() .. " Is Item")
 end 
 
 ``` 
+<br>
 <br>
 <br>
 | **bool IsNPC()** |
@@ -352,6 +367,7 @@ end
 ``` 
 <br>
 <br>
+<br>
 | **bool IsFolder()** |
 | :--- |
 
@@ -369,6 +385,7 @@ print(cube:GetName() .. " Is Folder")
 end 
 
 ``` 
+<br>
 <br>
 <br>
 | **bool IsScript()** |
@@ -390,6 +407,7 @@ end
 ``` 
 <br>
 <br>
+<br>
 | **bool IsCollider()** |
 | :--- |
 
@@ -407,6 +425,7 @@ print(cube:GetName() .. " Is Collider")
 end 
 
 ``` 
+<br>
 <br>
 <br>
 | **bool IsWidget()** |
@@ -428,6 +447,7 @@ end
 ``` 
 <br>
 <br>
+<br>
 | **bool IsCamera()** |
 | :--- |
 
@@ -447,10 +467,12 @@ end
 ``` 
 <br>
 <br>
+<br>
 | **bool IsValid()** |
 | :--- |
 
 해당 오브젝트가 유효한지 확인 할 수있어요. 
+<br>
 <br>
 <br>
 | **AddReplicateValue(string ValueName, Vector Data, ReplicateType Type, float Time, bool bSaveToStorage)** |
@@ -476,6 +498,7 @@ print(Game.SomeVector) --서버에서 값이 바뀌었지만 클라에서도 동
 ``` 
 <br>
 <br>
+<br>
 | **AddReplicateValue(string ValueName, float Data, ReplicateType Type, float Time, bool bSaveToStorage)** |
 | :--- |
 
@@ -497,6 +520,7 @@ print(Game.SomeNumber .. " in Server")
 print(Game.SomeNumber .. " in Client") --서버에서 값이 바뀌었지만 클라에서도 동일하게 출력돼요. 
 
 ``` 
+<br>
 <br>
 <br>
 | **AddReplicateValue(string ValueName, bool Data, ReplicateType Type, float Time, bool bSaveToStorage)** |
@@ -522,6 +546,7 @@ print(Game.SomeBool) --서버에서 값이 바뀌었지만 클라에서도 동�
 ``` 
 <br>
 <br>
+<br>
 | **AddReplicateValue(string ValueName, string Data, ReplicateType Type, float Time, bool bSaveToStorage)** |
 | :--- |
 
@@ -543,6 +568,7 @@ print(Game.SomeString)
 print(Game.SomeString) --서버에서 값이 바뀌었지만 클라에서도 동일하게 출력돼요. 
 
 ``` 
+<br>
 <br>
 <br>
 | **AddReplicateValue(string ValueName, Color Data, ReplicateType Type, float Time, bool bSaveToStorage)** |
@@ -568,10 +594,12 @@ print(Game.SomeColor) --서버에서 값이 바뀌었지만 클라에서도 동�
 ``` 
 <br>
 <br>
+<br>
 | **AddSaveValue(string ValueName, Vector Data)** |
 | :--- |
 
 해당 객체 저장소에 벡터를 추가해요. (Value 이름, Vector 데이터) 
+<br>
 <br>
 <br>
 | **AddSaveValue(string ValueName, float Data)** |
@@ -580,16 +608,19 @@ print(Game.SomeColor) --서버에서 값이 바뀌었지만 클라에서도 동�
 해당 객체 저장소에 실수를 추가해요. (Value 이름, float 데이터) 
 <br>
 <br>
+<br>
 | **AddSaveValue(string ValueName, bool Data)** |
 | :--- |
 
 해당 객체 저장소에 bool을 추가해요. (Value 이름, bool 데이터) 
 <br>
 <br>
+<br>
 | **AddSaveValue(string ValueName, string Data)** |
 | :--- |
 
 해당 객체 저장소에 문자열을 추가해요. (Value 이름, string 데이터) 
+<br>
 <br>
 <br>
 | **AddSaveValue(string ValueName, Color Data)** |
