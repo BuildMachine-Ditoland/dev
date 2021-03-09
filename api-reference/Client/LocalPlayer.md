@@ -355,8 +355,8 @@ LocalPlayer.bShowMouseCursor = false --자신의 마우스 커서를 비활성�
 <br>
 | **Parent** |
 | :--- |
-
-부모 객체를 얻을 수 있어요. 
+
+부모 객체를 얻을 수 있어요. 
 샘플
 
 ```lua

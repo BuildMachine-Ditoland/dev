@@ -39,8 +39,8 @@ Workspace.PointLight:ChangeIntensity(changeValue) --PointLight의 밝기를 조�
 <br>
 | **Parent** |
 | :--- |
-
-부모 객체를 얻을 수 있어요. 
+
+부모 객체를 얻을 수 있어요. 
 샘플
 
 ```lua

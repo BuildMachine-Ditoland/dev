@@ -132,8 +132,8 @@ Input:DeactiveGroup("DefaultInput") --이름에 해당하는 조작그룹을 비
 <br>
 | **Parent** |
 | :--- |
-
-부모 객체를 얻을 수 있어요. 
+
+부모 객체를 얻을 수 있어요. 
 샘플
 
 ```lua

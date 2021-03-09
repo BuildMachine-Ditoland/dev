@@ -60,8 +60,8 @@ someText:SetTextColor(Color.new(0, 255, 0, 255)) --텍스트 UI의 글자 색상
 <br>
 | **Parent** |
 | :--- |
-
-부모 객체를 얻을 수 있어요. 
+
+부모 객체를 얻을 수 있어요. 
 샘플
 
 ```lua

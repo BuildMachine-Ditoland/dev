@@ -102,8 +102,8 @@ someButton.OnPressEvent:Connect(func) --버튼에 해당 버튼이 눌렸을때 
 <br>
 | **Parent** |
 | :--- |
-
-부모 객체를 얻을 수 있어요. 
+
+부모 객체를 얻을 수 있어요. 
 샘플
 
 ```lua

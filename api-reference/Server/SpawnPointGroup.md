@@ -34,8 +34,8 @@ Game:SetSpawnType(Enum.SpawnType.UseSpawnGroup) --게임의 스폰타입을 설�
 <br>
 | **Parent** |
 | :--- |
-
-부모 객체를 얻을 수 있어요. 
+
+부모 객체를 얻을 수 있어요. 
 샘플
 
 ```lua

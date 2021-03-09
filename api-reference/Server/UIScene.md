@@ -22,8 +22,8 @@ Workspace.Cube.SetVisibility(false) --오브젝트를 보이지 않게 해요.
 <br>
 | **Parent** |
 | :--- |
-
-부모 객체를 얻을 수 있어요. 
+
+부모 객체를 얻을 수 있어요. 
 샘플
 
 ```lua

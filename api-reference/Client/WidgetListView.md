@@ -46,8 +46,8 @@ ListView의 슬롯 사이즈를 설정 할 수 있어요. (Number XSize, Number 
 <br>
 | **Parent** |
 | :--- |
-
-부모 객체를 얻을 수 있어요. 
+
+부모 객체를 얻을 수 있어요. 
 샘플
 
 ```lua
