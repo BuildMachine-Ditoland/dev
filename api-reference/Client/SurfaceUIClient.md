@@ -1,5 +1,5 @@
-
-클라이언트에서 사용되는 Surface UI 개체에요. 
+
+클라이언트에서 사용되는 Surface UI 개체에요. 
 # **상속받아 사용 가능한 기능들**
 
 ## **속성**
@@ -880,9 +880,8 @@ print(Game.SomeColor) --서버에서 값이 바뀌었지만 클라에서도 동�
 | **AddSaveValue(string ValueName, Color Data)** |
 | :--- |
 해당 객체 저장소에 칼라를 추가해요. (Value 이름, Color 데이터)
-
-
-
-
+<br>
+<br>
+<br>
   SetSpaceType(EWidgetSpace Type)
 (Deprecated)Surface UI의 SpaceType을 변경 할 수 있어요.

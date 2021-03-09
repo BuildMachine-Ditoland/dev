@@ -1,14 +1,14 @@
-
-인풋 이벤트를 관리(설정, 해제)하는 객체에요. 
+
+인풋 이벤트를 관리(설정, 해제)하는 객체에요. 
 ## **함수**
 
 | **AddGroup(string Group)** |
 | :--- |
-
-인풋 그룹을 추가 할 수 있어요. (추가 할 그룹 이름) 
-
-샘플 
-
+
+인풋 그룹을 추가 할 수 있어요. (추가 할 그룹 이름) 
+
+샘플 
+
 ```lua
 Input:AddGroup("UIInput") --조작그룹을 추가해요.
 Input:AddActionKeyEvent("UIInput", "MenuKey", Enum.Key.M) --조작 키 이벤트를 추가해요.
@@ -25,21 +25,21 @@ end)
 ```
 | **RemoveGroup(string Group)** |
 | :--- |
-
-인풋 그룹을 제거 할 수 있어요. (제거 할 그룹 이름) 
-
-샘플 
-
+
+인풋 그룹을 제거 할 수 있어요. (제거 할 그룹 이름) 
+
+샘플 
+
 ```lua
 Input:RemoveGroup("UIInput") --조작그룹을 삭제해요.
 ```
 | **AddActionKeyEvent(string Group, string Event, RModeKey Key)** |
 | :--- |
-
-인풋 그룹에 키 이벤트를 추가 할 수 있어요. (그룹 이름, 추가 할 이벤트 이름, [Enum.Key.키](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/key)) 
-
-샘플 
-
+
+인풋 그룹에 키 이벤트를 추가 할 수 있어요. (그룹 이름, 추가 할 이벤트 이름, [Enum.Key.키](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/key)) 
+
+샘플 
+
 ```lua
 Input:AddGroup("UIInput") --조작그룹을 추가해요.
 Input:AddActionKeyEvent("UIInput", "MenuKey", Enum.Key.M) --조작 키 이벤트를 추가해요.
@@ -56,24 +56,23 @@ end)
 ```
 | **RemoveActionKeyEvent(string Group, string Event, RModeKey Key)** |
 | :--- |
-
-인풋 그룹에 키 이벤트를 제거 할 수 있어요. (그룹 이름, 제거 할 이벤트 이름, [Enum.Key.키](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/key)) 
-
-샘플 
-
+
+인풋 그룹에 키 이벤트를 제거 할 수 있어요. (그룹 이름, 제거 할 이벤트 이름, [Enum.Key.키](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/key)) 
+
+샘플 
+
 ```lua
 Input:RemoveActionKeyEvent("DefaultInput", "Jump", Enum.Key.SpaceBar) --이름에 해당하는 조작 키 이벤트를 제거해요.
 ```
-
-
-
-
+<br>
+<br>
+<br>
   AddAxisKeyEvent(string Group, string Event, RModeKey Key, float Value)
-
-인풋 그룹에 축 이벤트를 추가할 수 있어요. (그룹 이름, 추가 할 이벤트 이름, [Enum.Key.키](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/key), 이벤트 Value) 
-
-샘플 
-
+
+인풋 그룹에 축 이벤트를 추가할 수 있어요. (그룹 이름, 추가 할 이벤트 이름, [Enum.Key.키](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/key), 이벤트 Value) 
+
+샘플 
+
 ```lua
 Input:AddGroup("UIInput") --조작그룹을 추가해요.
 Input:AddActionKeyEvent("UIInput", "MenuKey", Enum.Key.M) --조작 키 이벤트를 추가해요.
@@ -88,36 +87,35 @@ LocalPlayer:ProcessInputAxisEvent("AxisKey", Enum.KeyInputType.Pressed, function
     print("Axis Input!")
 end)
 ```
-
-
-
-
+<br>
+<br>
+<br>
   RemoveAxisKeyEvent(string Group, string Event, RModeKey Key)
-
-인풋 그룹에 축 이벤트를 제거 할 수 있어요. (그룹 이름, 제거 할 이벤트 이름, [Enum.Key.키](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/key)) 
-
-샘플 
-
+
+인풋 그룹에 축 이벤트를 제거 할 수 있어요. (그룹 이름, 제거 할 이벤트 이름, [Enum.Key.키](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/key)) 
+
+샘플 
+
 ```lua
 Input:RemoveAxisKeyEvent("DefaultInput", "Turn", Enum.Key.MouseX)  --이름에 해당하는 조작 축 이벤트를 제거해요.
 ```
 | **ActiveGroup(string Group)** |
 | :--- |
-
-인풋 그룹을 활성화 해요. (대상 그룹 이름) 
-
-샘플 
-
+
+인풋 그룹을 활성화 해요. (대상 그룹 이름) 
+
+샘플 
+
 ```lua
 Input:ActiveGroup("NewInput") --이름에 해당하는 조작그룹을 활성화해요.
 ```
 | **DeactiveGroup(string Group)** |
 | :--- |
-
-인풋 그룹을 비활성화 해요. (대상 그룹 이름) 
-
-샘플 
-
+
+인풋 그룹을 비활성화 해요. (대상 그룹 이름) 
+
+샘플 
+
 ```lua
 Input:DeactiveGroup("DefaultInput") --이름에 해당하는 조작그룹을 비활성화해요.
 ```

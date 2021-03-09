@@ -1,53 +1,49 @@
-
-클라이언트에서 사용되는 Widget ProgressBar 객체. 
+
+클라이언트에서 사용되는 Widget ProgressBar 객체. 
 ## **속성**
 
 ## **함수**
 
-
-
-
-
+<br>
+<br>
+<br>
   SetFillType(ProgressFillType Type)
-
-ProgressBar가 차는 방식을 설정할 수 있어요. (변경할 색) 
-
-
-
-
+
+ProgressBar가 차는 방식을 설정할 수 있어요. (변경할 색) 
+<br>
+<br>
+<br>
   SetPercent(Number Value)
-
-ProgressBar의 퍼센트를 설정할 수 있어요. (변경할 퍼센트) 
-
-샘플 
-
+
+ProgressBar의 퍼센트를 설정할 수 있어요. (변경할 퍼센트) 
+
+샘플 
+
 ```lua
 local someGuage = HUD.someGuage
 local currentValue = 5
 local maxValue = 10
 someGuage.GuageBar:SetPercent((currentValue/maxValue) * 100) --게이지바의 퍼센트를 설정해요.
 ```
-
-
-
-
+<br>
+<br>
+<br>
   SetBackgroundColor(Color color)
-
-ProgressBar의 배경 색을 설정할 수 있어요. (변경할 색) 
-
-샘플 
-
+
+ProgressBar의 배경 색을 설정할 수 있어요. (변경할 색) 
+
+샘플 
+
 ```lua
 local someFrame = Workspace.ScreenUI.someFrame
 someFrame:SetBackgroundColor(Color.new(0, 0, 255, 255)) --프레임 UI의 바탕 색상을 변경해요.
 ```
-
-
-
-
+<br>
+<br>
+<br>
   SetFillColor(Color color)
-
-ProgressBar의 앞 색을 설정할 수 있어요. (변경할 색) 
+
+ProgressBar의 앞 색을 설정할 수 있어요. (변경할 색) 
 # **상속받아 사용 가능한 기능들**
 
 ## **속성**

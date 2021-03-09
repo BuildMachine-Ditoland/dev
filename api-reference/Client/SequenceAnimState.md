@@ -1,16 +1,15 @@
-
-단일 애니메이션을 플레이하는 애니메이션 상태 객체에요. 
-
-[SequenceAnimStateSetting](https://ditoland-utplus.gitbook.io/ditoland/api-reference/client/sequenceanimstatesetting)에서 세팅을 설정할 수 있어요. 
+
+단일 애니메이션을 플레이하는 애니메이션 상태 객체에요. 
+
+[SequenceAnimStateSetting](https://ditoland-utplus.gitbook.io/ditoland/api-reference/client/sequenceanimstatesetting)에서 세팅을 설정할 수 있어요. 
 ## **함수**
 
-
-
-
-
+<br>
+<br>
+<br>
   ChangeAnimation(string ResourceID)
-
-애니메이션 변경 (변경할 애니메이션 리소스 ID값) 
+
+애니메이션 변경 (변경할 애니메이션 리소스 ID값) 
 # **상속받아 사용 가능한 기능들**
 
 ## **속성**

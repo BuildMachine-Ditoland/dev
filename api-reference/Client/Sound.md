@@ -1,45 +1,42 @@
-
-클라이언트에서 사용되는 Sound 개체에요. 
+
+클라이언트에서 사용되는 Sound 개체에요. 
 ## **함수**
 
-
-
-
-
+<br>
+<br>
+<br>
   void Play()
-
-Sound를 플레이할 수 있어요. 
-
-샘플 
-
+
+Sound를 플레이할 수 있어요. 
+
+샘플 
+
 ```lua
 local sound = Workspace.Sound
 sound:Play() --사운드를 재생해요
 ```
-
-
-
-
+<br>
+<br>
+<br>
   void Stop()
-
-Sound를 정지시켜요. 
-
-샘플 
-
+
+Sound를 정지시켜요. 
+
+샘플 
+
 ```lua
 local sound = Workspace.Sound
 sound:Stop() --사운드를 정지해요
 ```
-
-
-
-
+<br>
+<br>
+<br>
   bool IsPlaying()
-
-Sound가 플레이 중인지 판별할 수 있어요. 
-
-샘플 
-
+
+Sound가 플레이 중인지 판별할 수 있어요. 
+
+샘플 
+
 ```lua
 local sound = Workspace.Sound
 sound:Play()

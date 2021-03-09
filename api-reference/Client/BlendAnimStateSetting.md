@@ -1,25 +1,23 @@
-
-여러 애니메이션을 특정 값에 따라 블렌딩하는 애니메이션 상태를 설정하는 객체에요. 
-
-예) 이동 속도에 따른 평상시, 걷기, 달리기 애니메이션 블랜딩 등 이에요 
-
-AddBlendAnimState 함수로 생성해요. 
+
+여러 애니메이션을 특정 값에 따라 블렌딩하는 애니메이션 상태를 설정하는 객체에요. 
+
+예) 이동 속도에 따른 평상시, 걷기, 달리기 애니메이션 블랜딩 등 이에요 
+
+AddBlendAnimState 함수로 생성해요. 
 ## **함수**
 
-
-
-
-
+<br>
+<br>
+<br>
   ModeBlendAnimationDataSetting AddBlendAnimation(float BlendValue, string AnimResourceID)
-
-블렌딩 애니메이션을 추가해요. (블렌드 값, 리소스 ID) 
-
-
-
-
+
+블렌딩 애니메이션을 추가해요. (블렌드 값, 리소스 ID) 
+<br>
+<br>
+<br>
   ModeBlendAnimationDataSetting AddBlendAnimation(float BlendValue, string AnimResourceID, float PlaySpeed)
-
-블렌딩 애니메이션을 추가해요. (블렌드 값, 리소스 ID, 플레이 속도) 
+
+블렌딩 애니메이션을 추가해요. (블렌드 값, 리소스 ID, 플레이 속도) 
 # **상속받아 사용 가능한 기능들**
 
 ## **속성**

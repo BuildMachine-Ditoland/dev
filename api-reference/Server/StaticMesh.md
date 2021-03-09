@@ -1,78 +1,75 @@
-
-서버에서 사용되는 StaticMesh 객체에요. 
+
+서버에서 사용되는 StaticMesh 객체에요. 
 ## **함수**
 
-
-
-
-
+<br>
+<br>
+<br>
   SetColor(Color ChangeColor)
-
-StaticMesh의 색을 변경해요. (변경할 [Color](https://ditoland-챙utplus.gitbook.io/ditoland/api-reference/common/color)값) 
-
-샘플 
-
+
+StaticMesh의 색을 변경해요. (변경할 [Color](https://ditoland-챙utplus.gitbook.io/ditoland/api-reference/common/color)값) 
+
+샘플 
+
 ```lua
 Workspace.Cube:SetColor(Color.new(255, 0, 0, 255)) --오브젝트의 색상을 변경해요. (r, g, b, a)
 ```
-
-
-
-
+<br>
+<br>
+<br>
   Color GetColor()
-
-해당 StaticMesh의 Color를 가져올 수 있어요. 
-
-샘플 
-
+
+해당 StaticMesh의 Color를 가져올 수 있어요. 
+
+샘플 
+
 ```lua
 local color = Workspace.Cube:GetColor() --오브젝트의 색상을 Color로 반환해요.
 ```
-
-
-
-
+<br>
+<br>
+<br>
   SetSimulatePhysics(ESimulatePhysicsType Type)
-
-StaticMesh의 물리 기능을 설정해요. ( [Enum.SimulatePhysicsType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/simulatephysicstype)) 
-
-샘플 
-
+
+StaticMesh의 물리 기능을 설정해요. ( [Enum.SimulatePhysicsType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/simulatephysicstype)) 
+
+샘플 
+
 ```lua
 local cube = Workspace.Cube
 cube:SetSimulatePhysics(Enum.SimulatePhysicsType.On_Sync) --오브젝트의 물리를 설정해요.
 ```
 | **bool OverrideMass** |
 | :--- |
-
-부피로 질량 자동 계산 
+
+부피로 질량 자동 계산 
 | **float Mass** |
 | :--- |
-
-질량 값 
-
-샘플 
-
+
+질량 값 
+
+샘플 
+
 ```lua
 Workspace.Cube.MassInKg = 5000
 ```
 | **float LinearDamping** |
 | :--- |
-
-선형 감쇠 값 
-
-샘플 
-
+
+선형 감쇠 값 
+
+샘플 
+
 ```lua
 Workspace.Cube.LinearDamping = 0.1
 ```
 | **float AngularDamping** |
 | :--- |
-
-회전 감쇠 값 
-
-샘플 
-
+
+회전 감쇠 값 
+
+샘플 
+
 ```lua
 Workspace.Cube.AngularDamping = 0.1
 ```

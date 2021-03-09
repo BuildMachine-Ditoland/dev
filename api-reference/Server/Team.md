@@ -1,16 +1,16 @@
-
-게임에서 사용될 팀을 설정 할 때 사용되는 객체에요.  
-
-[Game:AddTeam](https://ditoland-utplus.gitbook.io/ditoland/api-reference/server/game)함수를 이용해서 만들어요. 
+
+게임에서 사용될 팀을 설정 할 때 사용되는 객체에요.  
+
+[Game:AddTeam](https://ditoland-utplus.gitbook.io/ditoland/api-reference/server/game)함수를 이용해서 만들어요. 
 ## **속성**
 
 | **int MaxPlayerCount** |
 | :--- |
-
-팀의 최대 인원을 설정할 수 있어요. 
-
-샘플 
-
+
+팀의 최대 인원을 설정할 수 있어요. 
+
+샘플 
+
 ```lua
 local teamName = "Blue Team"
 local team = Game:AddTeam(teamName) --이름으로 팀을 추가한뒤, 추가한 팀을 반환해요.
@@ -20,49 +20,44 @@ team.MaxPlayerCount = 5 --팀의 최대 인원을 설정해요.
 ```
 ## **함수**
 
-
-
-
-
+<br>
+<br>
+<br>
   AddUsingCharacter(RCharacterSetting CharacterSettingObject)
-
-팀에서 사용될 캐릭터 설정을 추가할 수 있어요. (캐릭터 설정 오브젝트) 
-
-[Game:AddCharacterSetting](https://ditoland-utplus.gitbook.io/ditoland/api-reference/server/game)으로 추가한 캐릭터설정 중에서만 가능해요 
-
-
-
-
+
+팀에서 사용될 캐릭터 설정을 추가할 수 있어요. (캐릭터 설정 오브젝트) 
+
+[Game:AddCharacterSetting](https://ditoland-utplus.gitbook.io/ditoland/api-reference/server/game)으로 추가한 캐릭터설정 중에서만 가능해요 
+<br>
+<br>
+<br>
   SetUsingSpawnPointGroup(string InSpawnPointGroup)
-
-팀에서 사용될 스폰 포인트 그룹을 추가할 수 있어요. (스폰 그룹 이름) 
-
-Game:AddSpawnPointGroup으로 추가한 스폰 그룹 중에서만 가능해요 
-
-
-
-
+
+팀에서 사용될 스폰 포인트 그룹을 추가할 수 있어요. (스폰 그룹 이름) 
+
+Game:AddSpawnPointGroup으로 추가한 스폰 그룹 중에서만 가능해요 
+<br>
+<br>
+<br>
   AddFixedCharacter(RCharacterSetting CharacterSettingObject)
-
-팀 고정 캐릭터설정을 추가할 수 있어요. (캐릭터 설정 오브젝트) 
-
-[Game:AddCharacterSetting](https://ditoland-utplus.gitbook.io/ditoland/api-reference/server/game)으로 추가한 캐릭터설정 중에서만 가능해요 
-
-
-
-
+
+팀 고정 캐릭터설정을 추가할 수 있어요. (캐릭터 설정 오브젝트) 
+
+[Game:AddCharacterSetting](https://ditoland-utplus.gitbook.io/ditoland/api-reference/server/game)으로 추가한 캐릭터설정 중에서만 가능해요 
+<br>
+<br>
+<br>
   AddFixedSpawnPoint(RSpawnPoint* SpawnPoint)
-
-팀 고정 스폰 포인트를 추가할 수 있어요. (스폰 포인트 오브젝트) 
-
-
-
-
+
+팀 고정 스폰 포인트를 추가할 수 있어요. (스폰 포인트 오브젝트) 
+<br>
+<br>
+<br>
   ReviveTeamPlayerCharacter()
-
-팀원중 죽어있는 캐릭터를 리스폰 시켜요. 
-
-Life가 남아있어야 해요. 
+
+팀원중 죽어있는 캐릭터를 리스폰 시켜요. 
+
+Life가 남아있어야 해요. 
 # **상속받아 사용 가능한 기능들**
 
 ## **속성**

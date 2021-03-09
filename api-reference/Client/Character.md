@@ -1,89 +1,83 @@
-
-클라이언트에서 사용되는 캐릭터에 대한 개체에요. 
+
+클라이언트에서 사용되는 캐릭터에 대한 개체에요. 
 ## **함수**
 
-
-
-
-
+<br>
+<br>
+<br>
   Player GetPlayer()
-
-해당 캐릭터의 플레이어를 얻을 수 있어요. 
-
-샘플 
-
+
+해당 캐릭터의 플레이어를 얻을 수 있어요. 
+
+샘플 
+
 ```lua
 local character = Game:GetAllPlayer()[1]:GetCharacter()
 local player = character:GetPlayer() --캐릭터의 플레이어를 반환해요.
 ```
-
-
-
-
+<br>
+<br>
+<br>
   string GetPlayerName()
-
-플레이어의 이름을 얻을 수 있어요. 
-
-샘플 
-
+
+플레이어의 이름을 얻을 수 있어요. 
+
+샘플 
+
 ```lua
 local character = Game:GetAllPlayer()[1]:GetCharacter()
 print(character:GetPlayerName()) --캐릭터의 플레이어 이름을 문자열로 반환해요.
 ```
-
-
-
-
+<br>
+<br>
+<br>
   bool IsDriving()
-
-캐릭터가 탈 것을 운전 중인지 아닌지 얻을 수 있어요. 
-
-샘플 
-
+
+캐릭터가 탈 것을 운전 중인지 아닌지 얻을 수 있어요. 
+
+샘플 
+
 ```lua
 local character = LocalPlayer:GetRemotePlayer():GetCharacter()
 if character:IsDriving() then
     print("Character is Driving!") --캐릭터가 운전중이면 true를 반환해요.
 end
 ```
-
-
-
-
+<br>
+<br>
+<br>
   ObjectFXClient CreateFX(ObjectFXClient FXObject, Bone BoneType)
-
-캐릭터 특정 위치에 FX를 생성할 수 있어요. (생성 하고싶은 FX 오브젝트, [Enum.BoneType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/bone)) 
-
-샘플 
-
+
+캐릭터 특정 위치에 FX를 생성할 수 있어요. (생성 하고싶은 FX 오브젝트, [Enum.BoneType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/bone)) 
+
+샘플 
+
 ```lua
 local character = LocalPlayer:GetRemotePlayer():GetCharacter()
 character:CreateFX(Workspace.Effect, Enum.Bone.Body) --캐릭터의 특정 부위에 이펙트를 생성해요.
 ```
-
-
-
-
+<br>
+<br>
+<br>
   ObjectSoundClient CreateSound(ObjectSoundClient SoundObject)
-
-캐릭터의 위치에 Sound를 생성할 수 있어요. (생성 하고싶은 Sound 오브젝트) 
-
-샘플 
-
+
+캐릭터의 위치에 Sound를 생성할 수 있어요. (생성 하고싶은 Sound 오브젝트) 
+
+샘플 
+
 ```lua
 local character = LocalPlayer:GetRemotePlayer():GetCharacter()
 character:CreateSound(Workspace.Sound)
 ```
-
-
-
-
+<br>
+<br>
+<br>
   AddPlayerHUD(string UIName, UISceen UI, UIDisplayType Type)
-
-UI HUD를 붙일 수 있어요. (붙혀 질 UI 이름, 붙일 UI Sceen, UI DisplayType.) 
-
-샘플 
-
+
+UI HUD를 붙일 수 있어요. (붙혀 질 UI 이름, 붙일 UI Sceen, UI DisplayType.) 
+
+샘플 
+
 ```lua
 local playerNameUI = HUD.PlayerNameUI
 playerNameUI:SetVisible(false)
@@ -94,89 +88,83 @@ local function spawn(character)
 end
 Game.OnSpawnCharacter:Connect(spawn)
 ```
-
-
-
-
+<br>
+<br>
+<br>
   RemovePlayerHUD(string UIName)
-
-UI HUD를 제거해요. (제거하고 싶은 UI 이름) 
-
-샘플 
-
+
+UI HUD를 제거해요. (제거하고 싶은 UI 이름) 
+
+샘플 
+
 ```lua
 local character = LocalPlayer:GetRemotePlayer():GetCharacter()
 character:RemovePlayerHUD("Name") --캐릭터에 추가된 HUD를 이름으로 찾아서 삭제해요.
 ```
-
-
-
-
+<br>
+<br>
+<br>
   RemovePlayerAllHUD()
-
-현재 캐릭터의 모든 UI HUD를 제거해요. 
-
-샘플 
-
+
+현재 캐릭터의 모든 UI HUD를 제거해요. 
+
+샘플 
+
 ```lua
 local character = LocalPlayer:GetRemotePlayer():GetCharacter()
 character:RemovePlayerAllHUD() --캐릭터에 추가된 모든 HUD를 삭제해요.
 ```
-
-
-
-
+<br>
+<br>
+<br>
   GetPlayerHUD(string UIName)
-
-UI HUD를 얻을 수 있어요. (얻고싶은 UI 이름) 
-
-샘플 
-
+
+UI HUD를 얻을 수 있어요. (얻고싶은 UI 이름) 
+
+샘플 
+
 ```lua
 local character = LocalPlayer:GetRemotePlayer():GetCharacter()
 local playerNameUI = character:GetPlayerHUD("Name") --캐릭터에 추가된 HUD를 이름으로 찾아서 반환해요.                      
 playerNameUI.Text:SetTextColor(Color.new(255, 0, 0, 255)) 
 ```
-
-
-
-
+<br>
+<br>
+<br>
   bool IsMyCharacter()
-
-플레이어 자신의 캐릭터인지 아닌지 확인할 수 있어요. 
-
-샘플 
-
+
+플레이어 자신의 캐릭터인지 아닌지 확인할 수 있어요. 
+
+샘플 
+
 ```lua
 local character = LocalPlayer:GetRemotePlayer():GetCharacter() 
 if character:IsMyCharacter() then --캐릭터가 자신의 캐릭터이면 true를 반환해요.
     print("My Character!") 
 end
 ```
-
-
-
-
+<br>
+<br>
+<br>
   void AttachAt(RModeObject ModeObject, BoneType Bone)
-
-캐릭터의 원하는 본을 해당 오브젝트의 중점에 부착시켜요. (부착 할 오브젝트, [Enum.Bone.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/bone)) 
-
-샘플 
-
+
+캐릭터의 원하는 본을 해당 오브젝트의 중점에 부착시켜요. (부착 할 오브젝트, [Enum.Bone.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/bone)) 
+
+샘플 
+
 ```lua
 local character = LocalPlayer:GetRemotePlayer():GetCharacter()
 character:AttachAt(Workspace.Cube, Enum.Bone.Body) --캐릭터의 부위를 오브젝트의 중점에 부착시켜요.
 ```
-
-
-
-
+<br>
+<br>
+<br>
   void AttachAtTop(RModeObject ModeObject, BoneType Bone)
-
-캐릭터의 원하는 본을 해당 오브젝트의 윗면에 부착시켜요. (부착 할 오브젝트, [Enum.Bone.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/bone)) 
-
-샘플 
-
+
+캐릭터의 원하는 본을 해당 오브젝트의 윗면에 부착시켜요. (부착 할 오브젝트, [Enum.Bone.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/bone)) 
+
+샘플 
+
 ```lua
 local character = LocalPlayer:GetRemotePlayer():GetCharacter()
 character:AttachAtTop(Workspace.Cube, Enum.Bone.Body) --캐릭터의 부위를 오브젝트의 윗면에 부착시켜요.

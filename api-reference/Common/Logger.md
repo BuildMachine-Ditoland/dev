@@ -1,21 +1,20 @@
-
-로그를 종류별로 출력하는 객체에요. 
+
+로그를 종류별로 출력하는 객체에요. 
 ## **Enums**
 
  **이름** | **설명** |
  --- | --- |
 ## **함수**
 
-
-
-
-
+<br>
+<br>
+<br>
   Log(string message)
-
-일반 로그 메시지를 출력해요. (메시지 내용) 
-
-샘플 
-
+
+일반 로그 메시지를 출력해요. (메시지 내용) 
+
+샘플 
+
 ```lua
 Logger:Log(Enum.LogType.Log, "Hello Log!") --로그창에 일반 로그를 출력해요.
 Logger:Log(Enum.LogType.Warning, "Hello Warning!") --로그창에 경고 로그를 출력해요.
