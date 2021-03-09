@@ -24,7 +24,7 @@ team.MaxPlayerCount = 5 --팀의 최대 인원을 설정해요.
 
 
 
-  **AddUsingCharacter(RCharacterSetting CharacterSettingObject)**
+  AddUsingCharacter(RCharacterSetting CharacterSettingObject)
 
 팀에서 사용될 캐릭터 설정을 추가할 수 있어요. (캐릭터 설정 오브젝트) 
 
@@ -33,7 +33,7 @@ team.MaxPlayerCount = 5 --팀의 최대 인원을 설정해요.
 
 
 
-  **SetUsingSpawnPointGroup(string InSpawnPointGroup)**
+  SetUsingSpawnPointGroup(string InSpawnPointGroup)
 
 팀에서 사용될 스폰 포인트 그룹을 추가할 수 있어요. (스폰 그룹 이름) 
 
@@ -42,7 +42,7 @@ Game:AddSpawnPointGroup으로 추가한 스폰 그룹 중에서만 가능해요
 
 
 
-  **AddFixedCharacter(RCharacterSetting CharacterSettingObject)**
+  AddFixedCharacter(RCharacterSetting CharacterSettingObject)
 
 팀 고정 캐릭터설정을 추가할 수 있어요. (캐릭터 설정 오브젝트) 
 
@@ -51,14 +51,14 @@ Game:AddSpawnPointGroup으로 추가한 스폰 그룹 중에서만 가능해요
 
 
 
-  **AddFixedSpawnPoint(RSpawnPoint* SpawnPoint)**
+  AddFixedSpawnPoint(RSpawnPoint* SpawnPoint)
 
 팀 고정 스폰 포인트를 추가할 수 있어요. (스폰 포인트 오브젝트) 
 
 
 
 
-  **ReviveTeamPlayerCharacter()**
+  ReviveTeamPlayerCharacter()
 
 팀원중 죽어있는 캐릭터를 리스폰 시켜요. 
 

@@ -6,7 +6,7 @@
 
 
 
-  **void Play()**
+  void Play()
 
 FX를 플레이해요. 
 
@@ -20,7 +20,7 @@ fx:Play()
 
 
 
-  **void Stop()**
+  void Stop()
 
 FX를 정지시켜요. 
 

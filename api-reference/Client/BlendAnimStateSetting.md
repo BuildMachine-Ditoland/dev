@@ -10,14 +10,14 @@ AddBlendAnimState 함수로 생성해요.
 
 
 
-  **ModeBlendAnimationDataSetting AddBlendAnimation(float BlendValue, string AnimResourceID)**
+  ModeBlendAnimationDataSetting AddBlendAnimation(float BlendValue, string AnimResourceID)
 
 블렌딩 애니메이션을 추가해요. (블렌드 값, 리소스 ID) 
 
 
 
 
-  **ModeBlendAnimationDataSetting AddBlendAnimation(float BlendValue, string AnimResourceID, float PlaySpeed)**
+  ModeBlendAnimationDataSetting AddBlendAnimation(float BlendValue, string AnimResourceID, float PlaySpeed)
 
 블렌딩 애니메이션을 추가해요. (블렌드 값, 리소스 ID, 플레이 속도) 
 # **상속받아 사용 가능한 기능들**

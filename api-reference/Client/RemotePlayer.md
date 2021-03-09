@@ -4,7 +4,7 @@
 
 
 
-  **RGameClientCharacter GetCharacter()**
+  RGameClientCharacter GetCharacter()
 
 플레이어의 캐릭터를 얻을 수 있어요. 
 
@@ -18,7 +18,7 @@ local character = player:GetCharacter() --플레이어의 캐릭터를 반환해
 
 
 
-  **string GetPlayerName()**
+  string GetPlayerName()
 
 플레이어의 이름을 얻을 수 있어요. 
 
@@ -32,7 +32,7 @@ print(character:GetPlayerName()) --캐릭터의 플레이어 이름을 문자열
 
 
 
-  **ObjectFXClient CreateFX(ObjectFXClient FXObject, Bone BoneType)**
+  ObjectFXClient CreateFX(ObjectFXClient FXObject, Bone BoneType)
 
 캐릭터의 특정 위치에 FX를 생성할 수 있어요. (생성 할 FX 오브젝트, [Enum.Bone.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/bone)) 
 
@@ -46,7 +46,7 @@ player:CreateFX(Workspace.Effect, Enum.Bone.Body) --캐릭터의 특정 부위�
 
 
 
-  **ObjectSoundClient CreateSound(ObjectSoundClient SoundObject)**
+  ObjectSoundClient CreateSound(ObjectSoundClient SoundObject)
 
 캐릭터의 위치에 Sound를 생성할 수 있어요. (생성 할 Sound 오브젝트) 
 
@@ -60,14 +60,14 @@ player:CreateSound(Workspace.Sound)
 
 
 
-  **RModeHitResult LineTrace(Vector Start, Vector Dir, float Distance)**
+  RModeHitResult LineTrace(Vector Start, Vector Dir, float Distance)
 
 두 지점 간의 오브젝트의 충돌을 체크할 수 있어요. (시작 지점 Vector, 원하는 지점 Vector, 지점 간의 거리) 
 
 
 
 
-  **bool IsMyPlayer()**
+  bool IsMyPlayer()
 
 플레이어 자신의 플레이어인지 확인할 수 있어요. 
 
@@ -81,7 +81,7 @@ print(player:IsMyPlayer())
 
 
 
-  **Item GetEquipItem(string EquipSlot)**
+  Item GetEquipItem(string EquipSlot)
 
 해당 플레이어 캐릭터가 착용중인 아이템을 얻을 수 있어요. (장착 중인 아이템 슬롯) 
 # **상속받아 사용 가능한 기능들**

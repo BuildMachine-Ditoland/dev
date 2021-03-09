@@ -6,7 +6,7 @@
 
 
 
-  **Play()**
+  Play()
 
 Sound를 플레이해요. 
 
@@ -20,7 +20,7 @@ sound:Play() --사운드를 재생해요
 
 
 
-  **Stop()**
+  Stop()
 
 Sound를 정지시켜요. 
 
