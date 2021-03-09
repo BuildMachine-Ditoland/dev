@@ -32,14 +32,12 @@ Color를 R, G, B, A 값으로 세팅하여 생성해요
 샘플 
 
 ```lua
-color = Color.new(255, 0, 0, 255)
+local color = Color.new(255, 0, 0, 255)
+local ui = Workspace.ScreenUI.Text
 
-Timer = UI:GetUIScene("Timer")
+ui:SetTextColor(color) --텍스트 UI의 글자 색상을 변경해요.
 
---Timer라는 UI의 TimerText라는 글자를 빨간색으로 세팅
-Timer:SetTextColor("TimerText", color)
-
-color2 = Color.new(0, 255, 255, 0)
-
-color = color + color2	--> color는 하얀색
+wait(1)
+local newColor = Color.new(0, 255, 255, 0)
+color = color + newColor --newColor.R = 255, newColor.G = 255, newColor.B = 255, newColor.A = 255로 할당돼요.
 ```

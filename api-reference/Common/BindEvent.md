@@ -10,10 +10,8 @@
 샘플 
 
 ```lua
-local function EnterPlayer (Player)
-	print(“Hello”)
+local function EnterPlayer(player) --OnEnterPlayer로 연결된 함수는 player 인자가 고정적으로 들어가요.
+	print("Enter " .. player:GetName()) 
 end
-
--- Game.OnEnterPlayer가 Connect를 통해 EnterPlayer함수에 연결됨
-Game.OnEnterPlayer:Connect(EnterPlayer)	 
+Game.OnEnterPlayer:Connect(EnterPlayer) --Game에 플레이어가 게임에 입장하면 호출되는 함수를 연결해요.
 ```
