@@ -1,6 +1,6 @@
-
+
 게임에서 사용 될 캐릭터를 설정 할 때 사용되는 객체에요.  
-
+
 [Game:AddCharacterSetting](https://ditoland-utplus.gitbook.io/ditoland/api-reference/server/game)함수로 추가해요. 
 <br>
 ## **속성**
@@ -8,29 +8,29 @@
 <br>
 | **int MaxLife** |
 | :--- |
-
+
 최대 생명을 설정할 수 있어요. 
-
+
 캐릭터는 해당 생명만큼 리스폰되요. -1로 설정 시 무한으로 리스폰해요. 디폴트 값은 -1이에요. 
 <br>
 | **float RespawnTime** |
 | :--- |
-
+
 리스폰 타임을 정할 수 있어요. 
 <br>
 | **float MoveSpeed** |
 | :--- |
-
+
 이동 스피드를 설정할 수 있어요. 
 <br>
 | **float JumpSpeed** |
 | :--- |
-
+
 점프 높이를 설정할 수 있어요. 
 <br>
 | **float FlyControlRate** |
 | :--- |
-
+
 공중에서 캐릭터 컨트롤 비율을 설정할 수 있어요. 
 # **상속받아 사용 가능한 기능들**
 
@@ -40,7 +40,7 @@
 <br>
 | **Parent** |
 | :--- |
-
+
 부모 객체를 얻을 수 있어요. 
 샘플
 

@@ -1,4 +1,4 @@
-
+
 클라이언트에서 사용되는 아이템 개체에요 
 <br>
 ## **함수**
@@ -6,14 +6,14 @@
 <br>
 | **Detach()** |
 | :--- |
-
+
 플레이어 캐릭터에 붙어 있는 아이템을 해제할 수 있어요. 
 <br>
 | **AddAction(string ActionName, Key ActionKey, float ActionCoolTime, bool bAutoAction, LuaScriptFunction Function)** |
 | :--- |
-
+
 아이템을 착용 후 액션 추가해요. (액션 이름, 액션 실행 할 [Enum.Key.키](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/key), 해당 액션의 쿨타임, 자동 액션 여부, 연결 함수) 
-
+
 샘플 
 
 ```lua
@@ -35,9 +35,9 @@ item:AddToggleAction("CheckAction", coolTime, Enum.Key.LeftMouseButton, StartCli
 <br>
 | **AddToggleAction(string ActionName, float ActionCoolTime, Key ActionKey, LuaScriptFunction StartFunction, LuaScriptFunction EndFunction)** |
 | :--- |
-
+
 아이템을 착용 후 토글 액션을 추가해요. (액션 이름, 액션 실행 할 [Enum.Key.키](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/key), 키 입력 시 연결 함수, 키 입력 종료 시 연결 함수) 
-
+
 샘플 
 
 ```lua
@@ -64,7 +64,7 @@ item:AddToggleAction("CheckAction", coolTime, Enum.Key.LeftMouseButton, StartCli
 <br>
 | **Parent** |
 | :--- |
-
+
 부모 객체를 얻을 수 있어요. 
 샘플
 

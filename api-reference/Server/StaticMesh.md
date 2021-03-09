@@ -1,4 +1,4 @@
-
+
 서버에서 사용되는 StaticMesh 객체에요. 
 <br>
 ## **함수**
@@ -6,9 +6,9 @@
 <br>
 | **SetColor(Color ChangeColor)** |
 | :--- |
-
+
 StaticMesh의 색을 변경해요. (변경할 [Color](https://ditoland-챙utplus.gitbook.io/ditoland/api-reference/common/color)값) 
-
+
 샘플 
 
 ```lua
@@ -17,9 +17,9 @@ Workspace.Cube:SetColor(Color.new(255, 0, 0, 255)) --오브젝트의 색상을 �
 <br>
 | **Color GetColor()** |
 | :--- |
-
+
 해당 StaticMesh의 Color를 가져올 수 있어요. 
-
+
 샘플 
 
 ```lua
@@ -28,9 +28,9 @@ local color = Workspace.Cube:GetColor() --오브젝트의 색상을 Color로 반
 <br>
 | **SetSimulatePhysics(ESimulatePhysicsType Type)** |
 | :--- |
-
+
 StaticMesh의 물리 기능을 설정해요. ( [Enum.SimulatePhysicsType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/simulatephysicstype)) 
-
+
 샘플 
 
 ```lua
@@ -40,14 +40,14 @@ cube:SetSimulatePhysics(Enum.SimulatePhysicsType.On_Sync) --오브젝트의 물�
 <br>
 | **bool OverrideMass** |
 | :--- |
-
+
 부피로 질량 자동 계산 
 <br>
 | **float Mass** |
 | :--- |
-
+
 질량 값 
-
+
 샘플 
 
 ```lua
@@ -56,9 +56,9 @@ Workspace.Cube.MassInKg = 5000
 <br>
 | **float LinearDamping** |
 | :--- |
-
+
 선형 감쇠 값 
-
+
 샘플 
 
 ```lua
@@ -67,9 +67,9 @@ Workspace.Cube.LinearDamping = 0.1
 <br>
 | **float AngularDamping** |
 | :--- |
-
+
 회전 감쇠 값 
-
+
 샘플 
 
 ```lua
@@ -83,7 +83,7 @@ Workspace.Cube.AngularDamping = 0.1
 <br>
 | **Parent** |
 | :--- |
-
+
 부모 객체를 얻을 수 있어요. 
 샘플
 

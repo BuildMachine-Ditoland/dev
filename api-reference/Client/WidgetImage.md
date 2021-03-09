@@ -1,4 +1,4 @@
-
+
 클라이언트에서 사용되는 Widget Image 객체. 
 <br>
 ## **속성**
@@ -9,9 +9,9 @@
 <br>
 | **SetBackgroundColor(Color color)** |
 | :--- |
-
+
 버튼 위젯의 배경 색을 설정할 수 있어요. (변경할 색) 
-
+
 샘플 
 
 ```lua
@@ -26,7 +26,7 @@ someFrame:SetBackgroundColor(Color.new(0, 0, 255, 255)) --프레임 UI의 바탕
 <br>
 | **Parent** |
 | :--- |
-
+
 부모 객체를 얻을 수 있어요. 
 샘플
 

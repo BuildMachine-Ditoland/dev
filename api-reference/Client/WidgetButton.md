@@ -1,4 +1,4 @@
-
+
 클라이언트에서 사용되는 Widget Button 객체. 
 <br>
 ## **속성**
@@ -9,19 +9,19 @@
 <br>
 | **SetText(int Value)** |
 | :--- |
-
+
 위젯의 텍스트를 주어진 정수로 변경해요. (변경할 정수 값) 
 <br>
 | **SetText(float Value)** |
 | :--- |
-
+
 위젯의 텍스트를 주어진 실수로 변경해요. ( 변경할 실수 값) 
 <br>
 | **SetText(string InText)** |
 | :--- |
-
+
 위젯의 텍스트를 주어진 문자열로 변경해요. (변경할 문자열) 
-
+
 샘플 
 
 ```lua
@@ -31,9 +31,9 @@ someText:SetText("Hello World!") --텍스트 UI에 내용을 표시해요.
 <br>
 | **string GetText()** |
 | :--- |
-
+
 위젯에 설정된 텍스트를 얻을 수 있어요. 
-
+
 샘플 
 
 ```lua
@@ -43,9 +43,9 @@ local uiText = someText:GetText() --텍스트 UI의 내용을 문자열로 반�
 <br>
 | **SetTextColor(string WidgetName, Color color)** |
 | :--- |
-
+
 텍스트의 색을 설정할 수 있어요. (텍스트 색을 변경할 위젯 이름, 변경할 [Color](https://ditoland-utplus.gitbook.io/ditoland/api-reference/common/color)값) 
-
+
 샘플 
 
 ```lua
@@ -55,9 +55,9 @@ someText:SetTextColor(Color.new(0, 255, 0, 255)) --텍스트 UI의 글자 색상
 <br>
 | **SetBackgroundColor(Color color)** |
 | :--- |
-
+
 버튼 위젯의 배경 색을 설정할 수 있어요. (변경할 색) 
-
+
 샘플 
 
 ```lua
@@ -67,19 +67,19 @@ someFrame:SetBackgroundColor(Color.new(0, 0, 255, 255)) --프레임 UI의 바탕
 <br>
 | **SetButtonHoverColor(Color color)** |
 | :--- |
-
+
 버튼 위젯의 Hover 색을 설정할 수 있어요. (변경할 색) 
 <br>
 | **SetButtonPressColor(Color color)** |
 | :--- |
-
+
 버튼 위젯의 Press 색을 설정할 수 있어요. (변경할 색) 
 <br>
 | **OnPressEvent** |
 | :--- |
-
+
 버튼이 눌릴 때 호출되는 이벤트에요. 
-
+
 샘플 
 
 ```lua
@@ -92,7 +92,7 @@ someButton.OnPressEvent:Connect(func) --버튼에 해당 버튼이 눌렸을때 
 <br>
 | **OnUpEvent** |
 | :--- |
-
+
 버튼이 눌렸다가 떼어질 때 호출되는 이벤트에요. 
 # **상속받아 사용 가능한 기능들**
 
@@ -102,7 +102,7 @@ someButton.OnPressEvent:Connect(func) --버튼에 해당 버튼이 눌렸을때 
 <br>
 | **Parent** |
 | :--- |
-
+
 부모 객체를 얻을 수 있어요. 
 샘플
 

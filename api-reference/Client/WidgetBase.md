@@ -1,4 +1,4 @@
-
+
 클라이언트에서 사용되는 Widget Base 객체. 
 <br>
 ## **속성**
@@ -9,9 +9,9 @@
 <br>
 | **SetVisible(bool bVisible)** |
 | :--- |
-
+
 UI 위젯의 표시 여부를 설정할 수 있어요. (위젯 표시 여부) 
-
+
 샘플 
 
 ```lua
@@ -21,24 +21,24 @@ someUI:SetVisible(false) --UI를 비활성화해요.
 <br>
 | **bool IsVisible()** |
 | :--- |
-
+
 위젯이 보이는지를 확인할 수 있어요. () 
 <br>
 | **SetLocation(Number X, Number Y)** |
 | :--- |
-
+
 위젯의 위치를 변경할 수 있어요. (X좌표 값, Y좌표 값) 
 <br>
 | **SetAnchor(ERObjectUIAnchorType type)** |
 | :--- |
-
+
 위젯의 고정 여부를 설정할 수 있어요. (설정할 타입) 
 <br>
 | **SetOpacity(Number Opacity)** |
 | :--- |
-
+
 위젯의 투명 값을 설정할 수 있어요. (설정할 값) 
-
+
 샘플 
 
 ```lua
@@ -48,14 +48,14 @@ someUI:SetOpacity(0.3)
 <br>
 | **AddChildUIScene(string ChildUISceneName, FRUIScene* Element)** |
 | :--- |
-
+
 UI씬에 자식 UI씬 추가할 수 있어요. (자식이 될 UI씬 이름, 자식으로 추가할 UI씬) 
 <br>
 | **SetScale(Number Scale)** |
 | :--- |
-
+
 위젯의 스케일을 설정할 수 있어요. (설정할 값) 
-
+
 샘플 
 
 ```lua
@@ -67,9 +67,9 @@ cube:SetScale(scale) --오브젝트의 크기를 설정해요.
 <br>
 | **Number GetScale()** |
 | :--- |
-
+
 위젯의 스케일을 얻을 수 있어요. 
-
+
 샘플 
 
 ```lua
@@ -86,7 +86,7 @@ cube:SetScale(scale) --오브젝트의 크기를 설정해요.
 <br>
 | **Parent** |
 | :--- |
-
+
 부모 객체를 얻을 수 있어요. 
 샘플
 

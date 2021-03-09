@@ -1,4 +1,4 @@
-
+
 클라이언트에서 사용되는 카메라 서비스 객체에요. 
 <br>
 ## **함수**
@@ -6,14 +6,14 @@
 <br>
 | **SetSettingName(string name)** |
 | :--- |
-
+
 캐릭터에 적용할 카메라 세팅의 이름을 설정할 수 있어요. (설정할 이름 값) 
 <br>
 | **PlayCameraShake(float time, float scale)** |
 | :--- |
-
+
 카메라 쉐이크를 시작해요. (쉐이크 시간, 쉐이크 강도) 
-
+
 샘플 
 
 ```lua
@@ -28,9 +28,9 @@ Camera:StopCameraShake(true)
 <br>
 | **StopCameraShake(bool bImmediately)** |
 | :--- |
-
+
 카메라 쉐이크를 중지시켜요. (즉시중지 여부) 
-
+
 샘플 
 
 ```lua
@@ -45,9 +45,9 @@ Camera:StopCameraShake(true)
 <br>
 | **PlayCameraFade(float FromAlpha, float ToAlpha, float Duration, Color Color, bool HoldFinish)** |
 | :--- |
-
+
 카메라 페이드를 시작해요. (시작 강도 0~1, 종료 강도 0~1, 시작에서 종료까지 걸리는 시간, 적용할 [Color](https://ditoland-utplus.gitbook.io/ditoland/api-reference/common/color)값, 종료 시점 상태 유지 여부) 
-
+
 샘플 
 
 ```lua
@@ -65,9 +65,9 @@ Camera:StopCameraFade()
 <br>
 | **StopCameraFade()** |
 | :--- |
-
+
 카메라 페이드를 정지시켜요. 
-
+
 샘플 
 
 ```lua
@@ -90,7 +90,7 @@ Camera:StopCameraFade()
 <br>
 | **Parent** |
 | :--- |
-
+
 부모 객체를 얻을 수 있어요. 
 샘플
 

@@ -1,4 +1,4 @@
-
+
 클라이언트에서 사용되는 카메라 개체에요. 
 <br>
 ## **속성**
@@ -6,14 +6,14 @@
 <br>
 | **ProjectionType** |
 | :--- |
-
+
 ProjectionType(카메라가 보여주는 방식)을 얻을 수 있어요. 
 <br>
 | **FieldOfView** |
 | :--- |
-
+
 FieldOfView를 얻을 수 있어요. 
-
+
 샘플 
 
 ```lua
@@ -23,29 +23,29 @@ camera.FieldOfView = 50
 <br>
 | **OrthoWidth** |
 | :--- |
-
+
 OrthoWidth를 얻을 수 있어요. 
 <br>
 | **bDoCollisionTest** |
 | :--- |
-
+
 카메라 CollisionTest를 켤 수 있어요. 
 <br>
 | **bEnableCameraLag** |
 | :--- |
-
+
 카메라 지연 효과를 켤 수 있어요. 
 <br>
 | **CameraLagSpeed** |
 | :--- |
-
+
 카메라 지연 속도를 얻을 수 있어요. 
 <br>
 | **SocketOffset** |
 | :--- |
-
+
 카메라 위치 Offset을 얻을 수 있어요. 
-
+
 샘플 
 
 ```lua
@@ -55,9 +55,9 @@ camera.SocketOffset = Vector.new(0, 0, 90)
 <br>
 | **Zoom** |
 | :--- |
-
+
 Zoom 값을 얻을 수 있어요. 
-
+
 샘플 
 
 ```lua
@@ -67,9 +67,9 @@ camera.Zoom = 30
 <br>
 | **ZoomMin** |
 | :--- |
-
+
 Zoom의 최소 값을 얻을 수 있어요. 
-
+
 샘플 
 
 ```lua
@@ -79,9 +79,9 @@ camera.ZoomMin = 20
 <br>
 | **ZoomMax** |
 | :--- |
-
+
 Zoom의 최대 값을 얻을 수 있어요. 
-
+
 샘플 
 
 ```lua
@@ -94,9 +94,9 @@ camera.ZoomMax = 40
 <br>
 | **SetLookAtTarget(FRScriptObject ScriptObject)** |
 | :--- |
-
+
 대상 오브젝트를 타겟으로 설정해서 바라봐요. (타겟으로 설정할 오브젝트) 
-
+
 샘플 
 
 ```lua
@@ -112,9 +112,9 @@ characterCamera:SetLookAtTarget(nil) --카메라가 대상 오브젝트를 바�
 <br>
 | **ZoomInOut(float Value)** |
 | :--- |
-
+
 카메라의 줌을 설정할 수 있어요. (설정할 카메라 줌 크기 값) 
-
+
 샘플 
 
 ```lua
@@ -129,7 +129,7 @@ camera:ZoomInOut(0.5) --카메라의 확대축소값을 조절해요.
 <br>
 | **Parent** |
 | :--- |
-
+
 부모 객체를 얻을 수 있어요. 
 샘플
 

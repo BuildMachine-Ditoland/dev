@@ -1,4 +1,4 @@
-
+
 클라이언트에서 사용되는 Widget ProgressBar 객체. 
 <br>
 ## **속성**
@@ -9,14 +9,14 @@
 <br>
 | **SetFillType(ProgressFillType Type)** |
 | :--- |
-
+
 ProgressBar가 차는 방식을 설정할 수 있어요. (변경할 색) 
 <br>
 | **SetPercent(Number Value)** |
 | :--- |
-
+
 ProgressBar의 퍼센트를 설정할 수 있어요. (변경할 퍼센트) 
-
+
 샘플 
 
 ```lua
@@ -28,9 +28,9 @@ someGuage.GuageBar:SetPercent((currentValue/maxValue) * 100) --게이지바의 �
 <br>
 | **SetBackgroundColor(Color color)** |
 | :--- |
-
+
 ProgressBar의 배경 색을 설정할 수 있어요. (변경할 색) 
-
+
 샘플 
 
 ```lua
@@ -40,7 +40,7 @@ someFrame:SetBackgroundColor(Color.new(0, 0, 255, 255)) --프레임 UI의 바탕
 <br>
 | **SetFillColor(Color color)** |
 | :--- |
-
+
 ProgressBar의 앞 색을 설정할 수 있어요. (변경할 색) 
 # **상속받아 사용 가능한 기능들**
 
@@ -50,7 +50,7 @@ ProgressBar의 앞 색을 설정할 수 있어요. (변경할 색)
 <br>
 | **Parent** |
 | :--- |
-
+
 부모 객체를 얻을 수 있어요. 
 샘플
 

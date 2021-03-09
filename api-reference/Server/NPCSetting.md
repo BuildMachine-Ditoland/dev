@@ -1,6 +1,6 @@
-
+
 서버에서 NPC 설정을 저장하는 객체에요. 
-
+
 [Game:AddNPCSetting](https://ditoland-utplus.gitbook.io/ditoland/api-reference/server/game)로 만들어 사용할 수 있어요. 
 <br>
 ## **속성**
@@ -8,32 +8,32 @@
 <br>
 | **string Base** |
 | :--- |
-
+
 NPC 생성에 사용 할 기본 모델이에요. 
 <br>
 | **string Hair** |
 | :--- |
-
+
 NPC 생성에 사용 할 Hair 모델이에요. 
 <br>
 | **string Gloves** |
 | :--- |
-
+
 NPC 생성에 사용 할 장갑 모델이에요. 
 <br>
 | **string Body** |
 | :--- |
-
+
 NPC 생성에 사용 할 몸통 모델이에요. 
 <br>
 | **string Pants** |
 | :--- |
-
+
 NPC 생성에 사용 할 하체 모델이에요. 
 <br>
 | **string Shoes** |
 | :--- |
-
+
 NPC 생성에 사용 할 신발 모델이에요. 
 # **상속받아 사용 가능한 기능들**
 
@@ -43,7 +43,7 @@ NPC 생성에 사용 할 신발 모델이에요.
 <br>
 | **Parent** |
 | :--- |
-
+
 부모 객체를 얻을 수 있어요. 
 샘플
 

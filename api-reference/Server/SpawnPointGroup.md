@@ -1,4 +1,4 @@
-
+
 여러 스폰 포인트를 설정하고 그 중에 스폰하게 하는 객체에요. 
 <br>
 ## **함수**
@@ -6,14 +6,14 @@
 <br>
 | **RSpawnPoint AddSpawnPoint(RObjectScript* RObjectScript)** |
 | :--- |
-
+
 스폰 포인트를 추가할 수 있어요. (추가할 스폰포인트 오브젝트) 
 <br>
 | **SetSpawnType(GroupSpawnType GroupSpawnType)** |
 | :--- |
-
+
 스폰 포인트 그룹의 작동방식을 설정할 수 있어요. ( [Enum.SpawnType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/spawntype)) 
-
+
 샘플 
 
 ```lua
@@ -34,7 +34,7 @@ Game:SetSpawnType(Enum.SpawnType.UseSpawnGroup) --게임의 스폰타입을 설�
 <br>
 | **Parent** |
 | :--- |
-
+
 부모 객체를 얻을 수 있어요. 
 샘플
 

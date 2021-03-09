@@ -1,4 +1,4 @@
-
+
 클라이언트에서 사용되는 공용 캐릭터에 대한 개체에요. 
 <br>
 ## **함수**
@@ -6,9 +6,9 @@
 <br>
 | **bool IsSit()** |
 | :--- |
-
+
 캐릭터의 앉기 상태 여부를 얻을 수 있어요. 
-
+
 샘플 
 
 ```lua
@@ -19,29 +19,29 @@ print(character:IsSit())
 <br>
 | **FRModeAnimStateMachine AddAnimStateMachine(string StateMachineName)** |
 | :--- |
-
+
 Game:AddAnimStateMachineSetting로 추가된 상태 머신 중 애니메이션 상태 머신을 추가해요. (추가할 상태 머신 이름) 
 <br>
 | **FRModeAnimStateMachine GetAnimStateMachine(string StateMachineName)** |
 | :--- |
-
+
 해당 애니메이션 상태 머신을 얻을 수 있어요. (얻고싶은 상태 머신 이름) 
 <br>
 | **RModeAnimStateBase GetCurAnimState()** |
 | :--- |
-
+
 현재 애니메이션의 상태를 얻을 수 있어요. 
 <br>
 | **ChangeAnimState(string AnimState)** |
 | :--- |
-
+
 해당하는 애니메이션의 상태로 변경할 수 있어요. (변경하고 싶은 애니메이션 상태 이름) 
 <br>
 | **ChangeAnimState(string AnimState, float BlendTime)** |
 | :--- |
-
+
 해당하는 애니메이션의 상태로 변경할 수 있어요. (변경하고 싶은 애니메이션 상태 이름, 블렌딩 시간) 
-
+
 샘플 
 
 ```lua
@@ -58,22 +58,22 @@ character:ChangeAnimState(Idle, blendTime)
 <br>
 | **ChangeAnimStateMachine(string ChangeStateMacnine)** |
 | :--- |
-
+
 해당 애니메이션 상태 머신을 변경할 수 있어요. (변경하고 싶은 상태 머신 이름) 
 <br>
 | **PlayAnimWithExpression(FString InAnimState, FString InFaceTypeName, float InFaceTime, bool InFaceLoop);** |
 | :--- |
-
+
 해당하는 애니메이션의 상태와 표정으로 변경할 수 있어요(상태가 변경되면 표정도 재생을 중지해요). 
 <br>
 | **SetCharacterFaceExpression(FString InFaceTypeName, float InTime);** |
 | :--- |
-
+
 캐릭터의 표정을 재생해요. 
 <br>
 | **StopCharacterFaceExpression()** |
 | :--- |
-
+
 캐릭터의 표정 재생을 취소해요. 
 # **상속받아 사용 가능한 기능들**
 
@@ -83,7 +83,7 @@ character:ChangeAnimState(Idle, blendTime)
 <br>
 | **Parent** |
 | :--- |
-
+
 부모 객체를 얻을 수 있어요. 
 샘플
 
