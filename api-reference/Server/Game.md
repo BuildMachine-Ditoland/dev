@@ -1,5 +1,5 @@
 
-게임 전반적인 역할을 하는 객체에요. 여기 있는 기능들은 서버에서만 사용할 수 있어요. 
+게임 전반적인 역할을 하는 객체에요. 여기 있는 기능들은 서버에서만 사용할 수 있어요. 
 <br>
 ## **속성**
 
@@ -7,17 +7,16 @@
 ## **함수**
 
 <br>
-<br>
 | **AddUserCollisionType(string UserCollisionType)** |
 | :--- |
 
-유저 충돌 타입 설정을 추가할 수 있어요. (충돌 타입 이름 설정) 
+유저 충돌 타입 설정을 추가할 수 있어요. (충돌 타입 이름 설정) 
 
-특정 오브젝트의 충돌 처리를 다른 오브젝트와 다르게 할 때 사용 
+특정 오브젝트의 충돌 처리를 다른 오브젝트와 다르게 할 때 사용 
 
-예) 특정 오브젝트만 통과하고, 캐릭터는 못 통과하는 오브젝트. 
+예) 특정 오브젝트만 통과하고, 캐릭터는 못 통과하는 오브젝트. 
 
-샘플 
+샘플 
 
 ```lua
 local cube = Workspace.Cube
@@ -25,13 +24,12 @@ Game:AddUserCollisionType("CollisionTag1") --유저 충돌 타입을 추가해�
 cube:SetCollisionType("CollisionTag1") --해당 오브젝트의 충돌 타입을 설정해요.
 ```
 <br>
-<br>
 | **RSpawnPointGroup AddSpawnPointGroup(string SpawnPointGroupName)** |
 | :--- |
 
-게임에서 사용 할 스폰 포인트 그룹을 추가할 수 있어요. (추가할 스폰 포인트 그룹 이름) 
+게임에서 사용 할 스폰 포인트 그룹을 추가할 수 있어요. (추가할 스폰 포인트 그룹 이름) 
 
-샘플 
+샘플 
 
 ```lua
 local spawnList = Workspace.SpawnerList:GetChildList()
@@ -43,20 +41,18 @@ end
 Game:SetUsingSpawnPointGroup(spawnGroup) --게임에 적용할 스폰 그룹을 설정해요.
 Game:SetSpawnType(Enum.SpawnType.UseSpawnGroup) --게임의 스폰타입을 설정해요.
 ```
-<br>
 <br>
 | **RSpawnPoint AddSpawnPoint(RScriptWorldObject* RWorldObject)** |
 | :--- |
 
-게임에서 사용 할 스폰 포인트를 추가할 수 있어요. (스폰 포인트로 지정 할 오브젝트) 
-<br>
+게임에서 사용 할 스폰 포인트를 추가할 수 있어요. (스폰 포인트로 지정 할 오브젝트) 
 <br>
 | **RSpawnPoint AddSpawnPointAtGroup(string SpawnPointGroupName, RScriptWorldObject* RWorldObject)** |
 | :--- |
 
-스폰포인트 그룹에 스폰 포인트를 추가할 수 있어요. (스폰포인트를 추가할 그룹 이름, 이름, 스폰 포인트를 할 오브젝트) 
+스폰포인트 그룹에 스폰 포인트를 추가할 수 있어요. (스폰포인트를 추가할 그룹 이름, 이름, 스폰 포인트를 할 오브젝트) 
 
-샘플 
+샘플 
 
 ```lua
 local spawnList = Workspace.SpawnerList:GetChildList()
@@ -68,14 +64,13 @@ end
 Game:SetUsingSpawnPointGroup(spawnGroup) --게임에 적용할 스폰 그룹을 설정해요.
 Game:SetSpawnType(Enum.SpawnType.UseSpawnGroup) --게임의 스폰타입을 설정해요.
 ```
-<br>
 <br>
 | **SetSpawnType(ModeSpawnType InSpawnType)** |
 | :--- |
 
-게임의 스폰 타입을 설정할 수 있어요. ( [Enum.SpawnType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/spawntype)) 
+게임의 스폰 타입을 설정할 수 있어요. ( [Enum.SpawnType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/spawntype)) 
 
-샘플 
+샘플 
 
 ```lua
 local spawnList = Workspace.SpawnerList:GetChildList()
@@ -87,14 +82,13 @@ end
 Game:SetUsingSpawnPointGroup(spawnGroup) --게임에 적용할 스폰 그룹을 설정해요.
 Game:SetSpawnType(Enum.SpawnType.UseSpawnGroup) --게임의 스폰타입을 설정해요.
 ```
-<br>
 <br>
 | **SetUsingSpawnPointGroup(RSpawnPointGroup* SpawnPointGroup)** |
 | :--- |
 
-게임에 적용 할 스폰 그룹을 설정할 수 있어요. (게임에 적용 할 스폰포인트 그룹 오브젝트) 
+게임에 적용 할 스폰 그룹을 설정할 수 있어요. (게임에 적용 할 스폰포인트 그룹 오브젝트) 
 
-샘플 
+샘플 
 
 ```lua
 local spawnList = Workspace.SpawnerList:GetChildList()
@@ -107,31 +101,27 @@ Game:SetUsingSpawnPointGroup(spawnGroup) --게임에 적용할 스폰 그룹을 
 Game:SetSpawnType(Enum.SpawnType.UseSpawnGroup) --게임의 스폰타입을 설정해요.
 ```
 <br>
-<br>
 | **SetUsingSpawnPoint(RSpawnPoint* SpawnPoint)** |
 | :--- |
 
-게임에 적용 할 스폰 포인트를 설정할 수 있어요. (게임에 적용 할 스폰포인트 오브젝트) 
-<br>
+게임에 적용 할 스폰 포인트를 설정할 수 있어요. (게임에 적용 할 스폰포인트 오브젝트) 
 <br>
 | **SetDefaultSpawnPos(FVector Pos)** |
 | :--- |
 
-설정된 스폰 포인트가 없을 경우 지정한 위치에 스폰되도록 해요. (스폰할 위치 Vector) 
-<br>
+설정된 스폰 포인트가 없을 경우 지정한 위치에 스폰되도록 해요. (스폰할 위치 Vector) 
 <br>
 | **SetUsingCharacterSetting(RCharacterSetting CharacterSettingObject)** |
 | :--- |
 
-게임에서 적용 할 캐릭터 설정을 설정 할 수 있어요. (게임에 적용 할 캐릭터 설정 오브젝트) 
-<br>
+게임에서 적용 할 캐릭터 설정을 설정 할 수 있어요. (게임에 적용 할 캐릭터 설정 오브젝트) 
 <br>
 | **Team AddTeam(string TeamName)** |
 | :--- |
 
-게임에서 사용 할 팀 설정을 추가할 수 있어요. (팀 이름 설정) 
+게임에서 사용 할 팀 설정을 추가할 수 있어요. (팀 이름 설정) 
 
-샘플 
+샘플 
 
 ```lua
 local teamName = "Blue Team"
@@ -155,61 +145,54 @@ end
 Game.OnSpawnCharacter:Connect(SpawnCharacter) 
 ```
 <br>
-<br>
 | **RModeNPCSetting AddNPCSetting(string NPCSettingName)** |
 | :--- |
 
-게임에서 사용 할 NPC 설정을 추가할 수 있어요. (NPC 이름 설정) 
-<br>
+게임에서 사용 할 NPC 설정을 추가할 수 있어요. (NPC 이름 설정) 
 <br>
 | **Player GetPlayer(string PlayerName)** |
 | :--- |
 
-플레이어 이름으로 플레이어를 얻을 수 있어요. (얻고 싶은 플레이어 이름) 
+플레이어 이름으로 플레이어를 얻을 수 있어요. (얻고 싶은 플레이어 이름) 
 
-샘플 
+샘플 
 
 ```lua
 local player = Game:GetPlayer(PlayerName) --플레이어 이름에 해당하는 플레이어를 반환해요.
 ```
 <br>
-<br>
 | **RModeServerCharacter GetPlayerCharacter(string PlayerName)** |
 | :--- |
 
-플레이어 이름으로 플레이어 캐릭터를 얻을 수 있어요. (얻고 싶은 플레이어 이름) 
-<br>
+플레이어 이름으로 플레이어 캐릭터를 얻을 수 있어요. (얻고 싶은 플레이어 이름) 
 <br>
 | **SetTeamSetting(EModeTeamType TeamType, EDivideTeamType DivideTeamType)** |
 | :--- |
 
-게임의 팀전 여부, 팀 나누기 방식을 설정할 수 있어요. (팀 타입, [Enum.DivideTeamType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/divideteamtype)) 
-<br>
+게임의 팀전 여부, 팀 나누기 방식을 설정할 수 있어요. (팀 타입, [Enum.DivideTeamType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/divideteamtype)) 
 <br>
 | **int GetPlayerCount()** |
 | :--- |
 
-현재 게임에 참여하고 있는 플레이어 수를 얻을 수 있어요. 
+현재 게임에 참여하고 있는 플레이어 수를 얻을 수 있어요. 
 
-샘플 
+샘플 
 
 ```lua
 print(Game:GetPlayerCount())
 ```
 <br>
-<br>
 | **ResetTeamSetting()** |
 | :--- |
 
-게임의 팀 설정을 모두 제거해요. 
-<br>
+게임의 팀 설정을 모두 제거해요. 
 <br>
 | **ApplyTeamSetting()** |
 | :--- |
 
-팀 설정 방식을 게임에 적용하는 함수에요. 
+팀 설정 방식을 게임에 적용하는 함수에요. 
 
-샘플 
+샘플 
 
 ```lua
 local teamName = "Blue Team"
@@ -233,25 +216,22 @@ end
 Game.OnSpawnCharacter:Connect(SpawnCharacter) 
 ```
 <br>
-<br>
 | **ReqResetGame()** |
 | :--- |
 
-게임 리셋을 요청하는 함수에요. 
-<br>
+게임 리셋을 요청하는 함수에요. 
 <br>
 | **SetCanEnterUser()** |
 | :--- |
 
-게임에 유저의 진입 가능 여부를 설정해요. (false로 설정 할 경우 해당 게임으로 더 이상 유저가 들어올 수 없어요.) 
-<br>
+게임에 유저의 진입 가능 여부를 설정해요. (false로 설정 할 경우 해당 게임으로 더 이상 유저가 들어올 수 없어요.) 
 <br>
 | **BroadcastEvent(string CustomEventName, Args ...)** |
 | :--- |
 
-모든 클라이언트에게 이벤트를 보내는 함수에요. (이벤트 이름, 전달할 변수들 ...) 
+모든 클라이언트에게 이벤트를 보내는 함수에요. (이벤트 이름, 전달할 변수들 ...) 
 
-샘플 
+샘플 
 
 ```lua
 --서버 스크립트에서
@@ -269,13 +249,12 @@ cube:ConnectEventFunction("SomeFunc", SomeFunc) --오브젝트에 "SomeFunc"라�
                                                 --같은 대상에 등록된 이벤트만 호출할 수 있어요.
 ```
 <br>
-<br>
 | **SendEventToClient(string PlayerName, string CustomEventName, Args ...)** |
 | :--- |
 
-해당 클라이언트에게만 이벤트를 보내는 함수에요. (이벤트 보낼 플레이어 이름, 이벤트 이름, 전달할 변수들 ...) 
+해당 클라이언트에게만 이벤트를 보내는 함수에요. (이벤트 보낼 플레이어 이름, 이벤트 이름, 전달할 변수들 ...) 
 
-샘플 
+샘플 
 
 ```lua
 --서버 스크립트에서
@@ -294,31 +273,27 @@ cube:ConnectEventFunction("SomeFunc", SomeFunc) --오브젝트에 "SomeFunc"라�
                                                 --같은 대상에 등록된 이벤트만 호출할 수 있어요.
 ```
 <br>
-<br>
 | **SetInventorySize(int XSize, int YSize)** |
 | :--- |
 
-인벤토리의 사이즈를 설정할 수 있어요. (가로 사이즈, 세로 사이즈) 
-<br>
+인벤토리의 사이즈를 설정할 수 있어요. (가로 사이즈, 세로 사이즈) 
 <br>
 | **SetQuickSlotCount(int Count)** |
 | :--- |
 
-퀵 슬롯의 개수를 설정할 수 있어요. (설정할 개수 값) 
-<br>
+퀵 슬롯의 개수를 설정할 수 있어요. (설정할 개수 값) 
 <br>
 | **PickUpItem(RModeServerCharacter Character, ModeItem Item)** |
 | :--- |
 
-해당 케릭터에게 아이템을 획득시켜줘요. (아이템을 획득할 캐릭터, 아이템 객체) 
-<br>
+해당 케릭터에게 아이템을 획득시켜줘요. (아이템을 획득할 캐릭터, 아이템 객체) 
 <br>
 | **CreateSyncObject(RScriptWorldObject WorldObject, Vector Location)** |
 | :--- |
 
-지정한 위치에 클라이언트와 동기화되는 오브젝트를 생성할 수 있어요. (생성 할 오브젝트, 생성할 위치 Vector) 
+지정한 위치에 클라이언트와 동기화되는 오브젝트를 생성할 수 있어요. (생성 할 오브젝트, 생성할 위치 Vector) 
 
-샘플 
+샘플 
 
 ```lua
 local cube = Workspace.Cube
@@ -327,13 +302,12 @@ local temp = Game:CreateSyncObject(cube, createPos) --오브젝트를 지정된 
 print(temp:GetName()) --CreateSyncObject로 생성한 오브젝트를 변수에 담은 뒤 후처리할 수 있어요.
 ```
 <br>
-<br>
 | **CreateSyncObject(RScriptWorldObject WorldObject, Vector Location, string Name, RScriptWorldObject Parent)** |
 | :--- |
 
-지정한 위치에 클라이언트와 동기화되는 오브젝트를 생성할 수 있어요. (생성 할 오브젝트, 생성할 위치 Vector, 설정할 이름, 부모가 될 오브젝트) 
+지정한 위치에 클라이언트와 동기화되는 오브젝트를 생성할 수 있어요. (생성 할 오브젝트, 생성할 위치 Vector, 설정할 이름, 부모가 될 오브젝트) 
 
-샘플 
+샘플 
 
 ```lua
 local cube = Workspace.Cube
@@ -342,19 +316,17 @@ local temp = Game:CreateSyncObject(cube, createPos, obj:GetName(), Workspace) --
 print(temp:GetName()) --CreateSyncObject로 생성한 오브젝트를 변수에 담은 뒤 후처리할 수 있어요.
 ```
 <br>
-<br>
 | **CreateNoneSyncObject(RScriptWorldObject WorldObject, Vector Location)** |
 | :--- |
 
-지정한 위치에 클라이언트와 동기화 되지 않는 오브젝트를 생성할 수 있어요. (생성 할 오브젝트, 생성 위치 Vector) 
-<br>
+지정한 위치에 클라이언트와 동기화 되지 않는 오브젝트를 생성할 수 있어요. (생성 할 오브젝트, 생성 위치 Vector) 
 <br>
 | **ObjectSpawner AddObjectSpawner(RObjectScript RObjectScript, EObjectSelectType ObjectSelectType, float SpawnTime, int MaxCount)** |
 | :--- |
 
-오브젝트 스포너 생성할 수 있어요. (스폰 할 오브젝트, [Enum.ObjectSelectType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/spawntype), 스폰 시간, 최대 스폰 개수) 
+오브젝트 스포너 생성할 수 있어요. (스폰 할 오브젝트, [Enum.ObjectSelectType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/spawntype), 스폰 시간, 최대 스폰 개수) 
 
-샘플 
+샘플 
 
 ```lua
 local toy = Script.Parent
@@ -368,97 +340,82 @@ local spawnPos = Vector.new(0, 0, 0)
 spawner:AddSpawnObject(Toybox.Cube, spawnRate, spawnCount, spawnPos) --스포너에서 스폰할 오브젝트를 등록해요.
 ```
 <br>
-<br>
 | **ObjectSelector CreateObjectSelector(EObjectSelectType SelectType)** |
 | :--- |
 
-오브젝트 셀렉터를 생성할 수 있어요. ( [Enum.ObjectSelectType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/objectselecttype)) 
-<br>
+오브젝트 셀렉터를 생성할 수 있어요. ( [Enum.ObjectSelectType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/objectselecttype)) 
 <br>
 | **ObjectList GetObjectList(Vector Center, float Radius)** |
 | :--- |
 
-지정한 영역의 오브젝트를 얻을 수 있어요. (영역 중앙 포인트 Vector, 영역 반지름 값) 
-<br>
+지정한 영역의 오브젝트를 얻을 수 있어요. (영역 중앙 포인트 Vector, 영역 반지름 값) 
 <br>
 | **bool UseWorldItem(RModeServerCharacter Character, ModeItem Item)** |
 | :--- |
 
-월드 아이템을 사용하게 할 수 있어요. (사용할 캐릭터, 사용할 아이템) 
-<br>
+월드 아이템을 사용하게 할 수 있어요. (사용할 캐릭터, 사용할 아이템) 
 <br>
 | **DeleteWorldItem(ModeItem Item)** |
 | :--- |
 
-월드 아이템 삭제해요. (삭제할 아이템) 
-<br>
+월드 아이템 삭제해요. (삭제할 아이템) 
 <br>
 | **SaveUserGameData(String PlayerName, String KeyString, Vector SaveValue)** |
 | :--- |
 
-해당 유저의 게임 데이터를 저장할 수 있어요. (저장할 플레이어 이름, 데이터 키 값, 저장할 Vector 값) 
-<br>
+해당 유저의 게임 데이터를 저장할 수 있어요. (저장할 플레이어 이름, 데이터 키 값, 저장할 Vector 값) 
 <br>
 | **SaveUserGameData(String PlayerName, String KeyString, float SaveValue)** |
 | :--- |
 
-해당 유저의 게임 데이터를 저장할 수 있어요. (저장할 플레이어 이름, 데이터 키 값, 저장할 float 값) 
-<br>
+해당 유저의 게임 데이터를 저장할 수 있어요. (저장할 플레이어 이름, 데이터 키 값, 저장할 float 값) 
 <br>
 | **SaveUserGameData(String PlayerName, String KeyString, bool SaveValue)** |
 | :--- |
 
-해당 유저의 게임 데이터를 저장할 수 있어요. (저장할 플레이어 이름, 데이터 키 값, 저장할 Bool 값) 
-<br>
+해당 유저의 게임 데이터를 저장할 수 있어요. (저장할 플레이어 이름, 데이터 키 값, 저장할 Bool 값) 
 <br>
 | **SaveUserGameData(String PlayerName, String KeyString, int SaveValue)** |
 | :--- |
 
-해당 유저의 게임 데이터를 저장할 수 있어요. (저장할 플레이어 이름, 데이터 키 값, 저장할 Int 값) 
-<br>
+해당 유저의 게임 데이터를 저장할 수 있어요. (저장할 플레이어 이름, 데이터 키 값, 저장할 Int 값) 
 <br>
 | **SaveUserGameData(String PlayerName, String KeyString, String SaveValue)** |
 | :--- |
 
-해당 유저의 게임 데이터를 저장할 수 있어요. (저장할 플레이어 이름, 데이터 키 값, 저장할 String 값) 
-<br>
+해당 유저의 게임 데이터를 저장할 수 있어요. (저장할 플레이어 이름, 데이터 키 값, 저장할 String 값) 
 <br>
 | **SaveUserGameData(String PlayerName, String KeyString, Color SaveValue)** |
 | :--- |
 
-해당 유저의 게임 데이터를 저장할 수 있어요. (저장할 플레이어 이름, 데이터 키 값, 저장할 Color 값) 
-<br>
+해당 유저의 게임 데이터를 저장할 수 있어요. (저장할 플레이어 이름, 데이터 키 값, 저장할 Color 값) 
 <br>
 | **Object GetSavedUserGameData(String PlayerName, String KeyString)** |
 | :--- |
 
-해당 유저의 게임 데이터를 얻을 수 있어요. (플레이어 이름, 데이터 키 값) 
-<br>
+해당 유저의 게임 데이터를 얻을 수 있어요. (플레이어 이름, 데이터 키 값) 
 <br>
 | **SaveGameStatisticsData(String PlayerName, String KeyString, int SaveValue, bool Overwrite, bool Ascending)** |
 | :--- |
 
-해당 유저의 게임 통계 데이터를 저장할 수 있어요. (저장할 플레이어 이름, 데이터 키 값, 저장 값, 덮어씌우기 여부, 오름차순 정렬 여부) 
-<br>
+해당 유저의 게임 통계 데이터를 저장할 수 있어요. (저장할 플레이어 이름, 데이터 키 값, 저장 값, 덮어씌우기 여부, 오름차순 정렬 여부) 
 <br>
 | **GetGameStatisticsData(String KeyString, bool Ascending, int Offset, int Count, LuaScriptFunction CallBack)** |
 | :--- |
 
-게임 통계 데이터를 얻을 수 있어요. (데이터 키 값, 오름차순 정렬 여부, Offset 값, Count 값, CallBack 연결 함수) 
-<br>
+게임 통계 데이터를 얻을 수 있어요. (데이터 키 값, 오름차순 정렬 여부, Offset 값, Count 값, CallBack 연결 함수) 
 <br>
 | **SendToClient_GameStatisticsData(String PlayerName, String KeyString, bool Ascending, int Offset, int Count)** |
 | :--- |
 
-게임 통계 데이터를 클라이언트로 보내줄 수 있어요 (보내줄 플레이어 이름, 데이터 키 값, 오름차순 정렬 여부, Offset 값, Count 값) 
-<br>
+게임 통계 데이터를 클라이언트로 보내줄 수 있어요 (보내줄 플레이어 이름, 데이터 키 값, 오름차순 정렬 여부, Offset 값, Count 값) 
 <br>
 | **vector<Player> GetAllPlayer()** |
 | :--- |
 
-모든 플레이어 얻을 수 있어요. 
+모든 플레이어 얻을 수 있어요. 
 
-샘플 
+샘플 
 
 ```lua
 local allPlayerList = Game:GetAllPlayer() --모든 플레이어를 리스트로 반환해요.
@@ -467,26 +424,21 @@ for i = 1, #allPlayerList do
 end
 ```
 <br>
-<br>
 | **NPC CreateNPC(String NPCName, String NPCSetting, Vector Location)** |
 | :--- |
 
-NPC를 새롭게 생성할 수 있어요. (생성할 NPC 이름 설정, 지정할 [NPC세팅](https://ditoland-utplus.gitbook.io/ditoland/api-reference/server/npcsetting), 생성 위치 Vector) 
-<br>
+NPC를 새롭게 생성할 수 있어요. (생성할 NPC 이름 설정, 지정할 [NPC세팅](https://ditoland-utplus.gitbook.io/ditoland/api-reference/server/npcsetting), 생성 위치 Vector) 
 <br>
 | **DeleteNPC(String NPCName)** |
 | :--- |
 
-해당 NPC를 삭제해요. (삭제할 NPC 이름) 
-<br>
+해당 NPC를 삭제해요. (삭제할 NPC 이름) 
 <br>
 | **TeleportToPublicServer(LandID, PlayerNameList, LoadingUI)** |
 | :--- |
 <br>
-<br>
 | **TeleportToPrivateServer(LandID, PlayerNameList, LoadingUI)** |
 | :--- |
-<br>
 <br>
 | **TeleportToServerURL(URL, LoadingUI)** |
 | :--- |
@@ -500,16 +452,16 @@ NPC를 새롭게 생성할 수 있어요. (생성할 NPC 이름 설정, 지정�
 | **Parent** |
 | :--- |
 
-부모 객체를 얻을 수 있어요. 
+부모 객체를 얻을 수 있어요. 
 샘플
 
 ```lua
 
-local parent = Workspace.Floor.Parent --오브젝트의 부모를 반환해요 
+local parent = Workspace.Floor.Parent --오브젝트의 부모를 반환해요 
 
-print(parent:GetName())  
+print(parent:GetName())  
 
-``` 
+``` 
 <br>
 ## **이벤트**
 
@@ -518,958 +470,918 @@ print(parent:GetName())
 | **OnUpdateEvent** |
 | :--- |
 
-매 프레임마다 호출되는 이벤트에요. 
+매 프레임마다 호출되는 이벤트에요. 
 샘플
 
 ```lua
 
-local cube = Workspace.Cube 
+local cube = Workspace.Cube 
 
-local playTime = 0 
+local playTime = 0 
 
-local function UpdateEvent(updateTime) --OnUpdateEvent로 연결된 함수는 updateTime 인자가 고정적으로 들어가요. 
+local function UpdateEvent(updateTime) --OnUpdateEvent로 연결된 함수는 updateTime 인자가 고정적으로 들어가요. 
 
-playTime = playTime + updateTime --시간을 기록해요. 
+playTime = playTime + updateTime --시간을 기록해요. 
 
-end 
+end 
 
-cube.OnUpdateEvent:Connect(UpdateEvent) --Game이나 오브젝트에 매프레임마다 호출되는 함수를 연결해요. 
+cube.OnUpdateEvent:Connect(UpdateEvent) --Game이나 오브젝트에 매프레임마다 호출되는 함수를 연결해요. 
 
-``` 
+``` 
 <br>
 <br>
 | **OnEnterPlayer** |
 | :--- |
 
-플레이어가 게임에 입장 시 호출되는 이벤트에요. 
+플레이어가 게임에 입장 시 호출되는 이벤트에요. 
 샘플
 
 ```lua
 
-local function EnterPlayer(player) --OnEnterPlayer로 연결된 함수는 player 인자가 고정적으로 들어가요. 
+local function EnterPlayer(player) --OnEnterPlayer로 연결된 함수는 player 인자가 고정적으로 들어가요. 
 
-print("Enter " .. player:GetName())  
+print("Enter " .. player:GetName())  
 
-end 
+end 
 
-Game.OnEnterPlayer:Connect(EnterPlayer) --Game에 플레이어가 게임에 입장하면 호출되는 함수를 연결해요. 
+Game.OnEnterPlayer:Connect(EnterPlayer) --Game에 플레이어가 게임에 입장하면 호출되는 함수를 연결해요. 
 
-``` 
+``` 
 <br>
 <br>
 | **OnLeavePlayer** |
 | :--- |
 
-플레이어가 게임에서 나갈 때 호출되는 이벤트에요. 
+플레이어가 게임에서 나갈 때 호출되는 이벤트에요. 
 샘플
 
 ```lua
 
-local function LeavePlayer(player) --OnLeavePlayer로 연결된 함수는 player 인자가 고정적으로 들어가요. 
+local function LeavePlayer(player) --OnLeavePlayer로 연결된 함수는 player 인자가 고정적으로 들어가요. 
 
-print("Leave " .. player:GetName())  
+print("Leave " .. player:GetName())  
 
-end 
+end 
 
-Game.OnLeavePlayer:Connect(LeavePlayer) --Game에 플레이어가 게임을 종료하면 호출되는 함수를 연결해요. 
+Game.OnLeavePlayer:Connect(LeavePlayer) --Game에 플레이어가 게임을 종료하면 호출되는 함수를 연결해요. 
 
-``` 
+``` 
 <br>
 <br>
 | **OnDeathCharacter** |
 | :--- |
 
-케릭터가 죽을 때 호출되는 이벤트에요. 
+케릭터가 죽을 때 호출되는 이벤트에요. 
 샘플
 
 ```lua
 
-local function DeathCharacter(character) --OnDeathCharacter로 연결된 함수는 character 인자가 고정적으로 들어가요. 
+local function DeathCharacter(character) --OnDeathCharacter로 연결된 함수는 character 인자가 고정적으로 들어가요. 
 
-print("Death " .. character:GetName())  
+print("Death " .. character:GetName())  
 
-end 
+end 
 
-Game.OnDeathCharacter:Connect(DeathCharacter) --Game에 캐릭터가 죽으면 연결된 호출되는 함수를 연결해요. 
+Game.OnDeathCharacter:Connect(DeathCharacter) --Game에 캐릭터가 죽으면 연결된 호출되는 함수를 연결해요. 
 
-``` 
+``` 
 <br>
 <br>
 | **OnSpawnCharacter** |
 | :--- |
 
-케릭터가 스폰 될 때 호출되는 이벤트에요. 
+케릭터가 스폰 될 때 호출되는 이벤트에요. 
 샘플
 
 ```lua
 
-local function SpawnCharacter(character) --OnSpawnCharacter로 연결된 함수는 character 인자가 고정적으로 들어가요. 
+local function SpawnCharacter(character) --OnSpawnCharacter로 연결된 함수는 character 인자가 고정적으로 들어가요. 
 
-print("Spawn " .. character:GetName())  
+print("Spawn " .. character:GetName())  
 
-end 
+end 
 
-Game.OnSpawnCharacter:Connect(SpawnCharacter) --Game에 캐릭터가 생성되면 연결된 호출되는 함수를 연결해요. 
+Game.OnSpawnCharacter:Connect(SpawnCharacter) --Game에 캐릭터가 생성되면 연결된 호출되는 함수를 연결해요. 
 
-``` 
+``` 
 샘플
 
 ```lua
 
-local function EnterPlayer(Player) 
+local function EnterPlayer(Player) 
 
-local Character = Player:GetCharacter() 
+local Character = Player:GetCharacter() 
 
-local PlayerName = Character:GetPlayerName() 
+local PlayerName = Character:GetPlayerName() 
 
-print(PlayerName.." Join Game !") 
+print(PlayerName.." Join Game !") 
 
-end 
+end 
 
---게임에 플레이어가 들어올 시 EnterPlayer함수에 연결 
+--게임에 플레이어가 들어올 시 EnterPlayer함수에 연결 
 
-Game.OnEnterPlayer:Connect(EnterPlayer) 
+Game.OnEnterPlayer:Connect(EnterPlayer) 
 
-``` 
+``` 
 <br>
 <br>
 | **ConnectChangeEventFunction(string ValueName, function FunctionName)** |
 | :--- |
 
-추가된 값이 변경 될 때 호출되는 이벤트에요. (Value 이름, 연결 함수) 
+추가된 값이 변경 될 때 호출되는 이벤트에요. (Value 이름, 연결 함수) 
 샘플
 
 ```lua
 
-local cube = Workspace.Cube 
+local cube = Workspace.Cube 
 
- 
+ 
 
-wait(1) 
+wait(1) 
 
-cube.SomeValue = 1 
+cube.SomeValue = 1 
 
- 
+ 
 
-local function ChangeSomeValue() 
+local function ChangeSomeValue() 
 
-print("ChangeSomeValue!") 
+print("ChangeSomeValue!") 
 
-end 
+end 
 
-cube:ConnectChangeEventFunction("SomeValue", ChangeSomeValue)  --오브젝트의 "SomeValue" 라는 Value가 변경되면 ChangeSomeValue 함수를 호출해요. 
+cube:ConnectChangeEventFunction("SomeValue", ChangeSomeValue)  --오브젝트의 "SomeValue" 라는 Value가 변경되면 ChangeSomeValue 함수를 호출해요. 
 
-``` 
+``` 
 <br>
 <br>
 | **AddTimeEvent(String EventName, float Time, LuaScriptFunction EventFuunction)** |
 | :--- |
 
-일정 시간뒤에 연결 함수가 호출되는 이벤트를 추가해요. (추가할 이벤트 이름, 시간, 연결 함수) 
+일정 시간뒤에 연결 함수가 호출되는 이벤트를 추가해요. (추가할 이벤트 이름, 시간, 연결 함수) 
 샘플
 
 ```lua
 
-local waitTime = 2 
+local waitTime = 2 
 
-local function PrintMessage() --AddTimeEvent로 등록된 함수는 일정시간을 기다린뒤, 호출돼요. 
+local function PrintMessage() --AddTimeEvent로 등록된 함수는 일정시간을 기다린뒤, 호출돼요. 
 
-print("Call PrintMessage!")  
+print("Call PrintMessage!")  
 
-end 
+end 
 
-Game:AddTimeEvent("PrintMessage", waitTime, PrintMessage) --일정시간을 기다린뒤 호출되는 함수를 문자열로 등록해요. 
+Game:AddTimeEvent("PrintMessage", waitTime, PrintMessage) --일정시간을 기다린뒤 호출되는 함수를 문자열로 등록해요. 
 
-``` 
+``` 
 <br>
 <br>
 | **DeleteTimeEvent(String EventName)** |
 | :--- |
 
-등록된 시간 이벤트를 삭제해요. (삭제할 이벤트 이름) 
+등록된 시간 이벤트를 삭제해요. (삭제할 이벤트 이름) 
 샘플
 
 ```lua
 
-local waitTime = 2 
+local waitTime = 2 
 
-local function PrintMessage() --AddTimeEvent로 등록된 함수는 일정시간을 기다린뒤, 호출돼요. 
+local function PrintMessage() --AddTimeEvent로 등록된 함수는 일정시간을 기다린뒤, 호출돼요. 
 
-print("Call PrintMessage!")  
+print("Call PrintMessage!")  
 
-end 
+end 
 
-Game:AddTimeEvent("PrintMessage", waitTime, PrintMessage) --일정시간을 기다린뒤 호출되는 함수를 문자열로 등록해요. 
+Game:AddTimeEvent("PrintMessage", waitTime, PrintMessage) --일정시간을 기다린뒤 호출되는 함수를 문자열로 등록해요. 
 
-Game:DeleteTimeEvent("PrintMessage") --AddTimeEvent로 등록한 함수를 삭제해서 호출되지 않게 해요. 
+Game:DeleteTimeEvent("PrintMessage") --AddTimeEvent로 등록한 함수를 삭제해서 호출되지 않게 해요. 
 
-``` 
+``` 
 <br>
 ## **함수**
 
 <br>
 <br>
-<br>
 | **RModePhase AddPhase(string phasename)** |
 | :--- |
 
-게임에 단계를 추가할 수 있어요. (추가할 단계 이름) 
+게임에 단계를 추가할 수 있어요. (추가할 단계 이름) 
 샘플
 
 ```lua
 
---서버 스크립트에서------------- 
+--서버 스크립트에서------------- 
 
-local LobbyState = Game:AddPhase("Lobby") --사용할 Phase를 등록해요. 
+local LobbyState = Game:AddPhase("Lobby") --사용할 Phase를 등록해요. 
 
-local PlayState = Game:AddPhase("Play") --Phase는 여러개도 등록할 수 있어요. 
+local PlayState = Game:AddPhase("Play") --Phase는 여러개도 등록할 수 있어요. 
 
-local ResultState = Game:AddPhase("Result") 
+local ResultState = Game:AddPhase("Result") 
 
-Game:AddReplicateValue("GameState", "Lobby", Enum.ReplicateType.Changed, 0, false) --서버와 클라이언트간 동기화되는 값을 등록하고 초기값을 설정한뒤, 값이 변경될때마다 호출되게 해요. 
+Game:AddReplicateValue("GameState", "Lobby", Enum.ReplicateType.Changed, 0, false) --서버와 클라이언트간 동기화되는 값을 등록하고 초기값을 설정한뒤, 값이 변경될때마다 호출되게 해요. 
 
- 
+ 
 
---각 Phase로 전환되었을때 처리할 이벤트 함수를 추가해요. 
+--각 Phase로 전환되었을때 처리할 이벤트 함수를 추가해요. 
 
-local function EnterLobbyState() 
+local function EnterLobbyState() 
 
-Game.GameState = "Lobby"  
+Game.GameState = "Lobby"  
 
-print("Enter Lobby State") 
+print("Enter Lobby State") 
 
-end 
+end 
 
-LobbyState.EnterEvent:Connect(EnterLobbyState) --해당 Phase로 변경됐을때 호출되는 이벤트를 연결해요. 
+LobbyState.EnterEvent:Connect(EnterLobbyState) --해당 Phase로 변경됐을때 호출되는 이벤트를 연결해요. 
 
- 
+ 
 
-local function UpdateLobbyState(UpdateTime)                     
+local function UpdateLobbyState(UpdateTime)                     
 
-print("Update Lobby State") 
+print("Update Lobby State") 
 
-end 
+end 
 
-LobbyState.UpdateEvent:Connect(UpdateLobbyState)  --해당 Phase일때 매프레임마다 호출되는 이벤트를 연결해요. 
+LobbyState.UpdateEvent:Connect(UpdateLobbyState)  --해당 Phase일때 매프레임마다 호출되는 이벤트를 연결해요. 
 
- 
+ 
 
-local function ExitLobbyState() 
+local function ExitLobbyState() 
 
-print("End Lobby State") 
+print("End Lobby State") 
 
-end 
+end 
 
-LobbyState.ExitEvent:Connect(ExitLobbyState) --해당 Phase가 끝날때 호출되는 이벤트를 연결해요. 
+LobbyState.ExitEvent:Connect(ExitLobbyState) --해당 Phase가 끝날때 호출되는 이벤트를 연결해요. 
 
- 
+ 
 
-local function EnterPlayState() 
+local function EnterPlayState() 
 
-Game.GameState = "Play"  
+Game.GameState = "Play"  
 
-print("Enter Play State") 
+print("Enter Play State") 
 
-end 
+end 
 
-PlayState.EnterEvent:Connect(EnterPlayState) 
+PlayState.EnterEvent:Connect(EnterPlayState) 
 
- 
+ 
 
-local function EnterResultState() 
+local function EnterResultState() 
 
-Game.GameState = "Result"  
+Game.GameState = "Result"  
 
-print("Enter Result State") 
+print("Enter Result State") 
 
-end 
+end 
 
-ResultState.EnterEvent:Connect(EnterResultState) 
+ResultState.EnterEvent:Connect(EnterResultState) 
 
- 
+ 
 
-wait(1) 
+wait(1) 
 
-Game:ChangePhaseByName("Game") --이름으로 Phase를 전환해요. 
+Game:ChangePhaseByName("Game") --이름으로 Phase를 전환해요. 
 
-wait(1) 
+wait(1) 
 
-Game:ChangeToNextPhase() --다음 Phase로 전환해요. (만약 마지막 Phase면 처리되지 않아요.) 
+Game:ChangeToNextPhase() --다음 Phase로 전환해요. (만약 마지막 Phase면 처리되지 않아요.) 
 
- 
+ 
 
---클라 스크립트에서------------- 
+--클라 스크립트에서------------- 
 
-local LobbyState = Game:AddPhase("Lobby") --서버 스크립트에서 추가한 Phase를 똑같이 등록해요. 
+local LobbyState = Game:AddPhase("Lobby") --서버 스크립트에서 추가한 Phase를 똑같이 등록해요. 
 
-local PlayState = Game:AddPhase("Play")  
+local PlayState = Game:AddPhase("Play")  
 
-local ResultState = Game:AddPhase("Result") 
+local ResultState = Game:AddPhase("Result") 
 
- 
+ 
 
---각 Phase로 전환되었을때 처리할 이벤트 함수를 추가해요. 
+--각 Phase로 전환되었을때 처리할 이벤트 함수를 추가해요. 
 
---서버 스크립트와 동일하게 작성하되, Game.GameState = "Lobby" 같은 Phase 변경은 제외해요. (서버에서만 처리해야 해요.) 
+--서버 스크립트와 동일하게 작성하되, Game.GameState = "Lobby" 같은 Phase 변경은 제외해요. (서버에서만 처리해야 해요.) 
 
-local function EnterLobbyState()      
+local function EnterLobbyState()      
 
-print("Enter Lobby State") 
+print("Enter Lobby State") 
 
-end 
+end 
 
-LobbyState.EnterEvent:Connect(EnterLobbyState) 
+LobbyState.EnterEvent:Connect(EnterLobbyState) 
 
- 
+ 
 
-local function EnterPlayState() 
+local function EnterPlayState() 
 
-print("Enter Play State") 
+print("Enter Play State") 
 
-end 
+end 
 
-PlayState.EnterEvent:Connect(EnterPlayState) 
+PlayState.EnterEvent:Connect(EnterPlayState) 
 
- 
+ 
 
-local function EnterResultState() 
+local function EnterResultState() 
 
-print("Enter Result State") 
+print("Enter Result State") 
 
-end 
+end 
 
-ResultState.EnterEvent:Connect(EnterResultState) 
+ResultState.EnterEvent:Connect(EnterResultState) 
 
- 
+ 
 
---스크립트 제일 아래에 상태가 바뀔때마다 관련된 Phase 함수가 호출될 수 있도록 연결해요. 
+--스크립트 제일 아래에 상태가 바뀔때마다 관련된 Phase 함수가 호출될 수 있도록 연결해요. 
 
-Game:ConnectChangeEventFunction("GameState", function()  
+Game:ConnectChangeEventFunction("GameState", function()  
 
-Game:ChangePhaseByName(Game.GameState)  
+Game:ChangePhaseByName(Game.GameState)  
 
-end) 
+end) 
 
-``` 
-<br>
+``` 
 <br>
 <br>
 | **RModePhase GetPhaseByName(string phasename)** |
 | :--- |
 
-단계 이름으로 단계를 불러올 수 있어요. (불러올 단계 이름) 
-<br>
+단계 이름으로 단계를 불러올 수 있어요. (불러올 단계 이름) 
 <br>
 <br>
 | **RModePhase GetCurPhase()** |
 | :--- |
 
-현재 단계를 얻을 수 있어요. 
-<br>
+현재 단계를 얻을 수 있어요. 
 <br>
 <br>
 | **RModePhase ChangePhaseByName(string changephasename)** |
 | :--- |
 
-단계 이름을 통해 해당 단계로 변경할 수 있어요. (변경할 단계 이름) 
-<br>
+단계 이름을 통해 해당 단계로 변경할 수 있어요. (변경할 단계 이름) 
 <br>
 <br>
 | **RModePhase ChangeToNextPhase()** |
 | :--- |
 
-다음 단계로 변경할 수 있어요. 
-<br>
+다음 단계로 변경할 수 있어요. 
 <br>
 <br>
 | **ConnectEventFunction(string customevent, LuaScriptFunction function) ** |
 | :--- |
 
-유저가 추가한 이벤트에 함수를 연결할 수 있어요. (이벤트 이름, 연결 함수) 
+유저가 추가한 이벤트에 함수를 연결할 수 있어요. (이벤트 이름, 연결 함수) 
 샘플
 
 ```lua
 
-local cube = Workspace.cube 
+local cube = Workspace.cube 
 
-local function SomeFunc(playerName) --필요하다면 함수의 인자도 넣을 수 있어요. 단, 숫자나 문자열 인자만 넣을 수 있어요. 
+local function SomeFunc(playerName) --필요하다면 함수의 인자도 넣을 수 있어요. 단, 숫자나 문자열 인자만 넣을 수 있어요. 
 
-print("Call SomeFunc from " .. playerName) 
+print("Call SomeFunc from " .. playerName) 
 
-end 
+end 
 
-cube:ConnectEventFunction("SomeFunc", SomeFunc) --오브젝트에 "SomeFunc"라는 이벤트 이름으로 SomeFunc 함수를 연결해요. 
+cube:ConnectEventFunction("SomeFunc", SomeFunc) --오브젝트에 "SomeFunc"라는 이벤트 이름으로 SomeFunc 함수를 연결해요. 
 
---오브젝트가 아닌 Game에도 연결할 수 있어요. 그러나 그룹과 폴더에는 연결할 수 없어요. 
+--오브젝트가 아닌 Game에도 연결할 수 있어요. 그러나 그룹과 폴더에는 연결할 수 없어요. 
 
---같은 대상에 등록된 이벤트만 호출할 수 있어요. 
+--같은 대상에 등록된 이벤트만 호출할 수 있어요. 
 
-``` 
-<br>
+``` 
 <br>
 <br>
 | **float GetPassTime()** |
 | :--- |
 
-단계가 진행된 시간을 얻을 수 있어요. 
-<br>
+단계가 진행된 시간을 얻을 수 있어요. 
 <br>
 <br>
 | **DeleteObject(RScriptWorldObject)** |
 | :--- |
 
-오브젝트를 삭제할 수 있어요. (삭제할 오브젝트) 
+오브젝트를 삭제할 수 있어요. (삭제할 오브젝트) 
 
-서버에서 사용하면 서버와 클라 오브젝트 모두 삭제되고 클라에서 사용하면 클라 오브젝트만 삭제해요 
+서버에서 사용하면 서버와 클라 오브젝트 모두 삭제되고 클라에서 사용하면 클라 오브젝트만 삭제해요 
 샘플
 
 ```lua
 
-local cube = Workspace.Cube 
+local cube = Workspace.Cube 
 
-Game:DeleteObject(cube) --오브젝트를 파괴해요. 
+Game:DeleteObject(cube) --오브젝트를 파괴해요. 
 
-``` 
-<br>
+``` 
 <br>
 <br>
 | **List<HitResult> LineTraceList(Vector Start, Vector Dir, float Distance)** |
 | :--- |
 
-설정된 시작 지점에서 원하는 방향으로 지정된 거리 만큼의 충돌 리스트들을 가져올 수 있어요. (시작 지점 Vector, 목표 지점 Vector, 거리 값) 
+설정된 시작 지점에서 원하는 방향으로 지정된 거리 만큼의 충돌 리스트들을 가져올 수 있어요. (시작 지점 Vector, 목표 지점 Vector, 거리 값) 
 샘플
 
 ```lua
 
-local startPos = Workspace.Cube 
+local startPos = Workspace.Cube 
 
-local dir = Vector.new(0, 1, 0) 
+local dir = Vector.new(0, 1, 0) 
 
-local distance = 100 
+local distance = 100 
 
-local targetList = Game:LineTraceList(startPos, dir, distance) --시작 위치에서 특정 방향으로 거리만큼의 충돌 리스트가 반환돼요. 
+local targetList = Game:LineTraceList(startPos, dir, distance) --시작 위치에서 특정 방향으로 거리만큼의 충돌 리스트가 반환돼요. 
 
-for i = 1, #targetList do  
+for i = 1, #targetList do  
 
-print("Left " .. targetList[i].HitObject:GetName())  
+print("Left " .. targetList[i].HitObject:GetName())  
 
-end 
+end 
 
-``` 
-<br>
+``` 
 <br>
 <br>
 | **string GetName()** |
 | :--- |
 
-객체의 이름을 얻을 수 있어요. 
+객체의 이름을 얻을 수 있어요. 
 샘플
 
 ```lua
 
-print(Workspace.Floor:GetName()) --오브젝트의 이름을 문자열로 반환해요. 
+print(Workspace.Floor:GetName()) --오브젝트의 이름을 문자열로 반환해요. 
 
-``` 
-<br>
+``` 
 <br>
 <br>
 | **RModeObject GetParent(string ParentName)** |
 | :--- |
 
-이름으로 부모 객체를 얻을 수 있어요. (찾고싶은 부모 객체 이름) 
-<br>
+이름으로 부모 객체를 얻을 수 있어요. (찾고싶은 부모 객체 이름) 
 <br>
 <br>
 | **RModeObject GetChild(string ChildName)** |
 | :--- |
 
-이름으로 자식 객체를 얻을 수 있어요. (찾고싶은 자식 객체 이름) 
-<br>
+이름으로 자식 객체를 얻을 수 있어요. (찾고싶은 자식 객체 이름) 
 <br>
 <br>
 | **RModeObject GetGetSibling(string Name)** |
 | :--- |
 
-이름으로 형제 객체를 얻을 수 있어요. (찾고싶은 형제 객체 이름) 
-<br>
+이름으로 형제 객체를 얻을 수 있어요. (찾고싶은 형제 객체 이름) 
 <br>
 <br>
 | **List<RScriptObject> GetChildList()** |
 | :--- |
 
-자식 객체의 리스트를 얻을 수 있어요. 
+자식 객체의 리스트를 얻을 수 있어요. 
 샘플
 
 ```lua
 
-local uiList = Workspace.HUD:GetChildList() --오브젝트의 자식 오브젝트를 리스트로 반환해요. 
+local uiList = Workspace.HUD:GetChildList() --오브젝트의 자식 오브젝트를 리스트로 반환해요. 
 
-for i = 1, #uiList do --리스트앞에 #을 붙여 리스트의 길이를 가져올 수 있어요. 
+for i = 1, #uiList do --리스트앞에 #을 붙여 리스트의 길이를 가져올 수 있어요. 
 
-print(uiList[i]:GetName()) 
+print(uiList[i]:GetName()) 
 
-end 
+end 
 
-``` 
-<br>
+``` 
 <br>
 <br>
 | **bool IsCharacter()** |
 | :--- |
 
-캐릭터인지 확인할 수 있어요. 
+캐릭터인지 확인할 수 있어요. 
 샘플
 
 ```lua
 
-local cube = Workspace.Cube 
+local cube = Workspace.Cube 
 
-if cube:IsCharacter() == true then --오브젝트가 Character면 true를 반환해요. 
+if cube:IsCharacter() == true then --오브젝트가 Character면 true를 반환해요. 
 
-print(cube:GetName() .. " Is Character") 
+print(cube:GetName() .. " Is Character") 
 
-end 
+end 
 
-``` 
-<br>
+``` 
 <br>
 <br>
 | **bool IsStaticMesh()** |
 | :--- |
 
-스테틱 메시인지 확인할 수 있어요. 
+스테틱 메시인지 확인할 수 있어요. 
 샘플
 
 ```lua
 
-local cube = Workspace.Cube 
+local cube = Workspace.Cube 
 
-if cube:IsStaticMesh() == true then --오브젝트가 StaticMesh면 true를 반환해요. 
+if cube:IsStaticMesh() == true then --오브젝트가 StaticMesh면 true를 반환해요. 
 
-print(cube:GetName() .. " Is StaticMesh") 
+print(cube:GetName() .. " Is StaticMesh") 
 
-end 
+end 
 
-``` 
-<br>
+``` 
 <br>
 <br>
 | **bool IsFX()** |
 | :--- |
 
-FX인지 확인할 수 있어요. 
+FX인지 확인할 수 있어요. 
 샘플
 
 ```lua
 
-local cube = Workspace.Cube 
+local cube = Workspace.Cube 
 
-if cube:IsFX() == true then --오브젝트가 FX면 true를 반환해요. 
+if cube:IsFX() == true then --오브젝트가 FX면 true를 반환해요. 
 
-print(cube:GetName() .. " Is FX") 
+print(cube:GetName() .. " Is FX") 
 
-end 
+end 
 
-``` 
-<br>
+``` 
 <br>
 <br>
 | **bool IsSound()** |
 | :--- |
 
-Sound인지 확인할 수 있어요. 
+Sound인지 확인할 수 있어요. 
 샘플
 
 ```lua
 
-local cube = Workspace.Cube 
+local cube = Workspace.Cube 
 
-if cube:IsSound() == true then --오브젝트가 Sound면 true를 반환해요. 
+if cube:IsSound() == true then --오브젝트가 Sound면 true를 반환해요. 
 
-print(cube:GetName() .. " Is Sound") 
+print(cube:GetName() .. " Is Sound") 
 
-end 
+end 
 
-``` 
-<br>
+``` 
 <br>
 <br>
 | **bool IsPointLight()** |
 | :--- |
 
-포인트 라이트인지 확인할 수 있어요. 
+포인트 라이트인지 확인할 수 있어요. 
 샘플
 
 ```lua
 
-local cube = Workspace.Cube 
+local cube = Workspace.Cube 
 
-if cube:IsPointLight() == true then --오브젝트가 PointLight면 true를 반환해요. 
+if cube:IsPointLight() == true then --오브젝트가 PointLight면 true를 반환해요. 
 
-print(cube:GetName() .. " Is PointLight") 
+print(cube:GetName() .. " Is PointLight") 
 
-end 
+end 
 
-``` 
-<br>
+``` 
 <br>
 <br>
 | **bool IsSpotLight()** |
 | :--- |
 
-스포트 라이트인지 확인할 수 있어요. 
+스포트 라이트인지 확인할 수 있어요. 
 샘플
 
 ```lua
 
-local cube = Workspace.Cube 
+local cube = Workspace.Cube 
 
-if cube:IsSpotLight() == true then --오브젝트가 SpotLight면 true를 반환해요. 
+if cube:IsSpotLight() == true then --오브젝트가 SpotLight면 true를 반환해요. 
 
-print(cube:GetName() .. " Is SpotLight") 
+print(cube:GetName() .. " Is SpotLight") 
 
-end 
+end 
 
-``` 
-<br>
+``` 
 <br>
 <br>
 | **bool IsSurfaceUI()** |
 | :--- |
 
-서피스 UI인지 확인할 수 있어요. 
+서피스 UI인지 확인할 수 있어요. 
 샘플
 
 ```lua
 
-local cube = Workspace.Cube 
+local cube = Workspace.Cube 
 
-if cube:IsSurfaceUI() == true then --오브젝트가 SurfaceUI면 true를 반환해요. 
+if cube:IsSurfaceUI() == true then --오브젝트가 SurfaceUI면 true를 반환해요. 
 
-print(cube:GetName() .. " Is SurfaceUI") 
+print(cube:GetName() .. " Is SurfaceUI") 
 
-end 
+end 
 
-``` 
-<br>
+``` 
 <br>
 <br>
 | **bool IsScreenUI()** |
 | :--- |
 
-스크린 UI인지 확인할 수 있어요. 
+스크린 UI인지 확인할 수 있어요. 
 샘플
 
 ```lua
 
-local cube = Workspace.Cube 
+local cube = Workspace.Cube 
 
-if cube:IsScreenUI() == true then --오브젝트가 ScreenUI면 true를 반환해요. 
+if cube:IsScreenUI() == true then --오브젝트가 ScreenUI면 true를 반환해요. 
 
-print(cube:GetName() .. " Is ScreenUI") 
+print(cube:GetName() .. " Is ScreenUI") 
 
-end 
+end 
 
-``` 
-<br>
+``` 
 <br>
 <br>
 | **bool IsItem()** |
 | :--- |
 
-아이템인지 확인할 수 있어요. 
+아이템인지 확인할 수 있어요. 
 샘플
 
 ```lua
 
-local cube = Workspace.Cube 
+local cube = Workspace.Cube 
 
-if cube:IsItem() == true then --오브젝트가 Item면 true를 반환해요. 
+if cube:IsItem() == true then --오브젝트가 Item면 true를 반환해요. 
 
-print(cube:GetName() .. " Is Item") 
+print(cube:GetName() .. " Is Item") 
 
-end 
+end 
 
-``` 
-<br>
+``` 
 <br>
 <br>
 | **bool IsNPC()** |
 | :--- |
 
-NPC인지 확인할 수 있어요. 
+NPC인지 확인할 수 있어요. 
 샘플
 
 ```lua
 
-local cube = Workspace.Cube 
+local cube = Workspace.Cube 
 
-if cube:IsNPC() == true then --오브젝트가 NPC면 true를 반환해요. 
+if cube:IsNPC() == true then --오브젝트가 NPC면 true를 반환해요. 
 
-print(cube:GetName() .. " Is NPC") 
+print(cube:GetName() .. " Is NPC") 
 
-end 
+end 
 
-``` 
-<br>
+``` 
 <br>
 <br>
 | **bool IsFolder()** |
 | :--- |
 
-폴더인지 확인할 수 있어요. 
+폴더인지 확인할 수 있어요. 
 샘플
 
 ```lua
 
-local cube = Workspace.Cube 
+local cube = Workspace.Cube 
 
-if cube:IsFolder() == true then --오브젝트가 Folder면 true를 반환해요. 
+if cube:IsFolder() == true then --오브젝트가 Folder면 true를 반환해요. 
 
-print(cube:GetName() .. " Is Folder") 
+print(cube:GetName() .. " Is Folder") 
 
-end 
+end 
 
-``` 
-<br>
+``` 
 <br>
 <br>
 | **bool IsScript()** |
 | :--- |
 
-스트립트인지 확인할 수 있어요. 
+스트립트인지 확인할 수 있어요. 
 샘플
 
 ```lua
 
-local cube = Workspace.Cube 
+local cube = Workspace.Cube 
 
-if cube:IsScript() == true then --오브젝트가 Script면 true를 반환해요. 
+if cube:IsScript() == true then --오브젝트가 Script면 true를 반환해요. 
 
-print(cube:GetName() .. " Is Script") 
+print(cube:GetName() .. " Is Script") 
 
-end 
+end 
 
-``` 
-<br>
+``` 
 <br>
 <br>
 | **bool IsCollider()** |
 | :--- |
 
-Collider인지 확인할 수 있어요. 
+Collider인지 확인할 수 있어요. 
 샘플
 
 ```lua
 
-local cube = Workspace.Cube 
+local cube = Workspace.Cube 
 
-if cube:IsCollider() == true then --오브젝트가 Collider면 true를 반환해요. 
+if cube:IsCollider() == true then --오브젝트가 Collider면 true를 반환해요. 
 
-print(cube:GetName() .. " Is Collider") 
+print(cube:GetName() .. " Is Collider") 
 
-end 
+end 
 
-``` 
-<br>
+``` 
 <br>
 <br>
 | **bool IsWidget()** |
 | :--- |
 
-Widget인지 확인할 수 있어요. 
+Widget인지 확인할 수 있어요. 
 샘플
 
 ```lua
 
-local cube = Workspace.Cube 
+local cube = Workspace.Cube 
 
-if cube:IsWidget() == true then --오브젝트가 Widget면 true를 반환해요. 
+if cube:IsWidget() == true then --오브젝트가 Widget면 true를 반환해요. 
 
-print(cube:GetName() .. " Is Widget") 
+print(cube:GetName() .. " Is Widget") 
 
-end 
+end 
 
-``` 
-<br>
+``` 
 <br>
 <br>
 | **bool IsCamera()** |
 | :--- |
 
-Camera인지 확인할 수 있어요. 
+Camera인지 확인할 수 있어요. 
 샘플
 
 ```lua
 
-local cube = Workspace.Cube 
+local cube = Workspace.Cube 
 
-if cube:IsCamera() == true then --오브젝트가 Camera면 true를 반환해요. 
+if cube:IsCamera() == true then --오브젝트가 Camera면 true를 반환해요. 
 
-print(cube:GetName() .. " Is Camera") 
+print(cube:GetName() .. " Is Camera") 
 
-end 
+end 
 
-``` 
-<br>
+``` 
 <br>
 <br>
 | **bool IsValid()** |
 | :--- |
 
-해당 오브젝트가 유효한지 확인 할 수있어요. 
-<br>
+해당 오브젝트가 유효한지 확인 할 수있어요. 
 <br>
 <br>
 | **AddReplicateValue(string ValueName, Vector Data, ReplicateType Type, float Time, bool bSaveToStorage)** |
 | :--- |
 
-해당 객체에 서버, 클라이언트 간 동기화가 가능한 벡터를 추가해요. (추가할 Value 이름, Vector 데이터, [Enum.ReplicateType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype), 동기화 시간, 스토리지 저장 여부) 
+해당 객체에 서버, 클라이언트 간 동기화가 가능한 벡터를 추가해요. (추가할 Value 이름, Vector 데이터, [Enum.ReplicateType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype), 동기화 시간, 스토리지 저장 여부) 
 샘플
 
 ```lua
 
---서버 스크립트에서------------- 
+--서버 스크립트에서------------- 
 
-Game:AddReplicateValue("SomeVector", Vector.new(0, 50, 0), Enum.ReplicateType.Changed, 0, false) --서버와 클라이언트간 동기화되는 값을 등록하고 초기값을 설정한뒤, 값이 변경될때마다 호출되게 해요. 
+Game:AddReplicateValue("SomeVector", Vector.new(0, 50, 0), Enum.ReplicateType.Changed, 0, false) --서버와 클라이언트간 동기화되는 값을 등록하고 초기값을 설정한뒤, 값이 변경될때마다 호출되게 해요. 
 
-print(Game.SomeVector) 
+print(Game.SomeVector) 
 
- 
+ 
 
---클라 스크립트에서------------- 
+--클라 스크립트에서------------- 
 
-print(Game.SomeVector) --서버에서 값이 바뀌었지만 클라에서도 동일하게 출력돼요. 
+print(Game.SomeVector) --서버에서 값이 바뀌었지만 클라에서도 동일하게 출력돼요. 
 
-``` 
-<br>
+``` 
 <br>
 <br>
 | **AddReplicateValue(string ValueName, float Data, ReplicateType Type, float Time, bool bSaveToStorage)** |
 | :--- |
 
-해당 객체에 서버, 클라이언트 간 동기화가 가능한 실수를 추가해요. (추가할 Value 이름, float 데이터, [Enum.ReplicateType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype), 동기화 시간, 스토리지 저장 여부) 
+해당 객체에 서버, 클라이언트 간 동기화가 가능한 실수를 추가해요. (추가할 Value 이름, float 데이터, [Enum.ReplicateType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype), 동기화 시간, 스토리지 저장 여부) 
 샘플
 
 ```lua
 
---서버 스크립트에서------------- 
+--서버 스크립트에서------------- 
 
-Game:AddReplicateValue("SomeNumber", 1, Enum.ReplicateType.Changed, 0, false) --서버와 클라이언트간 동기화되는 값을 등록하고 초기값을 설정한뒤, 값이 변경될때마다 호출되게 해요. 
+Game:AddReplicateValue("SomeNumber", 1, Enum.ReplicateType.Changed, 0, false) --서버와 클라이언트간 동기화되는 값을 등록하고 초기값을 설정한뒤, 값이 변경될때마다 호출되게 해요. 
 
-print(Game.SomeNumber .. " in Server") 
+print(Game.SomeNumber .. " in Server") 
 
- 
+ 
 
---클라 스크립트에서------------- 
+--클라 스크립트에서------------- 
 
-print(Game.SomeNumber .. " in Client") --서버에서 값이 바뀌었지만 클라에서도 동일하게 출력돼요. 
+print(Game.SomeNumber .. " in Client") --서버에서 값이 바뀌었지만 클라에서도 동일하게 출력돼요. 
 
-``` 
-<br>
+``` 
 <br>
 <br>
 | **AddReplicateValue(string ValueName, bool Data, ReplicateType Type, float Time, bool bSaveToStorage)** |
 | :--- |
 
-해당 객체에 서버, 클라이언트 간 동기화가 가능한 bool를 추가해요. (추가할 Value 이름, bool 데이터, [Enum.ReplicateType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype), 동기화 시간, 스토리지 저장 여부) 
+해당 객체에 서버, 클라이언트 간 동기화가 가능한 bool를 추가해요. (추가할 Value 이름, bool 데이터, [Enum.ReplicateType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype), 동기화 시간, 스토리지 저장 여부) 
 샘플
 
 ```lua
 
---서버 스크립트에서------------- 
+--서버 스크립트에서------------- 
 
-Game:AddReplicateValue("SomeBool", true, Enum.ReplicateType.Changed, 0, false) --서버와 클라이언트간 동기화되는 값을 등록하고 초기값을 설정한뒤, 값이 변경될때마다 호출되게 해요. 
+Game:AddReplicateValue("SomeBool", true, Enum.ReplicateType.Changed, 0, false) --서버와 클라이언트간 동기화되는 값을 등록하고 초기값을 설정한뒤, 값이 변경될때마다 호출되게 해요. 
 
-print(Game.SomeBool) 
+print(Game.SomeBool) 
 
- 
+ 
 
---클라 스크립트에서------------- 
+--클라 스크립트에서------------- 
 
-print(Game.SomeBool) --서버에서 값이 바뀌었지만 클라에서도 동일하게 출력돼요. 
+print(Game.SomeBool) --서버에서 값이 바뀌었지만 클라에서도 동일하게 출력돼요. 
 
-``` 
-<br>
+``` 
 <br>
 <br>
 | **AddReplicateValue(string ValueName, string Data, ReplicateType Type, float Time, bool bSaveToStorage)** |
 | :--- |
 
-해당 객체에 서버, 클라이언트 간 동기화가 가능한 문자열을 추가해요. (추가할 Value 이름, string 데이터, [Enum.ReplicateType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype), 동기화 시간, 스토리지 저장 여부) 
+해당 객체에 서버, 클라이언트 간 동기화가 가능한 문자열을 추가해요. (추가할 Value 이름, string 데이터, [Enum.ReplicateType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype), 동기화 시간, 스토리지 저장 여부) 
 샘플
 
 ```lua
 
---서버 스크립트에서------------- 
+--서버 스크립트에서------------- 
 
-Game:AddReplicateValue("SomeString", "Hello World!", Enum.ReplicateType.Changed, 0, false) --서버와 클라이언트간 동기화되는 값을 등록하고 초기값을 설정한뒤, 값이 변경될때마다 호출되게 해요. 
+Game:AddReplicateValue("SomeString", "Hello World!", Enum.ReplicateType.Changed, 0, false) --서버와 클라이언트간 동기화되는 값을 등록하고 초기값을 설정한뒤, 값이 변경될때마다 호출되게 해요. 
 
-print(Game.SomeString) 
+print(Game.SomeString) 
 
- 
+ 
 
---클라 스크립트에서------------- 
+--클라 스크립트에서------------- 
 
-print(Game.SomeString) --서버에서 값이 바뀌었지만 클라에서도 동일하게 출력돼요. 
+print(Game.SomeString) --서버에서 값이 바뀌었지만 클라에서도 동일하게 출력돼요. 
 
-``` 
-<br>
+``` 
 <br>
 <br>
 | **AddReplicateValue(string ValueName, Color Data, ReplicateType Type, float Time, bool bSaveToStorage)** |
 | :--- |
 
-해당 객체에 서버, 클라이언트 간 동기화가 가능한 컬러를 추가해요. (추가할 Value 이름, Color 데이터, [Enum.ReplicateType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype), 동기화 시간, 스토리지 저장 여부) 
+해당 객체에 서버, 클라이언트 간 동기화가 가능한 컬러를 추가해요. (추가할 Value 이름, Color 데이터, [Enum.ReplicateType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype), 동기화 시간, 스토리지 저장 여부) 
 샘플
 
 ```lua
 
---서버 스크립트에서------------- 
+--서버 스크립트에서------------- 
 
-Game:AddReplicateValue("SomeColor", Color.new(255, 0, 0, 255), Enum.ReplicateType.Changed, 0, false) --서버와 클라이언트간 동기화되는 값을 등록하고 초기값을 설정한뒤, 값이 변경될때마다 호출되게 해요. 
+Game:AddReplicateValue("SomeColor", Color.new(255, 0, 0, 255), Enum.ReplicateType.Changed, 0, false) --서버와 클라이언트간 동기화되는 값을 등록하고 초기값을 설정한뒤, 값이 변경될때마다 호출되게 해요. 
 
-print(Game.SomeColor) 
+print(Game.SomeColor) 
 
- 
+ 
 
---클라 스크립트에서------------- 
+--클라 스크립트에서------------- 
 
-print(Game.SomeColor) --서버에서 값이 바뀌었지만 클라에서도 동일하게 출력돼요. 
+print(Game.SomeColor) --서버에서 값이 바뀌었지만 클라에서도 동일하게 출력돼요. 
 
-``` 
-<br>
+``` 
 <br>
 <br>
 | **AddSaveValue(string ValueName, Vector Data)** |
 | :--- |
 
-해당 객체 저장소에 벡터를 추가해요. (Value 이름, Vector 데이터) 
-<br>
+해당 객체 저장소에 벡터를 추가해요. (Value 이름, Vector 데이터) 
 <br>
 <br>
 | **AddSaveValue(string ValueName, float Data)** |
 | :--- |
 
-해당 객체 저장소에 실수를 추가해요. (Value 이름, float 데이터) 
-<br>
+해당 객체 저장소에 실수를 추가해요. (Value 이름, float 데이터) 
 <br>
 <br>
 | **AddSaveValue(string ValueName, bool Data)** |
 | :--- |
 
-해당 객체 저장소에 bool을 추가해요. (Value 이름, bool 데이터) 
-<br>
+해당 객체 저장소에 bool을 추가해요. (Value 이름, bool 데이터) 
 <br>
 <br>
 | **AddSaveValue(string ValueName, string Data)** |
 | :--- |
 
-해당 객체 저장소에 문자열을 추가해요. (Value 이름, string 데이터) 
-<br>
+해당 객체 저장소에 문자열을 추가해요. (Value 이름, string 데이터) 
 <br>
 <br>
 | **AddSaveValue(string ValueName, Color Data)** |
 | :--- |
 
-해당 객체 저장소에 칼라를 추가해요. (Value 이름, Color 데이터) 
+해당 객체 저장소에 칼라를 추가해요. (Value 이름, Color 데이터) 
