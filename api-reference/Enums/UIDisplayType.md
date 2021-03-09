@@ -1,4 +1,4 @@
-
+
 SurfaceUI 의 DisplayType 
 <br>
 ## **Enums**
@@ -9,9 +9,9 @@ SurfaceUI 의 DisplayType
 | --- |
 | **Billboard** |
 | --- |
-
+
 샘플 
-
+
 ```lua
 local PlayerNameUI = HUD.PlayerNameUI
 PlayerNameUI:SetVisible(false)

@@ -1,4 +1,4 @@
-
+
 변환 컨트롤러 실행방식을 결정하는 타입이에요. 
 <br>
 ## **Enums**
@@ -7,9 +7,9 @@
  --- | --- |
 **Repeat** |변환 컨트롤러를 반복해서 실행하는 타입이에요. |
 **Tween** |변환 컨트롤러를 왕복해서 실행하는 타입이에요. |
-
+
 샘플 
-
+
 ```lua
 local cube = Workspace.Cube
 local moveSpeed = 2
