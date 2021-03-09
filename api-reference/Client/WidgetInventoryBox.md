@@ -7,25 +7,35 @@
 ## **함수**
 
 <br>
+<br>
+<br>
 | **SetBackgroundColor(Number Count)** |
 | :--- |
 
 GridBox의 행 개수를 설정 할 수 있어요. (Number Count) 
+<br>
+<br>
 <br>
 | **SetBackgroundColor(Number Value)** |
 | :--- |
 
 GridBox의 행 사이를 설정 할 수 있어요. (Number Value) 
 <br>
+<br>
+<br>
 | **SetHeightPadding(Number Value)** |
 | :--- |
 
 GridBox의 열 사이를 설정 할 수 있어요. (Number Value) 
 <br>
+<br>
+<br>
 | **SetHeightPadding(Number XSize, Number YSize)** |
 | :--- |
 
 GridBox의 슬롯의 사이즈를 설정 할 수 있어요. (float XSize, float YSize) 
+<br>
+<br>
 <br>
 | **SetBackgroundColor(Color color)** |
 | :--- |
@@ -39,10 +49,14 @@ local someFrame = Workspace.ScreenUI.someFrame
 someFrame:SetBackgroundColor(Color.new(0, 0, 255, 255)) --프레임 UI의 바탕 색상을 변경해요.
 ```
 <br>
+<br>
+<br>
 | **SetContentTransparency(float Value)** |
 | :--- |
 
 GridBox의 투명도를 설정할 수 있어요. (float Value) 
+<br>
+<br>
 <br>
 | **SetOrientationType(ScrollOrientationType Type)** |
 | :--- |

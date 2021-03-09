@@ -4,6 +4,8 @@
 ## **함수**
 
 <br>
+<br>
+<br>
 | **SetItemCount(int count)** |
 | :--- |
 

@@ -92,6 +92,8 @@ camera.ZoomMax = 40
 ## **함수**
 
 <br>
+<br>
+<br>
 | **SetLookAtTarget(FRScriptObject ScriptObject)** |
 | :--- |
 
@@ -109,6 +111,8 @@ LocalPlayer:ResetIgnoreLookInput() --카메라 조작을 초기화해요.
 characterCamera.Parent = targetCharacter --카메라의 부모 오브젝트를 설정해요.
 characterCamera:SetLookAtTarget(nil) --카메라가 대상 오브젝트를 바라보게 해요. (nil이면 바라보지 않아요.)
 ```
+<br>
+<br>
 <br>
 | **ZoomInOut(float Value)** |
 | :--- |

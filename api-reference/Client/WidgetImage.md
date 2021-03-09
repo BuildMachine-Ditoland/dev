@@ -7,6 +7,8 @@
 ## **함수**
 
 <br>
+<br>
+<br>
 | **SetBackgroundColor(Color color)** |
 | :--- |
 

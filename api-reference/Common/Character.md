@@ -4,6 +4,8 @@
 ## **함수**
 
 <br>
+<br>
+<br>
 | **bool IsDie()** |
 | :--- |
 
@@ -18,6 +20,8 @@ if character:IsDie() == true then --캐릭터가 죽으면 true를 반환해요.
 end
 ```
 <br>
+<br>
+<br>
 | **bool IsFly()** |
 | :--- |
 
@@ -29,6 +33,8 @@ end
 local character = LocalPlayer:GetRemotePlayer():GetCharacter()
 print(character:IsFly()) --캐릭터가 점프중이면 true를 반환해요.
 ```
+<br>
+<br>
 <br>
 | **IsCanJump()** |
 | :--- |
@@ -42,6 +48,8 @@ local character = LocalPlayer:GetRemotePlayer():GetCharacter()
 print(character:IsCanJump()) --캐릭터가 점프할 수 있는 상태면 true를 반환해요.
 ```
 <br>
+<br>
+<br>
 | **float GetMoveSpeed()** |
 | :--- |
 
@@ -53,6 +61,8 @@ print(character:IsCanJump()) --캐릭터가 점프할 수 있는 상태면 true�
 local character = LocalPlayer:GetRemotePlayer():GetCharacter()
 print(character:GetMoveSpeed()) --이동중인 캐릭터의 이동속도를 숫자로 반환해요.
 ```
+<br>
+<br>
 <br>
 | **SetTransform(Matrix)** |
 | :--- |
@@ -68,6 +78,8 @@ targetTransform:SetRotation(Vector.new(0, 100, 0))
 character:SetTransform(targetTransform) --오브젝트를 보간으로 이동시켜요. (캐릭터는 보간없이 움직여요.)
 ```
 <br>
+<br>
+<br>
 | **GetTransform(Matrix)** |
 | :--- |
 
@@ -78,6 +90,8 @@ character:SetTransform(targetTransform) --오브젝트를 보간으로 이동시
 ```lua
 local targetTransform = Game:GetAllPlayer()[1]:GetTransform()
 ```
+<br>
+<br>
 <br>
 | **void SetLocation(Vector Location)** |
 | :--- |
@@ -93,6 +107,8 @@ targetTransform:SetRotation(Vector.new(0, 100, 0))
 character:SetTransform(targetTransform) --오브젝트를 보간으로 이동시켜요. (캐릭터는 보간없이 움직여요.)
 ```
 <br>
+<br>
+<br>
 | **Vector GetLocation()** |
 | :--- |
 
@@ -104,6 +120,8 @@ character:SetTransform(targetTransform) --오브젝트를 보간으로 이동시
 local character = Game:GetAllPlayer()[1]:GetCharacter()
 local characterPos = character:GetTransform():GetLocation() --캐릭터의 위치값을 Vector로 반환해요.
 ```
+<br>
+<br>
 <br>
 | **Vector GetForwardVector()** |
 | :--- |

@@ -4,6 +4,8 @@
 ## **함수**
 
 <br>
+<br>
+<br>
 | **Player GetPlayer()** |
 | :--- |
 
@@ -16,6 +18,8 @@ local character = Game:GetAllPlayer()[1]:GetCharacter()
 local player = character:GetPlayer() --캐릭터의 플레이어를 반환해요.
 ```
 <br>
+<br>
+<br>
 | **string GetPlayerName()** |
 | :--- |
 
@@ -27,6 +31,8 @@ local player = character:GetPlayer() --캐릭터의 플레이어를 반환해요
 local character = Game:GetAllPlayer()[1]:GetCharacter()
 print(character:GetPlayerName()) --캐릭터의 플레이어 이름을 문자열로 반환해요.
 ```
+<br>
+<br>
 <br>
 | **bool IsDriving()** |
 | :--- |
@@ -42,6 +48,8 @@ if character:IsDriving() then
 end
 ```
 <br>
+<br>
+<br>
 | **ObjectFXClient CreateFX(ObjectFXClient FXObject, Bone BoneType)** |
 | :--- |
 
@@ -54,6 +62,8 @@ local character = LocalPlayer:GetRemotePlayer():GetCharacter()
 character:CreateFX(Workspace.Effect, Enum.Bone.Body) --캐릭터의 특정 부위에 이펙트를 생성해요.
 ```
 <br>
+<br>
+<br>
 | **ObjectSoundClient CreateSound(ObjectSoundClient SoundObject)** |
 | :--- |
 
@@ -65,6 +75,8 @@ character:CreateFX(Workspace.Effect, Enum.Bone.Body) --캐릭터의 특정 부�
 local character = LocalPlayer:GetRemotePlayer():GetCharacter()
 character:CreateSound(Workspace.Sound)
 ```
+<br>
+<br>
 <br>
 | **AddPlayerHUD(string UIName, UISceen UI, UIDisplayType Type)** |
 | :--- |
@@ -84,6 +96,8 @@ end
 Game.OnSpawnCharacter:Connect(spawn)
 ```
 <br>
+<br>
+<br>
 | **RemovePlayerHUD(string UIName)** |
 | :--- |
 
@@ -95,6 +109,8 @@ UI HUD를 제거해요. (제거하고 싶은 UI 이름)
 local character = LocalPlayer:GetRemotePlayer():GetCharacter()
 character:RemovePlayerHUD("Name") --캐릭터에 추가된 HUD를 이름으로 찾아서 삭제해요.
 ```
+<br>
+<br>
 <br>
 | **RemovePlayerAllHUD()** |
 | :--- |
@@ -108,6 +124,8 @@ local character = LocalPlayer:GetRemotePlayer():GetCharacter()
 character:RemovePlayerAllHUD() --캐릭터에 추가된 모든 HUD를 삭제해요.
 ```
 <br>
+<br>
+<br>
 | **GetPlayerHUD(string UIName)** |
 | :--- |
 
@@ -120,6 +138,8 @@ local character = LocalPlayer:GetRemotePlayer():GetCharacter()
 local playerNameUI = character:GetPlayerHUD("Name") --캐릭터에 추가된 HUD를 이름으로 찾아서 반환해요.                      
 playerNameUI.Text:SetTextColor(Color.new(255, 0, 0, 255)) 
 ```
+<br>
+<br>
 <br>
 | **bool IsMyCharacter()** |
 | :--- |
@@ -135,6 +155,8 @@ if character:IsMyCharacter() then --캐릭터가 자신의 캐릭터이면 true�
 end
 ```
 <br>
+<br>
+<br>
 | **void AttachAt(RModeObject ModeObject, BoneType Bone)** |
 | :--- |
 
@@ -146,6 +168,8 @@ end
 local character = LocalPlayer:GetRemotePlayer():GetCharacter()
 character:AttachAt(Workspace.Cube, Enum.Bone.Body) --캐릭터의 부위를 오브젝트의 중점에 부착시켜요.
 ```
+<br>
+<br>
 <br>
 | **void AttachAtTop(RModeObject ModeObject, BoneType Bone)** |
 | :--- |

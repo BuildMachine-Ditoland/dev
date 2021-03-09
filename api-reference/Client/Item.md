@@ -4,10 +4,14 @@
 ## **함수**
 
 <br>
+<br>
+<br>
 | **Detach()** |
 | :--- |
 
 플레이어 캐릭터에 붙어 있는 아이템을 해제할 수 있어요. 
+<br>
+<br>
 <br>
 | **AddAction(string ActionName, Key ActionKey, float ActionCoolTime, bool bAutoAction, LuaScriptFunction Function)** |
 | :--- |
@@ -32,6 +36,8 @@ end
 item:AddAction("Fire", Enum.Key.LeftMouseButton, coolTime, isAutoAction, StartClick) --아이템에 키 입력시 호출할 함수를 연결해요.
 item:AddToggleAction("CheckAction", coolTime, Enum.Key.LeftMouseButton, StartClick, EndClick) --아이템에 착용 후 토글 액션을 추가해요.
 ```
+<br>
+<br>
 <br>
 | **AddToggleAction(string ActionName, float ActionCoolTime, Key ActionKey, LuaScriptFunction StartFunction, LuaScriptFunction EndFunction)** |
 | :--- |

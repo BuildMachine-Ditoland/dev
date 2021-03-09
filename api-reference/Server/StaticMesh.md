@@ -4,6 +4,8 @@
 ## **함수**
 
 <br>
+<br>
+<br>
 | **SetColor(Color ChangeColor)** |
 | :--- |
 
@@ -15,6 +17,8 @@ StaticMesh의 색을 변경해요. (변경할 [Color](https://ditoland-챙utplus
 Workspace.Cube:SetColor(Color.new(255, 0, 0, 255)) --오브젝트의 색상을 변경해요. (r, g, b, a)
 ```
 <br>
+<br>
+<br>
 | **Color GetColor()** |
 | :--- |
 
@@ -25,6 +29,8 @@ Workspace.Cube:SetColor(Color.new(255, 0, 0, 255)) --오브젝트의 색상을 �
 ```lua
 local color = Workspace.Cube:GetColor() --오브젝트의 색상을 Color로 반환해요.
 ```
+<br>
+<br>
 <br>
 | **SetSimulatePhysics(ESimulatePhysicsType Type)** |
 | :--- |

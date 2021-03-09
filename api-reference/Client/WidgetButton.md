@@ -7,15 +7,21 @@
 ## **함수**
 
 <br>
+<br>
+<br>
 | **SetText(int Value)** |
 | :--- |
 
 위젯의 텍스트를 주어진 정수로 변경해요. (변경할 정수 값) 
 <br>
+<br>
+<br>
 | **SetText(float Value)** |
 | :--- |
 
 위젯의 텍스트를 주어진 실수로 변경해요. ( 변경할 실수 값) 
+<br>
+<br>
 <br>
 | **SetText(string InText)** |
 | :--- |
@@ -29,6 +35,8 @@ local someText = Workspace.ScreenUI.someText
 someText:SetText("Hello World!") --텍스트 UI에 내용을 표시해요.
 ```
 <br>
+<br>
+<br>
 | **string GetText()** |
 | :--- |
 
@@ -40,6 +48,8 @@ someText:SetText("Hello World!") --텍스트 UI에 내용을 표시해요.
 local someText = Workspace.ScreenUI.someText
 local uiText = someText:GetText() --텍스트 UI의 내용을 문자열로 반환해요.
 ```
+<br>
+<br>
 <br>
 | **SetTextColor(string WidgetName, Color color)** |
 | :--- |
@@ -53,6 +63,8 @@ local someText = Workspace.ScreenUI.someText
 someText:SetTextColor(Color.new(0, 255, 0, 255)) --텍스트 UI의 글자 색상을 변경해요.
 ```
 <br>
+<br>
+<br>
 | **SetBackgroundColor(Color color)** |
 | :--- |
 
@@ -65,10 +77,14 @@ local someFrame = Workspace.ScreenUI.someFrame
 someFrame:SetBackgroundColor(Color.new(0, 0, 255, 255)) --프레임 UI의 바탕 색상을 변경해요.
 ```
 <br>
+<br>
+<br>
 | **SetButtonHoverColor(Color color)** |
 | :--- |
 
 버튼 위젯의 Hover 색을 설정할 수 있어요. (변경할 색) 
+<br>
+<br>
 <br>
 | **SetButtonPressColor(Color color)** |
 | :--- |

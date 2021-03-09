@@ -24,12 +24,16 @@ team.MaxPlayerCount = 5 --팀의 최대 인원을 설정해요.
 ## **함수**
 
 <br>
+<br>
+<br>
 | **AddUsingCharacter(RCharacterSetting CharacterSettingObject)** |
 | :--- |
 
 팀에서 사용될 캐릭터 설정을 추가할 수 있어요. (캐릭터 설정 오브젝트) 
 
 [Game:AddCharacterSetting](https://ditoland-utplus.gitbook.io/ditoland/api-reference/server/game)으로 추가한 캐릭터설정 중에서만 가능해요 
+<br>
+<br>
 <br>
 | **SetUsingSpawnPointGroup(string InSpawnPointGroup)** |
 | :--- |
@@ -38,6 +42,8 @@ team.MaxPlayerCount = 5 --팀의 최대 인원을 설정해요.
 
 Game:AddSpawnPointGroup으로 추가한 스폰 그룹 중에서만 가능해요 
 <br>
+<br>
+<br>
 | **AddFixedCharacter(RCharacterSetting CharacterSettingObject)** |
 | :--- |
 
@@ -45,10 +51,14 @@ Game:AddSpawnPointGroup으로 추가한 스폰 그룹 중에서만 가능해요
 
 [Game:AddCharacterSetting](https://ditoland-utplus.gitbook.io/ditoland/api-reference/server/game)으로 추가한 캐릭터설정 중에서만 가능해요 
 <br>
+<br>
+<br>
 | **AddFixedSpawnPoint(RSpawnPoint* SpawnPoint)** |
 | :--- |
 
 팀 고정 스폰 포인트를 추가할 수 있어요. (스폰 포인트 오브젝트) 
+<br>
+<br>
 <br>
 | **ReviveTeamPlayerCharacter()** |
 | :--- |

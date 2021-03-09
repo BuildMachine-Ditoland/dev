@@ -7,6 +7,8 @@
 ## **함수**
 
 <br>
+<br>
+<br>
 | **SetBackgroundColor(Color color)** |
 | :--- |
 
@@ -19,20 +21,28 @@ local someFrame = Workspace.ScreenUI.someFrame
 someFrame:SetBackgroundColor(Color.new(0, 0, 255, 255)) --프레임 UI의 바탕 색상을 변경해요.
 ```
 <br>
+<br>
+<br>
 | **SetContentTransparency(Number Value)** |
 | :--- |
 
 ListView의 투명도를 설정할 수 있어요. (Number Value) 
+<br>
+<br>
 <br>
 | **SetContentTransparency(Number Value)** |
 | :--- |
 
 ListView의 윗쪽 사이를 설정 할 수 있어요. (Number Value) 
 <br>
+<br>
+<br>
 | **SetContentTransparency(Number XSize, Number YSize)** |
 | :--- |
 
 ListView의 슬롯 사이즈를 설정 할 수 있어요. (Number XSize, Number YSize) 
+<br>
+<br>
 <br>
 | **SetIsStretch(bool bOn)** |
 | :--- |

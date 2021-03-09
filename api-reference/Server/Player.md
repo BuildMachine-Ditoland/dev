@@ -4,6 +4,8 @@
 ## **함수**
 
 <br>
+<br>
+<br>
 | **RModeServerCharacter GetCharacter()** |
 | :--- |
 
@@ -16,6 +18,8 @@ local player = Game:GetAllPlayer()[1]
 local character = player:GetCharacter() --플레이어의 캐릭터를 반환해요.
 ```
 <br>
+<br>
+<br>
 | **string GetPlayerName()** |
 | :--- |
 
@@ -27,6 +31,8 @@ local character = player:GetCharacter() --플레이어의 캐릭터를 반환해
 local character = Game:GetAllPlayer()[1]:GetCharacter()
 print(character:GetPlayerName()) --캐릭터의 플레이어 이름을 문자열로 반환해요.
 ```
+<br>
+<br>
 <br>
 | **string GetTeamName()** |
 | :--- |
@@ -57,6 +63,8 @@ end
 Game.OnSpawnCharacter:Connect(SpawnCharacter) 
 ```
 <br>
+<br>
+<br>
 | **int GetLifeCount()** |
 | :--- |
 
@@ -68,6 +76,8 @@ Game.OnSpawnCharacter:Connect(SpawnCharacter)
 local player = Game:GetAllPlayer()[1] 
 print(player:GetLifeCount())
 ```
+<br>
+<br>
 <br>
 | **KillCharacter()** |
 | :--- |
@@ -81,6 +91,8 @@ local player = Game:GetAllPlayer()[1]
 player:KillCharacter() --플레이어의 캐릭터를 죽여요.
 ```
 <br>
+<br>
+<br>
 | **RespawnCharacter()** |
 | :--- |
 
@@ -93,15 +105,21 @@ local player = Game:GetAllPlayer()[1]
 player:RespawnCharacter() --플레이어의 캐릭터를 리스폰해요.
 ```
 <br>
+<br>
+<br>
 | **SetCheckPoint(RSpawnPoint SpawnPointObject)** |
 | :--- |
 
 플레이어의 체크 포인트를 설정할 수 있어요 (설정할 스폰 포인트 오브젝트) 
 <br>
+<br>
+<br>
 | **SetCheckPoint(RWorldObject WorldObject)** |
 | :--- |
 
 플레이어의 체크 포인트를 설정할 수 있어요 (설정할 월드 오브젝트) 
+<br>
+<br>
 <br>
 | **SetFreeCamMode(bool bFreeCam)** |
 | :--- |
@@ -115,6 +133,8 @@ local player = Game:GetAllPlayer()[1]
 player:SetFreeCamMode(true)
 ```
 <br>
+<br>
+<br>
 | **RequestFreeCam(float WaitTime)** |
 | :--- |
 
@@ -127,10 +147,14 @@ local player = Game:GetAllPlayer()[1]
 player:RequestFreeCam(3) --3초후 프리캠이 시작되요.
 ```
 <br>
+<br>
+<br>
 | **int GiveItem(ModeItemServer Item, int Count)** |
 | :--- |
 
 플레이어에게 아이템을 줄 수 있어요. (줄 아이템, 개수) return 인벤토리 인텍스 
+<br>
+<br>
 <br>
 | **int GiveItem(ModeItemServer Item)** |
 | :--- |
@@ -147,6 +171,8 @@ wait(2)
 player:GiveItem(item) --플레이어에게 아이템을 지급해요.
 ```
 <br>
+<br>
+<br>
 | **int GetInventorySize()** |
 | :--- |
 
@@ -158,6 +184,8 @@ player:GiveItem(item) --플레이어에게 아이템을 지급해요.
 local player = Game:GetAllPlayer()[1]
 print(player:GetInventorySize()) --플레이어의 인벤토리 사이즈를 숫자로 반환해요.
 ```
+<br>
+<br>
 <br>
 | **ClearItem()** |
 | :--- |
@@ -176,6 +204,8 @@ local function ClearItem(character)
 end
 Game.OnDeathCharacter:Connect(ClearItem)
 ```
+<br>
+<br>
 <br>
 | **EquipInventoryItem(int InventoryIndex)** |
 | :--- |
@@ -208,6 +238,8 @@ end
 collider.OnBeginOverlapEvent:Connect(GetItem)
 ```
 <br>
+<br>
+<br>
 | **SetEnableCollisionBetweenCharacters(bool Enable)** |
 | :--- |
 
@@ -219,6 +251,8 @@ collider.OnBeginOverlapEvent:Connect(GetItem)
 local player = Game:GetAllPlayer()[1]
 player:SetEnableCollisionBetweenCharacters(false) --특정 플레이어가 다른 캐릭터와 충돌되지 않게 설정해요.
 ```
+<br>
+<br>
 <br>
 | **SetUserCollisionTypeResponse(string UserCollisionType, CollisionResponse Response)** |
 | :--- |
@@ -233,6 +267,8 @@ Game:AddUserCollisionType("CollisionTag1") --유저 충돌 타입을 추가해�
 cube:SetUserCollisionTypeResponse("CollisionTag1", Enum.CollisionResponse.Overlap) --유저 타입 충돌 물체의 충돌 시 처리를 변경하는 함수에요.
 ```
 <br>
+<br>
+<br>
 | **bool HaveInventorySaveData()** |
 | :--- |
 
@@ -245,10 +281,14 @@ local player = Game:GetAllPlayer()[1]
 print(player:HaveInventorySaveData()) --저장소에 인번토리에 대한 데이터가 저장되어 있으면 true를 반환해요.
 ```
 <br>
+<br>
+<br>
 | **RModeHitResult LineTrace(Vector Start, Vector Dir, float Distance)** |
 | :--- |
 
 설정된 시작 지점에서 원하는 방향으로 지정된 거리 만큼 충돌이 있는지 체크할 수 있어요. (시작 지점 Vector, 목표 지점 Vector, 거리 값) 
+<br>
+<br>
 <br>
 | **ModeItemServer GetInventoryItem(int InventoryIndex)** |
 | :--- |
@@ -263,6 +303,8 @@ if player:GetInventoryItem(0) ~= nil then
     print(player:GetInventoryItem(0):GetName()) --지정된 칸의 인벤토리 아이템을 반환해요.
 end
 ```
+<br>
+<br>
 <br>
 | **ModeItemServer GetEquipItem(String EquipSlot)** |
 | :--- |

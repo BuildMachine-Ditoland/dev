@@ -70,6 +70,8 @@ end)
 Input:RemoveActionKeyEvent("DefaultInput", "Jump", Enum.Key.SpaceBar) --이름에 해당하는 조작 키 이벤트를 제거해요.
 ```
 <br>
+<br>
+<br>
 | **AddAxisKeyEvent(string Group, string Event, RModeKey Key, float Value)** |
 | :--- |
 
@@ -91,6 +93,8 @@ LocalPlayer:ProcessInputAxisEvent("AxisKey", Enum.KeyInputType.Pressed, function
     print("Axis Input!")
 end)
 ```
+<br>
+<br>
 <br>
 | **RemoveAxisKeyEvent(string Group, string Event, RModeKey Key)** |
 | :--- |

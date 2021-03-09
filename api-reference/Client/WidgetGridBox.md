@@ -7,10 +7,14 @@
 ## **함수**
 
 <br>
+<br>
+<br>
 | **SetBackgroundColor(Number Count)** |
 | :--- |
 
 GridBox의 행 개수를 설정 할 수 있어요. (Number Count) 
+<br>
+<br>
 <br>
 | **SetRow(Number Count)** |
 | :--- |

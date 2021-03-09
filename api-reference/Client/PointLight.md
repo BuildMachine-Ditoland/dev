@@ -4,10 +4,14 @@
 ## **함수**
 
 <br>
+<br>
+<br>
 | **SetEnable(bool bEnable)** |
 | :--- |
 
 설정된 Point Light의 작동 여부를 설정해요. (작동 여부) 
+<br>
+<br>
 <br>
 | **SetColor(Color ChangedColor)** |
 | :--- |
@@ -19,6 +23,8 @@
 ```lua
 Workspace.Cube:SetColor(Color.new(255, 0, 0, 255)) --오브젝트의 색상을 변경해요. (r, g, b, a)
 ```
+<br>
+<br>
 <br>
 | **ChangeIntensity(float Intensity)** |
 | :--- |

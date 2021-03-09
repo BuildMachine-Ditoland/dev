@@ -6,10 +6,14 @@
 ## **함수**
 
 <br>
+<br>
+<br>
 | **AddBlendAnimation(float BlendValue, string AnimResourceID)** |
 | :--- |
 
 블렌드 애니메이션을 추가해요. (블렌드 값, 리소스 ID) 
+<br>
+<br>
 <br>
 | **AddBlendAnimation(float BlendValue, string AnimResourceID, float InPlaySpeed)** |
 | :--- |

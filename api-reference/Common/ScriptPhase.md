@@ -95,6 +95,8 @@ end)
 ## **함수**
 
 <br>
+<br>
+<br>
 | **float GetPhaseTime()** |
 | :--- |
 

@@ -12,6 +12,8 @@
 ## **함수**
 
 <br>
+<br>
+<br>
 | **RModeRemotePlayer GetRemotePlayer(string PlayerName);** |
 | :--- |
 
@@ -22,6 +24,8 @@
 ```lua
 local player = LocalPlayer:GetRemotePlayer() --자신의 플레이어를 반환해요. 
 ```
+<br>
+<br>
 <br>
 | **RGameClientCharacter GetRemotePlayerCharacter(string PlayerName)** |
 | :--- |
@@ -34,6 +38,8 @@ local player = LocalPlayer:GetRemotePlayer() --자신의 플레이어를 반환�
 local character = Game:GetRemotePlayerCharacter(PlayerName) --플레이어 이름에 해당하는 캐릭터를 반환해요.
 ```
 <br>
+<br>
+<br>
 | **int GetPlayerCount** |
 | :--- |
 
@@ -44,6 +50,8 @@ local character = Game:GetRemotePlayerCharacter(PlayerName) --플레이어 이�
 ```lua
 print(Game:GetPlayerCount())
 ```
+<br>
+<br>
 <br>
 | **vector<Player> GetAllPlayer()** |
 | :--- |
@@ -58,6 +66,8 @@ for i = 1, #allPlayerList do
     print(allPlayerList[i]:GetName())
 end
 ```
+<br>
+<br>
 <br>
 | **SendEventToServer(string EventName, Args ... )** |
 | :--- |
@@ -83,25 +93,35 @@ cube:ConnectEventFunction("SomeFunc", SomeFunc) --오브젝트에 "SomeFunc"라�
                                                 --같은 대상에 등록된 이벤트만 호출할 수 있어요.
 ```
 <br>
+<br>
+<br>
 | **RModeSequenceAnimStateSetting AddAnimStateMachineSetting(string StateMachineName)** |
 | :--- |
 
 캐릭터에 사용될 애니메이션 상태머신 설정을 추가할 수 있어요. (설정할 상태머신 이름) 
+<br>
+<br>
 <br>
 | **RModeSequenceAnimStateSetting GetAnimStateMachineSetting(string StateMachineName)** |
 | :--- |
 
 설정된 애니메이션 상태머신을 얻을 수 있어요. (얻고 싶은 상태머신 이름) 
 <br>
+<br>
+<br>
 | **SetCharacterAnimStateMachine(RCharacterSetting CharacterSetting, RAnimStateMachineSetting AnimSetting)** |
 | :--- |
 
 해당 캐릭터 설정으로 생성되는 캐릭터의 애니메이션 상태 머신을 설정 할 수 있어요. (대상 캐릭터 설정, 사용 할 애니메이션 상태 설정) 
 <br>
+<br>
+<br>
 | **SetNPCAnimStateMachine(string NPCSettingName, string AnimStateMachineSettingName)** |
 | :--- |
 
 해당 NPC의 애니메이션 상태 머신 사용하게 할 수 있어요. (설정한 NPC 이름, 애니메이션 상태 머신 이름) 
+<br>
+<br>
 <br>
 | **ObjectFXClient CreateFX(ObjectFXClient FXObject, Vetor Location)** |
 | :--- |
@@ -115,6 +135,8 @@ local spawnPos = Workspace.Cube:GetTransform():GetLocation()
 Game:CreateFX(Workspace.Effect, spawnPos) --이펙트를 지정 위치에 생성해요.
 ```
 <br>
+<br>
+<br>
 | **DeleteFX(ObjectFXClient Object)** |
 | :--- |
 
@@ -125,6 +147,8 @@ FX를 제거시켜요. (제거할 FX 오브젝트)
 ```lua
 Game:DeleteFX(Workspace.Effect)   
 ```
+<br>
+<br>
 <br>
 | **ObjectSoundClient PlaySound(ObjectSoundClient SoundObject, Vetor Location)** |
 | :--- |
@@ -138,6 +162,8 @@ Game:PlaySound(Workspace.Sound, Vector.new(0, 0, 0))
 ```
 
 플레이 중인 사운드를 정지시켜요. (정지할 Sound) 
+<br>
+<br>
 <br>
 | **CreateObject(RScriptWorldObject Object, Vector Location)** |
 | :--- |
@@ -153,6 +179,8 @@ local temp = Game:CreateObject(cube, createPos) --오브젝트를 지정된 위�
 print(temp:GetName()) --CreateObject로 생성한 오브젝트를 변수에 담은 뒤 후처리할 수 있어요.
 ```
 <br>
+<br>
+<br>
 | **CreateUIScene(RScriptUISceneClient Source)** |
 | :--- |
 
@@ -165,6 +193,8 @@ local uiScene = Game:CreateUIScene(Workspace.ScreenUI) --대상 UI를 복제해�
 print(uiScene:GetName())
 ```
 <br>
+<br>
+<br>
 | **CreateUIScene(string UISceneName, RScriptUISceneClient Source)** |
 | :--- |
 
@@ -176,6 +206,8 @@ Source와 같은 UIScene을 생성 후, UISceneName을 생성된 오브젝트 �
 local uiScene = Game:CreateUIScene("NewScreenUI", Workspace.ScreenUI) --새로운 이름으로 대상 UI를 복제해요.
 print(uiScene:GetName())
 ```
+<br>
+<br>
 <br>
 | **Vector GetMouseHitLocation()** |
 | :--- |
@@ -194,6 +226,8 @@ LocalPlayer:ProcessInputActionEvent("ClickKey", Enum.KeyInputType.Released, func
     print("Click Position : " .. pos)
 end
 ```
+<br>
+<br>
 <br>
 | **Object GetMouseHitObject()** |
 | :--- |

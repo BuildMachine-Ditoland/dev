@@ -9,6 +9,8 @@
 ## **함수**
 
 <br>
+<br>
+<br>
 | **Log(string message)** |
 | :--- |
 

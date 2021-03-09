@@ -4,10 +4,14 @@
 ## **함수**
 
 <br>
+<br>
+<br>
 | **AddAnimationEvent(String EventName, float Time, protected_function function EventFunction)** |
 | :--- |
 
 애니메이션 이벤트를 추가해요. (추가할 이벤트 이름, 블렌딩 시간, 연결 함수) 
+<br>
+<br>
 <br>
 | **DeleteAnimationEvent(String EventName)** |
 | :--- |
