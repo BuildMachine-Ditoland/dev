@@ -13,6 +13,7 @@
 ## **함수**
 
 <br>
+<br>
 | **RModeRemotePlayer GetRemotePlayer(string PlayerName);** |
 | :--- |
 
@@ -23,6 +24,7 @@
 ```lua
 local player = LocalPlayer:GetRemotePlayer() --자신의 플레이어를 반환해요. 
 ```
+<br>
 <br>
 | **RGameClientCharacter GetRemotePlayerCharacter(string PlayerName)** |
 | :--- |
@@ -35,6 +37,7 @@ local player = LocalPlayer:GetRemotePlayer() --자신의 플레이어를 반환�
 local character = Game:GetRemotePlayerCharacter(PlayerName) --플레이어 이름에 해당하는 캐릭터를 반환해요.
 ```
 <br>
+<br>
 | **int GetPlayerCount** |
 | :--- |
 
@@ -45,6 +48,7 @@ local character = Game:GetRemotePlayerCharacter(PlayerName) --플레이어 이�
 ```lua
 print(Game:GetPlayerCount())
 ```
+<br>
 <br>
 | **vector<Player> GetAllPlayer()** |
 | :--- |
@@ -59,6 +63,7 @@ for i = 1, #allPlayerList do
     print(allPlayerList[i]:GetName())
 end
 ```
+<br>
 <br>
 | **SendEventToServer(string EventName, Args ... )** |
 | :--- |
@@ -84,25 +89,30 @@ cube:ConnectEventFunction("SomeFunc", SomeFunc) --오브젝트에 "SomeFunc"라�
                                                 --같은 대상에 등록된 이벤트만 호출할 수 있어요.
 ```
 <br>
+<br>
 | **RModeSequenceAnimStateSetting AddAnimStateMachineSetting(string StateMachineName)** |
 | :--- |
 
 캐릭터에 사용될 애니메이션 상태머신 설정을 추가할 수 있어요. (설정할 상태머신 이름) 
+<br>
 <br>
 | **RModeSequenceAnimStateSetting GetAnimStateMachineSetting(string StateMachineName)** |
 | :--- |
 
 설정된 애니메이션 상태머신을 얻을 수 있어요. (얻고 싶은 상태머신 이름) 
 <br>
+<br>
 | **SetCharacterAnimStateMachine(RCharacterSetting CharacterSetting, RAnimStateMachineSetting AnimSetting)** |
 | :--- |
 
 해당 캐릭터 설정으로 생성되는 캐릭터의 애니메이션 상태 머신을 설정 할 수 있어요. (대상 캐릭터 설정, 사용 할 애니메이션 상태 설정) 
 <br>
+<br>
 | **SetNPCAnimStateMachine(string NPCSettingName, string AnimStateMachineSettingName)** |
 | :--- |
 
 해당 NPC의 애니메이션 상태 머신 사용하게 할 수 있어요. (설정한 NPC 이름, 애니메이션 상태 머신 이름) 
+<br>
 <br>
 | **ObjectFXClient CreateFX(ObjectFXClient FXObject, Vetor Location)** |
 | :--- |
@@ -116,6 +126,7 @@ local spawnPos = Workspace.Cube:GetTransform():GetLocation()
 Game:CreateFX(Workspace.Effect, spawnPos) --이펙트를 지정 위치에 생성해요.
 ```
 <br>
+<br>
 | **DeleteFX(ObjectFXClient Object)** |
 | :--- |
 
@@ -126,6 +137,7 @@ FX를 제거시켜요. (제거할 FX 오브젝트)
 ```lua
 Game:DeleteFX(Workspace.Effect)   
 ```
+<br>
 <br>
 | **ObjectSoundClient PlaySound(ObjectSoundClient SoundObject, Vetor Location)** |
 | :--- |
@@ -139,6 +151,7 @@ Game:PlaySound(Workspace.Sound, Vector.new(0, 0, 0))
 ```
 
 플레이 중인 사운드를 정지시켜요. (정지할 Sound) 
+<br>
 <br>
 | **CreateObject(RScriptWorldObject Object, Vector Location)** |
 | :--- |
@@ -154,6 +167,7 @@ local temp = Game:CreateObject(cube, createPos) --오브젝트를 지정된 위�
 print(temp:GetName()) --CreateObject로 생성한 오브젝트를 변수에 담은 뒤 후처리할 수 있어요.
 ```
 <br>
+<br>
 | **CreateUIScene(RScriptUISceneClient Source)** |
 | :--- |
 
@@ -166,6 +180,7 @@ local uiScene = Game:CreateUIScene(Workspace.ScreenUI) --대상 UI를 복제해�
 print(uiScene:GetName())
 ```
 <br>
+<br>
 | **CreateUIScene(string UISceneName, RScriptUISceneClient Source)** |
 | :--- |
 
@@ -177,6 +192,7 @@ Source와 같은 UIScene을 생성 후, UISceneName을 생성된 오브젝트 �
 local uiScene = Game:CreateUIScene("NewScreenUI", Workspace.ScreenUI) --새로운 이름으로 대상 UI를 복제해요.
 print(uiScene:GetName())
 ```
+<br>
 <br>
 | **Vector GetMouseHitLocation()** |
 | :--- |
@@ -195,6 +211,7 @@ LocalPlayer:ProcessInputActionEvent("ClickKey", Enum.KeyInputType.Released, func
     print("Click Position : " .. pos)
 end
 ```
+<br>
 <br>
 | **Object GetMouseHitObject()** |
 | :--- |
@@ -225,6 +242,7 @@ end
 | :--- |
 
 부모 객체를 얻을 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -243,6 +261,7 @@ print(parent:GetName())
 | :--- |
 
 매 프레임마다 호출되는 이벤트에요. 
+<br>
 샘플
 
 ```lua
@@ -266,6 +285,7 @@ cube.OnUpdateEvent:Connect(UpdateEvent) --Game이나 오브젝트에 매프레�
 | :--- |
 
 플레이어가 게임에 입장 시 호출되는 이벤트에요. 
+<br>
 샘플
 
 ```lua
@@ -285,6 +305,7 @@ Game.OnEnterPlayer:Connect(EnterPlayer) --Game에 플레이어가 게임에 입�
 | :--- |
 
 플레이어가 게임에서 나갈 때 호출되는 이벤트에요. 
+<br>
 샘플
 
 ```lua
@@ -304,6 +325,7 @@ Game.OnLeavePlayer:Connect(LeavePlayer) --Game에 플레이어가 게임을 종�
 | :--- |
 
 케릭터가 죽을 때 호출되는 이벤트에요. 
+<br>
 샘플
 
 ```lua
@@ -323,6 +345,7 @@ Game.OnDeathCharacter:Connect(DeathCharacter) --Game에 캐릭터가 죽으면 �
 | :--- |
 
 케릭터가 스폰 될 때 호출되는 이벤트에요. 
+<br>
 샘플
 
 ```lua
@@ -336,6 +359,7 @@ end
 Game.OnSpawnCharacter:Connect(SpawnCharacter) --Game에 캐릭터가 생성되면 연결된 호출되는 함수를 연결해요. 
 
 ``` 
+<br>
 샘플
 
 ```lua
@@ -361,6 +385,7 @@ Game.OnEnterPlayer:Connect(EnterPlayer)
 | :--- |
 
 추가된 값이 변경 될 때 호출되는 이벤트에요. (Value 이름, 연결 함수) 
+<br>
 샘플
 
 ```lua
@@ -390,6 +415,7 @@ cube:ConnectChangeEventFunction("SomeValue", ChangeSomeValue)  --오브젝트의
 | :--- |
 
 일정 시간뒤에 연결 함수가 호출되는 이벤트를 추가해요. (추가할 이벤트 이름, 시간, 연결 함수) 
+<br>
 샘플
 
 ```lua
@@ -411,6 +437,7 @@ Game:AddTimeEvent("PrintMessage", waitTime, PrintMessage) --일정시간을 기�
 | :--- |
 
 등록된 시간 이벤트를 삭제해요. (삭제할 이벤트 이름) 
+<br>
 샘플
 
 ```lua
@@ -437,6 +464,7 @@ Game:DeleteTimeEvent("PrintMessage") --AddTimeEvent로 등록한 함수를 삭�
 | :--- |
 
 게임에 단계를 추가할 수 있어요. (추가할 단계 이름) 
+<br>
 샘플
 
 ```lua
@@ -604,6 +632,7 @@ end)
 | :--- |
 
 유저가 추가한 이벤트에 함수를 연결할 수 있어요. (이벤트 이름, 연결 함수) 
+<br>
 샘플
 
 ```lua
@@ -637,6 +666,7 @@ cube:ConnectEventFunction("SomeFunc", SomeFunc) --오브젝트에 "SomeFunc"라�
 오브젝트를 삭제할 수 있어요. (삭제할 오브젝트) 
 
 서버에서 사용하면 서버와 클라 오브젝트 모두 삭제되고 클라에서 사용하면 클라 오브젝트만 삭제해요 
+<br>
 샘플
 
 ```lua
@@ -652,6 +682,7 @@ Game:DeleteObject(cube) --오브젝트를 파괴해요.
 | :--- |
 
 설정된 시작 지점에서 원하는 방향으로 지정된 거리 만큼의 충돌 리스트들을 가져올 수 있어요. (시작 지점 Vector, 목표 지점 Vector, 거리 값) 
+<br>
 샘플
 
 ```lua
@@ -677,6 +708,7 @@ end
 | :--- |
 
 객체의 이름을 얻을 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -708,6 +740,7 @@ print(Workspace.Floor:GetName()) --오브젝트의 이름을 문자열로 반환
 | :--- |
 
 자식 객체의 리스트를 얻을 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -727,6 +760,7 @@ end
 | :--- |
 
 캐릭터인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -746,6 +780,7 @@ end
 | :--- |
 
 스테틱 메시인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -765,6 +800,7 @@ end
 | :--- |
 
 FX인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -784,6 +820,7 @@ end
 | :--- |
 
 Sound인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -803,6 +840,7 @@ end
 | :--- |
 
 포인트 라이트인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -822,6 +860,7 @@ end
 | :--- |
 
 스포트 라이트인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -841,6 +880,7 @@ end
 | :--- |
 
 서피스 UI인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -860,6 +900,7 @@ end
 | :--- |
 
 스크린 UI인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -879,6 +920,7 @@ end
 | :--- |
 
 아이템인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -898,6 +940,7 @@ end
 | :--- |
 
 NPC인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -917,6 +960,7 @@ end
 | :--- |
 
 폴더인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -936,6 +980,7 @@ end
 | :--- |
 
 스트립트인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -955,6 +1000,7 @@ end
 | :--- |
 
 Collider인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -974,6 +1020,7 @@ end
 | :--- |
 
 Widget인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -993,6 +1040,7 @@ end
 | :--- |
 
 Camera인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -1018,6 +1066,7 @@ end
 | :--- |
 
 해당 객체에 서버, 클라이언트 간 동기화가 가능한 벡터를 추가해요. (추가할 Value 이름, Vector 데이터, [Enum.ReplicateType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype), 동기화 시간, 스토리지 저장 여부) 
+<br>
 샘플
 
 ```lua
@@ -1041,6 +1090,7 @@ print(Game.SomeVector) --서버에서 값이 바뀌었지만 클라에서도 동
 | :--- |
 
 해당 객체에 서버, 클라이언트 간 동기화가 가능한 실수를 추가해요. (추가할 Value 이름, float 데이터, [Enum.ReplicateType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype), 동기화 시간, 스토리지 저장 여부) 
+<br>
 샘플
 
 ```lua
@@ -1064,6 +1114,7 @@ print(Game.SomeNumber .. " in Client") --서버에서 값이 바뀌었지만 클
 | :--- |
 
 해당 객체에 서버, 클라이언트 간 동기화가 가능한 bool를 추가해요. (추가할 Value 이름, bool 데이터, [Enum.ReplicateType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype), 동기화 시간, 스토리지 저장 여부) 
+<br>
 샘플
 
 ```lua
@@ -1087,6 +1138,7 @@ print(Game.SomeBool) --서버에서 값이 바뀌었지만 클라에서도 동�
 | :--- |
 
 해당 객체에 서버, 클라이언트 간 동기화가 가능한 문자열을 추가해요. (추가할 Value 이름, string 데이터, [Enum.ReplicateType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype), 동기화 시간, 스토리지 저장 여부) 
+<br>
 샘플
 
 ```lua
@@ -1110,6 +1162,7 @@ print(Game.SomeString) --서버에서 값이 바뀌었지만 클라에서도 동
 | :--- |
 
 해당 객체에 서버, 클라이언트 간 동기화가 가능한 컬러를 추가해요. (추가할 Value 이름, Color 데이터, [Enum.ReplicateType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype), 동기화 시간, 스토리지 저장 여부) 
+<br>
 샘플
 
 ```lua

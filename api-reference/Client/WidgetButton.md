@@ -7,15 +7,18 @@
 ## **함수**
 
 <br>
+<br>
 | **SetText(int Value)** |
 | :--- |
 
 위젯의 텍스트를 주어진 정수로 변경해요. (변경할 정수 값) 
 <br>
+<br>
 | **SetText(float Value)** |
 | :--- |
 
 위젯의 텍스트를 주어진 실수로 변경해요. ( 변경할 실수 값) 
+<br>
 <br>
 | **SetText(string InText)** |
 | :--- |
@@ -29,6 +32,7 @@ local someText = Workspace.ScreenUI.someText
 someText:SetText("Hello World!") --텍스트 UI에 내용을 표시해요.
 ```
 <br>
+<br>
 | **string GetText()** |
 | :--- |
 
@@ -40,6 +44,7 @@ someText:SetText("Hello World!") --텍스트 UI에 내용을 표시해요.
 local someText = Workspace.ScreenUI.someText
 local uiText = someText:GetText() --텍스트 UI의 내용을 문자열로 반환해요.
 ```
+<br>
 <br>
 | **SetTextColor(string WidgetName, Color color)** |
 | :--- |
@@ -53,6 +58,7 @@ local someText = Workspace.ScreenUI.someText
 someText:SetTextColor(Color.new(0, 255, 0, 255)) --텍스트 UI의 글자 색상을 변경해요.
 ```
 <br>
+<br>
 | **SetBackgroundColor(Color color)** |
 | :--- |
 
@@ -65,10 +71,12 @@ local someFrame = Workspace.ScreenUI.someFrame
 someFrame:SetBackgroundColor(Color.new(0, 0, 255, 255)) --프레임 UI의 바탕 색상을 변경해요.
 ```
 <br>
+<br>
 | **SetButtonHoverColor(Color color)** |
 | :--- |
 
 버튼 위젯의 Hover 색을 설정할 수 있어요. (변경할 색) 
+<br>
 <br>
 | **SetButtonPressColor(Color color)** |
 | :--- |
@@ -107,6 +115,7 @@ someButton.OnPressEvent:Connect(func) --버튼에 해당 버튼이 눌렸을때 
 | :--- |
 
 부모 객체를 얻을 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -125,6 +134,7 @@ print(parent:GetName())
 | :--- |
 
 추가된 값이 변경 될 때 호출되는 이벤트에요. (Value 이름, 연결 함수) 
+<br>
 샘플
 
 ```lua
@@ -157,6 +167,7 @@ cube:ConnectChangeEventFunction("SomeValue", ChangeSomeValue)  --오브젝트의
 | :--- |
 
 객체의 이름을 얻을 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -188,6 +199,7 @@ print(Workspace.Floor:GetName()) --오브젝트의 이름을 문자열로 반환
 | :--- |
 
 자식 객체의 리스트를 얻을 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -207,6 +219,7 @@ end
 | :--- |
 
 캐릭터인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -226,6 +239,7 @@ end
 | :--- |
 
 스테틱 메시인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -245,6 +259,7 @@ end
 | :--- |
 
 FX인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -264,6 +279,7 @@ end
 | :--- |
 
 Sound인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -283,6 +299,7 @@ end
 | :--- |
 
 포인트 라이트인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -302,6 +319,7 @@ end
 | :--- |
 
 스포트 라이트인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -321,6 +339,7 @@ end
 | :--- |
 
 서피스 UI인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -340,6 +359,7 @@ end
 | :--- |
 
 스크린 UI인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -359,6 +379,7 @@ end
 | :--- |
 
 아이템인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -378,6 +399,7 @@ end
 | :--- |
 
 NPC인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -397,6 +419,7 @@ end
 | :--- |
 
 폴더인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -416,6 +439,7 @@ end
 | :--- |
 
 스트립트인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -435,6 +459,7 @@ end
 | :--- |
 
 Collider인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -454,6 +479,7 @@ end
 | :--- |
 
 Widget인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -473,6 +499,7 @@ end
 | :--- |
 
 Camera인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -498,6 +525,7 @@ end
 | :--- |
 
 해당 객체에 서버, 클라이언트 간 동기화가 가능한 벡터를 추가해요. (추가할 Value 이름, Vector 데이터, [Enum.ReplicateType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype), 동기화 시간, 스토리지 저장 여부) 
+<br>
 샘플
 
 ```lua
@@ -521,6 +549,7 @@ print(Game.SomeVector) --서버에서 값이 바뀌었지만 클라에서도 동
 | :--- |
 
 해당 객체에 서버, 클라이언트 간 동기화가 가능한 실수를 추가해요. (추가할 Value 이름, float 데이터, [Enum.ReplicateType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype), 동기화 시간, 스토리지 저장 여부) 
+<br>
 샘플
 
 ```lua
@@ -544,6 +573,7 @@ print(Game.SomeNumber .. " in Client") --서버에서 값이 바뀌었지만 클
 | :--- |
 
 해당 객체에 서버, 클라이언트 간 동기화가 가능한 bool를 추가해요. (추가할 Value 이름, bool 데이터, [Enum.ReplicateType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype), 동기화 시간, 스토리지 저장 여부) 
+<br>
 샘플
 
 ```lua
@@ -567,6 +597,7 @@ print(Game.SomeBool) --서버에서 값이 바뀌었지만 클라에서도 동�
 | :--- |
 
 해당 객체에 서버, 클라이언트 간 동기화가 가능한 문자열을 추가해요. (추가할 Value 이름, string 데이터, [Enum.ReplicateType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype), 동기화 시간, 스토리지 저장 여부) 
+<br>
 샘플
 
 ```lua
@@ -590,6 +621,7 @@ print(Game.SomeString) --서버에서 값이 바뀌었지만 클라에서도 동
 | :--- |
 
 해당 객체에 서버, 클라이언트 간 동기화가 가능한 컬러를 추가해요. (추가할 Value 이름, Color 데이터, [Enum.ReplicateType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype), 동기화 시간, 스토리지 저장 여부) 
+<br>
 샘플
 
 ```lua

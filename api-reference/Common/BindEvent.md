@@ -4,6 +4,7 @@
 ## **함수**
 
 <br>
+<br>
 | **bool Connect(LuaScriptFunction Function)** |
 | :--- |
 

@@ -6,10 +6,12 @@
 ## **함수**
 
 <br>
+<br>
 | **AddSpawnObject(class FRScriptWorldObject* SpawnObject, float SpawnRate, int Count)** |
 | :--- |
 
 스폰 오브젝트를 추가할 수 있어요. (SpawnObject : 스폰 오브젝트, SpawnRate : 스폰 확률, Count : 스폰 개수) 
+<br>
 <br>
 | **AddSpawnObject(class FRScriptWorldObject* SpawnObject, float SpawnRate, int Count, Vector OffsetPosition)** |
 | :--- |
@@ -30,10 +32,12 @@ local spawnPos = Vector.new(0, 0, 0)
 spawner:AddSpawnObject(Toybox.Cube, spawnRate, spawnCount, spawnPos) --스포너에서 스폰할 오브젝트를 등록해요.
 ```
 <br>
+<br>
 | **SetObjectSpawnType_Scale()** |
 | :--- |
 
 오브젝트의 스폰 형식을 스포너의 크기에 따라 랜덤으로 스폰되게 설정해요. 
+<br>
 <br>
 | **SetObjectSpawnType_Range(Vector MinRange, Vector MaxRange)** |
 | :--- |
@@ -50,6 +54,7 @@ spawner:AddSpawnObject(Toybox.Cube, spawnRate, spawnCount, spawnPos) --스포너
 | :--- |
 
 부모 객체를 얻을 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -68,6 +73,7 @@ print(parent:GetName())
 | :--- |
 
 추가된 값이 변경 될 때 호출되는 이벤트에요. (Value 이름, 연결 함수) 
+<br>
 샘플
 
 ```lua
@@ -100,6 +106,7 @@ cube:ConnectChangeEventFunction("SomeValue", ChangeSomeValue)  --오브젝트의
 | :--- |
 
 객체의 이름을 얻을 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -131,6 +138,7 @@ print(Workspace.Floor:GetName()) --오브젝트의 이름을 문자열로 반환
 | :--- |
 
 자식 객체의 리스트를 얻을 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -150,6 +158,7 @@ end
 | :--- |
 
 캐릭터인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -169,6 +178,7 @@ end
 | :--- |
 
 스테틱 메시인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -188,6 +198,7 @@ end
 | :--- |
 
 FX인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -207,6 +218,7 @@ end
 | :--- |
 
 Sound인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -226,6 +238,7 @@ end
 | :--- |
 
 포인트 라이트인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -245,6 +258,7 @@ end
 | :--- |
 
 스포트 라이트인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -264,6 +278,7 @@ end
 | :--- |
 
 서피스 UI인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -283,6 +298,7 @@ end
 | :--- |
 
 스크린 UI인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -302,6 +318,7 @@ end
 | :--- |
 
 아이템인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -321,6 +338,7 @@ end
 | :--- |
 
 NPC인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -340,6 +358,7 @@ end
 | :--- |
 
 폴더인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -359,6 +378,7 @@ end
 | :--- |
 
 스트립트인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -378,6 +398,7 @@ end
 | :--- |
 
 Collider인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -397,6 +418,7 @@ end
 | :--- |
 
 Widget인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -416,6 +438,7 @@ end
 | :--- |
 
 Camera인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -441,6 +464,7 @@ end
 | :--- |
 
 해당 객체에 서버, 클라이언트 간 동기화가 가능한 벡터를 추가해요. (추가할 Value 이름, Vector 데이터, [Enum.ReplicateType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype), 동기화 시간, 스토리지 저장 여부) 
+<br>
 샘플
 
 ```lua
@@ -464,6 +488,7 @@ print(Game.SomeVector) --서버에서 값이 바뀌었지만 클라에서도 동
 | :--- |
 
 해당 객체에 서버, 클라이언트 간 동기화가 가능한 실수를 추가해요. (추가할 Value 이름, float 데이터, [Enum.ReplicateType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype), 동기화 시간, 스토리지 저장 여부) 
+<br>
 샘플
 
 ```lua
@@ -487,6 +512,7 @@ print(Game.SomeNumber .. " in Client") --서버에서 값이 바뀌었지만 클
 | :--- |
 
 해당 객체에 서버, 클라이언트 간 동기화가 가능한 bool를 추가해요. (추가할 Value 이름, bool 데이터, [Enum.ReplicateType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype), 동기화 시간, 스토리지 저장 여부) 
+<br>
 샘플
 
 ```lua
@@ -510,6 +536,7 @@ print(Game.SomeBool) --서버에서 값이 바뀌었지만 클라에서도 동�
 | :--- |
 
 해당 객체에 서버, 클라이언트 간 동기화가 가능한 문자열을 추가해요. (추가할 Value 이름, string 데이터, [Enum.ReplicateType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype), 동기화 시간, 스토리지 저장 여부) 
+<br>
 샘플
 
 ```lua
@@ -533,6 +560,7 @@ print(Game.SomeString) --서버에서 값이 바뀌었지만 클라에서도 동
 | :--- |
 
 해당 객체에 서버, 클라이언트 간 동기화가 가능한 컬러를 추가해요. (추가할 Value 이름, Color 데이터, [Enum.ReplicateType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype), 동기화 시간, 스토리지 저장 여부) 
+<br>
 샘플
 
 ```lua

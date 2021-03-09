@@ -4,6 +4,7 @@
 ## **함수**
 
 <br>
+<br>
 | **Player GetPlayer()** |
 | :--- |
 
@@ -16,6 +17,7 @@ local character = Game:GetAllPlayer()[1]:GetCharacter()
 local player = character:GetPlayer() --캐릭터의 플레이어를 반환해요.
 ```
 <br>
+<br>
 | **string GetPlayerName()** |
 | :--- |
 
@@ -27,6 +29,7 @@ local player = character:GetPlayer() --캐릭터의 플레이어를 반환해요
 local character = Game:GetAllPlayer()[1]:GetCharacter()
 print(character:GetPlayerName()) --캐릭터의 플레이어 이름을 문자열로 반환해요.
 ```
+<br>
 <br>
 | **bool IsDriving()** |
 | :--- |
@@ -42,6 +45,7 @@ if character:IsDriving() then
 end
 ```
 <br>
+<br>
 | **ObjectFXClient CreateFX(ObjectFXClient FXObject, Bone BoneType)** |
 | :--- |
 
@@ -54,6 +58,7 @@ local character = LocalPlayer:GetRemotePlayer():GetCharacter()
 character:CreateFX(Workspace.Effect, Enum.Bone.Body) --캐릭터의 특정 부위에 이펙트를 생성해요.
 ```
 <br>
+<br>
 | **ObjectSoundClient CreateSound(ObjectSoundClient SoundObject)** |
 | :--- |
 
@@ -65,6 +70,7 @@ character:CreateFX(Workspace.Effect, Enum.Bone.Body) --캐릭터의 특정 부�
 local character = LocalPlayer:GetRemotePlayer():GetCharacter()
 character:CreateSound(Workspace.Sound)
 ```
+<br>
 <br>
 | **AddPlayerHUD(string UIName, UISceen UI, UIDisplayType Type)** |
 | :--- |
@@ -84,6 +90,7 @@ end
 Game.OnSpawnCharacter:Connect(spawn)
 ```
 <br>
+<br>
 | **RemovePlayerHUD(string UIName)** |
 | :--- |
 
@@ -95,6 +102,7 @@ UI HUD를 제거해요. (제거하고 싶은 UI 이름)
 local character = LocalPlayer:GetRemotePlayer():GetCharacter()
 character:RemovePlayerHUD("Name") --캐릭터에 추가된 HUD를 이름으로 찾아서 삭제해요.
 ```
+<br>
 <br>
 | **RemovePlayerAllHUD()** |
 | :--- |
@@ -108,6 +116,7 @@ local character = LocalPlayer:GetRemotePlayer():GetCharacter()
 character:RemovePlayerAllHUD() --캐릭터에 추가된 모든 HUD를 삭제해요.
 ```
 <br>
+<br>
 | **GetPlayerHUD(string UIName)** |
 | :--- |
 
@@ -120,6 +129,7 @@ local character = LocalPlayer:GetRemotePlayer():GetCharacter()
 local playerNameUI = character:GetPlayerHUD("Name") --캐릭터에 추가된 HUD를 이름으로 찾아서 반환해요.                      
 playerNameUI.Text:SetTextColor(Color.new(255, 0, 0, 255)) 
 ```
+<br>
 <br>
 | **bool IsMyCharacter()** |
 | :--- |
@@ -135,6 +145,7 @@ if character:IsMyCharacter() then --캐릭터가 자신의 캐릭터이면 true�
 end
 ```
 <br>
+<br>
 | **void AttachAt(RModeObject ModeObject, BoneType Bone)** |
 | :--- |
 
@@ -146,6 +157,7 @@ end
 local character = LocalPlayer:GetRemotePlayer():GetCharacter()
 character:AttachAt(Workspace.Cube, Enum.Bone.Body) --캐릭터의 부위를 오브젝트의 중점에 부착시켜요.
 ```
+<br>
 <br>
 | **void AttachAtTop(RModeObject ModeObject, BoneType Bone)** |
 | :--- |
@@ -169,6 +181,7 @@ character:AttachAtTop(Workspace.Cube, Enum.Bone.Body) --캐릭터의 부위를 �
 | :--- |
 
 부모 객체를 얻을 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -187,6 +200,7 @@ print(parent:GetName())
 | :--- |
 
 추가된 값이 변경 될 때 호출되는 이벤트에요. (Value 이름, 연결 함수) 
+<br>
 샘플
 
 ```lua
@@ -216,6 +230,7 @@ cube:ConnectChangeEventFunction("SomeValue", ChangeSomeValue)  --오브젝트의
 | :--- |
 
 일정 시간뒤에 연결 함수가 호출되는 이벤트를 추가해요. (추가할 이벤트 이름, 시간, 연결 함수) 
+<br>
 샘플
 
 ```lua
@@ -237,6 +252,7 @@ Game:AddTimeEvent("PrintMessage", waitTime, PrintMessage) --일정시간을 기�
 | :--- |
 
 등록된 시간 이벤트를 삭제해요. (삭제할 이벤트 이름) 
+<br>
 샘플
 
 ```lua
@@ -263,6 +279,7 @@ Game:DeleteTimeEvent("PrintMessage") --AddTimeEvent로 등록한 함수를 삭�
 | :--- |
 
 객체의 이름을 얻을 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -294,6 +311,7 @@ print(Workspace.Floor:GetName()) --오브젝트의 이름을 문자열로 반환
 | :--- |
 
 자식 객체의 리스트를 얻을 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -313,6 +331,7 @@ end
 | :--- |
 
 캐릭터인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -332,6 +351,7 @@ end
 | :--- |
 
 스테틱 메시인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -351,6 +371,7 @@ end
 | :--- |
 
 FX인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -370,6 +391,7 @@ end
 | :--- |
 
 Sound인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -389,6 +411,7 @@ end
 | :--- |
 
 포인트 라이트인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -408,6 +431,7 @@ end
 | :--- |
 
 스포트 라이트인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -427,6 +451,7 @@ end
 | :--- |
 
 서피스 UI인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -446,6 +471,7 @@ end
 | :--- |
 
 스크린 UI인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -465,6 +491,7 @@ end
 | :--- |
 
 아이템인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -484,6 +511,7 @@ end
 | :--- |
 
 NPC인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -503,6 +531,7 @@ end
 | :--- |
 
 폴더인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -522,6 +551,7 @@ end
 | :--- |
 
 스트립트인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -541,6 +571,7 @@ end
 | :--- |
 
 Collider인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -560,6 +591,7 @@ end
 | :--- |
 
 Widget인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -579,6 +611,7 @@ end
 | :--- |
 
 Camera인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -604,6 +637,7 @@ end
 | :--- |
 
 해당 객체에 서버, 클라이언트 간 동기화가 가능한 벡터를 추가해요. (추가할 Value 이름, Vector 데이터, [Enum.ReplicateType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype), 동기화 시간, 스토리지 저장 여부) 
+<br>
 샘플
 
 ```lua
@@ -627,6 +661,7 @@ print(Game.SomeVector) --서버에서 값이 바뀌었지만 클라에서도 동
 | :--- |
 
 해당 객체에 서버, 클라이언트 간 동기화가 가능한 실수를 추가해요. (추가할 Value 이름, float 데이터, [Enum.ReplicateType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype), 동기화 시간, 스토리지 저장 여부) 
+<br>
 샘플
 
 ```lua
@@ -650,6 +685,7 @@ print(Game.SomeNumber .. " in Client") --서버에서 값이 바뀌었지만 클
 | :--- |
 
 해당 객체에 서버, 클라이언트 간 동기화가 가능한 bool를 추가해요. (추가할 Value 이름, bool 데이터, [Enum.ReplicateType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype), 동기화 시간, 스토리지 저장 여부) 
+<br>
 샘플
 
 ```lua
@@ -673,6 +709,7 @@ print(Game.SomeBool) --서버에서 값이 바뀌었지만 클라에서도 동�
 | :--- |
 
 해당 객체에 서버, 클라이언트 간 동기화가 가능한 문자열을 추가해요. (추가할 Value 이름, string 데이터, [Enum.ReplicateType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype), 동기화 시간, 스토리지 저장 여부) 
+<br>
 샘플
 
 ```lua
@@ -696,6 +733,7 @@ print(Game.SomeString) --서버에서 값이 바뀌었지만 클라에서도 동
 | :--- |
 
 해당 객체에 서버, 클라이언트 간 동기화가 가능한 컬러를 추가해요. (추가할 Value 이름, Color 데이터, [Enum.ReplicateType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype), 동기화 시간, 스토리지 저장 여부) 
+<br>
 샘플
 
 ```lua

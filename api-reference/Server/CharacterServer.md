@@ -4,6 +4,7 @@
 ## **함수**
 
 <br>
+<br>
 | **SetEmissive(float Emissive)** |
 | :--- |
 
@@ -16,6 +17,7 @@ local character = Game:GetAllPlayer()[1]:GetCharacter()
 character:SetEmissive(1) --값이 클수록 캐릭터가 밝아져요.
 ```
 <br>
+<br>
 | **SetVisible(bool bVisibility)** |
 | :--- |
 
@@ -27,6 +29,7 @@ character:SetEmissive(1) --값이 클수록 캐릭터가 밝아져요.
 local character = Game:GetAllPlayer()[1]:GetCharacter()
 character:SetVisible(false)
 ```
+<br>
 <br>
 | **AddForce(Vector Force)** |
 | :--- |
@@ -55,6 +58,7 @@ end
 toy.OnCollisionEvent:Connect(CharacterCollision) --오브젝트에 캐릭터가 닿으면 호출할 함수를 연결해요.
 ```
 <br>
+<br>
 | **SetMaxSpeed(float Speed)** |
 | :--- |
 
@@ -66,6 +70,7 @@ toy.OnCollisionEvent:Connect(CharacterCollision) --오브젝트에 캐릭터가 
 local character = LocalPlayer:GetRemotePlayer():GetCharacter() 
 character:SetMaxSpeed(1000) --캐릭터의 최대 이동 속도를 설정해요.
 ```
+<br>
 <br>
 | **SetMaxJump(float Jump)** |
 | :--- |
@@ -79,15 +84,18 @@ local character = LocalPlayer:GetRemotePlayer():GetCharacter()
 character:SetMaxJump(1000) --캐릭터의 최대 점프 속도를 설정해요.
 ```
 <br>
+<br>
 | **SetFlyControl(float ControlRate);** |
 | :--- |
 
 공중에서 캐릭터 컨트롤 비율을 설정할 수 있어요. (설정할 비율 값) 
 <br>
+<br>
 | **SetFlyMaxSpeed(float Speed)** |
 | :--- |
 
 캐릭터의 최대 공중 이동속도를 설정할 수 있어요. 기어오르기, 날기 등 (설정할 최대 공중 이동속도 값) 
+<br>
 <br>
 | **JumpEnable(bool CanJump)** |
 | :--- |
@@ -101,20 +109,24 @@ local character = Game:GetAllPlayer()[1]:GetCharacter()
 character:JumpEnable(false)
 ```
 <br>
+<br>
 | **MoveRightEnable(bool CanMove)** |
 | :--- |
 
 캐릭터의 좌우 이동 가능 여부를 설정할 수 있어요. (좌우 이동 가능 여부) 
+<br>
 <br>
 | **MoveToSpawnPoint(RScriptSpawnPoint SpawnPointObjecrt, bool ResetRot)** |
 | :--- |
 
 캐릭터를 특정 스폰 위치로 이동시킬 수 있어요. (이동 할 스폰포인트 오브젝트, 방향 Rot 초기화 여부) 
 <br>
+<br>
 | **void ChangeCharacterType(ERCharacterType Type)** |
 | :--- |
 
 현재 캐릭터의 외형 타입을 바꿀 수 있어요. 
+<br>
 <br>
 | **void SetCapsuleSize(float Radius, float Height)** |
 | :--- |
@@ -129,6 +141,7 @@ local radius = 100
 local height = 100
 character:SetCapsuleSize(radius, height)
 ```
+<br>
 <br>
 | **ERCharacterType GetCharacterType()** |
 | :--- |
@@ -145,6 +158,7 @@ character:SetCapsuleSize(radius, height)
 | :--- |
 
 부모 객체를 얻을 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -163,6 +177,7 @@ print(parent:GetName())
 | :--- |
 
 추가된 값이 변경 될 때 호출되는 이벤트에요. (Value 이름, 연결 함수) 
+<br>
 샘플
 
 ```lua
@@ -192,6 +207,7 @@ cube:ConnectChangeEventFunction("SomeValue", ChangeSomeValue)  --오브젝트의
 | :--- |
 
 일정 시간뒤에 연결 함수가 호출되는 이벤트를 추가해요. (추가할 이벤트 이름, 시간, 연결 함수) 
+<br>
 샘플
 
 ```lua
@@ -213,6 +229,7 @@ Game:AddTimeEvent("PrintMessage", waitTime, PrintMessage) --일정시간을 기�
 | :--- |
 
 등록된 시간 이벤트를 삭제해요. (삭제할 이벤트 이름) 
+<br>
 샘플
 
 ```lua
@@ -239,6 +256,7 @@ Game:DeleteTimeEvent("PrintMessage") --AddTimeEvent로 등록한 함수를 삭�
 | :--- |
 
 객체의 이름을 얻을 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -270,6 +288,7 @@ print(Workspace.Floor:GetName()) --오브젝트의 이름을 문자열로 반환
 | :--- |
 
 자식 객체의 리스트를 얻을 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -289,6 +308,7 @@ end
 | :--- |
 
 캐릭터인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -308,6 +328,7 @@ end
 | :--- |
 
 스테틱 메시인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -327,6 +348,7 @@ end
 | :--- |
 
 FX인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -346,6 +368,7 @@ end
 | :--- |
 
 Sound인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -365,6 +388,7 @@ end
 | :--- |
 
 포인트 라이트인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -384,6 +408,7 @@ end
 | :--- |
 
 스포트 라이트인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -403,6 +428,7 @@ end
 | :--- |
 
 서피스 UI인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -422,6 +448,7 @@ end
 | :--- |
 
 스크린 UI인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -441,6 +468,7 @@ end
 | :--- |
 
 아이템인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -460,6 +488,7 @@ end
 | :--- |
 
 NPC인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -479,6 +508,7 @@ end
 | :--- |
 
 폴더인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -498,6 +528,7 @@ end
 | :--- |
 
 스트립트인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -517,6 +548,7 @@ end
 | :--- |
 
 Collider인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -536,6 +568,7 @@ end
 | :--- |
 
 Widget인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -555,6 +588,7 @@ end
 | :--- |
 
 Camera인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -580,6 +614,7 @@ end
 | :--- |
 
 해당 객체에 서버, 클라이언트 간 동기화가 가능한 벡터를 추가해요. (추가할 Value 이름, Vector 데이터, [Enum.ReplicateType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype), 동기화 시간, 스토리지 저장 여부) 
+<br>
 샘플
 
 ```lua
@@ -603,6 +638,7 @@ print(Game.SomeVector) --서버에서 값이 바뀌었지만 클라에서도 동
 | :--- |
 
 해당 객체에 서버, 클라이언트 간 동기화가 가능한 실수를 추가해요. (추가할 Value 이름, float 데이터, [Enum.ReplicateType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype), 동기화 시간, 스토리지 저장 여부) 
+<br>
 샘플
 
 ```lua
@@ -626,6 +662,7 @@ print(Game.SomeNumber .. " in Client") --서버에서 값이 바뀌었지만 클
 | :--- |
 
 해당 객체에 서버, 클라이언트 간 동기화가 가능한 bool를 추가해요. (추가할 Value 이름, bool 데이터, [Enum.ReplicateType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype), 동기화 시간, 스토리지 저장 여부) 
+<br>
 샘플
 
 ```lua
@@ -649,6 +686,7 @@ print(Game.SomeBool) --서버에서 값이 바뀌었지만 클라에서도 동�
 | :--- |
 
 해당 객체에 서버, 클라이언트 간 동기화가 가능한 문자열을 추가해요. (추가할 Value 이름, string 데이터, [Enum.ReplicateType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype), 동기화 시간, 스토리지 저장 여부) 
+<br>
 샘플
 
 ```lua
@@ -672,6 +710,7 @@ print(Game.SomeString) --서버에서 값이 바뀌었지만 클라에서도 동
 | :--- |
 
 해당 객체에 서버, 클라이언트 간 동기화가 가능한 컬러를 추가해요. (추가할 Value 이름, Color 데이터, [Enum.ReplicateType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype), 동기화 시간, 스토리지 저장 여부) 
+<br>
 샘플
 
 ```lua

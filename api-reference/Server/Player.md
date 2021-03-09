@@ -4,6 +4,7 @@
 ## **함수**
 
 <br>
+<br>
 | **RModeServerCharacter GetCharacter()** |
 | :--- |
 
@@ -16,6 +17,7 @@ local player = Game:GetAllPlayer()[1]
 local character = player:GetCharacter() --플레이어의 캐릭터를 반환해요.
 ```
 <br>
+<br>
 | **string GetPlayerName()** |
 | :--- |
 
@@ -27,6 +29,7 @@ local character = player:GetCharacter() --플레이어의 캐릭터를 반환해
 local character = Game:GetAllPlayer()[1]:GetCharacter()
 print(character:GetPlayerName()) --캐릭터의 플레이어 이름을 문자열로 반환해요.
 ```
+<br>
 <br>
 | **string GetTeamName()** |
 | :--- |
@@ -57,6 +60,7 @@ end
 Game.OnSpawnCharacter:Connect(SpawnCharacter) 
 ```
 <br>
+<br>
 | **int GetLifeCount()** |
 | :--- |
 
@@ -68,6 +72,7 @@ Game.OnSpawnCharacter:Connect(SpawnCharacter)
 local player = Game:GetAllPlayer()[1] 
 print(player:GetLifeCount())
 ```
+<br>
 <br>
 | **KillCharacter()** |
 | :--- |
@@ -81,6 +86,7 @@ local player = Game:GetAllPlayer()[1]
 player:KillCharacter() --플레이어의 캐릭터를 죽여요.
 ```
 <br>
+<br>
 | **RespawnCharacter()** |
 | :--- |
 
@@ -93,15 +99,18 @@ local player = Game:GetAllPlayer()[1]
 player:RespawnCharacter() --플레이어의 캐릭터를 리스폰해요.
 ```
 <br>
+<br>
 | **SetCheckPoint(RSpawnPoint SpawnPointObject)** |
 | :--- |
 
 플레이어의 체크 포인트를 설정할 수 있어요 (설정할 스폰 포인트 오브젝트) 
 <br>
+<br>
 | **SetCheckPoint(RWorldObject WorldObject)** |
 | :--- |
 
 플레이어의 체크 포인트를 설정할 수 있어요 (설정할 월드 오브젝트) 
+<br>
 <br>
 | **SetFreeCamMode(bool bFreeCam)** |
 | :--- |
@@ -115,6 +124,7 @@ local player = Game:GetAllPlayer()[1]
 player:SetFreeCamMode(true)
 ```
 <br>
+<br>
 | **RequestFreeCam(float WaitTime)** |
 | :--- |
 
@@ -127,10 +137,12 @@ local player = Game:GetAllPlayer()[1]
 player:RequestFreeCam(3) --3초후 프리캠이 시작되요.
 ```
 <br>
+<br>
 | **int GiveItem(ModeItemServer Item, int Count)** |
 | :--- |
 
 플레이어에게 아이템을 줄 수 있어요. (줄 아이템, 개수) return 인벤토리 인텍스 
+<br>
 <br>
 | **int GiveItem(ModeItemServer Item)** |
 | :--- |
@@ -147,6 +159,7 @@ wait(2)
 player:GiveItem(item) --플레이어에게 아이템을 지급해요.
 ```
 <br>
+<br>
 | **int GetInventorySize()** |
 | :--- |
 
@@ -158,6 +171,7 @@ player:GiveItem(item) --플레이어에게 아이템을 지급해요.
 local player = Game:GetAllPlayer()[1]
 print(player:GetInventorySize()) --플레이어의 인벤토리 사이즈를 숫자로 반환해요.
 ```
+<br>
 <br>
 | **ClearItem()** |
 | :--- |
@@ -176,6 +190,7 @@ local function ClearItem(character)
 end
 Game.OnDeathCharacter:Connect(ClearItem)
 ```
+<br>
 <br>
 | **EquipInventoryItem(int InventoryIndex)** |
 | :--- |
@@ -208,6 +223,7 @@ end
 collider.OnBeginOverlapEvent:Connect(GetItem)
 ```
 <br>
+<br>
 | **SetEnableCollisionBetweenCharacters(bool Enable)** |
 | :--- |
 
@@ -219,6 +235,7 @@ collider.OnBeginOverlapEvent:Connect(GetItem)
 local player = Game:GetAllPlayer()[1]
 player:SetEnableCollisionBetweenCharacters(false) --특정 플레이어가 다른 캐릭터와 충돌되지 않게 설정해요.
 ```
+<br>
 <br>
 | **SetUserCollisionTypeResponse(string UserCollisionType, CollisionResponse Response)** |
 | :--- |
@@ -233,6 +250,7 @@ Game:AddUserCollisionType("CollisionTag1") --유저 충돌 타입을 추가해�
 cube:SetUserCollisionTypeResponse("CollisionTag1", Enum.CollisionResponse.Overlap) --유저 타입 충돌 물체의 충돌 시 처리를 변경하는 함수에요.
 ```
 <br>
+<br>
 | **bool HaveInventorySaveData()** |
 | :--- |
 
@@ -245,10 +263,12 @@ local player = Game:GetAllPlayer()[1]
 print(player:HaveInventorySaveData()) --저장소에 인번토리에 대한 데이터가 저장되어 있으면 true를 반환해요.
 ```
 <br>
+<br>
 | **RModeHitResult LineTrace(Vector Start, Vector Dir, float Distance)** |
 | :--- |
 
 설정된 시작 지점에서 원하는 방향으로 지정된 거리 만큼 충돌이 있는지 체크할 수 있어요. (시작 지점 Vector, 목표 지점 Vector, 거리 값) 
+<br>
 <br>
 | **ModeItemServer GetInventoryItem(int InventoryIndex)** |
 | :--- |
@@ -263,6 +283,7 @@ if player:GetInventoryItem(0) ~= nil then
     print(player:GetInventoryItem(0):GetName()) --지정된 칸의 인벤토리 아이템을 반환해요.
 end
 ```
+<br>
 <br>
 | **ModeItemServer GetEquipItem(String EquipSlot)** |
 | :--- |
@@ -288,6 +309,7 @@ end
 | :--- |
 
 부모 객체를 얻을 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -306,6 +328,7 @@ print(parent:GetName())
 | :--- |
 
 추가된 값이 변경 될 때 호출되는 이벤트에요. (Value 이름, 연결 함수) 
+<br>
 샘플
 
 ```lua
@@ -335,6 +358,7 @@ cube:ConnectChangeEventFunction("SomeValue", ChangeSomeValue)  --오브젝트의
 | :--- |
 
 일정 시간뒤에 연결 함수가 호출되는 이벤트를 추가해요. (추가할 이벤트 이름, 시간, 연결 함수) 
+<br>
 샘플
 
 ```lua
@@ -356,6 +380,7 @@ Game:AddTimeEvent("PrintMessage", waitTime, PrintMessage) --일정시간을 기�
 | :--- |
 
 등록된 시간 이벤트를 삭제해요. (삭제할 이벤트 이름) 
+<br>
 샘플
 
 ```lua
@@ -382,6 +407,7 @@ Game:DeleteTimeEvent("PrintMessage") --AddTimeEvent로 등록한 함수를 삭�
 | :--- |
 
 객체의 이름을 얻을 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -413,6 +439,7 @@ print(Workspace.Floor:GetName()) --오브젝트의 이름을 문자열로 반환
 | :--- |
 
 자식 객체의 리스트를 얻을 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -432,6 +459,7 @@ end
 | :--- |
 
 캐릭터인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -451,6 +479,7 @@ end
 | :--- |
 
 스테틱 메시인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -470,6 +499,7 @@ end
 | :--- |
 
 FX인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -489,6 +519,7 @@ end
 | :--- |
 
 Sound인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -508,6 +539,7 @@ end
 | :--- |
 
 포인트 라이트인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -527,6 +559,7 @@ end
 | :--- |
 
 스포트 라이트인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -546,6 +579,7 @@ end
 | :--- |
 
 서피스 UI인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -565,6 +599,7 @@ end
 | :--- |
 
 스크린 UI인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -584,6 +619,7 @@ end
 | :--- |
 
 아이템인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -603,6 +639,7 @@ end
 | :--- |
 
 NPC인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -622,6 +659,7 @@ end
 | :--- |
 
 폴더인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -641,6 +679,7 @@ end
 | :--- |
 
 스트립트인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -660,6 +699,7 @@ end
 | :--- |
 
 Collider인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -679,6 +719,7 @@ end
 | :--- |
 
 Widget인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -698,6 +739,7 @@ end
 | :--- |
 
 Camera인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -723,6 +765,7 @@ end
 | :--- |
 
 해당 객체에 서버, 클라이언트 간 동기화가 가능한 벡터를 추가해요. (추가할 Value 이름, Vector 데이터, [Enum.ReplicateType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype), 동기화 시간, 스토리지 저장 여부) 
+<br>
 샘플
 
 ```lua
@@ -746,6 +789,7 @@ print(Game.SomeVector) --서버에서 값이 바뀌었지만 클라에서도 동
 | :--- |
 
 해당 객체에 서버, 클라이언트 간 동기화가 가능한 실수를 추가해요. (추가할 Value 이름, float 데이터, [Enum.ReplicateType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype), 동기화 시간, 스토리지 저장 여부) 
+<br>
 샘플
 
 ```lua
@@ -769,6 +813,7 @@ print(Game.SomeNumber .. " in Client") --서버에서 값이 바뀌었지만 클
 | :--- |
 
 해당 객체에 서버, 클라이언트 간 동기화가 가능한 bool를 추가해요. (추가할 Value 이름, bool 데이터, [Enum.ReplicateType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype), 동기화 시간, 스토리지 저장 여부) 
+<br>
 샘플
 
 ```lua
@@ -792,6 +837,7 @@ print(Game.SomeBool) --서버에서 값이 바뀌었지만 클라에서도 동�
 | :--- |
 
 해당 객체에 서버, 클라이언트 간 동기화가 가능한 문자열을 추가해요. (추가할 Value 이름, string 데이터, [Enum.ReplicateType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype), 동기화 시간, 스토리지 저장 여부) 
+<br>
 샘플
 
 ```lua
@@ -815,6 +861,7 @@ print(Game.SomeString) --서버에서 값이 바뀌었지만 클라에서도 동
 | :--- |
 
 해당 객체에 서버, 클라이언트 간 동기화가 가능한 컬러를 추가해요. (추가할 Value 이름, Color 데이터, [Enum.ReplicateType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype), 동기화 시간, 스토리지 저장 여부) 
+<br>
 샘플
 
 ```lua

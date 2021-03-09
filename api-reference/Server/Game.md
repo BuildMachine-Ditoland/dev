@@ -7,6 +7,7 @@
 ## **함수**
 
 <br>
+<br>
 | **AddUserCollisionType(string UserCollisionType)** |
 | :--- |
 
@@ -23,6 +24,7 @@ local cube = Workspace.Cube
 Game:AddUserCollisionType("CollisionTag1") --유저 충돌 타입을 추가해요.
 cube:SetCollisionType("CollisionTag1") --해당 오브젝트의 충돌 타입을 설정해요.
 ```
+<br>
 <br>
 | **RSpawnPointGroup AddSpawnPointGroup(string SpawnPointGroupName)** |
 | :--- |
@@ -42,10 +44,12 @@ Game:SetUsingSpawnPointGroup(spawnGroup) --게임에 적용할 스폰 그룹을 
 Game:SetSpawnType(Enum.SpawnType.UseSpawnGroup) --게임의 스폰타입을 설정해요.
 ```
 <br>
+<br>
 | **RSpawnPoint AddSpawnPoint(RScriptWorldObject* RWorldObject)** |
 | :--- |
 
 게임에서 사용 할 스폰 포인트를 추가할 수 있어요. (스폰 포인트로 지정 할 오브젝트) 
+<br>
 <br>
 | **RSpawnPoint AddSpawnPointAtGroup(string SpawnPointGroupName, RScriptWorldObject* RWorldObject)** |
 | :--- |
@@ -65,6 +69,7 @@ Game:SetUsingSpawnPointGroup(spawnGroup) --게임에 적용할 스폰 그룹을 
 Game:SetSpawnType(Enum.SpawnType.UseSpawnGroup) --게임의 스폰타입을 설정해요.
 ```
 <br>
+<br>
 | **SetSpawnType(ModeSpawnType InSpawnType)** |
 | :--- |
 
@@ -82,6 +87,7 @@ end
 Game:SetUsingSpawnPointGroup(spawnGroup) --게임에 적용할 스폰 그룹을 설정해요.
 Game:SetSpawnType(Enum.SpawnType.UseSpawnGroup) --게임의 스폰타입을 설정해요.
 ```
+<br>
 <br>
 | **SetUsingSpawnPointGroup(RSpawnPointGroup* SpawnPointGroup)** |
 | :--- |
@@ -101,20 +107,24 @@ Game:SetUsingSpawnPointGroup(spawnGroup) --게임에 적용할 스폰 그룹을 
 Game:SetSpawnType(Enum.SpawnType.UseSpawnGroup) --게임의 스폰타입을 설정해요.
 ```
 <br>
+<br>
 | **SetUsingSpawnPoint(RSpawnPoint* SpawnPoint)** |
 | :--- |
 
 게임에 적용 할 스폰 포인트를 설정할 수 있어요. (게임에 적용 할 스폰포인트 오브젝트) 
+<br>
 <br>
 | **SetDefaultSpawnPos(FVector Pos)** |
 | :--- |
 
 설정된 스폰 포인트가 없을 경우 지정한 위치에 스폰되도록 해요. (스폰할 위치 Vector) 
 <br>
+<br>
 | **SetUsingCharacterSetting(RCharacterSetting CharacterSettingObject)** |
 | :--- |
 
 게임에서 적용 할 캐릭터 설정을 설정 할 수 있어요. (게임에 적용 할 캐릭터 설정 오브젝트) 
+<br>
 <br>
 | **Team AddTeam(string TeamName)** |
 | :--- |
@@ -145,10 +155,12 @@ end
 Game.OnSpawnCharacter:Connect(SpawnCharacter) 
 ```
 <br>
+<br>
 | **RModeNPCSetting AddNPCSetting(string NPCSettingName)** |
 | :--- |
 
 게임에서 사용 할 NPC 설정을 추가할 수 있어요. (NPC 이름 설정) 
+<br>
 <br>
 | **Player GetPlayer(string PlayerName)** |
 | :--- |
@@ -161,15 +173,18 @@ Game.OnSpawnCharacter:Connect(SpawnCharacter)
 local player = Game:GetPlayer(PlayerName) --플레이어 이름에 해당하는 플레이어를 반환해요.
 ```
 <br>
+<br>
 | **RModeServerCharacter GetPlayerCharacter(string PlayerName)** |
 | :--- |
 
 플레이어 이름으로 플레이어 캐릭터를 얻을 수 있어요. (얻고 싶은 플레이어 이름) 
 <br>
+<br>
 | **SetTeamSetting(EModeTeamType TeamType, EDivideTeamType DivideTeamType)** |
 | :--- |
 
 게임의 팀전 여부, 팀 나누기 방식을 설정할 수 있어요. (팀 타입, [Enum.DivideTeamType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/divideteamtype)) 
+<br>
 <br>
 | **int GetPlayerCount()** |
 | :--- |
@@ -182,10 +197,12 @@ local player = Game:GetPlayer(PlayerName) --플레이어 이름에 해당하는 
 print(Game:GetPlayerCount())
 ```
 <br>
+<br>
 | **ResetTeamSetting()** |
 | :--- |
 
 게임의 팀 설정을 모두 제거해요. 
+<br>
 <br>
 | **ApplyTeamSetting()** |
 | :--- |
@@ -216,15 +233,18 @@ end
 Game.OnSpawnCharacter:Connect(SpawnCharacter) 
 ```
 <br>
+<br>
 | **ReqResetGame()** |
 | :--- |
 
 게임 리셋을 요청하는 함수에요. 
 <br>
+<br>
 | **SetCanEnterUser()** |
 | :--- |
 
 게임에 유저의 진입 가능 여부를 설정해요. (false로 설정 할 경우 해당 게임으로 더 이상 유저가 들어올 수 없어요.) 
+<br>
 <br>
 | **BroadcastEvent(string CustomEventName, Args ...)** |
 | :--- |
@@ -248,6 +268,7 @@ cube:ConnectEventFunction("SomeFunc", SomeFunc) --오브젝트에 "SomeFunc"라�
                                                 --오브젝트가 아닌 Game에도 연결할 수 있어요. 그러나 그룹과 폴더에는 연결할 수 없어요.
                                                 --같은 대상에 등록된 이벤트만 호출할 수 있어요.
 ```
+<br>
 <br>
 | **SendEventToClient(string PlayerName, string CustomEventName, Args ...)** |
 | :--- |
@@ -273,20 +294,24 @@ cube:ConnectEventFunction("SomeFunc", SomeFunc) --오브젝트에 "SomeFunc"라�
                                                 --같은 대상에 등록된 이벤트만 호출할 수 있어요.
 ```
 <br>
+<br>
 | **SetInventorySize(int XSize, int YSize)** |
 | :--- |
 
 인벤토리의 사이즈를 설정할 수 있어요. (가로 사이즈, 세로 사이즈) 
+<br>
 <br>
 | **SetQuickSlotCount(int Count)** |
 | :--- |
 
 퀵 슬롯의 개수를 설정할 수 있어요. (설정할 개수 값) 
 <br>
+<br>
 | **PickUpItem(RModeServerCharacter Character, ModeItem Item)** |
 | :--- |
 
 해당 케릭터에게 아이템을 획득시켜줘요. (아이템을 획득할 캐릭터, 아이템 객체) 
+<br>
 <br>
 | **CreateSyncObject(RScriptWorldObject WorldObject, Vector Location)** |
 | :--- |
@@ -302,6 +327,7 @@ local temp = Game:CreateSyncObject(cube, createPos) --오브젝트를 지정된 
 print(temp:GetName()) --CreateSyncObject로 생성한 오브젝트를 변수에 담은 뒤 후처리할 수 있어요.
 ```
 <br>
+<br>
 | **CreateSyncObject(RScriptWorldObject WorldObject, Vector Location, string Name, RScriptWorldObject Parent)** |
 | :--- |
 
@@ -316,10 +342,12 @@ local temp = Game:CreateSyncObject(cube, createPos, obj:GetName(), Workspace) --
 print(temp:GetName()) --CreateSyncObject로 생성한 오브젝트를 변수에 담은 뒤 후처리할 수 있어요.
 ```
 <br>
+<br>
 | **CreateNoneSyncObject(RScriptWorldObject WorldObject, Vector Location)** |
 | :--- |
 
 지정한 위치에 클라이언트와 동기화 되지 않는 오브젝트를 생성할 수 있어요. (생성 할 오브젝트, 생성 위치 Vector) 
+<br>
 <br>
 | **ObjectSpawner AddObjectSpawner(RObjectScript RObjectScript, EObjectSelectType ObjectSelectType, float SpawnTime, int MaxCount)** |
 | :--- |
@@ -340,75 +368,90 @@ local spawnPos = Vector.new(0, 0, 0)
 spawner:AddSpawnObject(Toybox.Cube, spawnRate, spawnCount, spawnPos) --스포너에서 스폰할 오브젝트를 등록해요.
 ```
 <br>
+<br>
 | **ObjectSelector CreateObjectSelector(EObjectSelectType SelectType)** |
 | :--- |
 
 오브젝트 셀렉터를 생성할 수 있어요. ( [Enum.ObjectSelectType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/objectselecttype)) 
+<br>
 <br>
 | **ObjectList GetObjectList(Vector Center, float Radius)** |
 | :--- |
 
 지정한 영역의 오브젝트를 얻을 수 있어요. (영역 중앙 포인트 Vector, 영역 반지름 값) 
 <br>
+<br>
 | **bool UseWorldItem(RModeServerCharacter Character, ModeItem Item)** |
 | :--- |
 
 월드 아이템을 사용하게 할 수 있어요. (사용할 캐릭터, 사용할 아이템) 
+<br>
 <br>
 | **DeleteWorldItem(ModeItem Item)** |
 | :--- |
 
 월드 아이템 삭제해요. (삭제할 아이템) 
 <br>
+<br>
 | **SaveUserGameData(String PlayerName, String KeyString, Vector SaveValue)** |
 | :--- |
 
 해당 유저의 게임 데이터를 저장할 수 있어요. (저장할 플레이어 이름, 데이터 키 값, 저장할 Vector 값) 
+<br>
 <br>
 | **SaveUserGameData(String PlayerName, String KeyString, float SaveValue)** |
 | :--- |
 
 해당 유저의 게임 데이터를 저장할 수 있어요. (저장할 플레이어 이름, 데이터 키 값, 저장할 float 값) 
 <br>
+<br>
 | **SaveUserGameData(String PlayerName, String KeyString, bool SaveValue)** |
 | :--- |
 
 해당 유저의 게임 데이터를 저장할 수 있어요. (저장할 플레이어 이름, 데이터 키 값, 저장할 Bool 값) 
+<br>
 <br>
 | **SaveUserGameData(String PlayerName, String KeyString, int SaveValue)** |
 | :--- |
 
 해당 유저의 게임 데이터를 저장할 수 있어요. (저장할 플레이어 이름, 데이터 키 값, 저장할 Int 값) 
 <br>
+<br>
 | **SaveUserGameData(String PlayerName, String KeyString, String SaveValue)** |
 | :--- |
 
 해당 유저의 게임 데이터를 저장할 수 있어요. (저장할 플레이어 이름, 데이터 키 값, 저장할 String 값) 
+<br>
 <br>
 | **SaveUserGameData(String PlayerName, String KeyString, Color SaveValue)** |
 | :--- |
 
 해당 유저의 게임 데이터를 저장할 수 있어요. (저장할 플레이어 이름, 데이터 키 값, 저장할 Color 값) 
 <br>
+<br>
 | **Object GetSavedUserGameData(String PlayerName, String KeyString)** |
 | :--- |
 
 해당 유저의 게임 데이터를 얻을 수 있어요. (플레이어 이름, 데이터 키 값) 
+<br>
 <br>
 | **SaveGameStatisticsData(String PlayerName, String KeyString, int SaveValue, bool Overwrite, bool Ascending)** |
 | :--- |
 
 해당 유저의 게임 통계 데이터를 저장할 수 있어요. (저장할 플레이어 이름, 데이터 키 값, 저장 값, 덮어씌우기 여부, 오름차순 정렬 여부) 
 <br>
+<br>
 | **GetGameStatisticsData(String KeyString, bool Ascending, int Offset, int Count, LuaScriptFunction CallBack)** |
 | :--- |
 
 게임 통계 데이터를 얻을 수 있어요. (데이터 키 값, 오름차순 정렬 여부, Offset 값, Count 값, CallBack 연결 함수) 
 <br>
+<br>
 | **SendToClient_GameStatisticsData(String PlayerName, String KeyString, bool Ascending, int Offset, int Count)** |
 | :--- |
 
 게임 통계 데이터를 클라이언트로 보내줄 수 있어요 (보내줄 플레이어 이름, 데이터 키 값, 오름차순 정렬 여부, Offset 값, Count 값) 
+<br>
 <br>
 | **vector<Player> GetAllPlayer()** |
 | :--- |
@@ -424,21 +467,26 @@ for i = 1, #allPlayerList do
 end
 ```
 <br>
+<br>
 | **NPC CreateNPC(String NPCName, String NPCSetting, Vector Location)** |
 | :--- |
 
 NPC를 새롭게 생성할 수 있어요. (생성할 NPC 이름 설정, 지정할 [NPC세팅](https://ditoland-utplus.gitbook.io/ditoland/api-reference/server/npcsetting), 생성 위치 Vector) 
+<br>
 <br>
 | **DeleteNPC(String NPCName)** |
 | :--- |
 
 해당 NPC를 삭제해요. (삭제할 NPC 이름) 
 <br>
+<br>
 | **TeleportToPublicServer(LandID, PlayerNameList, LoadingUI)** |
 | :--- |
 <br>
+<br>
 | **TeleportToPrivateServer(LandID, PlayerNameList, LoadingUI)** |
 | :--- |
+<br>
 <br>
 | **TeleportToServerURL(URL, LoadingUI)** |
 | :--- |
@@ -453,6 +501,7 @@ NPC를 새롭게 생성할 수 있어요. (생성할 NPC 이름 설정, 지정�
 | :--- |
 
 부모 객체를 얻을 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -471,6 +520,7 @@ print(parent:GetName())
 | :--- |
 
 매 프레임마다 호출되는 이벤트에요. 
+<br>
 샘플
 
 ```lua
@@ -494,6 +544,7 @@ cube.OnUpdateEvent:Connect(UpdateEvent) --Game이나 오브젝트에 매프레�
 | :--- |
 
 플레이어가 게임에 입장 시 호출되는 이벤트에요. 
+<br>
 샘플
 
 ```lua
@@ -513,6 +564,7 @@ Game.OnEnterPlayer:Connect(EnterPlayer) --Game에 플레이어가 게임에 입�
 | :--- |
 
 플레이어가 게임에서 나갈 때 호출되는 이벤트에요. 
+<br>
 샘플
 
 ```lua
@@ -532,6 +584,7 @@ Game.OnLeavePlayer:Connect(LeavePlayer) --Game에 플레이어가 게임을 종�
 | :--- |
 
 케릭터가 죽을 때 호출되는 이벤트에요. 
+<br>
 샘플
 
 ```lua
@@ -551,6 +604,7 @@ Game.OnDeathCharacter:Connect(DeathCharacter) --Game에 캐릭터가 죽으면 �
 | :--- |
 
 케릭터가 스폰 될 때 호출되는 이벤트에요. 
+<br>
 샘플
 
 ```lua
@@ -564,6 +618,7 @@ end
 Game.OnSpawnCharacter:Connect(SpawnCharacter) --Game에 캐릭터가 생성되면 연결된 호출되는 함수를 연결해요. 
 
 ``` 
+<br>
 샘플
 
 ```lua
@@ -589,6 +644,7 @@ Game.OnEnterPlayer:Connect(EnterPlayer)
 | :--- |
 
 추가된 값이 변경 될 때 호출되는 이벤트에요. (Value 이름, 연결 함수) 
+<br>
 샘플
 
 ```lua
@@ -618,6 +674,7 @@ cube:ConnectChangeEventFunction("SomeValue", ChangeSomeValue)  --오브젝트의
 | :--- |
 
 일정 시간뒤에 연결 함수가 호출되는 이벤트를 추가해요. (추가할 이벤트 이름, 시간, 연결 함수) 
+<br>
 샘플
 
 ```lua
@@ -639,6 +696,7 @@ Game:AddTimeEvent("PrintMessage", waitTime, PrintMessage) --일정시간을 기�
 | :--- |
 
 등록된 시간 이벤트를 삭제해요. (삭제할 이벤트 이름) 
+<br>
 샘플
 
 ```lua
@@ -665,6 +723,7 @@ Game:DeleteTimeEvent("PrintMessage") --AddTimeEvent로 등록한 함수를 삭�
 | :--- |
 
 게임에 단계를 추가할 수 있어요. (추가할 단계 이름) 
+<br>
 샘플
 
 ```lua
@@ -832,6 +891,7 @@ end)
 | :--- |
 
 유저가 추가한 이벤트에 함수를 연결할 수 있어요. (이벤트 이름, 연결 함수) 
+<br>
 샘플
 
 ```lua
@@ -865,6 +925,7 @@ cube:ConnectEventFunction("SomeFunc", SomeFunc) --오브젝트에 "SomeFunc"라�
 오브젝트를 삭제할 수 있어요. (삭제할 오브젝트) 
 
 서버에서 사용하면 서버와 클라 오브젝트 모두 삭제되고 클라에서 사용하면 클라 오브젝트만 삭제해요 
+<br>
 샘플
 
 ```lua
@@ -880,6 +941,7 @@ Game:DeleteObject(cube) --오브젝트를 파괴해요.
 | :--- |
 
 설정된 시작 지점에서 원하는 방향으로 지정된 거리 만큼의 충돌 리스트들을 가져올 수 있어요. (시작 지점 Vector, 목표 지점 Vector, 거리 값) 
+<br>
 샘플
 
 ```lua
@@ -905,6 +967,7 @@ end
 | :--- |
 
 객체의 이름을 얻을 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -936,6 +999,7 @@ print(Workspace.Floor:GetName()) --오브젝트의 이름을 문자열로 반환
 | :--- |
 
 자식 객체의 리스트를 얻을 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -955,6 +1019,7 @@ end
 | :--- |
 
 캐릭터인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -974,6 +1039,7 @@ end
 | :--- |
 
 스테틱 메시인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -993,6 +1059,7 @@ end
 | :--- |
 
 FX인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -1012,6 +1079,7 @@ end
 | :--- |
 
 Sound인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -1031,6 +1099,7 @@ end
 | :--- |
 
 포인트 라이트인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -1050,6 +1119,7 @@ end
 | :--- |
 
 스포트 라이트인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -1069,6 +1139,7 @@ end
 | :--- |
 
 서피스 UI인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -1088,6 +1159,7 @@ end
 | :--- |
 
 스크린 UI인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -1107,6 +1179,7 @@ end
 | :--- |
 
 아이템인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -1126,6 +1199,7 @@ end
 | :--- |
 
 NPC인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -1145,6 +1219,7 @@ end
 | :--- |
 
 폴더인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -1164,6 +1239,7 @@ end
 | :--- |
 
 스트립트인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -1183,6 +1259,7 @@ end
 | :--- |
 
 Collider인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -1202,6 +1279,7 @@ end
 | :--- |
 
 Widget인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -1221,6 +1299,7 @@ end
 | :--- |
 
 Camera인지 확인할 수 있어요. 
+<br>
 샘플
 
 ```lua
@@ -1246,6 +1325,7 @@ end
 | :--- |
 
 해당 객체에 서버, 클라이언트 간 동기화가 가능한 벡터를 추가해요. (추가할 Value 이름, Vector 데이터, [Enum.ReplicateType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype), 동기화 시간, 스토리지 저장 여부) 
+<br>
 샘플
 
 ```lua
@@ -1269,6 +1349,7 @@ print(Game.SomeVector) --서버에서 값이 바뀌었지만 클라에서도 동
 | :--- |
 
 해당 객체에 서버, 클라이언트 간 동기화가 가능한 실수를 추가해요. (추가할 Value 이름, float 데이터, [Enum.ReplicateType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype), 동기화 시간, 스토리지 저장 여부) 
+<br>
 샘플
 
 ```lua
@@ -1292,6 +1373,7 @@ print(Game.SomeNumber .. " in Client") --서버에서 값이 바뀌었지만 클
 | :--- |
 
 해당 객체에 서버, 클라이언트 간 동기화가 가능한 bool를 추가해요. (추가할 Value 이름, bool 데이터, [Enum.ReplicateType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype), 동기화 시간, 스토리지 저장 여부) 
+<br>
 샘플
 
 ```lua
@@ -1315,6 +1397,7 @@ print(Game.SomeBool) --서버에서 값이 바뀌었지만 클라에서도 동�
 | :--- |
 
 해당 객체에 서버, 클라이언트 간 동기화가 가능한 문자열을 추가해요. (추가할 Value 이름, string 데이터, [Enum.ReplicateType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype), 동기화 시간, 스토리지 저장 여부) 
+<br>
 샘플
 
 ```lua
@@ -1338,6 +1421,7 @@ print(Game.SomeString) --서버에서 값이 바뀌었지만 클라에서도 동
 | :--- |
 
 해당 객체에 서버, 클라이언트 간 동기화가 가능한 컬러를 추가해요. (추가할 Value 이름, Color 데이터, [Enum.ReplicateType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype), 동기화 시간, 스토리지 저장 여부) 
+<br>
 샘플
 
 ```lua
