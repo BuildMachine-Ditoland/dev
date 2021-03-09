@@ -1,5 +1,5 @@
 
-클라이언트에서 사용되는 Widget Frame 객체. 
+클라이언트에서 사용되는 Widget Frame 객체. <br>
 <br>
 ## **속성**
 
@@ -10,9 +10,9 @@
 | **SetBackgroundColor(Color color)** |
 | :--- |
 
-버튼 위젯의 배경 색을 설정할 수 있어요. (변경할 색) 
+버튼 위젯의 배경 색을 설정할 수 있어요. (변경할 색) <br>
 
-샘플 
+샘플 <br>
 
 ```lua
 local someFrame = Workspace.ScreenUI.someFrame

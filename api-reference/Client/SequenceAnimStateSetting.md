@@ -1,7 +1,7 @@
 
-단일 애니메이션을 플레이하는 애니메이션 상태의 설정을 다루는 객체에요. 
+단일 애니메이션을 플레이하는 애니메이션 상태의 설정을 다루는 객체에요. <br>
 
-AddAnimState 함수로 생성할 수 있어요. 
+AddAnimState 함수로 생성할 수 있어요. <br>
 <br>
 ## **이벤트**
 
@@ -9,12 +9,12 @@ AddAnimState 함수로 생성할 수 있어요.
 | **void AddAnimationEvent(String EventName, float Time, protected_function function EventFunction)** |
 | :--- |
 
-애니메이션 이벤트를 추가할 수 있어요. (추가할 이벤트 이름, 플레이 시간, 연결 함수) 
+애니메이션 이벤트를 추가할 수 있어요. (추가할 이벤트 이름, 플레이 시간, 연결 함수) <br>
 <br>
 | **void DeleteAnimationEvent(String EventName)** |
 | :--- |
 
-애니메이션 이벤트를 제거해요. (제거할 이벤트 이름) 
+애니메이션 이벤트를 제거해요. (제거할 이벤트 이름) <br>
 # **상속받아 사용 가능한 기능들**
 
 <br>

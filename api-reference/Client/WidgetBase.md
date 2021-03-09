@@ -1,5 +1,5 @@
 
-클라이언트에서 사용되는 Widget Base 객체. 
+클라이언트에서 사용되는 Widget Base 객체. <br>
 <br>
 ## **속성**
 
@@ -10,9 +10,9 @@
 | **SetVisible(bool bVisible)** |
 | :--- |
 
-UI 위젯의 표시 여부를 설정할 수 있어요. (위젯 표시 여부) 
+UI 위젯의 표시 여부를 설정할 수 있어요. (위젯 표시 여부) <br>
 
-샘플 
+샘플 <br>
 
 ```lua
 local someUI = Workspace.ScreenUI
@@ -22,24 +22,24 @@ someUI:SetVisible(false) --UI를 비활성화해요.
 | **bool IsVisible()** |
 | :--- |
 
-위젯이 보이는지를 확인할 수 있어요. () 
+위젯이 보이는지를 확인할 수 있어요. () <br>
 <br>
 | **SetLocation(Number X, Number Y)** |
 | :--- |
 
-위젯의 위치를 변경할 수 있어요. (X좌표 값, Y좌표 값) 
+위젯의 위치를 변경할 수 있어요. (X좌표 값, Y좌표 값) <br>
 <br>
 | **SetAnchor(ERObjectUIAnchorType type)** |
 | :--- |
 
-위젯의 고정 여부를 설정할 수 있어요. (설정할 타입) 
+위젯의 고정 여부를 설정할 수 있어요. (설정할 타입) <br>
 <br>
 | **SetOpacity(Number Opacity)** |
 | :--- |
 
-위젯의 투명 값을 설정할 수 있어요. (설정할 값) 
+위젯의 투명 값을 설정할 수 있어요. (설정할 값) <br>
 
-샘플 
+샘플 <br>
 
 ```lua
 local someUI = Workspace.ScreenUI.Frame
@@ -49,14 +49,14 @@ someUI:SetOpacity(0.3)
 | **AddChildUIScene(string ChildUISceneName, FRUIScene* Element)** |
 | :--- |
 
-UI씬에 자식 UI씬 추가할 수 있어요. (자식이 될 UI씬 이름, 자식으로 추가할 UI씬) 
+UI씬에 자식 UI씬 추가할 수 있어요. (자식이 될 UI씬 이름, 자식으로 추가할 UI씬) <br>
 <br>
 | **SetScale(Number Scale)** |
 | :--- |
 
-위젯의 스케일을 설정할 수 있어요. (설정할 값) 
+위젯의 스케일을 설정할 수 있어요. (설정할 값) <br>
 
-샘플 
+샘플 <br>
 
 ```lua
 local cube = Workspace.Cube
@@ -68,9 +68,9 @@ cube:SetScale(scale) --오브젝트의 크기를 설정해요.
 | **Number GetScale()** |
 | :--- |
 
-위젯의 스케일을 얻을 수 있어요. 
+위젯의 스케일을 얻을 수 있어요. <br>
 
-샘플 
+샘플 <br>
 
 ```lua
 local cube = Workspace.Cube

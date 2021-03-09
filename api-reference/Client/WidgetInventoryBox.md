@@ -1,5 +1,5 @@
 
-클라이언트에서 사용되는 Widget InventoryBox 객체. 
+클라이언트에서 사용되는 Widget InventoryBox 객체. <br>
 <br>
 ## **속성**
 
@@ -10,29 +10,29 @@
 | **SetBackgroundColor(Number Count)** |
 | :--- |
 
-GridBox의 행 개수를 설정 할 수 있어요. (Number Count) 
+GridBox의 행 개수를 설정 할 수 있어요. (Number Count) <br>
 <br>
 | **SetBackgroundColor(Number Value)** |
 | :--- |
 
-GridBox의 행 사이를 설정 할 수 있어요. (Number Value) 
+GridBox의 행 사이를 설정 할 수 있어요. (Number Value) <br>
 <br>
 | **SetHeightPadding(Number Value)** |
 | :--- |
 
-GridBox의 열 사이를 설정 할 수 있어요. (Number Value) 
+GridBox의 열 사이를 설정 할 수 있어요. (Number Value) <br>
 <br>
 | **SetHeightPadding(Number XSize, Number YSize)** |
 | :--- |
 
-GridBox의 슬롯의 사이즈를 설정 할 수 있어요. (float XSize, float YSize) 
+GridBox의 슬롯의 사이즈를 설정 할 수 있어요. (float XSize, float YSize) <br>
 <br>
 | **SetBackgroundColor(Color color)** |
 | :--- |
 
-GridBox의 배경 색을 설정할 수 있어요. (변경할 색) 
+GridBox의 배경 색을 설정할 수 있어요. (변경할 색) <br>
 
-샘플 
+샘플 <br>
 
 ```lua
 local someFrame = Workspace.ScreenUI.someFrame
@@ -42,12 +42,12 @@ someFrame:SetBackgroundColor(Color.new(0, 0, 255, 255)) --프레임 UI의 바탕
 | **SetContentTransparency(float Value)** |
 | :--- |
 
-GridBox의 투명도를 설정할 수 있어요. (float Value) 
+GridBox의 투명도를 설정할 수 있어요. (float Value) <br>
 <br>
 | **SetOrientationType(ScrollOrientationType Type)** |
 | :--- |
 
-GridBox의 스크롤 타입을 설정할 수 있어요(Enum.ScrollOrientationType.Type) 
+GridBox의 스크롤 타입을 설정할 수 있어요(Enum.ScrollOrientationType.Type) <br>
 # **상속받아 사용 가능한 기능들**
 
 <br>

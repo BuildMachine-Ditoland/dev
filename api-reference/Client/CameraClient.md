@@ -1,5 +1,5 @@
 
-클라이언트에서 사용되는 카메라 개체에요. 
+클라이언트에서 사용되는 카메라 개체에요. <br>
 <br>
 ## **속성**
 
@@ -7,14 +7,14 @@
 | **ProjectionType** |
 | :--- |
 
-ProjectionType(카메라가 보여주는 방식)을 얻을 수 있어요. 
+ProjectionType(카메라가 보여주는 방식)을 얻을 수 있어요. <br>
 <br>
 | **FieldOfView** |
 | :--- |
 
-FieldOfView를 얻을 수 있어요. 
+FieldOfView를 얻을 수 있어요. <br>
 
-샘플 
+샘플 <br>
 
 ```lua
 local camera = LocalPlayer:GetCurrentCamera()
@@ -24,29 +24,29 @@ camera.FieldOfView = 50
 | **OrthoWidth** |
 | :--- |
 
-OrthoWidth를 얻을 수 있어요. 
+OrthoWidth를 얻을 수 있어요. <br>
 <br>
 | **bDoCollisionTest** |
 | :--- |
 
-카메라 CollisionTest를 켤 수 있어요. 
+카메라 CollisionTest를 켤 수 있어요. <br>
 <br>
 | **bEnableCameraLag** |
 | :--- |
 
-카메라 지연 효과를 켤 수 있어요. 
+카메라 지연 효과를 켤 수 있어요. <br>
 <br>
 | **CameraLagSpeed** |
 | :--- |
 
-카메라 지연 속도를 얻을 수 있어요. 
+카메라 지연 속도를 얻을 수 있어요. <br>
 <br>
 | **SocketOffset** |
 | :--- |
 
-카메라 위치 Offset을 얻을 수 있어요. 
+카메라 위치 Offset을 얻을 수 있어요. <br>
 
-샘플 
+샘플 <br>
 
 ```lua
 local camera = LocalPlayer:GetCurrentCamera()
@@ -56,9 +56,9 @@ camera.SocketOffset = Vector.new(0, 0, 90)
 | **Zoom** |
 | :--- |
 
-Zoom 값을 얻을 수 있어요. 
+Zoom 값을 얻을 수 있어요. <br>
 
-샘플 
+샘플 <br>
 
 ```lua
 local camera = LocalPlayer:GetCurrentCamera()
@@ -68,9 +68,9 @@ camera.Zoom = 30
 | **ZoomMin** |
 | :--- |
 
-Zoom의 최소 값을 얻을 수 있어요. 
+Zoom의 최소 값을 얻을 수 있어요. <br>
 
-샘플 
+샘플 <br>
 
 ```lua
 local camera = LocalPlayer:GetCurrentCamera()
@@ -80,9 +80,9 @@ camera.ZoomMin = 20
 | **ZoomMax** |
 | :--- |
 
-Zoom의 최대 값을 얻을 수 있어요. 
+Zoom의 최대 값을 얻을 수 있어요. <br>
 
-샘플 
+샘플 <br>
 
 ```lua
 local camera = LocalPlayer:GetCurrentCamera()
@@ -95,9 +95,9 @@ camera.ZoomMax = 40
 | **SetLookAtTarget(FRScriptObject ScriptObject)** |
 | :--- |
 
-대상 오브젝트를 타겟으로 설정해서 바라봐요. (타겟으로 설정할 오브젝트) 
+대상 오브젝트를 타겟으로 설정해서 바라봐요. (타겟으로 설정할 오브젝트) <br>
 
-샘플 
+샘플 <br>
 
 ```lua
 local targetCharacter = LocalPlayer:GetRemotePlayer():GetCharacter()
@@ -113,9 +113,9 @@ characterCamera:SetLookAtTarget(nil) --카메라가 대상 오브젝트를 바�
 | **ZoomInOut(float Value)** |
 | :--- |
 
-카메라의 줌을 설정할 수 있어요. (설정할 카메라 줌 크기 값) 
+카메라의 줌을 설정할 수 있어요. (설정할 카메라 줌 크기 값) <br>
 
-샘플 
+샘플 <br>
 
 ```lua
 local camera = LocalPlayer:GetCurrentCamera()

@@ -1,5 +1,5 @@
 
-클라이언트에서 사용되는 FX 개체에요 
+클라이언트에서 사용되는 FX 개체에요 <br>
 <br>
 ## **함수**
 
@@ -7,9 +7,9 @@
 | **void Play()** |
 | :--- |
 
-FX를 플레이해요. 
+FX를 플레이해요. <br>
 
-샘플 
+샘플 <br>
 
 ```lua
 local fx = Workspace.FX
@@ -19,9 +19,9 @@ fx:Play()
 | **void Stop()** |
 | :--- |
 
-FX를 정지시켜요. 
+FX를 정지시켜요. <br>
 
-샘플 
+샘플 <br>
 
 ```lua
 local fx = Workspace.FX

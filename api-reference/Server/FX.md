@@ -1,5 +1,5 @@
 
-서버에서 사용되는 FX 객체에요. 
+서버에서 사용되는 FX 객체에요. <br>
 <br>
 ## **함수**
 
@@ -7,9 +7,9 @@
 | **Play()** |
 | :--- |
 
-FX를 플레이시켜요. 
+FX를 플레이시켜요. <br>
 
-샘플 
+샘플 <br>
 
 ```lua
 local fx = Workspace.FX
@@ -19,9 +19,9 @@ fx:Play()
 | **Stop()** |
 | :--- |
 
-FX를 정지해요. 
+FX를 정지해요. <br>
 
-샘플 
+샘플 <br>
 
 ```lua
 local fx = Workspace.FX

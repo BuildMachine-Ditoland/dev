@@ -1,5 +1,5 @@
 
-게임에 참여한 플레이어 객체에요. 이 기능들은 서버에서만 사용 가능해요. 
+게임에 참여한 플레이어 객체에요. 이 기능들은 서버에서만 사용 가능해요. <br>
 <br>
 ## **함수**
 
@@ -7,9 +7,9 @@
 | **RModeServerCharacter GetCharacter()** |
 | :--- |
 
-플레이어의 캐릭터를 얻을 수 있어요. 
+플레이어의 캐릭터를 얻을 수 있어요. <br>
 
-샘플 
+샘플 <br>
 
 ```lua
 local player = Game:GetAllPlayer()[1]
@@ -19,9 +19,9 @@ local character = player:GetCharacter() --플레이어의 캐릭터를 반환해
 | **string GetPlayerName()** |
 | :--- |
 
-플레이어의 이름을 얻을 수 있어요. 
+플레이어의 이름을 얻을 수 있어요. <br>
 
-샘플 
+샘플 <br>
 
 ```lua
 local character = Game:GetAllPlayer()[1]:GetCharacter()
@@ -31,9 +31,9 @@ print(character:GetPlayerName()) --캐릭터의 플레이어 이름을 문자열
 | **string GetTeamName()** |
 | :--- |
 
-플레이어가 속해있는 팀 이름을 얻을 수 있어요. 
+플레이어가 속해있는 팀 이름을 얻을 수 있어요. <br>
 
-샘플 
+샘플 <br>
 
 ```lua
 local teamName = "Blue Team"
@@ -60,9 +60,9 @@ Game.OnSpawnCharacter:Connect(SpawnCharacter)
 | **int GetLifeCount()** |
 | :--- |
 
-플레이어의 남은 목숨 개수를 얻을 수 있어요. 
+플레이어의 남은 목숨 개수를 얻을 수 있어요. <br>
 
-샘플 
+샘플 <br>
 
 ```lua
 local player = Game:GetAllPlayer()[1] 
@@ -72,9 +72,9 @@ print(player:GetLifeCount())
 | **KillCharacter()** |
 | :--- |
 
-플레이어 캐릭터를 죽게 하는 함수에요. 
+플레이어 캐릭터를 죽게 하는 함수에요. <br>
 
-샘플 
+샘플 <br>
 
 ```lua
 local player = Game:GetAllPlayer()[1]
@@ -84,9 +84,9 @@ player:KillCharacter() --플레이어의 캐릭터를 죽여요.
 | **RespawnCharacter()** |
 | :--- |
 
-플레이어 캐릭터를 리스폰 시키는 함수에요. 
+플레이어 캐릭터를 리스폰 시키는 함수에요. <br>
 
-샘플 
+샘플 <br>
 
 ```lua
 local player = Game:GetAllPlayer()[1]
@@ -96,19 +96,19 @@ player:RespawnCharacter() --플레이어의 캐릭터를 리스폰해요.
 | **SetCheckPoint(RSpawnPoint SpawnPointObject)** |
 | :--- |
 
-플레이어의 체크 포인트를 설정할 수 있어요 (설정할 스폰 포인트 오브젝트) 
+플레이어의 체크 포인트를 설정할 수 있어요 (설정할 스폰 포인트 오브젝트) <br>
 <br>
 | **SetCheckPoint(RWorldObject WorldObject)** |
 | :--- |
 
-플레이어의 체크 포인트를 설정할 수 있어요 (설정할 월드 오브젝트) 
+플레이어의 체크 포인트를 설정할 수 있어요 (설정할 월드 오브젝트) <br>
 <br>
 | **SetFreeCamMode(bool bFreeCam)** |
 | :--- |
 
-플레이어의 프리캠 모드 사용여부를 설정할 수 있어요. (프리캠 사용 여부) 
+플레이어의 프리캠 모드 사용여부를 설정할 수 있어요. (프리캠 사용 여부) <br>
 
-샘플 
+샘플 <br>
 
 ```lua
 local player = Game:GetAllPlayer()[1]
@@ -118,9 +118,9 @@ player:SetFreeCamMode(true)
 | **RequestFreeCam(float WaitTime)** |
 | :--- |
 
-지정된 시간이 지난 후에 플레이어의 프리캠 모드를 요청해요. (대기 시간) 
+지정된 시간이 지난 후에 플레이어의 프리캠 모드를 요청해요. (대기 시간) <br>
 
-샘플 
+샘플 <br>
 
 ```lua
 local player = Game:GetAllPlayer()[1]
@@ -130,14 +130,14 @@ player:RequestFreeCam(3) --3초후 프리캠이 시작되요.
 | **int GiveItem(ModeItemServer Item, int Count)** |
 | :--- |
 
-플레이어에게 아이템을 줄 수 있어요. (줄 아이템, 개수) return 인벤토리 인텍스 
+플레이어에게 아이템을 줄 수 있어요. (줄 아이템, 개수) return 인벤토리 인텍스 <br>
 <br>
 | **int GiveItem(ModeItemServer Item)** |
 | :--- |
 
-플레이어에게 아이템을 줄 수 있어요. (줄 아이템) return 인벤토리 인텍스 
+플레이어에게 아이템을 줄 수 있어요. (줄 아이템) return 인벤토리 인텍스 <br>
 
-샘플 
+샘플 <br>
 
 ```lua
 local player = Game:GetAllPlayer()[1]
@@ -150,9 +150,9 @@ player:GiveItem(item) --플레이어에게 아이템을 지급해요.
 | **int GetInventorySize()** |
 | :--- |
 
-플레이어의 인벤토리 사이즈를 얻을 수 있어요. 
+플레이어의 인벤토리 사이즈를 얻을 수 있어요. <br>
 
-샘플 
+샘플 <br>
 
 ```lua
 local player = Game:GetAllPlayer()[1]
@@ -162,9 +162,9 @@ print(player:GetInventorySize()) --플레이어의 인벤토리 사이즈를 숫
 | **ClearItem()** |
 | :--- |
 
-플레이어의 아이템을 모두 제거해요. 
+플레이어의 아이템을 모두 제거해요. <br>
 
-샘플 
+샘플 <br>
 
 ```lua
 local function ClearItem(character)
@@ -180,9 +180,9 @@ Game.OnDeathCharacter:Connect(ClearItem)
 | **EquipInventoryItem(int InventoryIndex)** |
 | :--- |
 
-플레이어 캐릭터에 아이템을 장착시킬 수 있어요. (장착 할 인벤토리 칸) 
+플레이어 캐릭터에 아이템을 장착시킬 수 있어요. (장착 할 인벤토리 칸) <br>
 
-샘플 
+샘플 <br>
 
 ```lua
 local item = Script.Parent
@@ -211,9 +211,9 @@ collider.OnBeginOverlapEvent:Connect(GetItem)
 | **SetEnableCollisionBetweenCharacters(bool Enable)** |
 | :--- |
 
-플레이어간의 충돌 여부를 설정할 수 있어요. (충돌 여부) 
+플레이어간의 충돌 여부를 설정할 수 있어요. (충돌 여부) <br>
 
-샘플 
+샘플 <br>
 
 ```lua
 local player = Game:GetAllPlayer()[1]
@@ -223,9 +223,9 @@ player:SetEnableCollisionBetweenCharacters(false) --특정 플레이어가 다�
 | **SetUserCollisionTypeResponse(string UserCollisionType, CollisionResponse Response)** |
 | :--- |
 
-유저가 충돌 시 발생 타입을 설정할 수 있어요. (충돌 타입 이름 설정, [Enum.CollisionResponse.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/collisionresponse)) 
+유저가 충돌 시 발생 타입을 설정할 수 있어요. (충돌 타입 이름 설정, [Enum.CollisionResponse.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/collisionresponse)) <br>
 
-샘플 
+샘플 <br>
 
 ```lua
 local cube = Workspace.Cube
@@ -236,9 +236,9 @@ cube:SetUserCollisionTypeResponse("CollisionTag1", Enum.CollisionResponse.Overla
 | **bool HaveInventorySaveData()** |
 | :--- |
 
-저장소에 인번토리에 대한 데이터가 저장되어 있는지 확인할 수 있어요. 
+저장소에 인번토리에 대한 데이터가 저장되어 있는지 확인할 수 있어요. <br>
 
-샘플 
+샘플 <br>
 
 ```lua
 local player = Game:GetAllPlayer()[1]
@@ -248,14 +248,14 @@ print(player:HaveInventorySaveData()) --저장소에 인번토리에 대한 데�
 | **RModeHitResult LineTrace(Vector Start, Vector Dir, float Distance)** |
 | :--- |
 
-설정된 시작 지점에서 원하는 방향으로 지정된 거리 만큼 충돌이 있는지 체크할 수 있어요. (시작 지점 Vector, 목표 지점 Vector, 거리 값) 
+설정된 시작 지점에서 원하는 방향으로 지정된 거리 만큼 충돌이 있는지 체크할 수 있어요. (시작 지점 Vector, 목표 지점 Vector, 거리 값) <br>
 <br>
 | **ModeItemServer GetInventoryItem(int InventoryIndex)** |
 | :--- |
 
-지정된 칸의 인벤토리 아이템을 얻을 수 있어요. (인벤토리 칸) 
+지정된 칸의 인벤토리 아이템을 얻을 수 있어요. (인벤토리 칸) <br>
 
-샘플 
+샘플 <br>
 
 ```lua
 local player = Game:GetAllPlayer()[1]
@@ -267,9 +267,9 @@ end
 | **ModeItemServer GetEquipItem(String EquipSlot)** |
 | :--- |
 
-플레이어 캐릭터가 착용중인 아이템을 얻을 수 있어요. (장착 중인 아이템 슬롯) 
+플레이어 캐릭터가 착용중인 아이템을 얻을 수 있어요. (장착 중인 아이템 슬롯) <br>
 
-샘플 
+샘플 <br>
 
 ```lua
 local player = Game:GetAllPlayer()[1]

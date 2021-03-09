@@ -1,5 +1,5 @@
 
-클라이언트에서 사용되는 Widget GridBox 객체. 
+클라이언트에서 사용되는 Widget GridBox 객체. <br>
 <br>
 ## **속성**
 
@@ -10,12 +10,12 @@
 | **SetBackgroundColor(Number Count)** |
 | :--- |
 
-GridBox의 행 개수를 설정 할 수 있어요. (Number Count) 
+GridBox의 행 개수를 설정 할 수 있어요. (Number Count) <br>
 <br>
 | **SetRow(Number Count)** |
 | :--- |
 
-GridBox의 열 개수를 설정 할 수 있어요. (Number Count) 
+GridBox의 열 개수를 설정 할 수 있어요. (Number Count) <br>
 # **상속받아 사용 가능한 기능들**
 
 <br>
