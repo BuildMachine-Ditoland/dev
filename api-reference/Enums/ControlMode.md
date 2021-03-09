@@ -1,5 +1,6 @@
 
 캐릭터 컨트롤 모드 타입이에요. 
+<br>
 ## **Enums**
 
  **이름** | **설명** |
@@ -13,6 +14,7 @@
 local character = Game:GetAllPlayer()[1]:GetCharacter()
 character:SetControlMode(Enum.ControlMode.Normal)
 ```
+<br>
 ## **Enums**
 
  **이름** | **설명** |

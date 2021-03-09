@@ -1,5 +1,6 @@
 
 SurfaceUI 의 DisplayType 
+<br>
 ## **Enums**
 
  **이름** | **설명** |

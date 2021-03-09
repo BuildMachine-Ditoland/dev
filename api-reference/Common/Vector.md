@@ -1,19 +1,24 @@
 
 Vector에 대한 정보를 다루는 객체에요. 
+<br>
 ## **생성자**
 
+<br>
 | **Vector.new(number X, number Y, number Z)** |
 | :--- |
 
 Vector를 X, Y, Z 좌표값을 이용해서 생성해줘요. (생성할 X좌표 값, 생성할 Y좌표 값, 생성할 Z좌표 값) 
+<br>
 | **Vector.new(number Value)** |
 | :--- |
 
 Vector를 Value값을 이용해서 생성해줘요. (생성할 Value 값) 
+<br>
 | **Vector.new()** |
 | :--- |
 
 Vector의 X, Y, Z 좌표를 0으로해서 생성해줘요. 
+<br>
 ## **연산자**
 
 
@@ -32,30 +37,33 @@ Vector = Vector * Vector
 Vector = Vector * float 
 
 두 벡터 값을 곱해서 그 값을 리턴해줘요. 
+<br>
 ## **함수**
 
 <br>
-<br>
-<br>
-  void Normalize()
+| **void Normalize()** |
+| :--- |
 
 단위를 1로 정규화 시켜주는 함수에요. 
 <br>
-<br>
-<br>
-  float CosineAngle2D(Vector Other)
+| **float CosineAngle2D(Vector Other)** |
+| :--- |
 
 두 벡터의 XY 평면의 사잇각의 cos 값을 리턴해줘요. (사잇각을 구할 벡터) 
+<br>
 ## **속성**
 
+<br>
 | **X** |
 | :--- |
 
 X 좌표에요. 
+<br>
 | **Y** |
 | :--- |
 
 Y 좌표에요. 
+<br>
 | **Z** |
 | :--- |
 

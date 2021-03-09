@@ -2,32 +2,40 @@
 클라이언트에서 사용되는 Surface UI 개체에요. 
 # **상속받아 사용 가능한 기능들**
 
+<br>
 ## **속성**
 
+<br>
 | **Parent** |
 | :--- |
-
-부모 객체를 얻을 수 있어요. 
+
+부모 객체를 얻을 수 있어요. 
 샘플
 
 ```lua
 local parent = Workspace.Floor.Parent --오브젝트의 부모를 반환해요
 print(parent:GetName()) 
 ```
+<br>
 ## **이벤트**
 
+<br>
 | **OnInitEvent** |
 | :--- |
 UI가 초기화 되었을 때 호출되는 이벤트에요.
+<br>
 | **OnVisibleEvent** |
 | :--- |
 UI가 보여질 때 호출되는 이벤트에요.
+<br>
 | **OnUpdateEvent** |
 | :--- |
 UI가 보여지는 동안 매 프라임마다 호출되는 이벤트에요.
+<br>
 | **OnInVisibleEvent** |
 | :--- |
 UI가 안 보여질 때 호출되는 이벤트에요.
+<br>
 | **OnCreateEvent** |
 | :--- |
 생성 시 호출되는 이벤트에요.
@@ -52,6 +60,7 @@ local function UpdateEvent(updateTime) --OnUpdateEvent로 연결된 함수는 up
 end
 cube.OnUpdateEvent:Connect(UpdateEvent) --Game이나 오브젝트에 매프레임마다 호출되는 함수를 연결해요.
 ```
+<br>
 | **OnDestroyEvent** |
 | :--- |
 삭제될 때 호출되는 이벤트에요.
@@ -65,6 +74,7 @@ end
 cube.OnDestroyEvent:Connect(DestroyEvent) --오브젝트에 해당 오브젝트가 파괴됐을때 호출되는 함수를 연결해요.
 Game:DeleteObject(cube)
 ```
+<br>
 | **OnCollisionEvent** |
 | :--- |
 다른 객체와 충돌할 때 호출되는 이벤트에요.
@@ -79,6 +89,7 @@ local function CollisionEvent(self, target) --OnCollisionEvent로 연결된 함�
 end
 cube.OnCollisionEvent:Connect(CollisionEvent) --Collision이 true인 오브젝트와 충돌중일때 호출되는 함수를 연결해요.
 ```
+<br>
 | **OnBeginOverlapEvent** |
 | :--- |
 다른 객체와 겹쳐질 때 호출되는 이벤트에요.
@@ -93,6 +104,7 @@ local function BeginOverlapEvent(self, target) --OnBeginOverlapEvent 연결된 �
 end
 cube.OnBeginOverlapEvent:Connect(BeginOverlapEvent) --Collision이 false인 오브젝트와 충돌을 시작할때 호출되는 함수를 연결해요.
 ```
+<br>
 | **OnEndOverlapEvent** |
 | :--- |
 다른 객체와 겹쳐짐이 끝날 때 호출되는 이벤트에요.
@@ -107,6 +119,7 @@ local function EndOverlapEvent(self, target) --OnEndOverlapEvent 연결된 함�
 end
 cube.OnEndOverlapEvent:Connect(EndOverlapEvent) --Collision이 false인 오브젝트와 충돌이 끝날때 호출되는 함수를 연결해요.
 ```
+<br>
 | **OnOverlapUpdateEvent** |
 | :--- |
 다른 객체와 겹쳐있는 동안 매 프레임마다 호출되는 이벤트에요.
@@ -121,6 +134,7 @@ local function OverlapUpdateEvent(self, target) --OnOverlapUpdateEvent로 연결
 end
 cube.OnOverlapUpdateEvent:Connect(OverlapUpdateEvent) --Collision이 false인 오브젝트와 충돌중일때 호출되는 함수를 연결해요.
 ```
+<br>
 | **ConnectChangeEventFunction(string ValueName, function FunctionName)** |
 | :--- |
 추가된 값이 변경 될 때 호출되는 이벤트에요. (Value 이름, 연결 함수)
@@ -137,8 +151,10 @@ local function ChangeSomeValue()
 end
 cube:ConnectChangeEventFunction("SomeValue", ChangeSomeValue)  --오브젝트의 "SomeValue" 라는 Value가 변경되면 ChangeSomeValue 함수를 호출해요.
 ```
+<br>
 ## **함수**
 
+<br>
 | **SetVisible(bool bVisible)** |
 | :--- |
 UI의 표시 여부를 설정할 수 있어요. (UI 표시 여부)
@@ -148,99 +164,131 @@ UI의 표시 여부를 설정할 수 있어요. (UI 표시 여부)
 local someUI = Workspace.ScreenUI
 someUI:SetVisible(false) --UI를 비활성화해요.
 ```
+<br>
 | **SetWidgetVisible(string WidgetName, bool bVisible)** |
 | :--- |
 UI 위젯의 표시 여부를 설정할 수 있어요. (설정 할 위젯 이름, UI 표시 여부)
+<br>
 | **SetWidgetAnchor(string WidgetName, ERObjectUIAnchorType type)** |
 | :--- |
 UI 위젯의 고정 여부를 설정할 수 있어요. (설정 할 위젯 이름, Anchor Type)
+<br>
 | **SetWidgetOpacity(string WidgetName, float Opacity)** |
 | :--- |
 UI 위젯의 투명 값을 설정할 수 있어요. (설정할 값)
+<br>
 | **SetText(string WidgetName, int Value)** |
 | :--- |
 위젯의 텍스트를 주어진 정수로 변경해요. (텍스트를 변경할 위젯 이름, 변경할 정수 값)
+<br>
 | **SetText(string WidgetName, float Value)** |
 | :--- |
 위젯의 텍스트를 주어진 실수로 변경해요. (텍스트를 변경할 위젯 이름, 변경할 실수 값)
+<br>
 | **SetText(string WidgetName, string InText)** |
 | :--- |
 위젯의 텍스트를 주어진 문자열로 변경해요. (텍스트를 변경할 위젯 이름, 변경할 문자열)
+<br>
 | **SetTextColor(string WidgetName, Color color)** |
 | :--- |
 텍스트의 색을 설정할 수 있어요. (텍스트 색을 변경할 위젯 이름, 변경할 //@[] Color https://ditoland-utplus.gitbook.io/ditoland/api-reference/common/color 값)
+<br>
 | **SetChangeTextEvent(string TextName, protected_function InEventFunction)** |
 | :--- |
 위젯의 텍스트 변경 시 호출되는 이벤트 함수를 설정해요. (변경을 감지할 Text위젯 이름, 연결 함수)
+<br>
 | **SetImage(string ImgName, ResoureID TextureID)** |
 | :--- |
 위젯의 이미지를 설정할 수 있어요. (변경할 Image위젯 이름, 변경할 리소스 ID)
+<br>
 | **SetChangeImageEvent(string ImgName, protected_function InEventFunction)** |
 | :--- |
 위젯의 이미지 변경 시 호출되는 이벤트 함수를 설정해요. (변경을 감지할 Image위젯 이름, 연결 함수)
+<br>
 | **SetButtonUpEvent(string ButtonName, protected_function InEventFunction)** |
 | :--- |
 버튼 위젯이 눌렸다 띄어질 때 호출되는 이벤트 함수를 설정해요. (이벤트를 감지할 Button위젯 이름, 연결 함수)
+<br>
 | **SetButtonPressEvent(string ButtonName, protected_function InEventFunction)** |
 | :--- |
 버튼 위젯이 눌릴 때 호출되는 이벤트 함수를 설정해요. (이벤트를 감지할 Button위젯 이름, 연결 함수)
+<br>
 | **SetWidgetLocation(string WidgetName, float X, float Y)** |
 | :--- |
 위젯의 위치를 변경할 수 있어요. (위치를 변경할 위젯 이름, X좌표 값, Y좌표 값)
+<br>
 | **AddChildUIScene(string ChildUISceneName, FRUIScene* Element)** |
 | :--- |
 UI씬에 자식 UI씬 추가할 수 있어요. (자식이 될 UI씬 이름, 자식으로 추가할 UI씬)
+<br>
 | **RModeUIScene GetChildUIScene(string ChildUISceneName)** |
 | :--- |
 스크롤 위젯의 자식 위젯 얻을 수 있어요. (찾을 자식 위젯 이름)
+<br>
 | **RModeUIScene GetChildUIScene(string ParentWidgetName, string ChildUISceneName)** |
 | :--- |
 스크롤 위젯의 자식 위젯 얻을 수 있어요. (부모 위젯 이름, 찾을 자식 위젯 이름)
+<br>
 | **string GetText(string WidgetName)** |
 | :--- |
 텍스트의 내용을 얻을 수 있어요. (내용을 얻을 위젯 이름)
+<br>
 | **bool IsFrameVisible(string WidgetName)** |
 | :--- |
 Frame 위젯이 보이는지를 확인할 수 있어요. (판단할 Frame위젯 이름)
+<br>
 | **AddUIMove(string WidgetName, string TrackName, Vector Pos, float Time)** |
 | :--- |
 해당 Scene안에 있는 WidgetName의 이름을 가진 위젯의 이동 변화를 추가할 수 있어요. (이동 변화를 줄 위젯 이름, 트랙 이름, 이동 Vector, 변화 완료까지의 시간)
+<br>
 | **AddUIRot(string WidgetName, string TrackName, FVector Rot, float Time)** |
 | :--- |
 해당 Scene안에 있는 WidgetName의 이름을 가진 위젯의 회전 변화를 추가할 수 있어요. (회전 변화를 줄 위젯 이름, 트랙 이름, 회전 Vector, 변화 완료까지의 시간)
+<br>
 | **AddUIScale(string WidgetName, string TrackName, FVector Size, float Time)** |
 | :--- |
 해당 Scene안에 있는 WidgetName의 이름을 가진 위젯의 크기 변화를 추가할 수 있어요. (크기 변화를 줄 위젯 이름, 트랙 이름, 크기 Vector, 변화 완료까지의 시간)
+<br>
 | **AddUIOpacity(string WidgetName, string TrackName, float opacity, float Time)** |
 | :--- |
 해당 Scene안에 있는 WidgetName의 이름을 가진 위젯의 투명도 변화를 추가할 수 있어요. (투명도 변화를 줄 위젯 이름, 트랙 이름, 투명도 값, 변화 완료까지의 시간)
+<br>
 | **AddUIEmpty(string TrackName, string TrackName, float Time)** |
 | :--- |
 해당 Scene안에 있는 WidgetName의 이름을 가진 위젯의 변환 대기 시간을 추가할 수 있어요. (트랙 이름, 변환 대기 시간)
+<br>
 | **PlayUIActionTrack(string TrackName, TransformPlayType Type, int PlayCount)** |
 | :--- |
 설정된 변환 컨트롤러 실행해요. (트랙 이름, //@[] Enum.TransformPlayType.타입 https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/transformplaytype , 실행 횟수)
+<br>
 | **StopUIActionTrack(string TrackName)** |
 | :--- |
 변환 컨트롤러를 정지시켜요. (정지 할 트랙 이름)
+<br>
 | **PauseUIActionTrack(string TrackName)** |
 | :--- |
 변환 컨트롤러를 일시 정지시켜요. (일시 정지 할 트랙 이름)
+<br>
 | **ResumeUIActionTrack(string TrackName)** |
 | :--- |
 변환 컨트롤러를 다시 플레이해요. (다시 플레이 할 트랙 이름)
+<br>
 | **IsPlayingUIActionTrack(string TrackName)** |
 | :--- |
 해당 TransformTrack이 플레이 중인지 확인할 수 있어요. (확인 할 트랙 이름)
+<br>
 | **ResetUIActionTrack(string TrackName)** |
 | :--- |
 해당 TransformTrack를 적용되기 전의 Transform으로 리셋시켜요. (리셋 할 트랙 이름)
+<br>
 | **RemoveUIActionTrack(String TrackName)** |
 | :--- |
 해당 Track을 제거해요. (제거 할 트랙 이름)
+<br>
 | **ResetUIActionTrack()** |
 | :--- |
 TransformTrack 이 적용되기 전의 최초 Transform으로 리셋 시켜요.
+<br>
 | **SendEventToServer(string EventName, Args ... )** |
 | :--- |
 서버에 오브젝트 커스텀이벤트를 보내는 함수에요. (이벤트 이름, 전달하고 싶은 변수들 ...)
@@ -262,12 +310,15 @@ cube:ConnectEventFunction("SomeFunc", SomeFunc) --오브젝트에 "SomeFunc"라�
                                                 --오브젝트가 아닌 Game에도 연결할 수 있어요. 그러나 그룹과 폴더에는 연결할 수 없어요.
                                                 --같은 대상에 등록된 이벤트만 호출할 수 있어요.
 ```
+<br>
 | **AttachTo(RModeRemotePlayer Player, Bone BoneType)** |
 | :--- |
 해당 오브젝트를 플레이어 캐릭터에게 붙일 수 있어요. (아이템을 붙일 플레이어, //@[] Enum.Bone.타입 https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/bone )
+<br>
 | **int GetModeObjectKey()** |
 | :--- |
 객체의 키 값을 얻을 수 있어요.
+<br>
 | **Matrix GetTransform()** |
 | :--- |
 매트릭스를 얻을 수 있어요.
@@ -276,6 +327,7 @@ cube:ConnectEventFunction("SomeFunc", SomeFunc) --오브젝트에 "SomeFunc"라�
 ```lua
 local targetTransform = Game:GetAllPlayer()[1]:GetTransform()
 ```
+<br>
 | **SetTransform(Matrix)** |
 | :--- |
 현재 매트릭스에서 설정 된 매트릭스로 보간이 되는 매트릭스를 설정할 수 있어요 설정할 수 있어요. (Matrix 값, bool 충돌 처리 여부)
@@ -287,6 +339,7 @@ targetTransform:SetLocation(Vector.new(0, 100, 0))
 targetTransform:SetRotation(Vector.new(0, 100, 0))
 character:SetTransform(targetTransform) --오브젝트를 보간으로 이동시켜요. (캐릭터는 보간없이 움직여요.)
 ```
+<br>
 | **Teleport(Matrix)** |
 | :--- |
 순간이동 하는 매트릭스를 설정할 수 있어요. (Matrix 값)
@@ -297,6 +350,7 @@ local targetTransform = Workspace.Cube:GetTransform()
 targetTransform:SetLocation(Vector.new(0, 100, 0))   
 Workspace.Cube:Teleport(targetTransform) --오브젝트를 보간없이 바로 이동시켜요.
 ```
+<br>
 | **Vector GetLocation()** |
 | :--- |
 (Deprecated)객체의 현재 위치를 얻을 수 있어요.
@@ -306,9 +360,11 @@ Workspace.Cube:Teleport(targetTransform) --오브젝트를 보간없이 바로 �
 local character = Game:GetAllPlayer()[1]:GetCharacter()
 local characterPos = character:GetTransform():GetLocation() --캐릭터의 위치값을 Vector로 반환해요.
 ```
+<br>
 | **SetLocation(Vector position, bool collisionCheck)** |
 | :--- |
 (Deprecated)객체의 위치를 설정할 수 있어요. (설정할 위치 Vector 값, 충돌 처리 여부)
+<br>
 | **Vector GetRotation()** |
 | :--- |
 (Deprecated)각도를 얻을 수 있어요. (Vector.X : Pitch, Vector.Y : Yaw, Vector.Z : Roll)
@@ -318,6 +374,7 @@ local characterPos = character:GetTransform():GetLocation() --캐릭터의 위�
 local character = Game:GetAllPlayer()[1]:GetCharacter()
 local characterRot = character:GetTransform():GetRotation() --캐릭터의 회전값을 Vector로 반환해요.
 ```
+<br>
 | **SetRotation(Vector InValue)** |
 | :--- |
 (Deprecated)주어진 값으로 각도를 설정해요. (InValue.X : Roll, InValue.Y : Pitch, InValue.Z : Yaw)
@@ -329,6 +386,7 @@ targetTransform:SetLocation(Vector.new(0, 100, 0))
 targetTransform:SetRotation(Vector.new(0, 100, 0))
 character:SetTransform(targetTransform) --오브젝트를 보간으로 이동시켜요. (캐릭터는 보간없이 움직여요.)
 ```
+<br>
 | **Vector GetScale()** |
 | :--- |
 (Deprecated)스케일을 얻을 수 있어요
@@ -340,6 +398,7 @@ local scale = cube:GetScale() --해당 오브젝트의 크기를 100으로 나�
 scale.Y = scale.Y + 0.5
 cube:SetScale(scale) --오브젝트의 크기를 설정해요.
 ```
+<br>
 | **SetScale(Vector scale)** |
 | :--- |
 (Deprecated)주어진 값으로 스케일을 설정해요. (설정할 스케일 값)
@@ -351,6 +410,7 @@ local scale = cube:GetScale() --해당 오브젝트의 크기를 100으로 나�
 scale.Y = scale.Y + 0.5
 cube:SetScale(scale) --오브젝트의 크기를 설정해요.
 ```
+<br>
 | **SetTag(String Tag)** |
 | :--- |
 객체의 tag를 설정해요. (설정할 tag)
@@ -361,6 +421,7 @@ print(Workspace.Floor:GetTag())
 Workspace.Floor:SetTag("SomeTag")
 print(Workspace.Floor:GetTag())
 ```
+<br>
 | **String GetTag()** |
 | :--- |
 객체에 설정된 tag를 얻을 수 있어요.
@@ -371,15 +432,19 @@ print(Workspace.Floor:GetTag())
 Workspace.Floor:SetTag("SomeTag")
 print(Workspace.Floor:GetTag())
 ```
+<br>
 | **SetForward(Vector Forward)** |
 | :--- |
 (Deprecated)객체의 바라보는 방향을 설정할 수 있어요. (설정할 방향 Vector 값)
+<br>
 | **Vector GetForward()** |
 | :--- |
 (Deprecated)객체의 바라보는 방향을 얻을 수 있어요.
+<br>
 | **Vector GetRight()** |
 | :--- |
 (Deprecated)객체의 오른쪽 방향을 얻을 수 있어요.
+<br>
 | **bool Enable** |
 | :--- |
 객체 활성화 여부
@@ -388,6 +453,7 @@ print(Workspace.Floor:GetTag())
 ```lua
 Workspace.Cube.Enable = false --오브젝트의 상태를 비활성화해요. (자식 오브젝트가 있다면 자식들의 상태도 모두 false가 되요. 단, 충돌영역에는 영향이 없어요.)
 ```
+<br>
 | **AddForce(Vector Force)** |
 | :--- |
 객체에 물리 힘을 추가할 수 있어요. (힘을 가할 Vector 값)
@@ -412,6 +478,7 @@ local function CharacterCollision(self, target)
 end
 toy.OnCollisionEvent:Connect(CharacterCollision) --오브젝트에 캐릭터가 닿으면 호출할 함수를 연결해요.
 ```
+<br>
 | **SetVisibility(bool bNewVisibility)** |
 | :--- |
 객체의 가시성 여부를 설정할 수 있어요. (가시성 여부)
@@ -420,6 +487,7 @@ toy.OnCollisionEvent:Connect(CharacterCollision) --오브젝트에 캐릭터가 
 ```lua
 Workspace.Cube.SetVisibility(false) --오브젝트를 보이지 않게 해요.
 ```
+<br>
 | **AddLocalMove(string TrackName, Vector Pos, float Time, bool CheckCollision)** |
 | :--- |
 로컬 좌표를 기준으로 이동 변화를 추가할 수 있어요. (설정할 Track 이름, 이동 변화를 줄 값, 완료까지 걸리는 시간, 충돌 처리 여부)
@@ -436,6 +504,7 @@ cube:AddEmpty("Move", waitTime) --대기 트랙을 등록해요.
 cube:AddLocalMove("Move", Vector.new(-pos.X, -pos.Y, -pos.Z), moveSpeed, false)
 cube:AddEmpty("Move", waitTime)cube:PlayTransformTrack("Move", Enum.TransformPlayType.Repeat, InfinityPlay) --이름에 해당하는 트랙을 재생해요.
 ```
+<br>
 | **AddLocalRot(string TrackName, Vector Rot, float Time)** |
 | :--- |
 로컬 좌표를 기준으로 회전 변화를 추가할 수 있어요. (설정할 Track 이름, 회전 변화를 줄 값, 완료까지 걸리는 시간)
@@ -448,15 +517,19 @@ cube:AddLocalRot("Rot", Vector.new(0, 0, 360), moveSpeed) --회전 트랙을 등
 cube:AddLocalRot("Rot", Vector.new(0, 360, 0), moveSpeed) --회전 트랙은 여러개도 등록할 수 있어요.
 cube:PlayTransformTrack("Rot", Enum.TransformPlayType.Repeat, InfinityPlay) --이름에 해당하는 트랙을 재생해요.
 ```
+<br>
 | **AddLocalScale(string TrackName, Vector Scale, float Time)** |
 | :--- |
 로컬 좌표를 기준으로 스케일 변화를 추가할 수 있어요. (설정할 Track 이름, 스케일 변화를 줄 값, 완료까지 걸리는 시간)
+<br>
 | **AddWorldMove(string TrackName, Vector Pos, float Time, bool CheckCollision)** |
 | :--- |
 월드 좌표를 기준으로 이동 변화를 추가할 수 있어요. (설정할 Track 이름, 이동 변화를 줄 값, 완료까지 걸리는 시간, 충돌 처리 여부)
+<br>
 | **AddWorldRot(string TrackName, Vector Rot, float Time)** |
 | :--- |
 월드 좌표를 기준으로 회전 변화를 추가할 수 있어요. (설정할 Track 이름, 회전 변화를 줄 값, 완료까지 걸리는 시간)
+<br>
 | **AddEmpty(string TrackName, float Time)** |
 | :--- |
 객체 변환에 대기 시간을 추가할 수 있어요. (추가할 Track 이름, 대기 시간)
@@ -472,6 +545,7 @@ cube:AddEmpty("Move", waitTime) --대기 트랙을 등록해요.
 cube:AddLocalMove("Move", Vector.new(-pos.X, -pos.Y, -pos.Z), moveSpeed, false)
 cube:AddEmpty("Move", waitTime)cube:PlayTransformTrack("Move", Enum.TransformPlayType.Repeat, InfinityPlay) --이름에 해당하는 트랙을 재생해요.
 ```
+<br>
 | **PlayTransformTrack(string TrackName, TransformPlayType Type, int PlayCount)** |
 | :--- |
 설정된 변환 컨트롤러를 실행시켜요. (실행할 Track 이름, //@[] Enum.TransformPlayType.타입 https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/transformplaytype , 실행 횟수)
@@ -489,6 +563,7 @@ cube:AddLocalMove("Move", Vector.new(-pos.X, -pos.Y, -pos.Z), moveSpeed, false)
 cube:AddLocalMove("Move", Vector.new(0, 0, 0), waitTime, false)
 cube:PlayTransformTrack("Move", Enum.TransformPlayType.Repeat, InfinityPlay) --이름에 해당하는 트랙을 재생해요.
 ```
+<br>
 | **StopTransformTrack(string TrackName)** |
 | :--- |
 변환 컨트롤러를 정지시켜요. (정지할 Track 이름)
@@ -498,6 +573,7 @@ cube:PlayTransformTrack("Move", Enum.TransformPlayType.Repeat, InfinityPlay) --�
 local cube = Workspace.Cube
 cube:StopTransformTrack("Move") --이름에 해당하는 트랙을 멈춰요.
 ```
+<br>
 | **PauseTransformTrack(string TrackName)** |
 | :--- |
 변환 컨트롤러를 일시 정지시켜요 (일시 정지할 Track 이름)
@@ -507,6 +583,7 @@ cube:StopTransformTrack("Move") --이름에 해당하는 트랙을 멈춰요.
 local cube = Workspace.Cube
 cube:PauseTransformTrack("Move") --이름에 해당하는 트랙을 일시정지해요.
 ```
+<br>
 | **ResumeTransformTrack(string TrackName)** |
 | :--- |
 변환 컨트롤러를 다시 플레이시켜요. (플레이할 Track 이름)
@@ -516,6 +593,7 @@ cube:PauseTransformTrack("Move") --이름에 해당하는 트랙을 일시정지
 local cube = Workspace.Cube
 cube:ResumeTransformTrack("Move") --이름에 해당하는 일시정지된 트랙을 다시 재생해요.
 ```
+<br>
 | **bool IsPlayingTransformTrack(string TrackName)** |
 | :--- |
 해당 TransformTrack이 플레이 중인지 확인할 수 있어요. (확인할 Track 이름)
@@ -527,6 +605,7 @@ if cube:IsPlayingTransformTrack("Move") == true then --이름에 해당하는 �
     print("Track is Playing")
 end
 ```
+<br>
 | **ResetTransformTrack(string TrackName)** |
 | :--- |
 해당 TransformTrack 이 적용되기 전의 Transform으로 리셋시켜요. (리셋할 Track 이름)
@@ -542,6 +621,7 @@ cube:ResetTransform() --적용되기전의 트랜스폼으로 리셋해요. (트
 local cube = Workspace.Cube
 cube:ResetTransformTrack("Move") --이름에 해당하는 트랙이 적용되기전의 트랜스폼으로 리셋해요. (트랙이 멈추진 않아요.)
 ```
+<br>
 | **RemoveTransformTrack(String TrackName)** |
 | :--- |
 해당 Track을 제거해요. (제거할 Track 이름)
@@ -551,9 +631,11 @@ cube:ResetTransformTrack("Move") --이름에 해당하는 트랙이 적용되기
 local cube = Workspace.Cube
 cube:RemoveTransformTrack("Move") --이름에 해당하는 트랙을 제거해요.
 ```
+<br>
 | **ResetTransform()** |
 | :--- |
 TransformTrack 이 적용되기 전의 최초 Transform으로 리셋시켜요.
+<br>
 | **SetEndEventTransformTrack(String TrackName, LuaScriptFunction function)** |
 | :--- |
 TransformTrack 이 끝나면 등록한 function 을 호출합니다.
@@ -573,12 +655,15 @@ cube:SetEndEventTransformTrack("Move", EndMove) --이름에 해당하는 트랙�
 
 cube:PlayTransformTrack("Move", Enum.TransformPlayType.Repeat, 1)
 ```
+<br>
 | **SetFriction( float value, float restitution, float density )** |
 | :--- |
 오브젝트의 표면 물리 마찰력을 설정할 수 있어요. (마찰 값, 탄성 값, 밀도 값)
+<br>
 | **MakeVehicleChassis( VehicleCreationInfo Info )** |
 | :--- |
 오브젝트를 VehicleChassis로 변경시켜요. (변경할 //@[] VehicleCreationInfo데이터 https://ditoland-utplus.gitbook.io/ditoland/api-reference/common/vehiclecreationinfo )
+<br>
 | **SetName(string NewName)** |
 | :--- |
 오브젝트의 이름을 변경 할 수 있어요. (새로운 이름)
@@ -587,9 +672,11 @@ cube:PlayTransformTrack("Move", Enum.TransformPlayType.Repeat, 1)
 ```lua
 Workspace.Floor:SetName("NewFloor") --오브젝트의 이름을 변경해요.
 ```
+<br>
 | **FRModeVehicle GetVehicle()** |
 | :--- |
 Vehicle 객체를 얻을 수 있어요.
+<br>
 | **ConnectEventFunction(string customevent, LuaScriptFunction function) ** |
 | :--- |
 유저가 추가한 오브젝트 커스텀 이벤트에 함수를 연결할 수 있어요. (이벤트 이름, 연결 함수)
@@ -604,6 +691,7 @@ cube:ConnectEventFunction("SomeFunc", SomeFunc) --오브젝트에 "SomeFunc"라�
                                                 --오브젝트가 아닌 Game에도 연결할 수 있어요. 그러나 그룹과 폴더에는 연결할 수 없어요.
                                                 --같은 대상에 등록된 이벤트만 호출할 수 있어요.
 ```
+<br>
 | **string GetName()** |
 | :--- |
 객체의 이름을 얻을 수 있어요.
@@ -612,15 +700,19 @@ cube:ConnectEventFunction("SomeFunc", SomeFunc) --오브젝트에 "SomeFunc"라�
 ```lua
 print(Workspace.Floor:GetName()) --오브젝트의 이름을 문자열로 반환해요.
 ```
+<br>
 | **RModeObject GetParent(string ParentName)** |
 | :--- |
 이름으로 부모 객체를 얻을 수 있어요. (찾고싶은 부모 객체 이름)
+<br>
 | **RModeObject GetChild(string ChildName)** |
 | :--- |
 이름으로 자식 객체를 얻을 수 있어요. (찾고싶은 자식 객체 이름)
+<br>
 | **RModeObject GetGetSibling(string Name)** |
 | :--- |
 이름으로 형제 객체를 얻을 수 있어요. (찾고싶은 형제 객체 이름)
+<br>
 | **List<RScriptObject> GetChildList()** |
 | :--- |
 자식 객체의 리스트를 얻을 수 있어요.
@@ -632,6 +724,7 @@ for i = 1, #uiList do --리스트앞에 #을 붙여 리스트의 길이를 가�
     print(uiList[i]:GetName())
 end
 ```
+<br>
 | **bool IsCharacter()** |
 | :--- |
 캐릭터인지 확인할 수 있어요.
@@ -643,6 +736,7 @@ if cube:IsCharacter() == true then --오브젝트가 Character면 true를 반환
     print(cube:GetName() .. " Is Character")
 end
 ```
+<br>
 | **bool IsStaticMesh()** |
 | :--- |
 스테틱 메시인지 확인할 수 있어요.
@@ -654,6 +748,7 @@ if cube:IsStaticMesh() == true then --오브젝트가 StaticMesh면 true를 반�
     print(cube:GetName() .. " Is StaticMesh")
 end
 ```
+<br>
 | **bool IsFX()** |
 | :--- |
 FX인지 확인할 수 있어요.
@@ -665,6 +760,7 @@ if cube:IsFX() == true then --오브젝트가 FX면 true를 반환해요.
     print(cube:GetName() .. " Is FX")
 end
 ```
+<br>
 | **bool IsSound()** |
 | :--- |
 Sound인지 확인할 수 있어요.
@@ -676,6 +772,7 @@ if cube:IsSound() == true then --오브젝트가 Sound면 true를 반환해요.
     print(cube:GetName() .. " Is Sound")
 end
 ```
+<br>
 | **bool IsPointLight()** |
 | :--- |
 포인트 라이트인지 확인할 수 있어요.
@@ -687,6 +784,7 @@ if cube:IsPointLight() == true then --오브젝트가 PointLight면 true를 반�
     print(cube:GetName() .. " Is PointLight")
 end
 ```
+<br>
 | **bool IsSpotLight()** |
 | :--- |
 스포트 라이트인지 확인할 수 있어요.
@@ -698,6 +796,7 @@ if cube:IsSpotLight() == true then --오브젝트가 SpotLight면 true를 반환
     print(cube:GetName() .. " Is SpotLight")
 end
 ```
+<br>
 | **bool IsSurfaceUI()** |
 | :--- |
 서피스 UI인지 확인할 수 있어요.
@@ -709,6 +808,7 @@ if cube:IsSurfaceUI() == true then --오브젝트가 SurfaceUI면 true를 반환
     print(cube:GetName() .. " Is SurfaceUI")
 end
 ```
+<br>
 | **bool IsScreenUI()** |
 | :--- |
 스크린 UI인지 확인할 수 있어요.
@@ -720,6 +820,7 @@ if cube:IsScreenUI() == true then --오브젝트가 ScreenUI면 true를 반환�
     print(cube:GetName() .. " Is ScreenUI")
 end
 ```
+<br>
 | **bool IsItem()** |
 | :--- |
 아이템인지 확인할 수 있어요.
@@ -731,6 +832,7 @@ if cube:IsItem() == true then --오브젝트가 Item면 true를 반환해요.
     print(cube:GetName() .. " Is Item")
 end
 ```
+<br>
 | **bool IsNPC()** |
 | :--- |
 NPC인지 확인할 수 있어요.
@@ -742,6 +844,7 @@ if cube:IsNPC() == true then --오브젝트가 NPC면 true를 반환해요.
     print(cube:GetName() .. " Is NPC")
 end
 ```
+<br>
 | **bool IsFolder()** |
 | :--- |
 폴더인지 확인할 수 있어요.
@@ -753,6 +856,7 @@ if cube:IsFolder() == true then --오브젝트가 Folder면 true를 반환해요
     print(cube:GetName() .. " Is Folder")
 end
 ```
+<br>
 | **bool IsScript()** |
 | :--- |
 스트립트인지 확인할 수 있어요.
@@ -764,6 +868,7 @@ if cube:IsScript() == true then --오브젝트가 Script면 true를 반환해요
     print(cube:GetName() .. " Is Script")
 end
 ```
+<br>
 | **bool IsCollider()** |
 | :--- |
 Collider인지 확인할 수 있어요.
@@ -775,6 +880,7 @@ if cube:IsCollider() == true then --오브젝트가 Collider면 true를 반환�
     print(cube:GetName() .. " Is Collider")
 end
 ```
+<br>
 | **bool IsWidget()** |
 | :--- |
 Widget인지 확인할 수 있어요.
@@ -786,6 +892,7 @@ if cube:IsWidget() == true then --오브젝트가 Widget면 true를 반환해요
     print(cube:GetName() .. " Is Widget")
 end
 ```
+<br>
 | **bool IsCamera()** |
 | :--- |
 Camera인지 확인할 수 있어요.
@@ -797,9 +904,11 @@ if cube:IsCamera() == true then --오브젝트가 Camera면 true를 반환해요
     print(cube:GetName() .. " Is Camera")
 end
 ```
+<br>
 | **bool IsValid()** |
 | :--- |
 해당 오브젝트가 유효한지 확인 할 수있어요.
+<br>
 | **AddReplicateValue(string ValueName, Vector Data, ReplicateType Type, float Time, bool bSaveToStorage)** |
 | :--- |
 해당 객체에 서버, 클라이언트 간 동기화가 가능한 벡터를 추가해요. (추가할 Value 이름, Vector 데이터, //@[] Enum.ReplicateType.타입 https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype , 동기화 시간, 스토리지 저장 여부)
@@ -813,6 +922,7 @@ print(Game.SomeVector)
 --클라 스크립트에서-------------
 print(Game.SomeVector) --서버에서 값이 바뀌었지만 클라에서도 동일하게 출력돼요.
 ```
+<br>
 | **AddReplicateValue(string ValueName, float Data, ReplicateType Type, float Time, bool bSaveToStorage)** |
 | :--- |
 해당 객체에 서버, 클라이언트 간 동기화가 가능한 실수를 추가해요. (추가할 Value 이름, float 데이터, //@[] Enum.ReplicateType.타입 https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype , 동기화 시간, 스토리지 저장 여부)
@@ -826,6 +936,7 @@ print(Game.SomeNumber .. " in Server")
 --클라 스크립트에서-------------
 print(Game.SomeNumber .. " in Client") --서버에서 값이 바뀌었지만 클라에서도 동일하게 출력돼요.
 ```
+<br>
 | **AddReplicateValue(string ValueName, bool Data, ReplicateType Type, float Time, bool bSaveToStorage)** |
 | :--- |
 해당 객체에 서버, 클라이언트 간 동기화가 가능한 bool를 추가해요. (추가할 Value 이름, bool 데이터, //@[] Enum.ReplicateType.타입 https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype , 동기화 시간, 스토리지 저장 여부)
@@ -839,6 +950,7 @@ print(Game.SomeBool)
 --클라 스크립트에서-------------
 print(Game.SomeBool) --서버에서 값이 바뀌었지만 클라에서도 동일하게 출력돼요.
 ```
+<br>
 | **AddReplicateValue(string ValueName, string Data, ReplicateType Type, float Time, bool bSaveToStorage)** |
 | :--- |
 해당 객체에 서버, 클라이언트 간 동기화가 가능한 문자열을 추가해요. (추가할 Value 이름, string 데이터, //@[] Enum.ReplicateType.타입 https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype , 동기화 시간, 스토리지 저장 여부)
@@ -852,6 +964,7 @@ print(Game.SomeString)
 --클라 스크립트에서-------------
 print(Game.SomeString) --서버에서 값이 바뀌었지만 클라에서도 동일하게 출력돼요.
 ```
+<br>
 | **AddReplicateValue(string ValueName, Color Data, ReplicateType Type, float Time, bool bSaveToStorage)** |
 | :--- |
 해당 객체에 서버, 클라이언트 간 동기화가 가능한 컬러를 추가해요. (추가할 Value 이름, Color 데이터, //@[] Enum.ReplicateType.타입 https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype , 동기화 시간, 스토리지 저장 여부)
@@ -865,23 +978,27 @@ print(Game.SomeColor)
 --클라 스크립트에서-------------
 print(Game.SomeColor) --서버에서 값이 바뀌었지만 클라에서도 동일하게 출력돼요.
 ```
+<br>
 | **AddSaveValue(string ValueName, Vector Data)** |
 | :--- |
 해당 객체 저장소에 벡터를 추가해요. (Value 이름, Vector 데이터)
+<br>
 | **AddSaveValue(string ValueName, float Data)** |
 | :--- |
 해당 객체 저장소에 실수를 추가해요. (Value 이름, float 데이터)
+<br>
 | **AddSaveValue(string ValueName, bool Data)** |
 | :--- |
 해당 객체 저장소에 bool을 추가해요. (Value 이름, bool 데이터)
+<br>
 | **AddSaveValue(string ValueName, string Data)** |
 | :--- |
 해당 객체 저장소에 문자열을 추가해요. (Value 이름, string 데이터)
+<br>
 | **AddSaveValue(string ValueName, Color Data)** |
 | :--- |
 해당 객체 저장소에 칼라를 추가해요. (Value 이름, Color 데이터)
 <br>
-<br>
-<br>
-  SetSpaceType(EWidgetSpace Type)
+| **SetSpaceType(EWidgetSpace Type)** |
+| :--- |
 (Deprecated)Surface UI의 SpaceType을 변경 할 수 있어요.

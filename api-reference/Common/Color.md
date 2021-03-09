@@ -1,29 +1,37 @@
 
 Color 객체에요. 
+<br>
 ## **생성자**
 
+<br>
 | **Color.new()** |
 | :--- |
 
 Color를 생성해요 
+<br>
 | **Color.new(number R, number G, number B, number A)** |
 | :--- |
 
 Color를 R, G, B, A 값으로 세팅하여 생성해요 
+<br>
 ## **속성**
 
+<br>
 | **number R** |
 | :--- |
 
 빨간 색을 나타내요. (0 ~ 255) 
+<br>
 | **number G** |
 | :--- |
 
 초록 색을 나타내요. (0 ~ 255) 
+<br>
 | **number B** |
 | :--- |
 
 파란 색을 나타내요. (0 ~ 255) 
+<br>
 | **number A** |
 | :--- |
 
