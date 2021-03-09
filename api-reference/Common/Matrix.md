@@ -8,6 +8,10 @@ Matrix 객체의 위치 회전 값을 얻거나 변경 할 수 있어요.
 Matrix 를 생성해요. 
 ## **함수**
 
+
+
+
+
 | **Vector GetLocation()** |
 | :--- |
 
@@ -19,6 +23,10 @@ Matrix 를 생성해요.
 local character = Game:GetAllPlayer()[1]:GetCharacter()
 local characterPos = character:GetTransform():GetLocation() --캐릭터의 위치값을 Vector로 반환해요.
 ```
+
+
+
+
 | **void SetLocation(float x, float y, float z)** |
 | :--- |
 
@@ -32,6 +40,10 @@ targetTransform:SetLocation(0, 100, 0)
 targetTransform:SetRotation(Vector.new(0, 100, 0))
 character:SetTransform(targetTransform) --오브젝트를 보간으로 이동시켜요. (캐릭터는 보간없이 움직여요.)
 ```
+
+
+
+
 | **void SetLocation(Vector LocationValue)** |
 | :--- |
 
@@ -45,6 +57,10 @@ targetTransform:SetLocation(Vector.new(0, 100, 0))
 targetTransform:SetRotation(Vector.new(0, 100, 0))
 character:SetTransform(targetTransform) --오브젝트를 보간으로 이동시켜요. (캐릭터는 보간없이 움직여요.)
 ```
+
+
+
+
 | **void AddLocation(float x, float y, float z)** |
 | :--- |
 
@@ -62,6 +78,10 @@ cubeTransform:AddLocation(50, 0, 0)
 print(cubeTransform:GetLocation())
 cube:SetTransform(cubeTransform)
 ```
+
+
+
+
 | **Vector GetRotation()** |
 | :--- |
 
@@ -73,10 +93,18 @@ cube:SetTransform(cubeTransform)
 local character = Game:GetAllPlayer()[1]:GetCharacter()
 local characterRot = character:GetTransform():GetRotation() --캐릭터의 회전값을 Vector로 반환해요.
 ```
+
+
+
+
 | **Vector SetRotation(float Roll, float Pitch, float Yaw)** |
 | :--- |
 
 주어진 값으로 각도를 설정해요. (설정할 Roll 값, 설정할 Pitch 값, 설정할 Yaw 값) 
+
+
+
+
 | **void AddRotation(float x, float y, float z)** |
 | :--- |
 
@@ -94,6 +122,10 @@ cubeTransform:AddRotation(50, 0, 0)
 print(cubeTransform:GetRotation())
 cube:SetTransform(cubeTransform)
 ```
+
+
+
+
 | **void SetScale(float scale)** |
 | :--- |
 
@@ -107,6 +139,10 @@ local scale = cube:GetScale() --해당 오브젝트의 크기를 100으로 나�
 scale.Y = scale.Y + 0.5
 cube:SetScale(scale) --오브젝트의 크기를 설정해요.
 ```
+
+
+
+
 | **Vector SetScaleXYZ(float x, floay y, float z)** |
 | :--- |
 
@@ -120,10 +156,18 @@ local scale = cube:GetScale() --해당 오브젝트의 크기를 100으로 나�
 scale.Y = scale.Y + 0.5
 cube:SetScale(scale) --오브젝트의 크기를 설정해요.
 ```
+
+
+
+
 | **Vector GetScaleXYZ()** |
 | :--- |
 
 스케일을 Vector의 형식으로 얻을 수 있어요. 
+
+
+
+
 | **Vector GetForward()** |
 | :--- |
 
@@ -135,6 +179,10 @@ cube:SetScale(scale) --오브젝트의 크기를 설정해요.
 local cubeTransform = Workspace.Cube:GetTransform()
 print(cubeTransform:GetForward())
 ```
+
+
+
+
 | **Vector GetRight()** |
 | :--- |
 
@@ -146,6 +194,10 @@ print(cubeTransform:GetForward())
 local cubeTransform = Workspace.Cube:GetTransform()
 print(cubeTransform:GetRight())
 ```
+
+
+
+
 | **Vector GetTop()** |
 | :--- |
 

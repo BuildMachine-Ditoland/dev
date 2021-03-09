@@ -34,10 +34,18 @@ Vector = Vector * float
 두 벡터 값을 곱해서 그 값을 리턴해줘요. 
 ## **함수**
 
+
+
+
+
 | **void Normalize()** |
 | :--- |
 
 단위를 1로 정규화 시켜주는 함수에요. 
+
+
+
+
 | **float CosineAngle2D(Vector Other)** |
 | :--- |
 

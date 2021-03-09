@@ -4,42 +4,82 @@
 [Game:AddAnimStateMachineSetting](https://ditoland-utplus.gitbook.io/ditoland/api-reference/client/game)로 생성해요. 
 ## **함수**
 
+
+
+
+
 | **RModeSequenceAnimStateSetting AddAnimState(string StateName, string ResourceID)** |
 | :--- |
 
 단일 애니메이션 상태 설정을 추가해요. (추가할 상태 이름, 리소스 ID) 
+
+
+
+
 | **RModeSequenceAnimStateSetting AddAnimState(string StateName, string ResourceID, int PlayCount)** |
 | :--- |
 
 단일 애니메이션 상태 설정을 추가해요. (추가할 상태 이름, 리소스 ID, 플레이 횟수) 
+
+
+
+
 | **RModeSequenceAnimStateSetting AddAnimState(string StateName, string ResourceID, int PlayCount, float PlaySpeed)** |
 | :--- |
 
 단일 애니메이션 상태 설정을 추가해요. (추가할 상태 이름, 리소스 ID, 플레이 횟수, 플레이 속도) 
+
+
+
+
 | **RModeBlendAnimStateSetting AddBlendAnimState(string StateName, protected_function BlendFunction)** |
 | :--- |
 
 블랜드 애니메이션 상태 설정을 추가해요. (추가할 상태 이름, 연결 함수) 
+
+
+
+
 | **RModeBlendAnimStateSetting AddBlendAnimState(string StateName, protected_function BlendFunction, int PlayCount)** |
 | :--- |
 
 블랜드 애니메이션 상태 설정을 추가해요. (추가할 상태 이름, 연결 함수, 플레이 횟수) 
+
+
+
+
 | **AddAnimTransition(string FromState, string ToState)** |
 | :--- |
 
 애니메이션 상태 전이를 추가해요. (시작 상태 이름, 전이할 상태 이름) 
+
+
+
+
 | **AddAnimTransition(string FromState, string ToState, float BlendTime)** |
 | :--- |
 
 애니메이션 상태 전이를 추가해요. (시작 상태 이름, 전이할 상태 이름, 블렌딩 시간) 
+
+
+
+
 | **AddAnimTransition(string FromState, string ToState, protected_function Condition)** |
 | :--- |
 
 애니메이션 상태 전이를 추가해요. (시작 상태 이름, 전이할 상태 이름, 연결 함수) 
+
+
+
+
 | **AddAnimTransition(string FromState, string ToState, protected_function Condition, float BlendTime)** |
 | :--- |
 
 애니메이션 상태 전이를 추가해요. (시작 상태 이름, 전이할 상태 이름, 연결 함수, 블렌딩 시간) 
+
+
+
+
 | **SetStartState(string StateName)** |
 | :--- |
 
@@ -78,35 +118,25 @@ cube:ConnectChangeEventFunction("SomeValue", ChangeSomeValue)  --오브젝트의
 ```
 ## **함수**
 
-
-
-**string GetName()**
-
+| **string GetName()** |
+| :--- |
 객체의 이름을 얻을 수 있어요.
 샘플
 
 ```lua
 print(Workspace.Floor:GetName()) --오브젝트의 이름을 문자열로 반환해요.
 ```
-
-
-**RModeObject GetParent(string ParentName)**
-
+| **RModeObject GetParent(string ParentName)** |
+| :--- |
 이름으로 부모 객체를 얻을 수 있어요. (찾고싶은 부모 객체 이름)
-
-
-**RModeObject GetChild(string ChildName)**
-
+| **RModeObject GetChild(string ChildName)** |
+| :--- |
 이름으로 자식 객체를 얻을 수 있어요. (찾고싶은 자식 객체 이름)
-
-
-**RModeObject GetGetSibling(string Name)**
-
+| **RModeObject GetGetSibling(string Name)** |
+| :--- |
 이름으로 형제 객체를 얻을 수 있어요. (찾고싶은 형제 객체 이름)
-
-
-**List<RScriptObject> GetChildList()**
-
+| **List<RScriptObject> GetChildList()** |
+| :--- |
 자식 객체의 리스트를 얻을 수 있어요.
 샘플
 
@@ -116,10 +146,8 @@ for i = 1, #uiList do --리스트앞에 #을 붙여 리스트의 길이를 가�
     print(uiList[i]:GetName())
 end
 ```
-
-
-**bool IsCharacter()**
-
+| **bool IsCharacter()** |
+| :--- |
 캐릭터인지 확인할 수 있어요.
 샘플
 
@@ -129,10 +157,8 @@ if cube:IsCharacter() == true then --오브젝트가 Character면 true를 반환
     print(cube:GetName() .. " Is Character")
 end
 ```
-
-
-**bool IsStaticMesh()**
-
+| **bool IsStaticMesh()** |
+| :--- |
 스테틱 메시인지 확인할 수 있어요.
 샘플
 
@@ -142,10 +168,8 @@ if cube:IsStaticMesh() == true then --오브젝트가 StaticMesh면 true를 반�
     print(cube:GetName() .. " Is StaticMesh")
 end
 ```
-
-
-**bool IsFX()**
-
+| **bool IsFX()** |
+| :--- |
 FX인지 확인할 수 있어요.
 샘플
 
@@ -155,10 +179,8 @@ if cube:IsFX() == true then --오브젝트가 FX면 true를 반환해요.
     print(cube:GetName() .. " Is FX")
 end
 ```
-
-
-**bool IsSound()**
-
+| **bool IsSound()** |
+| :--- |
 Sound인지 확인할 수 있어요.
 샘플
 
@@ -168,10 +190,8 @@ if cube:IsSound() == true then --오브젝트가 Sound면 true를 반환해요.
     print(cube:GetName() .. " Is Sound")
 end
 ```
-
-
-**bool IsPointLight()**
-
+| **bool IsPointLight()** |
+| :--- |
 포인트 라이트인지 확인할 수 있어요.
 샘플
 
@@ -181,10 +201,8 @@ if cube:IsPointLight() == true then --오브젝트가 PointLight면 true를 반�
     print(cube:GetName() .. " Is PointLight")
 end
 ```
-
-
-**bool IsSpotLight()**
-
+| **bool IsSpotLight()** |
+| :--- |
 스포트 라이트인지 확인할 수 있어요.
 샘플
 
@@ -194,10 +212,8 @@ if cube:IsSpotLight() == true then --오브젝트가 SpotLight면 true를 반환
     print(cube:GetName() .. " Is SpotLight")
 end
 ```
-
-
-**bool IsSurfaceUI()**
-
+| **bool IsSurfaceUI()** |
+| :--- |
 서피스 UI인지 확인할 수 있어요.
 샘플
 
@@ -207,10 +223,8 @@ if cube:IsSurfaceUI() == true then --오브젝트가 SurfaceUI면 true를 반환
     print(cube:GetName() .. " Is SurfaceUI")
 end
 ```
-
-
-**bool IsScreenUI()**
-
+| **bool IsScreenUI()** |
+| :--- |
 스크린 UI인지 확인할 수 있어요.
 샘플
 
@@ -220,10 +234,8 @@ if cube:IsScreenUI() == true then --오브젝트가 ScreenUI면 true를 반환�
     print(cube:GetName() .. " Is ScreenUI")
 end
 ```
-
-
-**bool IsItem()**
-
+| **bool IsItem()** |
+| :--- |
 아이템인지 확인할 수 있어요.
 샘플
 
@@ -233,10 +245,8 @@ if cube:IsItem() == true then --오브젝트가 Item면 true를 반환해요.
     print(cube:GetName() .. " Is Item")
 end
 ```
-
-
-**bool IsNPC()**
-
+| **bool IsNPC()** |
+| :--- |
 NPC인지 확인할 수 있어요.
 샘플
 
@@ -246,10 +256,8 @@ if cube:IsNPC() == true then --오브젝트가 NPC면 true를 반환해요.
     print(cube:GetName() .. " Is NPC")
 end
 ```
-
-
-**bool IsFolder()**
-
+| **bool IsFolder()** |
+| :--- |
 폴더인지 확인할 수 있어요.
 샘플
 
@@ -259,10 +267,8 @@ if cube:IsFolder() == true then --오브젝트가 Folder면 true를 반환해요
     print(cube:GetName() .. " Is Folder")
 end
 ```
-
-
-**bool IsScript()**
-
+| **bool IsScript()** |
+| :--- |
 스트립트인지 확인할 수 있어요.
 샘플
 
@@ -272,10 +278,8 @@ if cube:IsScript() == true then --오브젝트가 Script면 true를 반환해요
     print(cube:GetName() .. " Is Script")
 end
 ```
-
-
-**bool IsCollider()**
-
+| **bool IsCollider()** |
+| :--- |
 Collider인지 확인할 수 있어요.
 샘플
 
@@ -285,10 +289,8 @@ if cube:IsCollider() == true then --오브젝트가 Collider면 true를 반환�
     print(cube:GetName() .. " Is Collider")
 end
 ```
-
-
-**bool IsWidget()**
-
+| **bool IsWidget()** |
+| :--- |
 Widget인지 확인할 수 있어요.
 샘플
 
@@ -298,10 +300,8 @@ if cube:IsWidget() == true then --오브젝트가 Widget면 true를 반환해요
     print(cube:GetName() .. " Is Widget")
 end
 ```
-
-
-**bool IsCamera()**
-
+| **bool IsCamera()** |
+| :--- |
 Camera인지 확인할 수 있어요.
 샘플
 
@@ -311,15 +311,11 @@ if cube:IsCamera() == true then --오브젝트가 Camera면 true를 반환해요
     print(cube:GetName() .. " Is Camera")
 end
 ```
-
-
-**bool IsValid()**
-
+| **bool IsValid()** |
+| :--- |
 해당 오브젝트가 유효한지 확인 할 수있어요.
-
-
-**AddReplicateValue(string ValueName, Vector Data, ReplicateType Type, float Time, bool bSaveToStorage)**
-
+| **AddReplicateValue(string ValueName, Vector Data, ReplicateType Type, float Time, bool bSaveToStorage)** |
+| :--- |
 해당 객체에 서버, 클라이언트 간 동기화가 가능한 벡터를 추가해요. (추가할 Value 이름, Vector 데이터, //@[] Enum.ReplicateType.타입 https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype , 동기화 시간, 스토리지 저장 여부)
 샘플
 
@@ -331,10 +327,8 @@ print(Game.SomeVector)
 --클라 스크립트에서-------------
 print(Game.SomeVector) --서버에서 값이 바뀌었지만 클라에서도 동일하게 출력돼요.
 ```
-
-
-**AddReplicateValue(string ValueName, float Data, ReplicateType Type, float Time, bool bSaveToStorage)**
-
+| **AddReplicateValue(string ValueName, float Data, ReplicateType Type, float Time, bool bSaveToStorage)** |
+| :--- |
 해당 객체에 서버, 클라이언트 간 동기화가 가능한 실수를 추가해요. (추가할 Value 이름, float 데이터, //@[] Enum.ReplicateType.타입 https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype , 동기화 시간, 스토리지 저장 여부)
 샘플
 
@@ -346,10 +340,8 @@ print(Game.SomeNumber .. " in Server")
 --클라 스크립트에서-------------
 print(Game.SomeNumber .. " in Client") --서버에서 값이 바뀌었지만 클라에서도 동일하게 출력돼요.
 ```
-
-
-**AddReplicateValue(string ValueName, bool Data, ReplicateType Type, float Time, bool bSaveToStorage)**
-
+| **AddReplicateValue(string ValueName, bool Data, ReplicateType Type, float Time, bool bSaveToStorage)** |
+| :--- |
 해당 객체에 서버, 클라이언트 간 동기화가 가능한 bool를 추가해요. (추가할 Value 이름, bool 데이터, //@[] Enum.ReplicateType.타입 https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype , 동기화 시간, 스토리지 저장 여부)
 샘플
 
@@ -361,10 +353,8 @@ print(Game.SomeBool)
 --클라 스크립트에서-------------
 print(Game.SomeBool) --서버에서 값이 바뀌었지만 클라에서도 동일하게 출력돼요.
 ```
-
-
-**AddReplicateValue(string ValueName, string Data, ReplicateType Type, float Time, bool bSaveToStorage)**
-
+| **AddReplicateValue(string ValueName, string Data, ReplicateType Type, float Time, bool bSaveToStorage)** |
+| :--- |
 해당 객체에 서버, 클라이언트 간 동기화가 가능한 문자열을 추가해요. (추가할 Value 이름, string 데이터, //@[] Enum.ReplicateType.타입 https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype , 동기화 시간, 스토리지 저장 여부)
 샘플
 
@@ -376,10 +366,8 @@ print(Game.SomeString)
 --클라 스크립트에서-------------
 print(Game.SomeString) --서버에서 값이 바뀌었지만 클라에서도 동일하게 출력돼요.
 ```
-
-
-**AddReplicateValue(string ValueName, Color Data, ReplicateType Type, float Time, bool bSaveToStorage)**
-
+| **AddReplicateValue(string ValueName, Color Data, ReplicateType Type, float Time, bool bSaveToStorage)** |
+| :--- |
 해당 객체에 서버, 클라이언트 간 동기화가 가능한 컬러를 추가해요. (추가할 Value 이름, Color 데이터, //@[] Enum.ReplicateType.타입 https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype , 동기화 시간, 스토리지 저장 여부)
 샘플
 
@@ -391,28 +379,18 @@ print(Game.SomeColor)
 --클라 스크립트에서-------------
 print(Game.SomeColor) --서버에서 값이 바뀌었지만 클라에서도 동일하게 출력돼요.
 ```
-
-
-**AddSaveValue(string ValueName, Vector Data)**
-
+| **AddSaveValue(string ValueName, Vector Data)** |
+| :--- |
 해당 객체 저장소에 벡터를 추가해요. (Value 이름, Vector 데이터)
-
-
-**AddSaveValue(string ValueName, float Data)**
-
+| **AddSaveValue(string ValueName, float Data)** |
+| :--- |
 해당 객체 저장소에 실수를 추가해요. (Value 이름, float 데이터)
-
-
-**AddSaveValue(string ValueName, bool Data)**
-
+| **AddSaveValue(string ValueName, bool Data)** |
+| :--- |
 해당 객체 저장소에 bool을 추가해요. (Value 이름, bool 데이터)
-
-
-**AddSaveValue(string ValueName, string Data)**
-
+| **AddSaveValue(string ValueName, string Data)** |
+| :--- |
 해당 객체 저장소에 문자열을 추가해요. (Value 이름, string 데이터)
-
-
-**AddSaveValue(string ValueName, Color Data)**
-
+| **AddSaveValue(string ValueName, Color Data)** |
+| :--- |
 해당 객체 저장소에 칼라를 추가해요. (Value 이름, Color 데이터)

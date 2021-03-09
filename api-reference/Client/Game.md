@@ -8,6 +8,10 @@
 서버로 부터 게임 통계 데이터 받았을 때 발생하는 이벤트에요. 
 ## **함수**
 
+
+
+
+
 | **RModeRemotePlayer GetRemotePlayer(string PlayerName);** |
 | :--- |
 
@@ -18,6 +22,10 @@
 ```lua
 local player = LocalPlayer:GetRemotePlayer() --자신의 플레이어를 반환해요. 
 ```
+
+
+
+
 | **RGameClientCharacter GetRemotePlayerCharacter(string PlayerName)** |
 | :--- |
 
@@ -28,6 +36,10 @@ local player = LocalPlayer:GetRemotePlayer() --자신의 플레이어를 반환�
 ```lua
 local character = Game:GetRemotePlayerCharacter(PlayerName) --플레이어 이름에 해당하는 캐릭터를 반환해요.
 ```
+
+
+
+
 | **int GetPlayerCount** |
 | :--- |
 
@@ -38,6 +50,10 @@ local character = Game:GetRemotePlayerCharacter(PlayerName) --플레이어 이�
 ```lua
 print(Game:GetPlayerCount())
 ```
+
+
+
+
 | **vector<Player> GetAllPlayer()** |
 | :--- |
 
@@ -51,6 +67,10 @@ for i = 1, #allPlayerList do
     print(allPlayerList[i]:GetName())
 end
 ```
+
+
+
+
 | **SendEventToServer(string EventName, Args ... )** |
 | :--- |
 
@@ -74,22 +94,42 @@ cube:ConnectEventFunction("SomeFunc", SomeFunc) --오브젝트에 "SomeFunc"라�
                                                 --오브젝트가 아닌 Game에도 연결할 수 있어요. 그러나 그룹과 폴더에는 연결할 수 없어요.
                                                 --같은 대상에 등록된 이벤트만 호출할 수 있어요.
 ```
+
+
+
+
 | **RModeSequenceAnimStateSetting AddAnimStateMachineSetting(string StateMachineName)** |
 | :--- |
 
 캐릭터에 사용될 애니메이션 상태머신 설정을 추가할 수 있어요. (설정할 상태머신 이름) 
+
+
+
+
 | **RModeSequenceAnimStateSetting GetAnimStateMachineSetting(string StateMachineName)** |
 | :--- |
 
 설정된 애니메이션 상태머신을 얻을 수 있어요. (얻고 싶은 상태머신 이름) 
+
+
+
+
 | **SetCharacterAnimStateMachine(RCharacterSetting CharacterSetting, RAnimStateMachineSetting AnimSetting)** |
 | :--- |
 
 해당 캐릭터 설정으로 생성되는 캐릭터의 애니메이션 상태 머신을 설정 할 수 있어요. (대상 캐릭터 설정, 사용 할 애니메이션 상태 설정) 
+
+
+
+
 | **SetNPCAnimStateMachine(string NPCSettingName, string AnimStateMachineSettingName)** |
 | :--- |
 
 해당 NPC의 애니메이션 상태 머신 사용하게 할 수 있어요. (설정한 NPC 이름, 애니메이션 상태 머신 이름) 
+
+
+
+
 | **ObjectFXClient CreateFX(ObjectFXClient FXObject, Vetor Location)** |
 | :--- |
 
@@ -101,6 +141,10 @@ FX를 생성할 수 있어요. (생성 할 FX 오브젝트, 생성할 위치)
 local spawnPos = Workspace.Cube:GetTransform():GetLocation()
 Game:CreateFX(Workspace.Effect, spawnPos) --이펙트를 지정 위치에 생성해요.
 ```
+
+
+
+
 | **DeleteFX(ObjectFXClient Object)** |
 | :--- |
 
@@ -111,6 +155,10 @@ FX를 제거시켜요. (제거할 FX 오브젝트)
 ```lua
 Game:DeleteFX(Workspace.Effect)   
 ```
+
+
+
+
 | **ObjectSoundClient PlaySound(ObjectSoundClient SoundObject, Vetor Location)** |
 | :--- |
 
@@ -123,6 +171,10 @@ Game:PlaySound(Workspace.Sound, Vector.new(0, 0, 0))
 ```
 
 플레이 중인 사운드를 정지시켜요. (정지할 Sound) 
+
+
+
+
 | **CreateObject(RScriptWorldObject Object, Vector Location)** |
 | :--- |
 
@@ -136,6 +188,10 @@ local createPos = Vector.new(0, 0, 0)
 local temp = Game:CreateObject(cube, createPos) --오브젝트를 지정된 위치에 생성해요. (생성한 클라이언트에서만 보여요.)
 print(temp:GetName()) --CreateObject로 생성한 오브젝트를 변수에 담은 뒤 후처리할 수 있어요.
 ```
+
+
+
+
 | **CreateUIScene(RScriptUISceneClient Source)** |
 | :--- |
 
@@ -147,6 +203,10 @@ Source와 같은 UIScene을 생성한다.
 local uiScene = Game:CreateUIScene(Workspace.ScreenUI) --대상 UI를 복제해요.
 print(uiScene:GetName())
 ```
+
+
+
+
 | **CreateUIScene(string UISceneName, RScriptUISceneClient Source)** |
 | :--- |
 
@@ -158,6 +218,10 @@ Source와 같은 UIScene을 생성 후, UISceneName을 생성된 오브젝트 �
 local uiScene = Game:CreateUIScene("NewScreenUI", Workspace.ScreenUI) --새로운 이름으로 대상 UI를 복제해요.
 print(uiScene:GetName())
 ```
+
+
+
+
 | **Vector GetMouseHitLocation()** |
 | :--- |
 
@@ -175,6 +239,10 @@ LocalPlayer:ProcessInputActionEvent("ClickKey", Enum.KeyInputType.Released, func
     print("Click Position : " .. pos)
 end
 ```
+
+
+
+
 | **Object GetMouseHitObject()** |
 | :--- |
 
@@ -320,10 +388,8 @@ Game:DeleteTimeEvent("PrintMessage") --AddTimeEvent로 등록한 함수를 삭�
 ```
 ## **함수**
 
-
-
-**RModePhase AddPhase(string phasename)**
-
+| **RModePhase AddPhase(string phasename)** |
+| :--- |
 게임에 단계를 추가할 수 있어요. (추가할 단계 이름)
 샘플
 
@@ -395,30 +461,20 @@ Game:ConnectChangeEventFunction("GameState", function()
     Game:ChangePhaseByName(Game.GameState) 
 end)
 ```
-
-
-**RModePhase GetPhaseByName(string phasename)**
-
+| **RModePhase GetPhaseByName(string phasename)** |
+| :--- |
 단계 이름으로 단계를 불러올 수 있어요. (불러올 단계 이름)
-
-
-**RModePhase GetCurPhase()**
-
+| **RModePhase GetCurPhase()** |
+| :--- |
 현재 단계를 얻을 수 있어요.
-
-
-**RModePhase ChangePhaseByName(string changephasename)**
-
+| **RModePhase ChangePhaseByName(string changephasename)** |
+| :--- |
 단계 이름을 통해 해당 단계로 변경할 수 있어요. (변경할 단계 이름)
-
-
-**RModePhase ChangeToNextPhase()**
-
+| **RModePhase ChangeToNextPhase()** |
+| :--- |
 다음 단계로 변경할 수 있어요.
-
-
-**ConnectEventFunction(string customevent, LuaScriptFunction function) **
-
+| **ConnectEventFunction(string customevent, LuaScriptFunction function) ** |
+| :--- |
 유저가 추가한 이벤트에 함수를 연결할 수 있어요. (이벤트 이름, 연결 함수)
 샘플
 
@@ -431,15 +487,11 @@ cube:ConnectEventFunction("SomeFunc", SomeFunc) --오브젝트에 "SomeFunc"라�
                                                 --오브젝트가 아닌 Game에도 연결할 수 있어요. 그러나 그룹과 폴더에는 연결할 수 없어요.
                                                 --같은 대상에 등록된 이벤트만 호출할 수 있어요.
 ```
-
-
-**float GetPassTime()**
-
+| **float GetPassTime()** |
+| :--- |
 단계가 진행된 시간을 얻을 수 있어요.
-
-
-**DeleteObject(RScriptWorldObject)**
-
+| **DeleteObject(RScriptWorldObject)** |
+| :--- |
 오브젝트를 삭제할 수 있어요. (삭제할 오브젝트)
 서버에서 사용하면 서버와 클라 오브젝트 모두 삭제되고 클라에서 사용하면 클라 오브젝트만 삭제해요
 샘플
@@ -448,10 +500,8 @@ cube:ConnectEventFunction("SomeFunc", SomeFunc) --오브젝트에 "SomeFunc"라�
 local cube = Workspace.Cube
 Game:DeleteObject(cube) --오브젝트를 파괴해요.
 ```
-
-
-**List<HitResult> LineTraceList(Vector Start, Vector Dir, float Distance)**
-
+| **List<HitResult> LineTraceList(Vector Start, Vector Dir, float Distance)** |
+| :--- |
 설정된 시작 지점에서 원하는 방향으로 지정된 거리 만큼의 충돌 리스트들을 가져올 수 있어요. (시작 지점 Vector, 목표 지점 Vector, 거리 값)
 샘플
 
@@ -464,35 +514,25 @@ for i = 1, #targetList do
     print("Left " .. targetList[i].HitObject:GetName()) 
 end
 ```
-
-
-**string GetName()**
-
+| **string GetName()** |
+| :--- |
 객체의 이름을 얻을 수 있어요.
 샘플
 
 ```lua
 print(Workspace.Floor:GetName()) --오브젝트의 이름을 문자열로 반환해요.
 ```
-
-
-**RModeObject GetParent(string ParentName)**
-
+| **RModeObject GetParent(string ParentName)** |
+| :--- |
 이름으로 부모 객체를 얻을 수 있어요. (찾고싶은 부모 객체 이름)
-
-
-**RModeObject GetChild(string ChildName)**
-
+| **RModeObject GetChild(string ChildName)** |
+| :--- |
 이름으로 자식 객체를 얻을 수 있어요. (찾고싶은 자식 객체 이름)
-
-
-**RModeObject GetGetSibling(string Name)**
-
+| **RModeObject GetGetSibling(string Name)** |
+| :--- |
 이름으로 형제 객체를 얻을 수 있어요. (찾고싶은 형제 객체 이름)
-
-
-**List<RScriptObject> GetChildList()**
-
+| **List<RScriptObject> GetChildList()** |
+| :--- |
 자식 객체의 리스트를 얻을 수 있어요.
 샘플
 
@@ -502,10 +542,8 @@ for i = 1, #uiList do --리스트앞에 #을 붙여 리스트의 길이를 가�
     print(uiList[i]:GetName())
 end
 ```
-
-
-**bool IsCharacter()**
-
+| **bool IsCharacter()** |
+| :--- |
 캐릭터인지 확인할 수 있어요.
 샘플
 
@@ -515,10 +553,8 @@ if cube:IsCharacter() == true then --오브젝트가 Character면 true를 반환
     print(cube:GetName() .. " Is Character")
 end
 ```
-
-
-**bool IsStaticMesh()**
-
+| **bool IsStaticMesh()** |
+| :--- |
 스테틱 메시인지 확인할 수 있어요.
 샘플
 
@@ -528,10 +564,8 @@ if cube:IsStaticMesh() == true then --오브젝트가 StaticMesh면 true를 반�
     print(cube:GetName() .. " Is StaticMesh")
 end
 ```
-
-
-**bool IsFX()**
-
+| **bool IsFX()** |
+| :--- |
 FX인지 확인할 수 있어요.
 샘플
 
@@ -541,10 +575,8 @@ if cube:IsFX() == true then --오브젝트가 FX면 true를 반환해요.
     print(cube:GetName() .. " Is FX")
 end
 ```
-
-
-**bool IsSound()**
-
+| **bool IsSound()** |
+| :--- |
 Sound인지 확인할 수 있어요.
 샘플
 
@@ -554,10 +586,8 @@ if cube:IsSound() == true then --오브젝트가 Sound면 true를 반환해요.
     print(cube:GetName() .. " Is Sound")
 end
 ```
-
-
-**bool IsPointLight()**
-
+| **bool IsPointLight()** |
+| :--- |
 포인트 라이트인지 확인할 수 있어요.
 샘플
 
@@ -567,10 +597,8 @@ if cube:IsPointLight() == true then --오브젝트가 PointLight면 true를 반�
     print(cube:GetName() .. " Is PointLight")
 end
 ```
-
-
-**bool IsSpotLight()**
-
+| **bool IsSpotLight()** |
+| :--- |
 스포트 라이트인지 확인할 수 있어요.
 샘플
 
@@ -580,10 +608,8 @@ if cube:IsSpotLight() == true then --오브젝트가 SpotLight면 true를 반환
     print(cube:GetName() .. " Is SpotLight")
 end
 ```
-
-
-**bool IsSurfaceUI()**
-
+| **bool IsSurfaceUI()** |
+| :--- |
 서피스 UI인지 확인할 수 있어요.
 샘플
 
@@ -593,10 +619,8 @@ if cube:IsSurfaceUI() == true then --오브젝트가 SurfaceUI면 true를 반환
     print(cube:GetName() .. " Is SurfaceUI")
 end
 ```
-
-
-**bool IsScreenUI()**
-
+| **bool IsScreenUI()** |
+| :--- |
 스크린 UI인지 확인할 수 있어요.
 샘플
 
@@ -606,10 +630,8 @@ if cube:IsScreenUI() == true then --오브젝트가 ScreenUI면 true를 반환�
     print(cube:GetName() .. " Is ScreenUI")
 end
 ```
-
-
-**bool IsItem()**
-
+| **bool IsItem()** |
+| :--- |
 아이템인지 확인할 수 있어요.
 샘플
 
@@ -619,10 +641,8 @@ if cube:IsItem() == true then --오브젝트가 Item면 true를 반환해요.
     print(cube:GetName() .. " Is Item")
 end
 ```
-
-
-**bool IsNPC()**
-
+| **bool IsNPC()** |
+| :--- |
 NPC인지 확인할 수 있어요.
 샘플
 
@@ -632,10 +652,8 @@ if cube:IsNPC() == true then --오브젝트가 NPC면 true를 반환해요.
     print(cube:GetName() .. " Is NPC")
 end
 ```
-
-
-**bool IsFolder()**
-
+| **bool IsFolder()** |
+| :--- |
 폴더인지 확인할 수 있어요.
 샘플
 
@@ -645,10 +663,8 @@ if cube:IsFolder() == true then --오브젝트가 Folder면 true를 반환해요
     print(cube:GetName() .. " Is Folder")
 end
 ```
-
-
-**bool IsScript()**
-
+| **bool IsScript()** |
+| :--- |
 스트립트인지 확인할 수 있어요.
 샘플
 
@@ -658,10 +674,8 @@ if cube:IsScript() == true then --오브젝트가 Script면 true를 반환해요
     print(cube:GetName() .. " Is Script")
 end
 ```
-
-
-**bool IsCollider()**
-
+| **bool IsCollider()** |
+| :--- |
 Collider인지 확인할 수 있어요.
 샘플
 
@@ -671,10 +685,8 @@ if cube:IsCollider() == true then --오브젝트가 Collider면 true를 반환�
     print(cube:GetName() .. " Is Collider")
 end
 ```
-
-
-**bool IsWidget()**
-
+| **bool IsWidget()** |
+| :--- |
 Widget인지 확인할 수 있어요.
 샘플
 
@@ -684,10 +696,8 @@ if cube:IsWidget() == true then --오브젝트가 Widget면 true를 반환해요
     print(cube:GetName() .. " Is Widget")
 end
 ```
-
-
-**bool IsCamera()**
-
+| **bool IsCamera()** |
+| :--- |
 Camera인지 확인할 수 있어요.
 샘플
 
@@ -697,15 +707,11 @@ if cube:IsCamera() == true then --오브젝트가 Camera면 true를 반환해요
     print(cube:GetName() .. " Is Camera")
 end
 ```
-
-
-**bool IsValid()**
-
+| **bool IsValid()** |
+| :--- |
 해당 오브젝트가 유효한지 확인 할 수있어요.
-
-
-**AddReplicateValue(string ValueName, Vector Data, ReplicateType Type, float Time, bool bSaveToStorage)**
-
+| **AddReplicateValue(string ValueName, Vector Data, ReplicateType Type, float Time, bool bSaveToStorage)** |
+| :--- |
 해당 객체에 서버, 클라이언트 간 동기화가 가능한 벡터를 추가해요. (추가할 Value 이름, Vector 데이터, //@[] Enum.ReplicateType.타입 https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype , 동기화 시간, 스토리지 저장 여부)
 샘플
 
@@ -717,10 +723,8 @@ print(Game.SomeVector)
 --클라 스크립트에서-------------
 print(Game.SomeVector) --서버에서 값이 바뀌었지만 클라에서도 동일하게 출력돼요.
 ```
-
-
-**AddReplicateValue(string ValueName, float Data, ReplicateType Type, float Time, bool bSaveToStorage)**
-
+| **AddReplicateValue(string ValueName, float Data, ReplicateType Type, float Time, bool bSaveToStorage)** |
+| :--- |
 해당 객체에 서버, 클라이언트 간 동기화가 가능한 실수를 추가해요. (추가할 Value 이름, float 데이터, //@[] Enum.ReplicateType.타입 https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype , 동기화 시간, 스토리지 저장 여부)
 샘플
 
@@ -732,10 +736,8 @@ print(Game.SomeNumber .. " in Server")
 --클라 스크립트에서-------------
 print(Game.SomeNumber .. " in Client") --서버에서 값이 바뀌었지만 클라에서도 동일하게 출력돼요.
 ```
-
-
-**AddReplicateValue(string ValueName, bool Data, ReplicateType Type, float Time, bool bSaveToStorage)**
-
+| **AddReplicateValue(string ValueName, bool Data, ReplicateType Type, float Time, bool bSaveToStorage)** |
+| :--- |
 해당 객체에 서버, 클라이언트 간 동기화가 가능한 bool를 추가해요. (추가할 Value 이름, bool 데이터, //@[] Enum.ReplicateType.타입 https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype , 동기화 시간, 스토리지 저장 여부)
 샘플
 
@@ -747,10 +749,8 @@ print(Game.SomeBool)
 --클라 스크립트에서-------------
 print(Game.SomeBool) --서버에서 값이 바뀌었지만 클라에서도 동일하게 출력돼요.
 ```
-
-
-**AddReplicateValue(string ValueName, string Data, ReplicateType Type, float Time, bool bSaveToStorage)**
-
+| **AddReplicateValue(string ValueName, string Data, ReplicateType Type, float Time, bool bSaveToStorage)** |
+| :--- |
 해당 객체에 서버, 클라이언트 간 동기화가 가능한 문자열을 추가해요. (추가할 Value 이름, string 데이터, //@[] Enum.ReplicateType.타입 https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype , 동기화 시간, 스토리지 저장 여부)
 샘플
 
@@ -762,10 +762,8 @@ print(Game.SomeString)
 --클라 스크립트에서-------------
 print(Game.SomeString) --서버에서 값이 바뀌었지만 클라에서도 동일하게 출력돼요.
 ```
-
-
-**AddReplicateValue(string ValueName, Color Data, ReplicateType Type, float Time, bool bSaveToStorage)**
-
+| **AddReplicateValue(string ValueName, Color Data, ReplicateType Type, float Time, bool bSaveToStorage)** |
+| :--- |
 해당 객체에 서버, 클라이언트 간 동기화가 가능한 컬러를 추가해요. (추가할 Value 이름, Color 데이터, //@[] Enum.ReplicateType.타입 https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/replicatetype , 동기화 시간, 스토리지 저장 여부)
 샘플
 
@@ -777,28 +775,18 @@ print(Game.SomeColor)
 --클라 스크립트에서-------------
 print(Game.SomeColor) --서버에서 값이 바뀌었지만 클라에서도 동일하게 출력돼요.
 ```
-
-
-**AddSaveValue(string ValueName, Vector Data)**
-
+| **AddSaveValue(string ValueName, Vector Data)** |
+| :--- |
 해당 객체 저장소에 벡터를 추가해요. (Value 이름, Vector 데이터)
-
-
-**AddSaveValue(string ValueName, float Data)**
-
+| **AddSaveValue(string ValueName, float Data)** |
+| :--- |
 해당 객체 저장소에 실수를 추가해요. (Value 이름, float 데이터)
-
-
-**AddSaveValue(string ValueName, bool Data)**
-
+| **AddSaveValue(string ValueName, bool Data)** |
+| :--- |
 해당 객체 저장소에 bool을 추가해요. (Value 이름, bool 데이터)
-
-
-**AddSaveValue(string ValueName, string Data)**
-
+| **AddSaveValue(string ValueName, string Data)** |
+| :--- |
 해당 객체 저장소에 문자열을 추가해요. (Value 이름, string 데이터)
-
-
-**AddSaveValue(string ValueName, Color Data)**
-
+| **AddSaveValue(string ValueName, Color Data)** |
+| :--- |
 해당 객체 저장소에 칼라를 추가해요. (Value 이름, Color 데이터)
