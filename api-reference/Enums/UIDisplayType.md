@@ -1,5 +1,5 @@
-
-SurfaceUI 의 DisplayType <br>
+
+SurfaceUI 의 DisplayType 
 <br>
 ## **Enums**
 
@@ -9,8 +9,8 @@ SurfaceUI 의 DisplayType <br>
 | --- |
 | **Billboard** |
 | --- |
-
-샘플 <br>
+
+샘플 
 
 ```lua
 local PlayerNameUI = HUD.PlayerNameUI

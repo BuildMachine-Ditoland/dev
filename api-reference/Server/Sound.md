@@ -1,15 +1,15 @@
-
-서버에서 사용되는 사운드 객체에요. <br>
+
+서버에서 사용되는 사운드 객체에요. 
 <br>
 ## **함수**
 
 <br>
 | **Play()** |
 | :--- |
-
-Sound를 플레이해요. <br>
-
-샘플 <br>
+
+Sound를 플레이해요. 
+
+샘플 
 
 ```lua
 local sound = Workspace.Sound
@@ -18,10 +18,10 @@ sound:Play() --사운드를 재생해요
 <br>
 | **Stop()** |
 | :--- |
-
-Sound를 정지시켜요. <br>
-
-샘플 <br>
+
+Sound를 정지시켜요. 
+
+샘플 
 
 ```lua
 local sound = Workspace.Sound

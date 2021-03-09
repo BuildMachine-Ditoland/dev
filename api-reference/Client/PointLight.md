@@ -1,20 +1,20 @@
-
-클라이언트에서 사용되는 포인트라이트 개체에요. <br>
+
+클라이언트에서 사용되는 포인트라이트 개체에요. 
 <br>
 ## **함수**
 
 <br>
 | **SetEnable(bool bEnable)** |
 | :--- |
-
-설정된 Point Light의 작동 여부를 설정해요. (작동 여부) <br>
+
+설정된 Point Light의 작동 여부를 설정해요. (작동 여부) 
 <br>
 | **SetColor(Color ChangedColor)** |
 | :--- |
-
-포인트 라이트의 컬러를 변경할 수 있어요. (포인트 라인트에 적용할 원하는 [Color](https://ditoland-utplus.gitbook.io/ditoland/api-reference/common/color)값 )  <br>
-
-샘플 <br>
+
+포인트 라이트의 컬러를 변경할 수 있어요. (포인트 라인트에 적용할 원하는 [Color](https://ditoland-utplus.gitbook.io/ditoland/api-reference/common/color)값 )  
+
+샘플 
 
 ```lua
 Workspace.Cube:SetColor(Color.new(255, 0, 0, 255)) --오브젝트의 색상을 변경해요. (r, g, b, a)
@@ -22,10 +22,10 @@ Workspace.Cube:SetColor(Color.new(255, 0, 0, 255)) --오브젝트의 색상을 �
 <br>
 | **ChangeIntensity(float Intensity)** |
 | :--- |
-
-포인트 라이트의 밝기 값을 변경할 수 있어요. (원하는 밝기 값) <br>
-
-샘플 <br>
+
+포인트 라이트의 밝기 값을 변경할 수 있어요. (원하는 밝기 값) 
+
+샘플 
 
 ```lua
 local changeValue = 2

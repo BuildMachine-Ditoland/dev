@@ -1,58 +1,58 @@
-
-자동차에 대한 객체에요. <br>
+
+자동차에 대한 객체에요. 
 <br>
 ## **함수**
 
 <br>
 | **MakeVehicleChassis(RScriptWorldObject Chassis, FRVehicleCreationInfo VehicleCreationInfo)** |
 | :--- |
-
-특정 오브젝트를 Chassis로 만들어줘요. (변경할 오브젝트, [Vehicle데이터](https://ditoland-utplus.gitbook.io/ditoland/api-reference/common/vehiclecreationinfo))<br>
+
+특정 오브젝트를 Chassis로 만들어줘요. (변경할 오브젝트, [Vehicle데이터](https://ditoland-utplus.gitbook.io/ditoland/api-reference/common/vehiclecreationinfo))
 <br>
 | **AttachWheel(RScriptWorldObject Wheel, FRWheelCreationInfo WheelCreationInfo);** |
 | :--- |
-
-Chassis에 휠을 붙여줘요. (휠 오브젝트, [Wheel데이터](https://ditoland-utplus.gitbook.io/ditoland/api-reference/common/wheelcreationinfo))<br>
+
+Chassis에 휠을 붙여줘요. (휠 오브젝트, [Wheel데이터](https://ditoland-utplus.gitbook.io/ditoland/api-reference/common/wheelcreationinfo))
 <br>
 | **SetOwner(string PlayerName);** |
 | :--- |
-
-이 자동차를 소유할 플레이어를 세팅해요. (세팅할 플레이어 이름) <br>
+
+이 자동차를 소유할 플레이어를 세팅해요. (세팅할 플레이어 이름) 
 <br>
 | **bool IsOccupied()** |
 | :--- |
-
-자동차가 이용중인지 판별할 수 있어요. <br>
+
+자동차가 이용중인지 판별할 수 있어요. 
 <br>
 | **void Forward(float power)** |
 | :--- |
-
-자동차를 전진시키는 함수에요. (원하는 속도 값) <br>
+
+자동차를 전진시키는 함수에요. (원하는 속도 값) 
 <br>
 | **Reverse(float power)** |
 | :--- |
-
-자동차를 후진시키는 함수에요. (원하는 속도 값) <br>
+
+자동차를 후진시키는 함수에요. (원하는 속도 값) 
 <br>
 | **SteerLeft(float power)** |
 | :--- |
-
-자동차를 좌회전시키는 함수에요. (원하는 속도 값) <br>
+
+자동차를 좌회전시키는 함수에요. (원하는 속도 값) 
 <br>
 | **SteerRight(float power)** |
 | :--- |
-
-자동차를 우회전시키는 함수에요. (원하는 속도 값) <br>
+
+자동차를 우회전시키는 함수에요. (원하는 속도 값) 
 <br>
 | **Brake(float power);** |
 | :--- |
-
-자동차를 정지시키는 함수에요. (원하는 속도 값) <br>
+
+자동차를 정지시키는 함수에요. (원하는 속도 값) 
 <br>
 | **Reset(float height, float cooltime)** |
 | :--- |
-
-자동차의 자세를 바로 잡아주는 함수에요. (높이 값, 대기 시간) <br>
+
+자동차의 자세를 바로 잡아주는 함수에요. (높이 값, 대기 시간) 
 # **상속받아 사용 가능한 기능들**
 
 <br>

@@ -1,5 +1,5 @@
-
-클라이언트에서 사용되는 Widget ScrollBox 객체. <br>
+
+클라이언트에서 사용되는 Widget ScrollBox 객체. 
 <br>
 ## **속성**
 
@@ -9,8 +9,8 @@
 <br>
 | **SetOrientationType(ScrollOrientationType Type)** |
 | :--- |
-
-ScrollBox의 스크롤 타입을 설정할 수 있어요(ScrollOrientationType Type) <br>
+
+ScrollBox의 스크롤 타입을 설정할 수 있어요(ScrollOrientationType Type) 
 # **상속받아 사용 가능한 기능들**
 
 <br>

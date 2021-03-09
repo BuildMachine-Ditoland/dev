@@ -1,20 +1,20 @@
-
-클라이언트에서 사용되는 스포트라이트 개체에요. <br>
+
+클라이언트에서 사용되는 스포트라이트 개체에요. 
 <br>
 ## **함수**
 
 <br>
 | **SetEnable(bool bEnable)** |
 | :--- |
-
-설정된 스포트 라이트의 작동 여부를 설정해요. (작동 여부) <br>
+
+설정된 스포트 라이트의 작동 여부를 설정해요. (작동 여부) 
 <br>
 | **SetColor(Color ChangedColor)** |
 | :--- |
-
-스포트 라이트의 컬러를 변경할 수 있어요. (스포트 라인트에 적용할 원하는 [Color](https://ditoland-utplus.gitbook.io/ditoland/api-reference/common/color)값 )  <br>
-
-샘플 <br>
+
+스포트 라이트의 컬러를 변경할 수 있어요. (스포트 라인트에 적용할 원하는 [Color](https://ditoland-utplus.gitbook.io/ditoland/api-reference/common/color)값 )  
+
+샘플 
 
 ```lua
 Workspace.Cube:SetColor(Color.new(255, 0, 0, 255)) --오브젝트의 색상을 변경해요. (r, g, b, a)
@@ -22,10 +22,10 @@ Workspace.Cube:SetColor(Color.new(255, 0, 0, 255)) --오브젝트의 색상을 �
 <br>
 | **ChangeIntensity(float Intensity)** |
 | :--- |
-
-스포트 라이트의 밝기 값을 변경할 수 있어요. (원하는 밝기 값) <br>
-
-샘플 <br>
+
+스포트 라이트의 밝기 값을 변경할 수 있어요. (원하는 밝기 값) 
+
+샘플 
 
 ```lua
 local changeValue = 2
@@ -34,10 +34,10 @@ Workspace.SpotLight:ChangeIntensity(changeValue) --SpotLight의 밝기를 조절
 <br>
 | **ChangeAttenuationRadius(float radius)** |
 | :--- |
-
-스포트 라이트의 가시 영향력 범위를 변경할 수 있어요. <br>
-
-샘플 <br>
+
+스포트 라이트의 가시 영향력 범위를 변경할 수 있어요. 
+
+샘플 
 
 ```lua
 Workspace.SpotLight:ChangeAttenuationRadius(700)
@@ -45,10 +45,10 @@ Workspace.SpotLight:ChangeAttenuationRadius(700)
 <br>
 | **ChangeInnerConeAngle(float angle)** |
 | :--- |
-
-스포트 라이트의 안쪽 콘의 각도.  <br>
-
-샘플 <br>
+
+스포트 라이트의 안쪽 콘의 각도.  
+
+샘플 
 
 ```lua
 Workspace.SpotLight:ChangeInnerConeAngle(20)
@@ -56,10 +56,10 @@ Workspace.SpotLight:ChangeInnerConeAngle(20)
 <br>
 | **ChangeOuterConeAngle(float angle)** |
 | :--- |
-
-스포트 라이트의 바깥쪽 콘의 각도 <br>
-
-샘플 <br>
+
+스포트 라이트의 바깥쪽 콘의 각도 
+
+샘플 
 
 ```lua
 Workspace.SpotLight:ChangeOuterConeAngle(20)

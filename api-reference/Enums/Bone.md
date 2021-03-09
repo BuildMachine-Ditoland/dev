@@ -1,5 +1,5 @@
-
-캐릭터 본 타입이에요. <br>
+
+캐릭터 본 타입이에요. 
 <br>
 ## **Enums**
 
@@ -14,8 +14,8 @@
 **RFoot** |오른발 |
 **LFoot** |왼발 |
 **Root** |바닥 |
-
-샘플 <br>
+
+샘플 
 
 ```lua
 local character = LocalPlayer:GetRemotePlayer():GetCharacter()

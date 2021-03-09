@@ -1,23 +1,23 @@
-
-게임 전반적인 역할을 하는 객체에요. 여기 있는 기능들은 클라이언트에서만 사용할 수 있어요. <br>
+
+게임 전반적인 역할을 하는 객체에요. 여기 있는 기능들은 클라이언트에서만 사용할 수 있어요. 
 <br>
 ## **이벤트**
 
 <br>
 | **ReceiveGameStatisticsDataEvent** |
 | :--- |
-
-서버로 부터 게임 통계 데이터 받았을 때 발생하는 이벤트에요. <br>
+
+서버로 부터 게임 통계 데이터 받았을 때 발생하는 이벤트에요. 
 <br>
 ## **함수**
 
 <br>
 | **RModeRemotePlayer GetRemotePlayer(string PlayerName);** |
 | :--- |
-
-이름으로 플레이어를 얻을 수 있어요. (찾고싶은 플레이어 이름) <br>
-
-샘플 <br>
+
+이름으로 플레이어를 얻을 수 있어요. (찾고싶은 플레이어 이름) 
+
+샘플 
 
 ```lua
 local player = LocalPlayer:GetRemotePlayer() --자신의 플레이어를 반환해요. 
@@ -25,10 +25,10 @@ local player = LocalPlayer:GetRemotePlayer() --자신의 플레이어를 반환�
 <br>
 | **RGameClientCharacter GetRemotePlayerCharacter(string PlayerName)** |
 | :--- |
-
-플레이어 이름으로 해당 플레이어의 캐릭터를 얻을 수 있어요. (캐릭터를 찾고싶은 플레이어 이름) <br>
-
-샘플 <br>
+
+플레이어 이름으로 해당 플레이어의 캐릭터를 얻을 수 있어요. (캐릭터를 찾고싶은 플레이어 이름) 
+
+샘플 
 
 ```lua
 local character = Game:GetRemotePlayerCharacter(PlayerName) --플레이어 이름에 해당하는 캐릭터를 반환해요.
@@ -36,10 +36,10 @@ local character = Game:GetRemotePlayerCharacter(PlayerName) --플레이어 이�
 <br>
 | **int GetPlayerCount** |
 | :--- |
-
-현재 게임에 참여하고 있는 플레이어의 수를 얻을 수 있어요. <br>
-
-샘플 <br>
+
+현재 게임에 참여하고 있는 플레이어의 수를 얻을 수 있어요. 
+
+샘플 
 
 ```lua
 print(Game:GetPlayerCount())
@@ -47,10 +47,10 @@ print(Game:GetPlayerCount())
 <br>
 | **vector<Player> GetAllPlayer()** |
 | :--- |
-
-모든 플레이어 얻을 수 있어요. <br>
-
-샘플 <br>
+
+모든 플레이어 얻을 수 있어요. 
+
+샘플 
 
 ```lua
 local allPlayerList = Game:GetAllPlayer() --모든 플레이어를 리스트로 반환해요.
@@ -61,10 +61,10 @@ end
 <br>
 | **SendEventToServer(string EventName, Args ... )** |
 | :--- |
-
-서버에 커스텀 이벤트를 보내는 함수에요. (이벤트 이름, 전달하고 싶은 변수들 ...) <br>
-
-샘플 <br>
+
+서버에 커스텀 이벤트를 보내는 함수에요. (이벤트 이름, 전달하고 싶은 변수들 ...) 
+
+샘플 
 
 ```lua
 --클라 스크립트에서
@@ -85,30 +85,30 @@ cube:ConnectEventFunction("SomeFunc", SomeFunc) --오브젝트에 "SomeFunc"라�
 <br>
 | **RModeSequenceAnimStateSetting AddAnimStateMachineSetting(string StateMachineName)** |
 | :--- |
-
-캐릭터에 사용될 애니메이션 상태머신 설정을 추가할 수 있어요. (설정할 상태머신 이름) <br>
+
+캐릭터에 사용될 애니메이션 상태머신 설정을 추가할 수 있어요. (설정할 상태머신 이름) 
 <br>
 | **RModeSequenceAnimStateSetting GetAnimStateMachineSetting(string StateMachineName)** |
 | :--- |
-
-설정된 애니메이션 상태머신을 얻을 수 있어요. (얻고 싶은 상태머신 이름) <br>
+
+설정된 애니메이션 상태머신을 얻을 수 있어요. (얻고 싶은 상태머신 이름) 
 <br>
 | **SetCharacterAnimStateMachine(RCharacterSetting CharacterSetting, RAnimStateMachineSetting AnimSetting)** |
 | :--- |
-
-해당 캐릭터 설정으로 생성되는 캐릭터의 애니메이션 상태 머신을 설정 할 수 있어요. (대상 캐릭터 설정, 사용 할 애니메이션 상태 설정) <br>
+
+해당 캐릭터 설정으로 생성되는 캐릭터의 애니메이션 상태 머신을 설정 할 수 있어요. (대상 캐릭터 설정, 사용 할 애니메이션 상태 설정) 
 <br>
 | **SetNPCAnimStateMachine(string NPCSettingName, string AnimStateMachineSettingName)** |
 | :--- |
-
-해당 NPC의 애니메이션 상태 머신 사용하게 할 수 있어요. (설정한 NPC 이름, 애니메이션 상태 머신 이름) <br>
+
+해당 NPC의 애니메이션 상태 머신 사용하게 할 수 있어요. (설정한 NPC 이름, 애니메이션 상태 머신 이름) 
 <br>
 | **ObjectFXClient CreateFX(ObjectFXClient FXObject, Vetor Location)** |
 | :--- |
-
-FX를 생성할 수 있어요. (생성 할 FX 오브젝트, 생성할 위치) <br>
-
-샘플 <br>
+
+FX를 생성할 수 있어요. (생성 할 FX 오브젝트, 생성할 위치) 
+
+샘플 
 
 ```lua
 local spawnPos = Workspace.Cube:GetTransform():GetLocation()
@@ -117,10 +117,10 @@ Game:CreateFX(Workspace.Effect, spawnPos) --이펙트를 지정 위치에 생성
 <br>
 | **DeleteFX(ObjectFXClient Object)** |
 | :--- |
-
-FX를 제거시켜요. (제거할 FX 오브젝트) <br>
-
-샘플 <br>
+
+FX를 제거시켜요. (제거할 FX 오브젝트) 
+
+샘플 
 
 ```lua
 Game:DeleteFX(Workspace.Effect)   
@@ -128,23 +128,23 @@ Game:DeleteFX(Workspace.Effect)
 <br>
 | **ObjectSoundClient PlaySound(ObjectSoundClient SoundObject, Vetor Location)** |
 | :--- |
-
-사운드를 플레이해요. (플레이 할 Sound 오브젝트, 플레이 할 위치 Vector) <br>
-
-샘플 <br>
+
+사운드를 플레이해요. (플레이 할 Sound 오브젝트, 플레이 할 위치 Vector) 
+
+샘플 
 
 ```lua
 Game:PlaySound(Workspace.Sound, Vector.new(0, 0, 0))
 ```
-
-플레이 중인 사운드를 정지시켜요. (정지할 Sound) <br>
+
+플레이 중인 사운드를 정지시켜요. (정지할 Sound) 
 <br>
 | **CreateObject(RScriptWorldObject Object, Vector Location)** |
 | :--- |
-
-지정된 위치에 오브젝트를 생성 시켜요. (생성 할 Object, 생성 할 위치 Vector) <br>
-
-샘플 <br>
+
+지정된 위치에 오브젝트를 생성 시켜요. (생성 할 Object, 생성 할 위치 Vector) 
+
+샘플 
 
 ```lua
 local cube = Workspace.Cube
@@ -155,10 +155,10 @@ print(temp:GetName()) --CreateObject로 생성한 오브젝트를 변수에 담�
 <br>
 | **CreateUIScene(RScriptUISceneClient Source)** |
 | :--- |
-
-Source와 같은 UIScene을 생성한다. <br>
-
-샘플 <br>
+
+Source와 같은 UIScene을 생성한다. 
+
+샘플 
 
 ```lua
 local uiScene = Game:CreateUIScene(Workspace.ScreenUI) --대상 UI를 복제해요.
@@ -167,10 +167,10 @@ print(uiScene:GetName())
 <br>
 | **CreateUIScene(string UISceneName, RScriptUISceneClient Source)** |
 | :--- |
-
-Source와 같은 UIScene을 생성 후, UISceneName을 생성된 오브젝트 이름으로 설정한다. (생성할 오브젝트의 이름 UISceneName, 생성 할 오브젝트 Source) <br>
-
-샘플 <br>
+
+Source와 같은 UIScene을 생성 후, UISceneName을 생성된 오브젝트 이름으로 설정한다. (생성할 오브젝트의 이름 UISceneName, 생성 할 오브젝트 Source) 
+
+샘플 
 
 ```lua
 local uiScene = Game:CreateUIScene("NewScreenUI", Workspace.ScreenUI) --새로운 이름으로 대상 UI를 복제해요.
@@ -179,10 +179,10 @@ print(uiScene:GetName())
 <br>
 | **Vector GetMouseHitLocation()** |
 | :--- |
-
-자신의 마우스 2D 위치에서 월드에 충돌된 3D위치 좌표를 얻을 수 있어요. <br>
-
-샘플 <br>
+
+자신의 마우스 2D 위치에서 월드에 충돌된 3D위치 좌표를 얻을 수 있어요. 
+
+샘플 
 
 ```lua
 Input:AddGroup("MouseInput")
@@ -197,10 +197,10 @@ end
 <br>
 | **Object GetMouseHitObject()** |
 | :--- |
-
-자신의 마우스 2D 위치에서 월드에 충돌된 Object를 얻어 올 수 있어요. <br>
-
-샘플 <br>
+
+자신의 마우스 2D 위치에서 월드에 충돌된 Object를 얻어 올 수 있어요. 
+
+샘플 
 
 ```lua
 while true do

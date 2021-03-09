@@ -1,15 +1,15 @@
-
-오브젝트에 배치된 UI씬에 해당하는 객체에요. <br>
+
+오브젝트에 배치된 UI씬에 해당하는 객체에요. 
 <br>
 ## **함수**
 
 <br>
 | **SetVisibility(bool Visibility)** |
 | :--- |
-
-UI씬의 표시 여부를 설정할 수 있어요. (표시 여부) <br>
-
-샘플 <br>
+
+UI씬의 표시 여부를 설정할 수 있어요. (표시 여부) 
+
+샘플 
 
 ```lua
 Workspace.Cube.SetVisibility(false) --오브젝트를 보이지 않게 해요.

@@ -1,5 +1,5 @@
-
-키 버튼 타입이에요 <br>
+
+키 버튼 타입이에요 
 <br>
 ## **Enums**
 
@@ -128,8 +128,8 @@
 **Gamepad_LeftY** |Input Key Binding |
 **Gamepad_RightX** |Input Key Binding |
 **Gamepad_RightY** |Input Key Binding |
-
-샘플 <br>
+
+샘플 
 
 ```lua
 Input:AddGroup("UIInput") --조작그룹을 추가해요.
