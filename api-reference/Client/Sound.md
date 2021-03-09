@@ -6,8 +6,7 @@
 
 
 
-| **void Play()** |
-| :--- |
+**void Play()**
 
 Sound를 플레이할 수 있어요. 
 
@@ -21,8 +20,7 @@ sound:Play() --사운드를 재생해요
 
 
 
-| **void Stop()** |
-| :--- |
+**void Stop()**
 
 Sound를 정지시켜요. 
 
@@ -36,8 +34,7 @@ sound:Stop() --사운드를 정지해요
 
 
 
-| **bool IsPlaying()** |
-| :--- |
+**bool IsPlaying()**
 
 Sound가 플레이 중인지 판별할 수 있어요. 
 

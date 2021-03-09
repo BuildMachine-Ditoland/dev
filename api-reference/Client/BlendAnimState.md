@@ -8,16 +8,14 @@
 
 
 
-| **AddBlendAnimation(float BlendValue, string AnimResourceID)** |
-| :--- |
+**AddBlendAnimation(float BlendValue, string AnimResourceID)**
 
 블렌드 애니메이션을 추가해요. (블렌드 값, 리소스 ID) 
 
 
 
 
-| **AddBlendAnimation(float BlendValue, string AnimResourceID, float InPlaySpeed)** |
-| :--- |
+**AddBlendAnimation(float BlendValue, string AnimResourceID, float InPlaySpeed)**
 
 블렌드 애니메이션을 추가해요. (블렌드 값, 리로스 ID, 플레이 횟수) 
 # **상속받아 사용 가능한 기능들**

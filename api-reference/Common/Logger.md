@@ -10,8 +10,7 @@
 
 
 
-| **Log(string message)** |
-| :--- |
+**Log(string message)**
 
 일반 로그 메시지를 출력해요. (메시지 내용) 
 
