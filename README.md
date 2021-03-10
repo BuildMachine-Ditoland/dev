@@ -1,3 +1,3 @@
 # HOME
 
-* [SimulatePhysicsType](api-reference/Enums/SimulatePhysicsType.md)
+[SimulatePhysicsType](api-reference/Enums/SimulatePhysicsType.md)
