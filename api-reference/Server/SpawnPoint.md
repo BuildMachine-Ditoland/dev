@@ -35,6 +35,7 @@ print(parent:GetName())
 ```
 <br>
 <br>
+<br>
 ## **이벤트**
 
 <br>
@@ -59,6 +60,7 @@ cube:ConnectChangeEventFunction("SomeValue", ChangeSomeValue)  --오브젝트의
 ```
 <br>
 <br>
+<br>
 ## **함수**
 
 <br>
@@ -73,6 +75,7 @@ cube:ConnectChangeEventFunction("SomeValue", ChangeSomeValue)  --오브젝트의
 ```lua
 print(Workspace.Floor:GetName()) --오브젝트의 이름을 문자열로 반환해요.
 ```
+<br>
 <br>
 <br>
 <br>
@@ -110,6 +113,7 @@ end
 <br>
 <br>
 <br>
+<br>
 | **bool IsCharacter()** |
 | :--- |
 
@@ -123,6 +127,7 @@ if cube:IsCharacter() == true then --오브젝트가 Character면 true를 반환
     print(cube:GetName() .. " Is Character")
 end
 ```
+<br>
 <br>
 <br>
 <br>
@@ -142,6 +147,7 @@ end
 <br>
 <br>
 <br>
+<br>
 | **bool IsFX()** |
 | :--- |
 
@@ -155,6 +161,7 @@ if cube:IsFX() == true then --오브젝트가 FX면 true를 반환해요.
     print(cube:GetName() .. " Is FX")
 end
 ```
+<br>
 <br>
 <br>
 <br>
@@ -174,6 +181,7 @@ end
 <br>
 <br>
 <br>
+<br>
 | **bool IsPointLight()** |
 | :--- |
 
@@ -187,6 +195,7 @@ if cube:IsPointLight() == true then --오브젝트가 PointLight면 true를 반�
     print(cube:GetName() .. " Is PointLight")
 end
 ```
+<br>
 <br>
 <br>
 <br>
@@ -206,6 +215,7 @@ end
 <br>
 <br>
 <br>
+<br>
 | **bool IsSurfaceUI()** |
 | :--- |
 
@@ -219,6 +229,7 @@ if cube:IsSurfaceUI() == true then --오브젝트가 SurfaceUI면 true를 반환
     print(cube:GetName() .. " Is SurfaceUI")
 end
 ```
+<br>
 <br>
 <br>
 <br>
@@ -238,6 +249,7 @@ end
 <br>
 <br>
 <br>
+<br>
 | **bool IsItem()** |
 | :--- |
 
@@ -251,6 +263,7 @@ if cube:IsItem() == true then --오브젝트가 Item면 true를 반환해요.
     print(cube:GetName() .. " Is Item")
 end
 ```
+<br>
 <br>
 <br>
 <br>
@@ -270,6 +283,7 @@ end
 <br>
 <br>
 <br>
+<br>
 | **bool IsFolder()** |
 | :--- |
 
@@ -283,6 +297,7 @@ if cube:IsFolder() == true then --오브젝트가 Folder면 true를 반환해요
     print(cube:GetName() .. " Is Folder")
 end
 ```
+<br>
 <br>
 <br>
 <br>
@@ -302,6 +317,7 @@ end
 <br>
 <br>
 <br>
+<br>
 | **bool IsCollider()** |
 | :--- |
 
@@ -315,6 +331,7 @@ if cube:IsCollider() == true then --오브젝트가 Collider면 true를 반환�
     print(cube:GetName() .. " Is Collider")
 end
 ```
+<br>
 <br>
 <br>
 <br>
@@ -334,6 +351,7 @@ end
 <br>
 <br>
 <br>
+<br>
 | **bool IsCamera()** |
 | :--- |
 
@@ -347,6 +365,7 @@ if cube:IsCamera() == true then --오브젝트가 Camera면 true를 반환해요
     print(cube:GetName() .. " Is Camera")
 end
 ```
+<br>
 <br>
 <br>
 <br>
@@ -374,6 +393,7 @@ print(Game.SomeVector) --서버에서 값이 바뀌었지만 클라에서도 동
 <br>
 <br>
 <br>
+<br>
 | **AddReplicateValue(string ValueName, float Data, ReplicateType Type, float Time, bool bSaveToStorage)** |
 | :--- |
 
@@ -389,6 +409,7 @@ print(Game.SomeNumber .. " in Server")
 --클라 스크립트에서-------------
 print(Game.SomeNumber .. " in Client") --서버에서 값이 바뀌었지만 클라에서도 동일하게 출력돼요.
 ```
+<br>
 <br>
 <br>
 <br>
@@ -410,6 +431,7 @@ print(Game.SomeBool) --서버에서 값이 바뀌었지만 클라에서도 동�
 <br>
 <br>
 <br>
+<br>
 | **AddReplicateValue(string ValueName, string Data, ReplicateType Type, float Time, bool bSaveToStorage)** |
 | :--- |
 
@@ -428,6 +450,7 @@ print(Game.SomeString) --서버에서 값이 바뀌었지만 클라에서도 동
 <br>
 <br>
 <br>
+<br>
 | **AddReplicateValue(string ValueName, Color Data, ReplicateType Type, float Time, bool bSaveToStorage)** |
 | :--- |
 
@@ -443,6 +466,7 @@ print(Game.SomeColor)
 --클라 스크립트에서-------------
 print(Game.SomeColor) --서버에서 값이 바뀌었지만 클라에서도 동일하게 출력돼요.
 ```
+<br>
 <br>
 <br>
 <br>
