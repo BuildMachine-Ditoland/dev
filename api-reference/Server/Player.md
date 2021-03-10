@@ -61,19 +61,6 @@ Game.OnSpawnCharacter:Connect(SpawnCharacter)
 ```
 <br>
 <br>
-| **int GetLifeCount()** |
-| :--- |
-
-플레이어의 남은 목숨 개수를 얻을 수 있어요. 
-
-샘플 
-
-```lua
-local player = Game:GetAllPlayer()[1] 
-print(player:GetLifeCount())
-```
-<br>
-<br>
 | **KillCharacter()** |
 | :--- |
 
