@@ -14,6 +14,8 @@
 **RFoot** |오른발 |
 **LFoot** |왼발 |
 **Root** |바닥 |
+
+<br>
 
 샘플 
 
@@ -21,3 +23,4 @@
 local character = LocalPlayer:GetRemotePlayer():GetCharacter()
 character:CreateFX(Workspace.Effect, Enum.Bone.Body) --캐릭터의 특정 부위에 이펙트를 생성해요.
 ```
+<br>

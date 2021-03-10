@@ -128,6 +128,8 @@
 **Gamepad_LeftY** |Input Key Binding |
 **Gamepad_RightX** |Input Key Binding |
 **Gamepad_RightY** |Input Key Binding |
+
+<br>
 
 샘플 
 
@@ -136,3 +138,4 @@ Input:AddGroup("UIInput") --조작그룹을 추가해요.
 Input:AddActionKeyEvent("UIInput", "MenuKey", Enum.Key.M) --조작 키 이벤트를 추가해요.
 Input:ActiveGroup("UIInput") --조작그룹을 활성화해요.
 ```
+<br>

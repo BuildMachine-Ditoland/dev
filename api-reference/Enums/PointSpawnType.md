@@ -7,6 +7,8 @@
  --- | --- |
 **Point** |지정된 Point 위치에 스폰시켜요. |
 **Area** |지정된 범위에 스폰시켜요. |
+
+<br>
 
 샘플 
 
@@ -15,3 +17,4 @@ local spawner = Game:AddSpawnPointAtGroup("SpawnGroup", Workspace.SpawnPoint) --
 local spawnRadius = 50 --캐릭터 스폰 반경을 설정해요.
 spawner:SetSpawnType(Enum.PointSpawnType.Area, spawnRadius) --팀의 스폰타입을 설정해요.
 ```
+<br>

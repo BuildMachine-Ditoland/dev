@@ -9,6 +9,8 @@
 | :--- |
 
 작성한 Lua 함수에 해당 이벤트를 연결해주는 역할이에요. (연결 함수) 
+
+<br>
 
 샘플 
 
@@ -18,3 +20,4 @@ local function EnterPlayer(player) --OnEnterPlayer로 연결된 함수는 player
 end
 Game.OnEnterPlayer:Connect(EnterPlayer) --Game에 플레이어가 게임에 입장하면 호출되는 함수를 연결해요.
 ```
+<br>

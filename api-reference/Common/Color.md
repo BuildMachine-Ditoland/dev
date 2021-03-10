@@ -42,6 +42,8 @@ Color를 R, G, B, A 값으로 세팅하여 생성해요
 | :--- |
 
 투명도를 나타내요. (0 ~ 255) 
+
+<br>
 
 샘플 
 
@@ -55,3 +57,4 @@ wait(1)
 local newColor = Color.new(0, 255, 255, 0)
 color = color + newColor --newColor.R = 255, newColor.G = 255, newColor.B = 255, newColor.A = 255로 할당돼요.
 ```
+<br>

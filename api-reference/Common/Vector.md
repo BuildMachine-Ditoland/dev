@@ -76,6 +76,8 @@ Y 좌표에요.
 | :--- |
 
 Z 좌표에요. 
+
+<br>
 
 샘플 
 
@@ -93,3 +95,4 @@ local pos4 = Vector.new()        --pos4.X = 0,  pos4.Y = 0, pos4.Z = 0로 할당
 pos4.X = 10                      --pos4.X = 10, pos4.Y = 0, pos4.Z = 0로 할당돼요.
 pos4.Normalize()                 --pos4.X = 1,  pos4.Y = 0, pos4.Z = 0로 할당돼요.
 ```
+<br>

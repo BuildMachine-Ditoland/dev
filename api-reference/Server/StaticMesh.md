@@ -9,6 +9,8 @@
 | :--- |
 
 StaticMesh의 색을 변경해요. (변경할 [Color](https://ditoland-챙utplus.gitbook.io/ditoland/api-reference/common/color)값) 
+
+<br>
 
 샘플 
 
@@ -17,10 +19,13 @@ Workspace.Cube:SetColor(Color.new(255, 0, 0, 255)) --오브젝트의 색상을 �
 ```
 <br>
 <br>
+<br>
 | **Color GetColor()** |
 | :--- |
 
 해당 StaticMesh의 Color를 가져올 수 있어요. 
+
+<br>
 
 샘플 
 
@@ -29,10 +34,13 @@ local color = Workspace.Cube:GetColor() --오브젝트의 색상을 Color로 반
 ```
 <br>
 <br>
+<br>
 | **SetSimulatePhysics(ESimulatePhysicsType Type)** |
 | :--- |
 
 StaticMesh의 물리 기능을 설정해요. ( [Enum.SimulatePhysicsType.타입](https://ditoland-utplus.gitbook.io/ditoland/api-reference/enums/simulatephysicstype)) 
+
+<br>
 
 샘플 
 
@@ -42,10 +50,13 @@ cube:SetSimulatePhysics(Enum.SimulatePhysicsType.On_Sync) --오브젝트의 물�
 ```
 <br>
 <br>
+<br>
 | **bool OverrideMass** |
 | :--- |
 
 부피로 질량 자동 계산 
+
+<br>
 
 샘플 
 
@@ -54,10 +65,13 @@ Workspace.Cube.OverrideMass = true
 ```
 <br>
 <br>
+<br>
 | **float Mass** |
 | :--- |
 
 질량 값 
+
+<br>
 
 샘플 
 
@@ -66,10 +80,13 @@ Workspace.Cube.MassInKg = 5000
 ```
 <br>
 <br>
+<br>
 | **float LinearDamping** |
 | :--- |
 
 선형 감쇠 값 
+
+<br>
 
 샘플 
 
@@ -78,16 +95,20 @@ Workspace.Cube.LinearDamping = 0.1
 ```
 <br>
 <br>
+<br>
 | **float AngularDamping** |
 | :--- |
 
 회전 감쇠 값 
+
+<br>
 
 샘플 
 
 ```lua
 Workspace.Cube.AngularDamping = 0.1
 ```
+<br>
 # **상속받아 사용 가능한 기능들**
 
 <br>
@@ -103,12 +124,10 @@ Workspace.Cube.AngularDamping = 0.1
 샘플
 
 ```lua
-
-local parent = Workspace.Floor.Parent --오브젝트의 부모를 반환해요 
-
-print(parent:GetName())  
-
-``` 
+local parent = Workspace.Floor.Parent --오브젝트의 부모를 반환해요
+print(parent:GetName()) 
+```
+<br>
 <br>
 ## **이벤트**
 
@@ -122,20 +141,14 @@ print(parent:GetName())
 샘플
 
 ```lua
-
-local cube = Workspace.Cube 
-
-local function CreateEvent() 
-
-print("Create!") 
-
-end 
-
-cube.OnCreateEvent:Connect(CreateEvent) --오브젝트에 해당 오브젝트가 생성됐을때 호출되는 함수를 연결해요.  
-
-Game:CreateObject(cube, Vector.new(0, 0, 0)) 
-
-``` 
+local cube = Workspace.Cube
+local function CreateEvent()
+    print("Create!")
+end
+cube.OnCreateEvent:Connect(CreateEvent) --오브젝트에 해당 오브젝트가 생성됐을때 호출되는 함수를 연결해요. 
+Game:CreateObject(cube, Vector.new(0, 0, 0))
+```
+<br>
 <br>
 <br>
 | **OnUpdateEvent** |
@@ -146,20 +159,14 @@ Game:CreateObject(cube, Vector.new(0, 0, 0))
 샘플
 
 ```lua
-
-local cube = Workspace.Cube 
-
-local playTime = 0 
-
-local function UpdateEvent(updateTime) --OnUpdateEvent로 연결된 함수는 updateTime 인자가 고정적으로 들어가요. 
-
-playTime = playTime + updateTime --시간을 기록해요. 
-
-end 
-
-cube.OnUpdateEvent:Connect(UpdateEvent) --Game이나 오브젝트에 매프레임마다 호출되는 함수를 연결해요. 
-
-``` 
+local cube = Workspace.Cube
+local playTime = 0
+local function UpdateEvent(updateTime) --OnUpdateEvent로 연결된 함수는 updateTime 인자가 고정적으로 들어가요.
+    playTime = playTime + updateTime --시간을 기록해요.
+end
+cube.OnUpdateEvent:Connect(UpdateEvent) --Game이나 오브젝트에 매프레임마다 호출되는 함수를 연결해요.
+```
+<br>
 <br>
 <br>
 | **OnDestroyEvent** |
@@ -170,20 +177,14 @@ cube.OnUpdateEvent:Connect(UpdateEvent) --Game이나 오브젝트에 매프레�
 샘플
 
 ```lua
-
-local cube = Workspace.Cube 
-
-local function DestroyEvent() 
-
-print("Destroy!") 
-
-end 
-
-cube.OnDestroyEvent:Connect(DestroyEvent) --오브젝트에 해당 오브젝트가 파괴됐을때 호출되는 함수를 연결해요. 
-
-Game:DeleteObject(cube) 
-
-``` 
+local cube = Workspace.Cube
+local function DestroyEvent()
+    print("Destroy!")
+end
+cube.OnDestroyEvent:Connect(DestroyEvent) --오브젝트에 해당 오브젝트가 파괴됐을때 호출되는 함수를 연결해요.
+Game:DeleteObject(cube)
+```
+<br>
 <br>
 <br>
 | **OnCollisionEvent** |
@@ -194,22 +195,15 @@ Game:DeleteObject(cube)
 샘플
 
 ```lua
-
-local cube = Workspace.Cube 
-
-local function CollisionEvent(self, target) --OnCollisionEvent로 연결된 함수는 self와 target 인자가 고정적으로 들어가요. 
-
-if target ~= nil then 
-
-print("CollisionEvent " .. target:GetName()) 
-
-end 
-
-end 
-
-cube.OnCollisionEvent:Connect(CollisionEvent) --Collision이 true인 오브젝트와 충돌중일때 호출되는 함수를 연결해요. 
-
-``` 
+local cube = Workspace.Cube
+local function CollisionEvent(self, target) --OnCollisionEvent로 연결된 함수는 self와 target 인자가 고정적으로 들어가요.
+    if target ~= nil then
+        print("CollisionEvent " .. target:GetName())
+    end
+end
+cube.OnCollisionEvent:Connect(CollisionEvent) --Collision이 true인 오브젝트와 충돌중일때 호출되는 함수를 연결해요.
+```
+<br>
 <br>
 <br>
 | **OnBeginOverlapEvent** |
@@ -220,22 +214,15 @@ cube.OnCollisionEvent:Connect(CollisionEvent) --Collision이 true인 오브젝�
 샘플
 
 ```lua
-
-local cube = Workspace.Cube 
-
-local function BeginOverlapEvent(self, target) --OnBeginOverlapEvent 연결된 함수는 self와 target 인자가 고정적으로 들어가요. 
-
-if target ~= nil then 
-
-print("BeginOverlapEvent " .. target:GetName()) 
-
-end 
-
-end 
-
-cube.OnBeginOverlapEvent:Connect(BeginOverlapEvent) --Collision이 false인 오브젝트와 충돌을 시작할때 호출되는 함수를 연결해요. 
-
-``` 
+local cube = Workspace.Cube
+local function BeginOverlapEvent(self, target) --OnBeginOverlapEvent 연결된 함수는 self와 target 인자가 고정적으로 들어가요.
+    if target ~= nil then
+        print("BeginOverlapEvent " .. target:GetName())
+    end
+end
+cube.OnBeginOverlapEvent:Connect(BeginOverlapEvent) --Collision이 false인 오브젝트와 충돌을 시작할때 호출되는 함수를 연결해요.
+```
+<br>
 <br>
 <br>
 | **OnEndOverlapEvent** |
@@ -246,22 +233,15 @@ cube.OnBeginOverlapEvent:Connect(BeginOverlapEvent) --Collision이 false인 오�
 샘플
 
 ```lua
-
-local cube = Workspace.Cube 
-
-local function EndOverlapEvent(self, target) --OnEndOverlapEvent 연결된 함수는 self와 target 인자가 고정적으로 들어가요. 
-
-if target ~= nil then 
-
-print("EndOverlapEvent " .. target:GetName())   
-
-end 
-
-end 
-
-cube.OnEndOverlapEvent:Connect(EndOverlapEvent) --Collision이 false인 오브젝트와 충돌이 끝날때 호출되는 함수를 연결해요. 
-
-``` 
+local cube = Workspace.Cube
+local function EndOverlapEvent(self, target) --OnEndOverlapEvent 연결된 함수는 self와 target 인자가 고정적으로 들어가요.
+    if target ~= nil then
+        print("EndOverlapEvent " .. target:GetName())  
+    end
+end
+cube.OnEndOverlapEvent:Connect(EndOverlapEvent) --Collision이 false인 오브젝트와 충돌이 끝날때 호출되는 함수를 연결해요.
+```
+<br>
 <br>
 <br>
 | **OnOverlapUpdateEvent** |
@@ -272,22 +252,15 @@ cube.OnEndOverlapEvent:Connect(EndOverlapEvent) --Collision이 false인 오브�
 샘플
 
 ```lua
-
-local cube = Workspace.Cube 
-
-local function OverlapUpdateEvent(self, target) --OnOverlapUpdateEvent로 연결된 함수는 self와 target 인자가 고정적으로 들어가요. 
-
-if target ~= nil then 
-
-print("OverlapUpdateEvent " .. target:GetName()) 
-
-end 
-
-end 
-
-cube.OnOverlapUpdateEvent:Connect(OverlapUpdateEvent) --Collision이 false인 오브젝트와 충돌중일때 호출되는 함수를 연결해요. 
-
-``` 
+local cube = Workspace.Cube
+local function OverlapUpdateEvent(self, target) --OnOverlapUpdateEvent로 연결된 함수는 self와 target 인자가 고정적으로 들어가요.
+    if target ~= nil then
+        print("OverlapUpdateEvent " .. target:GetName())
+    end
+end
+cube.OnOverlapUpdateEvent:Connect(OverlapUpdateEvent) --Collision이 false인 오브젝트와 충돌중일때 호출되는 함수를 연결해요.
+```
+<br>
 <br>
 <br>
 | **ConnectChangeEventFunction(string ValueName, function FunctionName)** |
@@ -298,26 +271,17 @@ cube.OnOverlapUpdateEvent:Connect(OverlapUpdateEvent) --Collision이 false인 �
 샘플
 
 ```lua
+local cube = Workspace.Cube
 
-local cube = Workspace.Cube 
+wait(1)
+cube.SomeValue = 1
 
- 
-
-wait(1) 
-
-cube.SomeValue = 1 
-
- 
-
-local function ChangeSomeValue() 
-
-print("ChangeSomeValue!") 
-
-end 
-
-cube:ConnectChangeEventFunction("SomeValue", ChangeSomeValue)  --오브젝트의 "SomeValue" 라는 Value가 변경되면 ChangeSomeValue 함수를 호출해요. 
-
-``` 
+local function ChangeSomeValue()
+   print("ChangeSomeValue!")
+end
+cube:ConnectChangeEventFunction("SomeValue", ChangeSomeValue)  --오브젝트의 "SomeValue" 라는 Value가 변경되면 ChangeSomeValue 함수를 호출해요.
+```
+<br>
 <br>
 ## **함수**
 
@@ -333,14 +297,11 @@ cube:ConnectChangeEventFunction("SomeValue", ChangeSomeValue)  --오브젝트의
 샘플
 
 ```lua
-
-local cube = Workspace.Cube 
-
-Game:AddUserCollisionType("CollisionTag1") --유저 충돌 타입을 추가해요. 
-
-cube:SetCollisionType("CollisionTag1") --해당 오브젝트의 충돌 타입을 설정해요. 
-
-```  
+local cube = Workspace.Cube
+Game:AddUserCollisionType("CollisionTag1") --유저 충돌 타입을 추가해요.
+cube:SetCollisionType("CollisionTag1") --해당 오브젝트의 충돌 타입을 설정해요.
+```	
+<br>
 <br>
 <br>
 | **SetCharacterCollisionResponse(ECollisionResponse CollisionResponse)** |
@@ -351,14 +312,11 @@ cube:SetCollisionType("CollisionTag1") --해당 오브젝트의 충돌 타입을
 샘플
 
 ```lua
-
-Workspace.Cube1:SetCharacterCollisionResponse(Enum.CollisionResponse.Block) --오브젝트가 캐릭터와 충돌했을때 통과되지 않고 연결된 이벤트가 발생되게 설정해요. 
-
-Workspace.Cube2:SetCharacterCollisionResponse(Enum.CollisionResponse.Overlap) --오브젝트가 캐릭터와 충돌했을때 통과되고 연결된 이벤트되게 설정해요.. 
-
-Workspace.Cube3:SetCharacterCollisionResponse(Enum.CollisionResponse.Ignore) --오브젝트가 캐릭터와 충돌했을때 통과되고 연결된 이벤트가 발생되지 않게 설정해요. 
-
-``` 
+Workspace.Cube1:SetCharacterCollisionResponse(Enum.CollisionResponse.Block) --오브젝트가 캐릭터와 충돌했을때 통과되지 않고 연결된 이벤트가 발생되게 설정해요.
+Workspace.Cube2:SetCharacterCollisionResponse(Enum.CollisionResponse.Overlap) --오브젝트가 캐릭터와 충돌했을때 통과되고 연결된 이벤트되게 설정해요..
+Workspace.Cube3:SetCharacterCollisionResponse(Enum.CollisionResponse.Ignore) --오브젝트가 캐릭터와 충돌했을때 통과되고 연결된 이벤트가 발생되지 않게 설정해요.
+```
+<br>
 <br>
 <br>
 | **SetUserCollisionTypeResponse(string UserCollisionType, ECollisionResponse CollisionResponse)** |
@@ -369,14 +327,11 @@ Workspace.Cube3:SetCharacterCollisionResponse(Enum.CollisionResponse.Ignore) --�
 샘플
 
 ```lua
-
-local cube = Workspace.Cube 
-
-Game:AddUserCollisionType("CollisionTag1") --유저 충돌 타입을 추가해요. 
-
-cube:SetUserCollisionTypeResponse("CollisionTag1", Enum.CollisionResponse.Overlap) --유저 타입 충돌 물체의 충돌 시 처리를 변경하는 함수에요. 
-
-``` 
+local cube = Workspace.Cube
+Game:AddUserCollisionType("CollisionTag1") --유저 충돌 타입을 추가해요.
+cube:SetUserCollisionTypeResponse("CollisionTag1", Enum.CollisionResponse.Overlap) --유저 타입 충돌 물체의 충돌 시 처리를 변경하는 함수에요.
+```
+<br>
 <br>
 <br>
 | **SetReplicatePriority(int priority)** |
@@ -393,34 +348,21 @@ cube:SetUserCollisionTypeResponse("CollisionTag1", Enum.CollisionResponse.Overla
 샘플
 
 ```lua
+--서버 스크립트에서
+local cube = Workspace.Cube
+wait(1)
+cube:BroadcastEvent("SomeFunc", 1) --모든 플레이어에게 SomeFunc() 함수를 호출해요.
 
---서버 스크립트에서 
-
-local cube = Workspace.Cube 
-
-wait(1) 
-
-cube:BroadcastEvent("SomeFunc", 1) --모든 플레이어에게 SomeFunc() 함수를 호출해요. 
-
- 
-
---클라 스크립트에서 
-
-local cube = Workspace.cube 
-
-local function SomeFunc(id) --필요하다면 함수의 인자도 넣을 수 있어요. 단, 숫자나 문자열 인자만 넣을 수 있어요. 
-
-print("Call SomeFunc (" .. id .. ")") 
-
-end 
-
-cube:ConnectEventFunction("SomeFunc", SomeFunc) --오브젝트에 "SomeFunc"라는 이벤트 이름으로 SomeFunc 함수를 연결해요. 
-
---오브젝트가 아닌 Game에도 연결할 수 있어요. 그러나 그룹과 폴더에는 연결할 수 없어요. 
-
---같은 대상에 등록된 이벤트만 호출할 수 있어요. 
-
-``` 
+--클라 스크립트에서
+local cube = Workspace.cube
+local function SomeFunc(id) --필요하다면 함수의 인자도 넣을 수 있어요. 단, 숫자나 문자열 인자만 넣을 수 있어요.
+    print("Call SomeFunc (" .. id .. ")")
+end
+cube:ConnectEventFunction("SomeFunc", SomeFunc) --오브젝트에 "SomeFunc"라는 이벤트 이름으로 SomeFunc 함수를 연결해요.
+                                                --오브젝트가 아닌 Game에도 연결할 수 있어요. 그러나 그룹과 폴더에는 연결할 수 없어요.
+                                                --같은 대상에 등록된 이벤트만 호출할 수 있어요.
+```
+<br>
 <br>
 <br>
 | **SendEventToClient(string PlayerName, string CustomEventName, Args ...)** |
@@ -431,36 +373,22 @@ cube:ConnectEventFunction("SomeFunc", SomeFunc) --오브젝트에 "SomeFunc"라�
 샘플
 
 ```lua
+--서버 스크립트에서
+local cube = Workspace.Cube
+local player = Game:GetAllPlayer()[1]
+wait(1)
+cube:SendEventToClient(player:GetName(), "SomeFunc", 1) --특정 플레이어에게 SomeFunc() 함수를 호출해요. (첫번째 인자로 플레이어 이름이 반드시 들어가야해요.)
 
---서버 스크립트에서 
-
-local cube = Workspace.Cube 
-
-local player = Game:GetAllPlayer()[1] 
-
-wait(1) 
-
-cube:SendEventToClient(player:GetName(), "SomeFunc", 1) --특정 플레이어에게 SomeFunc() 함수를 호출해요. (첫번째 인자로 플레이어 이름이 반드시 들어가야해요.) 
-
- 
-
---클라 스크립트에서 
-
-local cube = Workspace.cube 
-
-local function SomeFunc(id) --필요하다면 함수의 인자도 넣을 수 있어요. 단, 숫자나 문자열 인자만 넣을 수 있어요. 
-
-print("Call SomeFunc (" .. id .. ")") 
-
-end 
-
-cube:ConnectEventFunction("SomeFunc", SomeFunc) --오브젝트에 "SomeFunc"라는 이벤트 이름으로 SomeFunc 함수를 연결해요. 
-
---오브젝트가 아닌 Game에도 연결할 수 있어요. 그러나 그룹과 폴더에는 연결할 수 없어요. 
-
---같은 대상에 등록된 이벤트만 호출할 수 있어요. 
-
-``` 
+--클라 스크립트에서
+local cube = Workspace.cube
+local function SomeFunc(id) --필요하다면 함수의 인자도 넣을 수 있어요. 단, 숫자나 문자열 인자만 넣을 수 있어요.
+    print("Call SomeFunc (" .. id .. ")")
+end
+cube:ConnectEventFunction("SomeFunc", SomeFunc) --오브젝트에 "SomeFunc"라는 이벤트 이름으로 SomeFunc 함수를 연결해요.
+                                                --오브젝트가 아닌 Game에도 연결할 수 있어요. 그러나 그룹과 폴더에는 연결할 수 없어요.
+                                                --같은 대상에 등록된 이벤트만 호출할 수 있어요.
+```
+<br>
 <br>
 <br>
 | **SetEnableCollision(bool bIsEnable)** |
@@ -471,10 +399,9 @@ cube:ConnectEventFunction("SomeFunc", SomeFunc) --오브젝트에 "SomeFunc"라�
 샘플
 
 ```lua
-
-Workspace.Cube:SetEnableCollision(false) --오브젝트의 충돌 영역을 비활성화해요. 
-
-``` 
+Workspace.Cube:SetEnableCollision(false) --오브젝트의 충돌 영역을 비활성화해요.
+```
+<br>
 <br>
 <br>
 | **int GetModeObjectKey()** |
@@ -491,10 +418,9 @@ Workspace.Cube:SetEnableCollision(false) --오브젝트의 충돌 영역을 비�
 샘플
 
 ```lua
-
-local targetTransform = Game:GetAllPlayer()[1]:GetTransform() 
-
-``` 
+local targetTransform = Game:GetAllPlayer()[1]:GetTransform()
+```
+<br>
 <br>
 <br>
 | **SetTransform(Matrix)** |
@@ -505,16 +431,12 @@ local targetTransform = Game:GetAllPlayer()[1]:GetTransform()
 샘플
 
 ```lua
-
-local targetTransform = Game:GetAllPlayer()[1]:GetTransform() 
-
-targetTransform:SetLocation(Vector.new(0, 100, 0)) 
-
-targetTransform:SetRotation(Vector.new(0, 100, 0)) 
-
-character:SetTransform(targetTransform) --오브젝트를 보간으로 이동시켜요. (캐릭터는 보간없이 움직여요.) 
-
-``` 
+local targetTransform = Game:GetAllPlayer()[1]:GetTransform()
+targetTransform:SetLocation(Vector.new(0, 100, 0))
+targetTransform:SetRotation(Vector.new(0, 100, 0))
+character:SetTransform(targetTransform) --오브젝트를 보간으로 이동시켜요. (캐릭터는 보간없이 움직여요.)
+```
+<br>
 <br>
 <br>
 | **Teleport(Matrix)** |
@@ -525,14 +447,11 @@ character:SetTransform(targetTransform) --오브젝트를 보간으로 이동시
 샘플
 
 ```lua
-
-local targetTransform = Workspace.Cube:GetTransform()     
-
-targetTransform:SetLocation(Vector.new(0, 100, 0))    
-
-Workspace.Cube:Teleport(targetTransform) --오브젝트를 보간없이 바로 이동시켜요. 
-
-``` 
+local targetTransform = Workspace.Cube:GetTransform()    
+targetTransform:SetLocation(Vector.new(0, 100, 0))   
+Workspace.Cube:Teleport(targetTransform) --오브젝트를 보간없이 바로 이동시켜요.
+```
+<br>
 <br>
 <br>
 | **Vector GetLocation()** |
@@ -543,12 +462,10 @@ Workspace.Cube:Teleport(targetTransform) --오브젝트를 보간없이 바로 �
 샘플
 
 ```lua
-
-local character = Game:GetAllPlayer()[1]:GetCharacter() 
-
-local characterPos = character:GetTransform():GetLocation() --캐릭터의 위치값을 Vector로 반환해요. 
-
-``` 
+local character = Game:GetAllPlayer()[1]:GetCharacter()
+local characterPos = character:GetTransform():GetLocation() --캐릭터의 위치값을 Vector로 반환해요.
+```
+<br>
 <br>
 <br>
 | **SetLocation(Vector position, bool collisionCheck)** |
@@ -565,12 +482,10 @@ local characterPos = character:GetTransform():GetLocation() --캐릭터의 위�
 샘플
 
 ```lua
-
-local character = Game:GetAllPlayer()[1]:GetCharacter() 
-
-local characterRot = character:GetTransform():GetRotation() --캐릭터의 회전값을 Vector로 반환해요. 
-
-``` 
+local character = Game:GetAllPlayer()[1]:GetCharacter()
+local characterRot = character:GetTransform():GetRotation() --캐릭터의 회전값을 Vector로 반환해요.
+```
+<br>
 <br>
 <br>
 | **SetRotation(Vector InValue)** |
@@ -581,16 +496,12 @@ local characterRot = character:GetTransform():GetRotation() --캐릭터의 회�
 샘플
 
 ```lua
-
-local targetTransform = Game:GetAllPlayer()[1]:GetTransform() 
-
-targetTransform:SetLocation(Vector.new(0, 100, 0)) 
-
-targetTransform:SetRotation(Vector.new(0, 100, 0)) 
-
-character:SetTransform(targetTransform) --오브젝트를 보간으로 이동시켜요. (캐릭터는 보간없이 움직여요.) 
-
-``` 
+local targetTransform = Game:GetAllPlayer()[1]:GetTransform()
+targetTransform:SetLocation(Vector.new(0, 100, 0))
+targetTransform:SetRotation(Vector.new(0, 100, 0))
+character:SetTransform(targetTransform) --오브젝트를 보간으로 이동시켜요. (캐릭터는 보간없이 움직여요.)
+```
+<br>
 <br>
 <br>
 | **Vector GetScale()** |
@@ -601,16 +512,12 @@ character:SetTransform(targetTransform) --오브젝트를 보간으로 이동시
 샘플
 
 ```lua
-
-local cube = Workspace.Cube 
-
-local scale = cube:GetScale() --해당 오브젝트의 크기를 100으로 나눠서 Vector로 반환해요.(예를 들어 x값이 100이면 1로 반한돼요.) 
-
-scale.Y = scale.Y + 0.5 
-
-cube:SetScale(scale) --오브젝트의 크기를 설정해요. 
-
-``` 
+local cube = Workspace.Cube
+local scale = cube:GetScale() --해당 오브젝트의 크기를 100으로 나눠서 Vector로 반환해요.(예를 들어 x값이 100이면 1로 반한돼요.)
+scale.Y = scale.Y + 0.5
+cube:SetScale(scale) --오브젝트의 크기를 설정해요.
+```
+<br>
 <br>
 <br>
 | **SetScale(Vector scale)** |
@@ -621,16 +528,12 @@ cube:SetScale(scale) --오브젝트의 크기를 설정해요.
 샘플
 
 ```lua
-
-local cube = Workspace.Cube 
-
-local scale = cube:GetScale() --해당 오브젝트의 크기를 100으로 나눠서 Vector로 반환해요.(예를 들어 x값이 100이면 1로 반한돼요.) 
-
-scale.Y = scale.Y + 0.5 
-
-cube:SetScale(scale) --오브젝트의 크기를 설정해요. 
-
-``` 
+local cube = Workspace.Cube
+local scale = cube:GetScale() --해당 오브젝트의 크기를 100으로 나눠서 Vector로 반환해요.(예를 들어 x값이 100이면 1로 반한돼요.)
+scale.Y = scale.Y + 0.5
+cube:SetScale(scale) --오브젝트의 크기를 설정해요.
+```
+<br>
 <br>
 <br>
 | **SetTag(String Tag)** |
@@ -641,14 +544,11 @@ cube:SetScale(scale) --오브젝트의 크기를 설정해요.
 샘플
 
 ```lua
-
-print(Workspace.Floor:GetTag()) 
-
-Workspace.Floor:SetTag("SomeTag") 
-
-print(Workspace.Floor:GetTag()) 
-
-``` 
+print(Workspace.Floor:GetTag())
+Workspace.Floor:SetTag("SomeTag")
+print(Workspace.Floor:GetTag())
+```
+<br>
 <br>
 <br>
 | **String GetTag()** |
@@ -659,14 +559,11 @@ print(Workspace.Floor:GetTag())
 샘플
 
 ```lua
-
-print(Workspace.Floor:GetTag()) 
-
-Workspace.Floor:SetTag("SomeTag") 
-
-print(Workspace.Floor:GetTag()) 
-
-``` 
+print(Workspace.Floor:GetTag())
+Workspace.Floor:SetTag("SomeTag")
+print(Workspace.Floor:GetTag())
+```
+<br>
 <br>
 <br>
 | **SetForward(Vector Forward)** |
@@ -695,10 +592,9 @@ print(Workspace.Floor:GetTag())
 샘플
 
 ```lua
-
-Workspace.Cube.Enable = false --오브젝트의 상태를 비활성화해요. (자식 오브젝트가 있다면 자식들의 상태도 모두 false가 되요. 단, 충돌영역에는 영향이 없어요.) 
-
-``` 
+Workspace.Cube.Enable = false --오브젝트의 상태를 비활성화해요. (자식 오브젝트가 있다면 자식들의 상태도 모두 false가 되요. 단, 충돌영역에는 영향이 없어요.)
+```
+<br>
 <br>
 <br>
 | **AddForce(Vector Force)** |
@@ -709,42 +605,25 @@ Workspace.Cube.Enable = false --오브젝트의 상태를 비활성화해요. (�
 샘플
 
 ```lua
+local toy = Script.Parent
+local pushingForce = 400 --미는 힘이에요.
+local upForce = 5000 --공중으로 띄울 힘이에요.
 
-local toy = Script.Parent 
+local function CharacterCollision(self, target)
+   if target == nil or not target:IsCharacter() then
+       return
+   end
+   
+   local selfLocation = self:GetTransform():GetLocation()
+   local targetLocation = target:GetTransform():GetLocation()
 
-local pushingForce = 400 --미는 힘이에요. 
-
-local upForce = 5000 --공중으로 띄울 힘이에요. 
-
- 
-
-local function CharacterCollision(self, target) 
-
-if target == nil or not target:IsCharacter() then 
-
-return 
-
-end 
-
- 
-
-local selfLocation = self:GetTransform():GetLocation() 
-
-local targetLocation = target:GetTransform():GetLocation() 
-
- 
-
---캐릭터를 밀 방향을 구한 다음 미는 힘을 곱해요. 
-
-local force = Vector.new((targetLocation.X - selfLocation.X) * pushingForce, (targetLocation.Y - selfLocation.Y) * pushingForce, upForce) 
-
-target:AddForce(force) --force값만큼 캐릭터를 밀어요. 
-
-end 
-
-toy.OnCollisionEvent:Connect(CharacterCollision) --오브젝트에 캐릭터가 닿으면 호출할 함수를 연결해요. 
-
-``` 
+   --캐릭터를 밀 방향을 구한 다음 미는 힘을 곱해요.
+   local force = Vector.new((targetLocation.X - selfLocation.X) * pushingForce, (targetLocation.Y - selfLocation.Y) * pushingForce, upForce)
+   target:AddForce(force) --force값만큼 캐릭터를 밀어요.
+end
+toy.OnCollisionEvent:Connect(CharacterCollision) --오브젝트에 캐릭터가 닿으면 호출할 함수를 연결해요.
+```
+<br>
 <br>
 <br>
 | **SetVisibility(bool bNewVisibility)** |
@@ -755,10 +634,9 @@ toy.OnCollisionEvent:Connect(CharacterCollision) --오브젝트에 캐릭터가 
 샘플
 
 ```lua
-
-Workspace.Cube.SetVisibility(false) --오브젝트를 보이지 않게 해요. 
-
-``` 
+Workspace.Cube.SetVisibility(false) --오브젝트를 보이지 않게 해요.
+```
+<br>
 <br>
 <br>
 | **AddLocalMove(string TrackName, Vector Pos, float Time, bool CheckCollision)** |
@@ -769,26 +647,17 @@ Workspace.Cube.SetVisibility(false) --오브젝트를 보이지 않게 해요.
 샘플
 
 ```lua
+local cube = Workspace.Cube
+local pos = Vector.new(0, 500, 0)
+local moveSpeed = 2
+local waitTime = 1
 
-local cube = Workspace.Cube 
-
-local pos = Vector.new(0, 500, 0) 
-
-local moveSpeed = 2 
-
-local waitTime = 1 
-
- 
-
-cube:AddLocalMove("Move", Vector.new(pos.X, pos.Y, pos.Z), moveSpeed, false) --이동 트랙을 등록해요. (이동 트랙은 여러개도 등록할 수 있어요.) 
-
-cube:AddEmpty("Move", waitTime) --대기 트랙을 등록해요. 
-
-cube:AddLocalMove("Move", Vector.new(-pos.X, -pos.Y, -pos.Z), moveSpeed, false) 
-
-cube:AddEmpty("Move", waitTime)cube:PlayTransformTrack("Move", Enum.TransformPlayType.Repeat, InfinityPlay) --이름에 해당하는 트랙을 재생해요. 
-
-``` 
+cube:AddLocalMove("Move", Vector.new(pos.X, pos.Y, pos.Z), moveSpeed, false) --이동 트랙을 등록해요. (이동 트랙은 여러개도 등록할 수 있어요.)
+cube:AddEmpty("Move", waitTime) --대기 트랙을 등록해요.
+cube:AddLocalMove("Move", Vector.new(-pos.X, -pos.Y, -pos.Z), moveSpeed, false)
+cube:AddEmpty("Move", waitTime)cube:PlayTransformTrack("Move", Enum.TransformPlayType.Repeat, InfinityPlay) --이름에 해당하는 트랙을 재생해요.
+```
+<br>
 <br>
 <br>
 | **AddLocalRot(string TrackName, Vector Rot, float Time)** |
@@ -799,18 +668,13 @@ cube:AddEmpty("Move", waitTime)cube:PlayTransformTrack("Move", Enum.TransformPla
 샘플
 
 ```lua
-
-local cube = Workspace.Cube 
-
-local moveSpeed = 2 
-
-cube:AddLocalRot("Rot", Vector.new(0, 0, 360), moveSpeed) --회전 트랙을 등록해요. 
-
-cube:AddLocalRot("Rot", Vector.new(0, 360, 0), moveSpeed) --회전 트랙은 여러개도 등록할 수 있어요. 
-
-cube:PlayTransformTrack("Rot", Enum.TransformPlayType.Repeat, InfinityPlay) --이름에 해당하는 트랙을 재생해요. 
-
-``` 
+local cube = Workspace.Cube
+local moveSpeed = 2
+cube:AddLocalRot("Rot", Vector.new(0, 0, 360), moveSpeed) --회전 트랙을 등록해요.
+cube:AddLocalRot("Rot", Vector.new(0, 360, 0), moveSpeed) --회전 트랙은 여러개도 등록할 수 있어요.
+cube:PlayTransformTrack("Rot", Enum.TransformPlayType.Repeat, InfinityPlay) --이름에 해당하는 트랙을 재생해요.
+```
+<br>
 <br>
 <br>
 | **AddLocalScale(string TrackName, Vector Scale, float Time)** |
@@ -821,18 +685,13 @@ cube:PlayTransformTrack("Rot", Enum.TransformPlayType.Repeat, InfinityPlay) --�
 샘플
 
 ```lua
-
-local cube = Workspace.Cube 
-
-local moveSpeed = 2 
-
-cube:AddLocalScale("Size", Vector.new(0.6, 0.6, 0.6), moveSpeed) --크기 트랙을 등록해요. 
-
-cube:AddLocalScale("Size", Vector.new(-0.6, -0.6, -0.6), moveSpeed) --크기 트랙은 여러개도 등록할 수 있어요. 
-
-cube:PlayTransformTrack("Size", Enum.TransformPlayType.Repeat, InfinityPlay) --이름에 해당하는 트랙을 재생해요. 
-
-``` 
+local cube = Workspace.Cube
+local moveSpeed = 2
+cube:AddLocalScale("Size", Vector.new(0.6, 0.6, 0.6), moveSpeed) --크기 트랙을 등록해요.
+cube:AddLocalScale("Size", Vector.new(-0.6, -0.6, -0.6), moveSpeed) --크기 트랙은 여러개도 등록할 수 있어요.
+cube:PlayTransformTrack("Size", Enum.TransformPlayType.Repeat, InfinityPlay) --이름에 해당하는 트랙을 재생해요.
+```
+<br>
 <br>
 <br>
 | **AddWorldMove(string TrackName, Vector Pos, float Time, bool CheckCollision)** |
@@ -843,26 +702,17 @@ cube:PlayTransformTrack("Size", Enum.TransformPlayType.Repeat, InfinityPlay) --�
 샘플
 
 ```lua
+local cube = Workspace.Cube
+local pos = Vector.new(0, 500, 0)
+local moveSpeed = 2
+local waitTime = 1
 
-local cube = Workspace.Cube 
-
-local pos = Vector.new(0, 500, 0) 
-
-local moveSpeed = 2 
-
-local waitTime = 1 
-
- 
-
-cube:AddWorldMove("Move", Vector.new(pos.X, pos.Y, pos.Z), moveSpeed, false) --이동 트랙을 등록해요. (이동 트랙은 여러개도 등록할 수 있어요.) 
-
-cube:AddEmpty("Move", waitTime) --대기 트랙을 등록해요. 
-
-cube:AddWorldMove("Move", Vector.new(-pos.X, -pos.Y, -pos.Z), moveSpeed, false) 
-
-cube:AddEmpty("Move", waitTime)cube:PlayTransformTrack("Move", Enum.TransformPlayType.Repeat, InfinityPlay) --이름에 해당하는 트랙을 재생해요. 
-
-``` 
+cube:AddWorldMove("Move", Vector.new(pos.X, pos.Y, pos.Z), moveSpeed, false) --이동 트랙을 등록해요. (이동 트랙은 여러개도 등록할 수 있어요.)
+cube:AddEmpty("Move", waitTime) --대기 트랙을 등록해요.
+cube:AddWorldMove("Move", Vector.new(-pos.X, -pos.Y, -pos.Z), moveSpeed, false)
+cube:AddEmpty("Move", waitTime)cube:PlayTransformTrack("Move", Enum.TransformPlayType.Repeat, InfinityPlay) --이름에 해당하는 트랙을 재생해요.
+```
+<br>
 <br>
 <br>
 | **AddWorldRot(string TrackName, Vector Rot, float Time)** |
@@ -873,18 +723,13 @@ cube:AddEmpty("Move", waitTime)cube:PlayTransformTrack("Move", Enum.TransformPla
 샘플
 
 ```lua
-
-local cube = Workspace.Cube 
-
-local moveSpeed = 2 
-
-cube:AddWorldRot("Rot", Vector.new(0, 0, 360), moveSpeed) --회전 트랙을 등록해요. 
-
-cube:AddWorldRot("Rot", Vector.new(0, 360, 0), moveSpeed) --회전 트랙은 여러개도 등록할 수 있어요. 
-
-cube:PlayTransformTrack("Rot", Enum.TransformPlayType.Repeat, InfinityPlay) --이름에 해당하는 트랙을 재생해요. 
-
-``` 
+local cube = Workspace.Cube
+local moveSpeed = 2
+cube:AddWorldRot("Rot", Vector.new(0, 0, 360), moveSpeed) --회전 트랙을 등록해요.
+cube:AddWorldRot("Rot", Vector.new(0, 360, 0), moveSpeed) --회전 트랙은 여러개도 등록할 수 있어요.
+cube:PlayTransformTrack("Rot", Enum.TransformPlayType.Repeat, InfinityPlay) --이름에 해당하는 트랙을 재생해요.
+```
+<br>
 <br>
 <br>
 | **AddEmpty(string TrackName, float Time)** |
@@ -923,28 +768,18 @@ cube:AddEmpty("Move", waitTime)cube:PlayTransformTrack("Move", Enum.TransformPla
 샘플
 
 ```lua
+local cube = Workspace.Cube
+local pos = Vector.new(0, 500, 0)
+local moveSpeed = 2
+local waitTime = 1
 
-local cube = Workspace.Cube 
-
-local pos = Vector.new(0, 500, 0) 
-
-local moveSpeed = 2 
-
-local waitTime = 1 
-
- 
-
-cube:AddLocalMove("Move", Vector.new(pos.X, pos.Y, pos.Z), moveSpeed, false) --이동 트랙을 등록해요. 
-
-cube:AddLocalMove("Move", Vector.new(0, 0, 0), waitTime, false) --이동 트랙은 여러개도 등록할 수 있어요. 
-
-cube:AddLocalMove("Move", Vector.new(-pos.X, -pos.Y, -pos.Z), moveSpeed, false) 
-
-cube:AddLocalMove("Move", Vector.new(0, 0, 0), waitTime, false) 
-
-cube:PlayTransformTrack("Move", Enum.TransformPlayType.Repeat, InfinityPlay) --이름에 해당하는 트랙을 재생해요. 
-
-``` 
+cube:AddLocalMove("Move", Vector.new(pos.X, pos.Y, pos.Z), moveSpeed, false) --이동 트랙을 등록해요.
+cube:AddLocalMove("Move", Vector.new(0, 0, 0), waitTime, false) --이동 트랙은 여러개도 등록할 수 있어요.
+cube:AddLocalMove("Move", Vector.new(-pos.X, -pos.Y, -pos.Z), moveSpeed, false)
+cube:AddLocalMove("Move", Vector.new(0, 0, 0), waitTime, false)
+cube:PlayTransformTrack("Move", Enum.TransformPlayType.Repeat, InfinityPlay) --이름에 해당하는 트랙을 재생해요.
+```
+<br>
 <br>
 <br>
 | **StopTransformTrack(string TrackName)** |
@@ -955,12 +790,10 @@ cube:PlayTransformTrack("Move", Enum.TransformPlayType.Repeat, InfinityPlay) --�
 샘플
 
 ```lua
-
-local cube = Workspace.Cube 
-
-cube:StopTransformTrack("Move") --이름에 해당하는 트랙을 멈춰요. 
-
-``` 
+local cube = Workspace.Cube
+cube:StopTransformTrack("Move") --이름에 해당하는 트랙을 멈춰요.
+```
+<br>
 <br>
 <br>
 | **PauseTransformTrack(string TrackName)** |
@@ -971,12 +804,10 @@ cube:StopTransformTrack("Move") --이름에 해당하는 트랙을 멈춰요.
 샘플
 
 ```lua
-
-local cube = Workspace.Cube 
-
-cube:PauseTransformTrack("Move") --이름에 해당하는 트랙을 일시정지해요. 
-
-``` 
+local cube = Workspace.Cube
+cube:PauseTransformTrack("Move") --이름에 해당하는 트랙을 일시정지해요.
+```
+<br>
 <br>
 <br>
 | **ResumeTransformTrack(string TrackName)** |
@@ -987,12 +818,10 @@ cube:PauseTransformTrack("Move") --이름에 해당하는 트랙을 일시정지
 샘플
 
 ```lua
-
-local cube = Workspace.Cube 
-
-cube:ResumeTransformTrack("Move") --이름에 해당하는 일시정지된 트랙을 다시 재생해요. 
-
-``` 
+local cube = Workspace.Cube
+cube:ResumeTransformTrack("Move") --이름에 해당하는 일시정지된 트랙을 다시 재생해요.
+```
+<br>
 <br>
 <br>
 | **bool IsPlayingTransformTrack(string TrackName)** |
@@ -1003,16 +832,12 @@ cube:ResumeTransformTrack("Move") --이름에 해당하는 일시정지된 트�
 샘플
 
 ```lua
-
-local cube = Workspace.Cube 
-
-if cube:IsPlayingTransformTrack("Move") == true then --이름에 해당하는 트랙이 재생중이면 true를 반환해요. 
-
-print("Track is Playing") 
-
-end 
-
-``` 
+local cube = Workspace.Cube
+if cube:IsPlayingTransformTrack("Move") == true then --이름에 해당하는 트랙이 재생중이면 true를 반환해요.
+    print("Track is Playing")
+end
+```
+<br>
 <br>
 <br>
 | **ResetTransformTrack(string TrackName)** |
@@ -1023,12 +848,10 @@ end
 샘플
 
 ```lua
-
-local cube = Workspace.Cube 
-
-cube:ResetTransformTrack("Move") --이름에 해당하는 트랙이 적용되기전의 트랜스폼으로 리셋해요. (트랙이 멈추진 않아요.) 
-
-``` 
+local cube = Workspace.Cube
+cube:ResetTransformTrack("Move") --이름에 해당하는 트랙이 적용되기전의 트랜스폼으로 리셋해요. (트랙이 멈추진 않아요.)
+```
+<br>
 <br>
 <br>
 | **RemoveTransformTrack(String TrackName)** |
@@ -1039,12 +862,10 @@ cube:ResetTransformTrack("Move") --이름에 해당하는 트랙이 적용되기
 샘플
 
 ```lua
-
-local cube = Workspace.Cube 
-
-cube:RemoveTransformTrack("Move") --이름에 해당하는 트랙을 제거해요. 
-
-``` 
+local cube = Workspace.Cube
+cube:RemoveTransformTrack("Move") --이름에 해당하는 트랙을 제거해요.
+```
+<br>
 <br>
 <br>
 | **ResetTransform()** |
@@ -1055,12 +876,10 @@ TransformTrack 이 적용되기 전의 최초 Transform으로 리셋시켜요.
 샘플
 
 ```lua
-
-local cube = Workspace.Cube 
-
-cube:ResetTransform() --적용되기전의 트랜스폼으로 리셋해요. (트랙이 멈추진 않아요.) 
-
-``` 
+local cube = Workspace.Cube
+cube:ResetTransform() --적용되기전의 트랜스폼으로 리셋해요. (트랙이 멈추진 않아요.)
+```
+<br>
 <br>
 <br>
 | **SetEndEventTransformTrack(String TrackName, LuaScriptFunction function)** |
@@ -1071,32 +890,20 @@ TransformTrack 이 끝나면 등록한 function 을 호출합니다.
 샘플
 
 ```lua
+local cube = Workspace.Cube
+local pos = Vector.new(200, 0, 0)
+local moveSpeed = 2
 
-local cube = Workspace.Cube 
+cube:AddLocalMove("Move", pos, moveSpeed, false)
 
-local pos = Vector.new(200, 0, 0) 
+local function EndMove()
+    print("EndMove!")
+end
+cube:SetEndEventTransformTrack("Move", EndMove) --이름에 해당하는 트랙이 끝나면 호출되는 함수를 연결해요.
 
-local moveSpeed = 2 
-
- 
-
-cube:AddLocalMove("Move", pos, moveSpeed, false) 
-
- 
-
-local function EndMove() 
-
-print("EndMove!") 
-
-end 
-
-cube:SetEndEventTransformTrack("Move", EndMove) --이름에 해당하는 트랙이 끝나면 호출되는 함수를 연결해요. 
-
- 
-
-cube:PlayTransformTrack("Move", Enum.TransformPlayType.Repeat, 1) 
-
-``` 
+cube:PlayTransformTrack("Move", Enum.TransformPlayType.Repeat, 1)
+```
+<br>
 <br>
 <br>
 | **SetFriction( float value, float restitution, float density )** |
@@ -1119,10 +926,9 @@ cube:PlayTransformTrack("Move", Enum.TransformPlayType.Repeat, 1)
 샘플
 
 ```lua
-
-Workspace.Floor:SetName("NewFloor") --오브젝트의 이름을 변경해요. 
-
-``` 
+Workspace.Floor:SetName("NewFloor") --오브젝트의 이름을 변경해요.
+```
+<br>
 <br>
 <br>
 | **FRModeVehicle GetVehicle()** |
@@ -1139,22 +945,15 @@ Vehicle 객체를 얻을 수 있어요.
 샘플
 
 ```lua
-
-local cube = Workspace.cube 
-
-local function SomeFunc(playerName) --필요하다면 함수의 인자도 넣을 수 있어요. 단, 숫자나 문자열 인자만 넣을 수 있어요. 
-
-print("Call SomeFunc from " .. playerName) 
-
-end 
-
-cube:ConnectEventFunction("SomeFunc", SomeFunc) --오브젝트에 "SomeFunc"라는 이벤트 이름으로 SomeFunc 함수를 연결해요. 
-
---오브젝트가 아닌 Game에도 연결할 수 있어요. 그러나 그룹과 폴더에는 연결할 수 없어요. 
-
---같은 대상에 등록된 이벤트만 호출할 수 있어요. 
-
-``` 
+local cube = Workspace.cube
+local function SomeFunc(playerName) --필요하다면 함수의 인자도 넣을 수 있어요. 단, 숫자나 문자열 인자만 넣을 수 있어요.
+    print("Call SomeFunc from " .. playerName)
+end
+cube:ConnectEventFunction("SomeFunc", SomeFunc) --오브젝트에 "SomeFunc"라는 이벤트 이름으로 SomeFunc 함수를 연결해요.
+                                                --오브젝트가 아닌 Game에도 연결할 수 있어요. 그러나 그룹과 폴더에는 연결할 수 없어요.
+                                                --같은 대상에 등록된 이벤트만 호출할 수 있어요.
+```
+<br>
 <br>
 <br>
 | **string GetName()** |
@@ -1165,10 +964,9 @@ cube:ConnectEventFunction("SomeFunc", SomeFunc) --오브젝트에 "SomeFunc"라�
 샘플
 
 ```lua
-
-print(Workspace.Floor:GetName()) --오브젝트의 이름을 문자열로 반환해요. 
-
-``` 
+print(Workspace.Floor:GetName()) --오브젝트의 이름을 문자열로 반환해요.
+```
+<br>
 <br>
 <br>
 | **RModeObject GetParent(string ParentName)** |
@@ -1197,16 +995,12 @@ print(Workspace.Floor:GetName()) --오브젝트의 이름을 문자열로 반환
 샘플
 
 ```lua
-
-local uiList = Workspace.HUD:GetChildList() --오브젝트의 자식 오브젝트를 리스트로 반환해요. 
-
-for i = 1, #uiList do --리스트앞에 #을 붙여 리스트의 길이를 가져올 수 있어요. 
-
-print(uiList[i]:GetName()) 
-
-end 
-
-``` 
+local uiList = Workspace.HUD:GetChildList() --오브젝트의 자식 오브젝트를 리스트로 반환해요.
+for i = 1, #uiList do --리스트앞에 #을 붙여 리스트의 길이를 가져올 수 있어요.
+    print(uiList[i]:GetName())
+end
+```
+<br>
 <br>
 <br>
 | **bool IsCharacter()** |
@@ -1217,16 +1011,12 @@ end
 샘플
 
 ```lua
-
-local cube = Workspace.Cube 
-
-if cube:IsCharacter() == true then --오브젝트가 Character면 true를 반환해요. 
-
-print(cube:GetName() .. " Is Character") 
-
-end 
-
-``` 
+local cube = Workspace.Cube
+if cube:IsCharacter() == true then --오브젝트가 Character면 true를 반환해요.
+    print(cube:GetName() .. " Is Character")
+end
+```
+<br>
 <br>
 <br>
 | **bool IsStaticMesh()** |
@@ -1237,16 +1027,12 @@ end
 샘플
 
 ```lua
-
-local cube = Workspace.Cube 
-
-if cube:IsStaticMesh() == true then --오브젝트가 StaticMesh면 true를 반환해요. 
-
-print(cube:GetName() .. " Is StaticMesh") 
-
-end 
-
-``` 
+local cube = Workspace.Cube
+if cube:IsStaticMesh() == true then --오브젝트가 StaticMesh면 true를 반환해요.
+    print(cube:GetName() .. " Is StaticMesh")
+end
+```
+<br>
 <br>
 <br>
 | **bool IsFX()** |
@@ -1257,16 +1043,12 @@ FX인지 확인할 수 있어요.
 샘플
 
 ```lua
-
-local cube = Workspace.Cube 
-
-if cube:IsFX() == true then --오브젝트가 FX면 true를 반환해요. 
-
-print(cube:GetName() .. " Is FX") 
-
-end 
-
-``` 
+local cube = Workspace.Cube
+if cube:IsFX() == true then --오브젝트가 FX면 true를 반환해요.
+    print(cube:GetName() .. " Is FX")
+end
+```
+<br>
 <br>
 <br>
 | **bool IsSound()** |
@@ -1277,16 +1059,12 @@ Sound인지 확인할 수 있어요.
 샘플
 
 ```lua
-
-local cube = Workspace.Cube 
-
-if cube:IsSound() == true then --오브젝트가 Sound면 true를 반환해요. 
-
-print(cube:GetName() .. " Is Sound") 
-
-end 
-
-``` 
+local cube = Workspace.Cube
+if cube:IsSound() == true then --오브젝트가 Sound면 true를 반환해요.
+    print(cube:GetName() .. " Is Sound")
+end
+```
+<br>
 <br>
 <br>
 | **bool IsPointLight()** |
@@ -1297,16 +1075,12 @@ end
 샘플
 
 ```lua
-
-local cube = Workspace.Cube 
-
-if cube:IsPointLight() == true then --오브젝트가 PointLight면 true를 반환해요. 
-
-print(cube:GetName() .. " Is PointLight") 
-
-end 
-
-``` 
+local cube = Workspace.Cube
+if cube:IsPointLight() == true then --오브젝트가 PointLight면 true를 반환해요.
+    print(cube:GetName() .. " Is PointLight")
+end
+```
+<br>
 <br>
 <br>
 | **bool IsSpotLight()** |
@@ -1317,16 +1091,12 @@ end
 샘플
 
 ```lua
-
-local cube = Workspace.Cube 
-
-if cube:IsSpotLight() == true then --오브젝트가 SpotLight면 true를 반환해요. 
-
-print(cube:GetName() .. " Is SpotLight") 
-
-end 
-
-``` 
+local cube = Workspace.Cube
+if cube:IsSpotLight() == true then --오브젝트가 SpotLight면 true를 반환해요.
+    print(cube:GetName() .. " Is SpotLight")
+end
+```
+<br>
 <br>
 <br>
 | **bool IsSurfaceUI()** |
@@ -1337,16 +1107,12 @@ end
 샘플
 
 ```lua
-
-local cube = Workspace.Cube 
-
-if cube:IsSurfaceUI() == true then --오브젝트가 SurfaceUI면 true를 반환해요. 
-
-print(cube:GetName() .. " Is SurfaceUI") 
-
-end 
-
-``` 
+local cube = Workspace.Cube
+if cube:IsSurfaceUI() == true then --오브젝트가 SurfaceUI면 true를 반환해요.
+    print(cube:GetName() .. " Is SurfaceUI")
+end
+```
+<br>
 <br>
 <br>
 | **bool IsScreenUI()** |
@@ -1357,16 +1123,12 @@ end
 샘플
 
 ```lua
-
-local cube = Workspace.Cube 
-
-if cube:IsScreenUI() == true then --오브젝트가 ScreenUI면 true를 반환해요. 
-
-print(cube:GetName() .. " Is ScreenUI") 
-
-end 
-
-``` 
+local cube = Workspace.Cube
+if cube:IsScreenUI() == true then --오브젝트가 ScreenUI면 true를 반환해요.
+    print(cube:GetName() .. " Is ScreenUI")
+end
+```
+<br>
 <br>
 <br>
 | **bool IsItem()** |
@@ -1377,16 +1139,12 @@ end
 샘플
 
 ```lua
-
-local cube = Workspace.Cube 
-
-if cube:IsItem() == true then --오브젝트가 Item면 true를 반환해요. 
-
-print(cube:GetName() .. " Is Item") 
-
-end 
-
-``` 
+local cube = Workspace.Cube
+if cube:IsItem() == true then --오브젝트가 Item면 true를 반환해요.
+    print(cube:GetName() .. " Is Item")
+end
+```
+<br>
 <br>
 <br>
 | **bool IsNPC()** |
@@ -1397,16 +1155,12 @@ NPC인지 확인할 수 있어요.
 샘플
 
 ```lua
-
-local cube = Workspace.Cube 
-
-if cube:IsNPC() == true then --오브젝트가 NPC면 true를 반환해요. 
-
-print(cube:GetName() .. " Is NPC") 
-
-end 
-
-``` 
+local cube = Workspace.Cube
+if cube:IsNPC() == true then --오브젝트가 NPC면 true를 반환해요.
+    print(cube:GetName() .. " Is NPC")
+end
+```
+<br>
 <br>
 <br>
 | **bool IsFolder()** |
@@ -1417,16 +1171,12 @@ end
 샘플
 
 ```lua
-
-local cube = Workspace.Cube 
-
-if cube:IsFolder() == true then --오브젝트가 Folder면 true를 반환해요. 
-
-print(cube:GetName() .. " Is Folder") 
-
-end 
-
-``` 
+local cube = Workspace.Cube
+if cube:IsFolder() == true then --오브젝트가 Folder면 true를 반환해요.
+    print(cube:GetName() .. " Is Folder")
+end
+```
+<br>
 <br>
 <br>
 | **bool IsScript()** |
@@ -1437,16 +1187,12 @@ end
 샘플
 
 ```lua
-
-local cube = Workspace.Cube 
-
-if cube:IsScript() == true then --오브젝트가 Script면 true를 반환해요. 
-
-print(cube:GetName() .. " Is Script") 
-
-end 
-
-``` 
+local cube = Workspace.Cube
+if cube:IsScript() == true then --오브젝트가 Script면 true를 반환해요.
+    print(cube:GetName() .. " Is Script")
+end
+```
+<br>
 <br>
 <br>
 | **bool IsCollider()** |
@@ -1457,16 +1203,12 @@ Collider인지 확인할 수 있어요.
 샘플
 
 ```lua
-
-local cube = Workspace.Cube 
-
-if cube:IsCollider() == true then --오브젝트가 Collider면 true를 반환해요. 
-
-print(cube:GetName() .. " Is Collider") 
-
-end 
-
-``` 
+local cube = Workspace.Cube
+if cube:IsCollider() == true then --오브젝트가 Collider면 true를 반환해요.
+    print(cube:GetName() .. " Is Collider")
+end
+```
+<br>
 <br>
 <br>
 | **bool IsWidget()** |
@@ -1477,16 +1219,12 @@ Widget인지 확인할 수 있어요.
 샘플
 
 ```lua
-
-local cube = Workspace.Cube 
-
-if cube:IsWidget() == true then --오브젝트가 Widget면 true를 반환해요. 
-
-print(cube:GetName() .. " Is Widget") 
-
-end 
-
-``` 
+local cube = Workspace.Cube
+if cube:IsWidget() == true then --오브젝트가 Widget면 true를 반환해요.
+    print(cube:GetName() .. " Is Widget")
+end
+```
+<br>
 <br>
 <br>
 | **bool IsCamera()** |
@@ -1497,16 +1235,12 @@ Camera인지 확인할 수 있어요.
 샘플
 
 ```lua
-
-local cube = Workspace.Cube 
-
-if cube:IsCamera() == true then --오브젝트가 Camera면 true를 반환해요. 
-
-print(cube:GetName() .. " Is Camera") 
-
-end 
-
-``` 
+local cube = Workspace.Cube
+if cube:IsCamera() == true then --오브젝트가 Camera면 true를 반환해요.
+    print(cube:GetName() .. " Is Camera")
+end
+```
+<br>
 <br>
 <br>
 | **bool IsValid()** |
@@ -1523,20 +1257,14 @@ end
 샘플
 
 ```lua
+--서버 스크립트에서-------------
+Game:AddReplicateValue("SomeVector", Vector.new(0, 50, 0), Enum.ReplicateType.Changed, 0, false) --서버와 클라이언트간 동기화되는 값을 등록하고 초기값을 설정한뒤, 값이 변경될때마다 호출되게 해요.
+print(Game.SomeVector)
 
---서버 스크립트에서------------- 
-
-Game:AddReplicateValue("SomeVector", Vector.new(0, 50, 0), Enum.ReplicateType.Changed, 0, false) --서버와 클라이언트간 동기화되는 값을 등록하고 초기값을 설정한뒤, 값이 변경될때마다 호출되게 해요. 
-
-print(Game.SomeVector) 
-
- 
-
---클라 스크립트에서------------- 
-
-print(Game.SomeVector) --서버에서 값이 바뀌었지만 클라에서도 동일하게 출력돼요. 
-
-``` 
+--클라 스크립트에서-------------
+print(Game.SomeVector) --서버에서 값이 바뀌었지만 클라에서도 동일하게 출력돼요.
+```
+<br>
 <br>
 <br>
 | **AddReplicateValue(string ValueName, float Data, ReplicateType Type, float Time, bool bSaveToStorage)** |
@@ -1547,20 +1275,14 @@ print(Game.SomeVector) --서버에서 값이 바뀌었지만 클라에서도 동
 샘플
 
 ```lua
+--서버 스크립트에서-------------
+Game:AddReplicateValue("SomeNumber", 1, Enum.ReplicateType.Changed, 0, false) --서버와 클라이언트간 동기화되는 값을 등록하고 초기값을 설정한뒤, 값이 변경될때마다 호출되게 해요.
+print(Game.SomeNumber .. " in Server")
 
---서버 스크립트에서------------- 
-
-Game:AddReplicateValue("SomeNumber", 1, Enum.ReplicateType.Changed, 0, false) --서버와 클라이언트간 동기화되는 값을 등록하고 초기값을 설정한뒤, 값이 변경될때마다 호출되게 해요. 
-
-print(Game.SomeNumber .. " in Server") 
-
- 
-
---클라 스크립트에서------------- 
-
-print(Game.SomeNumber .. " in Client") --서버에서 값이 바뀌었지만 클라에서도 동일하게 출력돼요. 
-
-``` 
+--클라 스크립트에서-------------
+print(Game.SomeNumber .. " in Client") --서버에서 값이 바뀌었지만 클라에서도 동일하게 출력돼요.
+```
+<br>
 <br>
 <br>
 | **AddReplicateValue(string ValueName, bool Data, ReplicateType Type, float Time, bool bSaveToStorage)** |
@@ -1571,20 +1293,14 @@ print(Game.SomeNumber .. " in Client") --서버에서 값이 바뀌었지만 클
 샘플
 
 ```lua
+--서버 스크립트에서-------------
+Game:AddReplicateValue("SomeBool", true, Enum.ReplicateType.Changed, 0, false) --서버와 클라이언트간 동기화되는 값을 등록하고 초기값을 설정한뒤, 값이 변경될때마다 호출되게 해요.
+print(Game.SomeBool)
 
---서버 스크립트에서------------- 
-
-Game:AddReplicateValue("SomeBool", true, Enum.ReplicateType.Changed, 0, false) --서버와 클라이언트간 동기화되는 값을 등록하고 초기값을 설정한뒤, 값이 변경될때마다 호출되게 해요. 
-
-print(Game.SomeBool) 
-
- 
-
---클라 스크립트에서------------- 
-
-print(Game.SomeBool) --서버에서 값이 바뀌었지만 클라에서도 동일하게 출력돼요. 
-
-``` 
+--클라 스크립트에서-------------
+print(Game.SomeBool) --서버에서 값이 바뀌었지만 클라에서도 동일하게 출력돼요.
+```
+<br>
 <br>
 <br>
 | **AddReplicateValue(string ValueName, string Data, ReplicateType Type, float Time, bool bSaveToStorage)** |
@@ -1595,20 +1311,14 @@ print(Game.SomeBool) --서버에서 값이 바뀌었지만 클라에서도 동�
 샘플
 
 ```lua
+--서버 스크립트에서-------------
+Game:AddReplicateValue("SomeString", "Hello World!", Enum.ReplicateType.Changed, 0, false) --서버와 클라이언트간 동기화되는 값을 등록하고 초기값을 설정한뒤, 값이 변경될때마다 호출되게 해요.
+print(Game.SomeString)
 
---서버 스크립트에서------------- 
-
-Game:AddReplicateValue("SomeString", "Hello World!", Enum.ReplicateType.Changed, 0, false) --서버와 클라이언트간 동기화되는 값을 등록하고 초기값을 설정한뒤, 값이 변경될때마다 호출되게 해요. 
-
-print(Game.SomeString) 
-
- 
-
---클라 스크립트에서------------- 
-
-print(Game.SomeString) --서버에서 값이 바뀌었지만 클라에서도 동일하게 출력돼요. 
-
-``` 
+--클라 스크립트에서-------------
+print(Game.SomeString) --서버에서 값이 바뀌었지만 클라에서도 동일하게 출력돼요.
+```
+<br>
 <br>
 <br>
 | **AddReplicateValue(string ValueName, Color Data, ReplicateType Type, float Time, bool bSaveToStorage)** |
@@ -1619,20 +1329,14 @@ print(Game.SomeString) --서버에서 값이 바뀌었지만 클라에서도 동
 샘플
 
 ```lua
+--서버 스크립트에서-------------
+Game:AddReplicateValue("SomeColor", Color.new(255, 0, 0, 255), Enum.ReplicateType.Changed, 0, false) --서버와 클라이언트간 동기화되는 값을 등록하고 초기값을 설정한뒤, 값이 변경될때마다 호출되게 해요.
+print(Game.SomeColor)
 
---서버 스크립트에서------------- 
-
-Game:AddReplicateValue("SomeColor", Color.new(255, 0, 0, 255), Enum.ReplicateType.Changed, 0, false) --서버와 클라이언트간 동기화되는 값을 등록하고 초기값을 설정한뒤, 값이 변경될때마다 호출되게 해요. 
-
-print(Game.SomeColor) 
-
- 
-
---클라 스크립트에서------------- 
-
-print(Game.SomeColor) --서버에서 값이 바뀌었지만 클라에서도 동일하게 출력돼요. 
-
-``` 
+--클라 스크립트에서-------------
+print(Game.SomeColor) --서버에서 값이 바뀌었지만 클라에서도 동일하게 출력돼요.
+```
+<br>
 <br>
 <br>
 | **AddSaveValue(string ValueName, Vector Data)** |

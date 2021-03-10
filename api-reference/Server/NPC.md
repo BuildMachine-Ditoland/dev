@@ -15,12 +15,10 @@
 샘플
 
 ```lua
-
-local parent = Workspace.Floor.Parent --오브젝트의 부모를 반환해요 
-
-print(parent:GetName())  
-
-``` 
+local parent = Workspace.Floor.Parent --오브젝트의 부모를 반환해요
+print(parent:GetName()) 
+```
+<br>
 <br>
 ## **이벤트**
 
@@ -34,20 +32,14 @@ print(parent:GetName())
 샘플
 
 ```lua
-
-local cube = Workspace.Cube 
-
-local playTime = 0 
-
-local function UpdateEvent(updateTime) --OnUpdateEvent로 연결된 함수는 updateTime 인자가 고정적으로 들어가요. 
-
-playTime = playTime + updateTime --시간을 기록해요. 
-
-end 
-
-cube.OnUpdateEvent:Connect(UpdateEvent) --Game이나 오브젝트에 매프레임마다 호출되는 함수를 연결해요. 
-
-``` 
+local cube = Workspace.Cube
+local playTime = 0
+local function UpdateEvent(updateTime) --OnUpdateEvent로 연결된 함수는 updateTime 인자가 고정적으로 들어가요.
+    playTime = playTime + updateTime --시간을 기록해요.
+end
+cube.OnUpdateEvent:Connect(UpdateEvent) --Game이나 오브젝트에 매프레임마다 호출되는 함수를 연결해요.
+```
+<br>
 <br>
 <br>
 | **OnDestroyEvent** |
@@ -58,20 +50,14 @@ cube.OnUpdateEvent:Connect(UpdateEvent) --Game이나 오브젝트에 매프레�
 샘플
 
 ```lua
-
-local cube = Workspace.Cube 
-
-local function DestroyEvent() 
-
-print("Destroy!") 
-
-end 
-
-cube.OnDestroyEvent:Connect(DestroyEvent) --오브젝트에 해당 오브젝트가 파괴됐을때 호출되는 함수를 연결해요. 
-
-Game:DeleteObject(cube) 
-
-``` 
+local cube = Workspace.Cube
+local function DestroyEvent()
+    print("Destroy!")
+end
+cube.OnDestroyEvent:Connect(DestroyEvent) --오브젝트에 해당 오브젝트가 파괴됐을때 호출되는 함수를 연결해요.
+Game:DeleteObject(cube)
+```
+<br>
 <br>
 <br>
 | **ConnectChangeEventFunction(string ValueName, function FunctionName)** |
@@ -82,26 +68,17 @@ Game:DeleteObject(cube)
 샘플
 
 ```lua
+local cube = Workspace.Cube
 
-local cube = Workspace.Cube 
+wait(1)
+cube.SomeValue = 1
 
- 
-
-wait(1) 
-
-cube.SomeValue = 1 
-
- 
-
-local function ChangeSomeValue() 
-
-print("ChangeSomeValue!") 
-
-end 
-
-cube:ConnectChangeEventFunction("SomeValue", ChangeSomeValue)  --오브젝트의 "SomeValue" 라는 Value가 변경되면 ChangeSomeValue 함수를 호출해요. 
-
-``` 
+local function ChangeSomeValue()
+   print("ChangeSomeValue!")
+end
+cube:ConnectChangeEventFunction("SomeValue", ChangeSomeValue)  --오브젝트의 "SomeValue" 라는 Value가 변경되면 ChangeSomeValue 함수를 호출해요.
+```
+<br>
 <br>
 ## **함수**
 
@@ -115,16 +92,12 @@ cube:ConnectChangeEventFunction("SomeValue", ChangeSomeValue)  --오브젝트의
 샘플
 
 ```lua
-
-local targetTransform = Game:GetAllPlayer()[1]:GetTransform() 
-
-targetTransform:SetLocation(Vector.new(0, 100, 0)) 
-
-targetTransform:SetRotation(Vector.new(0, 100, 0)) 
-
-character:SetTransform(targetTransform) --오브젝트를 보간으로 이동시켜요. (캐릭터는 보간없이 움직여요.) 
-
-``` 
+local targetTransform = Game:GetAllPlayer()[1]:GetTransform()
+targetTransform:SetLocation(Vector.new(0, 100, 0))
+targetTransform:SetRotation(Vector.new(0, 100, 0))
+character:SetTransform(targetTransform) --오브젝트를 보간으로 이동시켜요. (캐릭터는 보간없이 움직여요.)
+```
+<br>
 <br>
 <br>
 | **SetRotation(Vector Rotator)** |
@@ -135,16 +108,12 @@ character:SetTransform(targetTransform) --오브젝트를 보간으로 이동시
 샘플
 
 ```lua
-
-local targetTransform = Game:GetAllPlayer()[1]:GetTransform() 
-
-targetTransform:SetLocation(Vector.new(0, 100, 0)) 
-
-targetTransform:SetRotation(Vector.new(0, 100, 0)) 
-
-character:SetTransform(targetTransform) --오브젝트를 보간으로 이동시켜요. (캐릭터는 보간없이 움직여요.) 
-
-``` 
+local targetTransform = Game:GetAllPlayer()[1]:GetTransform()
+targetTransform:SetLocation(Vector.new(0, 100, 0))
+targetTransform:SetRotation(Vector.new(0, 100, 0))
+character:SetTransform(targetTransform) --오브젝트를 보간으로 이동시켜요. (캐릭터는 보간없이 움직여요.)
+```
+<br>
 <br>
 <br>
 | **Matrix GetTransform()** |
@@ -155,10 +124,9 @@ character:SetTransform(targetTransform) --오브젝트를 보간으로 이동시
 샘플
 
 ```lua
-
-local targetTransform = Game:GetAllPlayer()[1]:GetTransform() 
-
-``` 
+local targetTransform = Game:GetAllPlayer()[1]:GetTransform()
+```
+<br>
 <br>
 <br>
 | **SetTransform(Matrix)** |
@@ -169,16 +137,12 @@ local targetTransform = Game:GetAllPlayer()[1]:GetTransform()
 샘플
 
 ```lua
-
-local targetTransform = Game:GetAllPlayer()[1]:GetTransform() 
-
-targetTransform:SetLocation(Vector.new(0, 100, 0)) 
-
-targetTransform:SetRotation(Vector.new(0, 100, 0)) 
-
-character:SetTransform(targetTransform) --오브젝트를 보간으로 이동시켜요. (캐릭터는 보간없이 움직여요.) 
-
-``` 
+local targetTransform = Game:GetAllPlayer()[1]:GetTransform()
+targetTransform:SetLocation(Vector.new(0, 100, 0))
+targetTransform:SetRotation(Vector.new(0, 100, 0))
+character:SetTransform(targetTransform) --오브젝트를 보간으로 이동시켜요. (캐릭터는 보간없이 움직여요.)
+```
+<br>
 <br>
 <br>
 | **string GetName()** |
@@ -189,10 +153,9 @@ character:SetTransform(targetTransform) --오브젝트를 보간으로 이동시
 샘플
 
 ```lua
-
-print(Workspace.Floor:GetName()) --오브젝트의 이름을 문자열로 반환해요. 
-
-``` 
+print(Workspace.Floor:GetName()) --오브젝트의 이름을 문자열로 반환해요.
+```
+<br>
 <br>
 <br>
 | **RModeObject GetParent(string ParentName)** |
@@ -221,16 +184,12 @@ print(Workspace.Floor:GetName()) --오브젝트의 이름을 문자열로 반환
 샘플
 
 ```lua
-
-local uiList = Workspace.HUD:GetChildList() --오브젝트의 자식 오브젝트를 리스트로 반환해요. 
-
-for i = 1, #uiList do --리스트앞에 #을 붙여 리스트의 길이를 가져올 수 있어요. 
-
-print(uiList[i]:GetName()) 
-
-end 
-
-``` 
+local uiList = Workspace.HUD:GetChildList() --오브젝트의 자식 오브젝트를 리스트로 반환해요.
+for i = 1, #uiList do --리스트앞에 #을 붙여 리스트의 길이를 가져올 수 있어요.
+    print(uiList[i]:GetName())
+end
+```
+<br>
 <br>
 <br>
 | **bool IsCharacter()** |
@@ -241,16 +200,12 @@ end
 샘플
 
 ```lua
-
-local cube = Workspace.Cube 
-
-if cube:IsCharacter() == true then --오브젝트가 Character면 true를 반환해요. 
-
-print(cube:GetName() .. " Is Character") 
-
-end 
-
-``` 
+local cube = Workspace.Cube
+if cube:IsCharacter() == true then --오브젝트가 Character면 true를 반환해요.
+    print(cube:GetName() .. " Is Character")
+end
+```
+<br>
 <br>
 <br>
 | **bool IsStaticMesh()** |
@@ -261,16 +216,12 @@ end
 샘플
 
 ```lua
-
-local cube = Workspace.Cube 
-
-if cube:IsStaticMesh() == true then --오브젝트가 StaticMesh면 true를 반환해요. 
-
-print(cube:GetName() .. " Is StaticMesh") 
-
-end 
-
-``` 
+local cube = Workspace.Cube
+if cube:IsStaticMesh() == true then --오브젝트가 StaticMesh면 true를 반환해요.
+    print(cube:GetName() .. " Is StaticMesh")
+end
+```
+<br>
 <br>
 <br>
 | **bool IsFX()** |
@@ -281,16 +232,12 @@ FX인지 확인할 수 있어요.
 샘플
 
 ```lua
-
-local cube = Workspace.Cube 
-
-if cube:IsFX() == true then --오브젝트가 FX면 true를 반환해요. 
-
-print(cube:GetName() .. " Is FX") 
-
-end 
-
-``` 
+local cube = Workspace.Cube
+if cube:IsFX() == true then --오브젝트가 FX면 true를 반환해요.
+    print(cube:GetName() .. " Is FX")
+end
+```
+<br>
 <br>
 <br>
 | **bool IsSound()** |
@@ -301,16 +248,12 @@ Sound인지 확인할 수 있어요.
 샘플
 
 ```lua
-
-local cube = Workspace.Cube 
-
-if cube:IsSound() == true then --오브젝트가 Sound면 true를 반환해요. 
-
-print(cube:GetName() .. " Is Sound") 
-
-end 
-
-``` 
+local cube = Workspace.Cube
+if cube:IsSound() == true then --오브젝트가 Sound면 true를 반환해요.
+    print(cube:GetName() .. " Is Sound")
+end
+```
+<br>
 <br>
 <br>
 | **bool IsPointLight()** |
@@ -321,16 +264,12 @@ end
 샘플
 
 ```lua
-
-local cube = Workspace.Cube 
-
-if cube:IsPointLight() == true then --오브젝트가 PointLight면 true를 반환해요. 
-
-print(cube:GetName() .. " Is PointLight") 
-
-end 
-
-``` 
+local cube = Workspace.Cube
+if cube:IsPointLight() == true then --오브젝트가 PointLight면 true를 반환해요.
+    print(cube:GetName() .. " Is PointLight")
+end
+```
+<br>
 <br>
 <br>
 | **bool IsSpotLight()** |
@@ -341,16 +280,12 @@ end
 샘플
 
 ```lua
-
-local cube = Workspace.Cube 
-
-if cube:IsSpotLight() == true then --오브젝트가 SpotLight면 true를 반환해요. 
-
-print(cube:GetName() .. " Is SpotLight") 
-
-end 
-
-``` 
+local cube = Workspace.Cube
+if cube:IsSpotLight() == true then --오브젝트가 SpotLight면 true를 반환해요.
+    print(cube:GetName() .. " Is SpotLight")
+end
+```
+<br>
 <br>
 <br>
 | **bool IsSurfaceUI()** |
@@ -361,16 +296,12 @@ end
 샘플
 
 ```lua
-
-local cube = Workspace.Cube 
-
-if cube:IsSurfaceUI() == true then --오브젝트가 SurfaceUI면 true를 반환해요. 
-
-print(cube:GetName() .. " Is SurfaceUI") 
-
-end 
-
-``` 
+local cube = Workspace.Cube
+if cube:IsSurfaceUI() == true then --오브젝트가 SurfaceUI면 true를 반환해요.
+    print(cube:GetName() .. " Is SurfaceUI")
+end
+```
+<br>
 <br>
 <br>
 | **bool IsScreenUI()** |
@@ -381,16 +312,12 @@ end
 샘플
 
 ```lua
-
-local cube = Workspace.Cube 
-
-if cube:IsScreenUI() == true then --오브젝트가 ScreenUI면 true를 반환해요. 
-
-print(cube:GetName() .. " Is ScreenUI") 
-
-end 
-
-``` 
+local cube = Workspace.Cube
+if cube:IsScreenUI() == true then --오브젝트가 ScreenUI면 true를 반환해요.
+    print(cube:GetName() .. " Is ScreenUI")
+end
+```
+<br>
 <br>
 <br>
 | **bool IsItem()** |
@@ -401,16 +328,12 @@ end
 샘플
 
 ```lua
-
-local cube = Workspace.Cube 
-
-if cube:IsItem() == true then --오브젝트가 Item면 true를 반환해요. 
-
-print(cube:GetName() .. " Is Item") 
-
-end 
-
-``` 
+local cube = Workspace.Cube
+if cube:IsItem() == true then --오브젝트가 Item면 true를 반환해요.
+    print(cube:GetName() .. " Is Item")
+end
+```
+<br>
 <br>
 <br>
 | **bool IsNPC()** |
@@ -421,16 +344,12 @@ NPC인지 확인할 수 있어요.
 샘플
 
 ```lua
-
-local cube = Workspace.Cube 
-
-if cube:IsNPC() == true then --오브젝트가 NPC면 true를 반환해요. 
-
-print(cube:GetName() .. " Is NPC") 
-
-end 
-
-``` 
+local cube = Workspace.Cube
+if cube:IsNPC() == true then --오브젝트가 NPC면 true를 반환해요.
+    print(cube:GetName() .. " Is NPC")
+end
+```
+<br>
 <br>
 <br>
 | **bool IsFolder()** |
@@ -441,16 +360,12 @@ end
 샘플
 
 ```lua
-
-local cube = Workspace.Cube 
-
-if cube:IsFolder() == true then --오브젝트가 Folder면 true를 반환해요. 
-
-print(cube:GetName() .. " Is Folder") 
-
-end 
-
-``` 
+local cube = Workspace.Cube
+if cube:IsFolder() == true then --오브젝트가 Folder면 true를 반환해요.
+    print(cube:GetName() .. " Is Folder")
+end
+```
+<br>
 <br>
 <br>
 | **bool IsScript()** |
@@ -461,16 +376,12 @@ end
 샘플
 
 ```lua
-
-local cube = Workspace.Cube 
-
-if cube:IsScript() == true then --오브젝트가 Script면 true를 반환해요. 
-
-print(cube:GetName() .. " Is Script") 
-
-end 
-
-``` 
+local cube = Workspace.Cube
+if cube:IsScript() == true then --오브젝트가 Script면 true를 반환해요.
+    print(cube:GetName() .. " Is Script")
+end
+```
+<br>
 <br>
 <br>
 | **bool IsCollider()** |
@@ -481,16 +392,12 @@ Collider인지 확인할 수 있어요.
 샘플
 
 ```lua
-
-local cube = Workspace.Cube 
-
-if cube:IsCollider() == true then --오브젝트가 Collider면 true를 반환해요. 
-
-print(cube:GetName() .. " Is Collider") 
-
-end 
-
-``` 
+local cube = Workspace.Cube
+if cube:IsCollider() == true then --오브젝트가 Collider면 true를 반환해요.
+    print(cube:GetName() .. " Is Collider")
+end
+```
+<br>
 <br>
 <br>
 | **bool IsWidget()** |
@@ -501,16 +408,12 @@ Widget인지 확인할 수 있어요.
 샘플
 
 ```lua
-
-local cube = Workspace.Cube 
-
-if cube:IsWidget() == true then --오브젝트가 Widget면 true를 반환해요. 
-
-print(cube:GetName() .. " Is Widget") 
-
-end 
-
-``` 
+local cube = Workspace.Cube
+if cube:IsWidget() == true then --오브젝트가 Widget면 true를 반환해요.
+    print(cube:GetName() .. " Is Widget")
+end
+```
+<br>
 <br>
 <br>
 | **bool IsCamera()** |
@@ -521,16 +424,12 @@ Camera인지 확인할 수 있어요.
 샘플
 
 ```lua
-
-local cube = Workspace.Cube 
-
-if cube:IsCamera() == true then --오브젝트가 Camera면 true를 반환해요. 
-
-print(cube:GetName() .. " Is Camera") 
-
-end 
-
-``` 
+local cube = Workspace.Cube
+if cube:IsCamera() == true then --오브젝트가 Camera면 true를 반환해요.
+    print(cube:GetName() .. " Is Camera")
+end
+```
+<br>
 <br>
 <br>
 | **bool IsValid()** |
@@ -547,20 +446,14 @@ end
 샘플
 
 ```lua
+--서버 스크립트에서-------------
+Game:AddReplicateValue("SomeVector", Vector.new(0, 50, 0), Enum.ReplicateType.Changed, 0, false) --서버와 클라이언트간 동기화되는 값을 등록하고 초기값을 설정한뒤, 값이 변경될때마다 호출되게 해요.
+print(Game.SomeVector)
 
---서버 스크립트에서------------- 
-
-Game:AddReplicateValue("SomeVector", Vector.new(0, 50, 0), Enum.ReplicateType.Changed, 0, false) --서버와 클라이언트간 동기화되는 값을 등록하고 초기값을 설정한뒤, 값이 변경될때마다 호출되게 해요. 
-
-print(Game.SomeVector) 
-
- 
-
---클라 스크립트에서------------- 
-
-print(Game.SomeVector) --서버에서 값이 바뀌었지만 클라에서도 동일하게 출력돼요. 
-
-``` 
+--클라 스크립트에서-------------
+print(Game.SomeVector) --서버에서 값이 바뀌었지만 클라에서도 동일하게 출력돼요.
+```
+<br>
 <br>
 <br>
 | **AddReplicateValue(string ValueName, float Data, ReplicateType Type, float Time, bool bSaveToStorage)** |
@@ -571,20 +464,14 @@ print(Game.SomeVector) --서버에서 값이 바뀌었지만 클라에서도 동
 샘플
 
 ```lua
+--서버 스크립트에서-------------
+Game:AddReplicateValue("SomeNumber", 1, Enum.ReplicateType.Changed, 0, false) --서버와 클라이언트간 동기화되는 값을 등록하고 초기값을 설정한뒤, 값이 변경될때마다 호출되게 해요.
+print(Game.SomeNumber .. " in Server")
 
---서버 스크립트에서------------- 
-
-Game:AddReplicateValue("SomeNumber", 1, Enum.ReplicateType.Changed, 0, false) --서버와 클라이언트간 동기화되는 값을 등록하고 초기값을 설정한뒤, 값이 변경될때마다 호출되게 해요. 
-
-print(Game.SomeNumber .. " in Server") 
-
- 
-
---클라 스크립트에서------------- 
-
-print(Game.SomeNumber .. " in Client") --서버에서 값이 바뀌었지만 클라에서도 동일하게 출력돼요. 
-
-``` 
+--클라 스크립트에서-------------
+print(Game.SomeNumber .. " in Client") --서버에서 값이 바뀌었지만 클라에서도 동일하게 출력돼요.
+```
+<br>
 <br>
 <br>
 | **AddReplicateValue(string ValueName, bool Data, ReplicateType Type, float Time, bool bSaveToStorage)** |
@@ -595,20 +482,14 @@ print(Game.SomeNumber .. " in Client") --서버에서 값이 바뀌었지만 클
 샘플
 
 ```lua
+--서버 스크립트에서-------------
+Game:AddReplicateValue("SomeBool", true, Enum.ReplicateType.Changed, 0, false) --서버와 클라이언트간 동기화되는 값을 등록하고 초기값을 설정한뒤, 값이 변경될때마다 호출되게 해요.
+print(Game.SomeBool)
 
---서버 스크립트에서------------- 
-
-Game:AddReplicateValue("SomeBool", true, Enum.ReplicateType.Changed, 0, false) --서버와 클라이언트간 동기화되는 값을 등록하고 초기값을 설정한뒤, 값이 변경될때마다 호출되게 해요. 
-
-print(Game.SomeBool) 
-
- 
-
---클라 스크립트에서------------- 
-
-print(Game.SomeBool) --서버에서 값이 바뀌었지만 클라에서도 동일하게 출력돼요. 
-
-``` 
+--클라 스크립트에서-------------
+print(Game.SomeBool) --서버에서 값이 바뀌었지만 클라에서도 동일하게 출력돼요.
+```
+<br>
 <br>
 <br>
 | **AddReplicateValue(string ValueName, string Data, ReplicateType Type, float Time, bool bSaveToStorage)** |
@@ -619,20 +500,14 @@ print(Game.SomeBool) --서버에서 값이 바뀌었지만 클라에서도 동�
 샘플
 
 ```lua
+--서버 스크립트에서-------------
+Game:AddReplicateValue("SomeString", "Hello World!", Enum.ReplicateType.Changed, 0, false) --서버와 클라이언트간 동기화되는 값을 등록하고 초기값을 설정한뒤, 값이 변경될때마다 호출되게 해요.
+print(Game.SomeString)
 
---서버 스크립트에서------------- 
-
-Game:AddReplicateValue("SomeString", "Hello World!", Enum.ReplicateType.Changed, 0, false) --서버와 클라이언트간 동기화되는 값을 등록하고 초기값을 설정한뒤, 값이 변경될때마다 호출되게 해요. 
-
-print(Game.SomeString) 
-
- 
-
---클라 스크립트에서------------- 
-
-print(Game.SomeString) --서버에서 값이 바뀌었지만 클라에서도 동일하게 출력돼요. 
-
-``` 
+--클라 스크립트에서-------------
+print(Game.SomeString) --서버에서 값이 바뀌었지만 클라에서도 동일하게 출력돼요.
+```
+<br>
 <br>
 <br>
 | **AddReplicateValue(string ValueName, Color Data, ReplicateType Type, float Time, bool bSaveToStorage)** |
@@ -643,20 +518,14 @@ print(Game.SomeString) --서버에서 값이 바뀌었지만 클라에서도 동
 샘플
 
 ```lua
+--서버 스크립트에서-------------
+Game:AddReplicateValue("SomeColor", Color.new(255, 0, 0, 255), Enum.ReplicateType.Changed, 0, false) --서버와 클라이언트간 동기화되는 값을 등록하고 초기값을 설정한뒤, 값이 변경될때마다 호출되게 해요.
+print(Game.SomeColor)
 
---서버 스크립트에서------------- 
-
-Game:AddReplicateValue("SomeColor", Color.new(255, 0, 0, 255), Enum.ReplicateType.Changed, 0, false) --서버와 클라이언트간 동기화되는 값을 등록하고 초기값을 설정한뒤, 값이 변경될때마다 호출되게 해요. 
-
-print(Game.SomeColor) 
-
- 
-
---클라 스크립트에서------------- 
-
-print(Game.SomeColor) --서버에서 값이 바뀌었지만 클라에서도 동일하게 출력돼요. 
-
-``` 
+--클라 스크립트에서-------------
+print(Game.SomeColor) --서버에서 값이 바뀌었지만 클라에서도 동일하게 출력돼요.
+```
+<br>
 <br>
 <br>
 | **AddSaveValue(string ValueName, Vector Data)** |

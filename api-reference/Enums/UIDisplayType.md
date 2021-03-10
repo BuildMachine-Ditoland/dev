@@ -9,6 +9,8 @@ SurfaceUI 의 DisplayType
 | --- |
 | **Billboard** |
 | --- |
+
+<br>
 
 샘플 
 
@@ -22,3 +24,4 @@ local function spawn(character)
 end
 Game.OnSpawnCharacter:Connect(spawn)
 ```
+<br>

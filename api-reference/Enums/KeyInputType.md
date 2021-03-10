@@ -9,6 +9,8 @@
 **Released** |키를 떼었을 때 이벤트가 발생해요. |
 **Repeat** |키를 계속 누르고 있을 때 이벤트가 발생해요. |
 **DoubleClick** |키를 더블 클릭 했을 때 이벤트가 발생해요. |
+
+<br>
 
 샘플 
 
@@ -21,3 +23,4 @@ LocalPlayer:ProcessInputActionEvent("MenuKey", Enum.KeyInputType.Pressed, functi
     print("Input!")
 end)
 ```
+<br>
