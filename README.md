@@ -1,1 +1,3 @@
 # HOME
+
+{% page-ref page="./" %}
