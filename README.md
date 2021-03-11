@@ -1,6 +1,8 @@
 # HOME
 
-{% page-ref page="./" %}
+{% page-ref page="studio-manual.md" %}
+{% page-ref page="resources.md" %}
+{% page-ref page="SUMMARY.md" %}
 
 ## BroadcastEvent
 
