@@ -575,7 +575,6 @@ print(parent:GetName())
 ```
 <br>
 <br>
-<br>
 ## **이벤트**
 
 <br>
@@ -598,7 +597,6 @@ cube.OnUpdateEvent:Connect(UpdateEvent) --Game이나 오브젝트에 매프레�
 <br>
 <br>
 <br>
-<br>
 | **OnEnterPlayer** |
 | :--- |
 
@@ -612,7 +610,6 @@ local function EnterPlayer(player) --OnEnterPlayer로 연결된 함수는 player
 end
 Game.OnEnterPlayer:Connect(EnterPlayer) --Game에 플레이어가 게임에 입장하면 호출되는 함수를 연결해요.
 ```
-<br>
 <br>
 <br>
 <br>
@@ -632,7 +629,6 @@ Game.OnLeavePlayer:Connect(LeavePlayer) --Game에 플레이어가 게임을 종�
 <br>
 <br>
 <br>
-<br>
 | **OnDeathCharacter** |
 | :--- |
 
@@ -646,7 +642,6 @@ local function DeathCharacter(character) --OnDeathCharacter로 연결된 함수�
 end
 Game.OnDeathCharacter:Connect(DeathCharacter) --Game에 캐릭터가 죽으면 호출되는 함수를 연결해요.
 ```
-<br>
 <br>
 <br>
 <br>
@@ -665,7 +660,6 @@ Game.OnSpawnCharacter:Connect(SpawnCharacter) --Game에 캐릭터가 생성되�
 ```
 <br>
 <br>
-<br>
 샘플
 
 ```lua
@@ -677,7 +671,6 @@ end
 --게임에 플레이어가 들어올 시 EnterPlayer함수에 연결
 Game.OnEnterPlayer:Connect(EnterPlayer)
 ```
-<br>
 <br>
 <br>
 <br>
@@ -702,7 +695,6 @@ cube:ConnectChangeEventFunction("SomeValue", ChangeSomeValue)  --오브젝트의
 <br>
 <br>
 <br>
-<br>
 | **AddTimeEvent(String EventName, float Time, LuaScriptFunction EventFuunction)** |
 | :--- |
 
@@ -717,7 +709,6 @@ local function PrintMessage() --AddTimeEvent로 등록된 함수는 일정시간
 end
 Game:AddTimeEvent("PrintMessage", waitTime, PrintMessage) --일정시간을 기다린뒤 호출되는 함수를 문자열로 등록해요.
 ```
-<br>
 <br>
 <br>
 <br>
@@ -736,7 +727,6 @@ end
 Game:AddTimeEvent("PrintMessage", waitTime, PrintMessage) --일정시간을 기다린뒤 호출되는 함수를 문자열로 등록해요.
 Game:DeleteTimeEvent("PrintMessage") --AddTimeEvent로 등록한 함수를 삭제해서 호출되지 않게 해요.
 ```
-<br>
 <br>
 <br>
 ## **함수**
@@ -821,7 +811,6 @@ end)
 <br>
 <br>
 <br>
-<br>
 | **RModePhase GetPhaseByName(string phasename)** |
 | :--- |
 
@@ -865,7 +854,6 @@ cube:ConnectEventFunction("SomeFunc", SomeFunc) --오브젝트에 "SomeFunc"라�
 <br>
 <br>
 <br>
-<br>
 | **float GetPassTime()** |
 | :--- |
 
@@ -885,7 +873,6 @@ cube:ConnectEventFunction("SomeFunc", SomeFunc) --오브젝트에 "SomeFunc"라�
 local cube = Workspace.Cube
 Game:DeleteObject(cube) --오브젝트를 파괴해요.
 ```
-<br>
 <br>
 <br>
 <br>
@@ -909,7 +896,6 @@ end
 <br>
 <br>
 <br>
-<br>
 | **string GetName()** |
 | :--- |
 
@@ -920,7 +906,6 @@ end
 ```lua
 print(Workspace.Floor:GetName()) --오브젝트의 이름을 문자열로 반환해요.
 ```
-<br>
 <br>
 <br>
 <br>
@@ -958,7 +943,6 @@ end
 <br>
 <br>
 <br>
-<br>
 | **bool IsCharacter()** |
 | :--- |
 
@@ -972,7 +956,6 @@ if cube:IsCharacter() == true then --오브젝트가 Character면 true를 반환
     print(cube:GetName() .. " Is Character")
 end
 ```
-<br>
 <br>
 <br>
 <br>
@@ -992,7 +975,6 @@ end
 <br>
 <br>
 <br>
-<br>
 | **bool IsFX()** |
 | :--- |
 
@@ -1006,7 +988,6 @@ if cube:IsFX() == true then --오브젝트가 FX면 true를 반환해요.
     print(cube:GetName() .. " Is FX")
 end
 ```
-<br>
 <br>
 <br>
 <br>
@@ -1026,7 +1007,6 @@ end
 <br>
 <br>
 <br>
-<br>
 | **bool IsPointLight()** |
 | :--- |
 
@@ -1040,7 +1020,6 @@ if cube:IsPointLight() == true then --오브젝트가 PointLight면 true를 반�
     print(cube:GetName() .. " Is PointLight")
 end
 ```
-<br>
 <br>
 <br>
 <br>
@@ -1060,7 +1039,6 @@ end
 <br>
 <br>
 <br>
-<br>
 | **bool IsSurfaceUI()** |
 | :--- |
 
@@ -1074,7 +1052,6 @@ if cube:IsSurfaceUI() == true then --오브젝트가 SurfaceUI면 true를 반환
     print(cube:GetName() .. " Is SurfaceUI")
 end
 ```
-<br>
 <br>
 <br>
 <br>
@@ -1094,7 +1071,6 @@ end
 <br>
 <br>
 <br>
-<br>
 | **bool IsItem()** |
 | :--- |
 
@@ -1108,7 +1084,6 @@ if cube:IsItem() == true then --오브젝트가 Item면 true를 반환해요.
     print(cube:GetName() .. " Is Item")
 end
 ```
-<br>
 <br>
 <br>
 <br>
@@ -1128,7 +1103,6 @@ end
 <br>
 <br>
 <br>
-<br>
 | **bool IsFolder()** |
 | :--- |
 
@@ -1142,7 +1116,6 @@ if cube:IsFolder() == true then --오브젝트가 Folder면 true를 반환해요
     print(cube:GetName() .. " Is Folder")
 end
 ```
-<br>
 <br>
 <br>
 <br>
@@ -1162,7 +1135,6 @@ end
 <br>
 <br>
 <br>
-<br>
 | **bool IsCollider()** |
 | :--- |
 
@@ -1176,7 +1148,6 @@ if cube:IsCollider() == true then --오브젝트가 Collider면 true를 반환�
     print(cube:GetName() .. " Is Collider")
 end
 ```
-<br>
 <br>
 <br>
 <br>
@@ -1196,7 +1167,6 @@ end
 <br>
 <br>
 <br>
-<br>
 | **bool IsCamera()** |
 | :--- |
 
@@ -1210,7 +1180,6 @@ if cube:IsCamera() == true then --오브젝트가 Camera면 true를 반환해요
     print(cube:GetName() .. " Is Camera")
 end
 ```
-<br>
 <br>
 <br>
 <br>
@@ -1238,7 +1207,6 @@ print(Game.SomeVector) --서버에서 값이 바뀌었지만 클라에서도 동
 <br>
 <br>
 <br>
-<br>
 | **AddReplicateValue(string ValueName, float Data, ReplicateType Type, float Time, bool bSaveToStorage)** |
 | :--- |
 
@@ -1254,7 +1222,6 @@ print(Game.SomeNumber .. " in Server")
 --클라 스크립트에서-------------
 print(Game.SomeNumber .. " in Client") --서버에서 값이 바뀌었지만 클라에서도 동일하게 출력돼요.
 ```
-<br>
 <br>
 <br>
 <br>
@@ -1276,7 +1243,6 @@ print(Game.SomeBool) --서버에서 값이 바뀌었지만 클라에서도 동�
 <br>
 <br>
 <br>
-<br>
 | **AddReplicateValue(string ValueName, string Data, ReplicateType Type, float Time, bool bSaveToStorage)** |
 | :--- |
 
@@ -1295,7 +1261,6 @@ print(Game.SomeString) --서버에서 값이 바뀌었지만 클라에서도 동
 <br>
 <br>
 <br>
-<br>
 | **AddReplicateValue(string ValueName, Color Data, ReplicateType Type, float Time, bool bSaveToStorage)** |
 | :--- |
 
@@ -1311,7 +1276,6 @@ print(Game.SomeColor)
 --클라 스크립트에서-------------
 print(Game.SomeColor) --서버에서 값이 바뀌었지만 클라에서도 동일하게 출력돼요.
 ```
-<br>
 <br>
 <br>
 <br>

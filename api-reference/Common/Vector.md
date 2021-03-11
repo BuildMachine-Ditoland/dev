@@ -55,6 +55,24 @@ Vector = Vector * float
 | :--- |
 
 두 벡터의 XY 평면의 사잇각의 cos 값을 리턴해줘요. (사잇각을 구할 벡터) 
+
+<br>
+
+샘플 
+
+```lua
+local player = LocalPlayer:GetRemotePlayer():GetCharacter()
+local cube = Workspace.Cube
+local playerPos = player:GetTransform():GetLocation()
+local targetPos = cube:GetTransform():GetLocation()
+
+local angle = playerPos:CosineAngle2D(targetPos)    
+print(angle)
+
+<br>
+샘플
+
+```lua
 <br>
 ## **속성**
 
@@ -62,24 +80,20 @@ Vector = Vector * float
 <br>
 | **X** |
 | :--- |
-
-X 좌표에요. 
+X 좌표에요.
 <br>
 <br>
 | **Y** |
 | :--- |
-
-Y 좌표에요. 
+Y 좌표에요.
 <br>
 <br>
 | **Z** |
 | :--- |
-
-Z 좌표에요. 
+Z 좌표에요.
 
 <br>
-
-샘플 
+샘플
 
 ```lua
 local pos1 = Vector.new(1, 2, 3) --pos1.X = 1, pos1.Y = 2, pos1.Z = 3로 할당돼요.

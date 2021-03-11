@@ -128,7 +128,6 @@ print(parent:GetName())
 ```
 <br>
 <br>
-<br>
 ## **이벤트**
 
 <br>
@@ -151,7 +150,6 @@ Game:CreateObject(cube, Vector.new(0, 0, 0))
 <br>
 <br>
 <br>
-<br>
 | **OnUpdateEvent** |
 | :--- |
 
@@ -170,7 +168,6 @@ cube.OnUpdateEvent:Connect(UpdateEvent) --Game이나 오브젝트에 매프레�
 <br>
 <br>
 <br>
-<br>
 | **OnDestroyEvent** |
 | :--- |
 
@@ -186,7 +183,6 @@ end
 cube.OnDestroyEvent:Connect(DestroyEvent) --오브젝트에 해당 오브젝트가 파괴됐을때 호출되는 함수를 연결해요.
 Game:DeleteObject(cube)
 ```
-<br>
 <br>
 <br>
 <br>
@@ -209,7 +205,6 @@ cube.OnCollisionEvent:Connect(CollisionEvent) --Collision이 true인 오브젝�
 <br>
 <br>
 <br>
-<br>
 | **OnBeginOverlapEvent** |
 | :--- |
 
@@ -226,7 +221,6 @@ local function BeginOverlapEvent(self, target) --OnBeginOverlapEvent 연결된 �
 end
 cube.OnBeginOverlapEvent:Connect(BeginOverlapEvent) --Collision이 false인 오브젝트와 충돌을 시작할때 호출되는 함수를 연결해요.
 ```
-<br>
 <br>
 <br>
 <br>
@@ -249,7 +243,6 @@ cube.OnEndOverlapEvent:Connect(EndOverlapEvent) --Collision이 false인 오브�
 <br>
 <br>
 <br>
-<br>
 | **OnOverlapUpdateEvent** |
 | :--- |
 
@@ -266,7 +259,6 @@ local function OverlapUpdateEvent(self, target) --OnOverlapUpdateEvent로 연결
 end
 cube.OnOverlapUpdateEvent:Connect(OverlapUpdateEvent) --Collision이 false인 오브젝트와 충돌중일때 호출되는 함수를 연결해요.
 ```
-<br>
 <br>
 <br>
 <br>
@@ -288,7 +280,6 @@ local function ChangeSomeValue()
 end
 cube:ConnectChangeEventFunction("SomeValue", ChangeSomeValue)  --오브젝트의 "SomeValue" 라는 Value가 변경되면 ChangeSomeValue 함수를 호출해요.
 ```
-<br>
 <br>
 <br>
 ## **함수**
@@ -314,7 +305,6 @@ local targetTransform = Game:GetAllPlayer()[1]:GetTransform()
 <br>
 <br>
 <br>
-<br>
 | **SetTransform(Matrix)** |
 | :--- |
 
@@ -328,7 +318,6 @@ targetTransform:SetLocation(Vector.new(0, 100, 0))
 targetTransform:SetRotation(Vector.new(0, 100, 0))
 character:SetTransform(targetTransform) --오브젝트를 보간으로 이동시켜요. (캐릭터는 보간없이 움직여요.)
 ```
-<br>
 <br>
 <br>
 <br>
@@ -347,7 +336,6 @@ Workspace.Cube:Teleport(targetTransform) --오브젝트를 보간없이 바로 �
 <br>
 <br>
 <br>
-<br>
 | **Vector GetLocation()** |
 | :--- |
 
@@ -359,7 +347,6 @@ Workspace.Cube:Teleport(targetTransform) --오브젝트를 보간없이 바로 �
 local character = Game:GetAllPlayer()[1]:GetCharacter()
 local characterPos = character:GetTransform():GetLocation() --캐릭터의 위치값을 Vector로 반환해요.
 ```
-<br>
 <br>
 <br>
 <br>
@@ -383,7 +370,6 @@ local characterRot = character:GetTransform():GetRotation() --캐릭터의 회�
 <br>
 <br>
 <br>
-<br>
 | **SetRotation(Vector InValue)** |
 | :--- |
 
@@ -397,7 +383,6 @@ targetTransform:SetLocation(Vector.new(0, 100, 0))
 targetTransform:SetRotation(Vector.new(0, 100, 0))
 character:SetTransform(targetTransform) --오브젝트를 보간으로 이동시켜요. (캐릭터는 보간없이 움직여요.)
 ```
-<br>
 <br>
 <br>
 <br>
@@ -417,7 +402,6 @@ cube:SetScale(scale) --오브젝트의 크기를 설정해요.
 <br>
 <br>
 <br>
-<br>
 | **SetScale(Vector scale)** |
 | :--- |
 
@@ -431,7 +415,6 @@ local scale = cube:GetScale() --해당 오브젝트의 크기를 100으로 나�
 scale.Y = scale.Y + 0.5
 cube:SetScale(scale) --오브젝트의 크기를 설정해요.
 ```
-<br>
 <br>
 <br>
 <br>
@@ -450,7 +433,6 @@ print(Workspace.Floor:GetTag())
 <br>
 <br>
 <br>
-<br>
 | **String GetTag()** |
 | :--- |
 
@@ -463,7 +445,6 @@ print(Workspace.Floor:GetTag())
 Workspace.Floor:SetTag("SomeTag")
 print(Workspace.Floor:GetTag())
 ```
-<br>
 <br>
 <br>
 <br>
@@ -498,7 +479,6 @@ Workspace.Cube.Enable = false --오브젝트의 상태를 비활성화해요. (�
 <br>
 <br>
 <br>
-<br>
 | **AddForce(Vector Force)** |
 | :--- |
 
@@ -528,7 +508,6 @@ toy.OnCollisionEvent:Connect(CharacterCollision) --오브젝트에 캐릭터가 
 <br>
 <br>
 <br>
-<br>
 | **SetVisibility(bool bNewVisibility)** |
 | :--- |
 
@@ -539,7 +518,6 @@ toy.OnCollisionEvent:Connect(CharacterCollision) --오브젝트에 캐릭터가 
 ```lua
 Workspace.Cube.SetVisibility(false) --오브젝트를 보이지 않게 해요.
 ```
-<br>
 <br>
 <br>
 <br>
@@ -564,7 +542,6 @@ cube:AddEmpty("Move", waitTime)cube:PlayTransformTrack("Move", Enum.TransformPla
 <br>
 <br>
 <br>
-<br>
 | **AddLocalRot(string TrackName, Vector Rot, float Time)** |
 | :--- |
 
@@ -582,7 +559,6 @@ cube:PlayTransformTrack("Rot", Enum.TransformPlayType.Repeat, InfinityPlay) --�
 <br>
 <br>
 <br>
-<br>
 | **AddLocalScale(string TrackName, Vector Scale, float Time)** |
 | :--- |
 
@@ -597,7 +573,6 @@ cube:AddLocalScale("Size", Vector.new(0.6, 0.6, 0.6), moveSpeed) --크기 트랙
 cube:AddLocalScale("Size", Vector.new(-0.6, -0.6, -0.6), moveSpeed) --크기 트랙은 여러개도 등록할 수 있어요.
 cube:PlayTransformTrack("Size", Enum.TransformPlayType.Repeat, InfinityPlay) --이름에 해당하는 트랙을 재생해요.
 ```
-<br>
 <br>
 <br>
 <br>
@@ -622,7 +597,6 @@ cube:AddEmpty("Move", waitTime)cube:PlayTransformTrack("Move", Enum.TransformPla
 <br>
 <br>
 <br>
-<br>
 | **AddWorldRot(string TrackName, Vector Rot, float Time)** |
 | :--- |
 
@@ -637,7 +611,6 @@ cube:AddWorldRot("Rot", Vector.new(0, 0, 360), moveSpeed) --회전 트랙을 등
 cube:AddWorldRot("Rot", Vector.new(0, 360, 0), moveSpeed) --회전 트랙은 여러개도 등록할 수 있어요.
 cube:PlayTransformTrack("Rot", Enum.TransformPlayType.Repeat, InfinityPlay) --이름에 해당하는 트랙을 재생해요.
 ```
-<br>
 <br>
 <br>
 <br>
@@ -691,7 +664,6 @@ cube:PlayTransformTrack("Move", Enum.TransformPlayType.Repeat, InfinityPlay) --�
 <br>
 <br>
 <br>
-<br>
 | **StopTransformTrack(string TrackName)** |
 | :--- |
 
@@ -703,7 +675,6 @@ cube:PlayTransformTrack("Move", Enum.TransformPlayType.Repeat, InfinityPlay) --�
 local cube = Workspace.Cube
 cube:StopTransformTrack("Move") --이름에 해당하는 트랙을 멈춰요.
 ```
-<br>
 <br>
 <br>
 <br>
@@ -721,7 +692,6 @@ cube:PauseTransformTrack("Move") --이름에 해당하는 트랙을 일시정지
 <br>
 <br>
 <br>
-<br>
 | **ResumeTransformTrack(string TrackName)** |
 | :--- |
 
@@ -733,7 +703,6 @@ cube:PauseTransformTrack("Move") --이름에 해당하는 트랙을 일시정지
 local cube = Workspace.Cube
 cube:ResumeTransformTrack("Move") --이름에 해당하는 일시정지된 트랙을 다시 재생해요.
 ```
-<br>
 <br>
 <br>
 <br>
@@ -753,7 +722,6 @@ end
 <br>
 <br>
 <br>
-<br>
 | **ResetTransformTrack(string TrackName)** |
 | :--- |
 
@@ -765,7 +733,6 @@ end
 local cube = Workspace.Cube
 cube:ResetTransformTrack("Move") --이름에 해당하는 트랙이 적용되기전의 트랜스폼으로 리셋해요. (트랙이 멈추진 않아요.)
 ```
-<br>
 <br>
 <br>
 <br>
@@ -783,7 +750,6 @@ cube:RemoveTransformTrack("Move") --이름에 해당하는 트랙을 제거해�
 <br>
 <br>
 <br>
-<br>
 | **ResetTransform()** |
 | :--- |
 
@@ -795,7 +761,6 @@ TransformTrack 이 적용되기 전의 최초 Transform으로 리셋시켜요.
 local cube = Workspace.Cube
 cube:ResetTransform() --적용되기전의 트랜스폼으로 리셋해요. (트랙이 멈추진 않아요.)
 ```
-<br>
 <br>
 <br>
 <br>
@@ -820,7 +785,6 @@ cube:SetEndEventTransformTrack("Move", EndMove) --이름에 해당하는 트랙�
 
 cube:PlayTransformTrack("Move", Enum.TransformPlayType.Repeat, 1)
 ```
-<br>
 <br>
 <br>
 <br>
@@ -849,7 +813,6 @@ Workspace.Floor:SetName("NewFloor") --오브젝트의 이름을 변경해요.
 <br>
 <br>
 <br>
-<br>
 | **FRModeVehicle GetVehicle()** |
 | :--- |
 
@@ -875,7 +838,6 @@ cube:ConnectEventFunction("SomeFunc", SomeFunc) --오브젝트에 "SomeFunc"라�
 <br>
 <br>
 <br>
-<br>
 | **string GetName()** |
 | :--- |
 
@@ -886,7 +848,6 @@ cube:ConnectEventFunction("SomeFunc", SomeFunc) --오브젝트에 "SomeFunc"라�
 ```lua
 print(Workspace.Floor:GetName()) --오브젝트의 이름을 문자열로 반환해요.
 ```
-<br>
 <br>
 <br>
 <br>
@@ -924,7 +885,6 @@ end
 <br>
 <br>
 <br>
-<br>
 | **bool IsCharacter()** |
 | :--- |
 
@@ -938,7 +898,6 @@ if cube:IsCharacter() == true then --오브젝트가 Character면 true를 반환
     print(cube:GetName() .. " Is Character")
 end
 ```
-<br>
 <br>
 <br>
 <br>
@@ -958,7 +917,6 @@ end
 <br>
 <br>
 <br>
-<br>
 | **bool IsFX()** |
 | :--- |
 
@@ -972,7 +930,6 @@ if cube:IsFX() == true then --오브젝트가 FX면 true를 반환해요.
     print(cube:GetName() .. " Is FX")
 end
 ```
-<br>
 <br>
 <br>
 <br>
@@ -992,7 +949,6 @@ end
 <br>
 <br>
 <br>
-<br>
 | **bool IsPointLight()** |
 | :--- |
 
@@ -1006,7 +962,6 @@ if cube:IsPointLight() == true then --오브젝트가 PointLight면 true를 반�
     print(cube:GetName() .. " Is PointLight")
 end
 ```
-<br>
 <br>
 <br>
 <br>
@@ -1026,7 +981,6 @@ end
 <br>
 <br>
 <br>
-<br>
 | **bool IsSurfaceUI()** |
 | :--- |
 
@@ -1040,7 +994,6 @@ if cube:IsSurfaceUI() == true then --오브젝트가 SurfaceUI면 true를 반환
     print(cube:GetName() .. " Is SurfaceUI")
 end
 ```
-<br>
 <br>
 <br>
 <br>
@@ -1060,7 +1013,6 @@ end
 <br>
 <br>
 <br>
-<br>
 | **bool IsItem()** |
 | :--- |
 
@@ -1074,7 +1026,6 @@ if cube:IsItem() == true then --오브젝트가 Item면 true를 반환해요.
     print(cube:GetName() .. " Is Item")
 end
 ```
-<br>
 <br>
 <br>
 <br>
@@ -1094,7 +1045,6 @@ end
 <br>
 <br>
 <br>
-<br>
 | **bool IsFolder()** |
 | :--- |
 
@@ -1108,7 +1058,6 @@ if cube:IsFolder() == true then --오브젝트가 Folder면 true를 반환해요
     print(cube:GetName() .. " Is Folder")
 end
 ```
-<br>
 <br>
 <br>
 <br>
@@ -1128,7 +1077,6 @@ end
 <br>
 <br>
 <br>
-<br>
 | **bool IsCollider()** |
 | :--- |
 
@@ -1142,7 +1090,6 @@ if cube:IsCollider() == true then --오브젝트가 Collider면 true를 반환�
     print(cube:GetName() .. " Is Collider")
 end
 ```
-<br>
 <br>
 <br>
 <br>
@@ -1162,7 +1109,6 @@ end
 <br>
 <br>
 <br>
-<br>
 | **bool IsCamera()** |
 | :--- |
 
@@ -1176,7 +1122,6 @@ if cube:IsCamera() == true then --오브젝트가 Camera면 true를 반환해요
     print(cube:GetName() .. " Is Camera")
 end
 ```
-<br>
 <br>
 <br>
 <br>
@@ -1204,7 +1149,6 @@ print(Game.SomeVector) --서버에서 값이 바뀌었지만 클라에서도 동
 <br>
 <br>
 <br>
-<br>
 | **AddReplicateValue(string ValueName, float Data, ReplicateType Type, float Time, bool bSaveToStorage)** |
 | :--- |
 
@@ -1220,7 +1164,6 @@ print(Game.SomeNumber .. " in Server")
 --클라 스크립트에서-------------
 print(Game.SomeNumber .. " in Client") --서버에서 값이 바뀌었지만 클라에서도 동일하게 출력돼요.
 ```
-<br>
 <br>
 <br>
 <br>
@@ -1242,7 +1185,6 @@ print(Game.SomeBool) --서버에서 값이 바뀌었지만 클라에서도 동�
 <br>
 <br>
 <br>
-<br>
 | **AddReplicateValue(string ValueName, string Data, ReplicateType Type, float Time, bool bSaveToStorage)** |
 | :--- |
 
@@ -1261,7 +1203,6 @@ print(Game.SomeString) --서버에서 값이 바뀌었지만 클라에서도 동
 <br>
 <br>
 <br>
-<br>
 | **AddReplicateValue(string ValueName, Color Data, ReplicateType Type, float Time, bool bSaveToStorage)** |
 | :--- |
 
@@ -1277,7 +1218,6 @@ print(Game.SomeColor)
 --클라 스크립트에서-------------
 print(Game.SomeColor) --서버에서 값이 바뀌었지만 클라에서도 동일하게 출력돼요.
 ```
-<br>
 <br>
 <br>
 <br>
