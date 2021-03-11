@@ -2,7 +2,7 @@
 
 {% page-ref page="studio-manual.md" %}
 {% page-ref page="resources.md" %}
-{% page-ref page="SUMMARY.md" %}
+{% page-ref page="api-reference" %}
 
 ## BroadcastEvent
 
@@ -11,7 +11,7 @@
 ```text
 asd
 asdasd
-asd
+asd1
 ```
 {% endtab %}
 
