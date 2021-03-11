@@ -68,11 +68,8 @@ local targetPos = cube:GetTransform():GetLocation()
 
 local angle = playerPos:CosineAngle2D(targetPos)    
 print(angle)
-
+```
 <br>
-샘플
-
-```lua
 <br>
 ## **속성**
 
@@ -80,20 +77,24 @@ print(angle)
 <br>
 | **X** |
 | :--- |
-X 좌표에요.
+
+X 좌표에요. 
 <br>
 <br>
 | **Y** |
 | :--- |
-Y 좌표에요.
+
+Y 좌표에요. 
 <br>
 <br>
 | **Z** |
 | :--- |
-Z 좌표에요.
+
+Z 좌표에요. 
 
 <br>
-샘플
+
+샘플 
 
 ```lua
 local pos1 = Vector.new(1, 2, 3) --pos1.X = 1, pos1.Y = 2, pos1.Z = 3로 할당돼요.
