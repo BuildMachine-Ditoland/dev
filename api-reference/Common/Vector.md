@@ -49,6 +49,19 @@ Vector = Vector * float
 | :--- |
 
 단위를 1로 정규화 시켜주는 함수에요. 
+
+<br>
+
+샘플 
+
+```lua
+local pos = Vector.new(200, -100, 900)
+print(pos)
+    
+pos:Normalize()   
+print(pos)
+```
+<br>
 <br>
 <br>
 | **float CosineAngle2D(Vector Other)** |
