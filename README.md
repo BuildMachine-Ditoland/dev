@@ -2,7 +2,7 @@
 
 {% page-ref page="studio-manual.md" %}
 {% page-ref page="resources.md" %}
-{% page-ref page="api-reference.zip" %}
+{% page-ref page="api-reference" %}
 
 ## BroadcastEvent
 
