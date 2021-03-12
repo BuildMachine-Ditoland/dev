@@ -11,6 +11,7 @@ local WorldString = "Hello world!"
 ```
 
 <br>
+<br>
 
 ### 함수 안에서 선언하는 지역 변수
 
@@ -24,6 +25,7 @@ local function SomeFunc()
 end
 ```
 
+<br>
 <br>
 
 ## 전역 변수
