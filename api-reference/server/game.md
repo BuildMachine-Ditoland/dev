@@ -459,114 +459,36 @@ spawner:AddSpawnObject(Toybox.Cube, spawnRate, spawnCount, spawnPos) --스포너
 | :--- |
 
 해당 유저의 게임 데이터를 저장할 수 있어요. (저장할 플레이어 이름, 데이터 키 값, 저장할 Vector 값) 
-
-<br>
-
-샘플 
-
-```lua
-local player = Game:GetAllPlayer()[1]
-local playerName = player:GetPlayerName()   
-local saveDataName = "PlayerSomeData"
-local saveDataValue = Vector.new(0, 0, 0)
-Game:SaveUserGameData(playerName, saveDataName, saveDataValue)
-```
-<br>
 <br>
 <br>
 | **SaveUserGameData(String PlayerName, String KeyString, float SaveValue)** |
 | :--- |
 
 해당 유저의 게임 데이터를 저장할 수 있어요. (저장할 플레이어 이름, 데이터 키 값, 저장할 float 값) 
-
-<br>
-
-샘플 
-
-```lua
-local player = Game:GetAllPlayer()[1]
-local playerName = player:GetPlayerName()   
-local saveDataName = "PlayerSomeData"
-local saveDataValue = 1.5
-Game:SaveUserGameData(playerName, saveDataName, saveDataValue)
-```
-<br>
 <br>
 <br>
 | **SaveUserGameData(String PlayerName, String KeyString, bool SaveValue)** |
 | :--- |
 
 해당 유저의 게임 데이터를 저장할 수 있어요. (저장할 플레이어 이름, 데이터 키 값, 저장할 Bool 값) 
-
-<br>
-
-샘플 
-
-```lua
-local player = Game:GetAllPlayer()[1]
-local playerName = player:GetPlayerName()   
-local saveDataName = "PlayerSomeData"
-local saveDataValue = true
-Game:SaveUserGameData(playerName, saveDataName, saveDataValue)
-```
-<br>
 <br>
 <br>
 | **SaveUserGameData(String PlayerName, String KeyString, int SaveValue)** |
 | :--- |
 
 해당 유저의 게임 데이터를 저장할 수 있어요. (저장할 플레이어 이름, 데이터 키 값, 저장할 Int 값) 
-
-<br>
-
-샘플 
-
-```lua
-local player = Game:GetAllPlayer()[1]
-local playerName = player:GetPlayerName()   
-local saveDataName = "PlayerSomeData"
-local saveDataValue = 1
-Game:SaveUserGameData(playerName, saveDataName, saveDataValue)
-```
-<br>
 <br>
 <br>
 | **SaveUserGameData(String PlayerName, String KeyString, String SaveValue)** |
 | :--- |
 
 해당 유저의 게임 데이터를 저장할 수 있어요. (저장할 플레이어 이름, 데이터 키 값, 저장할 String 값) 
-
-<br>
-
-샘플 
-
-```lua
-local player = Game:GetAllPlayer()[1]
-local playerName = player:GetPlayerName()   
-local saveDataName = "PlayerSomeData"
-local saveDataValue = "Hello"
-Game:SaveUserGameData(playerName, saveDataName, saveDataValue)
-```
-<br>
 <br>
 <br>
 | **SaveUserGameData(String PlayerName, String KeyString, Color SaveValue)** |
 | :--- |
 
 해당 유저의 게임 데이터를 저장할 수 있어요. (저장할 플레이어 이름, 데이터 키 값, 저장할 Color 값) 
-
-<br>
-
-샘플 
-
-```lua
-local player = Game:GetAllPlayer()[1]
-local playerName = player:GetPlayerName()   
-local saveDataName = "PlayerSomeData"
-local saveDataValue = Color.new(255, 0, 0, 255)
-Game:SaveUserGameData(playerName, saveDataName, saveDataValue)
-```
-<br>
 <br>
 <br>
 | **Object GetSavedUserGameData(String PlayerName, String KeyString)** |
