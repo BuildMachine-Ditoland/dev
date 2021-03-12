@@ -111,11 +111,3 @@
       * [Team](api-reference/Server/Team.md)
       * [UIScene](api-reference/Server/UIScene.md)
       * [Widget](api-reference/Server/Widget.md)
-
-## Tutorial
-
-## Sample
-
-## Info
-
-* [Developer Forum](https://rdevelop.ditoland.co.kr/)
