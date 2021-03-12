@@ -3,6 +3,7 @@
   * [HOME](README.md)
   * [Studio Manual](studio-manual.md)
   * [Resources](resources.md)
+  * [Coding Style](coding-style.md)
   * API Reference
     * [Enums](api-reference/Enums/README.md)
       * [Bone](api-reference/Enums/Bone.md)
