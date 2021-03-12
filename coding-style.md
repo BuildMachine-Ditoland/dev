@@ -86,12 +86,12 @@ Object.Start = 10
 
 ```lua
 -- 잘된 예
-Object.StartFunction(1, 3, "Test")
+Object:StartFunction(1, 3, "Test")
 ```
 
 ```lua
 -- 잘못된 예
-Object.StartFunction(1,3,"Test")
+Object:StartFunction(1,3,"Test")
 ```
 
 
@@ -113,7 +113,6 @@ local Color = {
 	blue = 1,
 	red  = 2 
 }
-
 ```
 
 
@@ -139,7 +138,6 @@ local Result = 10+ 20 *3^2
 if object ~= nil and value == 3 then
 	...
 end
-
 ```
 
 ```lua
@@ -147,6 +145,5 @@ end
 if object~=nil and value ==3 then
 	...
 end
-
 ```
 
