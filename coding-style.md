@@ -6,7 +6,7 @@ local로 선언한 변수를 지역 변수라고 해요.
 
 변수 이름은 첫 글자는 대문자로 시작하고 연결되는 단어는 대문자로 시작해요.
 
-```text
+```lua
 local WorldString = "Hello world!" 
 ```
 
@@ -18,7 +18,7 @@ local WorldString = "Hello world!"
 
 첫 글자는 소문자로 시작하고 연결되는 단어는 대문자로 시작해요.
 
-```text
+```lua
 local function SomeFunc()
 	local worldString = "Hello world!"
 end
@@ -30,7 +30,7 @@ end
 
 변수 이름은 대문자로 시작하고 연결되는 단어도 대문자로 시작해요.
 
-```text
+```lua
 TestWorld = 1
 ```
 
@@ -40,7 +40,7 @@ TestWorld = 1
 
 함수 이름은 대문자로 시작하고 연결되는 단어도 대문자로 시작해요.
 
-```text
+```lua
 local function WorldStart()
    print("Hello World!")
 end
@@ -55,7 +55,7 @@ WorldStart()
 
 모듈 이름은 대문자로 시작하고 연결되는 단어도 대문자로 시작해요.
 
-```text
+```lua
 local TestModules = {}
 	...
 return TestModules
@@ -67,7 +67,7 @@ return TestModules
 
 오브젝트의 함수는 다음과 같이 ":"으로 표시해요.
 
-```text
+```lua
 Object:StartFunction()
 Object:Function1():Function2()
 ```
@@ -76,7 +76,7 @@ Object:Function1():Function2()
 
 오브젝트의 변수는 다음과 같이 "."으로 표시해요.
 
-```text
+```lua
 Object.Start = 10
 ```
 
@@ -84,12 +84,12 @@ Object.Start = 10
 
 함수의 인자 값은 다음과 같이 띄어쓰기합니다.
 
-```text
+```lua
 -- 잘된 예
 Object.StartFunction(1, 3, "Test")
 ```
 
-```text
+```lua
 -- 잘못된 예
 Object.StartFunction(1,3,"Test")
 ```
@@ -98,7 +98,7 @@ Object.StartFunction(1,3,"Test")
 
 줄 바꿈은 다음과 같이 해요.
 
-```text
+```lua
 -- 잘된 예
 local Color =
 {
@@ -107,7 +107,7 @@ local Color =
 }
 ```
 
-```text
+```lua
 -- 잘못된 예
 local Color = {
 	blue = 1,
@@ -120,12 +120,12 @@ local Color = {
 
 연산은 띄어쓰기를 다음과 같이 해요.
 
-```text
+```lua
 -- 잘된 예
 local Result = 10 + 20 * 3 ^ 2
 ```
 
-```text
+```lua
 -- 잘못된 예
 local Result = 10+ 20 *3^2
 ```
@@ -134,7 +134,7 @@ local Result = 10+ 20 *3^2
 
 조건문의 띄어쓰기는 다음과 같이 해요.
 
-```text
+```lua
 -- 잘된 예
 if object ~= nil and value == 3 then
 	...
@@ -142,7 +142,7 @@ end
 
 ```
 
-```text
+```lua
 -- 잘못된 예
 if object~=nil and value ==3 then
 	...
