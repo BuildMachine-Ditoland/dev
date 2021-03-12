@@ -596,12 +596,6 @@ Game:DeleteObject(cube) --오브젝트를 파괴해요.
 
 설정된 시작 지점에서 원하는 방향으로 지정된 거리 만큼의 충돌 리스트들을 가져올 수 있어요. (시작 지점 Vector, 목표 지점 Vector, 거리 값) 
 <br>
-<br>
-| **List<HitResult> LineTraceList(Vector Start, Vector Dir, float Distance, string UserCollisionName)** |
-| :--- |
-
-설정된 시작 지점에서 원하는 방향으로 지정된 거리 만큼의 유저가 추가한 충돌 타입과의 충돌 리스트들을 가져올 수 있어요. (시작 지점 Vector, 목표 지점 Vector, 거리 값) 
-<br>
 샘플
 
 ```lua

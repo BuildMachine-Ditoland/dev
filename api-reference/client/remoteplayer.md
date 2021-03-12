@@ -69,13 +69,7 @@ player:CreateSound(Workspace.Sound)
 | **RModeHitResult LineTrace(Vector Start, Vector Dir, float Distance)** |
 | :--- |
 
-설정된 시작 지점에서 원하는 방향으로 지정된 거리 만큼 충돌이 있는지 체크할 수 있어요. (시작 지점 Vector, 목표 지점 Vector, 거리 값) 
-<br>
-<br>
-| **RModeHitResult LineTrace(Vector Start, Vector Dir, float Distance, String UserCollisionTypeName)** |
-| :--- |
-
-설정된 시작 지점에서 원하는 방향으로 지정된 거리 만큼 유저가 추가한 충돌 타입과의 충돌이 있는지 체크할 수 있어요. (시작 지점 Vector, 목표 지점 Vector, 거리 값, 원하는 유저 충돌 타입 이름) 
+두 지점 간의 오브젝트의 충돌을 체크할 수 있어요. (시작 지점 Vector, 원하는 지점 Vector, 지점 간의 거리) 
 
 <br>
 
