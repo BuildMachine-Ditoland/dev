@@ -17,7 +17,7 @@
 
 | Icon | Action | Key | Description |
 | :--- | :--- | :---: | :--- |
-| ![New](.gitbook/assets/new%20%285%29%20%2819%29.png) | New | Ctrl+N | 템플릿 팝업을 열어 다른 템플릿 맵을 실행할 수 있습니다. |
+| ![New](.gitbook/assets/new%20%285%29%20%2819%29%20%2819%29.png) | New | Ctrl+N | 템플릿 팝업을 열어 다른 템플릿 맵을 실행할 수 있습니다. |
 |  | Open From File | Ctrl+O | 로컬 파일이 저장된 폴더를 엽니다. |
 |  | Open From DITOLAND | Ctrl+Shift+O | 템플릿 팝업을 열어 DITOLAND 클라우드에 저장된 파일을 보여줍니다. |
 | ![Save](.gitbook/assets/save%20%283%29%20%287%29.png) | Save To File | Ctrl+S | 현재 편집중인 맵을 로컬 파일로 저장합니다. |
@@ -34,7 +34,7 @@
 | :--- | :--- | :---: | :--- |
 | ![Publish](.gitbook/assets/publish%20%281%29%20%284%29.png) | Publish To DITOLAND |  | File Menu의 Publish To DITOLAND 기능과 동일합니다.  현재 편집중인 맵을 클라우드 저장소에 저장합니다. |
 | ![Save](.gitbook/assets/save%20%283%29%20%289%29.png) | Save To File | Ctrl+S | File Menu의 Save To File기능과 동일합니다.  현재 편집중인 맵을 로컬 파일로 저장합니다 |
-| ![Save](.gitbook/assets/new%20%285%29.png) | New | Ctrl+N | File Menu의 New 기능과 동일합니다.  템플릿 팝업을 열어 다른 템플릿 맵을 실행할 수 있습니다. |
+| ![Save](.gitbook/assets/new%20%285%29%20%2819%29.png) | New | Ctrl+N | File Menu의 New 기능과 동일합니다.  템플릿 팝업을 열어 다른 템플릿 맵을 실행할 수 있습니다. |
 
 ## ToolBar
 
@@ -58,14 +58,14 @@ Play Test 탭에선 실제로 지금까지 만든 게임을 업로드 전에 미
 
 | Icon | Action | Description |
 | :--- | :--- | :--- |
-| ![Play Mode](.gitbook/assets/play%20%285%29%20%287%29.png) | Play Mode | 실제 게임과 동일하게 시뮬레이션 하며, 캐릭터를 0,0,0 좌표로 스폰 됩니다. |
-| ![Play Here Mode](.gitbook/assets/playhere%20%285%29.png) | Play Here Mode | 캐릭터가 무조건 현재 카메라 좌표에서 스폰 되며 시뮬레이션을 시작합니다. |
-| ![Run Camera Mode](.gitbook/assets/runcamera%20%282%29%20%284%29.png) | Run Camera Mode | 게임 시뮬레이션은 시작하지만 플레이어블 캐릭터는 생성하지 않습니다. 하지만 FreeCam 모드로 게임을 탐색할 수 있습니다. |
+| ![Play Mode](.gitbook/assets/play%20%285%29%20%2813%29%20%287%29.png) | Play Mode | 실제 게임과 동일하게 시뮬레이션 하며, 캐릭터를 0,0,0 좌표로 스폰 됩니다. |
+| ![Play Here Mode](.gitbook/assets/playhere%20%285%29%20%286%29.png) | Play Here Mode | 캐릭터가 무조건 현재 카메라 좌표에서 스폰 되며 시뮬레이션을 시작합니다. |
+| ![Run Camera Mode](.gitbook/assets/runcamera%20%282%29%20%281%29%20%284%29.png) | Run Camera Mode | 게임 시뮬레이션은 시작하지만 플레이어블 캐릭터는 생성하지 않습니다. 하지만 FreeCam 모드로 게임을 탐색할 수 있습니다. |
 | ![Multi Test](.gitbook/assets/multiplay.png) | Multi Test | Player를 거치지 않고 다수의 플레이어와 함께 게임을 플레이하는 상황을 재현할 수 있습니다. |
 
 ### Object Control Tab
 
-![](.gitbook/assets/objectcontroltab-2.png)
+![](.gitbook/assets/objectcontroltab-2%20%282%29.png)
 
 Object Control 탭에서는 오브젝트의 위치 , 크기 , 각도를 변경할 수 있는 기본 동작들을 설정할 수 있습니다. 총 4가지 모드를 지원하며 현재 활성화된 모드는 주황색으로 표시됩니다.
 
@@ -73,26 +73,26 @@ Object Control 탭에서는 오브젝트의 위치 , 크기 , 각도를 변경�
 
 현재 활성화된 모드에 따라서 객체를 선택했을 때 기즈모\(Gizmo\)가 각각 다르게 출력됩니다.
 
-![](.gitbook/assets/gizmo%20%285%29%20%285%29.png)
+![](.gitbook/assets/gizmo%20%285%29%20%288%29%20%285%29.png)
 
 | Icon | Action | Key | Description |
 | :--- | :--- | :---: | :--- |
 | ![Select](.gitbook/assets/select%20%282%29%20%288%29.png) | Select | 1 | 객체를 선택합니다. 선택한 객체는 드래그 동작으로 위치를 변경시킬 수 있습니다. |
-| ![Move](.gitbook/assets/move%20%285%29%20%287%29.png) | Move | 2 | 객체의 위치를 변경할 수 있습니다. |
+| ![Move](.gitbook/assets/move%20%285%29%20%2814%29%20%287%29.png) | Move | 2 | 객체의 위치를 변경할 수 있습니다. |
 | ![Rotate](.gitbook/assets/rotate.png) | Rotate | 3 | 객체의 각도를 변경할 수 있습니다. |
-| ![Scale](.gitbook/assets/scale%20%285%29%20%2814%29.png) | Scale Mode | 4 | 객체의 사이즈 및 스케일을 변경할 수 있습니다. |
+| ![Scale](.gitbook/assets/scale%20%285%29%20%2811%29%20%2814%29.png) | Scale Mode | 4 | 객체의 사이즈 및 스케일을 변경할 수 있습니다. |
 
 ### Object Control Setting Tab
 
-![](.gitbook/assets/objectcontrolsettingtab%20%285%29%20%2811%29.png)
+![](.gitbook/assets/objectcontrolsettingtab%20%285%29%20%2813%29%20%2811%29.png)
 
 Object Control의 방식이나 값들을 변경할 때 사용합니다.
 
 | Icon | Action | Description |
 | :--- | :--- | :--- |
 | ![World](.gitbook/assets/world%20%284%29.png) | World Coordination | 현재 기즈모를 World 축으로 사용합니다.  클릭할 경우 Local Coordination으로 변경합니다. |
-| ![Local](.gitbook/assets/local-4.png) | Local Coordination | 현재 기즈모를 Local 축으로 사용합니다.  클릭할 경우 World Coordination으로 변경합니다. |
-| ![Grid](.gitbook/assets/gridsnap%20%285%29%20%2814%29.png) | Grid Snap | 기즈모 및 드래그로 객체를 이동시킬 때 Move , Rotate , Scale Size 값들을 변경할 수 있습니다. |
+| ![Local](.gitbook/assets/local-4%20%284%29.png) | Local Coordination | 현재 기즈모를 Local 축으로 사용합니다.  클릭할 경우 World Coordination으로 변경합니다. |
+| ![Grid](.gitbook/assets/gridsnap%20%285%29%20%2814%29%20%2814%29.png) | Grid Snap | 기즈모 및 드래그로 객체를 이동시킬 때 Move , Rotate , Scale Size 값들을 변경할 수 있습니다. |
 
 ### Base Object Select Tab
 
@@ -103,11 +103,11 @@ Object Control의 방식이나 값들을 변경할 때 사용합니다.
 | Icon | Action | Description |
 | :--- | :--- | :--- |
 | ![Cube](.gitbook/assets/cube-3.png) | Cube | 육면체 객체를 배치합니다. |
-| ![Sphere](.gitbook/assets/sphere%20%285%29%20%2812%29.png) | Sphere | 구형 객체를 배치합니다. |
-| ![Cylinder](.gitbook/assets/cylinder-4.png) | Cylinder | 원통형 객체를 배치합니다 |
-| ![Plane](.gitbook/assets/plane%20%285%29%20%284%29.png) | Plane | 판형 객체를 배치합니다 |
+| ![Sphere](.gitbook/assets/sphere%20%285%29%20%289%29%20%2812%29.png) | Sphere | 구형 객체를 배치합니다. |
+| ![Cylinder](.gitbook/assets/cylinder-4%20%283%29.png) | Cylinder | 원통형 객체를 배치합니다 |
+| ![Plane](.gitbook/assets/plane%20%285%29%20%289%29%20%284%29.png) | Plane | 판형 객체를 배치합니다 |
 | ![Pyramid](.gitbook/assets/pyramid%20%282%29%20%2810%29.png) | Pyramid | 피라미드형 객체를 배치합니다 |
-| ![Wedge](.gitbook/assets/wedge%20%285%29%20%2812%29.png) | Wedge | 삼각기둥형 객체를 배치합니다 |
+| ![Wedge](.gitbook/assets/wedge%20%285%29%20%282%29%20%2812%29.png) | Wedge | 삼각기둥형 객체를 배치합니다 |
 
 ### Object Color & Material Select Tab
 
@@ -123,12 +123,12 @@ FX 객체를 배치할 때 배치되는 FX 종류를 설정할 때 사용합니�
 
 | Icon | Action | Description |
 | :--- | :--- | :--- |
-| ![Emitter](.gitbook/assets/emitter-2.png) | Emitter | Emitter FX를 배치합니다. |
+| ![Emitter](.gitbook/assets/emitter-2%20%285%29.png) | Emitter | Emitter FX를 배치합니다. |
 | ![Smoke](.gitbook/assets/smoke%20%282%29.png) | Smoke | Smoke FX를 배치합니다. |
-| ![Trail](.gitbook/assets/trail%20%285%29%20%2813%29.png) | Trail | Trail FX를 배치합니다 |
-| ![Fire](.gitbook/assets/fire-3.png) | Fire | Fire FX를 배치합니다 |
-| ![Beam](.gitbook/assets/beam%20%285%29%20%284%29.png) | Beam | Beam FX를 배치합니다 |
-| ![Explosion](.gitbook/assets/explosion%20%283%29%20%2810%29.png) | Explosion | Explosion FX를 배치합니다 |
+| ![Trail](.gitbook/assets/trail%20%285%29%20%2814%29%20%2813%29.png) | Trail | Trail FX를 배치합니다 |
+| ![Fire](.gitbook/assets/fire-3%20%282%29.png) | Fire | Fire FX를 배치합니다 |
+| ![Beam](.gitbook/assets/beam%20%285%29%20%2814%29%20%284%29.png) | Beam | Beam FX를 배치합니다 |
+| ![Explosion](.gitbook/assets/explosion%20%283%29%20%285%29%20%2810%29.png) | Explosion | Explosion FX를 배치합니다 |
 
 ### UI 편집 시 ToolBar 메뉴
 
@@ -138,12 +138,12 @@ UI 편집 모드가 되면 ToolBar의 메뉴들이 변경됩니다. UI 편집을
 
 | Icon | Action | Description |
 | :--- | :--- | :--- |
-| ![Frame](.gitbook/assets/frame-4.png) | Frame Widget | Frame Widget 객체를 배치합니다. |
-| ![Image](.gitbook/assets/image%20%285%29%20%284%29.png) | Image Widget | Image Widget 객체를 배치합니다. |
-| ![Button](.gitbook/assets/button%20%285%29%20%281%29.png) | Button Widget | Button Widget 객체를 배치합니다. |
-| ![](.gitbook/assets/text%20%285%29%20%286%29.png) | Text Widget | Text Widget 객체를 배치합니다. |
-| ![TextBox](.gitbook/assets/textbox%20%285%29%20%2810%29.png) | TextBox Widget | TextBox Widget 객체를 배치합니다. |
-| ![ScrollBox](.gitbook/assets/scrollbox%20%285%29%20%2810%29.png) | ScrollBox Widget | ScrollBox Widget 객체를 배치합니다. |
+| ![Frame](.gitbook/assets/frame-4%20%286%29.png) | Frame Widget | Frame Widget 객체를 배치합니다. |
+| ![Image](.gitbook/assets/image%20%285%29%20%289%29%20%284%29.png) | Image Widget | Image Widget 객체를 배치합니다. |
+| ![Button](.gitbook/assets/button%20%285%29%20%2813%29%20%281%29.png) | Button Widget | Button Widget 객체를 배치합니다. |
+| ![](.gitbook/assets/text%20%285%29%20%289%29%20%286%29.png) | Text Widget | Text Widget 객체를 배치합니다. |
+| ![TextBox](.gitbook/assets/textbox%20%285%29%20%289%29%20%2810%29.png) | TextBox Widget | TextBox Widget 객체를 배치합니다. |
+| ![ScrollBox](.gitbook/assets/scrollbox%20%285%29%20%289%29%20%2810%29.png) | ScrollBox Widget | ScrollBox Widget 객체를 배치합니다. |
 
 ## 태스크 바
 
@@ -156,9 +156,9 @@ TaskBar에서는 ScriptEditor를 제외한 1차 팝업들을 On / Off 할 수 �
 | Icon | Action | Description |
 | :--- | :--- | :--- |
 | ![WorldTree](.gitbook/assets/worldtree%20%282%29%20%282%29.png) | WorldTree | WolrdTree를 On / Off 합니다 |
-| ![Property](.gitbook/assets/property%20%285%29%20%287%29.png) | Property | Property를 On / Off 합니다 |
+| ![Property](.gitbook/assets/property%20%285%29%20%2812%29%20%287%29.png) | Property | Property를 On / Off 합니다 |
 | ![ToolBox](.gitbook/assets/toolbox%20%285%29%20%283%29.png) | ToolBox | ToolBox를 On / Off 합니다 |
-| ![Palette](.gitbook/assets/palette%20%286%29%20%2811%29.png) | Palette | Palette를 On / Off 합니다 |
+| ![Palette](.gitbook/assets/palette%20%286%29%20%288%29%20%2811%29.png) | Palette | Palette를 On / Off 합니다 |
 | ![UI Editor](.gitbook/assets/UIeditor.png) | UI Editor | UI Editor를 On / Off 합니다 |
 
 ## 카메라 이동
