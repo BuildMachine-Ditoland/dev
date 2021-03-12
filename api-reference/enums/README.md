@@ -1,19 +1,38 @@
 # Enums
-### [**Bone**](Bone.md)
-### [**CollisionResponse**](CollisionResponse.md)
-### [**ControlMode**](ControlMode.md)
-### [**DivideTeamType**](DivideTeamType.md)
-### [**Key**](Key.md)
-### [**KeyInputType**](KeyInputType.md)
-### [**ModeAnimStateType**](ModeAnimStateType.md)
-### [**ObjectSelectType**](ObjectSelectType.md)
-### [**PointSpawnType**](PointSpawnType.md)
-### [**ProgressFillType**](ProgressFillType.md)
-### [**ProjectionType**](ProjectionType.md)
-### [**ReplicateType**](ReplicateType.md)
-### [**ScrollOrientationType**](ScrollOrientationType.md)
-### [**SimulatePhysicsType**](SimulatePhysicsType.md)
-### [**SpawnType**](SpawnType.md)
-### [**TransformPlayType**](TransformPlayType.md)
-### [**UIDisplayType**](UIDisplayType.md)
-### [**WidgetAnchorType**](WidgetAnchorType.md)
+
+## [**Bone**](bone.md)
+
+## [**CollisionResponse**](collisionresponse.md)
+
+## [**ControlMode**](controlmode.md)
+
+## [**DivideTeamType**](divideteamtype.md)
+
+## [**Key**](key.md)
+
+## [**KeyInputType**](keyinputtype.md)
+
+## [**ModeAnimStateType**](modeanimstatetype.md)
+
+## [**ObjectSelectType**](objectselecttype.md)
+
+## [**PointSpawnType**](pointspawntype.md)
+
+## [**ProgressFillType**](progressfilltype.md)
+
+## [**ProjectionType**](projectiontype.md)
+
+## [**ReplicateType**](replicatetype.md)
+
+## [**ScrollOrientationType**](scrollorientationtype.md)
+
+## [**SimulatePhysicsType**](simulatephysicstype.md)
+
+## [**SpawnType**](spawntype.md)
+
+## [**TransformPlayType**](transformplaytype.md)
+
+## [**UIDisplayType**](uidisplaytype.md)
+
+## [**WidgetAnchorType**](widgetanchortype.md)
+

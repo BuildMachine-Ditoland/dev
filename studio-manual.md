@@ -6,44 +6,41 @@
 
 편집된 스튜디오의 저장 및 불러오기등의 기능은 여기서 사용할 수 있습니다.
 
-
 ![](.gitbook/assets/20200804_162438.png)
-
 
 1. 파일 메뉴 \(FileMenu\)
 2. 실행 취소 , 다시 실행 \(Undo , Redo\)
 3. MultiTest 탭 메뉴
-4. 빠른 실행 메뉴 (Quick Menu)
-
+4. 빠른 실행 메뉴 \(Quick Menu\)
 
 ### 파일 메뉴 - File Menu
 
 | Icon | Action | Key | Description |
 | :--- | :--- | :---: | :--- |
-| ![New](.gitbook/assets/new-5%20%281%29.png) | New | Ctrl+N | 템플릿 팝업을 열어 다른 템플릿 맵을 실행할 수 있습니다. |
+| ![New](.gitbook/assets/new%20%285%29%20%2819%29.png) | New | Ctrl+N | 템플릿 팝업을 열어 다른 템플릿 맵을 실행할 수 있습니다. |
 |  | Open From File | Ctrl+O | 로컬 파일이 저장된 폴더를 엽니다. |
 |  | Open From DITOLAND | Ctrl+Shift+O | 템플릿 팝업을 열어 DITOLAND 클라우드에 저장된 파일을 보여줍니다. |
-| ![Save](.gitbook/assets/save-2.png) | Save To File | Ctrl+S | 현재 편집중인 맵을 로컬 파일로 저장합니다. |
-| ![Save](.gitbook/assets/save-2%20%282%29.png) | Save To File As | Ctrl+Shift+S | 현재 편집중인 맵을 새 로컬 파일로 저장합니다. |
-|  | Publish To DITOLAND | | 현재 편집중인 맵을 클라우드 저장소에 저장합니다. |
-|  | Publish To DITOLAND As | | 현재 편집중인 맵을 클라우드 저장소의 새 슬롯에 저장합니다. |
-|  | Reset | | WorldTree , Property , ToolBOX , Palette , Script Editor의 위치를 초기 위치로 되돌립니다. |
-|  | Log Out | | 계정을 로그아웃하며 로그인 페이지로 이동합니다. |
-|  | Exit | | 스튜디오를 종료합니다. |
+| ![Save](.gitbook/assets/save%20%283%29%20%287%29.png) | Save To File | Ctrl+S | 현재 편집중인 맵을 로컬 파일로 저장합니다. |
+| ![Save](.gitbook/assets/save%20%283%29%20%2812%29.png) | Save To File As | Ctrl+Shift+S | 현재 편집중인 맵을 새 로컬 파일로 저장합니다. |
+|  | Publish To DITOLAND |  | 현재 편집중인 맵을 클라우드 저장소에 저장합니다. |
+|  | Publish To DITOLAND As |  | 현재 편집중인 맵을 클라우드 저장소의 새 슬롯에 저장합니다. |
+|  | Reset |  | WorldTree , Property , ToolBOX , Palette , Script Editor의 위치를 초기 위치로 되돌립니다. |
+|  | Log Out |  | 계정을 로그아웃하며 로그인 페이지로 이동합니다. |
+|  | Exit |  | 스튜디오를 종료합니다. |
 
 ### 빠른 실행 메뉴 - Quick Menu
 
 | Icon | Action | Key | Description |
 | :--- | :--- | :---: | :--- |
-| ![Publish](.gitbook/assets/publish-3.png) | Publish To DITOLAND |  | File Menu의 Publish To DITOLAND 기능과 동일합니다.  현재 편집중인 맵을 클라우드 저장소에 저장합니다. |
-| ![Save](.gitbook/assets/save-2%20%281%29.png) | Save To File | Ctrl+S | File Menu의 Save To File기능과 동일합니다.  현재 편집중인 맵을 로컬 파일로 저장합니다 |
-| ![Save](.gitbook/assets/new-5.png) | New | Ctrl+N | File Menu의 New 기능과 동일합니다.  템플릿 팝업을 열어 다른 템플릿 맵을 실행할 수 있습니다. |
+| ![Publish](.gitbook/assets/publish%20%281%29%20%284%29.png) | Publish To DITOLAND |  | File Menu의 Publish To DITOLAND 기능과 동일합니다.  현재 편집중인 맵을 클라우드 저장소에 저장합니다. |
+| ![Save](.gitbook/assets/save%20%283%29%20%289%29.png) | Save To File | Ctrl+S | File Menu의 Save To File기능과 동일합니다.  현재 편집중인 맵을 로컬 파일로 저장합니다 |
+| ![Save](.gitbook/assets/new%20%285%29.png) | New | Ctrl+N | File Menu의 New 기능과 동일합니다.  템플릿 팝업을 열어 다른 템플릿 맵을 실행할 수 있습니다. |
 
 ## ToolBar
 
-메뉴바 하단에 스튜디오에서 사용되는 기능들이 나열되어있습니다. 
+메뉴바 하단에 스튜디오에서 사용되는 기능들이 나열되어있습니다.
 
-스튜디오에서 월드를 편집할때 쓰이는 대부분의 기능을 여기에서 간단하게 사용할 수 있습니다. 
+스튜디오에서 월드를 편집할때 쓰이는 대부분의 기능을 여기에서 간단하게 사용할 수 있습니다.
 
 ToolBar에서 사용할 수 있는 기능들은 편집 상황에 따라서 변경됩니다.
 
@@ -61,9 +58,9 @@ Play Test 탭에선 실제로 지금까지 만든 게임을 업로드 전에 미
 
 | Icon | Action | Description |
 | :--- | :--- | :--- |
-| ![Play Mode](.gitbook/assets/play-2.png) | Play Mode | 실제 게임과 동일하게 시뮬레이션 하며, 캐릭터를 0,0,0 좌표로 스폰 됩니다. |
-| ![Play Here Mode](.gitbook/assets/playhere-1.png) | Play Here Mode | 캐릭터가 무조건 현재 카메라 좌표에서 스폰 되며 시뮬레이션을 시작합니다. |
-| ![Run Camera Mode](.gitbook/assets/runcamera-3.png) | Run Camera Mode | 게임 시뮬레이션은 시작하지만 플레이어블 캐릭터는 생성하지 않습니다. 하지만 FreeCam 모드로 게임을 탐색할 수 있습니다. |
+| ![Play Mode](.gitbook/assets/play%20%285%29%20%287%29.png) | Play Mode | 실제 게임과 동일하게 시뮬레이션 하며, 캐릭터를 0,0,0 좌표로 스폰 됩니다. |
+| ![Play Here Mode](.gitbook/assets/playhere%20%285%29.png) | Play Here Mode | 캐릭터가 무조건 현재 카메라 좌표에서 스폰 되며 시뮬레이션을 시작합니다. |
+| ![Run Camera Mode](.gitbook/assets/runcamera%20%282%29%20%284%29.png) | Run Camera Mode | 게임 시뮬레이션은 시작하지만 플레이어블 캐릭터는 생성하지 않습니다. 하지만 FreeCam 모드로 게임을 탐색할 수 있습니다. |
 | ![Multi Test](.gitbook/assets/multiplay.png) | Multi Test | Player를 거치지 않고 다수의 플레이어와 함께 게임을 플레이하는 상황을 재현할 수 있습니다. |
 
 ### Object Control Tab
@@ -76,26 +73,26 @@ Object Control 탭에서는 오브젝트의 위치 , 크기 , 각도를 변경�
 
 현재 활성화된 모드에 따라서 객체를 선택했을 때 기즈모\(Gizmo\)가 각각 다르게 출력됩니다.
 
-![](.gitbook/assets/gizmo-3.png)
+![](.gitbook/assets/gizmo%20%285%29%20%285%29.png)
 
 | Icon | Action | Key | Description |
 | :--- | :--- | :---: | :--- |
-| ![Select](.gitbook/assets/select-2.png) | Select | 1 | 객체를 선택합니다. 선택한 객체는 드래그 동작으로 위치를 변경시킬 수 있습니다. |
-| ![Move](.gitbook/assets/move-3.png) | Move | 2 | 객체의 위치를 변경할 수 있습니다. |
-| ![Rotate](.gitbook/assets/rotate.png) | Rotate | 3 |  객체의 각도를 변경할 수 있습니다. |
-| ![Scale](.gitbook/assets/scale-1.png) | Scale Mode | 4 |  객체의 사이즈 및 스케일을 변경할 수 있습니다. |
+| ![Select](.gitbook/assets/select%20%282%29%20%288%29.png) | Select | 1 | 객체를 선택합니다. 선택한 객체는 드래그 동작으로 위치를 변경시킬 수 있습니다. |
+| ![Move](.gitbook/assets/move%20%285%29%20%287%29.png) | Move | 2 | 객체의 위치를 변경할 수 있습니다. |
+| ![Rotate](.gitbook/assets/rotate.png) | Rotate | 3 | 객체의 각도를 변경할 수 있습니다. |
+| ![Scale](.gitbook/assets/scale%20%285%29%20%2814%29.png) | Scale Mode | 4 | 객체의 사이즈 및 스케일을 변경할 수 있습니다. |
 
 ### Object Control Setting Tab
 
-![](.gitbook/assets/objectcontrolsettingtab.png)
+![](.gitbook/assets/objectcontrolsettingtab%20%285%29%20%2811%29.png)
 
 Object Control의 방식이나 값들을 변경할 때 사용합니다.
 
 | Icon | Action | Description |
 | :--- | :--- | :--- |
-| ![World](.gitbook/assets/world.png) | World Coordination | 현재 기즈모를 World 축으로 사용합니다.  클릭할 경우 Local Coordination으로 변경합니다. |
+| ![World](.gitbook/assets/world%20%284%29.png) | World Coordination | 현재 기즈모를 World 축으로 사용합니다.  클릭할 경우 Local Coordination으로 변경합니다. |
 | ![Local](.gitbook/assets/local-4.png) | Local Coordination | 현재 기즈모를 Local 축으로 사용합니다.  클릭할 경우 World Coordination으로 변경합니다. |
-| ![Grid](.gitbook/assets/gridsnap-3.png) | Grid Snap | 기즈모 및 드래그로 객체를 이동시킬 때 Move , Rotate , Scale Size 값들을 변경할 수 있습니다. |
+| ![Grid](.gitbook/assets/gridsnap%20%285%29%20%2814%29.png) | Grid Snap | 기즈모 및 드래그로 객체를 이동시킬 때 Move , Rotate , Scale Size 값들을 변경할 수 있습니다. |
 
 ### Base Object Select Tab
 
@@ -106,11 +103,11 @@ Object Control의 방식이나 값들을 변경할 때 사용합니다.
 | Icon | Action | Description |
 | :--- | :--- | :--- |
 | ![Cube](.gitbook/assets/cube-3.png) | Cube | 육면체 객체를 배치합니다. |
-| ![Sphere](.gitbook/assets/sphere-4.png) | Sphere | 구형 객체를 배치합니다. |
+| ![Sphere](.gitbook/assets/sphere%20%285%29%20%2812%29.png) | Sphere | 구형 객체를 배치합니다. |
 | ![Cylinder](.gitbook/assets/cylinder-4.png) | Cylinder | 원통형 객체를 배치합니다 |
-| ![Plane](.gitbook/assets/plane.png) | Plane | 판형 객체를 배치합니다 |
-| ![Pyramid](.gitbook/assets/pyramid-3.png) | Pyramid | 피라미드형 객체를 배치합니다 |
-| ![Wedge](.gitbook/assets/wedge-1.png) | Wedge | 삼각기둥형 객체를 배치합니다 |
+| ![Plane](.gitbook/assets/plane%20%285%29%20%284%29.png) | Plane | 판형 객체를 배치합니다 |
+| ![Pyramid](.gitbook/assets/pyramid%20%282%29%20%2810%29.png) | Pyramid | 피라미드형 객체를 배치합니다 |
+| ![Wedge](.gitbook/assets/wedge%20%285%29%20%2812%29.png) | Wedge | 삼각기둥형 객체를 배치합니다 |
 
 ### Object Color & Material Select Tab
 
@@ -127,11 +124,11 @@ FX 객체를 배치할 때 배치되는 FX 종류를 설정할 때 사용합니�
 | Icon | Action | Description |
 | :--- | :--- | :--- |
 | ![Emitter](.gitbook/assets/emitter-2.png) | Emitter | Emitter FX를 배치합니다. |
-| ![Smoke](.gitbook/assets/smoke-3.png) | Smoke | Smoke FX를 배치합니다. |
-| ![Trail](.gitbook/assets/trail-3.png) | Trail | Trail FX를 배치합니다 |
+| ![Smoke](.gitbook/assets/smoke%20%282%29.png) | Smoke | Smoke FX를 배치합니다. |
+| ![Trail](.gitbook/assets/trail%20%285%29%20%2813%29.png) | Trail | Trail FX를 배치합니다 |
 | ![Fire](.gitbook/assets/fire-3.png) | Fire | Fire FX를 배치합니다 |
-| ![Beam](.gitbook/assets/beam-5.png) | Beam | Beam FX를 배치합니다 |
-| ![Explosion](.gitbook/assets/explosion.png) | Explosion | Explosion FX를 배치합니다 |
+| ![Beam](.gitbook/assets/beam%20%285%29%20%284%29.png) | Beam | Beam FX를 배치합니다 |
+| ![Explosion](.gitbook/assets/explosion%20%283%29%20%2810%29.png) | Explosion | Explosion FX를 배치합니다 |
 
 ### UI 편집 시 ToolBar 메뉴
 
@@ -142,11 +139,11 @@ UI 편집 모드가 되면 ToolBar의 메뉴들이 변경됩니다. UI 편집을
 | Icon | Action | Description |
 | :--- | :--- | :--- |
 | ![Frame](.gitbook/assets/frame-4.png) | Frame Widget | Frame Widget 객체를 배치합니다. |
-| ![Image](.gitbook/assets/image-5.png) | Image Widget | Image Widget 객체를 배치합니다. |
-| ![Button](.gitbook/assets/button.png) | Button Widget | Button Widget 객체를 배치합니다. |
-| ![](.gitbook/assets/text-5.png) | Text Widget | Text Widget 객체를 배치합니다. |
-| ![TextBox](.gitbook/assets/textbox.png) | TextBox Widget | TextBox Widget 객체를 배치합니다. |
-| ![ScrollBox](.gitbook/assets/scrollbox-3.png) | ScrollBox Widget | ScrollBox Widget 객체를 배치합니다. |
+| ![Image](.gitbook/assets/image%20%285%29%20%284%29.png) | Image Widget | Image Widget 객체를 배치합니다. |
+| ![Button](.gitbook/assets/button%20%285%29%20%281%29.png) | Button Widget | Button Widget 객체를 배치합니다. |
+| ![](.gitbook/assets/text%20%285%29%20%286%29.png) | Text Widget | Text Widget 객체를 배치합니다. |
+| ![TextBox](.gitbook/assets/textbox%20%285%29%20%2810%29.png) | TextBox Widget | TextBox Widget 객체를 배치합니다. |
+| ![ScrollBox](.gitbook/assets/scrollbox%20%285%29%20%2810%29.png) | ScrollBox Widget | ScrollBox Widget 객체를 배치합니다. |
 
 ## 태스크 바
 
@@ -158,10 +155,10 @@ TaskBar에서는 ScriptEditor를 제외한 1차 팝업들을 On / Off 할 수 �
 
 | Icon | Action | Description |
 | :--- | :--- | :--- |
-| ![WorldTree](.gitbook/assets/worldtree-4.png) | WorldTree | WolrdTree를 On / Off 합니다 |
-| ![Property](.gitbook/assets/property-2.png) | Property | Property를 On / Off 합니다 |
-| ![ToolBox](.gitbook/assets/toolbox-4.png) | ToolBox | ToolBox를 On / Off 합니다 |
-| ![Palette](.gitbook/assets/palette-5.png) | Palette | Palette를 On / Off 합니다 |
+| ![WorldTree](.gitbook/assets/worldtree%20%282%29%20%282%29.png) | WorldTree | WolrdTree를 On / Off 합니다 |
+| ![Property](.gitbook/assets/property%20%285%29%20%287%29.png) | Property | Property를 On / Off 합니다 |
+| ![ToolBox](.gitbook/assets/toolbox%20%285%29%20%283%29.png) | ToolBox | ToolBox를 On / Off 합니다 |
+| ![Palette](.gitbook/assets/palette%20%286%29%20%2811%29.png) | Palette | Palette를 On / Off 합니다 |
 | ![UI Editor](.gitbook/assets/UIeditor.png) | UI Editor | UI Editor를 On / Off 합니다 |
 
 ## 카메라 이동
@@ -186,6 +183,7 @@ TaskBar에서는 ScriptEditor를 제외한 1차 팝업들을 On / Off 할 수 �
 | Mouse Scroll Wheel Up/Down | 전진/후진 | 카메라가 천천히 전진/후진 합니다. |
 
 ## 멀티 플레이 테스트
+
 Play Test Tab
 
 Menu Bar의 MultiTest 탭메뉴에서 Client 수를 설정하여 멀티 플레이 테스트를 실행할 수 있습니다.
@@ -198,77 +196,79 @@ Menu Bar의 MultiTest 탭메뉴에서 Client 수를 설정하여 멀티 플레�
 
 멀티 플레이 테스트는 일반 플레이 테스트와는 다르게, 상단 아웃레이 메뉴에 Add Client 메뉴가 추가되며, Client 수를 다시 지정하여 원하는 멀티 플레이 상황을 재현할 수 있습니다.
 
-
 ![](.gitbook/assets/20200804_173823.png)
-
 
 ![](.gitbook/assets/20200804_154156.jpg)
 
-## Save(저장) 및 Publish(게시)
+## Save\(저장\) 및 Publish\(게시\)
 
 제작한 Land를 내 PC에 저장 또는 온라인 서버에 게시할 수 있습니다. 이를 통해 스튜디오를 종료한 후에도 언제든지 저장시점이후부터 편집을 이어갈 수 있습니다.
 
-### Save(저장)
+### Save\(저장\)
 
 내 PC에 맵파일을 저장할 수 있습니다.
 
 ![](.gitbook/assets/20201209_165435.png)
 
-Menu Bar의 ‘File Menu’에서  ‘Save To File’(저장) 또는 ‘Save To File As’(다른이름으로 저장)을 클릭합니다.
+Menu Bar의 ‘File Menu’에서 ‘Save To File’\(저장\) 또는 ‘Save To File As’\(다른이름으로 저장\)을 클릭합니다.
 
 ![](.gitbook/assets/20201209_165836.jpg)
 
 저장할 경로를 지정하여 맵 파일을 저장합니다.
 
-### Publish(게시)
-맵을 온라인 서버에 게시합니다. 이렇게 하면 Studio를 실행할 수 있는 모든 PC에서 Land를 편집할 수 있습니다.
- <br>Publish한 랜드는 게임에 Start Land 또는 Connect Land로 연결하여 다른 유저들에게 공개할 수 있습니다.
+### Publish\(게시\)
+
+맵을 온라인 서버에 게시합니다. 이렇게 하면 Studio를 실행할 수 있는 모든 PC에서 Land를 편집할 수 있습니다.   
+Publish한 랜드는 게임에 Start Land 또는 Connect Land로 연결하여 다른 유저들에게 공개할 수 있습니다.
 
 ![](.gitbook/assets/20201209_170547.jpg)
 
-Menu Bar의 ‘File Menu’에서 ‘Publish To DITOLAND’(게시)나 ‘Publish To DITOLAND As’(다른이름으로 게시)를 클릭하거나 Quick Menu에서 ‘Upload Map 아이콘’을 클릭합니다.
+Menu Bar의 ‘File Menu’에서 ‘Publish To DITOLAND’\(게시\)나 ‘Publish To DITOLAND As’\(다른이름으로 게시\)를 클릭하거나 Quick Menu에서 ‘Upload Map 아이콘’을 클릭합니다.
 
 ![](.gitbook/assets/20201209_171046.jpg)
 
 ‘+ NEW SLOT’ 버튼을 클릭하여 새로운 슬롯에 추가하거나 ‘Upload Map 아이콘’을 클릭하여 등록된 랜드를 업데이트 할 수 있습니다.
 
-![](.gitbook/assets/20201209_171413.jpg) 
+![](.gitbook/assets/20201209_171413.jpg)
 
 ![](.gitbook/assets/20201209_171559.jpg)
 
-**Title** <br/>
-랜드 이름을 입력합니다. Start Land로 선택 시 게임 이름으로도 저장됩니다
+**Title**   
+ 랜드 이름을 입력합니다. Start Land로 선택 시 게임 이름으로도 저장됩니다
 
-**Description** <br/>
-랜드 설명을 입력합니다. Start Land로 선택 시 게임 설명으로도 저장됩니다.
+**Description**   
+ 랜드 설명을 입력합니다. Start Land로 선택 시 게임 설명으로도 저장됩니다.
 
-**LandType** <br/>
-Start Land : 게임을 시작하는 랜드로 설정하며 게임을 생성합니다. <br/>
-Connect Land : 기존 생성된 게임에 연결되는 Connect Land로 생성합니다. <br/>
-None : 게임에 연결하지 않은 상태로 생성합니다.(웹 사이트에서 연결을 설정할 수 있습니다.)  
+**LandType**   
+ Start Land : 게임을 시작하는 랜드로 설정하며 게임을 생성합니다.   
+ Connect Land : 기존 생성된 게임에 연결되는 Connect Land로 생성합니다.   
+ None : 게임에 연결하지 않은 상태로 생성합니다.\(웹 사이트에서 연결을 설정할 수 있습니다.\)
 
-**최대 접속 인원** <br/>
-서버당 접속할 수 있는 최대 인원을 설정합니다. <br/><br/>
-모든 항목을 입력한 후 ‘Create’ 버튼을 클릭하여 저장합니다.<br/>
+**최대 접속 인원**   
+ 서버당 접속할 수 있는 최대 인원을 설정합니다.   
+  
+ 모든 항목을 입력한 후 ‘Create’ 버튼을 클릭하여 저장합니다.  
+
 
 ![](.gitbook/assets/20201209_173656.jpg)
 
-랜드의 업로드가 완료되었습니다. ‘View in web browser’ 버튼을 클릭하여 웹 사이트의 랜드 설정 화면으로 바로갈 수 있습니다.<br/>
-‘OK’ 버튼을 클릭하여 팝업을 닫고 랜드를 계속 편집할 수 있습니다.
+랜드의 업로드가 완료되었습니다. ‘View in web browser’ 버튼을 클릭하여 웹 사이트의 랜드 설정 화면으로 바로갈 수 있습니다.  
+ ‘OK’ 버튼을 클릭하여 팝업을 닫고 랜드를 계속 편집할 수 있습니다.
 
 ## 게임 공개 설정
-게임은 최초 생성 시 비공개로 설정됩니다. <br>
-공개를 원한다면 웹 사이트에 접속하여 설정을 변경해야 합니다.
 
-### 내 게임 리스트 
+게임은 최초 생성 시 비공개로 설정됩니다.   
+ 공개를 원한다면 웹 사이트에 접속하여 설정을 변경해야 합니다.
+
+### 내 게임 리스트
+
 ![](.gitbook/assets/20201209_282226.jpg)
 
-‘게임만들기 > 내 게임 관리 > 내 게임 > 게임’ 화면으로 이동하여 등록된 게임을 확인할 수 있습니다. 
+‘게임만들기 &gt; 내 게임 관리 &gt; 내 게임 &gt; 게임’ 화면으로 이동하여 등록된 게임을 확인할 수 있습니다.
 
 ### 게임 공개 설정
+
 ![](.gitbook/assets/20201209_183650.jpg)
 
 공개를 원하시면 ‘게임 설정’ 버튼을 클릭하여 이동한 게임 설정 화면에서 공개로 전환할 수 있습니다.
-
-
 
