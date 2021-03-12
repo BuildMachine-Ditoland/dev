@@ -10,7 +10,7 @@ local로 선언한 변수를 지역 변수라고 해요.
 local WorldString = "Hello world!" 
 ```
 
-
+&nasp;
 
 ### 함수 안에서 선언하는 지역 변수
 
@@ -24,7 +24,7 @@ local function SomeFunc()
 end
 ```
 
-
+&nasp;
 
 ## 전역 변수
 
