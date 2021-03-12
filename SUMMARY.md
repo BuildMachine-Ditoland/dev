@@ -111,4 +111,7 @@
     * [Team](api-reference/server/team.md)
     * [UIScene](api-reference/server/uiscene.md)
     * [Widget](api-reference/server/widget.md)
+* [Tutorial](tutorial.md)
+* [Sample Map](sample-map.md)
+* [Dev Forum](dev-forum.md)
 
