@@ -10,8 +10,7 @@ local로 선언한 변수를 지역 변수라고 해요.
 local WorldString = "Hello world!" 
 ```
 
-<br>
-<br>
+
 
 ### 함수 안에서 선언하는 지역 변수
 
@@ -25,8 +24,7 @@ local function SomeFunc()
 end
 ```
 
-<br>
-<br>
+
 
 ## 전역 변수
 
@@ -148,4 +146,5 @@ if object~=nil and value ==3 then
 	...
 end
 ```
+
 
