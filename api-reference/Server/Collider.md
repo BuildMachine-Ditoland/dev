@@ -207,7 +207,7 @@ cube:SetCollisionType("CollisionTag1") --해당 오브젝트의 충돌 타입을
 
 ```lua
 Workspace.Cube1:SetCharacterCollisionResponse(Enum.CollisionResponse.Block) --오브젝트가 캐릭터와 충돌했을때 통과되지 않고 연결된 이벤트가 발생되게 설정해요.
-Workspace.Cube2:SetCharacterCollisionResponse(Enum.CollisionResponse.Overlap) --오브젝트가 캐릭터와 충돌했을때 통과되고 연결된 이벤트되게 설정해요..
+Workspace.Cube2:SetCharacterCollisionResponse(Enum.CollisionResponse.Overlap) --오브젝트가 캐릭터와 충돌했을때 통과되고 연결된 이벤트가 발생되게 설정해요..
 Workspace.Cube3:SetCharacterCollisionResponse(Enum.CollisionResponse.Ignore) --오브젝트가 캐릭터와 충돌했을때 통과되고 연결된 이벤트가 발생되지 않게 설정해요.
 ```
 <br>
