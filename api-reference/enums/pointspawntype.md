@@ -1,2 +1,0 @@
-# PointSpawnType
-

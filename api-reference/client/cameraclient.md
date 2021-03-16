@@ -1,2 +1,0 @@
-# CameraClient
-
