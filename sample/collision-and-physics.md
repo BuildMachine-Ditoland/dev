@@ -1,6 +1,14 @@
 ---
-description: 오브젝트에 충돌이 발생했을때 함수를 호출하는 예제에요.
+description: 충돌 및 물리와 관련된 예제에요.
 ---
 
 # Collision & Physics
+
+## 사용 방법‌ <a id="undefined"></a>
+
+필요한 맵 파일을 다운받고 압축을 푼 뒤, 스튜디오에서 RMO 파일을 열어 확인할 수 있어요.
+
+​‌
+
+## 샘플 맵 <a id="undefined-1"></a>
 
