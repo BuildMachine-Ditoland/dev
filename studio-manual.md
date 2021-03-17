@@ -17,7 +17,7 @@
 
 | Icon | Action | Key | Description |
 | :--- | :--- | :---: | :--- |
-| ![New](.gitbook/assets/new%20%285%29%20%2819%29%20%283%29%20%2819%29.png) | New | Ctrl+N | 템플릿 팝업을 열어 다른 템플릿 맵을 실행할 수 있습니다. |
+| ![New](.gitbook/assets/new%20%285%29%20%2819%29%20%283%29%20%281%29%20%2819%29.png) | New | Ctrl+N | 템플릿 팝업을 열어 다른 템플릿 맵을 실행할 수 있습니다. |
 |  | Open From File | Ctrl+O | 로컬 파일이 저장된 폴더를 엽니다. |
 |  | Open From DITOLAND | Ctrl+Shift+O | 템플릿 팝업을 열어 DITOLAND 클라우드에 저장된 파일을 보여줍니다. |
 | ![Save](.gitbook/assets/save%20%283%29%20%287%29.png) | Save To File | Ctrl+S | 현재 편집중인 맵을 로컬 파일로 저장합니다. |
@@ -34,7 +34,7 @@
 | :--- | :--- | :---: | :--- |
 | ![Publish](.gitbook/assets/publish%20%281%29%20%284%29.png) | Publish To DITOLAND |  | File Menu의 Publish To DITOLAND 기능과 동일합니다.  현재 편집중인 맵을 클라우드 저장소에 저장합니다. |
 | ![Save](.gitbook/assets/save%20%283%29%20%289%29.png) | Save To File | Ctrl+S | File Menu의 Save To File기능과 동일합니다.  현재 편집중인 맵을 로컬 파일로 저장합니다 |
-| ![Save](.gitbook/assets/new%20%285%29%20%2819%29%20%283%29.png) | New | Ctrl+N | File Menu의 New 기능과 동일합니다.  템플릿 팝업을 열어 다른 템플릿 맵을 실행할 수 있습니다. |
+| ![Save](.gitbook/assets/new%20%285%29%20%2819%29%20%283%29%20%281%29.png) | New | Ctrl+N | File Menu의 New 기능과 동일합니다.  템플릿 팝업을 열어 다른 템플릿 맵을 실행할 수 있습니다. |
 
 ## ToolBar
 
@@ -92,7 +92,7 @@ Object Control의 방식이나 값들을 변경할 때 사용합니다.
 | :--- | :--- | :--- |
 | ![World](.gitbook/assets/world%20%284%29.png) | World Coordination | 현재 기즈모를 World 축으로 사용합니다.  클릭할 경우 Local Coordination으로 변경합니다. |
 | ![Local](.gitbook/assets/local-4%20%284%29.png) | Local Coordination | 현재 기즈모를 Local 축으로 사용합니다.  클릭할 경우 World Coordination으로 변경합니다. |
-| ![Grid](.gitbook/assets/gridsnap%20%285%29%20%2814%29%20%284%29%20%2814%29.png) | Grid Snap | 기즈모 및 드래그로 객체를 이동시킬 때 Move , Rotate , Scale Size 값들을 변경할 수 있습니다. |
+| ![Grid](.gitbook/assets/gridsnap%20%285%29%20%2814%29%20%284%29%20%281%29%20%2814%29.png) | Grid Snap | 기즈모 및 드래그로 객체를 이동시킬 때 Move , Rotate , Scale Size 값들을 변경할 수 있습니다. |
 
 ### Base Object Select Tab
 
@@ -103,7 +103,7 @@ Object Control의 방식이나 값들을 변경할 때 사용합니다.
 | Icon | Action | Description |
 | :--- | :--- | :--- |
 | ![Cube](.gitbook/assets/cube-3.png) | Cube | 육면체 객체를 배치합니다. |
-| ![Sphere](.gitbook/assets/sphere%20%285%29%20%289%29%20%287%29%20%2812%29.png) | Sphere | 구형 객체를 배치합니다. |
+| ![Sphere](.gitbook/assets/sphere%20%285%29%20%289%29%20%287%29%20%281%29%20%2812%29.png) | Sphere | 구형 객체를 배치합니다. |
 | ![Cylinder](.gitbook/assets/cylinder-4%20%283%29%20%281%29.png) | Cylinder | 원통형 객체를 배치합니다 |
 | ![Plane](.gitbook/assets/plane%20%285%29%20%289%29%20%282%29%20%284%29.png) | Plane | 판형 객체를 배치합니다 |
 | ![Pyramid](.gitbook/assets/pyramid%20%282%29%20%2810%29.png) | Pyramid | 피라미드형 객체를 배치합니다 |
@@ -141,7 +141,7 @@ UI 편집 모드가 되면 ToolBar의 메뉴들이 변경됩니다. UI 편집을
 | ![Frame](.gitbook/assets/frame-4%20%286%29.png) | Frame Widget | Frame Widget 객체를 배치합니다. |
 | ![Image](.gitbook/assets/image%20%285%29%20%289%29%20%284%29.png) | Image Widget | Image Widget 객체를 배치합니다. |
 | ![Button](.gitbook/assets/button%20%285%29%20%2813%29%20%283%29%20%281%29.png) | Button Widget | Button Widget 객체를 배치합니다. |
-| ![](.gitbook/assets/text%20%285%29%20%289%29%20%287%29%20%286%29.png) | Text Widget | Text Widget 객체를 배치합니다. |
+| ![](.gitbook/assets/text%20%285%29%20%289%29%20%287%29%20%281%29%20%286%29.png) | Text Widget | Text Widget 객체를 배치합니다. |
 | ![TextBox](.gitbook/assets/textbox%20%285%29%20%289%29%20%284%29%20%2810%29.png) | TextBox Widget | TextBox Widget 객체를 배치합니다. |
 | ![ScrollBox](.gitbook/assets/scrollbox%20%285%29%20%289%29%20%284%29%20%2810%29.png) | ScrollBox Widget | ScrollBox Widget 객체를 배치합니다. |
 

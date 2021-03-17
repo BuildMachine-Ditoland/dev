@@ -24,7 +24,7 @@ local function SomeFunc()
 end
 ```
 
-## 
+
 
 ## 전역 변수
 
@@ -34,7 +34,7 @@ end
 TestWorld = 1
 ```
 
-## 
+
 
 ## 함수
 
@@ -47,7 +47,7 @@ end
 WorldStart()
 ```
 
-## 
+
 
 ## 모듈
 
@@ -61,7 +61,7 @@ local TestModules = {}
 return TestModules
 ```
 
-## 
+
 
 ## 코딩 스타일
 
