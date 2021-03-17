@@ -7,6 +7,7 @@
 ### [**KeyInputType**](keyinputtype.md)
 ### [**ModeAnimStateType**](modeanimstatetype.md)
 ### [**ObjectSelectType**](objectselecttype.md)
+### [**PathFollowingStatus**](pathfollowingstatus.md)
 ### [**PointSpawnType**](pointspawntype.md)
 ### [**ProgressFillType**](progressfilltype.md)
 ### [**ProjectionType**](projectiontype.md)
