@@ -17,3 +17,8 @@ local character = Game:GetAllPlayer()[1]:GetCharacter()
 character:SetControlMode(Enum.ControlMode.Normal)
 ```
 <br>
+<br>
+## **Enums**
+
+ **이름** | **설명** |
+ --- | --- |
