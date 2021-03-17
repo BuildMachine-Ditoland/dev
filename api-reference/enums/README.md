@@ -1,4 +1,4 @@
-# Enums
+# enums
 ### [**Bone**](bone.md)
 ### [**CollisionResponse**](collisionresponse.md)
 ### [**ControlMode**](controlmode.md)

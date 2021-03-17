@@ -1,4 +1,4 @@
-# Common
+# common
 ### [**BindEvent**](bindevent.md)
 ### [**Character**](character.md)
 ### [**Color**](color.md)

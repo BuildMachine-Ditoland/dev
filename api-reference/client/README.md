@@ -1,4 +1,4 @@
-# Client
+# client
 ### [**AnimStateMachine**](animstatemachine.md)
 ### [**AnimStateMachineSetting**](animstatemachinesetting.md)
 ### [**BlendAnimationDataSetting**](blendanimationdatasetting.md)

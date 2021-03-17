@@ -1,4 +1,4 @@
-# Server
+# server
 ### [**Character**](character.md)
 ### [**CharacterServer**](characterserver.md)
 ### [**CharacterSetting**](charactersetting.md)
