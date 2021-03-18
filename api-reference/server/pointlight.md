@@ -362,7 +362,8 @@ local targetTransform = Game:GetAllPlayer()[1]:GetTransform()
 샘플
 
 ```lua
-local targetTransform = Game:GetAllPlayer()[1]:GetTransform()
+local character = Game:GetAllPlayer()[1]:GetCharacter()
+local targetTransform = character:GetTransform()
 targetTransform:SetLocation(Vector.new(0, 100, 0))
 targetTransform:SetRotation(Vector.new(0, 100, 0))
 character:SetTransform(targetTransform) --오브젝트를 보간으로 이동시켜요. (캐릭터는 보간없이 움직여요.)
@@ -427,7 +428,8 @@ local characterRot = character:GetTransform():GetRotation() --캐릭터의 회�
 샘플
 
 ```lua
-local targetTransform = Game:GetAllPlayer()[1]:GetTransform()
+local character = Game:GetAllPlayer()[1]:GetCharacter()
+local targetTransform = character:GetTransform()
 targetTransform:SetLocation(Vector.new(0, 100, 0))
 targetTransform:SetRotation(Vector.new(0, 100, 0))
 character:SetTransform(targetTransform) --오브젝트를 보간으로 이동시켜요. (캐릭터는 보간없이 움직여요.)
