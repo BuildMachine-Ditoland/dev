@@ -1,18 +1,18 @@
+# UIDisplayType
 
-SurfaceUI 의 DisplayType 
-<br>
+SurfaceUI 의 DisplayType   
+
+
 ## **Enums**
-
- **이름** | **설명** |
- --- | --- |
-| **Screen** |
-| --- |
-| **Billboard** |
-| --- |
-
-<br>
 
-샘플 
+| **이름** | **설명** |
+| :--- | :--- |
+| **Screen** |  |
+| --- |  |
+| **Billboard** |  |
+| --- |  |
+
+샘플
 
 ```lua
 local PlayerNameUI = HUD.PlayerNameUI
@@ -24,4 +24,4 @@ local function spawn(character)
 end
 Game.OnSpawnCharacter:Connect(spawn)
 ```
-<br>
+
