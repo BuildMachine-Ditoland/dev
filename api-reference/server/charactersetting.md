@@ -535,28 +535,21 @@ cube:PlayTransformTrack("Rot", Enum.TransformPlayType.Repeat, InfinityPlay) --�
 | :--- |
 
 객체 변환에 대기 시간을 추가할 수 있어요. (추가할 Track 이름, 대기 시간) 
+<br>
+샘플
 
 ```lua
+local cube = Workspace.Cube
+local pos = Vector.new(0, 500, 0)
+local moveSpeed = 2
+local waitTime = 1
 
-local cube = Workspace.Cube 
-
-local pos = Vector.new(0, 500, 0) 
-
-local moveSpeed = 2 
-
-local waitTime = 1 
-
- 
-
-cube:AddLocalMove("Move", Vector.new(pos.X, pos.Y, pos.Z), moveSpeed, false) --이동 트랙을 등록해요. (이동 트랙은 여러개도 등록할 수 있어요.) 
-
-cube:AddEmpty("Move", waitTime) --대기 트랙을 등록해요. 
-
-cube:AddLocalMove("Move", Vector.new(-pos.X, -pos.Y, -pos.Z), moveSpeed, false) 
-
-cube:AddEmpty("Move", waitTime)cube:PlayTransformTrack("Move", Enum.TransformPlayType.Repeat, InfinityPlay) --이름에 해당하는 트랙을 재생해요. 
-
-``` 
+cube:AddLocalMove("Move", Vector.new(pos.X, pos.Y, pos.Z), moveSpeed, false) --이동 트랙을 등록해요. (이동 트랙은 여러개도 등록할 수 있어요.)
+cube:AddEmpty("Move", waitTime) --대기 트랙을 등록해요.
+cube:AddLocalMove("Move", Vector.new(-pos.X, -pos.Y, -pos.Z), moveSpeed, false)
+cube:AddEmpty("Move", waitTime)cube:PlayTransformTrack("Move", Enum.TransformPlayType.Repeat, InfinityPlay) --이름에 해당하는 트랙을 재생해요.
+```
+<br>
 <br>
 <br>
 | **PlayTransformTrack(string TrackName, TransformPlayType Type, int PlayCount)** |
